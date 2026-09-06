@@ -12,15 +12,9 @@
   4) 프론트엔드(docs/index.html)가 읽을 docs/data.json 을 생성한다.
 
 필요한 환경변수
-  - NAVER_CLIENT_ID       (네이버 개발자센터에서 발급)
-  - NAVER_CLIENT_SECRET
+  - NAVER_CLIENT_ID       (NAVER API HUB의 X-NCP-APIGW-API-KEY-ID)
+  - NAVER_CLIENT_SECRET   (NAVER API HUB의 X-NCP-APIGW-API-KEY)
   - ANTHROPIC_API_KEY     (console.anthropic.com 에서 발급)
-
-로컬에서 테스트하려면:
-  export NAVER_CLIENT_ID=...
-  export NAVER_CLIENT_SECRET=...
-  export ANTHROPIC_API_KEY=...
-  python scripts/generate_briefing.py
 """
 
 import os
@@ -36,9 +30,9 @@ import anthropic
 
 # ── 설정값 (필요하면 이 부분만 고쳐도 돼요) ──────────────────────
 KST = timezone(timedelta(hours=9))
-TOP_N_PER_CATEGORY = 4          # 카테고리별로 최종 몇 개까지 보여줄지
-CANDIDATES_PER_KEYWORD = 8      # 키워드 하나당 몇 개씩 후보로 가져올지
-MODEL = "claude-haiku-4-5-20251001"   # 속도/비용 우선. 판단 품질을 더 원하면 "claude-sonnet-5" 로 교체
+TOP_N_PER_CATEGORY = 4
+CANDIDATES_PER_KEYWORD = 8
+MODEL = "claude-haiku-4-5-20251001"
 
 CATEGORIES = {
     "global": {
@@ -64,18 +58,17 @@ CATEGORIES = {
 }
 
 
-# ── 1. 네이버 뉴스 수집 ──────────────────────────────────────────
+# ── 1. 네이버 뉴스 수집 (NAVER API HUB) ──────────────────────────
 def strip_html(text: str) -> str:
-    """네이버 API 응답에 섞여 오는 <b> 태그, &quot; 같은 걸 제거"""
     text = re.sub(r"<[^>]+>", "", text)
     return html.unescape(text).strip()
 
 
 def fetch_naver_news(query: str, display: int = CANDIDATES_PER_KEYWORD) -> list:
-    url = "https://openapi.naver.com/v1/search/news.json"
+    url = "https://naverapihub.apigw.ntruss.com/search/v1/news"
     headers = {
-        "X-Naver-Client-Id": os.environ["NAVER_CLIENT_ID"],
-        "X-Naver-Client-Secret": os.environ["NAVER_CLIENT_SECRET"],
+        "X-NCP-APIGW-API-KEY-ID": os.environ["NAVER_CLIENT_ID"],
+        "X-NCP-APIGW-API-KEY": os.environ["NAVER_CLIENT_SECRET"],
     }
     params = {"query": query, "display": display, "sort": "date"}
     res = requests.get(url, headers=headers, params=params, timeout=10)
@@ -110,7 +103,7 @@ def collect_candidates(keywords: list) -> list:
 
 
 # ── 2. Claude로 관련성 판단 + 요약 + 점수 매기기 ─────────────────
-client = anthropic.Anthropic()  # ANTHROPIC_API_KEY 환경변수를 자동으로 읽어요
+client = anthropic.Anthropic()
 
 
 def classify_and_score(category_label: str, candidates: list) -> list:
@@ -135,8 +128,8 @@ def classify_and_score(category_label: str, candidates: list) -> list:
     "is_relevant": true,
     "summary": "2~3문장 한국어 요약 (원문을 베끼지 말고 내용을 재구성해서)",
     "tag": "세부 토픽 (예: 수출, 금리, 실적, 규제)",
-    "importance": 0~100 사이 정수 (단일 기업 이슈면 낮게, 산업 전체나 거시경제급 파급력이면 높게),
-    "quality": 0~100 사이 정수 (단순 사실 나열이면 낮게, 배경·수치·맥락이 풍부하면 높게)
+    "importance": 0~100 사이 정수,
+    "quality": 0~100 사이 정수
   }}
 ]
 
@@ -185,8 +178,6 @@ def classify_and_score(category_label: str, candidates: list) -> list:
 
 
 # ── 3. 관련기사 묶기 ─────────────────────────────────────────────
-# (간단 버전: 같은 검색 키워드로 걸린 다른 기사 중 점수 높은 순으로 2개.
-#  더 정교하게 하려면 제목 임베딩 유사도 등으로 업그레이드해도 좋아요.)
 def attach_related(selected: list, all_scored: list) -> None:
     for item in selected:
         pool = [
