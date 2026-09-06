@@ -4,9 +4,8 @@
 
 동작 순서
   1) 카테고리별로 "넓은" 키워드로 네이버 뉴스 검색 API를 호출해 후보 기사를 모은다.
-     (키워드는 정교할 필요 없음 — 놓치지만 않으면 됨. 정확도는 2단계 Claude가 책임진다.)
-  2) 후보 기사들을 Claude API에 묶어서 보내, 진짜 그 카테고리에 맞는 산업/경제 뉴스인지
-     판단하고, 요약·세부태그·중요성/퀄리티 점수를 받는다.
+  2) 후보 기사들을 Claude API에 10개씩 나눠서 보내, 진짜 그 카테고리에 맞는 산업/경제
+     뉴스인지 판단하고, 요약·세부태그·중요성/퀄리티 점수를 받는다.
   3) 시의성(24시간 이내=100 / 아니면 0, 20%) + 중요성(50%) + 퀄리티(30%)로
      최종 점수를 계산해 카테고리별 상위 N개만 남긴다.
   4) 프론트엔드(docs/index.html)가 읽을 docs/data.json 을 생성한다.
@@ -28,7 +27,6 @@ from email.utils import parsedate_to_datetime
 import requests
 import anthropic
 
-# ── 설정값 (필요하면 이 부분만 고쳐도 돼요) ──────────────────────
 KST = timezone(timedelta(hours=9))
 TOP_N_PER_CATEGORY = 4
 CANDIDATES_PER_KEYWORD = 8
@@ -58,7 +56,6 @@ CATEGORIES = {
 }
 
 
-# ── 1. 네이버 뉴스 수집 (NAVER API HUB) ──────────────────────────
 def strip_html(text: str) -> str:
     text = re.sub(r"<[^>]+>", "", text)
     return html.unescape(text).strip()
@@ -102,17 +99,15 @@ def collect_candidates(keywords: list) -> list:
     return candidates
 
 
-# ── 2. Claude로 관련성 판단 + 요약 + 점수 매기기 ─────────────────
 client = anthropic.Anthropic()
 
+BATCH_SIZE = 10
 
-def classify_and_score(category_label: str, candidates: list) -> list:
-    if not candidates:
-        return []
 
+def classify_batch(category_label: str, batch: list) -> list:
     numbered = "\n".join(
         f"{i}. [{c['pub_dt'].strftime('%Y-%m-%d %H:%M')}] {c['title']} — {c['description']}"
-        for i, c in enumerate(candidates)
+        for i, c in enumerate(batch)
     )
 
     prompt = f"""아래는 '{category_label}' 카테고리 후보 기사 목록이야. 각 기사에 대해 판단해줘.
@@ -126,7 +121,7 @@ def classify_and_score(category_label: str, candidates: list) -> list:
   {{
     "index": 0,
     "is_relevant": true,
-    "summary": "2~3문장 한국어 요약 (원문을 베끼지 말고 내용을 재구성해서)",
+    "summary": "1~2문장 한국어 요약 (짧고 간결하게, 원문을 베끼지 말고 재구성해서)",
     "tag": "세부 토픽 (예: 수출, 금리, 실적, 규제)",
     "importance": 0~100 사이 정수,
     "quality": 0~100 사이 정수
@@ -134,6 +129,7 @@ def classify_and_score(category_label: str, candidates: list) -> list:
 ]
 
 부적합한 기사는 "is_relevant": false 만 넣고 나머지 필드는 생략해도 돼.
+반드시 마지막 항목까지 JSON 배열을 완전히 닫아서 응답해.
 
 후보 기사 목록:
 {numbered}
@@ -150,7 +146,7 @@ def classify_and_score(category_label: str, candidates: list) -> list:
     try:
         judgments = json.loads(raw)
     except json.JSONDecodeError:
-        print(f"[경고] '{category_label}' JSON 파싱 실패, 이번엔 스킵합니다.\n{raw[:300]}")
+        print(f"[경고] '{category_label}' 배치 JSON 파싱 실패, 이 배치는 스킵합니다.\n--- 원본 응답 ---\n{raw}\n--- 끝 ---")
         return []
 
     now = datetime.now(KST)
@@ -159,9 +155,9 @@ def classify_and_score(category_label: str, candidates: list) -> list:
         if not j.get("is_relevant"):
             continue
         idx = j.get("index")
-        if idx is None or idx >= len(candidates):
+        if idx is None or idx >= len(batch):
             continue
-        c = candidates[idx]
+        c = batch[idx]
 
         freshness = 100 if (now - c["pub_dt"]) <= timedelta(hours=24) else 0
         importance = j.get("importance", 0)
@@ -177,7 +173,17 @@ def classify_and_score(category_label: str, candidates: list) -> list:
     return results
 
 
-# ── 3. 관련기사 묶기 ─────────────────────────────────────────────
+def classify_and_score(category_label: str, candidates: list) -> list:
+    if not candidates:
+        return []
+
+    all_results = []
+    for start in range(0, len(candidates), BATCH_SIZE):
+        batch = candidates[start:start + BATCH_SIZE]
+        all_results.extend(classify_batch(category_label, batch))
+    return all_results
+
+
 def attach_related(selected: list, all_scored: list) -> None:
     for item in selected:
         pool = [
@@ -195,7 +201,6 @@ def attach_related(selected: list, all_scored: list) -> None:
         ]
 
 
-# ── 4. 카테고리별 처리 ───────────────────────────────────────────
 def build_category(meta: dict) -> list:
     print(f"▶ {meta['label']} 수집 중...")
     candidates = collect_candidates(meta["keywords"])
