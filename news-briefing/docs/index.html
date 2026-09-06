@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오늘의 이슈 브리핑</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F3FF;
+    --card:#FFFFFF;
+    --ink:#3E3557;
+    --sub:#948DAE;
+    --line:#ECE7F7;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Gowun Dodum', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(circle at 8% 8%, #FFEAF3 0%, transparent 32%),
+      radial-gradient(circle at 95% 15%, #E4F7FF 0%, transparent 28%);
+    background-attachment:fixed;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:36px 18px 90px;}
+
+  .masthead{display:flex;align-items:center;gap:14px;margin-bottom:22px;}
+  .mascot{
+    width:52px;height:52px;flex-shrink:0;background:var(--card);
+    border-radius:16px;display:flex;align-items:center;justify-content:center;
+    font-size:26px;box-shadow:0 4px 0 var(--line);
+  }
+  .masthead-text h1{font-family:'Jua', sans-serif;font-size:26px;margin:0;}
+  .masthead-text p{margin:2px 0 0;font-size:13px;color:var(--sub);}
+
+  .tabs{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap;}
+  .tab{
+    border:none;cursor:pointer;font-family:'Jua', sans-serif;font-size:14px;
+    padding:9px 16px;border-radius:999px;background:var(--card);color:var(--sub);
+    box-shadow:0 3px 0 var(--line);transition:transform .12s ease;
+  }
+  .tab:hover{transform:translateY(-1px);}
+  .tab.active{color:#fff;box-shadow:none;}
+  .tab .emoji{margin-right:5px;}
+
+  .top-story{
+    background:var(--card);border-radius:24px;padding:24px 24px 20px;
+    margin-bottom:20px;box-shadow:0 6px 0 var(--line);
+  }
+  .top-story .ribbon{
+    display:inline-block;font-family:'Jua', sans-serif;font-size:12px;color:#fff;
+    padding:5px 12px;border-radius:999px;margin-bottom:12px;
+  }
+  .top-story h2{font-family:'Jua', sans-serif;font-size:20px;line-height:1.45;margin:0 0 8px;}
+  .pubdate{font-size:12px;color:var(--sub);margin-bottom:12px;}
+  .top-story p.summary{font-size:14.5px;line-height:1.75;color:#6C6484;margin:0 0 14px;}
+
+  .related-box{background:var(--bg);border-radius:14px;padding:12px 14px;margin-bottom:14px;}
+  .related-box .related-title{font-family:'Jua', sans-serif;font-size:12px;color:var(--sub);margin-bottom:8px;}
+  .related-link{
+    display:block;font-size:12.5px;color:var(--ink);text-decoration:none;
+    padding:5px 0;border-bottom:1px dashed var(--line);
+  }
+  .related-link:last-child{border-bottom:none;}
+  .related-link .src{color:var(--sub);font-size:11px;margin-left:4px;}
+
+  .stat-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .tag-pill{font-size:12px;padding:5px 11px;border-radius:999px;}
+  .read-btn{
+    font-family:'Jua', sans-serif;font-size:13px;color:#fff;text-decoration:none;
+    padding:7px 14px;border-radius:999px;margin-left:auto;
+  }
+
+  .row{
+    background:var(--card);border-radius:18px;padding:16px 18px;margin-bottom:12px;
+    box-shadow:0 4px 0 var(--line);
+  }
+  .row-top{display:flex;align-items:flex-start;gap:10px;}
+  .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:7px;}
+  .row-body h3{font-family:'Jua', sans-serif;font-weight:400;font-size:15.5px;line-height:1.5;margin:0 0 4px;}
+  .row-body .pubdate{margin-bottom:6px;}
+  .row-body p.summary{font-size:13px;line-height:1.65;color:#8A83A0;margin:0 0 9px;}
+  .row-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;}
+  .row-meta a.read-link{font-size:12px;color:var(--sub);text-decoration:none;margin-left:auto;}
+  .row-meta a.read-link:hover{color:var(--ink);}
+
+  .section-label{font-family:'Jua', sans-serif;font-size:13px;color:var(--sub);margin:22px 0 10px 4px;}
+
+  .empty-msg, .error-msg{
+    background:var(--card);border-radius:18px;padding:20px;text-align:center;
+    color:var(--sub);font-size:13.5px;line-height:1.7;
+  }
+
+  @media(max-width:600px){
+    .masthead{flex-direction:column;align-items:flex-start;gap:6px;}
+    .top-story h2{font-size:18px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="mascot">📰</div>
+    <div class="masthead-text">
+      <h1>오늘의 이슈 브리핑</h1>
+      <p id="generatedAt">불러오는 중...</p>
+    </div>
+  </div>
+
+  <div class="tabs" id="tabs"></div>
+  <div id="content"><div class="empty-msg">데이터를 불러오는 중이에요...</div></div>
+
+</div>
+
+<script>
+const THEME = {
+  global:   { color:"#7FC4FF", soft:"#E7F3FF", emoji:"🌍", label:"글로벌" },
+  macro:    { color:"#5FD1A6", soft:"#E4FBF1", emoji:"📈", label:"국내 거시경제" },
+  industry: { color:"#FFC24B", soft:"#FFF4DE", emoji:"🏭", label:"국내 산업" },
+  finance:  { color:"#FF8FAE", soft:"#FFEBF1", emoji:"💰", label:"국내 시장·금융" },
+};
+
+let DATA = {};
+let active = 'global';
+
+const tabsEl = document.getElementById('tabs');
+const contentEl = document.getElementById('content');
+const generatedAtEl = document.getElementById('generatedAt');
+
+function formatDate(d){
+  const [y,m,day] = d.split('-');
+  return `${y}.${m}.${day}`;
+}
+function daysAgo(d){
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const then = new Date(d);
+  const diff = Math.round((today - then) / (1000*60*60*24));
+  if(diff <= 0) return "오늘";
+  if(diff === 1) return "어제";
+  if(diff < 30) return `${diff}일 전`;
+  if(diff < 365) return `${Math.round(diff/30)}개월 전`;
+  return `${Math.round(diff/365)}년 전`;
+}
+
+function renderTabs(){
+  tabsEl.innerHTML = Object.entries(THEME).map(([key, t]) => `
+    <button class="tab ${key===active?'active':''}"
+      style="${key===active ? `background:${t.color}` : ''}"
+      data-key="${key}">
+      <span class="emoji">${t.emoji}</span>${t.label}
+    </button>
+  `).join('');
+  tabsEl.querySelectorAll('.tab').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      active = btn.dataset.key;
+      renderTabs();
+      renderContent();
+    });
+  });
+}
+
+function renderRelated(related){
+  if(!related || related.length === 0) return '';
+  return `
+    <div class="related-box">
+      <div class="related-title">🔗 관련 기사</div>
+      ${related.map(r => `
+        <a class="related-link" href="${r.url}" target="_blank" rel="noopener">
+          ${r.title}<span class="src">· ${r.src}</span>
+        </a>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderContent(){
+  const t = THEME[active];
+  const items = DATA[active] || [];
+
+  if(items.length === 0){
+    contentEl.innerHTML = `<div class="empty-msg">오늘은 이 카테고리에서 골라낸 이슈가 없어요.</div>`;
+    return;
+  }
+
+  const top = items.find(i=>i.top) || items[0];
+  const rest = items.filter(i=>i !== top);
+
+  let out = `
+    <div class="top-story">
+      <span class="ribbon" style="background:${t.color}">${t.emoji} 오늘의 1순위 이슈</span>
+      <h2>${top.headline}</h2>
+      <div class="pubdate">📅 ${formatDate(top.pubDate)} 발행 · ${daysAgo(top.pubDate)}</div>
+      <p class="summary">${top.summary}</p>
+      ${renderRelated(top.related)}
+      <div class="stat-row">
+        <span class="tag-pill" style="background:${t.soft};color:${t.color}">${top.tag}</span>
+        <a class="read-btn" href="${top.url}" target="_blank" rel="noopener" style="background:${t.color}">전문 보러가기</a>
+      </div>
+    </div>
+  `;
+
+  if(rest.length > 0){
+    out += `<div class="section-label">${t.emoji} 이런 이슈도 있었어요</div>`;
+    out += rest.map(item => `
+      <div class="row">
+        <div class="row-top">
+          <span class="dot" style="background:${t.color}"></span>
+          <div class="row-body" style="flex:1">
+            <h3>${item.headline}</h3>
+            <div class="pubdate">📅 ${formatDate(item.pubDate)} 발행 · ${daysAgo(item.pubDate)}</div>
+            <p class="summary">${item.summary}</p>
+            ${renderRelated(item.related)}
+            <div class="row-meta">
+              <span class="tag-pill" style="background:${t.soft};color:${t.color}">${item.tag}</span>
+              <a class="read-link" href="${item.url}" target="_blank" rel="noopener">전문 보기 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  contentEl.innerHTML = out;
+}
+
+async function load(){
+  try{
+    const res = await fetch('data.json', {cache:"no-store"});
+    if(!res.ok) throw new Error("data.json을 찾을 수 없어요");
+    const json = await res.json();
+    DATA = json.categories || {};
+    generatedAtEl.textContent = `마지막 업데이트: ${json.generated_at || "알 수 없음"}`;
+    renderTabs();
+    renderContent();
+  }catch(e){
+    generatedAtEl.textContent = "데이터를 불러오지 못했어요";
+    contentEl.innerHTML = `
+      <div class="error-msg">
+        data.json을 불러오지 못했어요.<br><br>
+        로컬에서 열어보는 중이라면 <code>file://</code> 로 직접 여는 대신<br>
+        터미널에서 <code>python -m http.server</code> 를 실행하고<br>
+        <code>http://localhost:8000</code> 으로 접속해보세요.<br><br>
+        GitHub Pages로 배포했다면 Actions가 아직 한 번도 실행되지 않았을 수 있어요.
+      </div>`;
+  }
+}
+
+load();
+</script>
+</body>
+</html>
