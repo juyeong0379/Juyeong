@@ -1,89 +1,9 @@
 {
-  "generated_at": "2026-09-06 09:00 KST (샘플 데이터 — 아직 자동 실행 전)",
+  "generated_at": "2026-09-06 21:51 KST",
   "categories": {
-    "global": [
-      {
-        "top": true,
-        "headline": "한미 반도체 관세 협상 계속…9월 안에 대미투자 발표 마무리",
-        "pubDate": "2026-09-04",
-        "summary": "김정관 산업통상부 장관이 미국의 반도체 관세 논의가 한국에 불리하지 않도록 진행 중이라고 밝혔어요. 국내 기업들의 대미 투자 계획 발표도 이번 달 안에 마무리될 예정이래요.",
-        "tag": "무역",
-        "url": "https://www.fnnews.com/news/202609040626334987",
-        "related": [
-          { "title": "8월 반도체 수출 467억달러 '역대 최대'", "src": "newstomato.com", "url": "https://newstomato.com/ReadNews.aspx?no=1312124" }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "美 연준, 3연속 금리인하 후 신중모드…내년은 1회 인하 전망",
-        "pubDate": "2025-12-11",
-        "summary": "12월 FOMC에서 기준금리를 0.25%p 내려 3.50~3.75%로 조정했어요. 위원 12명 중 3명이 반대할 만큼 내부 이견도 컸는데, 점도표는 내년에도 완만한 인하 기조를 유지할 걸로 봤어요.",
-        "tag": "중앙은행",
-        "url": "https://www.tossbank.com/articles/fomc2512",
-        "related": []
-      }
-    ],
-    "macro": [
-      {
-        "top": true,
-        "headline": "8월 수출 982억달러, 무역수지 347억달러 흑자…3개월째 900억달러 돌파",
-        "pubDate": "2026-09-01",
-        "summary": "산업통상부 발표에 따르면 8월 수출이 전년보다 68.7% 늘어난 982억 5천만달러를 기록했어요. 반도체가 전체의 절반 가까이를 차지하며 역대 최대를 다시 썼고, 무역수지는 347억 5천만달러 흑자였어요.",
-        "tag": "수출입",
-        "url": "https://www.ytn.co.kr/_ln/0102_202609011043505403",
-        "related": []
-      },
-      {
-        "top": false,
-        "headline": "화성 동탄·용인 기흥 등 규제지역 추가…LTV 70%→40%로 강화",
-        "pubDate": "2026-06-30",
-        "summary": "금융위원회가 긴급 가계부채 점검회의를 열고 세 개 지역을 규제지역으로 추가 지정했어요. 7월 1일부터 해당 지역 주택담보대출 한도가 크게 줄고, 전세·신용대출도 함께 조여졌어요.",
-        "tag": "부동산",
-        "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=283642",
-        "related": []
-      }
-    ],
-    "industry": [
-      {
-        "top": true,
-        "headline": "반도체 수출 467억달러 '역대 최대'…AI 훈풍 3개월째",
-        "pubDate": "2026-09-01",
-        "summary": "8월 반도체 수출이 전년보다 209% 급증한 467억달러로 또 사상 최고치를 갈아치웠어요. 구글·아마존 같은 빅테크의 AI 인프라 투자가 이어지면서 3개월 연속 400억달러를 넘었대요.",
-        "tag": "반도체",
-        "url": "https://newstomato.com/ReadNews.aspx?no=1312124",
-        "related": [
-          { "title": "한미 반도체 관세 협상, 9월 내 마무리 예정", "src": "fnnews.com", "url": "https://www.fnnews.com/news/202609040626334987" }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "美 LNG 설비 증설에 K-조선 LNG선 발주 회복 조짐",
-        "pubDate": "2026-08-24",
-        "summary": "미국을 중심으로 LNG 액화설비가 큰 폭으로 늘면서, 이를 실어나를 LNG선 발주도 다시 살아날 수 있다는 전망이 나와요.",
-        "tag": "조선",
-        "url": "https://wikidocs.net/blog/@llmansonll/29354/",
-        "related": []
-      }
-    ],
-    "finance": [
-      {
-        "top": true,
-        "headline": "코스피, 반도체 랠리 타고 사상 첫 9000선 돌파",
-        "pubDate": "2026-06-18",
-        "summary": "코스피가 장중 사상 처음으로 9000선을 넘어섰어요. 연초 5000선에서 8개월 만에 110% 넘게 오른 건데, 삼성전자·SK하이닉스 같은 반도체 대형주가 랠리를 주도했대요.",
-        "tag": "주식",
-        "url": "https://www.kbmaeil.com/article/20260618500409",
-        "related": []
-      },
-      {
-        "top": false,
-        "headline": "6월 가계대출 8.3조원 증가…전월보다는 둔화",
-        "pubDate": "2026-07-09",
-        "summary": "전 금융권 가계대출이 한 달 새 8조 3천억원 늘었어요. 전월(9.3조원)보다는 줄었지만 작년 같은 달(6.5조원)보다는 여전히 큰 규모예요.",
-        "tag": "은행",
-        "url": "https://www.fsc.go.kr/no010101/87297?curPage=22",
-        "related": []
-      }
-    ]
+    "global": [],
+    "macro": [],
+    "industry": [],
+    "finance": []
   }
 }
