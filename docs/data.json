@@ -1,79 +1,84 @@
 {
-  "generated_at": "2026-09-08 07:12 KST",
+  "generated_at": "2026-09-09 07:13 KST",
   "categories": {
     "global": [
       {
         "top": true,
-        "headline": "구리값 t당 1만4533달러 '사상 최고'…관세·공급 우려 겹쳐",
-        "pubDate": "2026-09-08",
-        "summary": "관세 우려와 AI·전력망 수요 증가, 주요 생산국 공급 차질 등으로 구리 가격이 사상 최고치를 기록했다.",
-        "tag": "원자재, 수급, 가격",
-        "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723324",
+        "headline": "트럼프 “다수공급계약서 캐나다산 제외”…관세전쟁 격화",
+        "pubDate": "2026-09-09",
+        "summary": "미국-캐나다 간 관세 보복전이 격화되면서 양국이 동일 규모(200억 달러)에 최대 50% 관세를 상호 부과하는 상황이 지속되고 있다.",
+        "tag": "관세, 무역전쟁, 미-캐나다",
+        "url": "https://www.donga.com/news/Inter/article/all/20260909/134631792/1",
         "related": [
           {
-            "title": "넥센타이어, 美 반덤핑 충당부채 646억원…반년 만에 2배로",
-            "src": "www.ngetnews.com",
-            "url": "https://www.ngetnews.com/news/articleView.html?idxno=553107"
+            "title": "트럼프, 캐나다 관세 보복에 ‘맞불’…美 67조 조달시장서 퇴출 지시[...",
+            "src": "biz.heraldcorp.com",
+            "url": "https://biz.heraldcorp.com/article/10866941?ref=naver"
           },
           {
-            "title": "트럼프, 캐나다 보복관세 앞두고 봄바디어 정조준 … \"美서 제트기 팔지...",
-            "src": "www.newdaily.co.kr",
-            "url": "https://www.newdaily.co.kr/site/data/html/2026/09/08/2026090800008.html"
+            "title": "[속보]트럼프, 캐나다 관세에 보복…\"정부조달 계약서 캐나다산 제외\"",
+            "src": "www.sidae.com",
+            "url": "https://www.sidae.com/article/2026090906392826931"
           }
         ]
       },
       {
         "top": false,
-        "headline": "[CEO인사이트] 미중 '쩐의 전쟁'에 낀 K-반도체…기회인가, 위기인가",
-        "pubDate": "2026-09-07",
-        "summary": "미중 갈등 심화로 한국 반도체 기업들이 양자택일 압박을 받고 있으며, 제재 규제 강화 속에서 초격차 유지가 과제가 되고 있다.",
-        "tag": "규제, 미중 갈등, 반도체 산업",
-        "url": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005916881",
+        "headline": "트럼프, 캐나다 관세 보복에 ‘맞불’…美 67조 조달시장서 퇴출 지시[...",
+        "pubDate": "2026-09-09",
+        "summary": "트럼프 대통령이 캐나다의 보복 관세에 대응해 미국 정부 조달 시장(67조 규모)에서 캐나다산 제품을 제외하는 조치를 지시했다.",
+        "tag": "관세, 무역전쟁, 정부조달",
+        "url": "https://biz.heraldcorp.com/article/10866941?ref=naver",
         "related": [
           {
-            "title": "정주영 창업회장의 꿈 '수직계열화'…정의선, 美서도 해냈다",
-            "src": "view.asiae.co.kr",
-            "url": "https://view.asiae.co.kr/article/2026090710063818068"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "[금/유가] 美·이란 선박 공격에 유가 6주래 최고…사우디 아람코 시설...",
-        "pubDate": "2026-09-08",
-        "summary": "미-이란 선박 공격으로 유가가 6주래 최고치를 기록했으나 OPEC+는 10월 원유 생산 정책을 현상 유지하기로 결정했다.",
-        "tag": "에너지, 유가, 수급정책",
-        "url": "https://www.newspim.com/news/view/20260908000014",
-        "related": [
-          {
-            "title": "미·이란 선박 공격 격화…국제유가 6주 만에 최고치 근접",
-            "src": "www.thefairnews.co.kr",
-            "url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=87338"
+            "title": "트럼프 “다수공급계약서 캐나다산 제외”…관세전쟁 격화",
+            "src": "www.donga.com",
+            "url": "https://www.donga.com/news/Inter/article/all/20260909/134631792/1"
           },
           {
-            "title": "아프리카 휩쓰는 中태양광…가격 경쟁력으로 화석연료 수요 잠식",
-            "src": "www.yna.co.kr",
-            "url": "https://www.yna.co.kr/view/AKR20260907136100009?input=1195m"
+            "title": "[속보]트럼프, 캐나다 관세에 보복…\"정부조달 계약서 캐나다산 제외\"",
+            "src": "www.sidae.com",
+            "url": "https://www.sidae.com/article/2026090906392826931"
           }
         ]
       },
       {
         "top": false,
-        "headline": "넥센타이어, 美 반덤핑 충당부채 646억원…반년 만에 2배로",
-        "pubDate": "2026-09-08",
-        "summary": "넥센타이어가 미국 반덤핑 관세 소송으로 충당부채를 반년 만에 2배로 증액하며 관세 위험이 실적에 반영되고 있다.",
-        "tag": "관세, 반덤핑, 기업실적",
-        "url": "https://www.ngetnews.com/news/articleView.html?idxno=553107",
+        "headline": "OPEC 8월 원유 생산 급감…사우디 수출 차질 영향",
+        "pubDate": "2026-09-09",
+        "summary": "OPEC 8월 원유 생산량이 2개월 만에 급감했으며, 중동 전쟁으로 인한 사우디의 수출 경로 차질이 주요 원인이다.",
+        "tag": "원유생산, OPEC, 공급차질",
+        "url": "https://www.bloter.net/news/articleView.html?idxno=673116",
         "related": [
           {
-            "title": "구리값 t당 1만4533달러 '사상 최고'…관세·공급 우려 겹쳐",
+            "title": "유가 100달러가 바꾼 월가의 셈법…연준 금리인상 다시 ‘카운트다운’",
+            "src": "www.geconomy.co.kr",
+            "url": "https://www.geconomy.co.kr/news/article.html?no=323525"
+          },
+          {
+            "title": "유가 100달러 눈앞…연휴 끝낸 월가, '인플레 공포' 안고 문 연다",
+            "src": "www.edaily.co.kr",
+            "url": "https://www.edaily.co.kr/News/Read?newsId=05070886645578152&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "중동 충돌에 유가 100달러 육박…3대 지수 일제히 하락 [뉴욕증시 브리...",
+        "pubDate": "2026-09-09",
+        "summary": "호르무즈 해협과 홍해의 교전 격화로 유가가 100달러에 접근하면서 글로벌 증시가 동반 하락했다.",
+        "tag": "유가, 주가, 해운로 리스크",
+        "url": "https://www.hankyung.com/article/2026090925166",
+        "related": [
+          {
+            "title": "사우디·후티, 바브엘만데브 해협 놓고 전면전 양상…유가 6일째 상승",
+            "src": "www.etoday.co.kr",
+            "url": "https://www.etoday.co.kr/news/view/2623316"
+          },
+          {
+            "title": "[뉴욕증시] 중동발 유가 급등에 3대 지수 일제히 하락…다우 1.18%↓",
             "src": "www.ebn.co.kr",
-            "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723324"
-          },
-          {
-            "title": "트럼프, 캐나다 보복관세 앞두고 봄바디어 정조준 … \"美서 제트기 팔지...",
-            "src": "www.newdaily.co.kr",
-            "url": "https://www.newdaily.co.kr/site/data/html/2026/09/08/2026090800008.html"
+            "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723509"
           }
         ]
       }
@@ -81,81 +86,81 @@
     "macro": [
       {
         "top": true,
-        "headline": "수출 1조달러 눈앞인데… '효자 반도체' 美 통상압박 표적 됐다",
-        "pubDate": "2026-09-07",
-        "summary": "8월 대미 수출이 전년 동월 대비 89.3% 급증했으며 반도체와 컴퓨터 수출이 특히 높은 증가율을 보였으나 미국의 통상압박 우려가 제기되고 있다.",
-        "tag": "수출, 반도체, 미국 통상압박, AI",
-        "url": "https://biz.newdaily.co.kr/site/data/html/2026/09/07/2026090700133.html",
+        "headline": "반도체 설계와 멀티피직스를 한 흐름으로…‘시높시스 컨버지 코리아’...",
+        "pubDate": "2026-09-08",
+        "summary": "2026년 5월 반도체 수출이 371억 달러로 전체 수출의 42.3%를 차지했으며, HBM 등 고부가가치 제품의 수출 동향을 분석한 기사.",
+        "tag": "반도체 수출",
+        "url": "https://www.venturesquare.net/1111799/",
         "related": [
           {
-            "title": "반도체는 훨훨, 가계 지갑은 꽁꽁…KDI 진단은?",
-            "src": "www.newskr.kr",
-            "url": "http://www.newskr.kr/news/articleView.html?idxno=106164"
+            "title": "환율 하락의 두 얼굴…항공·철강엔 호재, 車·반도체엔 부담",
+            "src": "www.biztribune.co.kr",
+            "url": "http://www.biztribune.co.kr/news/articleView.html?idxno=358602"
           },
           {
-            "title": "AI 투자만 뜨겁다…KDI \"가계소득 파급 제한, 소비 개선 완만\"",
-            "src": "www.newspim.com",
-            "url": "https://www.newspim.com/news/view/20260907000218"
+            "title": "9월 2주 주요 제조업 전망",
+            "src": "www.laborplus.co.kr",
+            "url": "https://www.laborplus.co.kr/news/articleView.html?idxno=41432"
           }
         ]
       },
       {
         "top": false,
-        "headline": "늘린 빚이 부메랑…금리 오르면 ‘영끌족’부터 흔들 [Pick코노미]",
+        "headline": "환율 하락의 두 얼굴…항공·철강엔 호재, 車·반도체엔 부담",
         "pubDate": "2026-09-08",
-        "summary": "한국은행의 스트레스 테스트 결과, 고차입 주택취득 가구가 금리 인상에 가장 취약하며 금리 1%p 상승 시 연체율이 0.81%p 증가할 것으로 예측된다.",
-        "tag": "가계부채, 금리 민감도, 주택시장",
-        "url": "https://www.sedaily.com/article/20088197?ref=naver",
+        "summary": "원달러 환율이 200원 이상 하락하면서 산업별로 항공·철강은 호재, 자동차·반도체는 부담이 되는 등 차별적 영향을 미치고 있다.",
+        "tag": "환율, 산업별 영향",
+        "url": "http://www.biztribune.co.kr/news/articleView.html?idxno=358602",
         "related": [
           {
-            "title": "한은 \"금리 1%p 오르면 '영끌' 가구 연체 확률 0.81%p 상승\"",
-            "src": "www.pressian.com",
-            "url": "https://www.pressian.com/pages/articles/2026090805144383688?utm_source=naver&utm_medium=search"
+            "title": "반도체 설계와 멀티피직스를 한 흐름으로…‘시높시스 컨버지 코리아’...",
+            "src": "www.venturesquare.net",
+            "url": "https://www.venturesquare.net/1111799/"
           },
           {
-            "title": "한은 \"주택 구입 '영끌' 가구, 금리 충격 취약\"",
-            "src": "www.yonhapnewstv.co.kr",
-            "url": "http://www.yonhapnewstv.co.kr/news/MYH20260908054146ebO"
+            "title": "9월 2주 주요 제조업 전망",
+            "src": "www.laborplus.co.kr",
+            "url": "https://www.laborplus.co.kr/news/articleView.html?idxno=41432"
           }
         ]
       },
       {
         "top": false,
-        "headline": "한은 \"금리 1%p 오르면 '영끌' 가구 연체 확률 0.81%p 상승\"",
+        "headline": "9월 2주 주요 제조업 전망",
         "pubDate": "2026-09-08",
-        "summary": "한국은행의 가구 데이터베이스 분석에서 고차입 주택가구(상위 10%)의 금리 충격 취약성이 강조되며, 금리 1%p 상승 시 연체 확률이 0.81%p 상승한다.",
-        "tag": "가계부채, 금리리스크, 주택금융",
-        "url": "https://www.pressian.com/pages/articles/2026090805144383688?utm_source=naver&utm_medium=search",
+        "summary": "2026년 8월 수출입 동향에서 수출이 전년 대비 68.7% 증가하여 역대 최대 수준을 기록했으며, 제조업 전망을 점검했다.",
+        "tag": "수출, 수입, 제조업 동향",
+        "url": "https://www.laborplus.co.kr/news/articleView.html?idxno=41432",
         "related": [
           {
-            "title": "늘린 빚이 부메랑…금리 오르면 ‘영끌족’부터 흔들 [Pick코노미]",
-            "src": "www.sedaily.com",
-            "url": "https://www.sedaily.com/article/20088197?ref=naver"
+            "title": "반도체 설계와 멀티피직스를 한 흐름으로…‘시높시스 컨버지 코리아’...",
+            "src": "www.venturesquare.net",
+            "url": "https://www.venturesquare.net/1111799/"
           },
           {
-            "title": "한은 \"주택 구입 '영끌' 가구, 금리 충격 취약\"",
-            "src": "www.yonhapnewstv.co.kr",
-            "url": "http://www.yonhapnewstv.co.kr/news/MYH20260908054146ebO"
+            "title": "환율 하락의 두 얼굴…항공·철강엔 호재, 車·반도체엔 부담",
+            "src": "www.biztribune.co.kr",
+            "url": "http://www.biztribune.co.kr/news/articleView.html?idxno=358602"
           }
         ]
       },
       {
         "top": false,
-        "headline": "“매달 126만원 냈는데 190만원 내라고요?”…5년 전 ‘3% 영끌’의 역습...",
-        "pubDate": "2026-09-08",
-        "summary": "변동형 주담대 금리가 기준금리 인상에 따라 급상승하면서 대출자들의 이자 부담이 크게 증가하고 있다.",
-        "tag": "금리, 주택담보대출, 가계부채",
-        "url": "https://www.segye.com/newsView/20260908501814?OutUrl=naver",
+        "headline": "금리 0.5%p 오르면 가계 이자 연 6.5조원↑…저소득층 허리 더 휜다",
+        "pubDate": "2026-09-09",
+        "summary": "기준금리 인상으로 가계 대출 이자 부담이 연 6.5조원 증가할 것으로 예상되며, 특히 중·저소득층의 추가 부담이 가중될 것으로 분석된다.",
+        "tag": "금리, 가계부채, 소득격차",
+        "url": "https://biz.sbs.co.kr/article_hub/20000333529?division=NAVER",
         "related": [
           {
-            "title": "[환율 급락 파장] 급락하는 환율, 방향타 잡아라",
-            "src": "www.dnews.co.kr",
-            "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609071501569260969"
+            "title": "[증시전략] 브렌트유 100달러 턱밑…호르무즈 막히면 유가 더 뛴다",
+            "src": "biz.sbs.co.kr",
+            "url": "https://biz.sbs.co.kr/article_hub/20000333515?division=NAVER"
           },
           {
-            "title": "큰 손 빠진 채권시장…보험사 이탈에 시장 불안 우려",
-            "src": "www.sedaily.com",
-            "url": "https://www.sedaily.com/article/20088154?ref=naver"
+            "title": "중동 정세 악화에 유가 6일째 상승…뉴욕증시 3대 지수 하락",
+            "src": "www.inews24.com",
+            "url": "http://www.inews24.com/view/2003468"
           }
         ]
       }
@@ -163,81 +168,81 @@
     "industry": [
       {
         "top": true,
-        "headline": "1년 전 '구금 덫' 벗어난 LG엔솔, 美 배터리 공급망 정상화",
-        "pubDate": "2026-09-08",
-        "summary": "LG에너지솔루션이 미국 비자 제도 개선으로 건설을 완료하고 구글 등과의 대형 수주를 성사시키며 미국 배터리 공급망을 정상화하고 있다.",
-        "tag": "수출, 공급망, 대형수주",
-        "url": "https://it.chosun.com/news/articleView.html?idxno=2023092169636",
+        "headline": "경유차 \"설 자리 없어\"…고유가에 친환경 추세 겹쳐 추락",
+        "pubDate": "2026-09-09",
+        "summary": "올해 국내 전기차 판매가 전년 동기 대비 103% 급증하면서 경유차 수요가 급락하고 있으며, 정부 에너지 세제 개편이 이를 견인하고 있다.",
+        "tag": "판매실적, 정책영향, 수급",
+        "url": "https://www.koreareport.co.kr/news/articleView.html?idxno=52749",
         "related": [
           {
-            "title": "[K바이오 돈의 경로] CFO 3인 체제, 갈린 투자 기준｜삼성바이오②",
-            "src": "www.bloter.net",
-            "url": "https://www.bloter.net/news/articleView.html?idxno=672874"
+            "title": "글로벌 하이브리드 전성시대…현대차그룹 존재감 커졌다",
+            "src": "news.bizwatch.co.kr",
+            "url": "https://news.bizwatch.co.kr/article/industry/2026/09/08/0030"
           },
           {
-            "title": "[건설 인당 생산성] 현대건설, '정규직 중심 재편' 직원 감소 속 급여 증...",
-            "src": "www.fetv.co.kr",
-            "url": "https://www.fetv.co.kr/news/articleView.html?idxno=309772"
+            "title": "[단독] 현대모비스 최대 고객사, 현대차 아닌 기아...16년 만에 처음으로...",
+            "src": "www.consumernews.co.kr",
+            "url": "http://www.consumernews.co.kr/news/articleView.html?idxno=763340"
           }
         ]
       },
       {
         "top": false,
-        "headline": "춤추는 굴기와 일하는 굴기 - 2026 세계로봇대회(WRC) 이후, 우리가 정말...",
-        "pubDate": "2026-09-08",
-        "summary": "중국의 연간 산업용 로봇 설치량이 29만5000대로 전 세계 나머지를 합친 것보다 많으며, 자국산 로봇 점유율이 57%에 달한다.",
-        "tag": "로봇, 시장규모, 국제경쟁",
-        "url": "https://www.irobotnews.com/news/articleView.html?idxno=48350",
+        "headline": "'탈팡' 우려 무색…쿠팡 결제액 5조 돌파·이용자도 역대급",
+        "pubDate": "2026-09-09",
+        "summary": "쿠팡의 8월 결제액이 5조원을 돌파하고 이용자 수도 역대 최고를 기록하며, 경쟁사들이 배송·상품·편의성에서 대체 서비스를 제시하지 못하고 있다.",
+        "tag": "시장점유, 이커머스경쟁",
+        "url": "https://www.nocutnews.co.kr/news/6575182?utm_source=naver&utm_medium=article&utm_campaign=20260909070652",
         "related": [
           {
-            "title": "['함께 더 멀리' AI 대전환과 공존/②]공장에 들어온 AI…'생산직'의 재...",
-            "src": "www.businessplus.kr",
-            "url": "https://www.businessplus.kr/news/articleView.html?idxno=116446"
+            "title": "‘탈팡은 무슨…’ 쿠팡 7월 결제액 5조원 돌파, 이용자 수 최고",
+            "src": "www.kmib.co.kr",
+            "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000010405&cp=nv"
           },
           {
-            "title": "소재부터 완제품까지 촘촘해진 국내 로봇 공급망",
-            "src": "www.sidae.com",
-            "url": "https://www.sidae.com/article/2026090715462084796"
+            "title": "쿠팡, 8월 카드결제액 5조원 돌파...개인정보 유출 사태 이후 이용자 수...",
+            "src": "www.beyondpost.co.kr",
+            "url": "http://www.beyondpost.co.kr/view.php?ud=2026090906311156462aaae0046f_30"
           }
         ]
       },
       {
         "top": false,
-        "headline": "[2026 국감] 석유화학·철강 구조개편…'산업전환'인가 '위기봉합'인가",
-        "pubDate": "2026-09-08",
-        "summary": "중국의 공급과잉, 글로벌 수요 둔화, 보호무역주의와 탄소규제에 직면한 석유화학·철강산업의 구조개편 과제를 국감에서 점검하며, EU 탄소국경조정제도 등의 영향을 분석.",
-        "tag": "산업위기, 규제, 구조개편",
-        "url": "https://www.energydaily.co.kr/news/articleView.html?idxno=202914",
+        "headline": "‘탈팡은 무슨…’ 쿠팡 7월 결제액 5조원 돌파, 이용자 수 최고",
+        "pubDate": "2026-09-09",
+        "summary": "쿠팡의 7월 결제액이 5조원을 넘으며 이용자도 최고를 기록한 반면, G마켓 등 토종 이커머스는 전년 대비 25.9% 감소로 부진을 보이고 있다.",
+        "tag": "시장점유, 이커머스경쟁",
+        "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000010405&cp=nv",
         "related": [
           {
-            "title": "[기자의 눈] 현대제철 기공식 축포 끝…현대차 울타리 걷어차라",
-            "src": "www.news1.kr",
-            "url": "https://www.news1.kr/industry/general-industry/6282444"
+            "title": "'탈팡' 우려 무색…쿠팡 결제액 5조 돌파·이용자도 역대급",
+            "src": "www.nocutnews.co.kr",
+            "url": "https://www.nocutnews.co.kr/news/6575182?utm_source=naver&utm_medium=article&utm_campaign=20260909070652"
           },
           {
-            "title": "[초점] 車는 협상 끝냈지만…조선·철강·반도체 노사갈등 '9월 고비'",
-            "src": "www.newsian.co.kr",
-            "url": "http://www.newsian.co.kr/news/articleView.html?idxno=94934"
+            "title": "쿠팡, 8월 카드결제액 5조원 돌파...개인정보 유출 사태 이후 이용자 수...",
+            "src": "www.beyondpost.co.kr",
+            "url": "http://www.beyondpost.co.kr/view.php?ud=2026090906311156462aaae0046f_30"
           }
         ]
       },
       {
         "top": false,
-        "headline": "HD현대重, 선박 심장에서 AI 동력으로…美 데이터센터 발전설비 1.58조 ‘...",
-        "pubDate": "2026-09-08",
-        "summary": "HD현대중공업이 미국 데이터센터용 발전설비에서 1.58조원 수주를 확대하며 AI 인프라 시장으로 사업 다각화를 추진 중이다.",
-        "tag": "수주, 신규 시장 진출",
-        "url": "https://www.sportsseoul.com/news/read/1632073?ref=naver",
+        "headline": "쿠팡, 8월 카드결제액 5조원 돌파...개인정보 유출 사태 이후 이용자 수...",
+        "pubDate": "2026-09-09",
+        "summary": "쿠팡의 8월 카드결제액이 5조원을 돌파했고 개인정보 유출 사태 이후에도 이용자가 증가하며, 토종 이커머스는 G마켓 기준 전년 동기 대비 25.9% 감소했다.",
+        "tag": "시장점유, 이커머스경쟁",
+        "url": "http://www.beyondpost.co.kr/view.php?ud=2026090906311156462aaae0046f_30",
         "related": [
           {
-            "title": "[유효상 칼럼] 왜 '붉은 샌드위치 위기(The Red Sandwich Crisis)'를 두려...",
-            "src": "www.mt.co.kr",
-            "url": "https://www.mt.co.kr/opinion/2026/09/08/2026090709445281668"
+            "title": "'탈팡' 우려 무색…쿠팡 결제액 5조 돌파·이용자도 역대급",
+            "src": "www.nocutnews.co.kr",
+            "url": "https://www.nocutnews.co.kr/news/6575182?utm_source=naver&utm_medium=article&utm_campaign=20260909070652"
           },
           {
-            "title": "[한화에어로, 방산 대장주의 전환] ①분기 영업익 첫 1조원…조선이 성...",
-            "src": "www.ceoscoredaily.com",
-            "url": "https://www.ceoscoredaily.com/page/view/2026090711165033737"
+            "title": "‘탈팡은 무슨…’ 쿠팡 7월 결제액 5조원 돌파, 이용자 수 최고",
+            "src": "www.kmib.co.kr",
+            "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000010405&cp=nv"
           }
         ]
       }
@@ -245,81 +250,81 @@
     "finance": [
       {
         "top": true,
-        "headline": "[환율 급락 파장] 기업 경영 불확실성 커졌다…수출전선 악재될까 노심...",
-        "pubDate": "2026-09-08",
-        "summary": "원화 급등으로 환율이 220원 가까이 하락하면서 수출기업의 손익 악화와 경영 불확실성이 증가하고 있다.",
-        "tag": "환율, 수출",
-        "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609071509407240971",
+        "headline": "'금리 0.5%p 오르면'…가계 연간 이자 부담 6.5조원↑ '충격'",
+        "pubDate": "2026-09-09",
+        "summary": "한은이 기준금리를 7월 2.75%, 8월 3.00%로 연속 인상한 가운데, 추가 0.5%p 인상 시 가계의 연간 이자 부담이 6.5조원 증가할 것으로 분석된다.",
+        "tag": "금리, 가계부채, 통화정책",
+        "url": "https://www.ppss.kr/news/articleView.html?idxno=309574",
         "related": [
           {
-            "title": "[환율 급락 파장] 자본시장 경계감 급상승",
-            "src": "www.dnews.co.kr",
-            "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609071343212830938"
+            "title": "금리 0.5%p 오르면 가계 이자 연 6.5조원↑…저소득층 허리 더 휜다",
+            "src": "biz.sbs.co.kr",
+            "url": "https://biz.sbs.co.kr/article_hub/20000333529?division=NAVER"
           },
           {
-            "title": "[환율 급락 파장] 저점은 어디?…문제는 불확실성",
-            "src": "www.dnews.co.kr",
-            "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609071408040030943"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "은행권, 주담대 21% 늘 때 연체는 120% 급증",
-        "pubDate": "2026-09-08",
-        "summary": "주택담보대출 잔액 증가(21%)보다 연체 증가(120%)가 훨씬 빠르게 진행되고 있으며, 장기 연체와 고정이하여신이 동시에 증가하고 있다.",
-        "tag": "부실채권, 금리, 가계부채",
-        "url": "https://www.straightnews.co.kr/news/articleView.html?idxno=310615",
-        "related": [
-          {
-            "title": "영끌족 한계왔나…주담대 연체 3년반 만에 2.2배",
+            "title": "‘830억 털리고 몰랐다’ 기업은행이 불붙인 ‘책무구조도’ 유명무실 ...",
             "src": "www.kmib.co.kr",
-            "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000010049&cp=nv"
-          },
-          {
-            "title": "주담대 연체 3년반 만에 2.2배로...'영끌족' 차주 부실 확대",
-            "src": "www.slist.kr",
-            "url": "https://www.slist.kr/news/articleView.html?idxno=764342"
+            "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000010407&cp=nv"
           }
         ]
       },
       {
         "top": false,
-        "headline": "영끌족 한계왔나…주담대 연체 3년반 만에 2.2배",
-        "pubDate": "2026-09-08",
-        "summary": "국내 은행의 주택담보대출 연체가 3년반 만에 2.2배 증가하며, 고금리 장기화로 영끌 차주들의 부실이 빠르게 확대되고 있다.",
-        "tag": "부실채권, 금리, 가계부채",
-        "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000010049&cp=nv",
+        "headline": "금리 0.5%p 오르면 가계 이자 연 6.5조원↑…저소득층 허리 더 휜다",
+        "pubDate": "2026-09-09",
+        "summary": "기준금리 인상에 따른 대출금리 상승으로 가계 이자 부담이 급증하며, 저소득층의 금리 인상 부담이 더욱 심각할 것으로 우려된다.",
+        "tag": "금리, 가계부채, 저소득층 영향",
+        "url": "https://biz.sbs.co.kr/article_hub/20000333529?division=NAVER",
         "related": [
           {
-            "title": "은행권, 주담대 21% 늘 때 연체는 120% 급증",
-            "src": "www.straightnews.co.kr",
-            "url": "https://www.straightnews.co.kr/news/articleView.html?idxno=310615"
+            "title": "'금리 0.5%p 오르면'…가계 연간 이자 부담 6.5조원↑ '충격'",
+            "src": "www.ppss.kr",
+            "url": "https://www.ppss.kr/news/articleView.html?idxno=309574"
           },
           {
-            "title": "주담대 연체 3년반 만에 2.2배로...'영끌족' 차주 부실 확대",
-            "src": "www.slist.kr",
-            "url": "https://www.slist.kr/news/articleView.html?idxno=764342"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "주담대 연체 3년반 만에 2.2배로...'영끌족' 차주 부실 확대",
-        "pubDate": "2026-09-08",
-        "summary": "주택담보대출 연체가 3년반 만에 2.2배로 증가하며 고금리로 인한 차주 부실이 가속화되고 있다.",
-        "tag": "부실채권, 금리, 가계부채",
-        "url": "https://www.slist.kr/news/articleView.html?idxno=764342",
-        "related": [
-          {
-            "title": "은행권, 주담대 21% 늘 때 연체는 120% 급증",
-            "src": "www.straightnews.co.kr",
-            "url": "https://www.straightnews.co.kr/news/articleView.html?idxno=310615"
-          },
-          {
-            "title": "영끌족 한계왔나…주담대 연체 3년반 만에 2.2배",
+            "title": "‘830억 털리고 몰랐다’ 기업은행이 불붙인 ‘책무구조도’ 유명무실 ...",
             "src": "www.kmib.co.kr",
-            "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000010049&cp=nv"
+            "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000010407&cp=nv"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "[금융현미경]금리에 환율까지 '겹호재'…금융지주 3분기 최대 실적 넘보...",
+        "pubDate": "2026-09-09",
+        "summary": "원·달러 환율이 1300원대로 하락하면서 상반기 고환율 부담이 완화되고, 금융지주의 외화환산이익 개선으로 3분기 실적 호조가 기대된다.",
+        "tag": "환율, 금융지주 실적, 외화환산이익",
+        "url": "https://view.asiae.co.kr/article/2026090813425841532",
+        "related": [
+          {
+            "title": "\"어느새 1300원대 중반\"… 원·달러, 어디까지 내려갈까",
+            "src": "www.newsis.com",
+            "url": "https://www.newsis.com/view/NISX20260908_0003781495"
+          },
+          {
+            "title": "여객·화물 쌍끌이 성장, 환율 하락까지…항공, 3분기 실적 '날개'",
+            "src": "www.news1.kr",
+            "url": "https://www.news1.kr/industry/general-industry/6283985"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "명목GDP 성장률 47년 만에 최고…‘국민참여펀드’ 30일 2차 출시 [한강...",
+        "pubDate": "2026-09-09",
+        "summary": "명목GDP 성장과 함께 정부의 가계대출 규제가 은행의 기업대출 확대와 자본 적립 부담 증가를 초래하는 구조적 모순을 야기하고 있다.",
+        "tag": "금융정책, 대출규제, 자본",
+        "url": "https://www.segye.com/newsView/20260908518274?OutUrl=naver",
+        "related": [
+          {
+            "title": "KB국민 ‘주담대 3억’ 제한에 실수요자 신음…서초 아파트 집단대출엔...",
+            "src": "www.kmib.co.kr",
+            "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000010406&cp=nv"
+          },
+          {
+            "title": "“신축만 실수요자냐”…규제 완화가 부른 ‘대출 양극화’",
+            "src": "www.dailian.co.kr",
+            "url": "https://www.dailian.co.kr/news/view/1687839/?sc=Naver"
           }
         ]
       }
