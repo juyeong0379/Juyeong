@@ -1,84 +1,84 @@
 {
-  "generated_at": "2026-09-11 07:11 KST",
+  "generated_at": "2026-09-12 07:12 KST",
   "categories": {
     "global": [
       {
         "top": true,
-        "headline": "호르무즈에 홍해까지…중동 확전 우려에 유가 6% 급등",
+        "headline": "중동發 '물가 쇼크'…美 기준금리 인상 가능성 커졌다",
         "pubDate": "2026-09-11",
-        "summary": "중동 전쟁 확전 우려로 유가가 6% 급등했으며, OPEC이 2026년 석유 수요 전망을 5개월 연속 하향 조정하고 원유 생산량도 감소 중이다.",
-        "tag": "유가, 수급, 중동 리스크",
-        "url": "https://www.bloter.net/news/articleView.html?idxno=673349",
+        "summary": "사우디의 원유 수출량이 33% 감소하면서 글로벌 유가 상승 압력이 커지고 있으며, 이는 미국의 기준금리 인상 가능성을 높이고 있다.",
+        "tag": "유가, 원유 공급, 금리",
+        "url": "https://www.hankyung.com/article/2026091199201",
         "related": [
           {
-            "title": "[금/유가] 중동 긴장 고조에 브렌트 107달러, WTI 100달러 돌파…금값 하...",
-            "src": "www.newspim.com",
-            "url": "https://www.newspim.com/news/view/20260911000034"
+            "title": "美 근원 CPI 예상 웃돌아…금리인상 확률 90% 육박",
+            "src": "www.hankyung.com",
+            "url": "https://www.hankyung.com/article/202609119853i"
           },
           {
-            "title": "후티, 홍해 요충지 모카 점령…바브엘만데브 해안으로 진격중",
-            "src": "www.hani.co.kr",
-            "url": "https://www.hani.co.kr/arti/international/arabafrica/1277284.html"
+            "title": "홍해發 '유가 쇼크'…사우디 원유 수출 33% 줄었다",
+            "src": "www.hankyung.com",
+            "url": "https://www.hankyung.com/article/2026091196231"
           }
         ]
       },
       {
         "top": false,
-        "headline": "[금/유가] 중동 긴장 고조에 브렌트 107달러, WTI 100달러 돌파…금값 하...",
+        "headline": "美 근원 CPI 예상 웃돌아…금리인상 확률 90% 육박",
         "pubDate": "2026-09-11",
-        "summary": "중동 긴장 고조로 브렌트유가 107달러, WTI가 100달러를 돌파했으며 OPEC이 석유 수요 전망을 5회 연속 하향 조정했다.",
-        "tag": "유가, 원유 수급",
-        "url": "https://www.newspim.com/news/view/20260911000034",
+        "summary": "미국 근원 CPI가 예상을 상회하면서 금리인상 가능성이 90% 근처까지 높아졌으며, 사우디의 원유 생산·수출 급감이 물가 상승 배경이 되고 있다.",
+        "tag": "물가, 금리정책, 원유공급",
+        "url": "https://www.hankyung.com/article/202609119853i",
         "related": [
           {
-            "title": "호르무즈에 홍해까지…중동 확전 우려에 유가 6% 급등",
-            "src": "www.bloter.net",
-            "url": "https://www.bloter.net/news/articleView.html?idxno=673349"
+            "title": "중동發 '물가 쇼크'…美 기준금리 인상 가능성 커졌다",
+            "src": "www.hankyung.com",
+            "url": "https://www.hankyung.com/article/2026091199201"
           },
           {
-            "title": "후티, 홍해 요충지 모카 점령…바브엘만데브 해안으로 진격중",
-            "src": "www.hani.co.kr",
-            "url": "https://www.hani.co.kr/arti/international/arabafrica/1277284.html"
+            "title": "홍해發 '유가 쇼크'…사우디 원유 수출 33% 줄었다",
+            "src": "www.hankyung.com",
+            "url": "https://www.hankyung.com/article/2026091196231"
           }
         ]
       },
       {
         "top": false,
-        "headline": "WSJ \"한국, 대미 투자 첫 사업 합의 임박…에너지 분야에 1천억 달러\"",
+        "headline": "홍해發 '유가 쇼크'…사우디 원유 수출 33% 줄었다",
         "pubDate": "2026-09-11",
-        "summary": "한국이 미국과의 관세 협상 결과로 향후 4년간 1천억 달러 규모의 미국산 에너지 구매와 함께 대규모 투자를 약속하는 첫 사업 합의가 임박했다.",
-        "tag": "한미 투자, 에너지 수입",
-        "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008747952&plink=ORI&cooper=NAVER",
+        "summary": "사우디의 원유 수출량이 7월 대비 33% 감소하여 홍해 분쟁으로 인한 에너지 공급 차질이 심화되고 있다.",
+        "tag": "유가, 원유 수출, 공급 차질",
+        "url": "https://www.hankyung.com/article/2026091196231",
         "related": [
           {
-            "title": "WSJ \"韓, 대미투자 첫 사업 합의 임박\"…김정관, 막판조율 위해 방미",
-            "src": "biz.sbs.co.kr",
-            "url": "https://biz.sbs.co.kr/article_hub/20000334022?division=NAVER"
+            "title": "중동發 '물가 쇼크'…美 기준금리 인상 가능성 커졌다",
+            "src": "www.hankyung.com",
+            "url": "https://www.hankyung.com/article/2026091199201"
           },
           {
-            "title": "[핫이슈] 美, 韓 유정용 강관 '반덤핑 관세' 유지…12년째 이어진 대미 ...",
-            "src": "www.the-today.com",
-            "url": "https://www.the-today.com/news/articleView.html?idxno=89928"
+            "title": "美 근원 CPI 예상 웃돌아…금리인상 확률 90% 육박",
+            "src": "www.hankyung.com",
+            "url": "https://www.hankyung.com/article/202609119853i"
           }
         ]
       },
       {
         "top": false,
-        "headline": "후티, 홍해 요충지 모카 점령…바브엘만데브 해안으로 진격중",
-        "pubDate": "2026-09-11",
-        "summary": "후티가 홍해 요충지 모카를 점령하면서 사우디아라비아가 원유 생산을 1990년 이후 최저 수준으로 급감시키기로 통보해 브렌트유가 105달러를 넘었다.",
-        "tag": "유가, 원유 공급, 중동 리스크",
-        "url": "https://www.hani.co.kr/arti/international/arabafrica/1277284.html",
+        "headline": "\"후티, 홍해 입구 요충지 장악\"…'이중 봉쇄' 현실로",
+        "pubDate": "2026-09-12",
+        "summary": "호르무즈 해협과 바브엘만데브 해협이 동시에 봉쇄되면서 글로벌 석유 수송로가 막혀 에너지 공급망 위기가 심화되고 있다.",
+        "tag": "에너지, 공급망, 지정학적 위험",
+        "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008749532&plink=ORI&cooper=NAVER",
         "related": [
           {
-            "title": "호르무즈에 홍해까지…중동 확전 우려에 유가 6% 급등",
-            "src": "www.bloter.net",
-            "url": "https://www.bloter.net/news/articleView.html?idxno=673349"
+            "title": "사우디 핵심 송유관 드론 공격…이라크 요청에 보복 일단 보류",
+            "src": "www.thefairnews.co.kr",
+            "url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=87830"
           },
           {
-            "title": "[금/유가] 중동 긴장 고조에 브렌트 107달러, WTI 100달러 돌파…금값 하...",
-            "src": "www.newspim.com",
-            "url": "https://www.newspim.com/news/view/20260911000034"
+            "title": "“AI가 다 했다” 오라클, 클라우드 매출·순이익 ‘사상 최고’ [글로벌...",
+            "src": "www.sedaily.com",
+            "url": "https://www.sedaily.com/article/20090046?ref=naver"
           }
         ]
       }
@@ -86,81 +86,81 @@
     "macro": [
       {
         "top": true,
-        "headline": "주담대 연체 3년간 2배…2조2000억 부실 뇌관 터지나",
+        "headline": "청년 빠진 고용 회복 되풀이되나…8월 고용동향 세대별 온도차",
         "pubDate": "2026-09-11",
-        "summary": "주담대 연체가 3년간 2배 증가하면서 약 2.2조원 규모의 부실채권 위험이 대두되고 있다.",
-        "tag": "가계부채, 금융위험",
-        "url": "https://www.ziksir.com/news/articleView.html?idxno=145981",
+        "summary": "8월 전체 취업자는 18만4000명 증가로 5개월 만에 최대 증가폭을 기록했으나, 청년층은 고용 부진이 계속되어 세대별 온도차가 명확하다.",
+        "tag": "고용동향, 청년고용, 세대별고용격차",
+        "url": "https://www.news2day.co.kr/article/20260911500087",
         "related": [
           {
-            "title": "한은, 추가 금리 인상 열어뒀다… “가계빚·물가 부담 여전”",
-            "src": "www.seoul.co.kr",
-            "url": "https://www.seoul.co.kr/news/economy/finance/2026/09/11/20260911031007?wlog_tag3=naver"
+            "title": "[CEO풍향계]'치폴레 승부수' 허희수…'세 번째 사과' 최주희",
+            "src": "www.yonhapnewstv.co.kr",
+            "url": "http://www.yonhapnewstv.co.kr/news/MYH20260911094953tND"
           },
           {
-            "title": "[오늘의 경제뉴스] 유가 100달러 돌파…한국경제, 제조원가·운송비·금...",
-            "src": "www.newsverse.kr",
-            "url": "https://www.newsverse.kr/news/articleView.html?idxno=11413"
+            "title": "높아진 첫 취업 문턱···\"스스로 역량 쌓아야\"",
+            "src": "www.ktv.go.kr",
+            "url": "https://www.ktv.go.kr/content/view?content_id=760870"
           }
         ]
       },
       {
         "top": false,
-        "headline": "한은, 추가 금리 인상 열어뒀다… “가계빚·물가 부담 여전”",
-        "pubDate": "2026-09-11",
-        "summary": "한은이 추가 금리 인상 가능성을 열어두고 있으며, 가계부채와 물가 부담을 주요 정책 판단 요소로 지적하고 있다.",
-        "tag": "금리, 가계부채, 통화정책",
-        "url": "https://www.seoul.co.kr/news/economy/finance/2026/09/11/20260911031007?wlog_tag3=naver",
+        "headline": "[통화신용정책보고서③] 명목성장률 22% '껑충'…성장 이면엔 물가·가계...",
+        "pubDate": "2026-09-12",
+        "summary": "명목성장률 22% 증가 뒤에 물가와 가계부담이 높아지고 있으며, 한은은 올해와 내년 물가가 목표치를 상회할 것으로 예상.",
+        "tag": "물가, 명목성장률, 금융통화위원회",
+        "url": "http://www.newsian.co.kr/news/articleView.html?idxno=95150",
         "related": [
           {
-            "title": "주담대 연체 3년간 2배…2조2000억 부실 뇌관 터지나",
-            "src": "www.ziksir.com",
-            "url": "https://www.ziksir.com/news/articleView.html?idxno=145981"
+            "title": "유가 공포 재부상…물가 넘어 금리·성장까지 덮치나",
+            "src": "www.newsis.com",
+            "url": "https://www.newsis.com/view/NISX20260911_0003786569"
           },
           {
-            "title": "[오늘의 경제뉴스] 유가 100달러 돌파…한국경제, 제조원가·운송비·금...",
-            "src": "www.newsverse.kr",
-            "url": "https://www.newsverse.kr/news/articleView.html?idxno=11413"
+            "title": "[데일리 머니마켓] 국제 유가 하락",
+            "src": "www.bigtanews.co.kr",
+            "url": "https://www.bigtanews.co.kr/article/view/big202609120002"
           }
         ]
       },
       {
         "top": false,
-        "headline": "국민소득 4만달러 돌파 시간문제…한은, 금리 더 올린다",
-        "pubDate": "2026-09-10",
-        "summary": "국민소득 4만달러 돌파 가능성이 높아지는 가운데 한국은행이 추가 금리 인상을 검토하고 있으며, 글로벌 불확실성과 내수 동향을 종합적으로 평가하고 있다.",
-        "tag": "금리, 거시지표, 통화정책",
-        "url": "https://www.edaily.co.kr/News/Read?newsId=04706806645578808&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+        "headline": "한 총리 \"레버리지 ETF·집값 급등 국민께 송구\"",
+        "pubDate": "2026-09-11",
+        "summary": "정부가 레버리지 ETF 및 부동산 정책의 초기 위험 고지 미흡을 인정하고 가계부채 관리 및 주택공급 안정에 중점을 두겠다고 표명.",
+        "tag": "정책, 가계부채, 부동산",
+        "url": "https://www.insight.co.kr/news/573115",
         "related": [
           {
-            "title": "AI 팹 증설에 진공부품 수요 급증… 스위스에 집중된 진공밸브 공급망 ...",
-            "src": "dream.kotra.or.kr",
-            "url": "http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=180&CONTENTS_NO=1&bbsGbn=243&bbsSn=243&pNttSn=243864"
+            "title": "1인당 국민총소득 4만 달러 코앞인데 낙수효과 어디로?",
+            "src": "www.ytn.co.kr",
+            "url": "https://www.ytn.co.kr/_ln/0102_202609120530254157"
           },
           {
-            "title": "구윤철, \"1인당 국민소득 4만달러 달성 가능성 더 커져\"",
-            "src": "www.seouleconews.com",
-            "url": "http://www.seouleconews.com/news/articleView.html?idxno=93658"
+            "title": "[에디터 프리즘] 대출도 전세도 ‘오픈런’",
+            "src": "www.joongang.co.kr",
+            "url": "https://www.joongang.co.kr/article/25461206"
           }
         ]
       },
       {
         "top": false,
-        "headline": "[오늘의 경제뉴스] 유가 100달러 돌파…한국경제, 제조원가·운송비·금...",
+        "headline": "[CEO풍향계]'치폴레 승부수' 허희수…'세 번째 사과' 최주희",
         "pubDate": "2026-09-11",
-        "summary": "유가 100달러 돌파로 제조원가, 운송비, 금리 부담이 증가하면서 한국경제에 영향을 미치고 있으며, 한은이 금리 인상 경로를 조정하고 있다.",
-        "tag": "물가, 금리, 유가",
-        "url": "https://www.newsverse.kr/news/articleView.html?idxno=11413",
+        "summary": "청년 취업자 수가 46개월 연속 감소 중이며, 기업의 투자 확대가 청년층 양질의 일자리로 연결되지 못하고 있다.",
+        "tag": "청년고용, 일자리, 고용동향",
+        "url": "http://www.yonhapnewstv.co.kr/news/MYH20260911094953tND",
         "related": [
           {
-            "title": "주담대 연체 3년간 2배…2조2000억 부실 뇌관 터지나",
-            "src": "www.ziksir.com",
-            "url": "https://www.ziksir.com/news/articleView.html?idxno=145981"
+            "title": "청년 빠진 고용 회복 되풀이되나…8월 고용동향 세대별 온도차",
+            "src": "www.news2day.co.kr",
+            "url": "https://www.news2day.co.kr/article/20260911500087"
           },
           {
-            "title": "한은, 추가 금리 인상 열어뒀다… “가계빚·물가 부담 여전”",
-            "src": "www.seoul.co.kr",
-            "url": "https://www.seoul.co.kr/news/economy/finance/2026/09/11/20260911031007?wlog_tag3=naver"
+            "title": "높아진 첫 취업 문턱···\"스스로 역량 쌓아야\"",
+            "src": "www.ktv.go.kr",
+            "url": "https://www.ktv.go.kr/content/view?content_id=760870"
           }
         ]
       }
@@ -168,81 +168,81 @@
     "industry": [
       {
         "top": true,
-        "headline": "SK바이오팜 1.1조원 규모 '오파칼림' 임상에 제동…FDA 부분 보류",
-        "pubDate": "2026-09-11",
-        "summary": "SK바이오팜의 뇌전증 신약 '오파칼림'이 FDA로부터 부분 임상 보류 조치를 받아 1조원 규모 투자 사업이 차질을 겪고 있다.",
-        "tag": "신약개발, 규제",
-        "url": "https://www.medigatenews.com/news/1149673706",
+        "headline": "삼성E&A, 사우디서 4.7조원 잭팟…해외수주 목표 9개월 만에 넘겼다",
+        "pubDate": "2026-09-12",
+        "summary": "삼성E&A가 사우디 사빅의 SAN-7 프로젝트 EPC 계약(약 4.7조원)을 체결하여 연간 해외수주 목표를 9개월 만에 달성했다.",
+        "tag": "수주/해외사업",
+        "url": "https://www.moneystorm.kr/news/articleView.html?idxno=6427",
         "related": [
           {
-            "title": "SK바이오팜 1조 투자 '오파칼림'…FDA \"부분 임상 보류\"",
-            "src": "www.dailymedi.com",
-            "url": "https://www.dailymedi.com/news/news_view.php?wr_id=940403"
+            "title": "셰브론 CEO “공급 위험 현실적”…호르무즈·홍해 경고",
+            "src": "www.tokenpost.kr",
+            "url": "https://www.tokenpost.kr/news/international/406552"
           },
           {
-            "title": "노바티스 '루센티스' 타깃…종근당·삼바에피스 '부상'",
-            "src": "www.dailymedi.com",
-            "url": "https://www.dailymedi.com/news/news_view.php?wr_id=940409"
+            "title": "[뉴욕유가] 높아도 너무 높다…수요 위축 가능성에 WTI 9일만에↓",
+            "src": "news.einfomax.co.kr",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434544"
           }
         ]
       },
       {
         "top": false,
-        "headline": "2.5조 실탄 쥔 포스코 장인화, 블록딜 '승부수'…탈중국 후 미국·인도로",
+        "headline": "HD현대重, 엔진·SMR에 1조…AI 전력시장 '정조준'",
         "pubDate": "2026-09-11",
-        "summary": "포스코그룹이 2.5조원 규모 블록딜로 현금 확보 후 미국·인도의 철강 거점과 이차전지소재 자산으로 자본을 재배치하는 포트폴리오 개편을 추진 중이다.",
-        "tag": "자본재배치, 전략구조조정",
-        "url": "https://www.financialpost.co.kr/news/articleView.html?idxno=275084",
+        "summary": "HD현대중공업이 엔진과 소형모듈원전(SMR) 생산에 1조원 투자하고 울산에 전용 공장 건설, AI 전력시장 진출 전략.",
+        "tag": "투자, 기술, 신사업",
+        "url": "https://dealsite.co.kr/articles/168873",
         "related": [
           {
-            "title": "장인화 임기 6개월 앞으로…연임 도전 시 SWOT 따져보니",
-            "src": "news.bizwatch.co.kr",
-            "url": "https://news.bizwatch.co.kr/article/finance/2026/09/10/0032"
+            "title": "IPO 올인 생태계의 한계…M&A 막힌 한국 벤처, 돈맥경화 터진다",
+            "src": "www.etoday.co.kr",
+            "url": "https://www.etoday.co.kr/news/view/2621435"
           },
           {
-            "title": "정두선 현대코퍼 부사장, 신사업 돌파구 마련 '숙제'",
-            "src": "dealsite.co.kr",
-            "url": "https://dealsite.co.kr/articles/168670"
+            "title": "[이슈] 3500억달러 대미투자 막판 조율…산업계 영향은",
+            "src": "www.sisafocus.co.kr",
+            "url": "http://www.sisafocus.co.kr/news/articleView.html?idxno=364867"
           }
         ]
       },
       {
         "top": false,
-        "headline": "SK바이오팜 1조 투자 '오파칼림'…FDA \"부분 임상 보류\"",
-        "pubDate": "2026-09-11",
-        "summary": "SK바이오팜의 신약 '오파칼림'이 미국 임상 보류 조치를 받았으며, 계약 전 실사에서 비임상 독성 문제가 적발되었다.",
-        "tag": "신약개발, 규제",
-        "url": "https://www.dailymedi.com/news/news_view.php?wr_id=940403",
+        "headline": "희토류 수입 美 비중, 1년새 두배로…中 수출통제에 한미 자원동맹 강화...",
+        "pubDate": "2026-09-12",
+        "summary": "중국의 희토류 수출통제에 대응해 미국으로부터의 수입 비중이 1년간 2배로 증가하며 한미 자원동맹이 강화되고 있다.",
+        "tag": "희토류, 수입, 자원정책",
+        "url": "https://biz.heraldcorp.com/article/10870732?ref=naver",
         "related": [
           {
-            "title": "SK바이오팜 1.1조원 규모 '오파칼림' 임상에 제동…FDA 부분 보류",
-            "src": "www.medigatenews.com",
-            "url": "https://www.medigatenews.com/news/1149673706"
+            "title": "유가 공포 재부상…물가 넘어 금리·성장까지 덮치나",
+            "src": "www.newsis.com",
+            "url": "https://www.newsis.com/view/NISX20260911_0003786569"
           },
           {
-            "title": "노바티스 '루센티스' 타깃…종근당·삼바에피스 '부상'",
-            "src": "www.dailymedi.com",
-            "url": "https://www.dailymedi.com/news/news_view.php?wr_id=940409"
+            "title": "AI 꺾여도 전력 투자는 이상무?",
+            "src": "www.dailian.co.kr",
+            "url": "https://www.dailian.co.kr/news/view/1689307/?sc=Naver"
           }
         ]
       },
       {
         "top": false,
-        "headline": "국제유가 6%대 급등 100달러 돌파, 호르무즈 쇼크 '가시화'…3고 현상 우...",
+        "headline": "중국이 벌써 86% 장악…현대차 로봇, 살아남을 방법 있을까",
         "pubDate": "2026-09-11",
-        "summary": "국제유가 급등이 정유업 단기 수익을 늘리는 반면 석유화학 등 제조업 원료비 상승으로 마진 악화를 초래하는 산업 전반의 부작용을 야기하고 있다.",
-        "tag": "유가, 수급, 산업영향",
-        "url": "https://www.financialpost.co.kr/news/articleView.html?idxno=275082",
+        "summary": "중국이 산업용 로봇 시장의 86%를 점유한 가운데 현대차는 가격보다 가동률과 신뢰성으로 차별화된 산업용 로봇 경쟁력을 모색하고 있다.",
+        "tag": "로봇, 시장 경쟁, 산업용",
+        "url": "https://weekly.khan.co.kr/article/202609112131001",
         "related": [
           {
-            "title": "[투데이온] 삼성E&A, 사우디서 4조6700억 잭팟…초대형 암모니아·요소 ...",
-            "src": "www.the-today.com",
-            "url": "https://www.the-today.com/news/articleView.html?idxno=89929"
+            "title": "빅웨이브로보틱스, 휴머노이드·북미 진출로 상장 출사표 [로보 인사이...",
+            "src": "www.sedaily.com",
+            "url": "https://www.sedaily.com/article/20090071?ref=naver"
           },
           {
-            "title": "검찰, '전쟁 틈타 수조원 담합' 석유화학 7사 윗선 겨눈다",
-            "src": "www.newsroad.co.kr",
-            "url": "http://www.newsroad.co.kr/news/articleView.html?idxno=64128"
+            "title": "美 조지아 공장 이어 현대차 체코공장까지…아틀라스, 한국 도입은 언제...",
+            "src": "www.financialpost.co.kr",
+            "url": "https://www.financialpost.co.kr/news/articleView.html?idxno=275280"
           }
         ]
       }
@@ -250,81 +250,81 @@
     "finance": [
       {
         "top": true,
-        "headline": "매경이 전하는 세상의 지식 (매-세-지, 9월 11일)",
-        "pubDate": "2026-09-11",
-        "summary": "LH 3기 신도시 공공분양의 중도금 집단대출을 받을 은행이 없어 납부기한을 연기하는 사태가 발생하며, 정부 대출 규제가 공공 주택공급 사업까지 영향을 미치고 있다.",
-        "tag": "규제, 부동산금융, 정책영향",
-        "url": "https://www.mk.co.kr/article/12149633",
+        "headline": "선제적 금리 인상 vs 821조 예산 폭탄… 엇박자에 장기금리 ‘발작’",
+        "pubDate": "2026-09-12",
+        "summary": "한은의 선제적 금리 인상과 정부의 대규모 예산 확대가 맞지 않으면서 장기금리 변동성이 커지고 있다.",
+        "tag": "금리, 통화정책, 재정정책",
+        "url": "https://biz.chosun.com/it-science/general_policy/2026/09/12/DR6NFQEXHFDO3ILZABSF3GPVYA/?utm_source=naver&utm_medium=original&utm_campaign=biz",
         "related": [
           {
-            "title": "\"집값 더 오를라\"…2030 '영끌' 다시 고개, 서울 외곽 집중 매수",
+            "title": "담보·대출로 뻗는 해외 토큰증권…한국은 '갈라파고스'[토큰증권 대해...",
+            "src": "www.news1.kr",
+            "url": "https://www.news1.kr/finance/blockchain-fintech/6286594"
+          },
+          {
+            "title": "[AI 클로즈업] 삼성·네이버 손잡은 미스트랄 AI… 韓 기술 조직 구축 속...",
+            "src": "www.ddaily.co.kr",
+            "url": "https://www.ddaily.co.kr/page/view/2026091114423077192"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "외국인 '삼전닉스' 이틀간 5.2조 팔았다…美 CPI 뒤 나스닥 1.3% 반등",
+        "pubDate": "2026-09-12",
+        "summary": "미국 CPI 발표 후 외국인 투자자들이 삼성전자와 SK하이닉스 등 반도체 주식 5.2조원을 이틀간 매도하면서 환율이 1345원대로 상승했다.",
+        "tag": "외국인매도, 반도체, 환율",
+        "url": "https://www.greened.kr/news/articleView.html?idxno=349914",
+        "related": [
+          {
+            "title": "두 달 만에 200원 넘게 떨어진 원·달러, 전망은",
             "src": "www.newsis.com",
-            "url": "https://www.newsis.com/view/NISX20260910_0003784774"
+            "url": "https://www.newsis.com/view/NISX20260911_0003786424"
           },
           {
-            "title": "몸집 키우는 인뱅 3사…IT·플랫폼 투자 성적은 ‘희비’",
-            "src": "www.dailian.co.kr",
-            "url": "https://www.dailian.co.kr/news/view/1688845/?sc=Naver"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "유가 100달러 뚫자 뉴욕증시 나흘째 추락…10년물 금리 5% 눈앞",
-        "pubDate": "2026-09-11",
-        "summary": "유가가 100달러를 돌파하면서 에너지·운송비 상승으로 인한 인플레이션 우려가 확대되고 있다.",
-        "tag": "유가, 물가, 금리",
-        "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=485971",
-        "related": [
-          {
-            "title": "[초점] 해상풍력 55GW 판 키웠지만…'단가 인하'에 사업성 경고등",
-            "src": "www.newsian.co.kr",
-            "url": "http://www.newsian.co.kr/news/articleView.html?idxno=95149"
-          },
-          {
-            "title": "[뉴욕증시 마감시황] 유가 100달러·美 10년물 5% 눈앞…나스닥 등 나흘...",
-            "src": "www.moneystorm.kr",
-            "url": "https://www.moneystorm.kr/news/articleView.html?idxno=6408"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "국제유가 6%대 급등 100달러 돌파, 호르무즈 쇼크 '가시화'…3고 현상 우...",
-        "pubDate": "2026-09-11",
-        "summary": "국제유가가 100달러를 돌파하면서 고유가, 고환율, 고물가의 '3고 현상'이 재연될 우려가 제기되고 정유업계 등에 영향을 미치고 있다.",
-        "tag": "유가, 환율, 물가, 산업영향",
-        "url": "https://www.financialpost.co.kr/news/articleView.html?idxno=275082",
-        "related": [
-          {
-            "title": "유가 100달러·美 국채금리 4.95% 폭등···뉴욕증시 반도체 급락 직격...",
-            "src": "www.globale.co.kr",
-            "url": "https://www.globale.co.kr/news/articleView.html?idxno=40332"
-          },
-          {
-            "title": "1,600원 육박하다 어느새 1,300원대‥\"물가 숨통\"",
-            "src": "imnews.imbc.com",
-            "url": "https://imnews.imbc.com/replay/2026/nwtoday/article/6851088_37012.html"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "[오늘의 경제뉴스] 유가 100달러 돌파…한국경제, 제조원가·운송비·금...",
-        "pubDate": "2026-09-11",
-        "summary": "유가 100달러 돌파로 글로벌 금리 상승이 국내 시장금리와 회사채 조달금리 인상 압력으로 작용하면서 기업 투자와 가계 구매력 위축 우려가 제기되고 있다.",
-        "tag": "유가, 금리, 경기영향",
-        "url": "https://www.newsverse.kr/news/articleView.html?idxno=11413",
-        "related": [
-          {
-            "title": "美 10년물 5% 눈앞…7조원 바이백도 금리 못 눌렀다",
+            "title": "환율 하락에 수입 물가 3개월 연속 내리나[한은 미리보기]",
             "src": "www.edaily.co.kr",
-            "url": "https://www.edaily.co.kr/News/Read?newsId=01554726645579136&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+            "url": "https://www.edaily.co.kr/News/Read?newsId=01564566645579464&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "오라클 회사채 금리 8% 육박…AI 열풍 뒤흔드는 ‘자금조달 경고등’ [김...",
+        "pubDate": "2026-09-12",
+        "summary": "AI 데이터센터 투자 확대로 주요 기술기업들의 회사채 발행이 급증하면서 오라클 등의 채권 금리가 상승하고, 이는 글로벌 자금조달 시장에 부담으로 작용하고 있다.",
+        "tag": "회사채, AI투자, 금리상승",
+        "url": "https://www.hankyung.com/article/202609119348i",
+        "related": [
+          {
+            "title": "[AI+]'적자' OpenAI·앤트로픽, 신용등급 경쟁 벌이는 이유는",
+            "src": "www.mt.co.kr",
+            "url": "https://www.mt.co.kr/tech/2026/09/12/2026090910445782817"
           },
           {
-            "title": "'투자 블랙홀' AI·반도체, '탈출각'은 어떻게",
-            "src": "www.dailian.co.kr",
-            "url": "https://www.dailian.co.kr/news/view/1689007/?sc=Naver"
+            "title": "인도 재무장관, 디지털 루피 확대 촉구",
+            "src": "www.tokenpost.kr",
+            "url": "https://www.tokenpost.kr/news/policy/406672"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "美 CPI, 두 달 연속 '부합'…근원 물가 급등에 금리 인상 가능성↑",
+        "pubDate": "2026-09-12",
+        "summary": "미국 8월 CPI가 예상을 충족했으나 근원 물가가 급등하면서, 연준이 원자재 가격 상승이 근원 물가로 전이되는 것을 경계하고 있으며 금리 인상 가능성이 높아지고 있다.",
+        "tag": "물가, 금리 정책",
+        "url": "https://news.tf.co.kr/read/economy/2365094.htm",
+        "related": [
+          {
+            "title": "[증시 프리즘] 전쟁 장기화에 유가·금리 동반 급등…코스피 7000선 다시...",
+            "src": "www.moneystorm.kr",
+            "url": "https://www.moneystorm.kr/news/articleView.html?idxno=6422"
+          },
+          {
+            "title": "삼성E&A, 사우디서 4.7조원 잭팟…해외수주 목표 9개월 만에 넘겼다",
+            "src": "www.moneystorm.kr",
+            "url": "https://www.moneystorm.kr/news/articleView.html?idxno=6427"
           }
         ]
       }
