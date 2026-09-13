@@ -1,84 +1,84 @@
 {
-  "generated_at": "2026-09-13 07:12 KST",
+  "generated_at": "2026-09-14 07:13 KST",
   "categories": {
     "global": [
       {
         "top": true,
-        "headline": "전쟁 장기화에 유가·금리 급등…글로벌 긴축 부채질",
-        "pubDate": "2026-09-12",
-        "summary": "중동 지역분쟁으로 인한 원유 공급 차질이 유가 상승과 글로벌 금리 인상 압력으로 이어지면서 경기 부담 요인으로 작용하고 있다.",
-        "tag": "유가, 금리, 거시경제",
-        "url": "https://www.sidae.com/article/2026091115001589020",
+        "headline": "사우디 송유관 가동 중단...글로벌 원유 4% 공급 차질 우려",
+        "pubDate": "2026-09-14",
+        "summary": "사우디 송유관 가동 중단으로 글로벌 원유 공급의 4%가 차질을 겪고 있으며, 8월 사우디 생산량이 전년도 대비 43% 감소했다.",
+        "tag": "에너지 수급",
+        "url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=87897",
         "related": [
           {
-            "title": "장기화하는 전쟁...석유 하루 평균 공급량 570만배럴 감소",
-            "src": "www.livebiz.today",
-            "url": "https://www.livebiz.today/news/articleView.html?idxno=204840"
+            "title": "[오늘의 경제뉴스] 호르무즈 우회로도 멈췄다...세계 원유 4% 공급 위기",
+            "src": "www.newsverse.kr",
+            "url": "https://www.newsverse.kr/news/articleView.html?idxno=11433"
           },
           {
-            "title": "주유기가 먼저 포기했다… 디젤 9.999달러 시대",
-            "src": "www.fortunekorea.co.kr",
-            "url": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=53984"
+            "title": "국제유가 연말 더 오른다… 사우디 공급불안에 中 수요도 변수",
+            "src": "www.fnnews.com",
+            "url": "https://www.fnnews.com/news/202609131818085716"
           }
         ]
       },
       {
         "top": false,
-        "headline": "3분기 원화 절상률 1위, 엔화의 3배…미·일 금리 결정에 주목",
+        "headline": "[오늘의 경제뉴스] 호르무즈 우회로도 멈췄다...세계 원유 4% 공급 위기",
+        "pubDate": "2026-09-14",
+        "summary": "후티 반군 활동으로 호르무즈·홍해 해상로 차질이 심화되면서 세계 원유 공급의 4%가 위험에 처했으며, 사우디 8월 생산량은 전쟁 전 대비 470만배럴 감소",
+        "tag": "유가, 공급위기, 지정학적리스크",
+        "url": "https://www.newsverse.kr/news/articleView.html?idxno=11433",
+        "related": [
+          {
+            "title": "사우디 송유관 가동 중단...글로벌 원유 4% 공급 차질 우려",
+            "src": "www.thefairnews.co.kr",
+            "url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=87897"
+          },
+          {
+            "title": "국제유가 연말 더 오른다… 사우디 공급불안에 中 수요도 변수",
+            "src": "www.fnnews.com",
+            "url": "https://www.fnnews.com/news/202609131818085716"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "한은 \"미중 분절 속 공급망 재구성…韓, 아세안 경유 확대일로\"",
         "pubDate": "2026-09-13",
-        "summary": "3분기 원화가 엔화의 3배 속도로 절상되었으나, 최근 중동 정세 악화와 미국 금리 상승으로 하락세가 주춤하는 상황에서 다음 주 미·일 통화정책 결정이 환율 변동의 주요 변수.",
-        "tag": "환율, 통화정책, 시장변동성",
-        "url": "https://www.yna.co.kr/view/AKR20260912043500002?input=1195m",
+        "summary": "한국은행이 미중 갈등에 따른 글로벌 공급망 재편 분석을 발표하며, 한국이 베트남 등 아세안 국가를 경유한 우회 생산망으로 미중과의 연결을 유지하고 있음을 보였다.",
+        "tag": "공급망 재편",
+        "url": "https://www.tfmedia.co.kr/news/article.html?no=207194",
         "related": [
           {
-            "title": "이형일 “재정 적극 역할 필요…잠재성장률 반등·양극화 완화 최우선”",
-            "src": "biz.heraldcorp.com",
-            "url": "https://biz.heraldcorp.com/article/10871378?ref=naver"
+            "title": "한은 “美中 무역갈등, 기존 글로벌 공급망 경로 재구성”",
+            "src": "biz.chosun.com",
+            "url": "https://biz.chosun.com/policy/policy_sub/2026/09/13/N5HXAD672NGHLJTRC4TWCVUERE/?utm_source=naver&utm_medium=original&utm_campaign=biz"
           },
           {
-            "title": "국제유가 치솟는데도…주유소 휘발유값 17주째 내렸다",
-            "src": "www.newsroad.co.kr",
-            "url": "http://www.newsroad.co.kr/news/articleView.html?idxno=64212"
+            "title": "美中갈등에 관세율 오르자 … 韓, 베트남 우회수출 7.4%P ↑",
+            "src": "www.mk.co.kr",
+            "url": "https://www.mk.co.kr/article/12151528"
           }
         ]
       },
       {
         "top": false,
-        "headline": "장기화하는 전쟁...석유 하루 평균 공급량 570만배럴 감소",
-        "pubDate": "2026-09-12",
-        "summary": "중동 지역분쟁 장기화에 따른 OPEC+ 원유 공급 감소로 사우디아라비아의 8월 공급량이 수십년만에 최저수준으로 하락했다.",
-        "tag": "원유공급, 에너지수급",
-        "url": "https://www.livebiz.today/news/articleView.html?idxno=204840",
+        "headline": "원유 8% 덜 들여왔는데 31억弗 더 냈다…'청구서' 열어보니[호르무즈 봉...",
+        "pubDate": "2026-09-14",
+        "summary": "중동 정세 불안으로 원유 수입량은 감소했으나 가격 상승으로 수입액이 31억 달러 증가했으며, 정부가 석유화학 제품 수급조정 조치를 연장했다.",
+        "tag": "원유 수급, 수입가격, 정책 대응",
+        "url": "https://www.newsis.com/view/NISX20260911_0003786373",
         "related": [
           {
-            "title": "전쟁 장기화에 유가·금리 급등…글로벌 긴축 부채질",
-            "src": "www.sidae.com",
-            "url": "https://www.sidae.com/article/2026091115001589020"
+            "title": "두달간 200원 넘게 떨어진 환율…美 긴축에 다시 반등할까",
+            "src": "www.edaily.co.kr",
+            "url": "https://www.edaily.co.kr/News/Read?newsId=01413686645580120&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
           },
           {
-            "title": "주유기가 먼저 포기했다… 디젤 9.999달러 시대",
-            "src": "www.fortunekorea.co.kr",
-            "url": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=53984"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "트럼프-시진핑 만남 핵심 이슈 ‘AI’…美中 고위급회담 의제 부상",
-        "pubDate": "2026-09-12",
-        "summary": "미국이 중국 AI 기업들의 지식재산권 침해를 비판하면서 AI를 둘러싼 미중 갈등이 심화되고 있으며 정상회담의 핵심 이슈가 될 전망이다.",
-        "tag": "미중갈등, AI기술, 지식재산권",
-        "url": "https://biz.heraldcorp.com/article/10871186?ref=naver",
-        "related": [
-          {
-            "title": "미중 정상회담, AI가 뇌관되나…고위급회담 의제 부상",
-            "src": "mbnmoney.mbn.co.kr",
-            "url": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005920930"
-          },
-          {
-            "title": "'아디다스 파트너' 화승, 인니서 채용 확대…동남아 생산거점 고도화",
-            "src": "www.theguru.co.kr",
-            "url": "https://www.theguru.co.kr/news/article.html?no=106828"
+            "title": "경기선행지수 5년3개월 만에 최고…원화 상승폭, 주요 20개국 중 1위",
+            "src": "www.segye.com",
+            "url": "https://www.segye.com/newsView/20260913509547?OutUrl=naver"
           }
         ]
       }
@@ -86,81 +86,81 @@
     "macro": [
       {
         "top": true,
-        "headline": "[주간금융이슈] 美·日 금리 결정 '슈퍼 위크'…원화·채권시장 '긴장'",
+        "headline": "성장세는 세계 1위, 청년 일자리는 외환위기 수준…‘고용 없는 성장’...",
         "pubDate": "2026-09-13",
-        "summary": "미국과 일본의 금리 결정 주간에 한국은행의 연속 인상 배경과 국내 금융시장(원화, 채권)에 미치는 영향을 다룬다.",
-        "tag": "금리, 금융시장",
-        "url": "https://www.newspim.com/news/view/20260911000790",
+        "summary": "8월 고용동향에서 취업자는 증가했으나 제조업 취업자의 26개월 연속 감소와 내수 업종 부진으로 '고용 없는 성장' 현상이 심화되고 있다.",
+        "tag": "고용, 산업별 수급",
+        "url": "https://www.joongang.co.kr/article/25461422",
         "related": [
           {
-            "title": "[박근종 칼럼] 주택담보대출 연체 120% 폭증, 벼랑 끝 취약 차주 구출할...",
-            "src": "www.mhns.co.kr",
-            "url": "https://www.mhns.co.kr/news/articleView.html?idxno=760109"
+            "title": "20대 취업자 감소 외환위기 이후 최대…인구 감소 보다 고용 부진이 더...",
+            "src": "www.segye.com",
+            "url": "https://www.segye.com/newsView/20260913509458?OutUrl=naver"
           },
           {
-            "title": "실거주 안 하면 세금 부담 커진다?",
-            "src": "www.hankyung.com",
-            "url": "https://www.hankyung.com/article/202609119404O"
+            "title": "[편집국에서] 1인당 소득 4만 달러 시대의 명암",
+            "src": "www.busan.com",
+            "url": "https://www.busan.com/view/busan/view.php?code=2026091317551628824"
           }
         ]
       },
       {
         "top": false,
-        "headline": "[박근종 칼럼] 주택담보대출 연체 120% 폭증, 벼랑 끝 취약 차주 구출할...",
-        "pubDate": "2026-09-13",
-        "summary": "주택담보대출 연체가 급증하고 있으며, 고금리 환경에서 영끌 차주들의 상환 능력이 한계에 도달하면서 금융시스템 리스크가 증대되고 있다.",
-        "tag": "가계부채, 금융안정",
-        "url": "https://www.mhns.co.kr/news/articleView.html?idxno=760109",
+        "headline": "반도체 호황에 내년 법인세 216.7조 ‘역대 최대’… 소득세 15년 만에 ...",
+        "pubDate": "2026-09-14",
+        "summary": "내년 국세수입이 반도체 호황에 힘입어 584조원으로 역대 최대를 기록할 전망이나, 경기변화에 민감한 법인세 비중 증가로 인한 재정 불안정성이 우려되고 있다.",
+        "tag": "세수, 경기전망, 법인세",
+        "url": "https://biz.heraldcorp.com/article/10871843?ref=naver",
         "related": [
           {
-            "title": "[주간금융이슈] 美·日 금리 결정 '슈퍼 위크'…원화·채권시장 '긴장'",
-            "src": "www.newspim.com",
-            "url": "https://www.newspim.com/news/view/20260911000790"
+            "title": "'삼전닉스' 효과에 내년 법인세 200조 넘는다…15년 만에 소득세 추월",
+            "src": "biz.sbs.co.kr",
+            "url": "https://biz.sbs.co.kr/article_hub/20000334341?division=NAVER"
           },
           {
-            "title": "실거주 안 하면 세금 부담 커진다?",
-            "src": "www.hankyung.com",
-            "url": "https://www.hankyung.com/article/202609119404O"
+            "title": "내년 법인세 수입, 15년만에 소득세 추월한다…'삼전닉스' 효과",
+            "src": "www.yna.co.kr",
+            "url": "https://www.yna.co.kr/view/AKR20260912040500002?input=1195m"
           }
         ]
       },
       {
         "top": false,
-        "headline": "실거주 안 하면 세금 부담 커진다?",
-        "pubDate": "2026-09-12",
-        "summary": "한국은행의 금리 인상 배경으로 수출 호조와 내수 회복으로 인한 높은 성장률, 목표 이상의 물가상승률, 그리고 주택가격 및 가계부채 증가를 제시한다.",
-        "tag": "금리, 경제성장, 물가",
-        "url": "https://www.hankyung.com/article/202609119404O",
+        "headline": "은행권 마이너스통장 잔액 70조원 육박",
+        "pubDate": "2026-09-14",
+        "summary": "은행권 마이너스통장 잔액이 70조원에 육박하며, 계좌 수는 같은데 대출액만 증가해 가계의 급전 의존도가 심화되고 있다.",
+        "tag": "가계부채, 금융",
+        "url": "https://www.straightnews.co.kr/news/articleView.html?idxno=311095",
         "related": [
           {
-            "title": "[주간금융이슈] 美·日 금리 결정 '슈퍼 위크'…원화·채권시장 '긴장'",
-            "src": "www.newspim.com",
-            "url": "https://www.newspim.com/news/view/20260911000790"
+            "title": "계좌 수 제자리인데 빚은 6조 늘었다…'마이너스통장 70조 육박'",
+            "src": "www.ikbc.co.kr",
+            "url": "https://www.ikbc.co.kr/article/view/kbc202609140003"
           },
           {
-            "title": "[박근종 칼럼] 주택담보대출 연체 120% 폭증, 벼랑 끝 취약 차주 구출할...",
-            "src": "www.mhns.co.kr",
-            "url": "https://www.mhns.co.kr/news/articleView.html?idxno=760109"
+            "title": "정부, 주택공급에 금융지원…주요 내용은?[금알못]",
+            "src": "www.newsis.com",
+            "url": "https://www.newsis.com/view/NISX20260913_0003787421"
           }
         ]
       },
       {
         "top": false,
-        "headline": "[데스크 칼럼] 반도체 '트로이 목마'…호황에 가려진 그림자",
-        "pubDate": "2026-09-12",
-        "summary": "반도체 산업의 호황 이면에 고용 창출 부족, 가계부채 증가, 물가 상승이 숨겨진 문제로 지적되며, 소득 수준별 물가 충격의 불균형을 분석한다.",
-        "tag": "산업구조, 소비, 물가",
-        "url": "http://www.segye.com/newsView/20260912505437?OutUrl=naver",
+        "headline": "계좌 수 제자리인데 빚은 6조 늘었다…'마이너스통장 70조 육박'",
+        "pubDate": "2026-09-14",
+        "summary": "마이너스통장 계좌 수는 변하지 않는데 대출액이 6조원 증가해 가계의 급전 의존도 증가와 정책의 실효성 문제가 드러나고 있다.",
+        "tag": "가계부채, 금융",
+        "url": "https://www.ikbc.co.kr/article/view/kbc202609140003",
         "related": [
           {
-            "title": "[주간금융이슈] 美·日 금리 결정 '슈퍼 위크'…원화·채권시장 '긴장'",
-            "src": "www.newspim.com",
-            "url": "https://www.newspim.com/news/view/20260911000790"
+            "title": "은행권 마이너스통장 잔액 70조원 육박",
+            "src": "www.straightnews.co.kr",
+            "url": "https://www.straightnews.co.kr/news/articleView.html?idxno=311095"
           },
           {
-            "title": "[박근종 칼럼] 주택담보대출 연체 120% 폭증, 벼랑 끝 취약 차주 구출할...",
-            "src": "www.mhns.co.kr",
-            "url": "https://www.mhns.co.kr/news/articleView.html?idxno=760109"
+            "title": "정부, 주택공급에 금융지원…주요 내용은?[금알못]",
+            "src": "www.newsis.com",
+            "url": "https://www.newsis.com/view/NISX20260913_0003787421"
           }
         ]
       }
@@ -168,81 +168,81 @@
     "industry": [
       {
         "top": true,
-        "headline": "中, 전 세계 철광석 70% 쓸어 담는 '국가 구매 카르텔'로 가격 결정권 장...",
-        "pubDate": "2026-09-13",
-        "summary": "중국이 국가 차원의 철광석 구매 카르텔로 전 세계 공급의 70% 확보, 국제 가격 결정권 장악",
-        "tag": "수급, 국제경쟁, 원자재",
-        "url": "https://www.g-enews.com/view.php?ud=2026091216224523220c8c1c064d_1",
+        "headline": "현대차는 미국 하이브리드, 기아는 유럽 전기차 ‘질주’",
+        "pubDate": "2026-09-14",
+        "summary": "현대차는 미국 시장 하이브리드차 수출을 확대하고 기아는 유럽 시장 전기차 수출을 주도하는 등 지역별 친환경차 전략을 차별화하고 있다.",
+        "tag": "수출, 전략, 차종별 수요",
+        "url": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005921231",
         "related": [
           {
-            "title": "DRI부터 수소환원제철까지, 철강의 미래 '그린 철강' 대해부[기후로운 ...",
-            "src": "www.nocutnews.co.kr",
-            "url": "https://www.nocutnews.co.kr/news/6577151?utm_source=naver&utm_medium=article&utm_campaign=20260913050039"
-          },
-          {
-            "title": "시동 건 RE100 산단…'인프라·세제·정주' 3박자 맞춰야 산다",
-            "src": "www.mt.co.kr",
-            "url": "https://www.mt.co.kr/economy/2026/09/13/2026091111194823822"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "삼성E&A, 사우디 4.7조 비료플랜트 수주…해외 화공 수주 확대",
-        "pubDate": "2026-09-13",
-        "summary": "삼성E&A가 사우디아라비아에서 4.7조원 규모의 비료 플랜트를 수주하며 해외 화공 플랜트 사업을 확대하고 있다.",
-        "tag": "수주, 해외사업",
-        "url": "https://www.bloter.net/news/articleView.html?idxno=673416",
-        "related": [
-          {
-            "title": "대미 투자 합의 임박…건설주, 수주 기대감에 이달 상승률 1위",
-            "src": "www.yna.co.kr",
-            "url": "https://www.yna.co.kr/view/AKR20260912017800008?input=1195m"
-          },
-          {
-            "title": "대형 건설사, '브랜드타운'으로 뭉친다...벌어지는 정비사업 양극화",
-            "src": "www.newsway.co.kr",
-            "url": "https://www.newsway.co.kr/news/view?ud=2026091110364229158"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "테슬라 메가팩 증설 수혜…LG엔솔·삼성SDI, 북미 ESS서 성장 가속",
-        "pubDate": "2026-09-13",
-        "summary": "테슬라의 ESS 증설에 따라 LG에너지솔루션과 삼성SDI가 배터리 생산라인을 ESS용으로 전환하며 북미 에너지저장장치 시장에서 성장을 가속화하고 있다.",
-        "tag": "배터리·ESS",
-        "url": "https://www.news1.kr/industry/general-industry/6287935",
-        "related": [
-          {
-            "title": "기아 첫 PBV 'PV5', 출시 13개월만에 글로벌 판매량 5만대 돌파",
-            "src": "www.yna.co.kr",
-            "url": "https://www.yna.co.kr/view/AKR20260911151100003?input=1195m"
-          },
-          {
-            "title": "중국車 막던 트럼프 말에 업계 술렁…\"미국서 만들면 거부 안 해\"",
-            "src": "www.hankyung.com",
-            "url": "https://www.hankyung.com/article/202609120482H"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "DRI부터 수소환원제철까지, 철강의 미래 '그린 철강' 대해부[기후로운 ...",
-        "pubDate": "2026-09-13",
-        "summary": "철강산업이 관세와 경쟁 압박 속에서 저탄소 그린 철강으로의 전환 필요성, DRI·수소환원제철 등 기술 혁신 방향 제시",
-        "tag": "기술혁신, 규제, 그린산업",
-        "url": "https://www.nocutnews.co.kr/news/6577151?utm_source=naver&utm_medium=article&utm_campaign=20260913050039",
-        "related": [
-          {
-            "title": "中, 전 세계 철광석 70% 쓸어 담는 '국가 구매 카르텔'로 가격 결정권 장...",
+            "title": "BYD, 2027년 전고체 배터리 실증 차량 공개…2030년 상용화 목표",
             "src": "www.g-enews.com",
-            "url": "https://www.g-enews.com/view.php?ud=2026091216224523220c8c1c064d_1"
+            "url": "https://www.g-enews.com/view.php?ud=2026091406452193172bd56fbc3c_1"
           },
           {
-            "title": "시동 건 RE100 산단…'인프라·세제·정주' 3박자 맞춰야 산다",
-            "src": "www.mt.co.kr",
-            "url": "https://www.mt.co.kr/economy/2026/09/13/2026091111194823822"
+            "title": "'큰손' 60대 떠나고 20대가 왔다…\"車 시장 세대교체 신호탄\"",
+            "src": "www.fnnews.com",
+            "url": "https://www.fnnews.com/news/202609092218114534"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "BYD, 2027년 전고체 배터리 실증 차량 공개…2030년 상용화 목표",
+        "pubDate": "2026-09-14",
+        "summary": "중국 BYD가 2027년 자체 개발 전고체 배터리 실증차량을 공개하고 2030년 상용화를 목표로 하는 등 차세대 배터리 기술 개발을 가속화하고 있다.",
+        "tag": "기술개발, 배터리, 경쟁",
+        "url": "https://www.g-enews.com/view.php?ud=2026091406452193172bd56fbc3c_1",
+        "related": [
+          {
+            "title": "현대차는 미국 하이브리드, 기아는 유럽 전기차 ‘질주’",
+            "src": "mbnmoney.mbn.co.kr",
+            "url": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005921231"
+          },
+          {
+            "title": "'큰손' 60대 떠나고 20대가 왔다…\"車 시장 세대교체 신호탄\"",
+            "src": "www.fnnews.com",
+            "url": "https://www.fnnews.com/news/202609092218114534"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "[더벨]최태원 회장 \"AI 데이터센터, 빅테크 기업과 협업 마무리 단계\"",
+        "pubDate": "2026-09-14",
+        "summary": "SK그룹 최태원 회장이 AI 데이터센터를 울산의 전략 산업으로 추진하고 있으며, 빅테크 기업과의 협업을 마무리 단계로 진행 중이다.",
+        "tag": "투자·협업",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609111426408680102156",
+        "related": [
+          {
+            "title": "트럼프 “AI 패권은 중국 견제가 우선”…빅테크 감속 요구에 규제 최소...",
+            "src": "www.g-enews.com",
+            "url": "https://www.g-enews.com/view.php?ud=2026091407000958522bd56fbc3c_1"
+          },
+          {
+            "title": "양자컴퓨팅, 미래가 아닌 지금의 경쟁력 [이수정의 IT세상]",
+            "src": "www.edaily.co.kr",
+            "url": "https://www.edaily.co.kr/News/Read?newsId=01817126645580120&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "[인사이드 스토리]첫발 겨우 뗀 석화 재편…여전히 안갯속인 이유",
+        "pubDate": "2026-09-14",
+        "summary": "중국의 공급 과잉으로 장기 불황에 시달리던 국내 석유화학 산업이 사업재편에 착수했으며, 대산 1호 합병법인이 출범해 구조조정이 본격화하고 있다.",
+        "tag": "구조조정, 산업재편, 수급불균형",
+        "url": "https://news.bizwatch.co.kr/article/industry/2026/09/11/0035",
+        "related": [
+          {
+            "title": "유가 다시 100달러 돌파…최고가제 연착륙 시험대",
+            "src": "www.dnews.co.kr",
+            "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609111329569520635"
+          },
+          {
+            "title": "[Invest]M&A마다 등판한 태광산업, '현금 풀라' 주주 압박에 셈법 복잡",
+            "src": "www.investchosun.com",
+            "url": "https://www.investchosun.com/site/data/html_dir/2026/09/11/2026091180143.html"
           }
         ]
       }
@@ -250,81 +250,81 @@
     "finance": [
       {
         "top": true,
-        "headline": "삼성·SK하이닉스 영업익 전망 21조 낮아졌다…환율 급락에 실적 부담",
-        "pubDate": "2026-09-13",
-        "summary": "원·달러 환율 급락으로 삼성전자와 SK하이닉스의 올해 영업이익 전망이 합계 21조원 하향 조정되었다.",
-        "tag": "실적, 환율영향, 반도체",
-        "url": "https://www.kbmaeil.com/article/20260913500026",
+        "headline": "\"달러로 벌어 원화로 바꾸니…\" 잘 나가던 K-반도체 발목 잡은 환율 급락",
+        "pubDate": "2026-09-14",
+        "summary": "원화 급락에 따라 국내 반도체 업계의 연간 영업이익 전망치가 하향 조정되며 달러 수출 기업의 실적 부담 증가.",
+        "tag": "환율, 반도체 실적",
+        "url": "https://www.cbci.co.kr/news/articleView.html?idxno=606355",
         "related": [
           {
-            "title": "[다음주 환율전망] 다시 1350원 넘보는 환율…중동發 유가 쇼크에 FOMC까...",
-            "src": "www.goodkyung.com",
-            "url": "https://www.goodkyung.com/news/articleView.html?idxno=291287"
+            "title": "[N2 포커스] 금리 오르고 환율 내리고…금융지주 3분기 실적 눈높이↑",
+            "src": "www.news2day.co.kr",
+            "url": "https://www.news2day.co.kr/article/20260913500051"
           },
           {
-            "title": "환율 반등이냐 추가 하락이냐…美·日 금리 결정 촉각[주간외환전망]",
-            "src": "www.edaily.co.kr",
-            "url": "https://www.edaily.co.kr/News/Read?newsId=01128326645579792&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+            "title": "美 증시, 유가 하락·CPI 안도에 5거래일 만에 반등-[글로벌 마감 시황]",
+            "src": "www.wowtv.co.kr",
+            "url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609140012&t=NN"
           }
         ]
       },
       {
         "top": false,
-        "headline": "유가 110달러·美국채 5% 육박…반도체 믿던 韓 '복합충격' 경고등",
-        "pubDate": "2026-09-13",
-        "summary": "국제유가 110달러, 미 국채 금리 5% 근처 등으로 복합 충격이 우려되는 가운데 상반기 회사채 발행이 급증했고 빅5의 회사채 발행 비중이 대폭 상승했다.",
-        "tag": "회사채, 자금조달, 경기위험",
-        "url": "https://www.news1.kr/economy/trend/6288172",
+        "headline": "\"팩 단가 60달러 벽 깨졌다\"… EV 배터리 시스템 시장, 2031년 '2,251억 달...",
+        "pubDate": "2026-09-14",
+        "summary": "배터리 팩 단가가 60달러 이하로 인하되며 EV 배터리 시스템 시장이 2031년 225조 달러 규모로 성장할 것으로 예상되고, 이는 CTP·CTC 같은 기술 혁신과 원자재 안정화의 결과다.",
+        "tag": "배터리, 전기자동차, 기술혁신, 시장규모",
+        "url": "https://www.g-enews.com/view.php?ud=2026091400275353320c8c1c064d_1",
         "related": [
           {
-            "title": "[크레딧 시그널]CP 금리 연중 최고 수준…기업 단기조달 전략 한계 봉착...",
-            "src": "www.edaily.co.kr",
-            "url": "https://www.edaily.co.kr/News/Read?newsId=01102086645579792&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+            "title": "후티, 홍해 입구 마윤섬 전격 점령…바브엘만데브 후티 통제권",
+            "src": "www.g-enews.com",
+            "url": "https://www.g-enews.com/view.php?ud=202609131902304726fda4f5ab74_1"
           },
           {
-            "title": "[데이터 A] 3년 허리띠 졸랐는데…가스공사, 석유공사 통합에 부채감축...",
-            "src": "www.asiatime.co.kr",
-            "url": "https://www.asiatime.co.kr/article/20260910500317"
+            "title": "전남 해상풍력 900㎿로 커진다…7조원 투입 2·3단지 추진",
+            "src": "www.geconomy.co.kr",
+            "url": "https://www.geconomy.co.kr/news/article.html?no=323631"
           }
         ]
       },
       {
         "top": false,
-        "headline": "[N2 포커스] 연내 기준금리 또 오르나…\"명목성장률, 70년대 고도성장 수...",
-        "pubDate": "2026-09-13",
-        "summary": "인플레이션 우려 속 한은이 연내 추가 기준금리 인상을 검토하고 있으며, 명목 경제성장률이 70년대 고도성장 수준에 가까워지고 있다.",
-        "tag": "기준금리, 물가정책",
-        "url": "https://www.news2day.co.kr/article/20260910500271",
+        "headline": "[N2 포커스] 금리 오르고 환율 내리고…금융지주 3분기 실적 눈높이↑",
+        "pubDate": "2026-09-14",
+        "summary": "기준금리 인상과 원화 강세가 금융지주의 3분기 이자이익과 환산손익을 개선시킬 것으로 예상.",
+        "tag": "금리, 금융지주 실적",
+        "url": "https://www.news2day.co.kr/article/20260913500051",
         "related": [
           {
-            "title": "전세사기 피해자 채무조정 4천명 육박…20·30대가 90%",
-            "src": "www.yna.co.kr",
-            "url": "https://www.yna.co.kr/view/AKR20260912039500002?input=1195m"
+            "title": "\"달러로 벌어 원화로 바꾸니…\" 잘 나가던 K-반도체 발목 잡은 환율 급락",
+            "src": "www.cbci.co.kr",
+            "url": "https://www.cbci.co.kr/news/articleView.html?idxno=606355"
           },
           {
-            "title": "금융위, '아파텔'에도 집단대출 총량규제 제외 검토한다",
-            "src": "www.yna.co.kr",
-            "url": "https://www.yna.co.kr/view/AKR20260912043100002?input=1195m"
+            "title": "美 증시, 유가 하락·CPI 안도에 5거래일 만에 반등-[글로벌 마감 시황]",
+            "src": "www.wowtv.co.kr",
+            "url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609140012&t=NN"
           }
         ]
       },
       {
         "top": false,
-        "headline": "[마켓스토리] '전쟁·유가·금리' 삼중고…외인 셀코리아 어쩌나",
-        "pubDate": "2026-09-13",
-        "summary": "중동 리스크와 유가·금리 상승으로 외국인이 주식을 매도하는 상황에서, 삼성전자·SK하이닉스 등 대형주의 자사주 매입이 코스피 하단을 지탱하고 있다.",
-        "tag": "외국인 수급, 자사주 매입, 시장동향",
-        "url": "https://www.yna.co.kr/view/AKR20260911118800008?input=1195m",
+        "headline": "美 증시, 유가 하락·CPI 안도에 5거래일 만에 반등-[글로벌 마감 시황]",
+        "pubDate": "2026-09-14",
+        "summary": "달러/원 환율이 두 달 만에 10% 이상 하락하면서 수출 대기업인 삼성전자와 SK하이닉스의 영업이익 전망이 하향 조정되고 있는 상황을 보도한다.",
+        "tag": "환율, 수출, 실적 전망",
+        "url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609140012&t=NN",
         "related": [
           {
-            "title": "유가 100달러·美금리 5% 눈앞…FOMC가 ‘7000피’ 안착 시험대[선데이머...",
-            "src": "www.sedaily.com",
-            "url": "https://www.sedaily.com/article/20090161?ref=naver"
+            "title": "\"달러로 벌어 원화로 바꾸니…\" 잘 나가던 K-반도체 발목 잡은 환율 급락",
+            "src": "www.cbci.co.kr",
+            "url": "https://www.cbci.co.kr/news/articleView.html?idxno=606355"
           },
           {
-            "title": "\"유가·금리 경계 vs AI 모멘텀 지속\"…FOMC 주목[주간증시전망]",
-            "src": "www.newsis.com",
-            "url": "https://www.newsis.com/view/NISX20260911_0003786213"
+            "title": "[N2 포커스] 금리 오르고 환율 내리고…금융지주 3분기 실적 눈높이↑",
+            "src": "www.news2day.co.kr",
+            "url": "https://www.news2day.co.kr/article/20260913500051"
           }
         ]
       }
