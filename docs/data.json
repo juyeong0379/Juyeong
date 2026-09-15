@@ -1,84 +1,84 @@
 {
-  "generated_at": "2026-09-15 07:12 KST",
+  "generated_at": "2026-09-16 07:12 KST",
   "categories": {
     "global": [
       {
         "top": true,
-        "headline": "글로벌 원유 공급 4% 감소 위기… 세계 경제 격랑속으로[사우디發 유가...",
-        "pubDate": "2026-09-14",
-        "summary": "사우디의 전쟁으로 인한 원유 생산 급감(1090만→620만 배럴/일)이 글로벌 원유 공급에 4% 수준의 차질을 초래하면서 세계 경제에 영향을 미친다.",
-        "tag": "원유공급, 에너지위기, 지정학적리스크",
-        "url": "https://www.fnnews.com/news/202609141848364483",
+        "headline": "\"사우디, 며칠 안에 원유 수출 못할 수도\"…동서송유관 가동 중단",
+        "pubDate": "2026-09-15",
+        "summary": "사우디의 동서송유관 가동 중단으로 원유 수출이 며칠 내 완전히 중단될 수 있는 위기 상황이 발생했으며, 전 지난달 생산량이 전월 대비 23% 급감한 상태.",
+        "tag": "원유공급, 에너지위기, 수출차질",
+        "url": "https://www.edaily.co.kr/News/Read?newsId=03804806645580448&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
         "related": [
           {
-            "title": "로이터 \"사우디 송유관 가동중단에 전 세계 원유공급 4% 감소 위기\"",
-            "src": "www.getnews.co.kr",
-            "url": "https://www.getnews.co.kr/news/articleView.html?idxno=880727"
-          },
-          {
-            "title": "사우디 송유관 중단에 세계 원유 공급 4% 차질 우려",
+            "title": "경윳값 뛰고 엔진오일 구매 제한…원유 수송로 막히자 美에너지 '비상'",
             "src": "www.edaily.co.kr",
-            "url": "https://www.edaily.co.kr/News/Read?newsId=03890086645580120&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+            "url": "https://www.edaily.co.kr/News/Read?newsId=05297206645580448&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+          },
+          {
+            "title": "9월 3주 주요 제조업 전망",
+            "src": "www.laborplus.co.kr",
+            "url": "https://www.laborplus.co.kr/news/articleView.html?idxno=41479"
           }
         ]
       },
       {
         "top": false,
-        "headline": "로이터 \"사우디 송유관 가동중단에 전 세계 원유공급 4% 감소 위기\"",
-        "pubDate": "2026-09-14",
-        "summary": "사우디 송유관 피해로 원유 생산량이 1090만 배럴에서 620만 배럴로 급감하면서 전 세계 공급량의 4% 감소 위기를 초래했다.",
-        "tag": "원유 수급, 공급 충격",
-        "url": "https://www.getnews.co.kr/news/articleView.html?idxno=880727",
+        "headline": "[BS모닝] ‘美 연준 인상 베팅 90%’에 12원 뛴 원·달러환율…韓 외환·...",
+        "pubDate": "2026-09-16",
+        "summary": "연준의 기준금리 인상 확률이 92%대까지 치솟으면서 원달러환율이 급등했고, 한국의 외환·금리 시장에 직접적인 영향을 미치고 있음.",
+        "tag": "환율, 금리, 통화정책",
+        "url": "http://www.segyebiz.com/newsView/20260915519972?OutUrl=naver",
         "related": [
           {
-            "title": "글로벌 원유 공급 4% 감소 위기… 세계 경제 격랑속으로[사우디發 유가...",
-            "src": "www.fnnews.com",
-            "url": "https://www.fnnews.com/news/202609141848364483"
+            "title": "19년래 최고 찍은 미 국채금리, 한국 영향은… 금감원, ‘폐쇄적 CEO 선...",
+            "src": "www.segye.com",
+            "url": "https://www.segye.com/newsView/20260915520134?OutUrl=naver"
           },
           {
-            "title": "사우디 송유관 중단에 세계 원유 공급 4% 차질 우려",
+            "title": "[속보]뉴욕증시 일제히 하락…나스닥 0.78%↓, 미국·이란 전쟁에 사우디...",
+            "src": "www.cbci.co.kr",
+            "url": "https://www.cbci.co.kr/news/articleView.html?idxno=607158"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "美中 갈등에 웃는 K-배터리 ESS… \"2년치 주문 꽉 차→추가 주문 기대\"",
+        "pubDate": "2026-09-15",
+        "summary": "미중 갈등 속 미국의 중국산 전력망 장비 배제 정책으로 LG에너지솔루션과 삼성SDI의 ESS용 배터리 수주가 2년치를 초과",
+        "tag": "배터리, 수주, 지정학",
+        "url": "https://www.thepublic.kr/news/articleView.html?idxno=318874",
+        "related": [
+          {
+            "title": "[Why] 美 관세 피해 중국 떠났는데 다시 돌아온다?… 기업들의 ‘탈중국...",
+            "src": "biz.chosun.com",
+            "url": "https://biz.chosun.com/international/international_general/2026/09/15/T5FS3BOM5FHCBNZF7WO43QXL2A/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+          },
+          {
+            "title": "習 방미 앞두고 美대두 쓸어담는 中…무역갈등 개선 신호탄?",
+            "src": "www.sedaily.com",
+            "url": "https://www.sedaily.com/article/20091131?ref=naver"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "경윳값 뛰고 엔진오일 구매 제한…원유 수송로 막히자 美에너지 '비상'",
+        "pubDate": "2026-09-15",
+        "summary": "사우디의 송유관 공격으로 원유 생산 및 수출이 급감하면서 미국의 에너지 부족 사태와 유가 상승이 가중되는 중.",
+        "tag": "원유공급, 유가, 에너지위기",
+        "url": "https://www.edaily.co.kr/News/Read?newsId=05297206645580448&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+        "related": [
+          {
+            "title": "\"사우디, 며칠 안에 원유 수출 못할 수도\"…동서송유관 가동 중단",
             "src": "www.edaily.co.kr",
-            "url": "https://www.edaily.co.kr/News/Read?newsId=03890086645580120&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "사우디 송유관 중단에 세계 원유 공급 4% 차질 우려",
-        "pubDate": "2026-09-14",
-        "summary": "사우디 송유관 중단과 원유 생산 감소로 글로벌 원유 공급이 4% 감소할 위험에 직면해 있으며, 호르무즈해협과 홍해 운송 차질이 주요 요인이다.",
-        "tag": "원유공급, 해상운송, 지정학적리스크",
-        "url": "https://www.edaily.co.kr/News/Read?newsId=03890086645580120&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-        "related": [
-          {
-            "title": "글로벌 원유 공급 4% 감소 위기… 세계 경제 격랑속으로[사우디發 유가...",
-            "src": "www.fnnews.com",
-            "url": "https://www.fnnews.com/news/202609141848364483"
+            "url": "https://www.edaily.co.kr/News/Read?newsId=03804806645580448&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
           },
           {
-            "title": "로이터 \"사우디 송유관 가동중단에 전 세계 원유공급 4% 감소 위기\"",
-            "src": "www.getnews.co.kr",
-            "url": "https://www.getnews.co.kr/news/articleView.html?idxno=880727"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "사우디 송유관 피해로 글로벌 원유 공급 4% 감소... 유가·美 국채금리 ...",
-        "pubDate": "2026-09-14",
-        "summary": "사우디 송유관 피해로 글로벌 원유 공급이 4% 감소하면서 유가와 미국 국채금리 등 주요 지표에 영향을 미친다.",
-        "tag": "원유 수급, 시장 영향",
-        "url": "https://www.fnnews.com/news/202609140906419083",
-        "related": [
-          {
-            "title": "글로벌 원유 공급 4% 감소 위기… 세계 경제 격랑속으로[사우디發 유가...",
-            "src": "www.fnnews.com",
-            "url": "https://www.fnnews.com/news/202609141848364483"
-          },
-          {
-            "title": "로이터 \"사우디 송유관 가동중단에 전 세계 원유공급 4% 감소 위기\"",
-            "src": "www.getnews.co.kr",
-            "url": "https://www.getnews.co.kr/news/articleView.html?idxno=880727"
+            "title": "9월 3주 주요 제조업 전망",
+            "src": "www.laborplus.co.kr",
+            "url": "https://www.laborplus.co.kr/news/articleView.html?idxno=41479"
           }
         ]
       }
@@ -86,81 +86,81 @@
     "macro": [
       {
         "top": true,
-        "headline": "AI 특수에 ICT 수출 600억弗 최대…대미 수출 4배 급증",
-        "pubDate": "2026-09-14",
-        "summary": "AI 특수에 힘입어 8월 ICT 수출이 599억8000만달러의 역대 최대치를 기록했으며, 대미 수출이 4배 급증했다.",
-        "tag": "수출, ICT, AI",
-        "url": "https://www.seoul.co.kr/news/economy/2026/09/14/20260914500282?wlog_tag3=naver",
+        "headline": "“AI 개발 늦추면 삼전닉스 폭락?”…K반도체 위기설 뜯어보니 [잇슈 머...",
+        "pubDate": "2026-09-16",
+        "summary": "8월 반도체 수출이 역대 최대치인 466억 달러를 기록했으며, 하이퍼스케일러의 설비투자 확대가 주요 견인 요인이다.",
+        "tag": "수출, 반도체",
+        "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8664543&ref=A",
         "related": [
           {
-            "title": "8월 ICT 수출액 '600억달러' 육박…반도체가 400억달러 이끌어",
-            "src": "www.aitimes.com",
-            "url": "https://www.aitimes.com/news/articleView.html?idxno=215249"
+            "title": "9월 3주 주요 제조업 전망",
+            "src": "www.laborplus.co.kr",
+            "url": "https://www.laborplus.co.kr/news/articleView.html?idxno=41479"
           },
           {
-            "title": "한국 수출, ICT 비중 60% 넘어 ‘쏠림 심화’",
-            "src": "www.khan.co.kr",
-            "url": "https://www.khan.co.kr/article/202609142152015"
+            "title": "울산 수출 3.3% 증가했지만…자동차·선박은 '반토막'",
+            "src": "www.iusm.co.kr",
+            "url": "https://www.iusm.co.kr/news/articleView.html?idxno=1067982"
           }
         ]
       },
       {
         "top": false,
-        "headline": "8월 ICT 수출액 '600억달러' 육박…반도체가 400억달러 이끌어",
-        "pubDate": "2026-09-14",
-        "summary": "8월 ICT 수출액이 559.8억달러로 전년 동월 대비 162.6% 증가했으며, 반도체가 400억달러로 주도했다.",
-        "tag": "수출, ICT, 반도체",
-        "url": "https://www.aitimes.com/news/articleView.html?idxno=215249",
+        "headline": "가계부채 비율 10년 만에 최저…정부 목표치 조기 달성 눈앞",
+        "pubDate": "2026-09-16",
+        "summary": "2분기 말 GDP 대비 가계부채 비율이 81%대로 내려가 10년 만에 최저 수준을 기록하며 2030년 목표치 조기 달성이 임박했다.",
+        "tag": "가계부채, 거시경제",
+        "url": "https://www.yna.co.kr/view/AKR20260915161500002?input=1195m",
         "related": [
           {
-            "title": "AI 특수에 ICT 수출 600억弗 최대…대미 수출 4배 급증",
-            "src": "www.seoul.co.kr",
-            "url": "https://www.seoul.co.kr/news/economy/2026/09/14/20260914500282?wlog_tag3=naver"
+            "title": "명목 GDP 급증에 가계부채 비율 81%대⋯10년 만에 최저",
+            "src": "www.etoday.co.kr",
+            "url": "https://www.etoday.co.kr/news/view/2625970"
           },
           {
-            "title": "한국 수출, ICT 비중 60% 넘어 ‘쏠림 심화’",
-            "src": "www.khan.co.kr",
-            "url": "https://www.khan.co.kr/article/202609142152015"
+            "title": "'가계빚 2천조' 시대, 한은-당국 시그널은 달랐다",
+            "src": "www.nocutnews.co.kr",
+            "url": "https://www.nocutnews.co.kr/news/6578630?utm_source=naver&utm_medium=article&utm_campaign=20260916063816"
           }
         ]
       },
       {
         "top": false,
-        "headline": "한국 수출, ICT 비중 60% 넘어 ‘쏠림 심화’",
-        "pubDate": "2026-09-14",
-        "summary": "한국의 ICT 수출액이 8월 600억달러에 육박하며 전년 동월 대비 162.6% 증가했고, 수출에서 ICT 비중이 60%를 넘으며 산업 쏠림이 심화되고 있다.",
-        "tag": "수출, ICT, 산업구조",
-        "url": "https://www.khan.co.kr/article/202609142152015",
+        "headline": "9월 3주 주요 제조업 전망",
+        "pubDate": "2026-09-15",
+        "summary": "8월 ICT 산업 수출액이 599억 8천만 달러로 사상 최대를 기록하면서 주요 성장 산업의 호조를 보여준다.",
+        "tag": "수출, ICT산업",
+        "url": "https://www.laborplus.co.kr/news/articleView.html?idxno=41479",
         "related": [
           {
-            "title": "AI 특수에 ICT 수출 600억弗 최대…대미 수출 4배 급증",
-            "src": "www.seoul.co.kr",
-            "url": "https://www.seoul.co.kr/news/economy/2026/09/14/20260914500282?wlog_tag3=naver"
+            "title": "“AI 개발 늦추면 삼전닉스 폭락?”…K반도체 위기설 뜯어보니 [잇슈 머...",
+            "src": "news.kbs.co.kr",
+            "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8664543&ref=A"
           },
           {
-            "title": "8월 ICT 수출액 '600억달러' 육박…반도체가 400억달러 이끌어",
-            "src": "www.aitimes.com",
-            "url": "https://www.aitimes.com/news/articleView.html?idxno=215249"
+            "title": "울산 수출 3.3% 증가했지만…자동차·선박은 '반토막'",
+            "src": "www.iusm.co.kr",
+            "url": "https://www.iusm.co.kr/news/articleView.html?idxno=1067982"
           }
         ]
       },
       {
         "top": false,
-        "headline": "8월 ICT 수출 600억달러 육박…AI 투자 확대에 역대 최대",
-        "pubDate": "2026-09-14",
-        "summary": "8월 ICT 수출이 600억달러에 육박하는 역대 최대 규모를 기록했으며, 글로벌 AI 투자 확대가 주요 성장 동인이다.",
-        "tag": "수출, ICT, AI",
-        "url": "http://www.efnews.co.kr/news/articleView.html?idxno=132417",
+        "headline": "명목 GDP 급증에 가계부채 비율 81%대⋯10년 만에 최저",
+        "pubDate": "2026-09-16",
+        "summary": "올해 2분기 명목 GDP 대비 가계부채 비율이 81%대로 10년 만에 최저 수준으로 하락하여 정부의 2030년 80% 목표에 근접했다.",
+        "tag": "가계부채, GDP",
+        "url": "https://www.etoday.co.kr/news/view/2625970",
         "related": [
           {
-            "title": "AI 특수에 ICT 수출 600억弗 최대…대미 수출 4배 급증",
-            "src": "www.seoul.co.kr",
-            "url": "https://www.seoul.co.kr/news/economy/2026/09/14/20260914500282?wlog_tag3=naver"
+            "title": "가계부채 비율 10년 만에 최저…정부 목표치 조기 달성 눈앞",
+            "src": "www.yna.co.kr",
+            "url": "https://www.yna.co.kr/view/AKR20260915161500002?input=1195m"
           },
           {
-            "title": "8월 ICT 수출액 '600억달러' 육박…반도체가 400억달러 이끌어",
-            "src": "www.aitimes.com",
-            "url": "https://www.aitimes.com/news/articleView.html?idxno=215249"
+            "title": "'가계빚 2천조' 시대, 한은-당국 시그널은 달랐다",
+            "src": "www.nocutnews.co.kr",
+            "url": "https://www.nocutnews.co.kr/news/6578630?utm_source=naver&utm_medium=article&utm_campaign=20260916063816"
           }
         ]
       }
@@ -168,81 +168,81 @@
     "industry": [
       {
         "top": true,
-        "headline": "삼성중 1.6조원어치 LNG선 등 6척 따내…올해 들어 10조 수주",
-        "pubDate": "2026-09-15",
-        "summary": "삼성중공업이 LNG선 4척과 원유운반선 2척을 1.6조원에 수주하며 올해 누적 수주액이 지난해 연간 실적을 초과했다. LNG선 시장의 강한 회복세를 반영한 결과다.",
-        "tag": "수주, 조선, LNG선",
-        "url": "https://www.joongang.co.kr/article/25461790",
+        "headline": "대만 재정부, 포스코 등 한국산 전기강판 덤핑 인정",
+        "pubDate": "2026-09-16",
+        "summary": "대만이 포스코 등 한국산 전기강판에 대한 반덤핑 조사 결과 45~50% 관세 부과를 결정했다.",
+        "tag": "무역분쟁, 수출규제",
+        "url": "https://www.kpinews.kr/newsView/1065563672681992",
         "related": [
           {
-            "title": "삼성重, LNG선 등 1.6조 수주…상선 수주액 벌써 지난해 넘어",
-            "src": "www.econovill.com",
-            "url": "https://www.econovill.com/news/articleView.html?idxno=750763"
+            "title": "'무분규' 전통 흔들리는 제조업…파업 수위 높이는 노조에 '몸살'",
+            "src": "www.news1.kr",
+            "url": "https://www.news1.kr/industry/general-industry/6291440"
           },
           {
-            "title": "삼성중공업, LNG 운반선 4척·원유 운반선 2척 등 1.6조 수주",
-            "src": "www.econonews.co.kr",
-            "url": "http://www.econonews.co.kr/news/articleView.html?idxno=444312"
+            "title": "포스코 노조 2차 부분파업 돌입…회사 \"생산 차질 없어\"",
+            "src": "www.yna.co.kr",
+            "url": "https://www.yna.co.kr/view/AKR20260916011900053?input=1195m"
           }
         ]
       },
       {
         "top": false,
-        "headline": "금리·유가 상승에 ‘AI 속도조절론’까지…SK하닉 ADR 7.6%↓ [뉴욕증시...",
-        "pubDate": "2026-09-15",
-        "summary": "AI 개발 속도조절론과 금리·유가 상승으로 반도체주가 일제히 하락했으며, SK하이닉스 ADR은 7.6%, 엔비디아·인텔 등도 3~5% 이상 떨어졌다.",
-        "tag": "시장반응, 반도체주가",
-        "url": "https://www.hankyung.com/article/2026091544386",
+        "headline": "국산 신약 첫 ‘블록버스터’ 눈앞…짐펜트라·엑스코프리 내년 1조 돌...",
+        "pubDate": "2026-09-16",
+        "summary": "국산 신약 짐펜트라와 엑스코프리가 내년 매출 1조원을 목표로 첫 블록버스터 신약 탄생이 임박한 상황이다.",
+        "tag": "블록버스터, 신약실적",
+        "url": "https://biz.sbs.co.kr/article_hub/20000334885?division=NAVER",
         "related": [
           {
-            "title": "[증시전략] 美 10년물 국채금리 '마의 5%' 터치…시장 파장은?",
-            "src": "biz.sbs.co.kr",
-            "url": "https://biz.sbs.co.kr/article_hub/20000334602?division=NAVER"
+            "title": "[더벨][SK바이오팜 다시 R&D의 시간] 미래가치 되살릴 묘수는 결국 신약...",
+            "src": "www.thebell.co.kr",
+            "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609141613580640105856"
           },
           {
-            "title": "브렌트유, 한때 110달러 육박…사우디 송유관 폐쇄 [글로벌 머니플로우...",
-            "src": "www.wowtv.co.kr",
-            "url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609150213&t=NN"
+            "title": "\"렉라자 성공신화 잇는다\"…도전하는 K-바이오",
+            "src": "www.newsis.com",
+            "url": "https://www.newsis.com/view/NISX20260915_0003790100"
           }
         ]
       },
       {
         "top": false,
-        "headline": "檢 ‘석화제품 가격 담합’ 경영진 8명 구속영장",
-        "pubDate": "2026-09-15",
-        "summary": "검찰이 LG화학, 한화솔루션 등 석유화학업체 7개사의 경영진 8명을 수조원대 가격 담합 혐의로 구속영장 청구했다.",
-        "tag": "카르텔, 규제, 부당거래",
-        "url": "https://www.segye.com/newsView/20260914519169?OutUrl=naver",
+        "headline": "10분에 휴머노이드 한 대씩...중국 유비테크 제조 공장 가동",
+        "pubDate": "2026-09-16",
+        "summary": "중국의 산업용 로봇 생산량이 전년 동월 대비 30% 이상 증가하며 급성장하고 있다.",
+        "tag": "수급동향, 시장확대",
+        "url": "https://www.sedaily.com/article/20091336?ref=naver",
         "related": [
           {
-            "title": "[THE Biz&CEO] '석화통' 이영준 롯데케미칼 대표, 체질개선으로 불황 뚫...",
-            "src": "www.the-biz.co.kr",
-            "url": "http://www.the-biz.co.kr/news/articleView.html?idxno=727806"
+            "title": "\"손끝 감각이 핵심 요소\"…에이딘로보, 로봇손 힘 제어 기술 실증 시험...",
+            "src": "www.news1.kr",
+            "url": "https://www.news1.kr/industry/sb-founded/6290794"
           },
           {
-            "title": "아시아 증시, 중동 분쟁·미일 긴축 재개 악재에 '급락'",
-            "src": "www.g-enews.com",
-            "url": "https://www.g-enews.com/view.php?ud=202609141100257077fda4f5ab74_1"
+            "title": "청년 창업기업 특허심사 한 달 내 처리…11월 초고속심사 확대",
+            "src": "www.newscammp.co.kr",
+            "url": "https://www.newscammp.co.kr/news/articleView.html?idxno=6927"
           }
         ]
       },
       {
         "top": false,
-        "headline": "10분에 로봇 1대씩…'로봇이 로봇 만드는 공장' 가동",
-        "pubDate": "2026-09-15",
-        "summary": "중국 유비테크의 휴머노이드 로봇 공장 가동으로 연간 1만 대 규모의 로봇 생산 체계 구축, 10분당 1대 생산 목표.",
-        "tag": "생산능력/산업동향",
-        "url": "https://www.etnews.com/20260914000402",
+        "headline": "테슬라가 깨운 삼성 美 테일러 공장…中 SMIC과 격차 벌린다[biz-플러스...",
+        "pubDate": "2026-09-16",
+        "summary": "삼성이 테슬라 AI5 반도체 공급 계약을 바탕으로 미국 테일러 공장 확대를 추진하며, 중국 SMIC과의 기술 격차를 확대하고 있다.",
+        "tag": "반도체, 수출, 기술경쟁",
+        "url": "https://www.sedaily.com/article/20091277?ref=naver",
         "related": [
           {
-            "title": "골드만삭스 “2035년 휴머노이드 로봇 650만 대 출하”…1380억 달러 시장...",
-            "src": "www.g-enews.com",
-            "url": "https://www.g-enews.com/view.php?ud=2026091421024966772bd56fbc3c_1"
+            "title": "바닥 찍은 ESS, 다시 도는 EV라인…3Q 반전 노리는 LG엔솔[클릭e종목]",
+            "src": "view.asiae.co.kr",
+            "url": "https://view.asiae.co.kr/article/2026091515541908358"
           },
           {
-            "title": "\"中 투자 불가론은 억지\"… '투자 대부' 팡펑레이 \"위안화 가치 年 5% 상...",
-            "src": "www.g-enews.com",
-            "url": "https://www.g-enews.com/view.php?ud=2026091423555511600c8c1c064d_1"
+            "title": "[MUST KNOW5]]비트코인 급락·테슬라-스페이스X 합병설 ‘급부상’…투자...",
+            "src": "www.edaily.co.kr",
+            "url": "https://www.edaily.co.kr/News/Read?newsId=02351766645580776&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
           }
         ]
       }
@@ -250,81 +250,81 @@
     "finance": [
       {
         "top": true,
-        "headline": "브렌트유, 한때 110달러 육박…사우디 송유관 폐쇄 [글로벌 머니플로우...",
-        "pubDate": "2026-09-15",
-        "summary": "사우디 송유관 폐쇄와 AI·전력망 투자 확대로 유가와 핵심 광물 수요가 급증하며 원자재지수가 10년 만에 최고치를 기록했다.",
-        "tag": "원유, 원자재",
-        "url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609150213&t=NN",
+        "headline": "美 국채금리 5%·유가 100달러 돌파…코스피, 연이틀 하락 압력",
+        "pubDate": "2026-09-16",
+        "summary": "미국 국채금리가 5%를 넘고 유가가 100달러를 돌파하면서 달러 강세로 원화가 약세되고 있어 코스피에 연이틀 하락 압력이 가해지고 있다.",
+        "tag": "환율, 국제유가, 국내증시",
+        "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1724397",
         "related": [
           {
-            "title": "기본형건축비 두 달 만에 4%↑…강남·용산·3기 신도시, 분양가 또 오른...",
-            "src": "www.sedaily.com",
-            "url": "https://www.sedaily.com/article/20090870?ref=naver"
+            "title": "美국채 5% 돌파…영끌족부터 반도체까지 '고금리 청구서' 날아든다",
+            "src": "www.news1.kr",
+            "url": "https://www.news1.kr/economy/trend/6291220"
           },
           {
-            "title": "미국 긴축재개 조짐, 주식·채권·환율 변동성 확대 우려",
-            "src": "www.sidae.com",
-            "url": "https://www.sidae.com/article/2026091415090952641"
+            "title": "“美연준 금리인상 확률 92%”… 기업 자금조달-투자위축 우려",
+            "src": "www.donga.com",
+            "url": "https://www.donga.com/news/Economy/article/all/20260916/134676848/2"
           }
         ]
       },
       {
         "top": false,
-        "headline": "환율 하락에 8월 수출물가 3.7%↓…3년 8개월 만에 최대폭",
-        "pubDate": "2026-09-15",
-        "summary": "환율 하락의 영향으로 8월 수출물가지수가 3년 8개월 만의 최대 폭인 3.7% 하락하며 수출 가격 경쟁력에 변화가 생겼다.",
-        "tag": "환율, 수출물가, 통계",
-        "url": "https://www.slist.kr/news/articleView.html?idxno=766122",
+        "headline": "[뉴욕증시] 국채 5%·유가 108달러 '더블 펀치', 이틀째 휘청···반도체...",
+        "pubDate": "2026-09-16",
+        "summary": "국채 금리 상승과 유가 급등이 기대인플레이션을 높이고 할인율을 상승시키면서 글로벌 주식·채권 시장에 부정적 영향을 미치고 있다.",
+        "tag": "금리, 유가, 시장동향",
+        "url": "https://www.seoulfn.com/news/articleView.html?idxno=638066",
         "related": [
           {
-            "title": "미국증시, AI 속도조절론에 반도체 급락…SK하이닉스 ADR 7.6%↓",
-            "src": "www.topstarnews.net",
-            "url": "https://www.topstarnews.net/news/articleView.html?idxno=16193910"
+            "title": "19년래 최고 찍은 미 국채금리, 한국 영향은… 금감원, ‘폐쇄적 CEO 선...",
+            "src": "www.segye.com",
+            "url": "https://www.segye.com/newsView/20260915520134?OutUrl=naver"
           },
           {
-            "title": "[Invest]원화 강세보다 무서운 환율 변동성…수출기업 사업 계획도 '안갯...",
-            "src": "www.investchosun.com",
-            "url": "https://www.investchosun.com/site/data/html_dir/2026/09/14/2026091480145.html"
+            "title": "오픈AI·앤트로픽도 우량채 노린다…AI 투자 위험, 커지나",
+            "src": "www.hankyung.com",
+            "url": "https://www.hankyung.com/article/202609156867i"
           }
         ]
       },
       {
         "top": false,
-        "headline": "미국증시, AI 속도조절론에 반도체 급락…SK하이닉스 ADR 7.6%↓",
-        "pubDate": "2026-09-15",
-        "summary": "미국 AI 속도조절론에 따라 반도체주가 급락했고, SK하이닉스 ADR이 7.6% 하락했으며 원화 약세 현상도 나타났다.",
-        "tag": "반도체, 환율, AI산업",
-        "url": "https://www.topstarnews.net/news/articleView.html?idxno=16193910",
+        "headline": "미 제조업, 비용 인플레에 신음…\"1년 뒤에도 암울\"",
+        "pubDate": "2026-09-16",
+        "summary": "미국 제조업이 기초 원자재와 연료비 인플레로 비용 압박을 받고 있으며, 휘발유와 경유 가격도 역사적 수준까지 상승했다.",
+        "tag": "원자재, 인플레이션",
+        "url": "https://www.fnnews.com/news/202609160202218954",
         "related": [
           {
-            "title": "환율 하락에 8월 수출물가 3.7%↓…3년 8개월 만에 최대폭",
-            "src": "www.slist.kr",
-            "url": "https://www.slist.kr/news/articleView.html?idxno=766122"
+            "title": "\"2031년 400조 원 시장\"… 中 차세대 배터리, '전고체·BESS·신흥국' 삼...",
+            "src": "www.g-enews.com",
+            "url": "https://www.g-enews.com/view.php?ud=2026091517231790220c8c1c064d_1"
           },
           {
-            "title": "[Invest]원화 강세보다 무서운 환율 변동성…수출기업 사업 계획도 '안갯...",
-            "src": "www.investchosun.com",
-            "url": "https://www.investchosun.com/site/data/html_dir/2026/09/14/2026091480145.html"
+            "title": "RPS에서 계약시장으로··· 해상풍력 사업성 시험대 오른다",
+            "src": "www.epj.co.kr",
+            "url": "http://www.epj.co.kr/news/articleView.html?idxno=39398"
           }
         ]
       },
       {
         "top": false,
-        "headline": "美 10년물 국채금리 장중 5% 돌파…유가 급등에 물가 비상",
-        "pubDate": "2026-09-15",
-        "summary": "미국 10년물 국채금리 5% 돌파로 유가 급등과 물가 상승 우려가 커지고 있으며, 재정적자와 기업 회사채 발행 증가가 채권시장 부담요인으로 작용하고 있다.",
-        "tag": "금리, 물가, 재정",
-        "url": "https://biz.sbs.co.kr/article_hub/20000334596?division=NAVER",
+        "headline": "19년래 최고 찍은 미 국채금리, 한국 영향은… 금감원, ‘폐쇄적 CEO 선...",
+        "pubDate": "2026-09-16",
+        "summary": "19년 만에 최고를 기록한 미국 국채 금리가 국내 은행채·회사채 금리를 연쇄적으로 상승시키고 소비·투자 위축을 초래할 위험을 분석.",
+        "tag": "금리, 자금조달 비용, 산업 영향",
+        "url": "https://www.segye.com/newsView/20260915520134?OutUrl=naver",
         "related": [
           {
-            "title": "미 10년물 국채 금리 5% 돌파…반도체주 급락",
-            "src": "news.kbs.co.kr",
-            "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8663369&ref=A"
+            "title": "[뉴욕증시] 국채 5%·유가 108달러 '더블 펀치', 이틀째 휘청···반도체...",
+            "src": "www.seoulfn.com",
+            "url": "https://www.seoulfn.com/news/articleView.html?idxno=638066"
           },
           {
-            "title": "[AI 속도 조절론 확산]③하이퍼스케일러, 주도권 쥐려 ‘풀 레버리지’...",
-            "src": "www.dnews.co.kr",
-            "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609141327387990910"
+            "title": "오픈AI·앤트로픽도 우량채 노린다…AI 투자 위험, 커지나",
+            "src": "www.hankyung.com",
+            "url": "https://www.hankyung.com/article/202609156867i"
           }
         ]
       }
