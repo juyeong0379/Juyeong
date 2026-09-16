@@ -47,6 +47,21 @@
   .tab.active{color:#fff;box-shadow:none;}
   .tab .emoji{margin-right:5px;}
 
+  .daily-q{
+    background:linear-gradient(135deg,#FFF6D9 0%,#FFE9F1 100%);
+    border-radius:22px;padding:20px 22px;margin-bottom:22px;box-shadow:0 5px 0 var(--line);
+  }
+  .daily-q .label{font-family:'Jua', sans-serif;font-size:12px;color:#C98A00;margin-bottom:8px;}
+  .daily-q .question{font-family:'Jua', sans-serif;font-size:19px;line-height:1.5;margin:0 0 12px;}
+  .daily-q details{font-size:13.5px;line-height:1.7;color:#6C6484;margin-bottom:10px;}
+  .daily-q summary{cursor:pointer;color:var(--sub);font-size:12.5px;}
+  .daily-q .hint{margin-top:6px;background:rgba(255,255,255,.6);border-radius:12px;padding:8px 12px;}
+  .daily-q .source{font-size:12px;color:var(--sub);}
+  .daily-q .source button{
+    border:none;background:none;padding:0;cursor:pointer;font:inherit;
+    color:var(--ink);text-decoration:underline;text-underline-offset:3px;
+  }
+
   .top-story{
     background:var(--card);border-radius:24px;padding:24px 24px 20px;
     margin-bottom:20px;box-shadow:0 6px 0 var(--line);
@@ -70,6 +85,12 @@
 
   .stat-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
   .tag-pill{font-size:12px;padding:5px 11px;border-radius:999px;}
+  .src-name{font-weight:700;color:var(--ink);}
+  .foreign-pill{
+    display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;
+    background:#EEF1F6;color:#5B6478;margin-right:6px;vertical-align:2px;
+  }
+  .orig-title{font-size:12px;color:var(--sub);font-style:italic;margin:-2px 0 8px;line-height:1.5;}
   .read-btn{
     font-family:'Jua', sans-serif;font-size:13px;color:#fff;text-decoration:none;
     padding:7px 14px;border-radius:999px;margin-left:auto;
@@ -112,17 +133,22 @@
     </div>
   </div>
 
+  <div id="dailyQ"></div>
   <div class="tabs" id="tabs"></div>
   <div id="content"><div class="empty-msg">데이터를 불러오는 중이에요...</div></div>
 
 </div>
 
 <script>
+// 탭 순서 = 이 객체의 순서 (scripts/generate_briefing.py 의 CATEGORIES 키와 같아야 해요)
 const THEME = {
   global:   { color:"#7FC4FF", soft:"#E7F3FF", emoji:"🌍", label:"글로벌" },
   macro:    { color:"#5FD1A6", soft:"#E4FBF1", emoji:"📈", label:"국내 거시경제" },
   industry: { color:"#FFC24B", soft:"#FFF4DE", emoji:"🏭", label:"국내 산업" },
-  finance:  { color:"#FF8FAE", soft:"#FFEBF1", emoji:"💰", label:"국내 시장·금융" },
+  finance:  { color:"#FF8FAE", soft:"#FFEBF1", emoji:"🤝", label:"시장·금융 (IB)" },
+  bond:     { color:"#9C8CFF", soft:"#EFECFF", emoji:"🧾", label:"채권" },
+  vc_ipo:   { color:"#FF9F6B", soft:"#FFEFE5", emoji:"🚀", label:"VC·IPO" },
+  mobility: { color:"#6BC9D6", soft:"#E3F7FA", emoji:"🚗", label:"모빌리티" },
 };
 
 let DATA = {};
@@ -131,9 +157,17 @@ let active = 'global';
 const tabsEl = document.getElementById('tabs');
 const contentEl = document.getElementById('content');
 const generatedAtEl = document.getElementById('generatedAt');
+const dailyQEl = document.getElementById('dailyQ');
+
+// 기사 제목 등에 <, > 같은 문자가 있어도 화면이 깨지지 않게
+function esc(s){
+  return String(s ?? '').replace(/[&<>"']/g, c => (
+    {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]
+  ));
+}
 
 function formatDate(d){
-  const [y,m,day] = d.split('-');
+  const [y,m,day] = String(d).split('-');
   return `${y}.${m}.${day}`;
 }
 function daysAgo(d){
@@ -148,6 +182,44 @@ function daysAgo(d){
   return `${Math.round(diff/365)}년 전`;
 }
 
+// 제목 위 배지 / 영어 원제 / 날짜·언론사 줄
+function foreignBadge(item){
+  return item.foreign ? `<span class="foreign-pill">🌐 해외</span>` : '';
+}
+function originalTitle(item){
+  return item.foreign && item.original_headline
+    ? `<div class="orig-title">${esc(item.original_headline)}</div>` : '';
+}
+function metaLine(item){
+  const src = item.source ? ` · <span class="src-name">${esc(item.source)}</span>` : '';
+  return `📅 ${formatDate(item.pubDate)} 발행 · ${daysAgo(item.pubDate)}${src}`;
+}
+
+function switchTab(key){
+  if(!THEME[key]) return;
+  active = key;
+  renderTabs();
+  renderContent();
+}
+
+function renderDailyQuestion(q){
+  if(!q || !q.question){ dailyQEl.innerHTML = ''; return; }
+  const t = THEME[q.category] || { emoji:'📌', label:'' };
+  dailyQEl.innerHTML = `
+    <div class="daily-q">
+      <div class="label">💭 오늘 생각해볼 질문</div>
+      <p class="question">${esc(q.question)}</p>
+      ${q.hint ? `<details><summary>힌트 보기</summary><div class="hint">${esc(q.hint)}</div></details>` : ''}
+      <div class="source">관련 기사:
+        <button type="button" id="dailyQJump">${t.emoji} ${esc(t.label)} · ${esc(q.headline)}</button>
+      </div>
+    </div>`;
+  document.getElementById('dailyQJump').addEventListener('click', ()=>{
+    switchTab(q.category);
+    tabsEl.scrollIntoView({ behavior:'smooth' });
+  });
+}
+
 function renderTabs(){
   tabsEl.innerHTML = Object.entries(THEME).map(([key, t]) => `
     <button class="tab ${key===active?'active':''}"
@@ -157,11 +229,7 @@ function renderTabs(){
     </button>
   `).join('');
   tabsEl.querySelectorAll('.tab').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      active = btn.dataset.key;
-      renderTabs();
-      renderContent();
-    });
+    btn.addEventListener('click', ()=> switchTab(btn.dataset.key));
   });
 }
 
@@ -171,8 +239,8 @@ function renderRelated(related){
     <div class="related-box">
       <div class="related-title">🔗 관련 기사</div>
       ${related.map(r => `
-        <a class="related-link" href="${r.url}" target="_blank" rel="noopener">
-          ${r.title}<span class="src">· ${r.src}</span>
+        <a class="related-link" href="${esc(r.url)}" target="_blank" rel="noopener">
+          ${esc(r.title)}<span class="src">· ${esc(r.src)}</span>
         </a>
       `).join('')}
     </div>
@@ -194,13 +262,14 @@ function renderContent(){
   let out = `
     <div class="top-story">
       <span class="ribbon" style="background:${t.color}">${t.emoji} 오늘의 1순위 이슈</span>
-      <h2>${top.headline}</h2>
-      <div class="pubdate">📅 ${formatDate(top.pubDate)} 발행 · ${daysAgo(top.pubDate)}</div>
-      <p class="summary">${top.summary}</p>
+      <h2>${foreignBadge(top)}${esc(top.headline)}</h2>
+      ${originalTitle(top)}
+      <div class="pubdate">${metaLine(top)}</div>
+      <p class="summary">${esc(top.summary)}</p>
       ${renderRelated(top.related)}
       <div class="stat-row">
-        <span class="tag-pill" style="background:${t.soft};color:${t.color}">${top.tag}</span>
-        <a class="read-btn" href="${top.url}" target="_blank" rel="noopener" style="background:${t.color}">전문 보러가기</a>
+        <span class="tag-pill" style="background:${t.soft};color:${t.color}">${esc(top.tag)}</span>
+        <a class="read-btn" href="${esc(top.url)}" target="_blank" rel="noopener" style="background:${t.color}">전문 보러가기</a>
       </div>
     </div>
   `;
@@ -212,13 +281,14 @@ function renderContent(){
         <div class="row-top">
           <span class="dot" style="background:${t.color}"></span>
           <div class="row-body" style="flex:1">
-            <h3>${item.headline}</h3>
-            <div class="pubdate">📅 ${formatDate(item.pubDate)} 발행 · ${daysAgo(item.pubDate)}</div>
-            <p class="summary">${item.summary}</p>
+            <h3>${foreignBadge(item)}${esc(item.headline)}</h3>
+            ${originalTitle(item)}
+            <div class="pubdate">${metaLine(item)}</div>
+            <p class="summary">${esc(item.summary)}</p>
             ${renderRelated(item.related)}
             <div class="row-meta">
-              <span class="tag-pill" style="background:${t.soft};color:${t.color}">${item.tag}</span>
-              <a class="read-link" href="${item.url}" target="_blank" rel="noopener">전문 보기 →</a>
+              <span class="tag-pill" style="background:${t.soft};color:${t.color}">${esc(item.tag)}</span>
+              <a class="read-link" href="${esc(item.url)}" target="_blank" rel="noopener">전문 보기 →</a>
             </div>
           </div>
         </div>
@@ -231,11 +301,12 @@ function renderContent(){
 
 async function load(){
   try{
-    const res = await fetch('data.json', {cache:"no-store"});
+    const res = await fetch('data.json', { cache:"no-store" });
     if(!res.ok) throw new Error("data.json을 찾을 수 없어요");
     const json = await res.json();
     DATA = json.categories || {};
     generatedAtEl.textContent = `마지막 업데이트: ${json.generated_at || "알 수 없음"}`;
+    renderDailyQuestion(json.daily_question);
     renderTabs();
     renderContent();
   }catch(e){
