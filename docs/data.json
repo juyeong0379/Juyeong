@@ -1,126 +1,126 @@
 {
-  "generated_at": "2026-09-28 09:28 KST",
+  "generated_at": "2026-09-29 10:38 KST",
   "daily_question": {
-    "question": "고금리가 지속되면 기업들이 회사채 발행을 꺼리는 이유는 뭘까?",
-    "hint": "금리가 오르면 채권 발행 시 투자자에게 제시해야 하는 수익률도 함께 올라간다.",
-    "category": "bond",
-    "headline": "[고금리 찬바람] 성수기에도 회사채 발행 절반 '뚝'…순상환 이어져",
-    "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436565"
+    "question": "반도체 호황인데 중소기업 대출 연체액이 4년 새 4배 증가한 이유는 뭘까?",
+    "hint": "경제 전체의 호황이 모든 기업에 고르게 도움이 되는 건 아닐 수 있다.",
+    "category": "macro",
+    "headline": "[단독] 고금리 덮친 중소기업, 대출 연체액 9조 넘어…4년 새 4배",
+    "url": "https://www.hani.co.kr/arti/economy/finance/1279883.html"
   },
   "categories": {
     "global": [
       {
         "top": true,
-        "headline": "Making Sense of Sky-High Treasury Yields",
-        "original_headline": "Making Sense of Sky-High Treasury Yields",
-        "source": "WSJ",
-        "foreign": true,
-        "pubDate": "2026-09-27",
-        "summary": "미국 국채 수익률 급등의 원인과 의미를 분석하는 기사로, 인플레이션 전망, 연준 정책 방향, 글로벌 자본 흐름 등 복합적 요인을 종합적으로 검토하고 있다. 채권 시장의 구조적 변화를 이해하는 데 도움이 된다.",
-        "tag": "국채수익률, 금리정책, 인플레이션",
-        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPOV9xYTUzSl9zTE5Lb19udHFTcm1FYjVwWnRfTUQyT255YVFlelU1RlZNakFjaFB5Zk9uOVJBN2szcjZWXzhTcXRDdnZMMDFncm9uZlBpSDZ0WUszZnJuVERsVURUUTRNWW9mdk9lZ0wxMEZ3V09CZ01ZYjVVMU1SZG1XTVFBd3U0OURHSmQwS0dFTXdLV2NUTVZHS1dZNlVuemNETVg3aG1mbkR3dUdtUDhrOWhuUWcydnd5NTlOaW96R1pueU9iXzlzaw?oc=5",
+        "headline": "美국채 5% 시대에 엇갈린 시선…“40년만의 기회” vs “지금 거품”",
+        "original_headline": "",
+        "source": "헤럴드경제",
+        "foreign": false,
+        "pubDate": "2026-09-29",
+        "summary": "미국 국채 금리가 5% 시대에 접어들면서 투자자 사이에 기회론과 거품론이 엇갈리고 있다. 채권시장이 미국 경제를 재평가하는 과정과 그 함의를 다룬다.",
+        "tag": "채권시장, 국채 가치평가, 투자 전략",
+        "url": "https://biz.heraldcorp.com/article/10887227?ref=naver",
         "related": [
           {
-            "title": "The 10-year Treasury yield is at its highest in nearly two decades. How we got here",
-            "src": "CNBC",
-            "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdjRseTh3M19YMmZMRzZwNmNzU2lKOXBaQWZFY3h6NmljdHFJbk1MaHBrSHdnUHYzQ3Z2emhBZUV0eGNDT21JcVIwaE84d0diZHpTTmxydzZhaElHSVR2VHV4RzVMS0RKUktMMU1RaDhxQ08zTER0UDkyMVVUX1p5ZXRaZTltWmNzdHVGOGotdjB3OVNCbGtvV3A5Z3ZyU05QVGNWSVB3WmzSAa4BQVVfeXFMUEZ0RlpZaDh6bGxuVzVZalpuRHEyMEM2ZnE3SGxpUHdQbXZPcVBYRkJkYzhITFVHa091bUZ0eldHbW9tTTRlRW5kU0ZPTFctNjk2TC1WaHA2Qm9kNV9TX1F1b0R3NFlUblFtek95a3dVVzk3QlFGbjZaSWVkZDBBTjdRRE5RMS12ZUxITldWalVwRU9sT3Nsc1hLdGNrQi1MSktCM0cwSThjX1ZPY3JB?oc=5"
+            "title": "美증시, 국채금리 상승 어디까지 버틸까…BofA \"10년물 7% 넘어야 증시 ...",
+            "src": "연합인포맥스",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436834"
           },
           {
-            "title": "Soaring bond yields ‘not even close’ to cooling red-hot US economy, investors say",
-            "src": "Financial Times",
-            "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeEhLUFZtTkNDMS1jTFF2am1wTENnbk96c3d2OEVfbGJVaHlIbGg1YmRhNFhyOG9XbmN3VGs5cmc0SlF3TWk3cWwzaEN4MnVPZXkxQ1VzZVY5anBCWVhXSy11RHphcnJCNk4tN1dlekxIRFM5RFNSYjZmM1VDR082WWVjTWY?oc=5"
+            "title": "\"유가 100달러 계속 웃돌면 내년에도 연준 추가 긴축 전망\"",
+            "src": "연합인포맥스",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436835"
           }
         ]
       },
       {
         "top": false,
-        "headline": "확 좁혀진 미 장단기 금리차…경기침체 신호 주목",
+        "headline": "美국채 5% 시대 \"40년만의 기회\" vs \"지금 거품\"",
         "original_headline": "",
         "source": "연합뉴스",
         "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "미국 2년물·10년물 국채 금리 격차가 17bp로 좁혀지면서 경기침체 신호 가능성이 제기됐다. 연준의 빠른 금리 인상 속도가 장단기 수익률 곡선을 역전시킬 수 있다는 분석을 담았다.",
-        "tag": "수익률곡선, 경기침체 신호, 금리역전",
-        "url": "https://www.yna.co.kr/view/AKR20260928021100009?input=1195m",
+        "pubDate": "2026-09-29",
+        "summary": "미국 국채 5% 시대에 대해 '40년만의 투자 기회'와 '거품 우려'가 엇갈리고 있으며, 투자자들은 채권시장의 경제 재평가 신호와 초장기채 위험을 함께 고려해야 한다. 글로벌 채권시장의 구조적 변화가 자산배분 전략을 근본적으로 재편하고 있다.",
+        "tag": "미국 채권, 금리, 자산가격",
+        "url": "https://www.yna.co.kr/view/AKR20260929043200009?input=1195m",
         "related": [
           {
-            "title": "NH證 \"美 10년물 금리 기준점은 '명목성장률'…상단 5.6% 열어둬야\"",
+            "title": "美증시, 국채금리 상승 어디까지 버틸까…BofA \"10년물 7% 넘어야 증시 ...",
             "src": "연합인포맥스",
-            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436603"
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436834"
           },
           {
-            "title": "“추석 연휴 사흘 만에 20bp 뛰었다” 미국 장기 국채금리 더 오른다는...",
-            "src": "매일경제",
-            "url": "https://www.mk.co.kr/article/12162234"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "美재무 \"연준, 열린 마음 가져야…그린스펀은 경기 달리게 뒀다\"",
-        "original_headline": "",
-        "source": "연합뉴스",
-        "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "미국 재무부가 연준에 추가 금리 인상 자제를 우회적으로 주문했으며, AI 발전과 규제 완화가 고성장-안정 물가를 동시에 달성할 수 있다는 논리를 제시했다. 통화정책 방향을 둘러싼 정부-중앙은행 간 시각 차이를 보여준다.",
-        "tag": "미국 금리 정책, AI, 생산성",
-        "url": "https://www.yna.co.kr/view/AKR20260928015700009?input=1195m",
-        "related": [
-          {
-            "title": "NH證 \"美 10년물 금리 기준점은 '명목성장률'…상단 5.6% 열어둬야\"",
+            "title": "\"유가 100달러 계속 웃돌면 내년에도 연준 추가 긴축 전망\"",
             "src": "연합인포맥스",
-            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436603"
-          },
-          {
-            "title": "“추석 연휴 사흘 만에 20bp 뛰었다” 미국 장기 국채금리 더 오른다는...",
-            "src": "매일경제",
-            "url": "https://www.mk.co.kr/article/12162234"
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436835"
           }
         ]
       },
       {
         "top": false,
-        "headline": "국채 금리 ‘5% 시대’...美 정부 재정적자와 AI 회사채 급증으로 장기...",
+        "headline": "다시 금 사는 중앙은행들…뉴욕 아닌 런던에 쌓아둔다",
         "original_headline": "",
-        "source": "조선일보",
+        "source": "중앙일보",
         "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "미국 국채 금리가 5% 시대에 진입한 배경으로 정부 재정적자(GDP 대비 5.8~6.3%)와 AI 회사채 급증을 지목했다. 글로벌 채권 시장의 구조적 변화와 장기 금리 상승 추세를 분석한 기사다.",
-        "tag": "국채금리, 재정적자, 회사채",
-        "url": "https://www.chosun.com/economy/money/2026/09/28/VBPCTU4G7VAXBLPD26Y4CCXLW4/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+        "pubDate": "2026-09-29",
+        "summary": "중앙은행들의 금 매입이 증가하면서 런던에 금을 보관하는 추세가 나타나고 있다. 골드만삭스는 올해 말 금값을 온스당 4,900달러로 전망하며, 중앙은행의 월평균 매입량이 2022년 이전의 약 3배에 달할 것으로 예상했다.",
+        "tag": "금, 중앙은행, 자산 다양화",
+        "url": "https://www.joongang.co.kr/article/25465370",
         "related": [
           {
-            "title": "iM證 “美 경제 예상보다 강하지만 10년물 5%대는 부담”",
-            "src": "조선비즈",
-            "url": "https://biz.chosun.com/stock/stock_general/2026/09/28/WTQAVMMXTVA7ZHB5AQQNYX42CQ/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+            "title": "미·이란 대치 속 美국채금리 또 상승…뉴욕증시 하락(종합)",
+            "src": "연합뉴스",
+            "url": "https://www.yna.co.kr/view/AKR20260929006451072?input=1195m"
           },
           {
-            "title": "5.2% 돌파한 美 10년물 금리…메리츠證 “당분간 채권은 이자수익에 집...",
-            "src": "조선비즈",
-            "url": "https://biz.chosun.com/stock/stock_general/2026/09/28/ZQZI7IFXSRCD3DJ2EYNZXXVX2E/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+            "title": "‘금리 앞에 장사없다’ 美 10년물 5.2% 돌파…뉴욕증시 3대 지수 일제히...",
+            "src": "헤럴드경제",
+            "url": "https://biz.heraldcorp.com/article/10886883?ref=naver"
           }
         ]
       },
       {
         "top": false,
-        "headline": "Debt-hungry AI companies face increased risk as bond yields spike",
-        "original_headline": "Debt-hungry AI companies face increased risk as bond yields spike",
-        "source": "CNBC",
+        "headline": "For once, the Fed has put Main Street before Wall Street",
+        "original_headline": "For once, the Fed has put Main Street before Wall Street",
+        "source": "Financial Times",
         "foreign": true,
-        "pubDate": "2026-09-27",
-        "summary": "AI 기업들이 자금 조달을 위해 채권 시장에 의존하고 있는데, 급등한 채권 수익률이 이들의 차입 비용을 크게 높이면서 신용 리스크가 증가하고 있다. 저금리 시대 과도한 차입을 한 기술 기업들이 금융 구조 조정 압박을 받게 될 가능성이 커졌다.",
-        "tag": "채권수익률, 기업신용리스크, 자금조달",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNdzNYWDdhN2lVRjBIZE9sdE92U1FQaDVXSDFmNm9SVEViZ3RIcEVkZnRCZGlFTmtpSUpOWHJmTF9URHQ3SWZGQ0FPcjV1cV9WQjFtZW14NUItaVBVZUJqM3BfcUNWU2pPc21hTUNWMnFBRTFmeVM0YjRoakZnSW14ZmwybkFQdW9XQmpKdC04NXNoekFmQ1NKMUxPZmhvRFJkY0F0Ni1B0gGrAUFVX3lxTE4wRTk3M2x2R04yRnc5MnVCWm9wZjNzSDRhX081cU5pRHItaEtKbExRT1RWeDZneEFTcmZlZ1l0VEpTdmpac181blNucXFQVlVZTm5oenJjbEc1QlVMQUZkNzFMV1l3V2llbEc3bnVYTUVnTlRfZjFXSkJjakY2ZWpnbXIwRVVfZ2JVREt4QmtoLVA5LXpabjNRblVBSzJkRVJubm5QblVJN2ZQTQ?oc=5",
+        "pubDate": "2026-09-28",
+        "summary": "연방준비제도가 금융시장의 이익보다 실물경제(Main Street)의 안정성을 우선시하는 정책 기조의 변화를 보이고 있다. 이는 금리 인상 정책의 경제적 영향과 정책 우선순위 재조정을 시사한다.",
+        "tag": "통화정책, 인플레이션, 경제정책",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9CR2dRcGVvc0o5ZURBSEhSVEVsd1V4UDRBZGRIdFNyWndhX3hqYzJnTmRNbl9Ua3dDUlJpS0wtckRIOTU0VElGYjFINGNFV05kZk1raHpTaXRzSTUtTF9DMTJLZzNrMUZKQmc5Q3RqY04?oc=5",
         "related": [
           {
-            "title": "The 10-year Treasury yield is at its highest in nearly two decades. How we got here",
-            "src": "CNBC",
-            "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdjRseTh3M19YMmZMRzZwNmNzU2lKOXBaQWZFY3h6NmljdHFJbk1MaHBrSHdnUHYzQ3Z2emhBZUV0eGNDT21JcVIwaE84d0diZHpTTmxydzZhaElHSVR2VHV4RzVMS0RKUktMMU1RaDhxQ08zTER0UDkyMVVUX1p5ZXRaZTltWmNzdHVGOGotdjB3OVNCbGtvV3A5Z3ZyU05QVGNWSVB3WmzSAa4BQVVfeXFMUEZ0RlpZaDh6bGxuVzVZalpuRHEyMEM2ZnE3SGxpUHdQbXZPcVBYRkJkYzhITFVHa091bUZ0eldHbW9tTTRlRW5kU0ZPTFctNjk2TC1WaHA2Qm9kNV9TX1F1b0R3NFlUblFtek95a3dVVzk3QlFGbjZaSWVkZDBBTjdRRE5RMS12ZUxITldWalVwRU9sT3Nsc1hLdGNrQi1MSktCM0cwSThjX1ZPY3JB?oc=5"
+            "title": "COMMENTARY: Where will Fed tightening hit hardest in Asia?",
+            "src": "Reuters",
+            "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQU1BJRFhvMUNXeWNuYXllb1I4azYyRUZ5Z19kYW9zMS1FazV3YlBwRWRJQnNjMWM0NDNQSjYtZHFIRkd5b2JvdGlvVXVFTVlXVnFYSWF0Z29VQUxfYzJabDUyNFJ4SGJTRXRORHRoWmFweDNBUDBRMEdjazRiVXVaZ0VZaFIwcFF5czhmUEk4N1pteTJBTzJKd3ZNLTNqeXJ6ZlJXYnIzRHRoYV96SlJ3N05YX3I1LW5teDJiWUpFSkhtU3FQVTFubWFFMVo?oc=5"
           },
           {
-            "title": "Soaring bond yields ‘not even close’ to cooling red-hot US economy, investors say",
-            "src": "Financial Times",
-            "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeEhLUFZtTkNDMS1jTFF2am1wTENnbk96c3d2OEVfbGJVaHlIbGg1YmRhNFhyOG9XbmN3VGs5cmc0SlF3TWk3cWwzaEN4MnVPZXkxQ1VzZVY5anBCWVhXSy11RHphcnJCNk4tN1dlekxIRFM5RFNSYjZmM1VDR082WWVjTWY?oc=5"
+            "title": "Watch Inflation Keeps Pressure on the Fed",
+            "src": "Bloomberg",
+            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbmk5WVRYU1lET3pNbVRlWXFOdnVvcmZRM210dUVhc3JpYTZ0QThpNWhnazNUbEluRXV2dHdKMmoxYW1FZWJhNU10LTFycHRoSmc3NkVYSkhnUmlYTm9mMXl4Qm1oV0REYW9ESjdxQkdfblRPWl84eUlidzRFNGtQNEc1N240WVpuV0ZadEd6ekh2ZURV?oc=5"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "An Inversion of the US Yield Curve Becomes New Risk as Fed Hikes",
+        "original_headline": "An Inversion of the US Yield Curve Becomes New Risk as Fed Hikes",
+        "source": "Bloomberg",
+        "foreign": true,
+        "pubDate": "2026-09-28",
+        "summary": "연방준비제도의 금리 인상이 미국 수익률곡선의 역전을 초래할 위험이 증가하고 있다. 수익률곡선 역전은 경기침체의 선행지표로서 시장과 정책 입안자들에게 중대한 리스크다.",
+        "tag": "금리, 수익률곡선, 경제전망",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQTFrYzFvbDRlX0l0RU82NG1VZElManl5VkJCNk9FbUNfakVQaDlqYVZFWjUzWHpOWlJIeEtTRUw0bVZDN09XbzJEY2wwZmRWQ3hVaUhEaWpRNl9XSFFJTlN0QVg0aVd0NUhNcGdPWXdoVnh1MHhsYUFMRXFETElzS1E1eWdZWWFzaFhORzdSZXVWQlNhWE9zbTNkS09MWnBpQUNZS3JoUTRZTFd3ZWhWVUtKWQ?oc=5",
+        "related": [
+          {
+            "title": "COMMENTARY: Where will Fed tightening hit hardest in Asia?",
+            "src": "Reuters",
+            "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQU1BJRFhvMUNXeWNuYXllb1I4azYyRUZ5Z19kYW9zMS1FazV3YlBwRWRJQnNjMWM0NDNQSjYtZHFIRkd5b2JvdGlvVXVFTVlXVnFYSWF0Z29VQUxfYzJabDUyNFJ4SGJTRXRORHRoWmFweDNBUDBRMEdjazRiVXVaZ0VZaFIwcFF5czhmUEk4N1pteTJBTzJKd3ZNLTNqeXJ6ZlJXYnIzRHRoYV96SlJ3N05YX3I1LW5teDJiWUpFSkhtU3FQVTFubWFFMVo?oc=5"
+          },
+          {
+            "title": "Watch Inflation Keeps Pressure on the Fed",
+            "src": "Bloomberg",
+            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbmk5WVRYU1lET3pNbVRlWXFOdnVvcmZRM210dUVhc3JpYTZ0QThpNWhnazNUbEluRXV2dHdKMmoxYW1FZWJhNU10LTFycHRoSmc3NkVYSkhnUmlYTm9mMXl4Qm1oV0REYW9ESjdxQkdfblRPWl84eUlidzRFNGtQNEc1N240WVpuV0ZadEd6ekh2ZURV?oc=5"
           }
         ]
       }
@@ -128,163 +128,196 @@
     "macro": [
       {
         "top": true,
-        "headline": "반도체 호황에 올해 초과세수 85조… 미래기금 200조 넘을듯",
+        "headline": "반도체 호황인데 추가 인상은 왜 망설이나…'내수 파급'이 관건",
         "original_headline": "",
-        "source": "동아일보",
+        "source": "연합인포맥스",
         "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "반도체 업황 호조로 올해 정부 초과세수가 85조원에 달할 것으로 추정되며, 미래기금이 200조원을 넘길 것으로 예상된다. 산업 호황이 정부 재정 수입에 미치는 영향을 보여주며 국가 재정 건전성에 중요한 지표다.",
-        "tag": "재정, 초과세수, 반도체 경기",
-        "url": "https://www.donga.com/news/Economy/article/all/20260928/134739505/2",
+        "pubDate": "2026-09-29",
+        "summary": "반도체 초호황이 한국 경제 성장을 견인하지만 한국은행의 추가 기준금리 인상은 신중한 상황이며, 수출·투자 호황이 고용·소비를 통해 서비스 물가와 수요측 인플레이션으로 파급될 수 있다는 우려가 중심이다. 수출호황의 내수 파급 효과가 금리 인상 정책 결정의 핵심 관건이다.",
+        "tag": "기준금리, 성장률, 물가",
+        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436850",
         "related": [
           {
-            "title": "지방정부 잇따른 재정 비상 선언… 엄살로만 볼 것인가 [미지답 칼럼]",
-            "src": "한국일보",
-            "url": "https://www.hankookilbo.com/news/article/A2026092115460003249?did=NA"
+            "title": "고금리에도 중저가 중심 서울 아파트 강세 지속 이유는",
+            "src": "연합인포맥스",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436846"
           },
           {
-            "title": "올해 초과세수 60조원 넘긴다…반도체 호황이 끌어올린 역대 최대 세수",
-            "src": "한겨레",
-            "url": "https://www.hani.co.kr/arti/economy/economy_general/1279601.html"
+            "title": "[사설]뉴노멀 된 국채 금리 5%대, 나랏빚 무서운 줄 알아야",
+            "src": "이데일리",
+            "url": "https://www.edaily.co.kr/News/Read?newsId=01715446645585040&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
           }
         ]
       },
       {
         "top": false,
-        "headline": "\"신규 채용, 엄두도 못 내요\"...'때리고 보자' 못질에, 직원 못 뽑는다",
+        "headline": "[단독] 고금리 덮친 중소기업, 대출 연체액 9조 넘어…4년 새 4배",
         "original_headline": "",
-        "source": "머니투데이",
+        "source": "한겨레",
         "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "2026년 8월 고용동향에서 전체 취업자는 18만 4000명 증가했으나, 청년층 고용은 감소하고 60세 이상 고령층 일자리가 대부분을 차지했다. 노동시장의 구조적 불균형과 기업의 신규 채용 축소 현상이 심화되고 있음을 보여준다.",
-        "tag": "고용, 청년실업, 인구구조",
-        "url": "https://www.mt.co.kr/economy/2026/09/28/2026092717593515116",
-        "related": []
-      },
-      {
-        "top": false,
-        "headline": "\"고용 늘었다고?\" 청년 공감 못하는 이유...나랏돈 들인 '공공일자리' 착...",
-        "original_headline": "",
-        "source": "머니투데이",
-        "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "8월 고용동향에서 전체 고용 증가분이 공공일자리에 크게 의존하고 있으며, 민간 고용 부진이 경제 상황을 더 정확히 반영한다는 분석이 제시된다. 공공과 민간 고용의 차이를 통해 한국 노동시장의 실제 체감도를 설명한다.",
-        "tag": "고용, 공공일자리, 경기판단",
-        "url": "https://www.mt.co.kr/economy/2026/09/28/2026092716023421734",
-        "related": []
-      },
-      {
-        "top": false,
-        "headline": "“물가 2%대 후반으로 내려오겠지만…이른 추석·고유가가 복병”",
-        "original_headline": "",
-        "source": "이데일리",
-        "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "9월 소비자물가 상승률이 2%대 후반으로 하락할 것으로 전망되나, 이른 추석과 높은 국제유가가 물가 안정을 위협하는 복병으로 지목되고 있다. 단기 물가 개선에도 불구하고 근본적 안정이 어렵다는 분석을 제시한다.",
-        "tag": "물가, 계절요인, 전망",
-        "url": "https://www.edaily.co.kr/News/Read?newsId=01371046645584712&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+        "pubDate": "2026-09-29",
+        "summary": "고금리가 중소기업에 집중 타격을 주면서 올해 2분기 은행 대출 연체액이 9조원을 넘었고 4년 새 4배 증가했다. 반도체 호황에 가려진 금융 취약계층의 위험 신호다.",
+        "tag": "고금리, 중소기업, 금융리스크",
+        "url": "https://www.hani.co.kr/arti/economy/finance/1279883.html",
         "related": [
           {
-            "title": "韓銀 “가격 인상 확산되는 중”… 4분기 물가 최대 변수되나 [Pick코노...",
-            "src": "서울경제",
-            "url": "https://www.sedaily.com/article/20095300?ref=naver"
+            "title": "고금리에도 중저가 중심 서울 아파트 강세 지속 이유는",
+            "src": "연합인포맥스",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436846"
           },
           {
-            "title": "무작정 지출 늘리면 물가 자극…“경기 확장땐 속도조절 나서야”",
-            "src": "서울경제",
-            "url": "https://www.sedaily.com/article/20095244?ref=naver"
+            "title": "[사설]뉴노멀 된 국채 금리 5%대, 나랏빚 무서운 줄 알아야",
+            "src": "이데일리",
+            "url": "https://www.edaily.co.kr/News/Read?newsId=01715446645585040&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
           }
         ]
       },
       {
         "top": false,
-        "headline": "한국, AI 산업 육성에 전략적 베팅",
-        "original_headline": "South Korea bets big on AI for all",
-        "source": "Financial Times",
+        "headline": "한국 중앙은행, 현 경기 호황 지속을 위해 금리 인상 억제",
+        "original_headline": "South Korea’s Central Bank Is Smart Not to Kill This Boom",
+        "source": "Bloomberg",
         "foreign": true,
-        "pubDate": "2026-09-27",
-        "summary": "한국이 경제 성장의 핵심 동력으로 AI 산업 육성에 대규모 투자와 정책 지원을 추진하고 있다. 이는 저출산·고령화에 따른 잠재성장률 하락을 AI를 통해 극복하려는 국가 차원의 거시경제 전략을 보여준다.",
-        "tag": "성장전략, 산업정책, 기술투자",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5oMmRtMngwVllBUWtFUEFIeGVoc0VGd2RRUWNhdE1YRjdIcFNnWjNqY2ZJVmNzNUhSWW5hejRFTng1TUJ1VGVlMTVjWElTSDZoVTdNeVhuOW1qaHpkTTk4TnNkdkpzYmdidEdIZWdseUs?oc=5",
+        "pubDate": "2026-09-29",
+        "summary": "블룸버그는 한국 중앙은행이 현재의 경제 호황 국면을 유지하기 위해 기준금리 인상을 지양하고 있다고 분석한다. 통화정책과 경기 사이클 관리 방향을 다루는 중요한 정책 평가다.",
+        "tag": "기준금리, 금융통화위원회, 통화정책",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPcG9nWDV6c2k4NzlmMFRzNkNPRzBWVmpRYXBnWXdYUEhVMVhXSXIxdC1Tc09iT0V6OVVqRXdkQUQ3cXNyYzZBWmVvZmxiU0FQcWRnMFhXeFpsM3h2Nm8zQk9EZmF2X2laN0xxLU1INVBKX1IwV2h5R0Y1ZFI3dnhDcGpzWG5hOXJ5Yy1wUC1HUzF1bXd1RmNpTWczaktpdHo3dDhjZl92elBwSDVHLWJqZw?oc=5",
+        "related": []
+      },
+      {
+        "top": false,
+        "headline": "[인터뷰] 무디스 \"韓 경제, 두 개 속도로 움직여…내수 부진 지속\"",
+        "original_headline": "",
+        "source": "연합인포맥스",
+        "foreign": false,
+        "pubDate": "2026-09-29",
+        "summary": "무디스 이코노미스트는 한국 경제가 '두 속도'로 움직이고 있으며 내수 부진이 지속될 것으로 진단하고, 한국은행이 물가·신용증가·주택가격 요인으로 연말까지 기준금리를 3.25%로 추가 인상할 것으로 전망한다. 수출과 내수 간 불균형이 정책 판단의 배경이다.",
+        "tag": "기준금리, 성장률, 물가",
+        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436844",
+        "related": [
+          {
+            "title": "고금리에도 중저가 중심 서울 아파트 강세 지속 이유는",
+            "src": "연합인포맥스",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436846"
+          },
+          {
+            "title": "[사설]뉴노멀 된 국채 금리 5%대, 나랏빚 무서운 줄 알아야",
+            "src": "이데일리",
+            "url": "https://www.edaily.co.kr/News/Read?newsId=01715446645585040&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "한국 수출 16개월 연속 증가세, AI 칩 수요 견조",
+        "original_headline": "South Korean exports seen rising for 16th month on solid AI chip demand",
+        "source": "Reuters",
+        "foreign": true,
+        "pubDate": "2026-09-29",
+        "summary": "한국의 수출이 16개월 연속 증가 추세를 이어가고 있으며, 이는 AI 칩에 대한 견조한 수요가 주된 동인이다. 반도체 수출 호조는 한국 경제의 주요 성장 동력을 보여주는 핵심 지표다.",
+        "tag": "수출, 반도체, 경제성장",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPangxT3pzak9jS0tDVDNNYXJGMTZiZTdTM2p6WVNWWlhqRFpMeHFOcWR3SExFVWVJMU4tQWQ1WGx5M2xaamRsc3paWmFkVXJCNFhncGlwQkxMb2pZYmRYNG9faVcyYzZsUDJmLWN5OGF0SjBHM0VzSlRwSVBHZ1pYc2R6Z3hwbmV5cmZyb2FodEVkaGVCbEY2VURiNkp4RFdiQlVFRUpaR1BJOGRJQS1lTFZMekhxb2RVeE5j?oc=5",
         "related": []
       }
     ],
     "industry": [
       {
         "top": true,
-        "headline": "현대엔지니어링, '8700억' 군산 SGC AI 데이터센터 신축 사업 수주",
+        "headline": "반도체서 데이터센터로…삼성 6개사, 美 AI 인프라 헬릭스에 10억달러 투...",
         "original_headline": "",
-        "source": "조선일보",
+        "source": "한국경제",
         "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "현대엔지니어링이 군산 SGC AI 데이터센터 신축 사업에서 8700억원 규모를 수주했으며, 향후 단순 시공을 넘어 운영·유지보수·투자 참여 등으로 사업 범위를 확대할 계획이다. 국내 건설사가 데이터센터 구축의 전주기 가치사슬에 진입하는 사례로 의미가 있다.",
-        "tag": "수주, 데이터센터, 사업 확대",
-        "url": "https://realty.chosun.com/site/data/html_dir/2026/09/28/2026092800910.html",
-        "related": []
-      },
-      {
-        "top": false,
-        "headline": "HLB, 담관암 신약 美 허가 소식에 HLB그룹주 6개 상한가",
-        "original_headline": "",
-        "source": "머니투데이",
-        "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "HLB가 개발한 담관암 신약이 미국 FDA 승인을 받았으며, 국내 제약·바이오 기업이 항암 신약 NDA를 직접 제출해 허가받은 첫 사례다. 국내 바이오 기업의 글로벌 신약 개발 성과를 나타내는 산업적 이정표다.",
-        "tag": "신약 허가, 글로벌 진출, 기술 경쟁력",
-        "url": "https://www.mt.co.kr/stock/2026/09/28/2026092809154494225",
+        "pubDate": "2026-09-29",
+        "summary": "삼성이 AI 데이터센터 인프라 기업 헬릭스에 10억달러를 투자하며 HBM 등 반도체 부품 공급 차원을 넘어 AI 인프라 생태계 구축의 주체로 전환하고 있다. 계열사들의 협력을 통해 메모리·냉각·데이터센터 통합 사업 경쟁력을 구축하는 산업 생태계 재편 사례이다.",
+        "tag": "AI 인프라, 생태계 구축, 사업 전환",
+        "url": "https://www.hankyung.com/article/202609291068i",
         "related": [
           {
-            "title": "리가켐바이오 기술 적용 ‘SOT106’, 美 FDA 희귀의약품·패스트트랙 지...",
-            "src": "한국경제",
-            "url": "https://www.hankyung.com/article/202609288271i"
+            "title": "한미반도체, UTAC 태국 법인서 후공정 장비 79억원 수주",
+            "src": "연합뉴스",
+            "url": "https://www.yna.co.kr/view/AKR20260929042800003?input=1195m"
           }
         ]
       },
       {
         "top": false,
-        "headline": "디케이락, '글로벌 장비사' 인증 확보…반도체 부품 사업 확장",
+        "headline": "삼성 6개사 뭉쳤다…美 AI 데이터센터 생태계에 1.4조 베팅",
         "original_headline": "",
-        "source": "파이낸셜뉴스",
+        "source": "비즈워치",
         "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "디케이락이 글로벌 반도체 장비사 인증을 확보하고 HBM·메모리 신규 라인용 IGS 패널 테스트를 진행 중이며, 2027년 1·4분기부터 양산 공급을 추진한다. 반도체 부품 사업 확장을 통한 실적 성장 기회를 의미한다.",
-        "tag": "반도체 부품, 설비투자, 기술경쟁",
-        "url": "https://www.fnnews.com/news/202609280907096713",
-        "related": []
+        "pubDate": "2026-09-29",
+        "summary": "삼성이 6개 계열사를 통해 미국 AI 데이터센터 생태계 기업 헬릭스에 1.4조원을 투자하며, 반도체 부품 공급에서 AI 인프라 생태계 구축의 주체로 역할을 확대하고 있다. DS부문의 HBM 공급과 DX부문의 냉각솔루션 사업을 결합해 데이터센터 통합 솔루션 제공으로 사업 포트폴리오를 다각화하는 전략이다.",
+        "tag": "HBM, 데이터센터, AI 인프라, 사업 다각화",
+        "url": "https://news.bizwatch.co.kr/article/industry/2026/09/29/0007",
+        "related": [
+          {
+            "title": "한미반도체, UTAC 태국 법인서 후공정 장비 79억원 수주",
+            "src": "연합뉴스",
+            "url": "https://www.yna.co.kr/view/AKR20260929042800003?input=1195m"
+          }
+        ]
       },
       {
         "top": false,
-        "headline": "삼성바이오로직스, 美 BPI서 공정 혁신 성과 공개…신약 개발 기간 27% 단...",
+        "headline": "SK하이닉스, TSMC 행사서 '차세대 메모리' 솔루션 공개",
+        "original_headline": "",
+        "source": "한국경제",
+        "foreign": false,
+        "pubDate": "2026-09-29",
+        "summary": "SK하이닉스가 TSMC 행사에서 엔비디아 차세대 AI 가속기 '베라 루빈'에 탑재되는 HBM4 12단 36GB를 포함한 차세대 메모리 솔루션을 공개했다. AI 데이터센터 고급형 메모리 경쟁에서 한국 반도체 업체의 기술 리더십과 양산 역량을 입증하는 사례이다.",
+        "tag": "HBM4, AI 가속기, 차세대 메모리",
+        "url": "https://www.hankyung.com/article/202609289704i",
+        "related": [
+          {
+            "title": "한미반도체, UTAC 태국 법인서 후공정 장비 79억원 수주",
+            "src": "연합뉴스",
+            "url": "https://www.yna.co.kr/view/AKR20260929042800003?input=1195m"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "“AI 데이터센터 냉각도 레고처럼 뚝딱”…LG전자, 냉각설비 ‘모듈형’...",
+        "original_headline": "",
+        "source": "매일경제",
+        "foreign": false,
+        "pubDate": "2026-09-29",
+        "summary": "LG전자가 AI 데이터센터 냉각설비를 모듈형으로 설계해 현장 조립 시간을 단축하고 초기 투자비를 절감하는 기술을 선보였다. 이는 데이터센터 사업자가 수요에 맞춰 단계적으로 설비 투자할 수 있게 해 글로벌 AI 인프라 시장 경쟁력을 높인다.",
+        "tag": "냉각설비, 기술혁신, 데이터센터",
+        "url": "https://www.mk.co.kr/article/12163459",
+        "related": [
+          {
+            "title": "LS전선, AI 데이터센터용 신제품 선봬…서버랙 내부로 사업 확대",
+            "src": "파이낸셜뉴스",
+            "url": "https://www.fnnews.com/news/202609291019540610"
+          },
+          {
+            "title": "LG전자, '블록형 냉각설비' 모듈러 솔루션 공개…AI 데이터센터 구축기...",
+            "src": "전자신문",
+            "url": "https://www.etnews.com/20260929000109"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "LG전자, ‘블록 모듈형 냉각’ 첫선…데이터센터 구축기간 확 줄인다",
         "original_headline": "",
         "source": "서울경제",
         "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "삼성바이오로직스가 바이오의약품 개발 기간을 27% 단축하고 세포 배양 생산성을 2배 향상시킨 공정 혁신 성과를 공개했다. 국내 바이오 기업의 기술 경쟁력 고도화 사례로 산업 동향을 보여준다.",
-        "tag": "공정 혁신, 생산성 향상, 기술 경쟁",
-        "url": "https://www.sedaily.com/article/20095386?ref=naver",
+        "pubDate": "2026-09-29",
+        "summary": "LG전자가 블록 모듈형 냉각 기술로 AI 데이터센터 구축 기간을 단축할 수 있는 솔루션을 출시했다. 사전 제작된 냉각 설비를 현장에 조립하는 방식으로 초기 대규모 투자 없이 수요 중심의 단계적 확장을 가능하게 한다.",
+        "tag": "냉각설비, 구축기간 단축, 모듈형 설계",
+        "url": "https://www.sedaily.com/article/20095947?ref=naver",
         "related": [
           {
-            "title": "리가켐바이오 기술 적용 ‘SOT106’, 美 FDA 희귀의약품·패스트트랙 지...",
-            "src": "한국경제",
-            "url": "https://www.hankyung.com/article/202609288271i"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "반도체 호조에 2분기 건설계약액 27% 증가…상위 50개사 싹쓸이",
-        "original_headline": "",
-        "source": "아시아경제",
-        "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "반도체 호황에 따른 2분기 건설계약액이 27% 증가했으며, 특히 산업설비 부분이 57.5% 크게 늘었다. 반도체 생산시설 투자가 국내 건설산업 수주에 미치는 실질적 영향을 보여주는 지표다.",
-        "tag": "반도체, 건설수주, 설비투자",
-        "url": "https://view.asiae.co.kr/article/2026092808412650582",
-        "related": [
+            "title": "LS전선, AI 데이터센터용 신제품 선봬…서버랙 내부로 사업 확대",
+            "src": "파이낸셜뉴스",
+            "url": "https://www.fnnews.com/news/202609291019540610"
+          },
           {
-            "title": "30조원 대미투자 첫발에도… 유진證 “국내 발전·전력기기 수주 확정은...",
-            "src": "조선비즈",
-            "url": "https://biz.chosun.com/stock/stock_general/2026/09/28/DSPK4XIQO5A73EYCCSDCUII37M/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+            "title": "LG전자, '블록형 냉각설비' 모듈러 솔루션 공개…AI 데이터센터 구축기...",
+            "src": "전자신문",
+            "url": "https://www.etnews.com/20260929000109"
           }
         ]
       }
@@ -292,217 +325,195 @@
     "finance": [
       {
         "top": true,
-        "headline": "[더벨]한국콜마-KDB인베, 의약품 유통 기업 '블루엠텍' 인수 추진",
+        "headline": "[더벨][thebell desk] 한 발 뗀 SKT의 도약",
         "original_headline": "",
         "source": "더벨",
         "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "한국콜마와 KDB인베스트먼트가 의약품 유통사 블루엠텍 인수를 추진 중이며, 업계에서는 이를 단순 재무투자가 아닌 사실상의 경영권 인수로 평가하고 있다. 하나증권과 알파비스타인베스트먼트가 작년 말 입찰을 진행한 재계약 프로세스이다.",
-        "tag": "경영권인수, 의약품유통, M&A",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609220814011340103666",
+        "pubDate": "2026-09-29",
+        "summary": "SK텔레콤이 호라이즌의 자회사 지분을 1조9000억원에 매각하고, 호라이즌의 유상증자를 통해 KKR과 IMM 지분이 49%, SK텔레콤이 51%를 보유하는 경영구조로 개편된다. 대규모 자산 매각과 투자자별 지분율 조정을 통한 성장사업 투자재원 확보 전략의 구체적 사례다.",
+        "tag": "자산 매각, 유상증자, 경영권 구조",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609221609595080103841",
         "related": [
           {
-            "title": "리파인 76% 장악한 리얼티파인…1350억 차입에 전량 담보",
-            "src": "딜사이트",
-            "url": "https://dealsite.co.kr/articles/169502"
+            "title": "매각 시동 건 배민…세무조사·공정위 제재 등으로 '8조 몸값' 흔들리나",
+            "src": "조선일보",
+            "url": "https://it.chosun.com/news/articleView.html?idxno=2023092170944"
           },
           {
-            "title": "[시론] 의무공개매수제, 이미 실험해봤다",
-            "src": "한국경제",
-            "url": "https://www.hankyung.com/article/2026092775791"
+            "title": "[더벨]'지우개패드' 셀리맥스, 지분 27% 1200억에 팔렸다",
+            "src": "더벨",
+            "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609221604466040108368"
           }
         ]
       },
       {
         "top": false,
-        "headline": "사모펀드가 아파트 부녀회 찾는 이유…1000단지 묶는다",
-        "original_headline": "",
-        "source": "딜사이트",
-        "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "제네시스PE가 2호 펀드로 연말까지 8000억원을 모금하여 아파트 생활관리 사업의 다수 업체를 인수·통합하고 현재 1000여 개 단지 관리 기반을 구축하는 플랫폼 구축 전략을 추진 중이다. PE의 전형적인 롤업(roll-up) M&A 사례로 딜 규모와 구조가 명확하다.",
-        "tag": "PE 투자, 롤업 M&A, 사업통합",
-        "url": "https://dealsite.co.kr/articles/169457",
-        "related": [
-          {
-            "title": "[더벨][금리 인상기 사모대출펀드] 펀드런 부른 AI, 사모대출 최대 차주...",
-            "src": "더벨",
-            "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609211733182520106017"
-          },
-          {
-            "title": "[더벨][Rating Watch] 롯데렌탈, 미뤄진 외화 조달 성패 관심…등급 방어...",
-            "src": "더벨",
-            "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609221412208720106173"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "[마켓인]PE 엑시트 지연에 보험사 ‘큰손’ 부상…CFO 발행 4년새 16배",
-        "original_headline": "",
-        "source": "이데일리",
-        "foreign": false,
-        "pubDate": "2026-09-27",
-        "summary": "PE의 포트폴리오 엑시트 지연으로 유동성 압박이 심화되면서 보험사 자금 유입이 급증하고 있다. CFO(Corporate Finance Organization) 발행이 4년 사이 16배 증가하면서 PE가 유동성 대체 수단으로 보험자본을 적극 활용 중이다.",
-        "tag": "PE 엑시트, 보험자본, CFO 발행",
-        "url": "https://www.edaily.co.kr/News/Read?newsId=02010646645584384&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-        "related": [
-          {
-            "title": "[더벨][금리 인상기 사모대출펀드] 펀드런 부른 AI, 사모대출 최대 차주...",
-            "src": "더벨",
-            "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609211733182520106017"
-          },
-          {
-            "title": "[더벨][Rating Watch] 롯데렌탈, 미뤄진 외화 조달 성패 관심…등급 방어...",
-            "src": "더벨",
-            "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609221412208720106173"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "'상폐 위기' 육일씨엔에쓰, 주인 그대로인데 경영권은 새판",
-        "original_headline": "",
-        "source": "딜사이트",
-        "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "상폐 위기의 육일씨엔에쓰에서 새로운 실제주인이 제3자배정 유상증자에 30억원을 투입해 13.05% 지분을 확보했다. 주가 1301원에 신주 230만여 주를 인수하며 경영권 영향력 확대를 노린 거래로, 구조적 딜 세부사항이 드러나 있다.",
-        "tag": "유상증자, 경영권, 주식대량보유",
-        "url": "https://dealsite.co.kr/articles/169516",
-        "related": [
-          {
-            "title": "[더벨][유증&디테일] 이태용 대표, 현물출자 성사시 삼보산업 지배력 큰...",
-            "src": "더벨",
-            "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609230015428570102727"
-          },
-          {
-            "title": "[더벨]'유증 성공' 한화솔루션, 미국 에너지부 보증 EOD 시간벌었다",
-            "src": "더벨",
-            "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609221404170080106814"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "[더벨]에이비즈, 두성테크 300억 추가 베팅…전장 성장성 주목",
+        "headline": "[더벨]FI 유치한 셀리맥스, '상환권·Q-IPO·태그얼롱' 안전판 제공",
         "original_headline": "",
         "source": "더벨",
         "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "에이비즈파트너스가 두성테크 모회사 디에스피인베스트가 발행한 300억원 규모 전환사채(EB)를 인수하면서 전장(EV) 사업 성장성에 베팅했다. 사모펀드의 프로젝트 펀드 구조를 통한 중소 제조사 투자 사례를 보여준다.",
-        "tag": "EB, 사모투자, 전기차부품",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609221123038000107652",
+        "pubDate": "2026-09-29",
+        "summary": "셀리맥스의 FI 투자 조건에 상환권·Q-IPO·태그얼롱 등 다양한 안전장치가 포함되어 있으며, 이는 재무투자자의 출구 전략과 경영권 보호를 균형있게 설계한 거래 구조를 보여준다. 메자닌 투자와 구조화 기법의 실무 사례로 가치 있다.",
+        "tag": "메자닌, FI 투자 조건, 출구 전략",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609222215252080109327",
         "related": [
           {
-            "title": "[더벨][금리 인상기 사모대출펀드] 펀드런 부른 AI, 사모대출 최대 차주...",
-            "src": "더벨",
-            "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609211733182520106017"
+            "title": "매각 시동 건 배민…세무조사·공정위 제재 등으로 '8조 몸값' 흔들리나",
+            "src": "조선일보",
+            "url": "https://it.chosun.com/news/articleView.html?idxno=2023092170944"
           },
           {
-            "title": "[더벨][Rating Watch] 롯데렌탈, 미뤄진 외화 조달 성패 관심…등급 방어...",
+            "title": "[더벨]'지우개패드' 셀리맥스, 지분 27% 1200억에 팔렸다",
             "src": "더벨",
-            "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609221412208720106173"
+            "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609221604466040108368"
           }
         ]
+      },
+      {
+        "top": false,
+        "headline": "한투 매각 앞두고 자본구조 손질하는 KDB생명",
+        "original_headline": "",
+        "source": "비즈워치",
+        "foreign": false,
+        "pubDate": "2026-09-29",
+        "summary": "KDB생명이 한국투자금융지주로의 매각을 앞두고 무상감자를 통해 자본구조를 개선 중이며, 한투지주가 경영권 인수 후 산업은행이 잔여지분을 매각하는 구조로 진행될 예정이다. 대형 금융기관의 경영권 거래 사건으로서 자본구조 개선과 거래 구조 측면에서 IB 실무의 중요한 사례다.",
+        "tag": "경영권 거래, 자본구조 개선, 금융기관 M&A",
+        "url": "https://news.bizwatch.co.kr/article/finance/2026/09/28/0024",
+        "related": [
+          {
+            "title": "매각 시동 건 배민…세무조사·공정위 제재 등으로 '8조 몸값' 흔들리나",
+            "src": "조선일보",
+            "url": "https://it.chosun.com/news/articleView.html?idxno=2023092170944"
+          },
+          {
+            "title": "[더벨]'지우개패드' 셀리맥스, 지분 27% 1200억에 팔렸다",
+            "src": "더벨",
+            "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609221604466040108368"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "Rich turn to borrowing against private equity holdings as payouts slow",
+        "original_headline": "Rich turn to borrowing against private equity holdings as payouts slow",
+        "source": "Financial Times",
+        "foreign": true,
+        "pubDate": "2026-09-28",
+        "summary": "고자산층이 PE 보유 자산을 담보로 차입을 늘리고 있는 현상을 분석한다. 유동성 구조의 변화와 PE 자금 조달 방식의 진화를 보여주는 중요한 시장 신호다.",
+        "tag": "PE, 차입금융, 유동성",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOMkVCbk5OM2UtR3RCaHR2Mmp0aTR3MFZfdEpnSHp3RUlYTU1STDVHNENiQ0hUbGxVeDA2T19KVmJpNGlpamxSX1poWHNqSlVNdTJrd1FHaUlIYWNwQjZMNDFnQU5ucXZER2ZyeG1rd0UwUEZFOFNnX19mUHNEVHVnU2FDQUM?oc=5",
+        "related": [
+          {
+            "title": "Blackstone (BX) Q2 2026 Earnings Call Transcript",
+            "src": "Fortune",
+            "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoamduLTNxRnNXb1kydUJzUzNSakxHWkt6UzF2cXNJR0g5MVh2MmtVaWdFMFE0X2NOTm9YQWxTTHd1YWRZTEQwM2l6cG15VUwxa1hGUDhaSjUtTEpZQUFLaFR0WkdWZ1VPQzByaHM0RQ?oc=5"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "Korean Financial Firms Chase Bold Overseas M&A to Fuel Growth",
+        "original_headline": "Korean Financial Firms Chase Bold Overseas M&A to Fuel Growth",
+        "source": "Bloomberg",
+        "foreign": true,
+        "pubDate": "2026-09-29",
+        "summary": "한국 금융사들이 해외 M&A를 통한 공격적 성장 전략을 추진 중이다. 국내 IB의 글로벌 확장 추세와 딜 시장 트렌드를 이해하는 데 중요한 자료다.",
+        "tag": "M&A, 해외 진출, 한국 금융사",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZ255UU1Gb0VONmZaUDhldHlKZWhEZWNYdGNrMHRNQmdXbjR5SjluQnF2bWhlZE1oVGlnZm9jVWdmcjAtLWh6ZmJ5TzhmRlJvVjJlZXh2Snh3bkFqWHRGUklyQ2V0RnBqdHVJaFBnWUR3V2RnTURYS1FBMVVNMUF5ZG9McVNncldfZktrbDRENlNuQ3VDaXpoRWFGakFodGxIMGtUd1dfWWRsLUtaRzJ6SVl3?oc=5",
+        "related": []
       }
     ],
     "bond": [
       {
         "top": true,
-        "headline": "AI 투자에 쏟아지는 회사채…美 국채 장기금리 새 변수로[주末머니]",
+        "headline": "[마켓인]美 국채 5.2% 쇼크…연중 최고 뚫린 회사채에 기업 조달 ‘비상...",
         "original_headline": "",
-        "source": "아시아경제",
-        "foreign": false,
-        "pubDate": "2026-09-27",
-        "summary": "AI 투자 수요에 따른 회사채 발행 증가가 미국 국채 장기금리 상승과 맞물리면서 채권시장의 수급 불균형 리스크가 커지고 있다. 장기채 공급이 증가해도 수요가 따라가지 못하면 투자자의 위험프리미엄 요구로 장기금리가 추가 상승할 수 있는 메커니즘을 분석한다.",
-        "tag": "회사채 발행, 장기금리, 수급불균형",
-        "url": "https://view.asiae.co.kr/article/2026091808582773566",
-        "related": [
-          {
-            "title": "[마켓인]추석 연휴 끝, 북클로징 전 부지런히 회사채 발행",
-            "src": "이데일리",
-            "url": "https://www.edaily.co.kr/News/Read?newsId=01964726645584384&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
-          },
-          {
-            "title": "빚 사서 돈 버는 회사들…금리 오를 때 급한 빚 줄였다",
-            "src": "머니투데이",
-            "url": "https://www.mt.co.kr/stock/2026/09/26/2026092312325624783"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "[고금리 찬바람] 성수기에도 회사채 발행 절반 '뚝'…순상환 이어져",
-        "original_headline": "",
-        "source": "연합인포맥스",
-        "foreign": false,
-        "pubDate": "2026-09-27",
-        "summary": "회사채 발행이 성수기에도 전년 대비 절반 수준으로 급감하며 순상환이 지속되고 있다. 고금리 지속에 대한 시장의 부정적 전망이 수요예측 진행 후 추가 금리 상승 우려로 이어지면서 발행을 꺼리는 상황이다.",
-        "tag": "회사채 발행, 금리 전망, 수요예측",
-        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436565",
-        "related": [
-          {
-            "title": "[마켓인]추석 연휴 끝, 북클로징 전 부지런히 회사채 발행",
-            "src": "이데일리",
-            "url": "https://www.edaily.co.kr/News/Read?newsId=01964726645584384&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
-          },
-          {
-            "title": "빚 사서 돈 버는 회사들…금리 오를 때 급한 빚 줄였다",
-            "src": "머니투데이",
-            "url": "https://www.mt.co.kr/stock/2026/09/26/2026092312325624783"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "사장 바뀌고…이베스트 후 10년 만에 회사채 복귀한 LS",
-        "original_headline": "",
-        "source": "딜사이트",
+        "source": "이데일리",
         "foreign": false,
         "pubDate": "2026-09-28",
-        "summary": "LS증권이 10년 만에 회사채 시장에 복귀하며 10월 13일 700억원 규모의 기관투자자 수요예측을 실시한다. 1년6개월물과 2년물로 구성되며 수요예측 결과에 따라 1400억원까지 증액 가능한 규모의 회사채 발행으로, 최근 회사 경영진 교체 이후 시장 신뢰 회복을 시도하는 움직임이다.",
-        "tag": "회사채, 수요예측, 발행공시",
-        "url": "https://dealsite.co.kr/articles/169387",
+        "summary": "미 국채 금리가 5.2%대 충격 수준으로 상승하며 국고채와 회사채 간 금리차(크레딧 스프레드)가 축소되고 있다. 한 달간 국고채 3년물 0.325%p 상승 대비 AA-급 회사채도 0.319%p 상승하며 기업 조달 여건이 악화되고 있음을 구체적으로 보여준다.",
+        "tag": "회사채 금리, 크레딧 스프레드, 금리 상승",
+        "url": "https://www.edaily.co.kr/News/Read?newsId=05398886645584712&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
         "related": [
           {
-            "title": "[마켓인]추석 연휴 끝, 북클로징 전 부지런히 회사채 발행",
-            "src": "이데일리",
-            "url": "https://www.edaily.co.kr/News/Read?newsId=01964726645584384&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+            "title": "美 국채금리 2007년 이후 최고…원·달러 1365원으로 상승",
+            "src": "서울경제",
+            "url": "https://www.sedaily.com/article/20095891?ref=naver"
           },
           {
-            "title": "빚 사서 돈 버는 회사들…금리 오를 때 급한 빚 줄였다",
-            "src": "머니투데이",
-            "url": "https://www.mt.co.kr/stock/2026/09/26/2026092312325624783"
+            "title": "[인터뷰] 무디스 \"韓 경제, 두 개 속도로 움직여…내수 부진 지속\"",
+            "src": "연합인포맥스",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436844"
           }
         ]
       },
       {
         "top": false,
-        "headline": "10년물 미국채 수익률, 거의 20년 만에 최고점 도달한 배경",
-        "original_headline": "The 10-year Treasury yield is at its highest in nearly two decades. How we got here",
-        "source": "CNBC",
-        "foreign": true,
-        "pubDate": "2026-09-26",
-        "summary": "10년물 미국채 수익률이 20년 만에 최고 수준에 도달한 원인을 분석한 기사다. 통화정책·인플레이션·경제성장 전망 등 다층적 요인을 설명함으로써 현재 미국 채권시장 구조를 이해할 수 있다.",
-        "tag": "미국채금리, 기축통화채, 시장분석",
-        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRnRGWlloOHpsbG5XNVlqWm5EcTIwQzZmcTdIbGlQd1Btdk9xUFhGQmRjOEhMVUdrT3VtRnR6V0dtb21NNGVFbmRTRk9MVy02OTZMLVZocDZCb2Q1X1NfUXVvRHc0WVRuUW16T3lrd1VXOTdCUUZuNlpJZWRkMEFON1FETlExLXZlTEhOV1ZqVXBFT2xPc2xzWEt0Y2tCLUxKS0IzRzBJOGNfVk9jckHSAa4BQVVfeXFMUEZ0RlpZaDh6bGxuVzVZalpuRHEyMEM2ZnE3SGxpUHdQbXZPcVBYRkJkYzhITFVHa091bUZ0eldHbW9tTTRlRW5kU0ZPTFctNjk2TC1WaHA2Qm9kNV9TX1F1b0R3NFlUblFtek95a3dVVzk3QlFGbjZaSWVkZDBBTjdRRE5RMS12ZUxITldWalVwRU9sT3Nsc1hLdGNrQi1MSktCM0cwSThjX1ZPY3JB?oc=5",
+        "headline": "美 국채금리 5.2% 넘자 한국도 직격탄…국고채 3년 4.119%",
+        "original_headline": "",
+        "source": "서울경제",
+        "foreign": false,
+        "pubDate": "2026-09-29",
+        "summary": "미국 국채 금리 급등 여파로 한국 국고채 금리가 일제히 상승했으며, 3년물은 4.119%로 2022년 11월 이후 최고 수준을 기록했다. 5년물·10년물도 동반 상승하면서 글로벌 금리 연동성을 보여준다.",
+        "tag": "국고채 금리, 금리 시황, 미국채 영향",
+        "url": "https://www.sedaily.com/article/20095899?ref=naver",
         "related": [
           {
-            "title": "금리 상승 속 미국 기업 부채 만기 도래, 대출자들에 시험대",
-            "src": "Reuters",
-            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNVHVIMEQ3dmJLZTdRVXVQblJxSzBCMjJlVmVVYkJsR0hvX0NoY3draFFYRkNTS19HRGJwUE4zT3RGS1JCc1hkU2Yza0tDTjRLSWxpVC1qbmtCaUgzYU5JLUFON1F4M0NhZ3RJak1qT1VqS1d1TTg1U3o1WWhwel8zWTMyZkJwVHg3d3RLQUp5T2FDM0V1SzNrNWt0MTA1Y1AwZ2J1X04yRVE2N2hYQU9CR0RQMmM?oc=5"
+            "title": "美 국채금리 2007년 이후 최고…원·달러 1365원으로 상승",
+            "src": "서울경제",
+            "url": "https://www.sedaily.com/article/20095891?ref=naver"
+          },
+          {
+            "title": "[인터뷰] 무디스 \"韓 경제, 두 개 속도로 움직여…내수 부진 지속\"",
+            "src": "연합인포맥스",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436844"
           }
         ]
       },
       {
         "top": false,
-        "headline": "신흥시장 투자자들, 미국 채권 수익률 급등 속 고위험 채권 외면",
+        "headline": "급등한 美 금리, 9월 고용보고서가 방향 가를까",
+        "original_headline": "",
+        "source": "연합뉴스",
+        "foreign": false,
+        "pubDate": "2026-09-29",
+        "summary": "추석 연휴 동안 미국 국채 금리 급등에 따라 국내 채권시장에서 국고채 3년물 금리가 2022년 11월 이후 처음으로 4.1%를 돌파했다. 미국 9월 고용보고서가 향후 금리 방향을 결정할 주요 변수로 작용할 것으로 예상된다.",
+        "tag": "국고채 금리, 미국채 금리, 시장 연동성",
+        "url": "https://www.yna.co.kr/view/AKR20260929028500008?input=1195m",
+        "related": [
+          {
+            "title": "美 국채금리 2007년 이후 최고…원·달러 1365원으로 상승",
+            "src": "서울경제",
+            "url": "https://www.sedaily.com/article/20095891?ref=naver"
+          },
+          {
+            "title": "[인터뷰] 무디스 \"韓 경제, 두 개 속도로 움직여…내수 부진 지속\"",
+            "src": "연합인포맥스",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436844"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "골드만삭스, 하이일드채 공급 급증으로 투자자 부담 가중",
+        "original_headline": "Goldman Says High-Yield Debt Deluge Is Overwhelming Investors",
+        "source": "Bloomberg",
+        "foreign": true,
+        "pubDate": "2026-09-29",
+        "summary": "고수익채(하이일드채) 발행이 급증하면서 투자자들이 수급 압박에 직면하고 있다. 이는 채권시장의 신용 스프레드와 수요 조건에 영향을 미치는 주요 변화를 나타낸다.",
+        "tag": "하이일드채, 채권 공급, 수급",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxONmNiRmFCMjY4dDFIR1BiaVdEcHJvZ1FveDUtY2JKWmw2ZHg5VF9jRnpIalhJTVV4SWdWTzI5OFNLaHlaR1dIS2Q1bUtFN2lrQVEzb2UwME9Db1A4WUR4aE42Z196V0tJaU5uX3U5ekhCRW1zSlk0TGRHbnNWZ1JFeDdRSURCMlN6a01rRDlRZmFpZUs1YTEtTC0xVmRMa0pCZWxBaG5FZVhmOUZ1SjV0ejZ3?oc=5",
+        "related": []
+      },
+      {
+        "top": false,
+        "headline": "미국 수익률 급등으로 신흥국 투자자들 고위험채 회피",
         "original_headline": "Emerging Market Investors Shun Riskiest Bonds as US Yields Soar",
         "source": "Bloomberg",
         "foreign": true,
         "pubDate": "2026-09-27",
-        "summary": "미국 채권 수익률 상승에 따라 신흥시장의 고위험 채권에 대한 투자 수요가 급감하는 현상을 다룬다. 이는 신흥시장 채권의 신용스프레드 확대와 수급 악화를 시사하며 글로벌 채권시장 구조변화를 보여준다.",
-        "tag": "신흥시장채권, 크레딧스프레드, 채권수급",
+        "summary": "미국 채권 수익률 상승에 따라 신흥국 채권 투자자들이 고위험채 수요를 줄이고 있다. 글로벌 금리 환경이 신용 스프레드와 신흥국 채권 수급에 미치는 영향을 보여준다.",
+        "tag": "신흥국채, 미국채 금리, 크레딧 스프레드",
         "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMXVzamIwSmlSREV5QTJmRU9Ga1pFRWw0OXNWUkNwT0hJUkZOR3M0UlVTLW5xMm10RVNhUlhqclZXRGJIRTY3TFM5N3ZFX3RFSnI3dlZ6YmVaMzFxR0VmYUQzb2JnRmg1a290T3huS2xlUXV3d3d2T3RtM1ZXTUx0M0xvT1RJbkE4LUc0a0U4LXlDSW4wNmJhNDFsZzJ4WWF0dVlYdXlzeTlaRWVndl9UdV9lcmM?oc=5",
         "related": []
       }
@@ -510,15 +521,20 @@
     "vc_ipo": [
       {
         "top": true,
-        "headline": "'개점휴업' 코넥스,'상폐 이전상장'으로 거래 살아날까",
+        "headline": "글로벌테크·빅웨이브, 코스닥 첫날 200% 안팎 강세 [코주부]",
         "original_headline": "",
-        "source": "파이낸셜뉴스",
+        "source": "서울경제",
         "foreign": false,
-        "pubDate": "2026-09-27",
-        "summary": "지난해 7월 도입된 IPO 제도 개선으로 올해 코스닥 상장 기업이 29곳으로 급감했으며, 코넥스 시장의 활성화 방안으로 상폐 이전상장 제도 활용이 논의되고 있다. IPO 제도 변화가 시장에 미치는 영향을 분석한다.",
-        "tag": "IPO 제도 개선, 코스닥 부진, 상폐 이전상장",
-        "url": "https://www.fnnews.com/news/202609271748380177",
+        "pubDate": "2026-09-29",
+        "summary": "빅웨이브로보틱스와 글로벌테크놀로지가 코스닥에 신규 상장했으며, 기관 수요예측 1109대 1, 일반청약 1375대 1의 극도로 높은 경쟁률과 약 4조9500억원의 증거금을 모았다. 두 기업 모두 상장 첫날 150~210%대 강세를 보였다.",
+        "tag": "수요예측, 청약 경쟁률, 상장 후 주가",
+        "url": "https://www.sedaily.com/article/20095902?ref=naver",
         "related": [
+          {
+            "title": "[더벨][글로벌테크놀로지 IPO] 독일 통신칩 시험 통과…전장 사업 확장...",
+            "src": "더벨",
+            "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609280841138820103362"
+          },
           {
             "title": "코딩 교육하던 엘리스그룹, 지난해 매출 395억인데 IPO 몸값 1조 인정받...",
             "src": "조선비즈",
@@ -528,162 +544,178 @@
       },
       {
         "top": false,
-        "headline": "3부리그 낙인 코넥스…'상폐 이전상장' 이 구원투수 될까",
+        "headline": "글로벌테크놀로지·빅웨이브로보틱스, 상장 첫날 급등세[종목 NOW]",
         "original_headline": "",
         "source": "파이낸셜뉴스",
         "foreign": false,
-        "pubDate": "2026-09-27",
-        "summary": "코스닥 상장 기업이 지난해 IPO 제도 개선 이후 29곳으로 감소했으며, '이전상장' 제도가 상폐 위기 기업의 대안으로 제시되고 있다. IPO 제도 변화가 스타트업 상장 시장에 미치는 실질적 영향을 분석한다.",
-        "tag": "IPO 제도 변화, 수요예측, 코스닥",
-        "url": "https://www.fnnews.com/news/202609271326321427",
+        "pubDate": "2026-09-29",
+        "summary": "로봇 자동화 기업 빅웨이브로보틱스가 공모가 1만8000원으로 코스닥 상장했으며, 기관 수요예측 1109대 1, 일반청약 57.15대 1의 높은 경쟁률을 기록했다. 상장 첫날 200% 이상 급등하며 시장의 강한 수요를 입증했다.",
+        "tag": "수요예측, 청약 경쟁률, 공모가",
+        "url": "https://www.fnnews.com/news/202609290942389881",
         "related": [
           {
-            "title": "코딩 교육하던 엘리스그룹, 지난해 매출 395억인데 IPO 몸값 1조 인정받...",
-            "src": "조선비즈",
-            "url": "https://biz.chosun.com/stock/market_trend/2026/09/28/V2XAOHXJLFGRZCSJBFAGRK2IM4/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+            "title": "'스페이스X 청약' 미래에셋, 증권 민원 1위...iM라이프 보험계약 대비 '...",
+            "src": "파이낸셜뉴스",
+            "url": "https://www.fnnews.com/news/202609291000018838"
           }
         ]
       },
       {
         "top": false,
-        "headline": "빨라진 바이오 IPO 시계…심사기간 절반 '뚝'",
-        "original_headline": "",
-        "source": "매일경제",
-        "foreign": false,
-        "pubDate": "2026-09-27",
-        "summary": "바이오 기업 넥스아이가 코스닥 상장예비심사를 41영업일 만에 통과하며 IPO 심사 기간이 이전보다 단축되는 추세를 보여준다. 상장 절차 효율화가 바이오 기업들의 IPO 진행 속도에 미치는 영향을 시사한다.",
-        "tag": "상장예비심사, IPO 제도, 바이오",
-        "url": "https://www.mk.co.kr/article/12161987",
-        "related": [
-          {
-            "title": "[A2Z IPO 점검] 기술성평가 재도전…관건은 ‘시장성’",
-            "src": "딜사이트",
-            "url": "https://dealsite.co.kr/articles/169169"
-          },
-          {
-            "title": "중복상장 예외 1호 나왔어도… 대기업은 ‘주주동의 벽’에 눈치만",
-            "src": "조선비즈",
-            "url": "https://biz.chosun.com/stock/market_trend/2026/09/27/KMD76RLQQ5HFDDDNZZDM3KGHD4/?utm_source=naver&utm_medium=original&utm_campaign=biz"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "조 단위 기업공개가 IPO 시장을 망치고 있다",
-        "original_headline": "Trillion-Dollar Listings Are Ruining IPOs",
-        "source": "Bloomberg",
-        "foreign": true,
-        "pubDate": "2026-09-25",
-        "summary": "대규모 기업공개(조 단위 상장)가 IPO 시장에 미치는 부정적 영향을 분석한 기사로, 초대형 상장 이슈의 시장 구조적 문제점을 짚고 있다. IPO 시장 트렌드와 구조적 과제를 이해하는 데 중요한 관점을 제시한다.",
-        "tag": "초대형 IPO, IPO 시장 구조, 상장 시장 동향",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNMEw4LVNCZ3dINlFiZFhUOWlMR2NLbGxfOTk3LXlJOVVVVVJzNzBmZ2hZRkZmTFJPblphMUJFSVhRYU95S3JwcEUzZ053QTBCVzJ4eENSUnpaWXNfOEZrRDR2WjJlMGZHOFVoVjc0cVZCcEhwZzhNYlVyOUtBdkYzMHFRSDF1SThkLU9nTFh3VGRlOXljdC1aRjc1MWgxU3BId011R0lyTDlmT1dDd1Zna004MVNIUk0?oc=5",
-        "related": [
-          {
-            "title": "데이터센터 IPO 희망사, 강화된 시장 심사 속 상장 추진",
-            "src": "Reuters",
-            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNNUI2bktTU0d4N3ZCQWY5MXJJblQtWHJvLTJJU19EZFQydzI4QWdKNDRhR0ZVVTdUQzVXYkpSMDFQTmZveThyT0NseElNd3M3UGhrWXI0bTFfSVNMaUh2UTRUZi1JYjlycmdIc1JZRFRhNUhpWUNMcmRqcUVvYjlxUldRbnlpU0ZfSmZZbjNlNE96UnIxSUw0VmtvQXIzWW45b05JTk5TNU5pZEhIODBnbmF5NXZ3a05FSmFLUG5PM2hkdDA?oc=5"
-          },
-          {
-            "title": "앤쓰로픽 창업자, IPO 앞두고 의결권 통제 추진",
-            "src": "TechCrunch",
-            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQbU5OVU5mbzN4aWdDOFl1RmkxSVUxUzl0V2lyUnNKa0ZUMDY3dGg2Z0hGSGE5ZGhLdFViRGRtNlI1a01ITl9wVVo4WGRoTE1GSHJRZ2hHN3hTMS1xUlg5VHo3TllRY0NvYkdDTVJGWXpkVHZHWlZUbkM0aWdURzF5WHNVVUVjTEpJSk9uMEF3LV8?oc=5"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "SK하이닉스 솔리디지, IPO 시 최대 1500억달러 평가 검토",
-        "original_headline": "EXCLUSIVE: SK Hynix's Solidigm weighs IPO that could value the unit at up to $150 billion, sources say",
+        "headline": "EXCLUSIVE: Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+        "original_headline": "EXCLUSIVE: Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
         "source": "Reuters",
         "foreign": true,
-        "pubDate": "2026-09-26",
-        "summary": "SK하이닉스의 솔리디지가 IPO 시 최대 1500억달러로 평가될 수 있다는 내부 검토가 이루어지고 있다. 메모리 반도체 업체의 대규모 상장 계획과 밸류에이션이 주목된다.",
-        "tag": "기업공개, 밸류에이션, 반도체",
-        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxONVZiMlVqNDFIWFN0ZWQtUHRjY0dMRzBDTlJrQ0l2dkhaeHJJWWdfWVpBRG54NFh4ZTZ5emlWSm0wYzBMT2ZhX2Znb1UzSFN2SkY2NGxReW51OHN3VkR4ZVRxQkhuN2lWYVVNSGVvcjVzOVd6XzQ4MFEtcnBxaVFmT1NxU1l6VU96bExMTWNtWVZMTFhlTHRGd2tNRUhEZ0ZWcVVENmdTcnNzZjUtMmpJOV9fZU5lS2o0WGttWQ?oc=5",
+        "pubDate": "2026-09-29",
+        "summary": "Anthropic의 IPO 공시에서 야심찬 AI 비전과 급증하는 운영비용이 드러났다. 고성장 AI 스타트업의 수익성 문제와 상장 과정에서의 재무 공개 내용을 담고 있다.",
+        "tag": "IPO 공시, AI 비용 구조, 수익성",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNbVlPeVROc0FBWTl6a0ZCZXdPVF93WjdPT1BFV2xkQmlyRE9oYS1wRF9yWk0zV1EwSlJ5Vmt0UkpucHdQWUpSbGdzUmdVeC1EWm5sMzBkTUNQMkg3ekVYMkMtemVySUxhWnRCTWRNLTA1Vl8tZVZkRU80ZVk4TjdZbE5LdjJ5VzJXbUlmM1FvMnJqTFE4TkZVeEJFVndEMmpIbGN5WDRxclhHX0JZdHp6LWlad3JTakZr?oc=5",
         "related": []
+      },
+      {
+        "top": false,
+        "headline": "AMD가 11조원에 인수한 ‘월드랩스’는 어떤 회사?…3차원 세계 이해하...",
+        "original_headline": "",
+        "source": "이데일리",
+        "foreign": false,
+        "pubDate": "2026-09-29",
+        "summary": "AMD가 AI 비전 스타트업 월드랩스를 11조원에 인수하며, 앤드리슨 호로위츠, NEA, 엔비디아 벤처 부문 등 주요 VC들이 참여한 글로벌 VC 생태계가 대형 M&A로 수렴되고 있다. 빅테크의 스타트업 인수는 VC 펀딩 후 출구 전략의 중요한 경로를 보여준다.",
+        "tag": "M&A, 글로벌VC, 투자사",
+        "url": "https://www.edaily.co.kr/News/Read?newsId=02259926645585040&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+        "related": [
+          {
+            "title": "'수소 스타트업' 엔포러스, 40억 프리A 투자 유치 추진",
+            "src": "한국경제",
+            "url": "https://www.hankyung.com/article/202609288695r"
+          },
+          {
+            "title": "[VC 스토브리그] 파트너스인베, 박세광 전 티인베 팀장 영입…ICT 투자 ...",
+            "src": "딜사이트",
+            "url": "https://dealsite.co.kr/articles/169591"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "EXCLUSIVE: Anthropic warns AI may pose 'existential risks to humanity' in IPO filing",
+        "original_headline": "EXCLUSIVE: Anthropic warns AI may pose 'existential risks to humanity' in IPO filing",
+        "source": "Reuters",
+        "foreign": true,
+        "pubDate": "2026-09-29",
+        "summary": "Anthropic이 IPO 신청서에서 AI가 '인류에 존재적 위험'을 초래할 수 있다고 경고했다. 대형 AI 기업의 상장 과정에서 리스크 공시가 어떻게 이루어지는지 보여주는 사례다.",
+        "tag": "IPO 신청, AI 기업, 공시",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVndoU28yRmZKcU1nd1MtOThsNXYtejlvampCQXFwRXIxcUJWdWZ5R0twWnM2czMyMmt3cERxQmhEYk5pWVh0UExTMVEzU3k0Tk5wa3Zkdkxkc0E3aTIzbEhOVmZrWmZPajJJaFRBb2JxUElza0puQW56MGpXM21lMDBSR1BDTkY3Ullja3pTQW1mQ20wWVhDTnMxRHB1MkFyUFQySkoxQldxNmFkNmp1dG95dndFUmZOb2c?oc=5",
+        "related": [
+          {
+            "title": "EXCLUSIVE: Anthropic leaders to control AI lab via 'Founder LLC' to promote public good over market forces",
+            "src": "Reuters",
+            "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPY2tWZFZVM0xSdkV1cmY3M2lIWmhGTVhxZnV0aWpOS3ppd01pXzdDSTVybEw4SGpjbzdITTlQekluVUVuV0hSNlN6OUNvMEZyVTBlX1phS2JJVVBtejNWQ1BCdFBhT3FvN09XRFBnU2RLN1RmNVktT213VkxVbU4xUV9yT1d6SEZVUTQtN0RYV25xcm5XVk14dDhZV09QbkUwbHVlX0RQNGxEWml2bXdRTmxhd0cwQnlBLUsxbzViTUZkQ3p0S0s3d21DSlB1bUV6cnc?oc=5"
+          },
+          {
+            "title": "Anthropic’s IPO won’t drive the overall market, says Robert Kindler",
+            "src": "CNBC",
+            "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVDhjUWFnX1ViRE5zcUxjaWVlaDhHUjhxbXZIY0h0OXlrY2kxZFBSb2ZPVTJoeTFMbnk5aFU1ak9qQmNiakMwSEtxWFpwd0FkRmNVMVpLMFk0RGROWEQwUGh4Q1FtQ05vVWcwZkJ2ZE1BcUI2SVdFSUVvUzdpWlI1bDZIZ3M1M2RMdkJiZU9sQm84UEsyYlBJMWpCSk5IQ2dkWFVFRE1yeDRhMGM?oc=5"
+          }
+        ]
       }
     ],
     "mobility": [
       {
         "top": true,
-        "headline": "로보택시 기술 변화 못 따라가는 자동차 안전기준",
+        "headline": "“AI·로보틱스·자율주행 비전 공유”…현대차그룹, 실리콘밸리서 테크...",
         "original_headline": "",
-        "source": "동아일보",
+        "source": "매일경제",
         "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "테슬라의 로보택시(사이버캡)가 상용화 단계에 접어들었으나 기존 자동차 안전기준(FMVSS)이 자율주행 기술의 급속한 발전을 따라가지 못하면서 규제 공백이 발생 중이다. 글로벌 로보택시 시장 출현과 규제 개선의 필요성을 지적하는 기사.",
-        "tag": "로보택시, 테슬라, 안전규제",
-        "url": "https://weekly.donga.com/3/all/11/6394864/1",
-        "related": []
+        "pubDate": "2026-09-29",
+        "summary": "현대차 사장이 AI, SDV, 로보틱스, 에너지 기술을 실제 제품과 사업으로 연결하는 전략을 공개했다. R&D본부장은 AI와 가상 개발 기술로 개발 효율을 높이려는 계획을 제시하여, 현대차그룹의 중장기 기술 혁신 방향을 보여준다.",
+        "tag": "현대차, 경영전략, AI·SDV·로보틱스",
+        "url": "https://www.mk.co.kr/article/12163392",
+        "related": [
+          {
+            "title": "현대차그룹, ‘HMG 테크 탤런트 포럼’ 성료…주요 경영진 미래 기술 비...",
+            "src": "헤럴드경제",
+            "url": "https://biz.heraldcorp.com/article/10887015?ref=naver"
+          }
+        ]
       },
       {
         "top": false,
-        "headline": "\"엔비디아에 운명 안 맡긴다\"…현대차의 자율주행 승부수 [최수진의 모...",
+        "headline": "[특파원 칼럼] 로보택시 기업은 왜 서울을 노리나",
         "original_headline": "",
         "source": "한국경제",
         "foreign": false,
-        "pubDate": "2026-09-27",
-        "summary": "현대차그룹이 2028년부터 엔비디아와 협업한 자율주행 솔루션을 적용하되, 이후 독자 AI 개발로 의존도를 낮추려는 전략을 추진 중이다. 글로벌 반도체 기업에 의존하지 않으면서 자율주행 기술 자립을 목표로 하는 현대차의 핵심 전략이다.",
-        "tag": "현대차, 자율주행, SDV, AI 기술",
-        "url": "https://www.hankyung.com/article/202609168754g",
+        "pubDate": "2026-09-29",
+        "summary": "테슬라와 오로라이노베이션 등 로보택시 기업들이 미국에서 상용 서비스를 확대하고 있으며, 서울 시장 진출을 추진 중이다. 자율주행 기술의 실제 상용화 진전과 글로벌 경쟁 확대를 보여주는 사례로 현대차 등 한국 완성차 업계에 경쟁 압력을 가하고 있다.",
+        "tag": "로보택시, 자율주행 상용화, 테슬라, 경쟁 동향",
+        "url": "https://www.hankyung.com/article/2026092801301",
         "related": []
       },
       {
         "top": false,
-        "headline": "트럼프 “전기차 의무화 없애…GM, 포드 미국내 생산 늘릴 것”",
+        "headline": "美 연비 규제 완화…숨통 트인 현대차 '하이브리드·EREV' 승부수",
         "original_headline": "",
-        "source": "서울경제",
+        "source": "아시아경제",
         "foreign": false,
-        "pubDate": "2026-09-28",
-        "summary": "트럼프 당선자가 CAFE(연비 기준) 규제를 완화하겠다고 밝혀 미국의 전기차 정책 기조가 전환될 가능성이 높아졌다. CAFE 기준 완화는 제조사들의 전기차 출시 의무를 줄여주지만, GM·포드 등 완성차의 전략과 현대기아 같은 수출업체에 영향을 미칠 수 있다.",
-        "tag": "정책 변화, 전기차 규제, 미국 시장",
-        "url": "https://www.sedaily.com/article/20095273?ref=naver",
+        "pubDate": "2026-09-29",
+        "summary": "미국 트럼프 행정부가 연비 규제를 완화하자 현대기아가 하이브리드·EREV 전략으로 전기차 판매 부담을 줄일 수 있게 됐다. 글로벌 규제 변화가 국내 완성차의 파워트레인 전략과 판매 전망에 미치는 직접적인 영향을 보여준다.",
+        "tag": "규제, 연비, 하이브리드",
+        "url": "https://view.asiae.co.kr/article/2026092908242535322",
         "related": [
           {
-            "title": "[아프리카 녹색전환] ④'광물주권' 앞세운 자원국들…한국의 그린 파트...",
-            "src": "연합뉴스",
-            "url": "https://www.yna.co.kr/view/AKR20260911059200898?input=1195m"
+            "title": "[블룸버그 칼럼] 일본, 세계 석유 판도를 바꿀 수 있다",
+            "src": "아시아경제",
+            "url": "https://view.asiae.co.kr/article/2026092815292428019"
           },
           {
-            "title": "[아프리카 녹색전환] ②\"소리 없이 바뀐다\"…현지서 본 전기차 혁명",
-            "src": "연합뉴스",
-            "url": "https://www.yna.co.kr/view/AKR20260923165500099?input=1195m"
+            "title": "유럽서 현대차 추월한 기아…전기차·SUV로 판매 격차 좁힌다",
+            "src": "파이낸셜뉴스",
+            "url": "https://www.fnnews.com/news/202609290729190563"
           }
         ]
       },
       {
         "top": false,
-        "headline": "자율주행 업체들의 사업 전략 분화",
-        "original_headline": "TechCrunch Mobility: AV companies pick their lanes",
+        "headline": "오로라 CFO \"2030년까지 자율주행 트럭 3만 대는 현실적\" - 로보택시 산업 전망",
+        "original_headline": "Aurora CFO says 30,000 driverless trucks by 2030 isn’t as far-fetched as it sounds",
         "source": "TechCrunch",
         "foreign": true,
-        "pubDate": "2026-09-28",
-        "summary": "TechCrunch의 모빌리티 칼럼으로, 자율주행 기업들이 로보택시·화물·셔틀 등 서로 다른 시장 세그먼트를 선택하며 경쟁 구도를 형성하고 있는 상황을 분석한다. 현대차와 기아의 자율주행 전략 방향성을 이해하는 데 참고가 될 만한 글로벌 산업 동향이다.",
-        "tag": "자율주행, 로보택시, 산업 전략",
-        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOLXRFeWtSOUtPeUZndVA4OGR5TVJ6ckprVXpxZHUxV25ISjZiNWM5ZDA2ZlgwLW54YXhuOGF6U2s3V09PNmthaTJRRjdaaHNINmQwWThsVWpfaGhMMkFyNXpkN1lqY1J1S2o5YTFCNW9RNHlqdDdLRjY3RldCWVBqZ0RqZXBmOFc3R2w5MA?oc=5",
+        "pubDate": "2026-09-29",
+        "summary": "자율주행 트럭 스타트업 오로라가 2030년까지 3만 대 규모의 무인 운송 시스템 구축이 기술·비용 측면에서 충분히 달성 가능하다고 주장했다. 글로벌 모빌리티 생태계 전환과 완성차·테슬라 등의 자율주행 전략 경쟁에 영향을 미칠 핵심 이정표로 평가된다.",
+        "tag": "자율주행, 로보택시, 산업 전망",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOOHZmNEZELWs1TXRlV1hHQ2tzMVp1X0FGaWtSQXVMSDF5ZXJ3MnJ1MTVIckFPanA1bS1iMHFnTUxRdlNaVEVReV9XLXdjY0NxQ3p5ZVY5cV9HcF9tYUZ3bnFNbHZNMWFWZGxKSlZSYWdwRG0wM3FQMDhFU1hTZTgzZnNmd01xQUZhRTl0c3RqNVZQU3pjYlZNRUxFNWVYYU1iTGhqZnB6M0lIZE1YM2EtQWt3SEZ1dw?oc=5",
         "related": [
           {
-            "title": "로보택시 전용 보험 시장 개척, 이토추·아이오이 협력",
-            "src": "Nikkei Asia",
-            "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQOHdYRGxmRVJ0SWh1dkdLU0lnTktrZEVIc2VmMEI4LXJsWlF1UVZwWFU3V01DcWpHLXZKYmNVTXpzRkZaekktODcybUtjU0F4UmNPeTBRaGhLeFdiRkw0bVI1c3d4UzNBMzFXX3NGa2VVSEF6dTg3dmo2Q2l5RmVlcXBZVWFIZmhpWF9La1NicU1VVjUtYk1QT25lQ2VxdTNnLUREWE1qMA?oc=5"
+            "title": "자율주행 기업들, 각자의 경쟁 포지션 재정렬 - 산업 분화 심화",
+            "src": "TechCrunch",
+            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOLXRFeWtSOUtPeUZndVA4OGR5TVJ6ckprVXpxZHUxV25ISjZiNWM5ZDA2ZlgwLW54YXhuOGF6U2s3V09PNmthaTJRRjdaaHNINmQwWThsVWpfaGhMMkFyNXpkN1lqY1J1S2o5YTFCNW9RNHlqdDdLRjY3RldCWVBqZ0RqZXBmOFc3R2w5MA?oc=5"
+          },
+          {
+            "title": "모멘타-스텔란티스 중국 합작사, 동펑과 지능형 자율주행 공동 개발",
+            "src": "Reuters",
+            "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMzByVUtHMHlIWGhiUzl5Vzd0YXhiWnZ6R25pMzVUTjlLSW1SaDFnRy1fSnAwd1BlUWwzb0dBa3ljWnZLRWlKNmdIYXpXUTM3QUg3MjByLVZSd042VkZZT2F1LXVaM2xaZzN1X01WWWE1LS1wVG9hNlY4TjE1MmtKb1YzR1NoTTBhRHNwSzMzYW9LSDhTMlFjQ3g2NWtNYWdfSmFpX3c5bHlBSkxPUnFnbDBpb1ppS2ZQNHM3NQ?oc=5"
           }
         ]
       },
       {
         "top": false,
-        "headline": "트럼프 행정부, 클린카 규제 완화 추진",
+        "headline": "트럼프 행정부, 청정차 규제 완화 계획 - EV 전략에 미치는 영향",
         "original_headline": "Trump Administration Plans to Gut Clean Car Rules",
         "source": "New York Times",
         "foreign": true,
         "pubDate": "2026-09-27",
-        "summary": "트럼프 행정부가 바이든 시대의 엄격한 전기차 규제를 철폐하려는 계획으로, 미국 자동차 산업 정책의 방향 전환을 의미한다. 테슬라와 현대차·기아의 미국 시장 전략, 전기차 투자 규모 재조정에 직접적인 영향을 미칠 수 있는 중요한 정책 이슈다.",
-        "tag": "전기차 규제, 통상·정책, 미국 시장",
+        "summary": "트럼프 행정부가 기존 청정자동차 규제를 대폭 완화할 계획을 발표했으며, 이는 전기차 시장 수요와 완성차들의 EV 투자 전략에 근본적인 영향을 미칠 통상·규제 이슈다. 현대차·기아·테슬라 등 미국 시장 진출 업체들의 중장기 사업 계획 수정을 초래할 수 있는 정책 변화다.",
+        "tag": "EV 규제, 트럼프 정책, 미국 시장 영향",
         "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQYzU0d0NZMXNwQ0Y2RzhwcExtb1c3bzd6M3RBeG83Y0xTbFRxRFdxWGVGdUZjSmRtVnROU1ZnQmRCM20ySDdTSVVFTGVFRFhkaUZvS3drNF80V1I5NW9DNWxyLUgyQXcxWTF3VmR2LUJVNU1DakRVTlBfRmFIQS14Z21B?oc=5",
         "related": [
           {
-            "title": "중국 전기차, 미-중 정상회담 없어도 미국 진출 예상",
+            "title": "분석가들 \"정상회담 결렬에도 중국 EV, 미국 진입은 피할 수 없다\"",
             "src": "Nikkei Asia",
             "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOc3kxNG5qblBBNk5tamJTcjFMd1NhZzl2THRyTHRVVzEtWWxuaXBEeVFJaXhtNTRZeEh2UFR5ODJsSEVyNzVLcmNZOVNWT1d6OW1OQjJJUkVneldYNTFic05DN0NtRmdWZ2lWWWtQc3F0R05XRXJuY1NpelNXeV9VSmN6dU1FSkZraTFjLXFFVldqYk15b05TM0txQU5PeWZPYjUtT0dHNnRyN0pp?oc=5"
+          },
+          {
+            "title": "중국 EV 제조사 2개社, 산업 재편 물결 속 전략적 제휴 발표",
+            "src": "New York Times",
+            "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9IQTNuQ0dOVHVVQk9KOTFBd2FWS0MtRnp2VjQ5MG5IN2pEQ2tLVjQ4TVJXMmVON2VoZ2FicGs2QUxLXzFmZ1lCZjdSRUFXM3N1enF3dWVtcUtESi16ZUU2eWxSVXdBXzNvYnlXbnc5WDkweFVzQkE?oc=5"
           }
         ]
       }
