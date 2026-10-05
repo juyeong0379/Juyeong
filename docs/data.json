@@ -1,84 +1,84 @@
 {
-  "generated_at": "2026-10-04 09:28 KST",
+  "generated_at": "2026-10-05 09:32 KST",
   "categories": {
     "global": [
       {
         "top": true,
-        "headline": "15% 관세 장벽 넘은 중국의 결단... 美 가스 20년 잠근 속내",
-        "pubDate": "2026-10-04",
-        "summary": "중국이 미국산 액화천연가스에 15% 관세를 부과하고 2025년 3월부터 수입을 전면 중단하면서 글로벌 에너지 공급망이 불안정해지고 있다.",
-        "tag": "에너지 수입, 무역 전쟁",
-        "url": "https://www.g-enews.com/view.php?ud=202610040603572870fbbec65dfb_1",
+        "headline": "美 고용 둔화에 아시아 증시 상승…브렌트유 103달러 돌파",
+        "pubDate": "2026-10-05",
+        "summary": "미국 9월 고용 지표 부진으로 연준의 추가 금리 인상 가능성이 낮아지면서 아시아 증시가 상승하고 유가는 103달러를 돌파했다.",
+        "tag": "금리, 고용, 시장반응",
+        "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1726702",
         "related": [
           {
-            "title": "오일쇼크는 피했다, 다음은?…'호르무즈 7개월'이 남긴 다섯 개의 질문",
-            "src": "www.mt.co.kr",
-            "url": "https://www.mt.co.kr/world/2026/10/04/2026100114291833454"
+            "title": "[김이코의 시장분석]美 고용보고서 나비효과…증시 어디로 가나",
+            "src": "www.mediapen.com",
+            "url": "https://www.mediapen.com/news/view/1127867"
           },
           {
-            "title": "트럼프 관세 폭탄, 동맹은 ‘탈미국’ 가속화 [.txt]",
-            "src": "www.hani.co.kr",
-            "url": "https://www.hani.co.kr/arti/international/international_general/1280774.html"
+            "title": "채권왕도 \"채권 사지 마라\" 경고하는 시대",
+            "src": "www.fortunekorea.co.kr",
+            "url": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=54293"
           }
         ]
       },
       {
         "top": false,
-        "headline": "회사채 막히고 가계빚 곪는다 … 채권發 고금리, 금융부실로 번지는 '도...",
-        "pubDate": "2026-10-04",
-        "summary": "중동 정세와 미유럽 재정 우려로 장기채 금리가 상승하면서 국내 회사채 발행 부진과 가계빚 증가 압박이 심화되고 있다.",
-        "tag": "금리, 채권시장, 금융안정",
-        "url": "https://biz.newdaily.co.kr/site/data/html/2026/10/03/2026100300050.html",
+        "headline": "반도체 5000억弗·자동차 700억弗…수출 양대품목 연말 희비",
+        "pubDate": "2026-10-05",
+        "summary": "한국의 반도체와 자동차 수출이 연말 양극화를 보일 것으로 예상되며, 지난해 자동차 수출은 미국 관세 부담에도 720억 달러의 역대 최대 실적을 기록했다.",
+        "tag": "수출, 자동차, 반도체",
+        "url": "https://www.newsis.com/view/NISX20261001_0003810235",
         "related": [
           {
-            "title": "“물량 넘치는데 배가 없다”…현대글로비스 ‘100척 시대’, 매출 40조...",
-            "src": "biz.heraldcorp.com",
-            "url": "https://biz.heraldcorp.com/article/10892233?ref=naver"
+            "title": "격전지 간 트럼프 \"美에 공장 안 지으면 관세 300%까지 부과\"",
+            "src": "www.tfmedia.co.kr",
+            "url": "https://www.tfmedia.co.kr/news/article.html?no=207713"
           },
           {
-            "title": "주유소 기름값 눌렀더니 정유사 손실…정부, 4.2조원 쏟아붓는다",
-            "src": "www.pinpointnews.co.kr",
-            "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=492519"
+            "title": "[초점]한국판 IRA서 제외된 전기차…\"국내 생산기반 보호\" vs \"신중 검토...",
+            "src": "www.taxtimes.co.kr",
+            "url": "https://www.taxtimes.co.kr/news/article.html?no=277153"
           }
         ]
       },
       {
         "top": false,
-        "headline": "오일쇼크는 피했다, 다음은?…'호르무즈 7개월'이 남긴 다섯 개의 질문",
-        "pubDate": "2026-10-04",
-        "summary": "미중 무역 휴전 합의로 관세 인하, 중국의 미국산 석탄 구매 등이 정해졌으나 합의 기간이 예상보다 단기로 결정되어 지속성이 불확실하다.",
-        "tag": "무역 협상, 관세",
-        "url": "https://www.mt.co.kr/world/2026/10/04/2026100114291833454",
+        "headline": "격전지 간 트럼프 \"美에 공장 안 지으면 관세 300%까지 부과\"",
+        "pubDate": "2026-10-05",
+        "summary": "트럼프 대통령이 미국 내 공장 건설을 강제하기 위해 최대 300% 관세 부과 정책을 실행 중이며, 이를 통한 제조업 기반 확대를 추진하고 있다.",
+        "tag": "관세정책, 제조업, 직접투자",
+        "url": "https://www.tfmedia.co.kr/news/article.html?no=207713",
         "related": [
           {
-            "title": "15% 관세 장벽 넘은 중국의 결단... 美 가스 20년 잠근 속내",
+            "title": "반도체 5000억弗·자동차 700억弗…수출 양대품목 연말 희비",
+            "src": "www.newsis.com",
+            "url": "https://www.newsis.com/view/NISX20261001_0003810235"
+          },
+          {
+            "title": "[초점]한국판 IRA서 제외된 전기차…\"국내 생산기반 보호\" vs \"신중 검토...",
+            "src": "www.taxtimes.co.kr",
+            "url": "https://www.taxtimes.co.kr/news/article.html?no=277153"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "OPEC+, 11월 석유 생산 목표 현 수준 유지키로 합의",
+        "pubDate": "2026-10-05",
+        "summary": "OPEC+ 회원국들이 중동 전쟁 상황 속에서 11월 석유 생산 목표를 현 수준으로 동결하기로 합의했다.",
+        "tag": "원유수급, OPEC정책",
+        "url": "http://www.opinionnews.co.kr/news/articleView.html?idxno=145262",
+        "related": [
+          {
+            "title": "OPEC+, 2개월 연속 원유 생산 목표 동결",
+            "src": "news.einfomax.co.kr",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4437733"
+          },
+          {
+            "title": "OPEC+ 11월 원유 생산쿼터 동결 가닥",
             "src": "www.g-enews.com",
-            "url": "https://www.g-enews.com/view.php?ud=202610040603572870fbbec65dfb_1"
-          },
-          {
-            "title": "트럼프 관세 폭탄, 동맹은 ‘탈미국’ 가속화 [.txt]",
-            "src": "www.hani.co.kr",
-            "url": "https://www.hani.co.kr/arti/international/international_general/1280774.html"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "“물량 넘치는데 배가 없다”…현대글로비스 ‘100척 시대’, 매출 40조...",
-        "pubDate": "2026-10-04",
-        "summary": "현대글로비스가 100척 규모 선대 시대에 진입하면서 중동 정세 불안으로 인한 희망봉 우회 운항으로 선복 부족 현상이 심화되고 있다.",
-        "tag": "해운, 물류, 공급망",
-        "url": "https://biz.heraldcorp.com/article/10892233?ref=naver",
-        "related": [
-          {
-            "title": "회사채 막히고 가계빚 곪는다 … 채권發 고금리, 금융부실로 번지는 '도...",
-            "src": "biz.newdaily.co.kr",
-            "url": "https://biz.newdaily.co.kr/site/data/html/2026/10/03/2026100300050.html"
-          },
-          {
-            "title": "주유소 기름값 눌렀더니 정유사 손실…정부, 4.2조원 쏟아붓는다",
-            "src": "www.pinpointnews.co.kr",
-            "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=492519"
+            "url": "https://www.g-enews.com/view.php?ud=2026100419583078729a1f309431_1"
           }
         ]
       }
@@ -86,81 +86,81 @@
     "macro": [
       {
         "top": true,
-        "headline": "9월 수출 1209억달러 사상 최대…반도체가 절반, 비반도체도 23% 증가",
-        "pubDate": "2026-10-03",
-        "summary": "9월 수출이 사상 최대인 1209억 달러를 기록했으며, 반도체가 전체 수출 증가의 절반을 담당하고 비반도체도 23% 성장했다.",
-        "tag": "수출, 실적, 반도체",
-        "url": "https://www.dailyt.co.kr/newsView/dlt202610030010",
+        "headline": "건어물 팔던 나라서 반도체 수출국으로…韓수출 1조弗 눈앞 [세쓸통]",
+        "pubDate": "2026-10-04",
+        "summary": "2026년 1~9월 누적 수출액이 8145억 달러로 집계되어 연간 1조 달러 수출 달성이 현실화되고 있다.",
+        "tag": "수출, 거시경제",
+        "url": "https://www.newsis.com/view/NISX20261001_0003810685",
         "related": [
           {
-            "title": "'1조 달러 수출국' 초읽기…11월 말~12월 초 韓 수출사 새로 쓴다",
-            "src": "www.news1.kr",
-            "url": "https://www.news1.kr/economy/trend/6309767"
+            "title": "반도체가 이끈 수출, 사상 첫 1조달러 가시권",
+            "src": "www.sidae.com",
+            "url": "https://www.sidae.com/article/2026100410032550454"
           },
           {
-            "title": "반도체 호황의 착시...'AI 고부가' 웃지만 범용·전자 업종은 '그늘'",
-            "src": "www.digitaltoday.co.kr",
-            "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=704780"
+            "title": "반도체 5000억弗·자동차 700억弗…수출 양대품목 연말 희비",
+            "src": "www.newsis.com",
+            "url": "https://www.newsis.com/view/NISX20261001_0003810235"
           }
         ]
       },
       {
         "top": false,
-        "headline": "'1조 달러 수출국' 초읽기…11월 말~12월 초 韓 수출사 새로 쓴다",
+        "headline": "반도체가 이끈 수출, 사상 첫 1조달러 가시권",
         "pubDate": "2026-10-04",
-        "summary": "9월 수출이 1209억 달러로 월간 최대치를 기록하며 1조 달러 수출국 진입이 임박했고, 세계 수출 4강 지위도 강화되고 있다.",
-        "tag": "수출, 거시지표",
-        "url": "https://www.news1.kr/economy/trend/6309767",
+        "summary": "9월 수출이 전년 동월 대비 83.5% 증가하여 월간 1200억 달러를 돌파했으며, 반도체 호황이 주도하고 있다.",
+        "tag": "수출, 반도체",
+        "url": "https://www.sidae.com/article/2026100410032550454",
         "related": [
           {
-            "title": "9월 수출 1209억달러 사상 최대…반도체가 절반, 비반도체도 23% 증가",
+            "title": "건어물 팔던 나라서 반도체 수출국으로…韓수출 1조弗 눈앞 [세쓸통]",
+            "src": "www.newsis.com",
+            "url": "https://www.newsis.com/view/NISX20261001_0003810685"
+          },
+          {
+            "title": "반도체 5000억弗·자동차 700억弗…수출 양대품목 연말 희비",
+            "src": "www.newsis.com",
+            "url": "https://www.newsis.com/view/NISX20261001_0003810235"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "[김이코의 시장분석]美 고용보고서 나비효과…증시 어디로 가나",
+        "pubDate": "2026-10-05",
+        "summary": "미국 고용보고서에 따른 Fed 금리 동결 전망 상승으로 국채금리가 급락하고 기술주 중심 나스닥이 상승하는 시장 반응을 보이고 있다.",
+        "tag": "고용, 금리, 주가지수",
+        "url": "https://www.mediapen.com/news/view/1127867",
+        "related": [
+          {
+            "title": "반도체 쏠림·고금리에 밀린 바이오…코스닥 제약 ‘최악의 한달’",
+            "src": "www.etoday.co.kr",
+            "url": "https://www.etoday.co.kr/news/view/2632408"
+          },
+          {
+            "title": "AI·반도체 쏠림에 제약주 ‘찬바람’...코스닥 제약 한 달 새 10% 급락",
+            "src": "www.m-economynews.com",
+            "url": "https://www.m-economynews.com/news/article.html?no=71340"
+          }
+        ]
+      },
+      {
+        "top": false,
+        "headline": "全금융권 9월 가계대출 잔액 2026년 들어 첫 감소",
+        "pubDate": "2026-10-04",
+        "summary": "정책 완화에도 불구하고 9월 가계대출 잔액이 연중 처음 감소하며 대출 수요 부진을 보이는 상황.",
+        "tag": "가계대출, 신용시장, 정책효과",
+        "url": "https://www.segye.com/newsView/20261004506925?OutUrl=naver",
+        "related": [
+          {
+            "title": "국민·신한 여유 vs 우리·하나 초과…목표 상향에도 은행별 대출 여력...",
+            "src": "www.cbci.co.kr",
+            "url": "https://www.cbci.co.kr/news/articleView.html?idxno=612301"
+          },
+          {
+            "title": "치솟는 청년 보금자리론 연체율… ‘수도권 빌라 청년’ 빚 뇌관 되나",
             "src": "www.dailyt.co.kr",
-            "url": "https://www.dailyt.co.kr/newsView/dlt202610030010"
-          },
-          {
-            "title": "반도체 호황의 착시...'AI 고부가' 웃지만 범용·전자 업종은 '그늘'",
-            "src": "www.digitaltoday.co.kr",
-            "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=704780"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "서비스 물가 높은데 속내는 달랐다…iM증권 \"물가 추가 둔화 가능\"",
-        "pubDate": "2026-10-04",
-        "summary": "9월 소비자물가 상승률이 2.9%로 둔화했으며, 통신비 기저효과와 서비스 물가 구성의 변화가 향후 물가 추가 둔화 가능성을 시사한다.",
-        "tag": "물가, 소비자물가, 인플레이션",
-        "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=492535",
-        "related": [
-          {
-            "title": "\"물가 2%대 유지\"…가공식품 오르고 농축수산물은 내렸다는데",
-            "src": "www.gukjenews.com",
-            "url": "https://www.gukjenews.com/news/articleView.html?idxno=3712712"
-          },
-          {
-            "title": "주유소 기름값 눌렀더니 정유사 손실…정부, 4.2조원 쏟아붓는다",
-            "src": "www.pinpointnews.co.kr",
-            "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=492519"
-          }
-        ]
-      },
-      {
-        "top": false,
-        "headline": "\"물가 2%대 유지\"…가공식품 오르고 농축수산물은 내렸다는데",
-        "pubDate": "2026-10-04",
-        "summary": "9월 소비자물가 상승률이 2.9%로 집계되어 2%대로 낮아졌으며, 농축수산물 가격 하락이 가공식품 가격 상승을 상쇄했다.",
-        "tag": "물가, 소비자물가, 식품가격",
-        "url": "https://www.gukjenews.com/news/articleView.html?idxno=3712712",
-        "related": [
-          {
-            "title": "서비스 물가 높은데 속내는 달랐다…iM증권 \"물가 추가 둔화 가능\"",
-            "src": "www.pinpointnews.co.kr",
-            "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=492535"
-          },
-          {
-            "title": "주유소 기름값 눌렀더니 정유사 손실…정부, 4.2조원 쏟아붓는다",
-            "src": "www.pinpointnews.co.kr",
-            "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=492519"
+            "url": "https://www.dailyt.co.kr/newsView/dlt202610040001"
           }
         ]
       }
@@ -168,81 +168,81 @@
     "industry": [
       {
         "top": true,
-        "headline": "美 해군 조선소 한계 부딪히자 손 내민 미국… 한국 조선 3사 건조 동맹...",
-        "pubDate": "2026-10-04",
-        "summary": "한국 대형 조선 3사의 수주잔고가 195조원을 넘어 3년 이상의 안정적 일감을 확보했으며, 미국 해군 조선소의 한계로 인해 한미 건조 동맹 논의가 진행 중이다.",
-        "tag": "수주, 수출, 한미협력",
-        "url": "https://www.g-enews.com/view.php?ud=202610040622329555fbbec65dfb_1",
+        "headline": "17년 공장 돌려 674조원 수출한 삼성…베트남에 '기술 뿌리' 심는다",
+        "pubDate": "2026-10-05",
+        "summary": "삼성이 베트남 공장을 통해 674조원 규모의 수출을 달성한 가운데, 국내는 첨단 패키징·광학 모듈 등 고도 기술에 집중하고 중소부품업체는 현지화 영역으로 재편되는 산업 구조 변화가 진행 중이다.",
+        "tag": "산업 구조, 수출, 국제 분업",
+        "url": "https://www.g-enews.com/view.php?ud=202610050913431160fbbec65dfb_1",
         "related": [
           {
-            "title": "삼성중공업, 액화천연가스(LNG) 운반선 2척 수주…\"올해 LNG운반선 총 20...",
-            "src": "www.econonews.co.kr",
-            "url": "http://www.econonews.co.kr/news/articleView.html?idxno=445246"
+            "title": "연휴에 멈춘 내 주식··· 엔비디아·테슬라는 뛰었다, 6일 '삼전닉스'...",
+            "src": "www.greenpostkorea.co.kr",
+            "url": "https://www.greenpostkorea.co.kr/news/articleView.html?idxno=307595"
           },
           {
-            "title": "미쓰비시중공업, 1000억엔 투자… 상선 건조 25% 확대",
-            "src": "www.g-enews.com",
-            "url": "https://www.g-enews.com/view.php?ud=202610031103308664e7e8286d56_1"
+            "title": "美 고용 둔화에 아시아 증시 상승…브렌트유 103달러 돌파",
+            "src": "www.ebn.co.kr",
+            "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1726702"
           }
         ]
       },
       {
         "top": false,
-        "headline": "두산, 가스터빈·원전·AI 소재 '3각 수혜' 기대…美 에너지 투자판 커진...",
-        "pubDate": "2026-10-04",
-        "summary": "두산그룹이 미국의 원전·가스터빈·AI 소재 수요 증가로 수주 기회를 확대하고 있으며, 한미 협력으로 AP1000·APR1400 원전 건설 계획이 추진 중이다.",
-        "tag": "수주, 원전, 해외사업",
-        "url": "http://www.popcornnews.net/news/articleView.html?idxno=134796",
+        "headline": "\"중국이 글로벌 배터리 시장 73% 삼켰다\" K-배터리 점유율 폭락 충격",
+        "pubDate": "2026-10-05",
+        "summary": "중국이 글로벌 배터리 시장의 73%를 차지하면서 K-배터리의 점유율이 급락했으며, 국내 배터리 업체들이 ESS로의 생산라인 전환을 시도하고 있다.",
+        "tag": "2차전지, 시장점유율, 산업동향",
+        "url": "https://www.starnewskorea.com/business-life/2026/10/05/2026100509010588164",
         "related": [
           {
-            "title": "효성중공업-HD현대일렉 미국 초고압변압기 시장 격돌, 우태희-김영기 현...",
-            "src": "www.businesspost.co.kr",
-            "url": "https://www.businesspost.co.kr/BP?command=article_view&num=448337"
+            "title": "“조용히 멀리 달리는 거인들 몰려온다”…5m 넘는 초대형 전기 SUV ‘왕...",
+            "src": "www.mk.co.kr",
+            "url": "https://www.mk.co.kr/article/12168281"
           },
           {
-            "title": "올해 도시정비 수주 40조 눈앞…현대·삼성·GS '빅3'가 60% 쓸었다",
-            "src": "www.news1.kr",
-            "url": "https://www.news1.kr/realestate/general/6309323"
+            "title": "[르포] \"여기도 투싼, 저기는 텔루라이드\"…뉴욕 도로서 확인한 달라진...",
+            "src": "www.ajunews.com",
+            "url": "https://www.ajunews.com/view/20261004140848914"
           }
         ]
       },
       {
         "top": false,
-        "headline": "트럼프의 압박 속 한국의 알래스카 LNG 도전, 투자 성사될까?",
-        "pubDate": "2026-10-04",
-        "summary": "한국의 알래스카 LNG 프로젝트 투자 결정이 미국의 관세 인하와 LNG 공급권 보장 등의 조건에도 불구하고 상업적 수익성 부족으로 불확실한 상태다.",
-        "tag": "에너지정책, 대미투자, 수익성",
-        "url": "https://www.gokorea.kr/news/articleView.html?idxno=880386",
+        "headline": "현대제철 7조 8000억원 투자에 가게 늘어난 美 도널드슨빌…살아나는 지...",
+        "pubDate": "2026-10-05",
+        "summary": "현대제철이 미국에 7조 8000억원 투자로 전기로 철강 공장을 건설하면서 저탄소 생산체계로의 전환과 지역경제 활성화를 동시에 추진하고 있다.",
+        "tag": "투자, 친환경, 생산능력",
+        "url": "https://www.g-enews.com/view.php?ud=202610050720138541fbbec65dfb_1",
         "related": [
           {
-            "title": "\"트럼프 압박 vs 상업적 합리성\"…한국 대미투자 출발부터 암초",
-            "src": "www.jnilbo.com",
-            "url": "https://www.jnilbo.com/news/articleView.html?idxno=90000070755"
+            "title": "[초점]한국판 IRA서 제외된 전기차…\"국내 생산기반 보호\" vs \"신중 검토...",
+            "src": "www.taxtimes.co.kr",
+            "url": "https://www.taxtimes.co.kr/news/article.html?no=277153"
           },
           {
-            "title": "CPTPP 가입 효과, 5년 새 제조업 3.7배로…농업 피해도 1.6배",
-            "src": "www.newsis.com",
-            "url": "https://www.newsis.com/view/NISX20261002_0003812634"
+            "title": "전쟁·관세에 美 제조업 원가 77.9까지 급등…AI·반도체가 버팀목 됐다",
+            "src": "www.thepowernews.co.kr",
+            "url": "https://www.thepowernews.co.kr/view.php?ud=202610021322391386de3f0aa1be_7"
           }
         ]
       },
       {
         "top": false,
-        "headline": "AI 의존도 커진 韓수출…해외자산은 충격 때 버팀목 될까",
-        "pubDate": "2026-10-04",
-        "summary": "한국 수출이 AI 투자 사이클에 높은 의존도를 보이고 있으며, 9월 수출이 전년 동월 대비 83.5% 증가한 가운데 해외자산의 버팀목 역할 가능성을 검토하는 내용.",
-        "tag": "수출, AI 산업 동향",
-        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4437716",
+        "headline": "\"영하 78도·독성 물질 싹 뺐다\"… 고려대·경북대, 항암제 원료 세계 최...",
+        "pubDate": "2026-10-05",
+        "summary": "고려대·경북대가 효소 공정을 활용해 항암제 원료 합성을 초저온·독성물질 없이 단계를 줄여 수율을 높이는 기술을 개발했다.",
+        "tag": "신기술, 제약",
+        "url": "http://www.dailysmart.co.kr/news/articleView.html?idxno=130574",
         "related": [
           {
-            "title": "AI 연산능력도 원유처럼 거래한다",
-            "src": "www.choicenews.co.kr",
-            "url": "http://www.choicenews.co.kr/news/articleView.html?idxno=171922"
+            "title": "[그룹 PRS 진단 ③] LG화학의 똘똘한 선택…LG엔솔 주가상승에 '웃음'",
+            "src": "news.einfomax.co.kr",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4437737"
           },
           {
-            "title": "[소외된 SW ㊦] GPU·모델만으론 부족…AI 투자, '돈 버는 SW'로 이어져야",
-            "src": "zdnet.co.kr",
-            "url": "https://zdnet.co.kr/view/?no=20261004075639"
+            "title": "[그룹 PRS 진단 ②] 3.6조 조달한 한화…해외·비상장 지분 불확실성 위...",
+            "src": "news.einfomax.co.kr",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4437738"
           }
         ]
       }
@@ -250,81 +250,81 @@
     "finance": [
       {
         "top": true,
-        "headline": "시중은행·2금융권까지… ‘AI 해킹’ 금융권 ‘비상’",
-        "pubDate": "2026-10-04",
-        "summary": "신한은행 정보 유출 사건 이후 KB국민은행, 하나은행 등 금융기관으로 유사 해킹 사건이 확산되면서 금융권 전체가 AI 기반 공격에 노출된 상태다.",
-        "tag": "보안, 사이버 공격, 산업 리스크",
-        "url": "https://www.dt.co.kr/article/12087267?ref=naver",
+        "headline": "삼성전기, 3분기 커지는 '어닝 서프라이즈' 기대감...\"환율 악재도 뚫는...",
+        "pubDate": "2026-10-05",
+        "summary": "삼성전기가 불리한 환율 환경에서도 고부가 부품 중심의 체질 개선으로 3분기 시장 예상을 상회하는 실적을 기록할 것으로 예상된다.",
+        "tag": "실적",
+        "url": "http://www.opinionnews.co.kr/news/articleView.html?idxno=145226",
         "related": [
           {
-            "title": "'AI 에이전트' 해킹에 노출된 금융권…정보 유출 확산 '공포'",
-            "src": "www.asiatime.co.kr",
-            "url": "https://www.asiatime.co.kr/article/20261002500248"
+            "title": "환율 다시 오르나...IBK證 “연말 1400원 전망”",
+            "src": "www.mk.co.kr",
+            "url": "https://www.mk.co.kr/article/12167269"
           },
           {
-            "title": "금융권 잇단 해킹에 비상...당국, 오늘 전 업권 긴급소집",
-            "src": "www.ebn.co.kr",
-            "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1726674"
+            "title": "[김이코의 시장분석]美 고용보고서 나비효과…증시 어디로 가나",
+            "src": "www.mediapen.com",
+            "url": "https://www.mediapen.com/news/view/1127867"
           }
         ]
       },
       {
         "top": false,
-        "headline": "'AI 에이전트' 해킹에 노출된 금융권…정보 유출 확산 '공포'",
-        "pubDate": "2026-10-04",
-        "summary": "금융권 전반에서 AI 기반 해킹으로 고객 개인정보 유출이 확산되고 있으며, 신한은행은 대출 조회 서비스를 통해 2만5000명의 정보가 노출됐다.",
-        "tag": "보안, 사이버 공격, 금융 리스크",
-        "url": "https://www.asiatime.co.kr/article/20261002500248",
+        "headline": "칩 리스·자산담보 대출...AI 투자 폭주에 ‘빅테크 금융공학’ 총동원",
+        "pubDate": "2026-10-05",
+        "summary": "빅테크 기업들이 AI 투자 확대를 위해 채권 발행, 자산담보 대출 등 다양한 금융기법을 동원하고 있으며, 투자자들의 경계감도 커지고 있다.",
+        "tag": "AI투자",
+        "url": "https://www.chosun.com/economy/tech_it/2026/10/05/7PQP3B4PRZF5FO3PEI35ZF4YDQ/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
         "related": [
           {
-            "title": "시중은행·2금융권까지… ‘AI 해킹’ 금융권 ‘비상’",
-            "src": "www.dt.co.kr",
-            "url": "https://www.dt.co.kr/article/12087267?ref=naver"
+            "title": "[그레이트 머니무브] 글로벌 채권금리 고공행진..개인자금 채권시장 몰...",
+            "src": "www.g-enews.com",
+            "url": "https://www.g-enews.com/view.php?ud=202610021441245374bb91c46fcd_1"
           },
           {
-            "title": "금융권 잇단 해킹에 비상...당국, 오늘 전 업권 긴급소집",
-            "src": "www.ebn.co.kr",
-            "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1726674"
+            "title": "대우건설 2년 7개월 만에 'P-CBO' 발행…롯데건설은 잇단 ABS",
+            "src": "www.news1.kr",
+            "url": "https://www.news1.kr/realestate/general/6309423"
           }
         ]
       },
       {
         "top": false,
-        "headline": "금융권 잇단 해킹에 비상...당국, 오늘 전 업권 긴급소집",
-        "pubDate": "2026-10-04",
-        "summary": "금융감독 당국이 금융권 전역의 해킹 사태에 대응하기 위해 긴급 소집을 개최하며, 신한·국민·하나은행 등에서 잇따른 고객정보 유출이 확인됐다.",
-        "tag": "보안, 규제 대응, 금융 리스크",
-        "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1726674",
+        "headline": "5대 은행 가계대출 중도상환 13% 줄어…수수료 40%↓",
+        "pubDate": "2026-10-05",
+        "summary": "정부가 중도상환수수료 제도를 개편해 5대 은행의 수수료율이 1.4%에서 0.65%로 하락했고 가계대출 중도상환이 감소했다.",
+        "tag": "주택담보대출, 규제, 정책효과",
+        "url": "https://biz.sbs.co.kr/article_hub/20000338270?division=NAVER",
         "related": [
           {
-            "title": "시중은행·2금융권까지… ‘AI 해킹’ 금융권 ‘비상’",
-            "src": "www.dt.co.kr",
-            "url": "https://www.dt.co.kr/article/12087267?ref=naver"
+            "title": "은행 대출 기준 1년여 새 149번 변경…실수요자 혼란",
+            "src": "www.chosun.com",
+            "url": "https://www.chosun.com/economy/stock-finance/2026/10/05/WMDDLS7GT5ESLMKJREWOANUUW4/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
           },
           {
-            "title": "'AI 에이전트' 해킹에 노출된 금융권…정보 유출 확산 '공포'",
-            "src": "www.asiatime.co.kr",
-            "url": "https://www.asiatime.co.kr/article/20261002500248"
+            "title": "[숫자로 읽는 금융 ③] 주담대 3천만원 갚으면 수수료 10만원대, 이자 연...",
+            "src": "www.raonnews.com",
+            "url": "https://www.raonnews.com/news/article.html?no=61631"
           }
         ]
       },
       {
         "top": false,
-        "headline": "회사채 막히고 가계빚 곪는다 … 채권發 고금리, 금융부실로 번지는 '도...",
-        "pubDate": "2026-10-04",
-        "summary": "고금리로 인해 회사채 신규 발행이 급감하고 기업들이 기존 채무 상환에 급급하면서 금융 부실 우려가 확산되고 있다.",
-        "tag": "금리, 채권시장, 신용위험",
-        "url": "https://biz.newdaily.co.kr/site/data/html/2026/10/03/2026100300050.html",
+        "headline": "전쟁·관세에 美 제조업 원가 77.9까지 급등…AI·반도체가 버팀목 됐다",
+        "pubDate": "2026-10-05",
+        "summary": "미국 제조업이 전쟁, 관세, 원자재 가격 상승의 삼중고 속에서도 AI 데이터센터와 반도체 주문 증가로 확장 국면을 이어가고 있다.",
+        "tag": "미국 제조업, 원가, AI·반도체 수요",
+        "url": "https://www.thepowernews.co.kr/view.php?ud=202610021322391386de3f0aa1be_7",
         "related": [
           {
-            "title": "삼성전자 실적 앞둔 코스피…반도체 훈풍에 ‘7000피’ 지킬까",
-            "src": "www.kbmaeil.com",
-            "url": "https://www.kbmaeil.com/article/20261004500010"
+            "title": "\"가격 올려도 불티\"…원자재 타격 뚫고 터진 인도 가전 대목",
+            "src": "www.g-enews.com",
+            "url": "https://www.g-enews.com/view.php?ud=2026100508395615302bd56fbc3c_1"
           },
           {
-            "title": "[슬금슬금] 물가 내려도 왜 안 떨어질까… 美 국채금리 뒤흔드는 '큰손...",
-            "src": "www.the-biz.co.kr",
-            "url": "http://www.the-biz.co.kr/news/articleView.html?idxno=728711"
+            "title": "간편식도 부담스럽네…국·탕, 1년 전보다 39% 올랐다",
+            "src": "news.sbs.co.kr",
+            "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008782892&plink=ORI&cooper=NAVER"
           }
         ]
       }
@@ -332,1173 +332,1101 @@
   },
   "keywords": [
     {
-      "term": "지정학적 리스크",
-      "category": "사회",
-      "definition": "중동 정세, 해상 운송로 차단 등 지정학적 불안정이 원유 공급, 물류망, 에너지 가격에 직접 영향을 미치는 현상. 최근 이란 제재, 홍해 기뢰 사건 등으로 글로벌 공급망 불안정성이 심화되고 있음.",
-      "count": 2
-    },
-    {
-      "term": "반도체 업황 사이클",
-      "category": "시장",
-      "definition": "AI 메모리 호황으로 역사적 실적을 기록 중이나, 성과급 부담과 외국인 차익실현 매도 등으로 주가와 실적이 괴리되는 현상",
-      "count": 2
-    },
-    {
-      "term": "AI 기반 사이버 공격",
+      "term": "2금융권 규제강화",
       "category": "금융",
-      "definition": "인공지능을 활용한 고도화된 해킹으로 금융권의 보안 체계를 우회하여 대규모 개인정보 유출을 야기하는 새로운 위협. 최근 은행·저축은행·캐피탈 등 전 금융권에서 동시 다발적으로 발생하며 산업 전반의 보안 패러다임 전환을 요구하는 중.",
+      "definition": "저축은행, 대부업 등 2금융권의 총자산 한도 위반 및 영업 관리 기준 강화. 금융감독원의 정기 검사와 위반 적발이 증가하는 추세.",
       "count": 1
     },
     {
-      "term": "AI 연산능력 금융화",
+      "term": "ABS(자산담보증권)",
       "category": "금융",
-      "definition": "AI 컴퓨팅 파워(컴퓨트)를 선물상품으로 금융시장에서 거래하려는 움직임으로 AI 비용의 금융상품화",
+      "definition": "부동산·대출채권 등 자산을 담보로 발행하는 증권. 신용등급이 낮은 건설사 등이 직접 회사채 발행이 어려울 때 활용하는 대체 자금조달 수단이다.",
       "count": 1
     },
     {
-      "term": "AI 투자 수익성",
+      "term": "DB형→DC형 전환",
       "category": "금융",
-      "definition": "GPU·모델 확보 등 초기 투자 단계를 넘어 실제 산업 서비스와 솔루션으로 수익을 창출하는 단계로의 전환. 정부 정책의 핵심 과제.",
+      "definition": "확정급여(DB)에서 확정기여(DC) 퇴직연금으로 전환하는 추세. 시장 고점에서 개인이 직접 운용하는 DC로 전환했다가 이후 시장 하락으로 손실을 입는 '고점 매수' 현상이 사회적 이슈.",
       "count": 1
     },
     {
-      "term": "IFRS17·K-ICS",
+      "term": "P-CBO",
       "category": "금융",
-      "definition": "새로운 보험 회계기준 및 신지급여력제도로, 보험부채를 시가로 평가해 금리 변동에 따른 부채 변동성을 확대시키는 규제 체계. 2023년 도입되어 보험사 M&A 전략에 영향.",
+      "definition": "프로젝트 캐시플로우 기반의 담보부채무증권. 건설사 등이 프로젝트 수익을 담보로 자금을 조달하는 구조화금융 상품이다.",
       "count": 1
     },
     {
-      "term": "PEF 투자 핵심원칙 제정",
+      "term": "PRS(자산유동화)",
       "category": "금융",
-      "definition": "산업은행과 국민연금 등 주요 출자기관이 공동으로 사모펀드(PEF) 투자 기준을 마련하면서, 기업 성장단계별 맞춤형 투자와 산업 이해도 제고를 강화하려는 움직임.",
+      "definition": "기업이 자산을 증권화해 자금을 조달하는 금융 기법. 블록딜 대비 세제 혜택과 유연성이 커 대형 기업의 자금 조달 수단으로 확산 중.",
       "count": 1
     },
     {
-      "term": "가계부채 관리",
+      "term": "가계대출 총량 관리",
       "category": "금융",
-      "definition": "금융당국이 부동산 담보 대출과 신용대출을 규제하여 가계 채무 증가를 통제하려는 정책. 6·27 대출규제, 8·13 부동산 대책 등으로 지속 추진 중.",
+      "definition": "정부가 시중은행의 가계대출 규모를 통제하는 정책. 은행들이 대출 기준을 수시로 변경하게 만들어 실수요자의 혼란을 야기하고 있다.",
       "count": 1
     },
     {
-      "term": "가계부채 비율 관리",
+      "term": "가계부채 관리목표",
       "category": "금융",
-      "definition": "정부가 2030년까지 가계부채를 GDP 대비 80% 수준으로 낮추겠다는 목표로, 금리 인상과 대출 규제를 통해 가계부채를 관리하려는 정책. 한국의 높은 가계부채가 경제 성장을 제약하는 주요 리스크로 인식되고 있음.",
+      "definition": "정부가 가계대출 증가율을 제한하기 위해 설정하는 연간 목표치. 최근 1.5%에서 3.0%로 상향되면서 은행별 대출 여력 배분과 실수요자 주거 접근성 간 갈등이 심화되고 있음.",
       "count": 1
     },
     {
-      "term": "고금리 기조",
+      "term": "가상자산 거래 감시",
       "category": "금융",
-      "definition": "미국 금리 인상 지속으로 인한 글로벌 고금리 환경. 주식시장 밸류에이션 하락과 채권 상대매력도 상승을 야기",
+      "definition": "마약자금 세탁 등 불법 거래를 추적하기 위해 가상자산 거래 기록을 분석하고 금융위원회·국세청 등 기관 간 정보공유를 강화하는 수사 기법.",
       "count": 1
     },
     {
-      "term": "공적연금 자금 유치",
+      "term": "건강보험 재정 위기",
       "category": "금융",
-      "definition": "시중은행들이 안정적인 현금흐름을 제공하는 공적연금(국민연금 등)을 적극 유치하기 위해 고금리를 제시하는 경쟁 심화. 은행의 조달 전략 변화 반영.",
+      "definition": "초고령화로 노인의료비가 급증하는 반면 현역 생산연령인구의 감소로 보험료 수입이 줄어드는 악순환. 장기적 제도 지속 가능성이 위협받고 있음.",
       "count": 1
     },
     {
-      "term": "국고채 발행 축소",
+      "term": "그룹 외연 확장(M&A)",
       "category": "금융",
-      "definition": "장기금리 상승으로 정부가 국고채 발행 규모를 줄이는 조치. 채권시장 안정과 금리 관리 목표가 반영된 재정정책의 변화.",
+      "definition": "기업이 주력 사업 부진 시 신사업 진출과 M&A를 통해 포트폴리오를 다각화하려는 전략. 부동산·미디어·금융 등 비본업 진출이 활발.",
       "count": 1
     },
     {
-      "term": "국민성장펀드",
+      "term": "금리 사이클",
       "category": "금융",
-      "definition": "개인이 직접 투자하기 어려운 첨단산업 비상장·상장 기업에 간접투자하는 정책형 펀드. 공모 속도가 빨라 높은 국민 수요를 반영",
+      "definition": "중앙은행의 금리 인상/인하 주기를 의미하며, 최근 미국 연준의 금리 결정이 글로벌 시장의 주요 변수로 작용하고 있다. 금융시장과 실물경제에 즉각적인 영향을 미친다.",
       "count": 1
     },
     {
-      "term": "글로벌 신용 경색",
+      "term": "금리 상승의 기업가치 평가 영향",
       "category": "금융",
-      "definition": "국제 금융시장의 신용 공급 위축 현상. 한국 경제의 대외 의존도 높을수록 타격이 심한 위험 요소.",
+      "definition": "금리 인상 시 미래 현금흐름의 할인율이 높아져 장기 R&D 기업(제약·바이오)의 기업가치 평가가 하락하는 현상",
       "count": 1
     },
     {
-      "term": "금리 인상 기대 후퇴",
+      "term": "금리 인상/인하 사이클",
       "category": "금융",
-      "definition": "연준의 정책 신호와 고위 인사들의 발언으로 시장이 기대했던 금리 인상 가능성이 낮아지는 현상. 최근 미국 경제 지표 악화와 연준의 신중한 입장으로 반복 발생 중",
+      "definition": "미 연준의 통화정책 기조 변화로, 고용 부진 시 인하 기대감이 부각되면서 글로벌 금융시장의 주요 변수가 되고 있음. 환율, 신흥국 자금 흐름, 채권 수익률에 직접 영향을 미치는 중심축",
       "count": 1
     },
     {
-      "term": "금리 인상 압박과 물가 관리",
+      "term": "금융공학",
       "category": "금융",
-      "definition": "미국의 금리 인상이 국내 경제에 영향을 주면서, 한국은행이 부동산 상승·가계부채 상황과 물가를 함께 고려해 추가 금리 인상 여부를 판단하는 복잡한 상황이 진행 중.",
+      "definition": "복잡한 금융거래를 구조화하는 기법. 빅테크 기업들이 AI 투자 자금 확보를 위해 다양한 금융기법을 총동원하고 있다.",
       "count": 1
     },
     {
-      "term": "금리인하요구권",
+      "term": "금융권 사이버보안",
       "category": "금융",
-      "definition": "차주가 마이데이터를 통해 금융사에 대출 금리 인하를 요구할 수 있는 권리로, 최근 고금리 부담으로 신청이 급증 중. 금융 소비자 권익 강화와 동시에 은행의 수익성 압박 요인으로 주목받고 있음.",
+      "definition": "AI를 활용한 고도화된 해킹 위협에 대응하기 위해 금융권 전반에서 요구되는 최고 수준의 경각심과 대응체계. 최근 연쇄 해킹 사건으로 금융감독 당국의 긴급 점검이 강화되고 있음.",
       "count": 1
     },
     {
-      "term": "금융 보안 인프라 취약성",
+      "term": "금융권 사회공헌 책임",
       "category": "금융",
-      "definition": "외부 접속 경로와 직원용 모바일 시스템, 웹서버 등 다양한 유출 경로에서 현행 보안 대응체계가 무력화되고 있는 구조적 문제. 금융당국이 새로운 제도 추진의 필요성을 인식하게 만드는 핵심 이슈.",
+      "definition": "증권업계가 은행권 대비 낮은 사회공헌 수준과 장애인 고용 미달을 지적받으면서, ESG와 사회적 책임 강화가 금융감독 이슈로 대두됐다.",
       "count": 1
     },
     {
-      "term": "금융감독 강화",
+      "term": "금융보안·내부통제",
       "category": "금융",
-      "definition": "금융위, 금융감독원이 추진하는 대출 규제와 신용관리. 시스템 위험(금융 거품) 방지를 위한 거시건전성 정책.",
+      "definition": "은행권에서 고객정보 유출 사고가 잇따르면서 보안 체계와 내부 감시 역할의 강화가 시급한 이슈. 정보보호 규제 강화와 외주업체 관리 체계 개선이 금융감독의 핵심 과제로 대두됨.",
       "count": 1
     },
     {
-      "term": "기관투자자 의결권 투명성",
+      "term": "기금 적립금 전입",
       "category": "금융",
-      "definition": "국민연금 등 기관투자자의 주총 투표가 기권표로 계산되거나 정책에 따라 좌우되는 방식에 대한 투명성 논란. 금융 거버넌스와 시장 공정성의 핵심 과제로 대두.",
+      "definition": "미래대응기금 등 특별회계의 여유 자금을 일반회계로 이전하여 세수 부족을 메우는 행위. 국회 재정통제를 약화시킨다는 논란 대상",
       "count": 1
     },
     {
-      "term": "기금 간 중복 조정",
+      "term": "기준금리 인상",
       "category": "금융",
-      "definition": "고용보험기금, 주택도시기금, R&D 기금 등 여러 정부 기금의 지원 영역 중복 문제 해결. 재정 효율성과 정책 일관성 강화가 요구되는 상황.",
+      "definition": "한국은행과 미국 FRB, 일본 등 주요국 중앙은행의 동시 금리 인상. 고금리 기조가 고정화되면서 성장주 밸류에이션 부담, 부동산 거래 위축, 중소기업 자금조달 비용 상승을 초래",
       "count": 1
     },
     {
-      "term": "기금 운용의 특례와 재정 신축성",
+      "term": "노인의료비 폭증",
       "category": "금융",
-      "definition": "정부가 '신속한 재원 보강'을 내세워 회계연도 중 추경 없이 기금 전입금을 반영할 수 있도록 하는 특례를 추진하면서, 재정 운용의 투명성과 국회 감시 체계 약화 우려가 제기됨.",
+      "definition": "초고령화 진행에 따른 65세 이상 고령층의 의료 수요 급증. 건강보험 재정 적자와 사회 전체의 의료 비용 부담 증가를 야기하는 핵심 이슈.",
       "count": 1
     },
     {
-      "term": "기술이전 수익화",
+      "term": "달러강세·금리상승 연쇄",
       "category": "금융",
-      "definition": "국내 바이오텍이 신약 개발 자금 확보를 위해 기술수출(라이선싱)을 활용하는 자금 조달 모델. 초기 바이오기업의 생존 및 성장 전략.",
+      "definition": "에너지 공급 불안정이 달러 수요 증가, 금리 인상, 주가 약세로 이어지는 글로벌 금융시장의 연쇄 반응. 원자재 가격과 통화·금리의 상관관계를 이해하는 데 중요.",
       "count": 1
     },
     {
-      "term": "기준금리 인상/고금리",
+      "term": "달러약세 추세",
       "category": "금융",
-      "definition": "중앙은행의 금리 인상으로 인한 높은 이자 환경. 물가 억제와 금융 안정성을 위해 지속되고 있으나, 가계 및 기업 부채 부담 증가의 원인.",
+      "definition": "미국 고용 둔화와 금리 인하 기대로 달러 약세가 진행 중이며, 달러-원 환율 하락으로 이어지고 있다. 국채금리 움직임이 이를 제동하는 변수로 작용한다.",
       "count": 1
     },
     {
-      "term": "대미투자 정치·상업 갈등",
+      "term": "대통령 행정명령·법적 한계",
       "category": "금융",
-      "definition": "미국의 정치적 유인(관세 인하, LNG 우선 접근권)과 기업의 상업적 합리성 사이의 괴리. 알래스카 LNG, 원전 등 메가프로젝트 추진 시 나타나는 구조적 문제",
+      "definition": "미 연방대법원이 IEEPA를 근거로 한 대통령 관세 부과 권한을 제한한 사례. 행정부의 무역정책 범위와 법적 제약을 놓고 벌어지는 헌법적 논쟁.",
       "count": 1
     },
     {
-      "term": "레포시장 안정화",
+      "term": "미국 국채 금리 변수",
       "category": "금융",
-      "definition": "연준의 역매도 만기일(RMP) 등 제도적 개입으로 분기말 자금난 위험이 완화되는 현상. 금융시장의 유동성 공급 메커니즘으로 중요성 부각 중",
+      "definition": "미국 장기국채 금리 상승이 국내 증시의 주요 외부 변수로 작용하는 현상. 글로벌 자금 흐름과 한국 시장 기대심리를 동시에 영향.",
       "count": 1
     },
     {
-      "term": "마이데이터",
+      "term": "미래대응기금 특례",
       "category": "금융",
-      "definition": "개인이 금융기관에 산재된 자신의 금융정보를 한데 모아 확인·관리할 수 있는 서비스로, 금리인하요구권 등 소비자 권익 행사의 기반 기술. 금융 데이터 주권의 개인화 추세를 대표하는 개념.",
+      "definition": "국회 의결 없이 추경 편성 절차를 거치지 않고 기금으로 일반회계 세입을 조정할 수 있도록 하는 제도. 입법부 감시 약화와 재정규율 이완에 대한 논란이 발생 중.",
       "count": 1
     },
     {
-      "term": "미래기금 운영 체계",
+      "term": "베이시스 트레이드",
       "category": "금융",
-      "definition": "다수 기금을 통합 관리하는 정부 재정 운영 방식. 청년계정, 성장동력계정, 지방계정 등으로 구분되며 기금 간 중복성과 효율성 문제가 지적되고 있음.",
+      "definition": "헤지펀드 등이 국채 현물과 선물 간 가격 차이를 이용해 차익을 노리는 전략. 최근 대형 헤지펀드의 국채 익스포저 급증으로 시장 리스크 요인으로 부각됨",
       "count": 1
     },
     {
-      "term": "미래기금 재정통제",
+      "term": "세수 부족/세수추계",
       "category": "금융",
-      "definition": "미래기금에서 일반회계로 여유자금을 전입할 때 추경을 생략하는 방식의 재정 규율 완화 우려",
+      "definition": "정부가 예상한 세입이 실제보다 부족해지는 현상. 최근 중앙정부와 지방정부 모두 세수 감소로 추경 편성과 재정 운용의 어려움을 겪고 있는 상황",
       "count": 1
     },
     {
-      "term": "법인세 제도 개편과 세수 증가",
+      "term": "세액공제/R&D 세제지원",
       "category": "금융",
-      "definition": "8월 법인세 중간예납 증가와 법인세 제도 개편으로 세수가 크게 증가하면서, 기업 실적 개선의 영향과 세제 정책의 파급 효과가 함께 작용하고 있음.",
+      "definition": "반도체, 이차전지, 철강 등 전략산업의 생산·판매 실적에 따라 기업의 세금을 깎아주는 정책. 첨단산업 육성의 주요 정책 수단",
       "count": 1
     },
     {
-      "term": "보호주의적 관세 정책",
+      "term": "암호자산 현물 ETF",
       "category": "금융",
-      "definition": "트럼프 행정부의 외국 정부·기업을 대상 관세 위협으로, 한국의 LNG 투자 등 해외 프로젝트에 조건부 압박을 가하는 신보호주의 추세",
+      "definition": "비트코인 등 암호자산을 직접 보유하는 상장지수펀드로, 제도권 자산으로의 편입이 진행 중이다. 규제 환경 변화에 따라 자금 유입 패턴이 급변하는 특성이 있다.",
       "count": 1
     },
     {
-      "term": "시간 운용 능력",
+      "term": "온체인 주식선물",
       "category": "금융",
-      "definition": "보험사 M&A에서 금리 변동 리스크를 장기간 소화할 수 있는 자산·부채 관리 역량. 역마진 극복의 핵심 요소.",
+      "definition": "한국거래소의 야간 시간대 주식선물 거래 시장. 정규장 종가와의 괴리율을 통해 다음날 개장 전 수급 분위기를 예측하는 지표로 활용된다.",
       "count": 1
     },
     {
-      "term": "신용평가 등급의 역할",
+      "term": "유상할당(발전부문)",
       "category": "금융",
-      "definition": "회사채 발행 시 신용평가사의 등급(A+, AA 등)이 투자자 신뢰와 자금 조달 비용에 직결되는 현상",
+      "definition": "발전사가 재정 부담으로 유상할당 비율이 단계적으로 높아지는 정책. 철강·석유화학 등 에너지 다소비 업종의 전기요금 상승 및 경쟁력 저하 우려.",
       "count": 1
     },
     {
-      "term": "연기금의 공격적 배분",
+      "term": "재정 건전성/재정난",
       "category": "금융",
-      "definition": "국민연금 등 공적연금의 코스닥 투자 급증(4년간 3.9% → 40.6%). 중소형주 및 성장주 투자 확대 움직임",
+      "definition": "정부의 세입과 세출 균형이 무너지는 현상으로, 세수 부족으로 인한 적자 재정 운용을 의미. 지방자치단체들이 직면한 핵심 과제",
       "count": 1
     },
     {
-      "term": "인버스·레버리지 ETF 선호",
+      "term": "정책 대출 활용",
       "category": "금융",
-      "definition": "시장 불확실성 속에서 개인투자자들이 하락장 대비용으로 인버스·레버리지 상품에 집중 투자하는 현상. 변동성 장세에서의 위험회피 성향 반영",
+      "definition": "생애최초 주택구입자금 등 정책금융을 통한 저리 대출 확대. 세제개편 후 6억 원 이하 저가 주택 거래 비중 증가의 주요 요인.",
       "count": 1
     },
     {
-      "term": "장기금리 상승",
+      "term": "주가연계증권(ELS) 손실",
       "category": "금융",
-      "definition": "미국 국채 금리와 글로벌 재정 불확실성으로 국내 국고채 3년물이 4%대로 올라가는 현상. 회사채 발행 어려움과 기업 조달비용 급증의 원인.",
+      "definition": "홍콩 H지수 연계 ELS 손실 사태로 인한 은행 책임 문제. 고위험 파생상품 판매 감독 강화와 소비자 보호 규제 개선이 금감 과제로 부상 중.",
       "count": 1
     },
     {
-      "term": "저금리 장기화",
+      "term": "주택담보대출 규제",
       "category": "금융",
-      "definition": "중장기적으로 금리가 낮은 수준에서 유지되는 현상. 보험사의 고금리 확정형 상품 역마진, 자산운용 수익성 악화 등으로 금융권 경영에 심각한 영향을 미치고 있음.",
+      "definition": "집값 안정과 가계부채 관리를 위해 정부가 강화하는 대출 기준. 실수요자의 주거 접근성 악화와 무주택층의 자산형성 기회 박탈 문제를 야기하고 있음.",
       "count": 1
     },
     {
-      "term": "정책자금 부실 운용",
+      "term": "중도상환수수료 인하",
       "category": "금융",
-      "definition": "정부 정책자금이 본래 목적(중소기업 사업화)과 다르게 부동산 임대업 등으로 전용되는 사례가 적발되고 있으며, 관계부처의 사후 감시 체계 부재가 문제로 지적되고 있다.",
+      "definition": "정부 정책에 따른 주택담보대출 중도상환수수료 대폭 인하(1.4% → 0.65%). 대출 상환 유인 증가와 가계부채 재편 흐름",
       "count": 1
     },
     {
-      "term": "청년 취업 정책",
+      "term": "초과세수",
       "category": "금융",
-      "definition": "청년층의 경제적 자립을 지원하기 위한 정부 사업. 국민취업지원제도에서 청년을 분리한 청년계정, 첫취업지원제도 등이 강화되고 있음.",
+      "definition": "정부가 예상한 세수보다 실제로 더 걷힌 세금. 최근 63조원 규모의 초과세수가 민생·복지 정책 재원으로 논의되면서 재정운용의 핵심 이슈로 떠올랐다.",
       "count": 1
     },
     {
-      "term": "초과세수와 재정 운용 자율성",
+      "term": "초과세수 활용",
       "category": "금융",
-      "definition": "올해 국세수입이 추경보다 63조 원 초과되었으나, 정부가 미래기금 등으로 지방 교부세·복지 예산 증액을 제한하면서 국회의 재정 통제권 약화 문제가 대두됨.",
+      "definition": "정부가 예상 수익을 초과하여 거둔 세수(63조 원)를 민생·복지 정책에 배분하는 정책. 재정 유연성 강화의 사례로 주목받고 있음.",
       "count": 1
     },
     {
-      "term": "추경 편성 실태",
+      "term": "추경(추가경정예산)",
       "category": "금융",
-      "definition": "대규모 신규 사업이 본예산에 누락되고 추경으로 반영되는 관행으로 재정 투명성과 계획성 저하",
+      "definition": "회계연도 중 예산 편성 후 새로운 상황에 대응하기 위해 편성하는 추가 예산. 세수 부족이나 긴급 수요 시 국회 승인을 거쳐 편성",
       "count": 1
     },
     {
-      "term": "커버드콜 전략",
+      "term": "크레딧 빌드업",
       "category": "금융",
-      "definition": "보유 주식에 대해 콜옵션을 판매하여 수익을 창출하는 전략. 낮은 변동성 장세에서 주목받는 수익 창출 기법.",
+      "definition": "저신용 차주가 정책서민금융 이용을 통해 신용을 쌓은 후 은행권 대출로 전환하도록 지원하는 금융 체계. 금융포용성 확대를 위한 정부 정책이다.",
       "count": 1
     },
     {
-      "term": "통화정책 기대",
+      "term": "크레딧물(회사채)",
       "category": "금융",
-      "definition": "중앙은행 금리 인하 가능성에 대한 시장의 기대감. 단기채 금리에 민감하게 반응하며 채권시장의 주요 변동 요인.",
+      "definition": "금융채 및 회사채 등 신용채권을 통칭. 최근 빅테크 기업들의 AI 투자 자금조달로 인해 발행 규모와 금리 변동성이 확대되고 있다.",
       "count": 1
     },
     {
-      "term": "포워드 가이던스",
+      "term": "토큰화(RWA)",
       "category": "금융",
-      "definition": "중앙은행이 향후 금리 경로에 대해 사전에 신호를 주는 정책 소통 방식. 최근 연준이 이를 자제하면서 개별 고위 인사들의 발언이 시장에서 정책 신호로 작용하는 현상 발생",
-      "count": 1
-    },
-    {
-      "term": "포트폴리오 분산화",
-      "category": "금융",
-      "definition": "특정 업종이나 종목 집중투자 회피 추세. 미국 시장 분산투자 및 해외자산 비중 확대로의 자산배분 전환",
+      "definition": "국채, 펀드, 부동산 등 실물자산을 블록체인 기반 토큰으로 표시하고 거래하는 기술. 온체인 금융의 핵심 트렌드로 금융 디지털화의 미래 방향으로 평가됨.",
       "count": 1
     },
     {
       "term": "프로젝트파이낸싱(PF) 리스크",
       "category": "금융",
-      "definition": "부동산 개발 사업에 대한 금융 지원에서 발생하는 신용 위험. 고금리 환경에서 구조화된 금융 상품의 부실 가능성이 증가하는 추세.",
+      "definition": "부동산 프로젝트 자금조달 구조에서 발생하는 신용리스크. 은행 건전성 강화 논의와 함께 부동산 시장 변동성에 따른 손실 확대 우려가 핵심 이슈.",
       "count": 1
     },
     {
-      "term": "환율 헤징 필요성",
+      "term": "해외 마케팅 투자와 수익성",
       "category": "금융",
-      "definition": "환율 변동에 따른 수익률 변동성 증가로 인한 달러 선물 및 환매조건부채권 등 헤징수단 활용 확대",
+      "definition": "북미 등 해외 시장 확대를 위한 마케팅비 부담이 가중되는 가운데, 국내 면세·이커머스 채널의 회복으로 수익성 유지 전략이 중요해지는 상황",
       "count": 1
     },
     {
-      "term": "회사채 시장 경색",
-      "category": "금융",
-      "definition": "장기금리 상승으로 기업들의 회사채 발행이 막히고 차환금리가 급상승하는 상황. 금융부실과 기업 자금난으로 확대될 우려가 있는 신용경색 현상.",
-      "count": 1
-    },
-    {
-      "term": "AI 기반 응급의료",
+      "term": "AI 해킹·사이버 보안",
       "category": "사회",
-      "definition": "인공지능을 활용한 응급환자와 병상 매칭으로 응급실 뺑뺑이 해소를 추진하는 공공 헬스케어 정책",
+      "definition": "인공지능 기술을 활용한 금융권 침해 공격의 증가. 금융기관 정보유출 사건으로 금융권의 보안 취약성과 개인정보 보호의 중요성이 부각되고 있다.",
       "count": 1
     },
     {
-      "term": "개인정보보호 규제",
+      "term": "고금리 부채 부담",
       "category": "사회",
-      "definition": "통신사, 카드사, 이커머스, OTT, 금융기관 등 전 산업에서 대규모 데이터 유출 사고 반복. 기업의 보안 투자와 규제 강화가 시장 이슈로 부상",
+      "definition": "높은 금리 수준이 가계부채, 생활비 상승 등으로 이어져 소비자 심리 악화와 정치적 불만으로 표현되는 현상. 신흥국도 동일하게 경험하고 있다.",
       "count": 1
     },
     {
-      "term": "고금리 부담 심화",
+      "term": "고령화 취업증가",
       "category": "사회",
-      "definition": "장기간의 고금리 정책으로 가계 대출 이자 부담이 누적되면서 차주들이 금리인하요구권 등 권리 구제를 적극 행사하는 현상. 소비 심리 위축과 금융 소비자 권익 강화의 양면성을 반영.",
+      "definition": "60세 이상 고령층의 취업자가 증가하고 있는 현상으로, 청년층 감소를 상쇄하고 있다. 평균 연령 상승과 정년 연장 등의 구조적 변화를 반영한다.",
       "count": 1
     },
     {
-      "term": "고령화 대응",
+      "term": "구직활동 의사 부재",
       "category": "사회",
-      "definition": "급진행하는 인구 고령화에 따른 의료, 복지, 노동력 부족 문제. 실버타운, 지방 의료기관, 농촌 등 전사회적 차원에서 대응 정책이 시급한 상황.",
+      "definition": "'쉬었음 청년'처럼 실업자가 아니면서도 구직활동을 하지 않는 비경제활동인구가 증가하고 있다. 노동시장 진입 장애와 심리적 이탈을 동시에 반영하는 지표다.",
       "count": 1
     },
     {
-      "term": "고령화 사회 돌봄 체계",
+      "term": "국내 언론 통제·진영갈등 부추기",
       "category": "사회",
-      "definition": "고령자 1인 가구 증가에 따른 고독사, 사회적 고립 등이 심화되면서 공공 돌봄 인프라 확충과 세대 간 교류 강화를 통한 포괄적 복지정책 필요성이 대두되고 있다.",
+      "definition": "정부 지도자가 언론을 '길들이기'하거나 특정 매체를 '가짜뉴스'로 규정하며 진영갈등을 격화시키는 현상. 민주주의와 언론자유 훼손의 징후로 지적됨.",
       "count": 1
     },
     {
-      "term": "공공 교육격차 해소",
+      "term": "글로벌 인플레이션/물가 상승",
       "category": "사회",
-      "definition": "지역·학교 규모별로 나타나는 교육 불평등을 해결하기 위해 평생학습, 시민교육 등 접근성 높은 공공교육 기회 확대가 정책 과제로 부상하고 있다.",
+      "definition": "식량 가격 상승(곡물 5.1%, 설탕 6.1%), 에너지비·교육비 등 생필품 물가 급등. 신흥국의 고인플레이션이 지속되면서 실물경제에 압박",
       "count": 1
     },
     {
-      "term": "구조개혁",
+      "term": "기술 유출·국가 핵심기술 보안",
       "category": "사회",
-      "definition": "저출생·고령화 시대 대비 및 지역균형발전을 위해 근무시간 제도 개선(52시간제 등), 정년연장 등 노동 구조의 근본적 변화를 추진하는 정책 기조.",
+      "definition": "위장회사·유학생 등을 통한 산업기밀 해외 유출(특히 중국)이 증가 추세. 2차전지·반도체 등 전략 산업 기술 보호의 시급한 과제.",
       "count": 1
     },
     {
-      "term": "근원물가 둔화",
+      "term": "대만 문제·양자 협상",
       "category": "사회",
-      "definition": "식료품·에너지 제외 물가가 3.4%에서 2.8%로 하락하는 현상. 통신비 기저효과 등으로 추가 둔화 가능성이 있어 통화정책에 영향을 미치는 주요 지표.",
+      "definition": "미중 갈등의 핵심 이슈로, 양자 정상회담에서도 근본적 입장차가 해소되지 않는 지정학적 분쟁. 한국 등 주변국의 외교 전략에 영향을 미치는 구조적 갈등.",
       "count": 1
     },
     {
-      "term": "대입제도 투명성 위기",
+      "term": "대입 시스템 신뢰도",
       "category": "사회",
-      "definition": "수시 시스템 마비, 수능 문항 거래, AI 교수학습 플랫폼 사업의 부실 등 대입 전반의 공정성과 투명성이 문제되면서 근본적인 대입제도 개편 논의가 확대되고 있다.",
+      "definition": "수시 원서접수 시스템 장애로 불거진 대입 관리체계의 안정성 문제. 민간업체 의존 구조 개선과 정부 관리 강화가 시급한 이슈다.",
       "count": 1
     },
     {
-      "term": "미경작 농지 정책",
+      "term": "디지털 데이터 여론 측정",
       "category": "사회",
-      "definition": "정부의 농지 전수조사 및 미경작지 관리 강화. 고령화 농촌의 현실과 충돌하며 농민 부담 증가 우려.",
+      "definition": "검색, 콘텐츠 소비, 긍부정 반응 등 일상의 자발적 디지털 데이터를 종합하여 여론과 선호도를 분석하는 기법. K-브랜드지수 등 새로운 정량 평가 방식으로 부상.",
       "count": 1
     },
     {
-      "term": "미중 전략적 대립",
+      "term": "디지털 접근성",
       "category": "사회",
-      "definition": "AI 통제, 에너지 공급 영향력, 반도체·기술 패권을 두고 벌어지는 미국과 중국의 구조적 경쟁. 글로벌 시장과 정책에 근본적 영향을 미침",
+      "definition": "장애인을 포함한 모든 사람이 디지털 서비스에 동등하게 접근할 수 있는 환경. 서울런 자막·수어 누락 사례처럼 공공 교육서비스의 배경 평등성 문제로 대두됐다.",
       "count": 1
     },
     {
-      "term": "보호주의 정책 심화",
+      "term": "미국 국제질서 유지 비용 축소",
       "category": "사회",
-      "definition": "미국의 존스법 한시 면제, 수출금지 등 글로벌 공급망 보호주의가 강화되는 추세. 한국 산업의 수출 전략 재편 필요",
+      "definition": "미국이 기존의 국제질서 유지 노력과 비용을 줄이려는 흐름. 글로벌 패권 재편과 다극화 심화를 야기하는 정책 변화.",
       "count": 1
     },
     {
-      "term": "분만 인프라 격차",
+      "term": "비상사태 선포권 제한",
       "category": "사회",
-      "definition": "지역별 분만 서비스 이용 가능성의 불균형 심화. 저출생 시대 기존 행위별수가제 중심의 보상 체계로는 취약지 의료 기능 유지 한계.",
+      "definition": "미 민주당이 대통령의 관세 부과, 이민 정책 등에 대한 비상권 사용을 제한하려는 움직임으로, 향후 무역·이민 정책의 예측 가능성 약화",
       "count": 1
     },
     {
-      "term": "사회적 갈등 심화",
+      "term": "비영리법인 해산 시 재산귀속",
       "category": "사회",
-      "definition": "정치적·역사적 이슈를 둘러싼 사회 갈등이 심화되는 현상. 작품 비판을 넘어 개인 공격, 신상 공개 등으로 확대되면서 사회 분열 심화 우려.",
+      "definition": "어린이집 등 영유아 보육 기관의 저출생으로 인한 경영난 심화에 따라 법인 해산 시 잔여재산의 국가·지방자치단체 귀속 규정이 개정되는 정책적 변화.",
       "count": 1
     },
     {
-      "term": "생산자-소비자 물가 괴리",
+      "term": "비전통적 가족 형태",
       "category": "사회",
-      "definition": "정부의 소비자 물가 인하 정책이 농민 등 생산자 소득을 압박하는 구조적 모순. 농축산물 가격 인하로 소비자 물가는 내리지만 농민 손실 증가라는 정책 딜레마.",
+      "definition": "결혼·혈연 중심의 전통 가족 제도에서 벗어나 동반자 관계, 개인화된 삶을 추구하는 사회 변화. 저출생·고령화 시대 정서적 돌봄과 공동체 재구성 방식 전환의 신호.",
       "count": 1
     },
     {
-      "term": "스튜어드십 코드",
+      "term": "사업성 부족 (재건축)",
       "category": "사회",
-      "definition": "기관투자자가 투자 기업의 경영에 적극 개입하고 주주권을 행사하도록 권장하는 규범으로, 국민연금 등 대규모 자산의 투표 권한 행사 방식이 투명성 부족으로 비판받고 있음.",
+      "definition": "건설비 급등으로 도시정비 사업의 채산성이 악화되면서 기피 현상 심화. 건설업 시장 구조 변화의 신호.",
       "count": 1
     },
     {
-      "term": "역사 왜곡 논란",
+      "term": "성인학습자 직무전환",
       "category": "사회",
-      "definition": "역사적 사건을 다룬 콘텐츠에서 사실성 문제로 촉발되는 사회적 분쟁. 표현의 자유와 역사 정확성 사이의 갈등이 첨예하게 벌어지는 중.",
+      "definition": "저출산·고령화 속에서 청년 중심 교육에서 벗어나 성인의 재교육과 직업 전환을 지원하는 정책 방향. 생애 전주기 교육의 필요성이 강조되고 있다.",
       "count": 1
     },
     {
-      "term": "예방형 사회안전망",
+      "term": "소비구조 변화",
       "category": "사회",
-      "definition": "위기 발생 후 대응하는 방식에서 벗어나 자살 예방, 청년 진입 지원, 저출생 부담 사전 완화 등 사전 예방에 초점을 맞춘 정책 체계.",
+      "definition": "가계의 소비 패턴이 변화하는 현상으로, 소비자물가지수 개편 시 반영된다. 최근 마라탕 확산처럼 신규 트렌드 상품이 대표 품목으로 포함되는 사례가 증가하고 있다.",
       "count": 1
     },
     {
-      "term": "외국인 노동력 유입",
+      "term": "이커머스 규제 강화",
       "category": "사회",
-      "definition": "산업 공동화와 일자리 부족 속에서 외국인 근로자 고용이 증가하는 추세. 국내 고용 시장 구조 변화의 중요한 지표.",
+      "definition": "쿠팡의 납품업체 비용 전가 의혹, 개인정보 유출 등으로 국정감사에서 거래 관행, 상품 관리, 개인정보 보호 등이 강조되는 추세",
       "count": 1
     },
     {
-      "term": "원산지 투명성",
+      "term": "인구감소 지역소멸",
       "category": "사회",
-      "definition": "중국산 원료 사용에 대한 소비자 관심 증가로 식품 제품의 원산지 표시 투명성이 구매 결정에 영향. 로컬 소싱 트렌드 확산",
-      "count": 1
-    },
-    {
-      "term": "이민정책과 사회통합",
-      "category": "사회",
-      "definition": "지역별 특성에 맞는 외국인 비자 제도 설계와 함께 사회통합 교육을 병행하여 이민자의 지역사회 적응을 체계화하려는 정책 추진이 강화되고 있다.",
-      "count": 1
-    },
-    {
-      "term": "장애인 사회통합 고용",
-      "category": "사회",
-      "definition": "발달장애인 등을 고용하면서 동시에 사회 기여 활동을 연계하는 사업 모델. 소비 선택이 사회 약자 지원으로 이어지는 상생형 경제활동.",
+      "definition": "저출생과 수도권 집중으로 인한 비수도권의 인구 급감과 지역 공동체 붕괴. 소규모학교 증가, 농촌 고령화, 지방 인프라 공동화 등의 직접적 영향을 미치고 있음.",
       "count": 1
     },
     {
       "term": "저출생·고령화",
       "category": "사회",
-      "definition": "생산가능인구 감소와 고령인구 증가로 인한 장기적 경제 위축, 노동력 부족, 사회안전망 부담 증대 현상. 구조개혁, 정년연장, 외국인력 정책 등 정책 과제의 중심.",
+      "definition": "출산율 급락으로 인한 인구 감소와 고령 인구 비중 급증 현상. 건강보험 재정, 노동력 부족, 지역소멸 등 경제·사회 전반에 구조적 위기를 초래하고 있음.",
       "count": 1
     },
     {
-      "term": "정부 취업지원 실효성",
+      "term": "저출생에 따른 정책변화",
       "category": "사회",
-      "definition": "국가 지원 취업자 상당수의 1년 이내 이직 문제. 직업훈련과 취업알선 연계 정책의 한계 노출.",
+      "definition": "병역 자원 급감과 영유아 수 감소로 인해 징병제 운영, 어린이집 산업 등 다양한 정책 개편 논의가 촉발되고 있는 사회적 현상.",
       "count": 1
     },
     {
-      "term": "정신건강 사회안전망",
+      "term": "정보유출 대응체계",
       "category": "사회",
-      "definition": "급변하는 사회환경에서 시민의 마음건강 돌봄이 개인차원을 넘어 사회문화로 정착되어야 하며, 필요시 즉시 지원 가능한 공공 정신건강 서비스 체계 구축이 강조되고 있다.",
+      "definition": "금융기관이 해킹 침해 후 고객정보 유출 사실을 파악하고 대응하는 시간의 편차 문제. 신속한 탐지 및 차단 체계의 강화가 시급한 과제다.",
       "count": 1
     },
     {
-      "term": "지방소멸 대응",
+      "term": "정부 소통 방식",
       "category": "사회",
-      "definition": "저출생으로 인한 지역 인구 감소 현상에 대응하기 위해 지역균형발전, 공공기관 협력 등을 추진하는 정책 과제.",
+      "definition": "하향식·일방통행식 정책 추진으로 인한 사회적 갈등 유발. 현장 의견 수렴 부족과 이해관계자 협의 부재가 정책 저항의 핵심 원인으로 지적",
       "count": 1
     },
     {
-      "term": "지역 관광 산업화",
+      "term": "정부 정책 지원(R&D 마중물)",
       "category": "사회",
-      "definition": "경주 APEC 개최를 계기로 문화유산-콘텐츠-관광-소비로 이어지는 지역경제 순환 구조 구축. AI·K-컬처와 결합한 관광 전략 고도화",
+      "definition": "신약 개발 국책 과제 선정, CPHI 참가 지원 등 정부 자금과 제도가 바이오/제약 기업의 혁신을 가속화하는 역할. 글로벌 경쟁력 강화 수단으로 작용.",
       "count": 1
     },
     {
-      "term": "지정학적 산업 위치 확보",
+      "term": "정치적 표현의 자유 vs 사회분열",
       "category": "사회",
-      "definition": "에너지 자원공사, 항만 기반시설 등 국가 거점을 특정 지역에 집중 배치하는 전략. 지역 산업 생태계와의 시너지를 극대화",
+      "definition": "음모론과 역사왜곡을 담은 콘텐츠의 표현의 자유와 사회적 갈등 조장의 경계에 대한 논쟁. 이성적 담론 부재와 정치권의 진영 논리가 심화시키는 이슈다.",
       "count": 1
     },
     {
-      "term": "청년 고용 위기",
+      "term": "조건부 면허제도",
       "category": "사회",
-      "definition": "15~29세 청년층의 고용률 하락과 미취업자 증가 현상. 경제 약세와 구조적 일자리 부족이 결합된 사회적 이슈.",
+      "definition": "운전자의 신체·인지능력을 기준으로 제한적 운전을 허가하는 제도. 고령화 사회에서 노인 교통사고 예방과 이동권 보장의 균형을 맞추기 위해 최근 논의 중",
       "count": 1
     },
     {
-      "term": "청년층 직업의식 변화",
+      "term": "지역 교육격차",
       "category": "사회",
-      "definition": "Z세대의 경력 경로 다양화, 팬데믹 이후 불확실한 노동시장 인식. 임원 선호, 관리직 회피 등 기존 커리어 패턴 변화.",
+      "definition": "수도권으로의 교육 자원 쏠림으로 인해 지역 간 교육 수준이 벌어지는 현상. 장기적 교육정책 과제로 중앙정부와 지방의 협력이 필요하다.",
       "count": 1
     },
     {
-      "term": "해외여행 수요 변화",
+      "term": "청년 주거금융 정책",
       "category": "사회",
-      "definition": "환율 상승으로 선진국 여행 회피, 동남아 휴양지로 이동하는 소비자 이동 현상",
+      "definition": "청년층의 주택담보대출 연체율 증가와 비아파트 담보대출 부실 우려로 인해 단순 공급 위주에서 상환능력 검증 중심으로 전환되는 정책. 주거사다리 단절 문제와 가계부채 증가의 충돌 지점.",
       "count": 1
     },
     {
-      "term": "호르무즈 해협 통항 불안",
+      "term": "청년층 고용악화",
       "category": "사회",
-      "definition": "중동 분쟁으로 인한 세계 석유 교역량 1/3을 차지하는 전략적 요충지의 통항 위협. 유가와 글로벌 공급망에 직결된 핵심 리스크",
+      "definition": "15~29세 취업자가 46개월 연속 감소하고 있으며, 동시에 '쉬었음 청년' 같은 비경제활동인구가 증가하는 추세. 구직 기회 부족과 노동 의욕 감소가 동시에 나타나고 있다.",
       "count": 1
     },
     {
-      "term": "2차전지 산업",
+      "term": "팩션 논란",
+      "category": "사회",
+      "definition": "역사적 사실과 픽션을 혼합한 콘텐츠로 인한 사회 갈등. SNS·온라인 확산으로 법정 분쟁을 넘어 집단행동까지 확대되는 문화·표현의 자유 vs 역사 왜곡 문제",
+      "count": 1
+    },
+    {
+      "term": "포퓰리스트 재정정책",
+      "category": "사회",
+      "definition": "트럼프의 성인 1인당 5000달러 배당금 공약 등 파격적 재정 확대 정책으로 인한 인플레이션 우려와 시장 불확실성 증대",
+      "count": 1
+    },
+    {
+      "term": "학령인구 감소",
+      "category": "사회",
+      "definition": "학교에 다닐 나이의 학생 수가 지속적으로 줄어드는 현상. 26년간의 교육 지형 변화와 고등교육 구조 개혁의 근본적 배경이 되는 사회 위기 이슈다.",
+      "count": 1
+    },
+    {
+      "term": "AI 규제·비상통보선",
       "category": "산업",
-      "definition": "충전식 배터리의 핵심 산업으로, 반도체와 함께 국가 전략 산업으로 분류. 소재 제어와 자동화가 품질과 경쟁력을 좌우함.",
-      "count": 1
-    },
-    {
-      "term": "AI 교육 정책",
-      "category": "산업",
-      "definition": "인공지능 기술 발전에 대응하기 위해 교육 현장에서 AI 교육을 체계적으로 추진하는 정책. 미래 인력 양성과 디지털 리터러시 강화의 핵심 과제로 대두되고 있음.",
-      "count": 1
-    },
-    {
-      "term": "AI 규제·윤리",
-      "category": "산업",
-      "definition": "AI 기술의 부작용(해고결정 자동화 등)을 제한하는 규제 움직임. 캘리포니아의 AI 노동보호법 등 글로벌 가이드라인 선도.",
+      "definition": "미중 간 인공지능 기술을 둘러싼 경쟁 심화 속에서 비상 소통선 구축 필요성 대두. 기술 갈등으로 인한 통제 불능 위험을 외교적으로 관리하려는 시도.",
       "count": 1
     },
     {
       "term": "AI 노동시장 영향",
       "category": "산업",
-      "definition": "인공지능 도입으로 인한 고용 감소, 소득분배 악화 등 구조적 변화. AI 기본사회, 인공지능세 등 정부 대응 정책이 논의 중.",
+      "definition": "인공지능 확산이 노동소득분배율과 노동시장 구조에 미치는 영향을 분석하는 이슈. IMF, NBER 등 국제기구들이 최근 보고서를 잇달아 발표하며 정책 관심이 높아지고 있음.",
       "count": 1
     },
     {
-      "term": "AI 데이터센터 산업",
+      "term": "AI 데이터센터 투자",
       "category": "산업",
-      "definition": "반도체, 전력, 냉각 등 다양한 산업을 동시에 견인하는 신성장 동력. AI 투자 사이클에 따른 장기적 설비 교체 수요가 핵심 이슈",
+      "definition": "AI 확산에 따른 데이터센터 건설 붐이 반도체와 에너지 산업의 버팀목으로 작용. 제조업 침체 속에서 신성장 동력으로 각광.",
       "count": 1
     },
     {
-      "term": "AI 반도체 호황의 양극화",
+      "term": "AI 데이터센터(AIDC)",
       "category": "산업",
-      "definition": "고부가가치 AI/메모리 반도체는 급성장하지만, 범용·전자 업종은 침체하는 현상으로, 반도체 수출 호황이 전체 산업 성장을 대표하지 못함을 의미함.",
+      "definition": "인공지능 학습 및 운영을 위한 대규모 데이터센터. '인공지능 데이터센터 산업 진흥 특별법'으로 인허가 절차를 간소화하며 국가 전략산업으로 지정",
       "count": 1
     },
     {
-      "term": "AI 시대 전력 수급",
+      "term": "AI 보안/사이버방어",
       "category": "산업",
-      "definition": "글로벌 빅테크 기업들의 AI 산업화로 전기화 수요가 급증하면서, 에너지 인프라 투자(1,400조 규모)가 국가 경쟁력을 결정하는 메가트렌드로 부상",
+      "definition": "AI 기술을 활용한 실시간 보안 방어체계. 금융권 해킹 증가로 AI 기반 대응 체계 구축이 시급한 국가 과제로 떠올랐음",
       "count": 1
     },
     {
-      "term": "AI 칩셋/반도체",
+      "term": "AI 시대 산업 전환",
       "category": "산업",
-      "definition": "로봇, IoT 기기 등 산업용 기계에 탑재되는 AI 전용 반도체. GPU 확보에서 나아가 실제 산업 응용에 맞춘 맞춤형 칩(ASIC) 개발이 경쟁력의 핵심으로 부상함.",
+      "definition": "인공지능 확산에 따른 산업 구조 변화, 노동정책, 직업교육 개편 등 종합적 사회 대응 필요성. 정부 차원의 포용적 정책 수립이 화두.",
       "count": 1
     },
     {
-      "term": "CPTPP 가입",
+      "term": "CDMO 사업 다각화",
       "category": "산업",
-      "definition": "포괄적·점진적 태평양경제동반자협정 참여로 미중 갈등 속 통상 입지를 강화하고 수출시장을 다변화하려는 전략. 한국의 주요 산업(전자·전기)이 영향받는 중요 통상 이슈.",
+      "definition": "바이오시밀러 중심에서 위탁개발생산(CDMO)과 신약 개발로 사업 영역을 확대하려는 전략. 수익성 높은 신사업으로 의존도 낮추는 움직임.",
       "count": 1
     },
     {
-      "term": "ESS(에너지저장장치) 시장 폭발",
+      "term": "EREV (주행거리 연장형 전기차)",
       "category": "산업",
-      "definition": "재생에너지 확대와 전력 안정화 필요로 ESS 수요가 급증하고 있는 추세. 이차전지 소재와 배터리 기술의 새로운 성장 동력",
+      "definition": "순수 전기차의 주행거리 한계를 극복한 신기술로, 엔진과 전기 모터를 결합. 완전 전동화로의 과도기 솔루션으로 주목받고 있음.",
       "count": 1
     },
     {
-      "term": "K-콘텐츠 글로벌화",
+      "term": "HBM(고대역폭메모리)",
       "category": "산업",
-      "definition": "K-웹툰, K-팝, K-아티스트를 활용한 브랜드 협업과 콘텐츠 수출 전략. 문화산업이 지역경제 및 브랜드 가치 상승의 핵심 엔진으로 작동",
+      "definition": "여러 D램을 수직으로 적층한 반도체 부품으로, AI·GPU 수요 증가에 따른 핵심 성장 시장. 불량률 개선이 양산 확대의 병목.",
       "count": 1
     },
     {
-      "term": "K바이오 글로벌 진출",
+      "term": "K-브랜드 글로벌화",
       "category": "산업",
-      "definition": "국내 제약·바이오 기업들이 협소한 국내 시장(30조원)을 벗어나 글로벌 시장(400조원 규모)에서 직판, 기술수출, 신약 개발을 통해 성장을 추구하는 전략적 움직임.",
+      "definition": "K-뷰티, K-웰니스, K-라이프스타일 등 한국 브랜드와 콘텐츠를 글로벌 시장으로 확산하려는 전략. 팝업스토어, 콘텐츠 커머스 등을 통해 해외 진출을 가속화하는 움직임.",
       "count": 1
     },
     {
-      "term": "강제노동 상품 규제",
+      "term": "K-웰니스 산업화",
       "category": "산업",
-      "definition": "무역법 301조 등을 활용한 강제노동으로 생산된 상품의 수입 차단 조사. 공급망의 인권 기준 강화로 기업 비용 증가와 규제 리스크 야기",
+      "definition": "한방, 약초 등 전통 자원을 현대적 웰니스 콘텐츠와 연계하여 관광, 건강 산업으로 상용화하는 추세. 정부와 지자체가 주도적으로 추진 중.",
       "count": 1
     },
     {
-      "term": "공간 데이터 플랫폼",
+      "term": "MRO (유지·보수·정비) 교두보",
       "category": "산업",
-      "definition": "격자 단위 지역정보를 통합 관리하는 데이터 인프라. AI 학습용 '데이터 밀키트' 개념으로 상업화되는 추세.",
+      "definition": "조선 완성품 판매 후 장기적 수익을 창출하는 사후관리 사업. 조선업의 부가가치 확대 전략.",
       "count": 1
     },
     {
-      "term": "공급망 리스크 헤징",
+      "term": "가스선(LNG) 수주 집중",
       "category": "산업",
-      "definition": "한국 조선업 등이 미국의 보호주의 정책(존스법 등)에 대응하기 위해 전략적 동맹과 다변화된 수주 포트폴리오를 확보하는 움직임",
+      "definition": "그리스 등 해운업체가 일반선 발주는 분산하되 가스선에 집중 발주하는 추세. 에너지 다원화와 글로벌 LNG 수요 확대에 따른 한국 조선사 수혜 증대.",
       "count": 1
     },
     {
-      "term": "공급망 재편(또는 산업 클러스터화)",
+      "term": "건설사 신사업 다각화",
       "category": "산업",
-      "definition": "전통 산업(철강, 석유화학)과 미래 산업(이차전지, 첨단소재, 로봇)을 통합하는 지역 기반 공급망 강화. 지역 산업 생태계 고도화 전략",
+      "definition": "전통 건설 사업의 수익성 악화에 대응하여 AI, 데이터센터, 로보틱스 등 미래 성장사업으로의 포트폴리오 전환 추진",
       "count": 1
     },
     {
-      "term": "공사비 상승 시장 쏠림",
+      "term": "건식전극 배터리",
       "category": "산업",
-      "definition": "건설 비용이 오를 때 자금력과 신용도가 높은 대형 건설사로 수주가 집중되는 현상. 중소 건설사의 시장 진입 장벽 심화.",
+      "definition": "차세대 2차전지 기술로, 기존 습식 공정 대비 에너지 밀도가 높고 제조 비용이 낮음. 중국산 배터리 가격 경쟁에 대한 한국 배터리업의 차별화 전략.",
       "count": 1
     },
     {
-      "term": "공사비 폭등",
+      "term": "고등직업교육 투자",
       "category": "산업",
-      "definition": "건설 현장에서 원자재 가격과 인건비 상승으로 인한 공사비 급증 현상. 부동산 분양가, 인프라 프로젝트 원가 관리의 핵심 이슈로 공공-민간 갈등의 원인.",
+      "definition": "전문대학을 중심으로 산업·고용·정주정책과 연계한 인재양성에 투자하는 정책 방향. 지역소멸과 일자리 미스매치 해결의 핵심 전략이다.",
       "count": 1
     },
     {
-      "term": "공정 데이터 활용",
+      "term": "고부가가치 제조업 전환",
       "category": "산업",
-      "definition": "제조 시설에 축적된 방대한 공정 데이터를 AI 학습에 활용하여 범용 AI를 산업별 맞춤형으로 구현. 산업용 로봇 도입의 필수 요소.",
+      "definition": "전통 제조업이 새로운 소재·공정 기술과 디지털 혁신을 통해 고부가가치 산업으로 재편되려는 산업 정책. 구조적 위기 극복의 전략으로 대두됨.",
       "count": 1
     },
     {
-      "term": "관세를 통한 통상 압박",
+      "term": "공급망 리스크(공급 부족)",
       "category": "산업",
-      "definition": "트럼프 행정부가 무역 협상과 정치적 목표 달성을 위해 관세를 적극 활용하는 전략. 한국, 중국, 캐나다 등 주요 국가들이 대상이 되며 글로벌 공급망에 영향",
+      "definition": "철강, 반도체 등 핵심 산업용 원자재 수급 문제로 납기 지연과 생산 차질이 증가. 인력 부족과 함께 제조업 경쟁력을 제약하는 요인.",
       "count": 1
     },
     {
-      "term": "교육 지역격차 심화",
+      "term": "관세(무역 보호주의)",
       "category": "산업",
-      "definition": "고교학점제 시행에 따라 서울 대비 지방의 개설 과목 수가 현저히 적어 교육 기회 불균등이 발생하고 있으며, 이는 지방교육재정 재편 논의로 이어지고 있다.",
+      "definition": "트럼프 당선으로 미국의 300% 관세 부과 위협이 현실화되면서 글로벌 제조업체들의 미국 공장 설립을 강제하는 정책 수단. 전 산업군에 영향을 미치는 핵심 리스크 요인",
       "count": 1
     },
     {
-      "term": "규제과학 데이터 기반화",
+      "term": "국내 D2C 브랜드 글로벌 확장",
       "category": "산업",
-      "definition": "독성·임상 데이터를 AI로 재활용해 신약 개발 효율성을 높이고 실험동물 사용을 줄이는 혁신 방식. 제약 R&D의 디지털화 트렌드.",
+      "definition": "SNS 마케팅과 이커머스 운영 역량을 바탕으로 국내 브랜드들이 미국, 유럽 등 해외 시장으로 빠르게 확대되는 현상",
       "count": 1
     },
     {
-      "term": "기업 자본지출 계획",
+      "term": "글로벌 공급망 재편",
       "category": "산업",
-      "definition": "고금리와 고환율 환경에서 항공사·건설사 등의 대규모 설비투자 여력 평가. 재무 안정성과 현금창출력이 핵심",
+      "definition": "한국 기업들이 베트남, 미국 등으로 생산거점을 다변화하면서 국내 부품업계의 지위 변화와 중소기업 경쟁력 영향을 초래하는 현상",
       "count": 1
     },
     {
-      "term": "동물복지 정책",
+      "term": "기자재 공급 병목",
       "category": "산업",
-      "definition": "반려동물 산업 확대와 함께 공공 동물의료 인프라 확충, 복지 기준 강화 등 동물보호와 산업 성장을 균형있게 추진하는 정책이 정부-학계 협력으로 추진 중이다.",
+      "definition": "조선 수주 증가로 엔진 등 핵심 기자재 공급이 부족해지면서 관련 협력업체의 수익성 개선이 가속화되는 현상.",
       "count": 1
     },
     {
-      "term": "라이다/센서 통합",
+      "term": "농지 투기 규제",
       "category": "산업",
-      "definition": "3D 라이다, 카메라, 뎁스 카메라 등 다양한 센서를 엣지 AI 컴퓨터와 결합하여 로봇의 인지 능력을 구현. 자율주행과 산업 로봇의 공통 기술.",
+      "definition": "농지 소유자의 실제 사용 실태를 파악해 투기목적 소유를 억제하려는 정책. 재산권 보호와 농지 보전 사이의 균형 조정이 과제",
       "count": 1
     },
     {
-      "term": "메모리 반도체 판가 방어",
+      "term": "대미 자동차 수출",
       "category": "산업",
-      "definition": "AI 서버 수요로 웨이퍼 부족이 심화되면서, 고부가가치 메모리 판가 유지가 반도체 수출 실적과 무역수지 흑자를 좌우하는 핵심 변수로 부상함.",
+      "definition": "한국 자동차의 주요 시장인 미국에서 관세 부과로 인한 수출 감소 압박이 심화되는 가운데, EU·아시아 시장으로의 다변화 필요성이 대두됨",
       "count": 1
     },
     {
-      "term": "무역 휴전 및 협상",
+      "term": "딥테크(Deep Tech)",
       "category": "산업",
-      "definition": "미국과 중국 간 관세 분쟁에서 일시적 합의나 협상을 통해 관세 인상을 연기하는 조치. 최근 협상들이 예상보다 짧은 기간의 휴전에 그치고 있음",
+      "definition": "반도체, AI, 양자컴퓨팅 등 기초과학 기반의 첨단기술. 글로벌 기술 경쟁에서 한국의 경쟁력을 좌우하는 전략 분야",
       "count": 1
     },
     {
-      "term": "미국산 에너지 공급 안정성",
+      "term": "로봇 자동화 투자",
       "category": "산업",
-      "definition": "중국의 미국산 LNG 수입 중단, 쿠바 제재 등으로 에너지 공급망의 지정학적 리스크가 심화되는 현상. 글로벌 에너지 가격과 공급 안정성에 직결",
+      "definition": "건설 현장의 인건비와 원자재 부담을 해소하기 위해 건설사들이 로봇 기술 도입을 가속화하고 있는 추세. 반복 작업 효율화와 위험 작업 감소를 목표로 함.",
       "count": 1
     },
     {
-      "term": "바이오산업 육성",
+      "term": "물류·데이터 경쟁",
       "category": "산업",
-      "definition": "반도체, 2차전지에 이어 새로운 전략 산업으로 부상. 지역별 특화 전략과 대규모 투자로 국가 산업 포트폴리오 다각화.",
+      "definition": "이커머스 기업들이 상품·가격 경쟁을 넘어 물류 효율성과 고객 데이터 활용 역량을 새로운 경쟁 요소로 확대하는 추세",
       "count": 1
     },
     {
-      "term": "바이오헬스산업",
+      "term": "미국 인프라 투자 수혜",
       "category": "산업",
-      "definition": "의약품, 의료기기, 건강식품 등을 포함한 고부가가치 산업. 최근 115만 명대 종사자로 2.9% 성장하며 신성장 동력으로 부상.",
+      "definition": "미국의 자국산 선박·함정 건조 정책(Shipbuilding Industrial Base 강화)으로 K-조선 기업들이 새로운 성장 시장 진입. 지정학적 이슈와 연계.",
       "count": 1
     },
     {
-      "term": "반도체 기술 규제",
+      "term": "미중 무역·기술갈등",
       "category": "산업",
-      "definition": "미국의 중국 반도체 수출 통제(DUV 노광장비 등)와 이에 대한 규제 회피 시도로 인한 글로벌 공급망 갈등",
+      "definition": "미국과 중국 간 관세, 기술 제한, 반도체 등을 둘러싼 구조적 대립. 휴전 연장에도 근본적 이견이 남아있으며, 글로벌 공급망과 산업 정책에 직결된 핵심 리스크.",
       "count": 1
     },
     {
-      "term": "반도체 수출 의존도",
+      "term": "바이오·헬스 인력 쏠림",
       "category": "산업",
-      "definition": "국내 수출의 AI 투자 사이클 의존도 심화로, 글로벌 AI 수요 변동에 따른 수출 변동성 확대 우려",
+      "definition": "제약·바이오산업에서 임원급 경력자 채용이 증가하고 있으며, 고급 인력 확보 경쟁이 심화되고 있다. 산업 성장에 따른 우수 인재 모집 전쟁을 의미한다.",
       "count": 1
     },
     {
-      "term": "반도체 업황 호황",
+      "term": "바이오시밀러",
       "category": "산업",
-      "definition": "AI 수요 증가에 따른 반도체 필수성 강화로 업계 실적과 주가가 동반 상승하는 현상. 국내 코스피 지수의 주요 지지선 역할을 하며 경기 선행지표로 기능.",
+      "definition": "미국의 의약품 관세 부과로 인해 국내 바이오 기업들의 수출 경쟁력 하락 우려가 높아지면서, 글로벌 제약사와의 동맹 강화가 필수 전략이 됨",
       "count": 1
     },
     {
-      "term": "배포·운영 솔루션",
+      "term": "반도체 산업 고도화",
       "category": "산업",
-      "definition": "AI 칩의 연산 성능뿐 아니라 현장에서의 전력, 발열, 지연시간 관리와 실시간 운영을 담당하는 솔루션. 산업 현장 도입 성공의 핵심.",
+      "definition": "국내 반도체 기업들이 첨단 패키징, 광학 모듈 등 고난도 기술 개발로 산업 고도화를 추진하는 한편, 해외 생산거점(베트남 등)으로 중간재 현지화를 확대하는 구조 개편",
       "count": 1
     },
     {
-      "term": "복합리조트 사업 다각화",
+      "term": "반도체 수출 호황",
       "category": "산업",
-      "definition": "전통적 카지노 사업에서 호텔·쇼핑·공연 등으로 수익원을 확산시키는 경영 다변화 전략",
+      "definition": "AI칩 수요 급증으로 반도체 수출이 전년 대비 262.8% 증가하며 한국의 연간 수출 1조 달러 달성을 견인 중. 다만 범용·전자 업종과의 수출 양극화 심화가 우려 사항.",
       "count": 1
     },
     {
-      "term": "비임상·임상 시험 통합",
+      "term": "반도체 업황",
       "category": "산업",
-      "definition": "제약사의 신약 개발 조직 재편을 통해 비임상, 임상, 제조, 유통을 한 체계 내에서 통합 관리하는 구조 개혁. 개발 효율성 및 속도 향상.",
+      "definition": "한국의 최대 수출품목으로 500억 달러대 규모를 기록 중. 미국의 관세 정책과 중국 경제 부진의 영향을 받으며 시장 변동성이 크게 작용하는 중",
       "count": 1
     },
     {
-      "term": "산업 AI 솔루션",
+      "term": "반도체 지역경제파급",
       "category": "산업",
-      "definition": "GPU, 칩 등 하드웨어에서 나아가 특정 산업·공정에 맞춘 소프트웨어와 서비스 개발 및 실제 도입까지를 포함. AI 투자의 수익성 창출 단계로 인식됨.",
+      "definition": "반도체 공장 입주가 지역 공급망과 고용으로 얼마나 실제 경제효과를 미치는가의 문제. 투자액 대비 지역 기업 진입과 청년 취업 효과가 제한적이라는 우려가 증가하고 있다.",
       "count": 1
     },
     {
-      "term": "산업용 로봇 안전성",
+      "term": "반도체·2차전지 클러스터링",
       "category": "산업",
-      "definition": "로봇 자동화 확대에 따른 위험성 평가와 안전 검증 기준의 변화. 지능형 로봇이 인간과 협업하는 환경에서 필수적인 과제.",
+      "definition": "반도체, 양자, 2차전지 등 첨단산업을 지역 거점으로 통합 육성하는 정책. 산업 간 연계 시너지를 창출하는 국가 전략.",
       "count": 1
     },
     {
-      "term": "석유화학 고부가 소재 경쟁",
+      "term": "배터리 수급 위기",
       "category": "산업",
-      "definition": "POE(폴리올레핀 엘라스토머), 합성고무 등 글로벌 고부가 재료의 생산 능력 확충 경쟁. 글로벌 선도 기업 위상 강화",
+      "definition": "중국의 글로벌 배터리 시장 73% 점유로 한국 배터리 업계의 경쟁력 약화. 과잉 생산 시설을 ESS용으로 전환하는 산업 재편 현상.",
       "count": 1
     },
     {
-      "term": "세포·유전자치료제",
+      "term": "베트남 고성장/역내 대체",
       "category": "산업",
-      "definition": "CAR-T, 줄기세포 등 차세대 치료법으로, 신약 개발만큼 생산 인프라(CDMO)와 제조 기술이 핵심 경쟁력인 신흥 시장. 한국 바이오 기업의 차별화 영역.",
+      "definition": "베트남의 9.95% 고성장으로 중국 대체 생산지로서 지위 강화. 글로벌 공급망 재편 속 아시아 경제 패러다임 변화",
       "count": 1
     },
     {
-      "term": "수소환원제철 전환",
+      "term": "부동산·건설 수익성 악화",
       "category": "산업",
-      "definition": "전통 철강 산업의 탈탄소화 핵심 기술. 친환경 철강 생산 방식으로의 전환을 통한 산업 구조 개편",
+      "definition": "건설 계약액은 증가했으나 공사비 상승으로 인한 수익성 저하와 대형사 수주 편중 현상으로 업황 회복이 지연되는 상황",
       "count": 1
     },
     {
-      "term": "수주잔고 관리",
+      "term": "부품 국산화율/현지화",
       "category": "산업",
-      "definition": "조선업에서 확보한 미래 수주를 언제까지 소화할 수 있는가를 나타내는 지표. 한국 대형 조선사들의 경쟁력을 보여주는 동시에 신규 수주 필요성을 판단하는 핵심 요소",
+      "definition": "한국 기업들이 해외 생산거점에서 부품을 현지 조달하는 비율 증가. 국내 중소 부품업체의 수출 의존도 심화 요인",
       "count": 1
     },
     {
-      "term": "스마트팩토리",
+      "term": "분양가상한제",
       "category": "산업",
-      "definition": "AI, 로봇, IoT 등을 통합한 지능형 공장. 데이터 기반 최적화와 자동화로 생산 효율성을 극대화하는 제조업의 디지털 전환.",
+      "definition": "정부가 공공주택지구에 적용하는 분양가 규제 정책. 시장 수급 불안과 높은 금리 속에서 주택시장 안정화 수단으로 기능",
       "count": 1
     },
     {
-      "term": "실증 인프라 구축",
+      "term": "빅테크 자금조달",
       "category": "산업",
-      "definition": "첨단로봇, 수중로봇 등 신산업 육성을 위한 실증센터 건설. 연구 역량과 제조 현장을 연계한 산업화 전략",
+      "definition": "AI 데이터센터 등 대규모 설비투자를 위해 빅테크 기업들이 회사채·금융공학 기법을 동원하여 자금을 조달하는 현상. 글로벌 채권시장과 금융시스템에 영향을 미치는 주요 이슈다.",
       "count": 1
     },
     {
-      "term": "에너지 가치사슬 충격",
+      "term": "산업 전동화",
       "category": "산업",
-      "definition": "원유 수급 차질이 석유화학, 제조업 전반의 원가 상승으로 전이되는 구조적 문제. 상류(원유)부터 하류(제조업)까지 영향이 파급되는 메커니즘.",
+      "definition": "조선소, 항만, 철강 등 고중량 작업 현장까지 디젤 장비를 전동(전기) 장비로 대체하는 움직임. 환경 규제 대응과 글로벌 친환경 추세 대응의 핵심 이슈.",
       "count": 1
     },
     {
-      "term": "에너지 공급망 위기",
+      "term": "세액공제 축소 영향",
       "category": "산업",
-      "definition": "미국 경유 수출 중단, 중국 정유사 수출 전면 중단 등으로 글로벌 에너지 공급망이 급격히 축소되는 현상. 국제유가 변동성 확대와 에너지 안보 우려를 심화시키는 주요 이슈",
+      "definition": "미국의 전기차 세액공제 감소로 인한 자동차 구매 정책 변화. 제조사들의 판매 전략 및 제품 포트폴리오 조정에 직결.",
       "count": 1
     },
     {
-      "term": "에너지 수입 의존도 구조",
+      "term": "수의계약 확대",
       "category": "산업",
-      "definition": "한국이 석유·가스 등 에너지를 절대적으로 수입에 의존하면서, 국제 유가 변동과 금리 상승(국채 5% 돌파)이 거시경제에 미치는 영향이 커지고 있는 상황.",
+      "definition": "과도한 공사비로 입찰 참여가 줄어들면서 협의에 의한 계약이 증가. 경쟁 구도 약화와 시장 왜곡 현상.",
       "count": 1
     },
     {
-      "term": "에너지 전환 인프라",
+      "term": "수주잔고 확보",
       "category": "산업",
-      "definition": "미국 송전망 현대화 프로젝트(765kV급 초고압변압기)로 대표되는 전력망 고도화. 재생에너지 확대에 따른 기간망 업그레이드가 전 세계적으로 진행 중인 핵심 산업 기회",
+      "definition": "조선업 호황기에 미래 수주를 장기 확보함으로써 안정적인 실적 파이프라인을 구축하는 전략. 중장기 성장성의 지표.",
       "count": 1
     },
     {
-      "term": "엣지 AI",
+      "term": "스마트농업 기술 전환",
       "category": "산업",
-      "definition": "클라우드가 아닌 기기 자체(엣지)에서 AI 연산을 수행하는 기술. 지연시간 단축, 전력 효율, 데이터 보안이 중요한 산업 현장에서 실시간 의사결정이 필요할 때 필수적.",
+      "definition": "농촌 고령화와 노동력 부족에 대응하기 위한 디지털 기술 기반 농업 혁신. 최신 R&D와 현장 적용이 농업 경쟁력 강화의 핵심 과제.",
       "count": 1
     },
     {
-      "term": "원가율 관리",
+      "term": "스마트조선소",
       "category": "산업",
-      "definition": "건설·제조 업체의 핵심 경영 지표로, 공사비 상승 환경에서 원가율(보통 80~90% 대)을 안정적으로 유지하는 것이 수익성 결정 요인.",
+      "definition": "산업용 로봇과 자동화 기술을 도입한 차세대 조선 시설. 중국의 수주 점유율(63%) 확대에 대응하는 한국·일본 조선업의 생산성 강화 전략.",
       "count": 1
     },
     {
-      "term": "이차전지 소재 다변화",
+      "term": "약가 개편",
       "category": "산업",
-      "definition": "전기차용 삼원계 배터리 중심에서 LFP(인산철리튬), 양극재, 음극재 등으로 포트폴리오를 다각화하는 추세. 보급형 전기차와 ESS 시장 확대에 대응",
+      "definition": "제네릭 약가 인하와 신약 신속등재, 혁신 보상 등을 포함한 제약바이오 산업 정책 변화로, 건보 재정 건전성과 산업 육성 사이의 균형을 맞추려는 정부 정책",
       "count": 1
     },
     {
-      "term": "인력 수급 부족",
+      "term": "에너지 공급망 다각화",
       "category": "산업",
-      "definition": "저출생과 생산가능인구 감소로 인한 노동력 부족 심화. 외국인력 수용, 이민정책 확대 논의와 맞닿아 있는 경제 구조 문제.",
+      "definition": "사우디산 원유 비중 감소, 미국산 LNG 도입 재개 등 중동 의존도를 낮추려는 움직임. 지정학적 리스크 헤징과 에너지 안보 강화 전략",
       "count": 1
     },
     {
-      "term": "저가 소포 관세 회피",
+      "term": "에너지 시장 통제·공급관리",
       "category": "산업",
-      "definition": "테무 등 해외 전자상거래 업체들이 일정 금액 이하 소포에 대한 관세 면제 제도를 활용하여 관세 부담을 회피하는 현상. EU 등이 규제 강화 추진 중",
+      "definition": "중국의 정제능력과 석유제품 재고 조절을 통한 에너지 시장 영향력 행사. OPEC의 공급조절과 유사한 효과를 내며 글로벌 에너지 가격과 공급망을 좌우하는 전략.",
       "count": 1
     },
     {
-      "term": "중국 전기차 글로벌 공략",
+      "term": "오프라인·온라인 채널 통합",
       "category": "산업",
-      "definition": "중국 자동차 업체들이 유럽 시장에서 급격한 판매 성장을 기록하고 있는 추세. 배터리 가격 경쟁력과 기술력을 바탕으로 국제 시장 점유율 확대 중",
+      "definition": "대형마트와 이커머스, 면세·MBS 등 오프라인·온라인 주요 채널의 동시 운영으로 멀티채널 전략이 성장 드라이버로 작용하는 추세",
       "count": 1
     },
     {
-      "term": "중형 조선사 경쟁 심화",
+      "term": "오픈 이노베이션(신약개발)",
       "category": "산업",
-      "definition": "일본 등 후발주자의 조선 능력 확충으로 카캐리어·페리 등 중형 상선 부문의 수주전 압박 가중. 시장 다변화 필요성 대두",
+      "definition": "제약회사가 바이오벤처와 협업해 신약 파이프라인을 공동 개발하는 전략. 정부 지원 정책과 맞물려 신약 개발 기간 단축과 성공률 향상 추진 중.",
       "count": 1
     },
     {
-      "term": "지역 산업 생태계",
+      "term": "외국인 노동력 의존",
       "category": "산업",
-      "definition": "로봇과 AI 기업들이 기존 제조업 거점(포항, 청주 등)에 R&D와 생산 거점을 재편하며 지역 산업과 협력하는 추세. 실증 현장 확보와 산업 고도화의 전략.",
+      "definition": "국내 인력 부족을 메우기 위해 외국인 근로자 유입이 증가하는 현상. 임금 하락, 내국인 노동 시장 경합, 사회 통합 문제 등을 야기함.",
       "count": 1
     },
     {
-      "term": "지정학적 공급망 불안정",
+      "term": "원자재·인건비 가격상승",
       "category": "산업",
-      "definition": "미국의 선제적 제재, 중국의 보복성 수입 제한, 호르무즈 해협 긴장 등으로 국제 물류 및 에너지 공급망의 리스크가 심화되는 현상",
+      "definition": "건설, 식품 등 주요 산업에서 원자재와 인건비 상승으로 인한 수익성 악화가 계속되고 있으며, 기업들의 제품 가격 인상을 초래하는 중요한 경영 이슈.",
       "count": 1
     },
     {
-      "term": "직판 채널 다각화",
+      "term": "이직 임금프리미엄",
       "category": "산업",
-      "definition": "제약사가 유통 중간업체 수수료(약 40%)를 회피하고 직접 판매 채널을 구축하는 전략. 마진율 향상 및 시장 통제력 강화.",
+      "definition": "이직 시 임금 상승 여부를 나타내는 지표로, 일본의 경우 이직 후 임금이 오른 비율이 40% 수준인 반면 한국은 취업 자체가 어려워 비교 대상이 되지 않는 현상을 보여준다.",
       "count": 1
     },
     {
-      "term": "차세대 에너지 밸류체인",
+      "term": "이커머스 플랫폼 전략",
       "category": "산업",
-      "definition": "전통 에너지(석유, 철강) 기반에서 배터리, 수소 등 신에너지 사업으로 확장하는 통합 가치사슬. 기존 에너지 기업의 포트폴리오 다각화 전략",
+      "definition": "온라인 쇼핑의 핵심이 모바일 앱으로 이동하면서 소매기업들이 앱 전용 행사, 맞춤 할인, 적립 혜택 강화로 고객 유입을 경쟁하는 추세. 디지털 소비 환경에서 플랫폼 차별화의 핵심 전략.",
       "count": 1
     },
     {
-      "term": "첨단전략산업 육성",
+      "term": "재생에너지 발전단가",
       "category": "산업",
-      "definition": "반도체, AI, 바이오, 이차전지, 로봇 등 미래 먹거리 산업을 국가 주도로 육성하는 정책. 국민성장펀드 등을 통해 비상장 기업까지 포함한 간접투자 구조로 추진 중",
+      "definition": "RPS(재정에너지공급의무) 폐지 이후 태양광 등 재생에너지의 장기고정가격계약 시장 제도 도입으로 인한 발전사업자의 채산성 문제가 대두되는 상황.",
       "count": 1
     },
     {
-      "term": "친환경 선박 전환",
+      "term": "전기차 산업 보호",
       "category": "산업",
-      "definition": "LNG 운반선, 친환경 에너지 기반 선박 등으로의 전환 추세. 해운업의 탈탄소화 및 국제 규제 대응을 위한 필수 과제로 한국 조선업의 주요 성장동력",
+      "definition": "미국(IRA), EU 등이 고율 관세와 지역 생산 요건으로 전기차 산업을 보호하는 반면, 한국은 중국산 전기차에 대한 방어 수단이 부족한 상황",
       "count": 1
     },
     {
-      "term": "통제 불능 AI 우려",
+      "term": "전동화 전환",
       "category": "산업",
-      "definition": "미중 간 AI 개발 경쟁 심화로 개방형 모델의 무제한 유통, 안전장치 부재 문제가 대두. 다자간 규제 프레임워크 구축 필요성 대두",
+      "definition": "완전 전기차(EV)뿐 아니라 하이브리드, EREV 등 다양한 친환경 동력 기술로의 산업 전환. 자동차 제조사들의 핵심 생존 전략으로 부각되고 있음.",
       "count": 1
     },
     {
-      "term": "특허 절벽 대응",
+      "term": "제조업 인력 공동화",
       "category": "산업",
-      "definition": "글로벌 제약사의 주요 신약 특허 만료에 따른 매출 감소 문제를 신약 개발, 대체 동력 확보로 극복하려는 경쟁 양태. 제약사의 생존 전략 과제.",
+      "definition": "숙련인력의 고령화와 신규 인력 부족으로 전통 제조업의 생산 능력 저하. 인건비 상승과 함께 고부가가치화·디지털 전환의 걸림돌이 되고 있음.",
       "count": 1
     },
     {
-      "term": "파운데이션 모델",
+      "term": "제조업 자동화·노동력 전환",
       "category": "산업",
-      "definition": "한국 기업의 독자 AI 모델 개발 경쟁. 생성형 AI 시대에 글로벌 의존도를 낮추고 자체 기술 확보가 전략적 화두로 떠오른 상황",
+      "definition": "로봇·AI 도입으로 제조 현장의 인력 구조가 대체되는 현상. 야간작업 자동화, 작업자 감소 등 산업 구조 변화를 야기.",
       "count": 1
     },
     {
-      "term": "팬덤 기반 비즈니스",
+      "term": "초대형 플랫폼 (EV 전용 플랫폼)",
       "category": "산업",
-      "definition": "K팝 팬덤을 연결하는 플랫폼을 통해 굿즈·콘텐츠·행사를 결합한 수익 구조. 팬 이코노미가 주류산업(음료회사 등)까지 확대되는 추세",
+      "definition": "전기차 전용으로 개발된 기술 플랫폼(예: eMP)으로 대형 모델의 설계와 원가 효율성 극대화. 향후 다양한 파생 모델의 기반.",
+      "count": 1
+    },
+    {
+      "term": "초정밀 제조 역량",
+      "category": "산업",
+      "definition": "0.1mm 이하의 오차를 제어하는 정밀기계 제조 기술. 일본이 피지컬 AI 발전에서 강점을 유지하는 핵심 경쟁력.",
+      "count": 1
+    },
+    {
+      "term": "크리에이터 경제",
+      "category": "산업",
+      "definition": "콘텐츠 제작자들이 모바일 라이브, 숏폼, 콘텐츠 커머스 등을 통해 수익을 창출하고, 기업들이 이를 새로운 마케팅 채널로 활용하는 확대 추세. 2033년 43조원 규모로 예상되는 성장 시장.",
+      "count": 1
+    },
+    {
+      "term": "탄소 감축 기술",
+      "category": "산업",
+      "definition": "전기로 제철, 저탄소 공정 등을 통해 기존 대비 탄소 배출을 대폭 줄이는 기술. 강화되는 환경 규제와 ESG 경영 압박 속에서 제조업의 필수 경쟁력으로 부상 중.",
+      "count": 1
+    },
+    {
+      "term": "탄소중립 산업 전환",
+      "category": "산업",
+      "definition": "철강 등 전통산업이 탄소중립을 목표로 생산방식과 기술을 전환하려는 움직임. 정부의 세액공제 대상 산업으로 논의 중",
+      "count": 1
+    },
+    {
+      "term": "통신·센싱 융합(ISAC)",
+      "category": "산업",
+      "definition": "통신망이 동시에 센서로 기능하는 기술로, 스마트시티·자율주행·스마트팩토리 등 미래 산업의 인프라가 될 핵심 기술.",
       "count": 1
     },
     {
       "term": "피지컬 AI",
       "category": "산업",
-      "definition": "로봇과 같은 물리적 기기에 AI를 탑재하여 실제 제조 현장에서 지능적이고 유연한 작업을 수행하는 기술. 단순 반복 작업을 넘어 상황 판단과 적응이 가능한 차세대 자동화의 핵심으로 주목받고 있음.",
+      "definition": "물리적 환경에서 작동하는 인공지능으로, 휴머노이드 로봇 등 제조 현장의 자동화를 주도하는 기술. 제조 데이터 확보와 정밀도가 경쟁력의 핵심이 되면서 글로벌 주도권 경쟁이 심화 중.",
       "count": 1
     },
     {
-      "term": "해외 원전·에너지 플랜트 수주",
+      "term": "해운업 구조적 어려움",
       "category": "산업",
-      "definition": "미국의 LNG, 원전(APR1400, AP1000), 가스복합발전 사업 확대에 따라 한국 건설·에너지 기업의 대규모 해외 수주 기회가 급증하는 현상.",
+      "definition": "연안선사의 경우 국제유가 상승 시 운송원가는 즉시 반영되지만 운임 인상에 시차 발생. 고유가 장기화 시 수익성 악화",
       "count": 1
     },
     {
-      "term": "해운 공급 부족",
+      "term": "헬스테크·바이오센싱",
       "category": "산업",
-      "definition": "중동 정세로 인한 희망봉 우회 운항으로 아시아~유럽 선복이 극도로 제한되는 현상. 해운업 수익성 향상과 물류비 상승으로 이어지는 구조적 변화.",
+      "definition": "혈액 채취 없이 땀으로 약물·대사물질을 추적하는 신기술처럼, 웨어러블과 생체신호 분석 기술이 의료·건강 모니터링 영역으로 확대되는 추세.",
       "count": 1
     },
     {
-      "term": "협동로봇(협작로봇)",
-      "category": "산업",
-      "definition": "인간과 안전하게 함께 작업할 수 있도록 설계된 로봇. 기존 산업용 로봇보다 유연성과 적응성이 높아 중소 제조업에도 도입 가능.",
-      "count": 1
-    },
-    {
-      "term": "호남 반도체 클러스터",
-      "category": "산업",
-      "definition": "지역 산업 거점으로 추진되는 반도체 클러스터 조성이 국감의 여야 정치 대립 핵심 쟁점",
-      "count": 1
-    },
-    {
-      "term": "휴머노이드 로봇",
-      "category": "산업",
-      "definition": "인간 형태의 로봇으로 다양한 작업 환경에 적응 가능. 미국과 중국이 실전 경험과 양산 능력으로 경쟁하는 가운데, 산업 현장 실증과 안전성 검증이 상용화의 관건.",
-      "count": 1
-    },
-    {
-      "term": "AI 인프라 투자 자금 조달",
+      "term": "AI 검색 플랫폼의 이커머스 영향",
       "category": "시장",
-      "definition": "빅테크 기업들이 데이터센터, 반도제, 전력망 등 AI 인프라에 대규모 자본을 투입하기 위해 회사채 발행을 대폭 확대하는 추세. 이것이 채권시장의 수급 불균형과 금리 변동성을 야기하는 핵심 요인.",
+      "definition": "뮤즈(Meta) 같은 AI 검색 서비스가 기존 이커머스 플랫폼의 지위를 위협하면서, 국내 플랫폼과의 연동 여부가 시장 판도를 결정하는 요소로 부상",
       "count": 1
     },
     {
-      "term": "AI로 인한 고용 변화",
+      "term": "IPO 부진과 시장심리",
       "category": "시장",
-      "definition": "인공지능 발전에 따른 일자리 양극화 현상. 기술직 실업 우려와 함께 AI가 대체하지 못하는 기술직(전기공 등)의 고용 증가 등 직업 구조 재편이 진행 중.",
+      "definition": "미국 시장에서 특정 기업(예: 앤스로픽)을 제외한 IPO가 연속으로 연기되고 있으며, 이는 변동성 지수(VIX) 안정에도 불구하고 자금조달 심리가 위축되었음을 시사.",
       "count": 1
     },
     {
-      "term": "ETF를 통한 테마투자",
+      "term": "OPEC+ 감산/생산조절",
       "category": "시장",
-      "definition": "반도체 등 특정 산업군을 추종하는 상장지수펀드의 활발한 거래. 개인투자자의 섹터 집중 노출 심화",
+      "definition": "석유수출국기구와 주요 산유국이 원유 공급량을 조절하여 유가를 관리하는 정책. 최근 중동 분쟁과 지정학적 긴장 속에서 유가 변동성을 제어하는 핵심 메커니즘으로 반복 논의되고 있음.",
       "count": 1
     },
     {
-      "term": "FTA 체결에 따른 산업 파급효과",
+      "term": "강남·강북 양극화",
       "category": "시장",
-      "definition": "CPTPP 가입 등 자유무역협정 확대가 제조업에 미치는 긍정적 효과(수출 증대)와 부정적 효과(농업 피해)의 불균형. 산업별 이해관계 충돌 이슈",
+      "definition": "부동산 정책 변화에 따라 강남 가격 하락, 강북 거래 증가로 나타나는 지역별 시장 분화. 주택시장 구조 재편의 신호로 해석됨.",
       "count": 1
     },
     {
-      "term": "OPEC+ 생산 조절",
+      "term": "공급 정책 전환",
       "category": "시장",
-      "definition": "석유수출국기구와 러시아 등 주요 산유국이 생산 목표를 동결·조정하는 협력 메커니즘. 국제유가 결정의 핵심 변수로 작동하고 있음",
+      "definition": "도심 재건축·재개발 규제 완화, 수도권 공급 확대 등 기존 규제 중심 정책에서 공급 확대 중심으로의 정책 전환. 아파트값 상승 억제를 위한 방향 전환으로 평가됨.",
       "count": 1
     },
     {
-      "term": "PMI (구매관리자지수)",
+      "term": "금리 속도(금리 인상 속도)",
       "category": "시장",
-      "definition": "제조업·서비스업 경기 선행지표로, 경제 확장/축소를 나타냄. 최근 Fed 금리 결정의 중요한 판단 근거.",
+      "definition": "금리 상승의 수준뿐 아니라 변화하는 속도가 중요하다는 개념. 급격한 금리 상승으로 인한 기업 이자비용 증가가 주요 경제 리스크가 되고 있다.",
       "count": 1
     },
     {
-      "term": "경기 민감주 약세",
+      "term": "금리인상 기대/통화정책",
       "category": "시장",
-      "definition": "경기 둔화 우려 속에서 석유화학, 에너지 등 경기 민감 소재 업종에 대한 외국인 투자 철수가 가속화되는 현상. 투자 심리 위축의 선행지표.",
+      "definition": "미국의 고용지표 부진이 추가 금리인상 가능성을 낮추면서 글로벌 주식시장(특히 반도체, 에너지 등)에 영향을 미치는 상황",
       "count": 1
     },
     {
-      "term": "고용시장 둔화",
+      "term": "기후재난·경제위기",
       "category": "시장",
-      "definition": "실업률 상승과 고용 증가 둔화로 미국 경제의 약세 신호가 나타나는 현상. 연준의 금리 인상 가능성을 낮추고 금값 등 자산 가격에 영향",
+      "definition": "전 지구적 차원의 기후변화로 인한 자연재해와 이에 따른 경제적 불확실성 심화. 금융 투자 리스크 평가 및 기업 지속가능성 평가의 핵심 변수로 작용",
       "count": 1
     },
     {
-      "term": "고용지표 악화",
+      "term": "달러화 강세",
       "category": "시장",
-      "definition": "신규 일자리 창출 부진, 실업률 상승, 청년층 고용률 하락 등 노동시장 약세. 경기 둔화의 선행지표로서 금융시장 변동성을 결정하는 주요 요인.",
+      "definition": "미국의 높은 기준금리와 글로벌 경제 불확실성으로 달러 선호 현상이 심화되면서 신흥국 통화 약세와 원달러 환율 상승을 초래하는 구조적 흐름",
       "count": 1
     },
     {
-      "term": "국제유가 변동성",
+      "term": "대주주 지분공시(5%룰)",
       "category": "시장",
-      "definition": "중동 리스크, OPEC+ 생산 조절, 미이란 협상 등으로 인한 유가 등락. 기본 전망(배럴당 77달러)에도 불구하고 지정학적 변수에 따라 급등락하는 현상",
+      "definition": "자본시장법상 상장사 주식 보유 지분이 5% 이상일 경우 의결권 위임 여부와 관계없이 금융위와 거래소에 보고해야 하는 제도. 최근 경영권 분쟁에서 법적 해석이 강화되고 있음.",
       "count": 1
     },
     {
-      "term": "노동시장 경기 둔화",
+      "term": "물가 압력 확산",
       "category": "시장",
-      "definition": "미국 신규고용 지표 악화로 드러난 거시경제 불확실성 확대. 위험자산 선호 심리 급감으로 글로벌 시장 불안.",
+      "definition": "인플레이션이 특정 품목을 넘어 광범위한 소비 영역으로 확산되는 현상. 원유 수입, 원자재 가격 상승 등이 소비자물가지수(CPI)를 전반적으로 상향시키는 상황을 지칭한다.",
       "count": 1
     },
     {
-      "term": "달러 약세/강세 사이클",
+      "term": "반도체 업황 사이클",
       "category": "시장",
-      "definition": "고유가·미 국채금리 상승·일본 금리 인상 등으로 인한 원달러 환율 변동성. 해외 자산 수익률과 한국 수출 경쟁력에 직결되는 거시 지표.",
+      "definition": "삼성전자 등 반도체 기업의 실적이 증시 방향성을 결정하는 핵심 변수로 작용하는 현상. 최근 시장이 3분기 실적 발표를 기준으로 향방을 판단하고 있음.",
       "count": 1
     },
     {
-      "term": "달러화 강세와 금값 연동",
+      "term": "밸류에이션 리레이팅",
       "category": "시장",
-      "definition": "달러 강세는 금 매입 수요를 억누르는 한편, 중앙은행의 금 매입 증대 등 다양한 요인이 금값 변동에 복합적으로 작용하는 현상",
+      "definition": "조선업 실적 개선과 미국 시장 진출 등의 긍정 요인으로 저평가된 주식의 가치가 재평가되는 현상. 투자 기회 포착의 핵심 개념.",
       "count": 1
     },
     {
-      "term": "미국 국채금리 상승 압력",
+      "term": "부동산 거래 심화 위축",
       "category": "시장",
-      "definition": "정부의 대규모 국채 발행과 기업의 회사채 공급 증가가 동시에 이루어지면서 금리 하락 추세를 상쇄시키는 현상. 글로벌 금융시장의 핵심 변동 요인이자 한국 주식·채권시장에 영향을 미치는 외부 리스크.",
+      "definition": "기준금리 인상으로 인한 자금조달 비용 상승으로 빌딩·주택 거래량·거래액이 감소. 고가 자산 시장의 유동성 악화",
       "count": 1
     },
     {
-      "term": "반도체·AI 전력수급 위기",
+      "term": "부동산 정책 실패",
       "category": "시장",
-      "definition": "데이터센터의 급증으로 반도체·AI 산업의 전기 수요가 급증하면서 국가 전력망에 대정전 위험을 초래하는 상황. 재생에너지 간헐성과 맞물려 에너지 정책의 핵심 이슈로 부상",
+      "definition": "정부의 부동산 정책으로 집값이 지속 상승하면서 서민 주거 문제가 악화되고 있는 현상. 재산세 급증, 영끝세대 부담 증가 등으로 민생 불만의 주요 원인으로 지목됨.",
       "count": 1
     },
     {
-      "term": "벌크선 운임",
+      "term": "석유화학 공급과잉",
       "category": "시장",
-      "definition": "해운업의 수익성을 좌우하는 지표(BDI 지수 등). 글로벌 물동량, 유가, 지정학적 상황에 따라 변동성 크며 현재 높은 수준 유지.",
+      "definition": "중국발 공급과잉으로 인한 석유화학 업황 부진. 주력 사업 의존도 높은 화학사들의 실적 악화와 구조 조정 압박 심화.",
       "count": 1
     },
     {
-      "term": "부동산 가격 조정",
+      "term": "성별 고용 불균형",
       "category": "시장",
-      "definition": "금리 인상과 대출 규제로 인한 주택가격 하락 압박. '3억 올리기' 등 거래 위축으로 부동산 시장 경착륙 우려.",
+      "definition": "여성 취업자 수가 남성을 상회하고 있으나, 여성의 경력 단절 문제와 전통적 재생산 역할 부담이 계속되는 모순적 현상. 일·가정 양립의 제도적 개선이 시급한 상황.",
       "count": 1
     },
     {
-      "term": "부동산 공급 절벽",
+      "term": "성장주 약세/섹터 쏠림",
       "category": "시장",
-      "definition": "주택 공급 부족으로 인한 전·월세난 심화. 정부 부동산 정책의 주요 검증 대상으로 수도권 주거 위기 이슈.",
+      "definition": "고금리 기조에서 AI·반도체 등 특정 섹터로 자금이 집중되고 바이오·제약·금융 등 전통 산업이 외면받는 현상. 포트폴리오 불균형 심화",
       "count": 1
     },
     {
-      "term": "부동산 규제 역설",
+      "term": "세제개편 시장 영향",
       "category": "시장",
-      "definition": "정부의 강화된 부동산 규제에도 불구하고 집값이 86주 연속 상승하는 현상으로, 규제의 실효성 논쟁과 함께 세제 예측 가능성 강화의 필요성이 제기되고 있음.",
+      "definition": "정부 세제개편안 발표 이후 부동산 거래 패턴이 급변하는 현상. 저가 아파트 쏠림, 강남 가격 하락 등 가격대별 거래 재편이 발생 중.",
       "count": 1
     },
     {
-      "term": "브렉시트 재검토",
+      "term": "수출 1조 달러 달성",
       "category": "시장",
-      "definition": "영국의 EU 탈퇴 결정을 재평가하는 정치 움직임. 브렉시트 후유증과 경제적 부작용으로 인한 여론 변화로 EU 복귀 논의가 재점화되고 있음.",
+      "definition": "한국이 사상 처음으로 연간 수출액 1조 달러를 달성할 가능성이 높아지면서 세계 수출 4강 위상 재정립. 반도체 중심의 구조적 수출 의존도 심화에 대한 평가도 함께 진행 중.",
       "count": 1
     },
     {
-      "term": "비경제활동인구",
+      "term": "신흥국 성장률 격차",
       "category": "시장",
-      "definition": "구직 의사가 없어 실업자로 분류되지 않는 인구. 최근 '쉬었음 청년'이 40만 명대로 증가하며 고용 통계의 숨겨진 위험 요소로 주목.",
+      "definition": "베트남 등 동남아 신흥국의 높은 GDP 성장(9.95%)은 한국의 2배 이상 속도를 보여주며, 한국 IT·기자재 산업의 수출 및 현지 진출 기업에 수혜를 만든다.",
       "count": 1
     },
     {
-      "term": "선가 및 환율 변동성",
+      "term": "신흥국 증시 약세",
       "category": "시장",
-      "definition": "조선업의 수익성을 좌우하는 핵심 변수. LNG 운반선 같은 고가 상품의 가격 변동과 환율 리스크가 실적에 미치는 영향",
+      "definition": "달러화 강세로 인한 외국인 자금 이탈과 고금리 기조 지속으로 신흥국 주식시장이 동반 약세를 보이는 현상. 한국 증시도 7000선 방어에 어려움을 겪는 중",
       "count": 1
     },
     {
-      "term": "소비자물가 안정화",
+      "term": "실업률 상승",
       "category": "시장",
-      "definition": "물가상승률을 억제하기 위한 정부 정책의 핵심 목표. 최근 뉴스에서 반복적으로 언급되는 경제 지표로, 금리 인상과 통화정책의 효과를 측정하는 핵심 척도.",
+      "definition": "미국 9월 실업률이 4.1%에서 4.2%로 상승하며 연준의 추가 인상 압박을 완화시키는 신호로 작용. 글로벌 금융시장 방향을 결정하는 주요 지표",
       "count": 1
     },
     {
-      "term": "수급 불균형",
+      "term": "어닝 서프라이즈",
       "category": "시장",
-      "definition": "반도체는 고수요이나 자동차·철강 등은 수요 회복 부진으로 산업별로 실적 편차가 심화되는 현상. 중국 경기 불확실성이 주요 요인.",
-      "count": 1
-    },
-    {
-      "term": "신흥시장 ETF 투자",
-      "category": "시장",
-      "definition": "베트남 등 신흥시장 지수 편입에 따른 글로벌 펀드 자금 유입. 지정학적 리스크 분산과 새로운 성장 동력 모색.",
-      "count": 1
-    },
-    {
-      "term": "실업률/확장실업률",
-      "category": "시장",
-      "definition": "공식 실업률과 구직활동을 포기한 '쉬었음' 인구를 포함한 지표. 노동시장의 실제 수급 불균형을 파악하는 핵심 경제 지표.",
-      "count": 1
-    },
-    {
-      "term": "실질금리(국채금리) 상승",
-      "category": "시장",
-      "definition": "명목금리가 높아지면서 금리 수익이 있는 자산의 매력도가 상대적으로 증가하는 현상. 금처럼 이자가 없는 자산 가격을 억누르는 요인",
-      "count": 1
-    },
-    {
-      "term": "온·오프라인 融合 유통",
-      "category": "시장",
-      "definition": "대형마트와 이커머스 병행, 전통시장의 새벽배송 진입 등 온·오프 채널 경계 붕괴. 하이브리드 유통 모델이 경쟁 우위의 핵심",
-      "count": 1
-    },
-    {
-      "term": "외국인 관광객 유입",
-      "category": "시장",
-      "definition": "백화점의 K-뷰티·패션·문화 콘텐츠 팝업 공간 확대로 외국인 매출 성장. 문화상품 수출 전략이 소비재 유통에 미치는 영향",
-      "count": 1
-    },
-    {
-      "term": "외국인 자본 이탈",
-      "category": "시장",
-      "definition": "외국인 투자자들의 대규모 순매도 현상. 한국 주식시장의 변동성 확대와 코스피 하락을 주도하는 핵심 요인",
-      "count": 1
-    },
-    {
-      "term": "외국인 차익실현",
-      "category": "시장",
-      "definition": "상반기 반도체 대형주 랠리 후 외국인의 대규모 매도세로 나타나는 시장 변동성과 '셀 코리아' 현상",
-      "count": 1
-    },
-    {
-      "term": "원·달러 환율 변동성",
-      "category": "시장",
-      "definition": "원화 강세와 약세가 반복되며 수출기업 실적, 해외여행객, 국제 자본이동에 광범위한 영향을 미치는 현상",
-      "count": 1
-    },
-    {
-      "term": "원유 공급 충격",
-      "category": "시장",
-      "definition": "1986년 사우디의 시장 범람 전략처럼, 단일 국가의 생산 정책 변화가 글로벌 유가를 급락시킬 수 있는 구조적 취약성",
+      "definition": "기업이 시장 예상치를 웃도는 실적을 발표하는 현상. 주가에 긍정적 영향을 미치며 최근 반도체·부품업체들의 주요 성과 지표로 주목받고 있다.",
       "count": 1
     },
     {
       "term": "원자재 가격 상승",
       "category": "시장",
-      "definition": "글로벌 원유, 금속, 농산물 등 원자재 가격의 지속적 상승으로 제조업, 건설, 식품 등 전 산업의 원가 압박이 심화되고 있는 현상. 최근 인플레이션과 분양가·식품 가격 인상의 주요 원인.",
+      "definition": "구리, 알루미늄, 철강 등 주요 원자재 가격이 전쟁, 관세, 공급 부족 등으로 급등하면서 제조업 원가 압박 심화. 가격 전가 능력이 기업 수익성을 좌우.",
       "count": 1
     },
     {
-      "term": "월간 수출 1200억 달러 돌파",
+      "term": "유가 변동성/고유가",
       "category": "시장",
-      "definition": "9월 수출액 1209억 달러 기록으로 월간 사상 최대를 경신하고, 연내 1조 달러 수출 목표 달성이 임박한 상황으로 반도체 수출이 전체 수출의 절반 이상을 차지.",
+      "definition": "중동 정세 불안과 지정학적 위험으로 인한 국제유가의 지속적 상승. 항공유, 해운료, 원자재 가격 등 전 산업의 원가 구조에 파급되는 핵심 변수",
       "count": 1
     },
     {
-      "term": "유가 변동성",
+      "term": "자산가격 디플레이션",
       "category": "시장",
-      "definition": "중동 정세, 산유국 감산, 글로벌 경기 등으로 인한 국제유가의 단기 급등락. 정부 예비비 편성(배럴당 150달러 수준까지 대비)을 촉발하는 주요 불확실성.",
+      "definition": "금리 인상과 경제 불확실성으로 인한 주식, 부동산 등 위험자산의 가치 하락. 가계·기업 자산 손실 우려",
       "count": 1
     },
     {
-      "term": "이커머스 채널 다각화",
+      "term": "지정학적 리스크 관리",
       "category": "시장",
-      "definition": "쿠팡, 큐텐 등 주요 플랫폼 외에 신흥시장(동아시아·일본) 이커머스 채널 진출. 단일 플랫폼 의존도 탈피 전략이 실적 성장의 주요 동인",
+      "definition": "중동 분쟁, 홍해·호르무즈 해협 등 주요 해로의 보안 위협이 유가, 운송비, 글로벌 공급망에 미치는 영향. 국제 분쟁과 시장 변동성의 직결 고리.",
       "count": 1
     },
     {
-      "term": "인플레이션 둔화",
+      "term": "채권금리 상승",
       "category": "시장",
-      "definition": "물가상승률이 감소하는 추세. 금리 인상의 실질적 효과를 나타내며, 향후 금리 인하 가능성의 신호로 해석.",
+      "definition": "글로벌 채권시장에서 금리가 급등하는 현상. AI 투자 확대로 인한 대규모 회사채 발행과 인플레이션 우려가 주요 원인으로 지목된다.",
       "count": 1
     },
     {
-      "term": "자사주 매입",
+      "term": "코스닥 소형주·레버리지 ETF 수익률",
       "category": "시장",
-      "definition": "기업들이 주가 지탱 목적으로 자신의 주식을 매입하는 행위. 상반기 악재 속에서 증시 심리 지탱의 주요 수단으로 기능하다 10월 종료 예정.",
+      "definition": "바이오·2차전지 등 코스닥 주요 업종의 변동성 확대로 고위험·고수익 추적 상품의 관심 증가. 시장 회복 신호의 한 지표.",
       "count": 1
     },
     {
-      "term": "전통시장 새벽배송",
+      "term": "코스닥 코스피 괴리",
       "category": "시장",
-      "definition": "전통 도매시장이 쿠팡 로켓프레시와 같은 새벽배송 서비스를 시작. 오프라인 유통이 온라인 기술을 수용하는 디지털 전환 사례",
+      "definition": "코스닥이 코스피의 3배 이상 상승률을 기록하는 등 지수 간 성과 격차가 확대되는 현상. 소형주, 기술주 중심의 차별화된 시장 움직임을 반영.",
       "count": 1
     },
     {
-      "term": "중동 정세 불안",
+      "term": "통상 갈등/관세 장벽",
       "category": "시장",
-      "definition": "홍수 위험 및 후티 반군 갈등 등으로 인한 유가·물가 변동성 증가. 금융시장, 해운·에너지 산업, 정부 재정에 광범위한 영향을 미치는 핵심 리스크 요인.",
+      "definition": "미국과 중국 간 상호 관세 부과로 인한 교역 분쟁. 에너지, 반도체 등 전략적 산업을 중심으로 수입 제한이 심화되고 있어 글로벌 공급망과 가격에 직접 영향을 미치는 중",
       "count": 1
     },
     {
-      "term": "청약 양극화",
+      "term": "프리미엄 제품 선호",
       "category": "시장",
-      "definition": "부동산 분양 시장에서 입지 선호도에 따라 지역·평형별 가격 격차가 벌어지고 청약 수요 편중이 심화되는 현상.",
+      "definition": "원자재 가격 상승으로 인한 제품 가격 인상에도 소비자들이 고급 제품을 선호하는 현상. 금융 지원 확대와 맞물려 수요 기반을 견고하게 하는 중.",
       "count": 1
     },
     {
-      "term": "친환경차 수요 전환",
+      "term": "호르무즈 해협 리스크",
       "category": "시장",
-      "definition": "미국 등에서 전기차 보조금 축소로 인해 수요가 하이브리드 차량으로 빠르게 이동하는 현상. 완성차 업계의 전략 조정을 촉발",
+      "definition": "미국-이란 군사적 긴장으로 인한 원유 수송로 불확실성. 전 세계 해상 물동량의 약 21%가 지나가는 전략적 해협으로, 차단 시 유가 급등 위험",
       "count": 1
     },
     {
-      "term": "환율과 수출경쟁력",
+      "term": "환율 악재",
       "category": "시장",
-      "definition": "원화 강세 속에서도 개별 기업의 경쟁력, 수주, 제품 가격이 실적을 좌우하는 미시적 수익성 분석의 중요성",
+      "definition": "원화 약세로 인한 수출기업의 수익성 악화 요인. 현재 원/달러 환율 상승이 수출 기업들의 수익성을 직접 압박하는 주요 리스크로 작용하고 있다.",
       "count": 1
     }
   ]
