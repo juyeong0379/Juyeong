@@ -83,7 +83,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.mk.co.kr/article/12200752"
+        "url": "https://www.mk.co.kr/article/12200752",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -95,7 +96,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.yna.co.kr/view/AKR20261106071100008?input=1195m"
+        "url": "https://www.yna.co.kr/view/AKR20261106071100008?input=1195m",
+        "summary_mode": "source_excerpt"
       }
     ],
     "corp": [
@@ -109,7 +111,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://view.asiae.co.kr/article/2026110514313386242"
+        "url": "https://view.asiae.co.kr/article/2026110514313386242",
+        "summary_mode": "source_excerpt"
       }
     ],
     "ma": [
@@ -168,7 +171,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://news.bizwatch.co.kr/article/industry/2026/11/06/0033"
+        "url": "https://news.bizwatch.co.kr/article/industry/2026/11/06/0033",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -180,7 +184,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.newspim.com/news/view/20261107000012"
+        "url": "https://www.newspim.com/news/view/20261107000012",
+        "summary_mode": "source_excerpt"
       }
     ],
     "hana": [],
@@ -196,7 +201,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://view.asiae.co.kr/article/2026110601394419469"
+        "url": "https://view.asiae.co.kr/article/2026110601394419469",
+        "summary_mode": "source_excerpt"
       }
     ],
     "productive": [
@@ -210,7 +216,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://shindonga.donga.com/3/all/13/6444739/1"
+        "url": "https://shindonga.donga.com/3/all/13/6444739/1",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -222,7 +229,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.sedaily.com/article/20111250?ref=naver"
+        "url": "https://www.sedaily.com/article/20111250?ref=naver",
+        "summary_mode": "source_excerpt"
       }
     ]
   },
