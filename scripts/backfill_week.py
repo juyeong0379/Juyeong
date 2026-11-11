@@ -15,6 +15,7 @@ from pathlib import Path
 
 import requests
 
+from sector_rules import sector_matches
 from generate_briefing import (
     KST, SECTIONS, BATCH_SIZE, SHORT_NEWS_PATTERN, TOP_N_PER_SECTION,
     classify_batch, normalize_title, outlet_name, strip_html,
@@ -119,14 +120,15 @@ def main():
         for day in missing:
             dstr = day.isoformat()
             items = [x for x in pool if x["pub_dt"].date()==day
-                     and x["url"] not in used_per_day[dstr]]
+                     and x["url"] not in used_per_day[dstr]
+                     and sector_matches(key, x["title"], x["description"])]
             if not items:
                 continue
             # 16 substantive candidates per sector/day; do not pad with
             # unverified snippets when reputable deep articles are scarce.
             evaluated = []
             for start in range(0,min(len(items),16),BATCH_SIZE):
-                evaluated.extend(classify_batch(meta,items[start:start+BATCH_SIZE]))
+                evaluated.extend(classify_batch({**meta,"key":key},items[start:start+BATCH_SIZE]))
             evaluated.sort(key=lambda x:x["score"],reverse=True)
             top=evaluated[:TOP_N_PER_SECTION]
             used_per_day[dstr].update(x["url"] for x in top)
