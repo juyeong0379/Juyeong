@@ -65,3 +65,5 @@ def main():
             run(path)
 if __name__=="__main__":
     main()
+
+# Tested with Meritz/REIT disambiguation and unrelated-article veto.
