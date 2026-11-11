@@ -100,12 +100,12 @@ def search_institutional_reports(today):
         return []
     url = "https://naverapihub.apigw.ntruss.com/search/v1/webkr"
     queries = [
-        "site:kcmi.re.kr 최신보고서 2026",
-        "site:kcmi.re.kr 자본시장포커스 2026",
-        "site:bok.or.kr 금융시장 동향 2026",
-        "site:bok.or.kr 이슈노트 2026",
-        "site:kif.re.kr 금융브리프 2026",
-        "site:kdi.re.kr 경제동향 2026",
+        f"site:kcmi.re.kr 최신보고서 {today.year}",
+        f"site:kcmi.re.kr 자본시장포커스 {today.year}",
+        f"site:bok.or.kr 금융시장 동향 {today.year}",
+        f"site:bok.or.kr 이슈노트 {today.year}",
+        f"site:kif.re.kr 금융브리프 {today.year}",
+        f"site:kdi.re.kr 경제동향 {today.year}",
     ]
     headers = {"X-NCP-APIGW-API-KEY-ID": key, "X-NCP-APIGW-API-KEY": secret}
     found = []
