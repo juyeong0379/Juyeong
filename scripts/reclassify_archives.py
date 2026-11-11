@@ -69,3 +69,5 @@ if __name__=="__main__":
 # Tested with Meritz/REIT disambiguation and unrelated-article veto.
 
 # Regression-tested handling of debt issuers and asset-management names.
+
+# Corrected sector boundary regex handling.
