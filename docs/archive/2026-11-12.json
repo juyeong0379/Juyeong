@@ -462,5 +462,32 @@
         "url": "https://dealsite.co.kr/articles/172593"
       }
     ]
-  }
+  },
+  "reports": [
+    {
+      "id": "report-1",
+      "title": "2026년 10월 금융시장 동향",
+      "source": "한국은행",
+      "date": "2026-11-11",
+      "type": "금융시장 동향",
+      "url": "https://www.bok.or.kr/portal/bbs/P0002017/view.do?menuNo=200365&nttId=11066469",
+      "related_article_urls": [
+        "https://www.hankyung.com/article/202611107549r",
+        "https://www.mt.co.kr/stock/2026/11/12/2026111115534089328"
+      ]
+    },
+    {
+      "id": "report-2",
+      "title": "임팩트투자 생태계 현황과 과제",
+      "source": "자본시장연구원",
+      "date": "2026-10-26",
+      "type": "조사보고서",
+      "url": "https://www.kcmi.re.kr/report/report_view?report_no=2341",
+      "related_article_urls": [
+        "https://www.mt.co.kr/future/2026/11/12/2026111119532536700",
+        "https://www.mt.co.kr/economy/2026/11/12/2026111120075374635",
+        "https://dealsite.co.kr/articles/172593"
+      ]
+    }
+  ]
 }
