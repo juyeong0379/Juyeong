@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12 07:42 KST",
+  "generated_at": "2026-11-12 07:57 KST",
   "reports": [
     {
       "id": "report-1",
@@ -9,10 +9,13 @@
       "url": "https://www.bok.or.kr/portal/bbs/P0002017/view.do?menuNo=200365&nttId=11066469",
       "type": "금융시장 보고서",
       "related_article_urls": [
-        "https://dealsite.co.kr/articles/172492",
-        "https://www.investchosun.com/site/data/html_dir/2026/11/10/2026111080158.html",
-        "https://www.investchosun.com/site/data/html_dir/2026/11/11/2026111180152.html",
-        "https://www.mt.co.kr/stock/2026/11/12/2026111120104062792"
+        "https://www.ddaily.co.kr/page/view/2026111010585978876",
+        "https://www.fntimes.com/html/view.php?ud=202611062131517509dd55077bc2_18",
+        "https://www.hankyung.com/article/202611107549r",
+        "https://www.investchosun.com/site/data/html_dir/2026/11/10/2026111080102.html",
+        "https://www.mt.co.kr/stock/2026/11/10/2026110915352317335",
+        "https://www.sedaily.com/article/20113124?ref=naver",
+        "https://www.sedaily.com/article/20113156?ref=naver"
       ]
     },
     {
@@ -23,10 +26,9 @@
       "url": "https://www.bok.or.kr/portal/bbs/B0000565/view.do?menuNo=201757&nttId=11065947",
       "type": "국제경제이슈",
       "related_article_urls": [
-        "https://biz.chosun.com/about-investing/2026/11/12/ENZOID7PGVDT5PAVWJXAULN6UA/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-        "https://www.fnnews.com/news/202611120733287442",
-        "https://www.investchosun.com/site/data/html_dir/2026/11/09/2026110980170.html",
-        "https://www.mt.co.kr/economy/2026/11/12/2026111120075374635"
+        "https://news.einfomax.co.kr/news/articleView.html?idxno=4444108",
+        "https://www.bloter.net/news/articleView.html?idxno=678107",
+        "https://www.newspim.com/news/view/20261110001225"
       ]
     }
   ],
@@ -99,19 +101,6 @@
     "ecm": [
       {
         "top": true,
-        "headline": "[IPO 레이더] 기술력 A라는 뇌질환 AI 휴런…뒷다리 잡는 결손금 657억",
-        "source": "딜사이트",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "지난해 매출은 3억원대에 그쳤고 의료 현장의 반응도 미온적이라 기업공개(IPO)를 위한 다음 관문인 상장예비심사를 통과할 수 있을지가 주목된다. 11일 투자은행(IB) 업계에 따르면 휴런은 이달 말 한국거래소에 코스닥..."
-        ],
-        "summary_mode": "source_excerpt",
-        "insight": "",
-        "reporter": "",
-        "url": "https://dealsite.co.kr/articles/172565"
-      },
-      {
-        "top": false,
         "headline": "[더벨][하나에어로다이내믹스 IPO] 대표이사 겨냥 진정 '돌발변수'…”...",
         "source": "더벨",
         "pubDate": "2026-11-12",
@@ -135,88 +124,101 @@
         "insight": "",
         "reporter": "",
         "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611100704063940103917"
+      },
+      {
+        "top": false,
+        "headline": "[더벨][인스페이스 IPO] 내주 상장 예심 청구, 내년 상반기 코스닥 입성...",
+        "source": "더벨",
+        "pubDate": "2026-11-12",
+        "summary": [
+          "인스페이스가 내주 한국거래소에 코스닥 상장 예비심사를 청구한다. 올해 2월 미승인 통보를 받은 지 9개월 만의 재도전이다. 발목을 잡았던 지배구조 문제를 털어낸 만큼 이번에는 관문을 넘을 것이란 기대가..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611100918510200104680"
       }
     ],
     "corp": [
       {
         "top": true,
-        "headline": "[Invest]자회사 정리 꼬인 GS건설…기존 FI는 손사래, 본사 채권엔 디폴...",
+        "headline": "회사채도 단기물 쏠림…만기 길수록 투자수요 '뚝'",
+        "source": "한국경제",
+        "pubDate": "2026-11-11",
+        "summary": [
+          "10일 투자은행(IB)업계에 따르면 삼양홀딩스는 지난달 23일 회사채 수요예측에서 2년 만기 300억원 모집에 2400억원, 3년 만기 500억원 모집에 2950억원의 주문을 확보했다. 경쟁률은 각각 8 대 1과 5.9 대 1을 기록했다...."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.hankyung.com/article/202611107549r"
+      },
+      {
+        "top": false,
+        "headline": "3분기 매출 168% 급증…코어위브, 호실적에도 자금조달은 부담",
+        "source": "서울경제",
+        "pubDate": "2026-11-11",
+        "summary": [
+          "기존 이자 지급액이 늘어난 것은 아니지만 향후 신규 차입과 차환 비용이 높아질 수 있다는 신호다. 마이클 인트래터 코어위브 최고경영자(CEO)는 이를 의식한 듯 자금 조달원을 다양화하겠다고 강조했다. 그는..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.sedaily.com/article/20113124?ref=naver"
+      },
+      {
+        "top": false,
+        "headline": "[Invest]다우기술, 중앙일보 인수 앞두고 회사채 최대 2000억 발행",
         "source": "인베스트조선",
-        "pubDate": "2026-11-12",
+        "pubDate": "2026-11-10",
         "summary": [
-          "해당 채권은 산업은행이 1000만달러, 기업은행이 900만달러, 하나은행이 600만달러, 우리은행이 500만달러를... 사업 철수에 따른 추가 손실을 줄이려던 결정이 오히려 본사의 금융비용과 자금조달 여건에 부담을 줄 수..."
+          "투자은행(IB)업계에 따르면 다우기술은 3년 단일물로 총 총 1000억원 규모 공모 회사채 발행 계획을 세웠다. 기관투자자 대상 수요예측 결과에 따라 최대 2000억원까지 증액 발행 한도도 열어뒀다.공모 희망..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/11/2026111180152.html"
-      },
-      {
-        "top": false,
-        "headline": "[금융지주 임원 인사 전망] [우리금융] 기동호 우리금융캐피탈 대표, 수...",
-        "source": "딜사이트",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "기업대출 자산 21.9% 늘었지만 이자이익 감소세…저마진 여신 잔존 여파 지속 기동호 우리금융캐피탈... 이자이익은 캐피탈사가 대출로 얻은 이자수익에서 여신전문금융회사채(여전채) 등 외부 자금 조달에 따른..."
-        ],
-        "summary_mode": "source_excerpt",
-        "insight": "",
-        "reporter": "",
-        "url": "https://dealsite.co.kr/articles/172492"
-      },
-      {
-        "top": false,
-        "headline": "부메랑이 된 환율 방패… 해외 리츠 덮친 '환헤지 청구서'",
-        "source": "머니투데이",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "미래에셋글로벌리츠는 134억원의 환헤지 정산금 부담에 현지 대출 차환까지 겹치자 미국 물류센터를 손실을... 당초 회사채 발행으로 재원을 마련하려 했으나 리츠 회사채 시장 위축으로 추진하지 못했다. 결국 보유..."
-        ],
-        "summary_mode": "source_excerpt",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.mt.co.kr/stock/2026/11/12/2026111120104062792"
+        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/10/2026111080102.html"
       }
     ],
     "ma": [
       {
         "top": true,
-        "headline": "[Invest]도로 'SK에너지', 'SK건설'…국내선 합치고 줄이기만 하는 SK그룹",
-        "source": "인베스트조선",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "과거 SK건설에서 친환경·에너지 기업으로의 전환을 선언하고 폐기물 처리와 재활용 등 환경사업 인수합병(M&A)에 대규모 자금을 투입했지만, 이제는 관련 자산을 정리하고 반도체·AI 인프라 중심으로 사업구조를..."
-        ],
-        "summary_mode": "source_excerpt",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/11/2026111180151.html"
-      },
-      {
-        "top": false,
-        "headline": "[더벨][Company Watch] 더블유게임즈, 자회사 상폐 위해 무차입 탈피",
-        "source": "더벨",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "당시 국내 게임업계 최대 인수합병(M&A) 사례였다. 더블유게임즈는 즉시 더블다운 기업공개(IPO)를 준비했다. 초기에는 국내 상장을 모색했지만 높은 밸류에이션을 받기 위해 나스닥을 선택했다. 국내에서는..."
-        ],
-        "summary_mode": "source_excerpt",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611101101476840105274"
-      },
-      {
-        "top": false,
-        "headline": "위메이드, 미르 계약금 500억에 흑자전환…게임 매출은 15% 감소",
-        "source": "딜사이트",
+        "headline": "자금조달 막히고 M&A 내몰려…벤처 위협하는 ‘상폐기준 강화’",
+        "source": "서울경제",
         "pubDate": "2026-11-11",
         "summary": [
-          "주요 신작 출시 연기·중국 라이선스 내년 만료…경영권 매각 앞두고 수익성 과제 위메이드가 ‘미르의 전설’ 지식재산권(IP)의 중국 라이선스 계약금을 반영하며 1개 분기 만에 흑자로 돌아섰다. 다만 게임 매출은..."
+          "11일 벤처 업계에 따르면 시총 500억 원 이하 코스닥 기업들이 인수합병(M&A) 제안을 받거나 자금난에 몰리는 사례가 잇따르고 있다. A 기업은 정부가 상폐 시총 기준을 150억 원에서 200억 원으로 올린 7월 이후 국내외..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://dealsite.co.kr/articles/172567"
+        "url": "https://www.sedaily.com/article/20113156?ref=naver"
+      },
+      {
+        "top": false,
+        "headline": "“해외·가업승계 M&A 더 나온다” [시그널]",
+        "source": "서울경제",
+        "pubDate": "2026-11-11",
+        "summary": [
+          "올해 하반기 본계약이 체결된 SK실트론 경영권 거래 역시 금전 이상의 이유가 있다고 봤다. SK그룹과... 태평양은 올해 SK그룹의 SK실트론 매각을 비롯해 KKR의 SK호라이즌(SK텔레콤 AI 데이터센터 법인) 투자, 한화손해보험..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.sedaily.com/article/20112859?ref=naver"
+      },
+      {
+        "top": false,
+        "headline": "딜로이트 편제성 상무 \"플랫폼 기업·중소 CDMO M&A 활발해질 것\"[자본시...",
+        "source": "한국경제",
+        "pubDate": "2026-11-10",
+        "summary": [
+          "헬스케어 M&A 전문가인 편 상무는 2010년 동아제약 영업기획·운영총괄 업무를 시작으로 동아ST, SK케미칼, IQVIA 등을 거치고 2018년 딜로이트 안진에 합류했다. 주요 트랙레코드로는 IMM PE의 제뉴원사이언스 매각 자문..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.hankyung.com/article/202611032004r"
       }
     ],
     "re": [
@@ -248,139 +250,139 @@
       },
       {
         "top": false,
-        "headline": "환위험 막으려다 현금 부담…제이알·미래에셋리츠 환헤지 덫",
+        "headline": "부메랑이 된 환율 방패… 해외 리츠 덮친 '환헤지 청구서'",
         "source": "머니투데이",
-        "pubDate": "2026-11-11",
+        "pubDate": "2026-11-12",
         "summary": [
           "미래에셋글로벌리츠가 탬파 물류센터 매각을 결정한 것은 대출 차환에 따른 이자 부담과 환헤지 정산금 부담 때문이다. 미래에셋글로벌리츠가 지난달 주주들에게 보낸 탬파 물류센터 매각 관련 안내문에 따르면 약..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.mt.co.kr/stock/2026/11/12/2026111115534089328"
+        "url": "https://www.mt.co.kr/stock/2026/11/12/2026111120104062792"
       }
     ],
     "infra": [
       {
         "top": true,
-        "headline": "[Invest]연말 북클로징 앞둔 은행권…국민성장펀드 실적에 12월 PF까지 염...",
-        "source": "인베스트조선",
-        "pubDate": "2026-11-10",
+        "headline": "현금 1천억 있는데…GS, AI 데이터센터 15조 투자 순항할까",
+        "source": "연합인포맥스",
+        "pubDate": "2026-11-11",
         "summary": [
-          "은행들이 국민성장펀드 실적을 위해 12월 프로젝트파이낸싱(PF) 참여 가능성까지 열어두고 있다. 통상... 스마일게이트가 추진하는 경기 고양시 식사동·문봉동 데이터센터 개발사업도 주요 관심 대상이다. 두 사업은 각각..."
+          "4GW 규모의 데이터센터 구축 사업을 진행한다. 총 투자금액은 1단계 1.2GW에 약 15조원으로 예상했다. GS는 프로젝트파이낸싱(PF)과 자기자본으로 투자금을 마련한다. 15조원의 20% 가량인 약 3조원은 자기자본으로..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/09/2026110980170.html"
+        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444108"
       },
       {
         "top": false,
-        "headline": "\"AI붐 꺼지면 세계경제 휘청\"…글로벌 수출 증가분 최대 80% 편중",
-        "source": "파이낸셜뉴스",
-        "pubDate": "2026-11-12",
+        "headline": "[르포] \"독산동만 데이터센터 몰아넣나\"…AI가 만드는 지역 불균형",
+        "source": "뉴스핌",
+        "pubDate": "2026-11-11",
         "summary": [
-          "인공지능(AI) 인프라 투자 열풍이 올해 전세계 무역과 경제 성장을 이끌어왔지만, 이 같은 호황이 AI 관련... 글로벌 금융위기 이후의 반등 국면을 제외하면, 1990년대 초 세계화가 본격화한 이후 가장 강력한 연간..."
+          "데이터센터 개발사업은 장기 임차 계약과 프로젝트파이낸싱(PF)을 바탕으로 진행되는 경우가 많아 일단 착공하면 사업을 중단하기도 쉽지 않다. 현행 인허가 제도가 허용하는 시설이라도 주민 수용성과 전력 공급..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.fnnews.com/news/202611120733287442"
+        "url": "https://www.newspim.com/news/view/20261110001225"
       },
       {
         "top": false,
-        "headline": "[투자노트] 팔수록 덜 남는 AI… 빅테크, 투자비 제하면 이자 내기도 빠...",
-        "source": "조선비즈",
-        "pubDate": "2026-11-12",
+        "headline": "㈜GS, 15조 인공지능 데이터센터 '첫 고객계약' 연말 승부",
+        "source": "블로터",
+        "pubDate": "2026-11-09",
         "summary": [
-          "AI 인프라 투자가 수년째 이어진 지금 다시 자본지출 제외 이자보상배율이 악화되자 금융시장의 인내심이 바닥을 보이고 있다. 불안은 채권시장에서도 나타났다. 기업 부도 위험을 반영하는 신용부도스와프(CDS)..."
+          "신사업 AIDC, 정유·발전 의존도 낮출까 ㈜GS가 제시한 1단계 AI 데이터센터 사업비는 약 15조원이다. 전체 투자금액의 약 20%인 3조원을 자기자본으로 마련하고 나머지 약 12조원은 PF 등 외부 차입으로 충당할 예정이다...."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://biz.chosun.com/about-investing/2026/11/12/ENZOID7PGVDT5PAVWJXAULN6UA/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+        "url": "https://www.bloter.net/news/articleView.html?idxno=678107"
       }
     ],
     "hana": [
       {
         "top": true,
-        "headline": "[더벨]프렌드투자, 536억 'AX 과학기술혁신펀드' 결성",
-        "source": "더벨",
+        "headline": "함영주號 하나금융, 탄소집약도 19.6% 개선…공급망 등 금융배출량 6.6%...",
+        "source": "한국금융신문",
         "pubDate": "2026-11-12",
         "summary": [
-          "전북은행, 하나은행, KB증권, 우리금융캐피탈 등 금융기관도 출자에 나서며 LP 구성을 다변화했다. 프렌드투자파트너스는 이번 펀드를 통해 첨단로봇·모빌리티 산업을 중심으로 투자 포트폴리오를 구축할 방침이다...."
+          "하나은행은 지난 6월 시행사와 금융주선 계약을 맺었다. 하나금융은 은행과 증권 등 계열사가 공동 출자한 5000억원 규모의 ‘하나모두성장인프라펀드’를 활용해 초기 개발 단계에 투자하고, 이후 건설 자금..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611101457502280108815"
+        "url": "https://www.fntimes.com/html/view.php?ud=2026111118044779995e6e69892f_18"
       },
       {
         "top": false,
-        "headline": "최대규모 '전남광주 지역성장펀드' 출범…2000억 벤처펀드 조성",
-        "source": "머니투데이",
+        "headline": "[더벨]하나금융, 기관 중심이던 IR 개인주주로 확대",
+        "source": "더벨",
         "pubDate": "2026-11-11",
         "summary": [
-          "NH농협은행, 하나은행, 광주과학기술원(GIST), 전남대학교, 순천대학교, 목포대학교, 조선대학교, 포스코 등... 벤처캐피탈 등 투자사를 연결하는 지역 벤처투자 지원 거점으로서 역할을 수행할 예정이다. 이를 통해 지역..."
+          "[사진=하나금융지주] 간담회에서 그룹 기업가치 제고 계획과 주주환원 정책을 설명했다. 12%로 상향한 자기자본이익률(ROE) 목표와 프레임워크 기반 예측 가능한 주주환원 확대 방안 등을 안내했다. 하나금융지주는..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.mt.co.kr/future/2026/11/11/2026111110571068222"
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611061725330160108886"
       },
       {
         "top": false,
-        "headline": "[웅진 렉스필드 매각] 차마 못 놓는 '애지중지' 렉스필드…윤석금의 연...",
+        "headline": "[금융지주 임원 인사 전망] [하나금융] 카드·보험 거쳐 은행으로…함영...",
         "source": "딜사이트",
         "pubDate": "2026-11-11",
         "summary": [
-          "9일 투자은행(IB) 업계에 따르면 웅진그룹은 딜로이트안진을 매각주관사로 선정하고 경기 여주에 위치한... 하나은행 등에서 약 1000억원을 빌리고 나머지 1000억원은 30년 만기 신종자본증권(영구채)을 발행했다. 영구채..."
+          "성 사장은 기업금융과 외환 분야에서 경력을 쌓았다. 하나은행에서 경기영업본부장과 외환사업단장, CIB그룹장을 지냈고 하나카드 사장으로 옮기기 직전에는 지주 그룹CIB부문장도 겸했다. 리테일 영업을 주로 맡아 온..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://dealsite.co.kr/articles/172383"
+        "url": "https://dealsite.co.kr/articles/172349"
       }
     ],
     "peer": [
       {
         "top": true,
-        "headline": "[라이프 체인저] 은행을 손안에…실패만 하던 치과의사 10억을 20조로",
-        "source": "딜사이트",
-        "pubDate": "2026-11-12",
+        "headline": "“순익 1조·발행어음 성과”…박종문 삼성증권 대표, 연임 변수는 ‘내...",
+        "source": "디지털데일리",
+        "pubDate": "2026-11-10",
         "summary": [
-          "이후 박희은 파트너와 함께 투자 검토에 나섰고, 알토스벤처스는 2014년 6월 비바리퍼블리카에 10억원을 단독 투자했다. 당시 토스에는 은행도 증권사도 없었다. 간편송금 서비스가 금융 플랫폼으로 성장할 것이라는..."
+          "다만 신규 사업의 안정적인 정착을 위해 기존 경영전략을 이어갈 필요가 있다는 점은 박 대표의 연임에... 제재 대상 증권사 6곳 가운데 가장 큰 금액이다. 두 제재 모두 박 대표 개인에게 내려진 것은 아니다. 다만 현..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://dealsite.co.kr/articles/171464"
+        "url": "https://www.ddaily.co.kr/page/view/2026111010585978876"
       },
       {
         "top": false,
-        "headline": "[Invest]겉은 글로벌 톱3, 안은 '88년도' 시스템…기로에 선 현대차",
-        "source": "인베스트조선",
-        "pubDate": "2026-11-12",
+        "headline": "NH투자증권, 정형증권 중심 토큰화 검토…“MTS 고객경험 유지” [날개 ...",
+        "source": "한국금융신문",
+        "pubDate": "2026-11-09",
         "summary": [
-          "한 차례 목표주가를 내린 증권사가 실적 발표 이후 재차 낮추기도 했다. 미래 성장성에 부여했던 프리미엄을 걷어내고 완성차 사업의 경쟁력부터 다시 따지기 시작한 셈이다.투자는 계속된다. 현대차와 기아가..."
+          "NH투자증권은 선도적인 IB(기업금융) 하우스 증권사로 꼽힌다. 이를 바탕으로 상품 발행과 권리 관리, 상환... 외부 기업 및 플랫폼과 협업하는 컨소시엄 형태의 협력 조직도 주도하고 있다. NH투자증권은 지난 2023년 2월..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/11/2026111180171.html"
+        "url": "https://www.fntimes.com/html/view.php?ud=202611062131517509dd55077bc2_18"
       },
       {
         "top": false,
-        "headline": "[Invest]브로커리지 무너진 증권사들, '이자 장사'로 연명…모험자본 뒷...",
-        "source": "인베스트조선",
-        "pubDate": "2026-11-11",
+        "headline": "[단독]4조 모은 IMA, 가입자 98%가 개인…수익률 계산은 투자자 몫",
+        "source": "머니투데이",
+        "pubDate": "2026-11-09",
         "summary": [
-          "문제는 실제 자금이 위험 부담이 큰 벤처·중소기업보다 담보가 확실한 대기업 대출과 PRS 등에 쏠린다는 점이다.한 금융권 관계자는 \"모험자본 공급하라고 발행어음과 종합투자계좌(IMA) 길을 열어줬는데, 정작..."
+          "자기자본 8조원 이상 종합금융투자사업자(종투사)의 IMA(종합투자계좌) 가입자 98.4%가 개인인 것으로 나타났다. IMA를 통한 자금조달이 4조원을 넘어선 가운데 개인 비중이 압도적인 만큼 해외 사모사채 등 운용자산의..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/10/2026111080158.html"
+        "url": "https://www.mt.co.kr/stock/2026/11/10/2026110915352317335"
       }
     ],
     "sto": [
@@ -427,42 +429,42 @@
     "productive": [
       {
         "top": true,
-        "headline": "[Invest]'대기업과 다르다'…자회사 상장 절실한 중견기업들, 내년 주총...",
+        "headline": "성장금융, 혁신성장펀드 3000억 출자…GP 최대 10곳",
+        "source": "딜사이트",
+        "pubDate": "2026-11-11",
+        "summary": [
+          "출자 재원은 연기금 국민성장매칭펀드와 연기금공공 국민성장매칭펀드, 연기금 혁신성장벤처펀드 등에서 마련된다. 이번 출자사업은 중소·중견 상장기업에 대한 성장자금 공급에 초점을 맞췄다. 선정 운용사는 펀드..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://dealsite.co.kr/articles/172595"
+      },
+      {
+        "top": false,
+        "headline": "[Invest]브로커리지 무너진 증권사들, '이자 장사'로 연명…모험자본 뒷...",
         "source": "인베스트조선",
-        "pubDate": "2026-11-12",
+        "pubDate": "2026-11-11",
         "summary": [
-          "원익로보틱스는 올해 국민성장펀드와 민간투자자로부터 총 3500억원 규모의 투자를 유치했다. 공동투자는 IPO 추진을 전제로 설계됐는데, 상장 무산 시 일정 수익률을 보전하는 조건도 포함된 것으로 알려졌다...."
+          "업계에선 당국이 증권사의 운용 행태 자체를 겨냥했다는 해석이 나온다.4곳에 불과하던 발행어음 사업자는 1년 새 9곳으로 늘었다. 혁신·벤처기업에 모험자본을 공급하는 '생산적 금융'을 확대하겠다는 취지다...."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/11/2026111180176.html"
+        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/10/2026111080158.html"
       },
       {
         "top": false,
-        "headline": "피지컬AI '눈·근육·동력' 키운다… 초혁신경제 선도 과제 지정",
-        "source": "머니투데이",
-        "pubDate": "2026-11-12",
+        "headline": "순천시, 1313억 원 ‘전남광주지역성장펀드’ 합류… 유망 기업 육성",
+        "source": "동아일보",
+        "pubDate": "2026-11-11",
         "summary": [
-          "특히 액추에이터 생산 기업에 대한 국민성장펀드 지원을 통해 신속한 자금 조달을 지원한다. 아울러 휴머노이드용 이차전지 기술개발을 위해 대형 R&D(연구개발)에 착수한다. 휴머노이드 로봇용 배터리 표준 개발 등을..."
+          "출자… 첨단 미래전략산업 모험자본 대거 공급 순천시(시장 손훈모)가 1,313억 원 규모로 조성되는... 정부 모태펀드 750억 원을 마중물로 전남광주통합특별시, 지역기업, 금융기관, 대학 등이 다 함께 참여하는 이번 펀드는..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.mt.co.kr/economy/2026/11/12/2026111120075374635"
-      },
-      {
-        "top": false,
-        "headline": "중기부, 2030년까지 유니콘 20곳 육성… \"선별 후 집중 지원\"",
-        "source": "머니투데이",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "아울러 성장단계별로 차세대 유니콘 프로젝트, 국민성장펀드 등을 통해 민간 후속투자를 받을 수 있도록 지원한다. 사업화를 위한 기술실증과 판로확보 기회도 제공한다. 우선 정부와 공공기관이 첫 고객이 돼 현장의..."
-        ],
-        "summary_mode": "source_excerpt",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.mt.co.kr/future/2026/11/12/2026111119532536700"
+        "url": "https://sports.donga.com/region/article/all/20261111/135005477/1"
       }
     ]
   }
