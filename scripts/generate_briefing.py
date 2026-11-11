@@ -29,6 +29,7 @@ from email.utils import parsedate_to_datetime
 
 import requests
 import anthropic
+from sector_rules import classify_sector, sector_matches
 from report_sources import collect_reports
 
 KST = timezone(timedelta(hours=9))
@@ -39,7 +40,7 @@ TOP_N_PER_SECTION = 3      # 섹션별로 보여줄 기사 수
 NAVER_PER_KEYWORD = 30     # 키워드당 네이버에서 가져올 기사 수 (언론사 필터 전)
 MAX_CANDIDATES = 40        # 섹션별로 Claude에게 보낼 후보 최대 수
 MIN_DEPTH = 45
-PREFERRED_IB_OUTLETS = {"더벨", "인베스트조선", "딜사이트", "머니투데이", "딜북"}             # 심층도가 이보다 낮으면 탈락
+PREFERRED_IB_OUTLETS = {"더벨", "인베스트조선", "딜사이트", "한국경제", "한국금융신문", "법률신문", "딜북"}             # 심층도가 이보다 낮으면 탈락
 
 # ─────────────────────────────────────────────────────────────
 # 메이저 언론사 (도메인 → 화면에 표시할 이름)
@@ -69,6 +70,11 @@ KR_OUTLETS = {
     "etnews.com": "전자신문",
     "newspim.com": "뉴스핌",
     "ddaily.co.kr": "디지털데일리",
+    "fntimes.com": "한국금융신문",
+    "lawtimes.co.kr": "법률신문",
+    "economist.co.kr": "이코노미스트",
+    "hankyungbiz.com": "한경비즈니스",
+    "bloter.net": "블로터",
     # 종합지·통신
     "chosun.com": "조선일보",
     "joongang.co.kr": "중앙일보",
@@ -299,6 +305,8 @@ def fallback_classify_batch(meta: dict, batch: list) -> list:
     for c in batch:
         title=c.get("title","")
         desc=re.sub(r"\s+"," ",c.get("description","")).strip()
+        if classify_sector(title,desc) != meta["key"]:
+            continue
         if not re.search(pattern,title+" "+desc,re.IGNORECASE):
             continue
         if len(desc)<55 or SHORT_NEWS_PATTERN.search(title):
@@ -306,7 +314,7 @@ def fallback_classify_batch(meta: dict, batch: list) -> list:
         if re.search(r"업무협약|협약식|기념식|인사발령|지점 오픈|행사 개최",title):
             continue
         age_hours=(datetime.now(KST)-c["pub_dt"]).total_seconds()/3600
-        score=45+(8 if c["source"] in PREFERRED_IB_OUTLETS else 0)
+        score=45+(2 if c["source"] in PREFERRED_IB_OUTLETS else 0)
         score+=min(14,len(desc)/20)+max(0,13-age_hours/8)
         out.append({**c,"summary":[desc[:210]],"insight":"",
                     "summary_mode":"source_excerpt","reporter":"","score":score})
@@ -399,13 +407,15 @@ summary 작성 규칙 (개조식):
         if depth < MIN_DEPTH:
             continue
         c = batch[idx]
+        if classify_sector(c["title"],c["description"]) != meta["key"]:
+            continue
 
         final_score = (
             0.15 * freshness_score(c["pub_dt"], now)
             + 0.35 * to_int(j.get("importance"))
             + 0.35 * depth
             + 0.15 * to_int(j.get("quality"))
-            + (5 if c["source"] in PREFERRED_IB_OUTLETS else 0)
+            + (2 if c["source"] in PREFERRED_IB_OUTLETS else 0)
         )
         reporter = re.sub(r"\s+", " ", str(j.get("reporter") or "")).strip()[:20]
 
@@ -433,9 +443,10 @@ summary 작성 규칙 (개조식):
 def build_section(meta: dict, used_urls: set) -> list:
     print(f"▶ [{meta['no']}] {meta['label']} 수집 중...")
     candidates = [
-        c for c in collect_candidates(meta["keywords"], MAX_CANDIDATES)
+        c for c in collect_candidates(meta["keywords"])
         if c["url"] not in used_urls
-    ]
+        and sector_matches(meta["key"], c["title"], c.get("description", ""))
+    ][:MAX_CANDIDATES]
     print(f"  후보 {len(candidates)}건 → Claude 분류 요청 중...")
 
     scored = []
@@ -446,7 +457,9 @@ def build_section(meta: dict, used_urls: set) -> list:
     # 기사 수 부족 시 후보군 확대. 적합한 실재 기사가 없으면 임의로 채우지 않음.
     if len(scored) < 2:
         seen = {c["url"] for c in candidates}
-        extra = [c for c in collect_candidates(meta["keywords"]) if c["url"] not in seen and c["url"] not in used_urls][:30]
+        extra = [c for c in collect_candidates(meta["keywords"])
+                 if c["url"] not in seen and c["url"] not in used_urls
+                 and sector_matches(meta["key"], c["title"], c.get("description", ""))][:30]
         for start in range(0, len(extra), BATCH_SIZE):
             scored.extend(classify_batch(meta, extra[start:start + BATCH_SIZE]))
         scored.sort(key=lambda x: x["score"], reverse=True)
@@ -494,6 +507,7 @@ def main():
     used_urls = set()
     data = {}
     for key, meta in SECTIONS.items():
+        meta = {**meta, "key":key}
         data[key] = build_section(meta, used_urls)
 
     produced_at = datetime.now(KST)
