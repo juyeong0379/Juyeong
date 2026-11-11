@@ -29,6 +29,7 @@ from email.utils import parsedate_to_datetime
 
 import requests
 import anthropic
+from report_sources import collect_reports
 
 KST = timezone(timedelta(hours=9))
 MODEL = "claude-haiku-4-5-20251001"
@@ -261,8 +262,10 @@ def freshness_score(pub_dt: datetime, now: datetime) -> int:
     age = now - pub_dt
     if age <= timedelta(hours=24):
         return 100
-    if age <= timedelta(hours=72):
-        return 60      # 심층 기사는 하루 이틀 늦게 나오기도 해서 완전히 0점 주지 않음
+    if age <= timedelta(hours=48):
+        return 88      # 전일 기사도 08시 브리핑 대상
+    if age <= timedelta(days=7):
+        return 25      # 뉴스가 부족할 경우 양질의 과거 기사 보완
     return 0
 
 
@@ -285,6 +288,7 @@ def classify_batch(meta: dict, batch: list) -> list:
 - 검색어가 들어 있어도 기사의 '주제'가 위 기준과 다르면 반드시 is_relevant: false
 - 단신·속보·시황 중계·보도자료 받아쓰기·행사/인사 소식은 is_relevant: false
 - 원인·배경·영향·전망을 짚는 분석/기획/해설 기사를 선호
+- 한국시간 오전 8시 브리핑용이므로 오늘과 전날 발행된 중요한 기사 우대. 신뢰할 만한 분석이 부족한 경우 7일 이내 기사 선택 가능.
 
 점수 기준 (0~100 정수):
 - importance: IB 실무자가 알아야 할 중요도 (딜 규모, 시장 영향, 정책 파급력)
@@ -448,8 +452,17 @@ def main():
     for key, meta in SECTIONS.items():
         data[key] = build_section(meta, used_urls)
 
+    produced_at = datetime.now(KST)
+    try:
+        reports = collect_reports(data, produced_at)
+        print(f"  → 관련 기관 보고서 {len(reports)}건 선정")
+    except Exception as exc:
+        print(f"  [경고] 자료 검색 실패: {exc}")
+        reports = []
+
     output = {
-        "generated_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M KST"),
+        "generated_at": produced_at.strftime("%Y-%m-%d %H:%M KST"),
+        "reports": reports,
         "sections": [
             {"key": k, "no": m["no"], "emoji": m["emoji"], "label": m["label"], "desc": m["desc"]}
             for k, m in SECTIONS.items()
