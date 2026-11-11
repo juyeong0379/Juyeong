@@ -1,4 +1,6 @@
-/* Daily IB Briefing: archive and current data integration. */
+/* Daily IB Briefing: archive, research materials, and current data integration. */
+let REPORTS = [];
+
 function briefKSTDate() {
   return new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10);
 }
@@ -40,7 +42,7 @@ function normalizeBriefing(payload) {
       result.push({
         id: date + "-" + section + "-" + index, date, cat, title,
         source: String(item.source || "언론사 미상"), url, summary,
-        insight: String(item.insight || "별도 시사점은 신규 브리핑부터 제공"),
+        insight: String(item.insight || ""),
         pubDate: String(item.pubDate || date),
         kind: String(item.kind || ""),
         pdf: String(item.pdf || "")
@@ -48,6 +50,20 @@ function normalizeBriefing(payload) {
     });
   });
   return result;
+}
+function normalizeReports(payload) {
+  if (!payload || typeof payload !== "object") return [];
+  const day = String(payload.generated_at || "").slice(0, 10);
+  return (Array.isArray(payload.reports) ? payload.reports : [])
+    .filter(r => r && r.title && r.url && /^https?:\/\//i.test(r.url))
+    .slice(0, 2)
+    .map((r, index) => ({
+      id: day + "-" + index, briefDate: day,
+      title: String(r.title), source: String(r.source || "연구기관"),
+      date: String(r.date || ""), url: String(r.url),
+      type: String(r.type || "보고서"), pdf: String(r.pdf || ""),
+      related_article_urls: Array.isArray(r.related_article_urls) ? r.related_article_urls : []
+    }));
 }
 async function loadBriefings() {
   const now = briefKSTDate();
@@ -71,12 +87,19 @@ async function loadBriefings() {
     batches = await Promise.all(valid.map(async day => {
       try {
         const r=await fetch("archive/" + day + ".json", { cache:"no-store" });
-        return r.ok ? normalizeBriefing(await r.json()) : [];
+        return r.ok ? (await r.json()) : null;
       } catch(e) { return []; }
     }));
   }
-  let merged = batches.flat();
-  if (currentPayload) merged.push(...normalizeBriefing(currentPayload));
+  let merged = batches.filter(Boolean).flatMap(normalizeBriefing);
+  let allReports = batches.filter(Boolean).flatMap(normalizeReports);
+  if (currentPayload) {
+    merged.push(...normalizeBriefing(currentPayload));
+    allReports.push(...normalizeReports(currentPayload));
+  }
+  const reportById = new Map();
+  for (const report of allReports) reportById.set(report.briefDate + "|" + report.url, report);
+  REPORTS = [...reportById.values()].filter(report => report.briefDate >= min && report.briefDate <= now);
   const byUrl = new Map();
   for (const item of merged) byUrl.set(item.date + "|" + item.url, item);
   NEWS = [...byUrl.values()].filter(item => item.date >= min && item.date <= now);
