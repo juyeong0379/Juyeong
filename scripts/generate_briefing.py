@@ -75,6 +75,9 @@ KR_OUTLETS = {
     "economist.co.kr": "이코노미스트",
     "hankyungbiz.com": "한경비즈니스",
     "bloter.net": "블로터",
+    "news1.kr": "뉴스1",
+    "newsis.com": "뉴시스",
+    "ajunews.com": "아주경제",
     # 종합지·통신
     "chosun.com": "조선일보",
     "joongang.co.kr": "중앙일보",
@@ -96,6 +99,8 @@ SHORT_NEWS_PATTERN = re.compile(
 def outlet_name(url: str):
     """URL의 도메인이 목록에 있으면 언론사 이름을, 없으면 None을 돌려준다."""
     host = re.sub(r"^https?://", "", url or "").split("/")[0].lower().split(":")[0]
+    if host.startswith(("sports.", "entertain.", "m.sports.", "m.entertain.")):
+        return None
     for domain in sorted(KR_OUTLETS, key=len, reverse=True):  # biz.chosun.com 우선
         if host == domain or host.endswith("." + domain):
             return KR_OUTLETS[domain]
@@ -110,7 +115,7 @@ SECTIONS = {
     "ecm": {
         "no": "01", "emoji": "📈", "label": "ECM",
         "desc": "IPO·유상증자·메자닌·블록딜",
-        "keywords": ["IPO 수요예측", "상장예비심사", "공모가 산정", "유상증자 주관", "전환사채 발행", "코너스톤 투자자", "블록딜 매각"],
+        "keywords": ["IPO 수요예측", "상장예비심사", "상장심사 소송", "공모가 산정", "유상증자 주관", "전환사채 발행", "코너스톤 투자자", "블록딜 매각"],
         "criteria": "ECM·IPO·주식연계 자금조달과 상장 제도의 구체적인 변화. 실제 기업명·공모금액·주관사·거래 구조가 있는 분석 기사 우대. 단순 주가 전망·청약 독려 제외.",
     },
     "corp": {
@@ -122,13 +127,13 @@ SECTIONS = {
     "ma": {
         "no": "03", "emoji": "🤝", "label": "M&A·인수금융",
         "desc": "M&A·경영권 매각·PEF·인수금융",
-        "keywords": ["인수금융 주선", "기업 인수합병", "경영권 매각", "PEF 바이아웃", "M&A 매각 자문", "인수금융 리파이낸싱", "기업 인수 매각"],
+        "keywords": ["인수금융 주선", "기업 인수합병", "M&A 공정거래 심사", "경영권 매각", "PEF 바이아웃", "M&A 매각 자문", "인수금융 리파이낸싱", "기업 인수 매각"],
         "criteria": "기업 인수합병, 경영권 거래, 사모펀드 투자·회수, 인수금융 조달 및 차환. 실제 거래 구조·금액·참여자와 사업적 영향을 구체적으로 다룬 기사.",
     },
     "re": {
         "no": "04", "emoji": "🏢", "label": "부동산",
         "desc": "부동산PF·리츠·상업용부동산",
-        "keywords": ["부동산 PF", "브릿지론 차환", "부동산 리파이낸싱", "물류센터 매각", "오피스 리츠", "PF 사업장 정상화", "부동산 PF 주선"],
+        "keywords": ["부동산 PF", "브릿지론 차환", "부동산 리파이낸싱", "부동산PF 책임준공", "부동산 PF 연대보증", "리츠 환헤지", "오피스 빌딩 매각", "물류센터 매각", "오피스 리츠", "PF 사업장 정상화", "부동산 PF 주선", "부동산 펀드 차환"],
         "criteria": "부동산PF, 브릿지론·본PF, 리츠, 상업용 부동산 투자·차환과 위험관리. 일반 아파트 청약·시세·매물 정보는 제외.",
     },
     "infra": {
@@ -339,6 +344,8 @@ def classify_batch(meta: dict, batch: list) -> list:
 - 검색어가 들어 있어도 기사의 '주제'가 위 기준과 다르면 반드시 is_relevant: false
 - 단신·속보·시황 중계·보도자료 받아쓰기·행사/인사 소식은 is_relevant: false
 - 원인·배경·영향·전망을 짚는 분석/기획/해설 기사를 선호
+- 한국경제·한국금융신문·법률신문·자본시장 전문지 등 매체 이름만으로 우대하지 않고, 숫자·거래구조·쟁점·실무 영향을 기준으로 품질 판단
+- 법률신문의 법규 해설은 IPO·인수금융·부동산PF·STO 등에 직접 관련되는 경우만 선정
 - 한국시간 오전 8시 브리핑용이므로 오늘과 전날 발행된 중요한 기사 우대. 신뢰할 만한 분석이 부족한 경우 7일 이내 기사 선택 가능.
 
 점수 기준 (0~100 정수):
