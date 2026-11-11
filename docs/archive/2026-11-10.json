@@ -171,7 +171,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.mt.co.kr/politics/2026/11/10/2026111015144229919"
+        "url": "https://www.mt.co.kr/politics/2026/11/10/2026111015144229919",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -183,7 +184,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.edaily.co.kr/News/Read?newsId=05589126645644408&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+        "url": "https://www.edaily.co.kr/News/Read?newsId=05589126645644408&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+        "summary_mode": "source_excerpt"
       }
     ],
     "re": [
@@ -197,7 +199,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611061028154920103685"
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611061028154920103685",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -209,7 +212,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.khan.co.kr/article/202611101713001"
+        "url": "https://www.khan.co.kr/article/202611101713001",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -221,7 +225,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://realty.chosun.com/site/data/html_dir/2026/11/10/2026111000811.html"
+        "url": "https://realty.chosun.com/site/data/html_dir/2026/11/10/2026111000811.html",
+        "summary_mode": "source_excerpt"
       }
     ],
     "infra": [
@@ -235,7 +240,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/09/2026110980170.html"
+        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/09/2026110980170.html",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -247,7 +253,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.yna.co.kr/view/AKR20261110018100011?input=1195m"
+        "url": "https://www.yna.co.kr/view/AKR20261110018100011?input=1195m",
+        "summary_mode": "source_excerpt"
       }
     ],
     "hana": [
@@ -261,7 +268,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.sedaily.com/article/20112662?ref=naver"
+        "url": "https://www.sedaily.com/article/20112662?ref=naver",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -273,7 +281,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.sedaily.com/article/20112659?ref=naver"
+        "url": "https://www.sedaily.com/article/20112659?ref=naver",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -285,7 +294,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.sedaily.com/article/20112330?ref=naver"
+        "url": "https://www.sedaily.com/article/20112330?ref=naver",
+        "summary_mode": "source_excerpt"
       }
     ],
     "peer": [
@@ -299,7 +309,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.ddaily.co.kr/page/view/2026111010585978876"
+        "url": "https://www.ddaily.co.kr/page/view/2026111010585978876",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -311,7 +322,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443855"
+        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443855",
+        "summary_mode": "source_excerpt"
       }
     ],
     "sto": [
@@ -325,7 +337,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://it.chosun.com/news/articleView.html?idxno=3000000000710"
+        "url": "https://it.chosun.com/news/articleView.html?idxno=3000000000710",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -337,7 +350,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.etnews.com/20261110000330"
+        "url": "https://www.etnews.com/20261110000330",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -349,7 +363,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.newspim.com/news/view/20261110001239"
+        "url": "https://www.newspim.com/news/view/20261110001239",
+        "summary_mode": "source_excerpt"
       }
     ],
     "productive": [
@@ -363,7 +378,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://it.donga.com/109889/"
+        "url": "https://it.donga.com/109889/",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -375,7 +391,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.joongang.co.kr/article/25477406"
+        "url": "https://www.joongang.co.kr/article/25477406",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -387,7 +404,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.mk.co.kr/article/12204130"
+        "url": "https://www.mk.co.kr/article/12204130",
+        "summary_mode": "source_excerpt"
       }
     ]
   },
