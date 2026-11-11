@@ -48,6 +48,14 @@ def classify_sector(title, description=""):
     if hana and finance:
         return "hana"
 
+    # Competitor IB strategy belongs in peer, even when its strategy refers to
+    # acquisition finance or productive capital. Actual individual transactions
+    # without a strategy/organization angle remain in the business sector.
+    if has(r"증권사|투자증권|미래에셋증권|메리츠증권|KB증권|NH투자증권|삼성증권|키움증권|신한투자증권|한국투자증권|종투사|발행어음|\\bIMA\\b",title):
+        if has(r"IB|기업금융|인수금융|모험자본|생산적금융|발행어음|IMA|종투사|투자금융",title):
+            if has(r"조직|전략|본부|시장|사업|확충|경쟁|진출|도입|라이선스|실적|성과|자기자본|개편|확대",title):
+                return "peer"
+
     # 5) Equity financing and listing regulation.
     if has(r"\bIPO\b|공모(주|가|청약|시장|규모)?|상장(예비심사|심사|추진|철회|폐지|규정|기업|주관|예정)|유상증자|메자닌|블록딜|전환사채|신주인수권부사채|코너스톤|프리\s*IPO|주식\s*발행",title):
         if not has(r"상장사\s*실적|상장사\s*영업이익|상장\s*이후\s*매출",title) or has(r"공모|IPO|상장규정|상장폐지|상장심사",title):
