@@ -1,10 +1,6 @@
 name: One-time Seven-Day News Backfill
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/backfill_week.py'
   workflow_dispatch: {}
 
 concurrency:
