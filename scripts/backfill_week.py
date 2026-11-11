@@ -134,6 +134,7 @@ def main():
                 {"top":i==0,"headline":x["title"],"source":x["source"],
                  "pubDate":x["pub_dt"].strftime("%Y-%m-%d"),
                  "summary":x["summary"][:3],"insight":x.get("insight",""),
+                 "summary_mode":x.get("summary_mode","ai_summary"),
                  "reporter":x.get("reporter",""),"url":x["url"]}
                 for i,x in enumerate(top)
             ]
