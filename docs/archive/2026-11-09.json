@@ -190,12 +190,234 @@
         "url": "https://realty.chosun.com/site/data/html_dir/2026/11/09/2026110903106.html"
       }
     ],
-    "re": [],
-    "infra": [],
-    "hana": [],
-    "peer": [],
-    "sto": [],
-    "productive": []
+    "re": [
+      {
+        "top": true,
+        "headline": "[더벨][thebell interview | 글로스타 넥스트 스텝] 정태석 바이오피아 대...",
+        "source": "더벨",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "물류센터 개발과 운영, 제품 유통을 연계해 지속적인 수익원을 발굴하겠다는 의지를 드러냈다.... 바이오피아는 해당 자산을 매각한 지금까지도 운영에 참여하고 있다. 정 대표는 \"개별 프로젝트의 성사 여부에 쫓기지..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202610291414409360104191"
+      },
+      {
+        "top": false,
+        "headline": "저축은행 부실 털어줄 AMC, 연내 출범 무산",
+        "source": "머니투데이",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "또 사업장 평가에서 유의 또는 부실우려로 분류된 부동산 PF(프로젝트파이낸싱) 잔액은 약 1조3000억원이다. 1년 전보다 약 1조3000억원 감소했지만 올 상반기만 보면 부실 PF 잔액이 약 500억원 줄어드는 데 그쳤다...."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.mt.co.kr/finance/2026/11/09/2026110819355311412"
+      },
+      {
+        "top": false,
+        "headline": "한국 찾은 '큰손' 계약 불발 이유가…AI 프로젝트 '초비상'",
+        "source": "한국경제",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "휴림그룹과 부동산 개발업체 선진씨씨에스, 메리츠증권 등은 2023년 원주시와 투자협약을 맺고 데이터센터... 이 때문에 대형 고객사의 장기 임차 계약이 프로젝트파이낸싱(PF) 성사의 핵심 조건으로 꼽힌다. 하지만..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.hankyung.com/article/2026110957881"
+      }
+    ],
+    "infra": [
+      {
+        "top": true,
+        "headline": "[미리보는 이데일리 신문]규제에 집 내놓는데 규제에 살 사람 없다",
+        "source": "이데일리",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "부산·울산 해상풍력 첫발 -송전망 갈등해결 전담팀 만든다…검토 단계부터 주민과 소통 △금융 -年10%까지 등장…은행들 ‘예·적금 쟁탈전’ -공과금·쇼핑정보로 신용평가 농협은행, 대출 문턱 낮춘다 -내년 보안..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.edaily.co.kr/News/Read?newsId=04880646645644080&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      },
+      {
+        "top": false,
+        "headline": "스파이 의심 여성과 불륜설…위기의 젠슨황",
+        "source": "서울경제",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "축소, 해상풍력 공사 중단 명령 등 트럼프 행정부 조치에 제동을 걸 것으로 예상된다. 숀 캐스턴... 단기금융상품 등을 합한 현금은 214조 8000억 원으로 국내 기업 최초로 200조 원을 넘어섰다. 지난해 9월 말 108조..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.sedaily.com/article/20111825?ref=naver"
+      },
+      {
+        "top": false,
+        "headline": "“부유식 해상풍력, 새 수출산업으로 키우겠다”",
+        "source": "이데일리",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "주 사장은 “750MW 정도의 부유식 해상풍력이 실제 가동되고 있는 곳은 전 세계에 없다”며 “새로운 기술과 사업 방식에 따른 위험을 평가할 금융권의 체계도 아직 확립되지 않았다”고 말했다. 다만 주 사장은 대규모..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.edaily.co.kr/News/Read?newsId=02863446645644080&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      }
+    ],
+    "hana": [
+      {
+        "top": true,
+        "headline": "[더벨][Korean Corporate Global IR 2026] 3년만에 다시 찾은 홍콩, 한국물...",
+        "source": "더벨",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "이와 더불어 KB증권, 한국투자증권, 미래에셋증권, NH투자증권, 삼성증권, 신한투자증권, 키움증권, 하나증권 등 국내 주요 IB 실무진들이 함께했다. *'Korean Corporate Global IR 2026'이 11월 5일 홍콩 JW메리어트호텔에서..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611051535376880101040"
+      },
+      {
+        "top": false,
+        "headline": "[더벨][카카오엔터프라이즈는 지금] 6000억 납입자본 대부분 소진, 모회...",
+        "source": "더벨",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "이 가운데 카카오가 인수한 금액은 1000억원이다. 당시 신주 발행가는 주당 15만3600원으로 증자 후... 하나은행에서 120억원을 새로 빌리면서 지난해 말 차입금은 171억원이 됐다. 1년 전 2152억원의 10분의 1에도 못..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611051442036200103723"
+      },
+      {
+        "top": false,
+        "headline": "[Who Is ?] 이상균 HD현대중공업 대표이사 총괄 부회장",
+        "source": "비즈니스포스트",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "HD현대중공업과 하나은행, 한국무역보험공사가 'K조선 산업 수출 공급망 강화를 위한 금융지원... 당시 추진 중이던 대우조선해양(현 한화오션) 인수를 위한 것으로 매각 상대인 KDB산업은행에 한국조선해양 지분을..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.businesspost.co.kr/BP?command=article_view&num=451203"
+      }
+    ],
+    "peer": [
+      {
+        "top": true,
+        "headline": "[단독]4조 모은 IMA, 가입자 98%가 개인…수익률 계산은 투자자 몫",
+        "source": "머니투데이",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "자기자본 8조원 이상 종합금융투자사업자(종투사)의 IMA(종합투자계좌) 가입자 98.4%가 개인인 것으로 나타났다. IMA를 통한 자금조달이 4조원을 넘어선 가운데 개인 비중이 압도적인 만큼 해외 사모사채 등 운용자산의..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.mt.co.kr/stock/2026/11/10/2026110915352317335"
+      },
+      {
+        "top": false,
+        "headline": "[더벨][증권사 패밀리오피스 지형도] KB증권, PB 넘어 조직이 잇는 가문...",
+        "source": "더벨",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "투자전략·기업금융(IB)·금융상품·컨설팅을 대표하는 전문가들이 'KB 패밀리오피스 Committee'를 구성해 참여하는 구조다. 17개 세부 분야의 인력이 가문별 수요에 따라 팀을 이루고 솔루션을 제공한다. 전문가 협의체는..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611051212435320101849"
+      },
+      {
+        "top": false,
+        "headline": "[더벨][WM 풍향계] 현대차증권, VIP 마케팅 확대…클래식 공연 초청",
+        "source": "더벨",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "현대차증권은 현대차그룹 계열의 IB 중심 중형 증권사다. 2025년 1월 기업가치 제고 계획을 내놓으면서... 상품 경쟁력에서 대형사와 격차가 있는 중형사로서는 고객 경험에 투자하는 전략이 상대적으로 효과적이라는..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611051358393000108014"
+      }
+    ],
+    "sto": [
+      {
+        "top": true,
+        "headline": "'8년 적자' 디지털엑스 맡은 노용우…돈 벌 길 여전히 '막막'",
+        "source": "딜사이트",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "디지털엑스는 토큰증권(STO)과 실물연계자산(RWA) 등 디지털자산 신사업을 추진하고 있다. 디지털엑스 관계자는 \"제도권 도입에 발맞춰 STO나 RWA 등 신사업을 운영하기 위해 준비할 것이며, 거래수수료 외의 수익원을..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://dealsite.co.kr/articles/172280"
+      },
+      {
+        "top": false,
+        "headline": "[더벨]미래 품 안긴 디지털X, 새 수장에 노용우 낙점",
+        "source": "더벨",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "비트코인 등 가상자산뿐 아니라 스테이블코인과 실물연계자산(RWA), 토큰증권(STO) 등으로 사업 영역을 넓히는 것이 핵심이다. 이를 위해서는 기존 금융 계열사와의 사업적 연계뿐 아니라 제도적 불확실성과 위험요인을..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611051718420960103535"
+      },
+      {
+        "top": false,
+        "headline": "“韓스테이블코인, 신흥시장 잇는 연결고리 부상…외국인 송금부터 수출...",
+        "source": "헤럴드경제",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "기존에는 장외거래 데스크와 현지 가상자산사업자를 통해 법정화폐를 USDT로 바꿨다면, 최근에는 은행과... 내년 시행 예정인 토큰증권 법안 등 규제 환경에 대해선 리플은 준법을 최우선으로 하며 정책 전담팀을 운영..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://biz.heraldcorp.com/article/10931141?ref=naver"
+      }
+    ],
+    "productive": [
+      {
+        "top": true,
+        "headline": "SKT·엔비디아·리벨리온, 한국형 소버린 AI 구축 '삼각편대'",
+        "source": "연합인포맥스",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "2026.11.9 jin90@yna.co.kr 인공지능(AI) 데이터센터 사업자 SK텔레콤과 국민성장펀드 1호 투자처이자 AI 반도체 스타트업인 리벨리온이 글로벌 AI 컴퓨팅을 선도하는 엔비디아와 손잡고 한국형 소버린(주권) AI 인프라를..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443790"
+      },
+      {
+        "top": false,
+        "headline": "못 받은 돈만 3조, 더 빌려줄 수가…4대 은행 中企 ‘깡통대출’ 경고등",
+        "source": "매일경제",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "금융당국이 생산적 금융 확대를 주문하는 가운데 4대 은행의 중소기업 무수익여신인 소위 ‘깡통대출’이... 정부는 앞서 초저리 대출과 지분 투자 등을 통해 기업에 자금을 공급하는 200조원 규모 국민성장펀드를..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.mk.co.kr/article/12202882"
+      },
+      {
+        "top": false,
+        "headline": "금융위 내년 예산 9.2조로 '두 배'...미래대응기금·삼성 사내대출 지적...",
+        "source": "뉴스핌",
+        "pubDate": "2026-11-09",
+        "summary": [
+          "주요 사업은 국민성장펀드 조성 마중물 1조원, 일반형 소득요건을 폐지한 청년미래적금 1조7010억원, K-민생지킴대출 3000억원, 우리아이자립펀드 1465억원, 햇살론 특례·햇살론 유스 828억원 등이다. K-민생지킴대출과..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newspim.com/news/view/20261109001131"
+      }
+    ]
   },
   "reports": []
 }

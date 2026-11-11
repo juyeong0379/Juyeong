@@ -72,9 +72,46 @@
         "insight": "스팩 ECM 구조 시장 악화에 따른 대체 자금조달 수요(DCM, 후속투자, 인수금융) 증가 및 기존 스팩 주선 포트폴리오 리스크 모니터링 필요",
         "reporter": "",
         "url": "https://biz.chosun.com/stock/stock_general/2026/11/07/IFM7HUYYTVC3LAA2KYTG2XDCAY/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+      },
+      {
+        "top": true,
+        "headline": "11월 분주한 IPO 시장…눈여겨볼 유망주 보니",
+        "source": "매일경제",
+        "pubDate": "2026-11-07",
+        "summary": [
+          "에스에프씨·제이앤티지 ‘주목’ AI 보안 엔키화이트햇 성장성 눈길 11월 기업공개(IPO) 시장이 분주하다. 한 달 동안 10곳이 넘는 기업이 기관투자자 대상 수요예측에 나선다. 인공지능(AI) 보안부터 바이오..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.mk.co.kr/article/12200752"
+      },
+      {
+        "top": false,
+        "headline": "[IPO챗] 내주 에스에프씨 등 5개사 수요예측",
+        "source": "연합뉴스",
+        "pubDate": "2026-11-07",
+        "summary": [
+          "기업공개(IPO) 시장에서는 에스에프씨와 유캐스트 등 5개 기업이 기관투자자 대상 수요예측을 진행한다. 7일 금융투자업계에 따르면 OLED(유기발광다이오드) 소재 전문기업 에스에프씨와 이동통신 네트워크..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.yna.co.kr/view/AKR20261106071100008?input=1195m"
       }
     ],
-    "corp": [],
+    "corp": [
+      {
+        "top": true,
+        "headline": "아직도 정신 못 차린 프랑스 때문에…유로화 약세 불가피[주末머니]",
+        "source": "아시아경제",
+        "pubDate": "2026-11-07",
+        "summary": [
+          "한편 미국 증시와 국채 시장의 동향을 살펴보면 인공지능(AI) 또는 반도체 기업들의 실적 가이던스가 실망스러울 때마다 증시가 조정을 보이면서 국채금리도 다소 진정되고 있다. 하지만 회사채 BBB등급 신용스프레드가..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://view.asiae.co.kr/article/2026110514313386242"
+      }
+    ],
     "ma": [
       {
         "top": true,
@@ -120,11 +157,74 @@
       }
     ],
     "re": [],
-    "infra": [],
+    "infra": [
+      {
+        "top": true,
+        "headline": "수출 넘어 현지생산으로…한화에어로, 폴란드 미사일 공장 착공",
+        "source": "비즈워치",
+        "pubDate": "2026-11-07",
+        "summary": [
+          "비금도 육상태양광, 전남해상풍력 1단지, 당진 석문호 등 기존 신재생에너지 연계망 시공 실적을 바탕으로... 3분기 기준 100개 협력사에 1059억원의 저금리 대출을 지원했으며 보증 확대와 무담보 대출 등 금융 지원을..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://news.bizwatch.co.kr/article/industry/2026/11/06/0033"
+      },
+      {
+        "top": false,
+        "headline": "유럽증시, 기술주 전날에 이어 약세 계속되며 일제히 하락… 친환경 에...",
+        "source": "뉴스핌",
+        "pubDate": "2026-11-07",
+        "summary": [
+          "덴마크 해상풍력 기업 오르스테드는 1.2%, 독일 풍력터빈 제조업체 노르덱스는 5% 올랐다. 포르투갈... 금융시장에서는 연준이 다음달 기준금리를 올릴 것이라는 예상이 강해졌다. 시카고상품거래소(CME)..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newspim.com/news/view/20261107000012"
+      }
+    ],
     "hana": [],
     "peer": [],
-    "sto": [],
-    "productive": []
+    "sto": [
+      {
+        "top": true,
+        "headline": "[남산길 산책]다가오는 토큰증권 시대, 어떤 상품이 필요할까",
+        "source": "아시아경제",
+        "pubDate": "2026-11-07",
+        "summary": [
+          "스위스의 제도권 디지털 자산 전문은행 시그넘 뱅크(Sygnum Bank)가 미술품 투자 전문기업 아르테문디(Artemundi)와 협력해 진행한 파블로 피카소 작품 '베레모를 쓴 여인'의 토큰증권(STO) 발행은 제도권 금융기관이 실물..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://view.asiae.co.kr/article/2026110601394419469"
+      }
+    ],
+    "productive": [
+      {
+        "top": true,
+        "headline": "반드시 챙겨야 할 은퇴자 연말 절세법 ‘1000만 원 룰’",
+        "source": "동아일보",
+        "pubDate": "2026-11-07",
+        "summary": [
+          "한편 정부는 8월 세제 개편안에서 국내 투자 전용 ‘생산적금융 ISA’ 신설과 일반 ISA 정비(계약 기간 제한, 연간 납입 한도 이월 폐지)를 발표했다. 아직 국회 통과 전이므로 가입 시점에 최신 기준을 확인해야 한다...."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://shindonga.donga.com/3/all/13/6444739/1"
+      },
+      {
+        "top": false,
+        "headline": "국민성장펀드 투자받은 中企, 알고보니 엔비디아 최고 파트너",
+        "source": "서울경제",
+        "pubDate": "2026-11-07",
+        "summary": [
+          "엔비디아의 최고 등급 총판사인 씨이랩은 국민성장펀드 자금을 유치해 100억 원 규모의 전환사채(CB)를 발행한다고 7일 밝혔다. 씨이랩은 6일 이사회 결의를 거쳐 제1회 무기명식 무보증 사모 전환사채 100억 원을..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.sedaily.com/article/20111250?ref=naver"
+      }
+    ]
   },
   "reports": []
 }
