@@ -43,6 +43,7 @@ function normalizeBriefing(payload) {
         id: date + "-" + section + "-" + index, date, cat, title,
         source: String(item.source || "언론사 미상"), url, summary,
         insight: String(item.insight || ""),
+        summary_mode: String(item.summary_mode || "ai_summary"),
         pubDate: String(item.pubDate || date),
         kind: String(item.kind || ""),
         pdf: String(item.pdf || "")
