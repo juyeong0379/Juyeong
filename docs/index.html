@@ -177,7 +177,7 @@ function articleCard(item){
   return `<article class="story ${item.kind?'gov':''}">
     <h3>${item.kind?`<span class="kind-badge">${escapeHTML(item.kind)}</span>`:''}${escapeHTML(item.title)}</h3>
     <ul class="summary">${item.summary.slice(0,3).map(line=>`<li>${strong(line)}</li>`).join('')}</ul>
-    <div class="insight"><span class="label">시사점</span><p>${strong(item.insight)}</p></div>
+    ${item.insight&&item.insight.trim()?`<div class="insight"><span class="label">IB기획실 검토사항</span><p>${strong(item.insight)}</p></div>`:""}
     <div class="meta"><span class="name">${escapeHTML(item.source)}</span><span class="dividerdot">│</span><span>${fmt(item.date)}</span><span class="dividerdot">│</span><div class="links">${item.url?`<a target="_blank" rel="noopener noreferrer" href="${escapeHTML(item.url)}">원문 보기 ↗</a>`:'<span class="no-link">시연용 · 원문 미연결</span>'}${hasPdf?`<a class="pdf" target="_blank" rel="noopener noreferrer" href="${escapeHTML(item.pdf)}">PDF 다운로드 ↓</a>`:''}</div></div>
   </article>`;
 }
