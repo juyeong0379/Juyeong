@@ -7,7 +7,7 @@ on:
       - 'scripts/generate_briefing.py'
       - '.github/workflows/daily-briefing.yml'
   schedule:
-    - # 매일 08:00 KST (전날 23:00 UTC)
+    # 매일 08:00 KST (전날 23:00 UTC)
     - cron: "0 23 * * *"
   workflow_dispatch: {}
 
