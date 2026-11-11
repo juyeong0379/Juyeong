@@ -228,10 +228,14 @@ def collect_candidates(keywords: list, limit: int = None) -> list:
 # 2) Claude로 분류·요약·점수
 # ─────────────────────────────────────────────────────────────
 client = anthropic.Anthropic()
+CLAUDE_UNAVAILABLE = False
 
 
 def ask_claude_json(prompt: str, max_tokens: int):
     """Claude에게 JSON으로만 답하게 하고 파싱해서 돌려준다. 실패하면 None."""
+    global CLAUDE_UNAVAILABLE
+    if CLAUDE_UNAVAILABLE:
+        return None
     try:
         resp = client.messages.create(
             model=MODEL,
@@ -240,7 +244,11 @@ def ask_claude_json(prompt: str, max_tokens: int):
         )
         raw = resp.content[0].text.strip()
     except Exception as e:
-        print(f"  [경고] Claude API 호출 실패: {e}")
+        if "credit balance is too low" in str(e).lower():
+            CLAUDE_UNAVAILABLE = True
+            print("  [경고] Claude API 크레딧 부족: 출처 발췌 모드로 전환", flush=True)
+        else:
+            print(f"  [경고] Claude API 호출 실패: {e}")
         return None
 
     raw = re.sub(r"^```(?:json)?|```$", "", raw, flags=re.MULTILINE).strip()
@@ -268,6 +276,41 @@ def freshness_score(pub_dt: datetime, now: datetime) -> int:
         return 25      # 뉴스가 부족할 경우 양질의 과거 기사 보완
     return 0
 
+
+FALLBACK_TOPIC_PATTERNS = {
+    "ECM": r"IPO|상장|공모|유상증자|전환사채|메자닌|코너스톤|블록딜|CB발행",
+    "기업금융": r"회사채|DCM|기업대출|기업금융|채권발행|자금조달|PRS|신디케이트론|차환|크레딧",
+    "M&A·인수금융": r"인수금융|인수합병|M&A|경영권 매각|경영권 인수|PEF|바이아웃|매각자문|인수자문|매각 추진",
+    "부동산": r"부동산PF|부동산 PF|브릿지론|리츠|오피스|물류센터|상업용부동산|PF 재구조화",
+    "인프라": r"데이터센터|GPU|발전소|인프라 금융|인프라 투자|해상풍력|신재생에너지|전력 인프라|민자사업",
+    "하나금융그룹": r"하나증권|하나은행|하나금융|하나캐피탈|하나자산신탁|하나대체투자",
+    "경쟁사": r"증권사|IB본부|한국투자증권|KB증권|NH투자증권|신한투자증권|미래에셋증권|메리츠증권|발행어음|IMA",
+    "STO": r"STO|토큰증권|토큰화|조각투자|RWA|증권형 토큰",
+    "생산적금융": r"생산적금융|국민성장펀드|모험자본|벤처투자|유니콘|정책금융|성장금융|성장펀드",
+}
+
+def fallback_classify_batch(meta: dict, batch: list) -> list:
+    """No generative summary when AI is unavailable: show attributable source snippets.
+
+    These are not AI-verified three-line summaries or strategic insights.
+    """
+    pattern=FALLBACK_TOPIC_PATTERNS.get(meta["label"],r"$^")
+    out=[]
+    for c in batch:
+        title=c.get("title","")
+        desc=re.sub(r"\s+"," ",c.get("description","")).strip()
+        if not re.search(pattern,title+" "+desc,re.IGNORECASE):
+            continue
+        if len(desc)<55 or SHORT_NEWS_PATTERN.search(title):
+            continue
+        if re.search(r"업무협약|협약식|기념식|인사발령|지점 오픈|행사 개최",title):
+            continue
+        age_hours=(datetime.now(KST)-c["pub_dt"]).total_seconds()/3600
+        score=45+(8 if c["source"] in PREFERRED_IB_OUTLETS else 0)
+        score+=min(14,len(desc)/20)+max(0,13-age_hours/8)
+        out.append({**c,"summary":[desc[:210]],"insight":"",
+                    "summary_mode":"source_excerpt","reporter":"","score":score})
+    return out
 
 def classify_batch(meta: dict, batch: list) -> list:
     numbered = "\n".join(
@@ -341,8 +384,8 @@ summary 작성 규칙 (개조식):
 
     judgments = ask_claude_json(prompt, max_tokens=4000)
     if not isinstance(judgments, list):
-        print(f"  [경고] '{meta['label']}' 배치 하나를 건너뜁니다.")
-        return []
+        print(f"  [경고] '{meta['label']}' AI 요약 불가 → 원문 검색 발췌 모드")
+        return fallback_classify_batch(meta, batch)
 
     now = datetime.now(KST)
     results = []
@@ -435,6 +478,7 @@ def build_section(meta: dict, used_urls: set) -> list:
             "source": item["source"],
             "pubDate": item["pub_dt"].strftime("%Y-%m-%d"),
             "summary": item["summary"][:3],
+            "summary_mode": item.get("summary_mode", "ai_summary"),
             "insight": item.get("insight", ""),
             "reporter": item["reporter"],
             "url": item["url"],
