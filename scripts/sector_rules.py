@@ -24,8 +24,8 @@ def classify_sector(title, description=""):
             return None
 
     # 1) Asset-based real estate overrides generic corporate-debt/hedging words.
-    if has(r"리츠|REIT|부동산\s*PF|부동산PF|브릿지론|본PF|PF\s*사업장|오피스(빌딩)?|물류센터|상업용\s*부동산|부동산(금융|펀드|투자|리파이낸싱)|부동산\s*대출|부동산(시장|매각)",title):
-        if not has(r"리츠|REIT|부동산|PF|금융|자금|차환|리파이낸싱|공실|임대|매각|인수|오피스|물류|환헤지|투자",title+" "+desc):
+    if has(r"(?<!메)리츠|REIT|부동산\s*PF|부동산PF|브릿지론|본PF|PF\s*사업장|오피스(빌딩)?|물류센터|상업용\s*부동산|부동산(금융|펀드|투자|리파이낸싱)|부동산\s*대출|부동산(시장|매각)",title):
+        if not has(r"(?<!메)리츠|REIT|부동산|PF|금융|자금|차환|리파이낸싱|공실|임대|매각|인수|오피스|물류|환헤지|투자",title+" "+desc):
             return None
         return "re"
     # Deal-specific RE asset names rarely stand alone; no generic '건설' cue.
