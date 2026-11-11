@@ -436,10 +436,14 @@ def main():
     archive_path = archive_dir / (datetime.now(KST).strftime("%Y-%m-%d") + ".json")
     with archive_path.open("w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
+    # 보존된 브리핑 날짜 목록을 게시하여 검색 시 존재하지 않는 날짜를 요청하지 않음
     threshold = (datetime.now(KST).date() - timedelta(days=29)).isoformat()
     for old in archive_dir.glob("????-??-??.json"):
         if old.stem < threshold:
             old.unlink()
+    archive_index = sorted(p.stem for p in archive_dir.glob("????-??-??.json"))
+    with (archive_dir / "index.json").open("w", encoding="utf-8") as f:
+        json.dump(archive_index, f, ensure_ascii=False, indent=2)
     print(f"✅ 완료: {out_path}, {archive_path}")
 
 
