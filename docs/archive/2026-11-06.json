@@ -160,19 +160,6 @@
         "reporter": "",
         "url": "https://dealsite.co.kr/articles/172093",
         "summary_mode": "source_excerpt"
-      },
-      {
-        "top": false,
-        "headline": "[더벨][증권사 패밀리오피스 지형도] 삼성증권, 기업 성장기부터 '1000억...",
-        "source": "더벨",
-        "pubDate": "2026-11-06",
-        "summary": [
-          "연결하는 전략이다. 이렇게 관리하는 가문은 200곳, 자산은 55조원에 이른다. 패밀리오피스의 기본 가입... 기존 고객과 프라이빗뱅커(PB)의 네트워크, 투자은행(IB) 업무 연계 등이 신규 유입 경로다. 패밀리오피스의 운영..."
-        ],
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611041306438960101347",
-        "summary_mode": "source_excerpt"
       }
     ],
     "infra": [],
@@ -191,7 +178,21 @@
         "summary_mode": "source_excerpt"
       }
     ],
-    "peer": [],
+    "peer": [
+      {
+        "top": true,
+        "headline": "[더벨][증권사 패밀리오피스 지형도] 삼성증권, 기업 성장기부터 '1000억...",
+        "source": "더벨",
+        "pubDate": "2026-11-06",
+        "summary": [
+          "연결하는 전략이다. 이렇게 관리하는 가문은 200곳, 자산은 55조원에 이른다. 패밀리오피스의 기본 가입... 기존 고객과 프라이빗뱅커(PB)의 네트워크, 투자은행(IB) 업무 연계 등이 신규 유입 경로다. 패밀리오피스의 운영..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611041306438960101347",
+        "summary_mode": "source_excerpt"
+      }
+    ],
     "sto": [
       {
         "top": true,
