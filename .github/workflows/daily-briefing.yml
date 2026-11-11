@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/daily-briefing.yml'
+      - 'scripts/generate_briefing.py'
   schedule:
     # 매일 07:30 KST 수집 시작, 08:00 KST 게시 목표 (전날 22:30 UTC)
     - cron: "30 22 * * *"
