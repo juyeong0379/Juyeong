@@ -141,53 +141,66 @@ def search_institutional_reports(today):
                           "url": link, "categories": categories, "type": "기관 보고서"})
     return found
 
+BRIDGES = {
+    "금융시장": ("회사채", "채권", "금리", "기업대출", "DCM", "발행", "자금조달"),
+    "임팩트투자": ("벤처", "모험자본", "유니콘", "성장펀드", "정책펀드", "투자금융"),
+    "AI 산업": ("데이터센터", "GPU", "AI", "인공지능", "전력"),
+    "토큰화": ("토큰증권", "STO", "RWA", "장외거래", "증권형"),
+}
+
+def _topic_terms(report_title):
+    terms = [w for w in re.findall(r"[가-힣]{2,}|[a-zA-Z]{2,}", report_title)
+             if len(w) > 2 and w not in ("보고서", "특징과", "주요", "동향과",
+                                         "2026년", "2026", "10월", "금융의", "국내")]
+    for label, related in BRIDGES.items():
+        if label.casefold() in report_title.casefold():
+            terms += list(related)
+    return terms
+
 def collect_reports(categories, now):
-    """Up to 2 distinct current/recent research sources, linked to actual news URLs."""
-    today = now.date()
-    candidates = SEEDS + search_institutional_reports(today)
-    scored = []
+    """Up to two distinct recent institution reports matching specific article themes."""
+    today=now.date()
+    candidates=SEEDS+search_institutional_reports(today)
+    scored=[]
     for r in candidates:
         try:
-            day = datetime.strptime(r["date"], "%Y-%m-%d").date()
-        except (ValueError, KeyError):
+            age=(today-datetime.strptime(r["date"],"%Y-%m-%d").date()).days
+        except (KeyError,ValueError):
             continue
-        age = (today - day).days
-        if age < 0 or age > 45:  # Relevance should not justify stale materials.
+        if not 0 <= age <= 45:
             continue
-        matched = []
-        texts = []
-        for key in r["categories"]:
-            for story in categories.get(key, []):
-                url = story.get("url")
+        terms=_topic_terms(r["title"])
+        if not terms:
+            continue
+        matched_urls=[]
+        overlap=0
+        for key in r.get("categories",[]):
+            for story in categories.get(key,[]):
+                article_text=" ".join([story.get("headline",""),
+                                      *[str(x).replace("**","") for x in story.get("summary",[])]])
+                matched_words=[w for w in terms if w.casefold() in article_text.casefold()]
+                if not matched_words:
+                    continue
+                url=story.get("url")
                 if url:
-                    matched.append(url)
-                    texts.append(story.get("headline", ""))
-        if not matched:
+                    matched_urls.append(url)
+                    overlap+=min(3,len(matched_words))
+        if not matched_urls:
             continue
-        words = re.findall(r"[가-힣]{2,}|[a-zA-Z]{2,}", r["title"])
-        keywords = [word for word in words if len(word) > 2 and word not in ("보고서", "특징과", "주요", "동향과")]
-        overlap = sum(any(word.casefold() in title.casefold() for title in texts) for word in keywords)
-        # Require a specific theme overlap, or same category with a strong topic keyword.
-        theme_match = overlap > 0
-        if not theme_match:
-            continue
-        score = (50 - age) + min(25, 7 * overlap)
-        scored.append((score, r, matched))
-    scored.sort(key=lambda x: x[0], reverse=True)
-    chosen, used = [], set()
-    for _, r, urls in scored:
+        scored.append((70-age+min(25,5*overlap),r,sorted(set(matched_urls))))
+    scored.sort(key=lambda x:x[0],reverse=True)
+    chosen=[]
+    used=set()
+    for score,r,urls in scored:
         if r["url"] in used:
             continue
         used.add(r["url"])
         chosen.append({
-            "id": "report-" + str(len(chosen)+1),
-            "title": r["title"],
-            "source": r["source"],
-            "date": r["date"],
-            "url": r["url"],
-            "type": r["type"],
-            "related_article_urls": sorted(set(urls)),
+            "id":"report-"+str(len(chosen)+1),
+            "title":r["title"],"source":r["source"],
+            "date":r["date"],"url":r["url"],
+            "type":r["type"],"related_article_urls":urls,
         })
-        if len(chosen) == 2:
+        if len(chosen)==2:
             break
     return chosen
