@@ -77,8 +77,20 @@ def historical_items(query, earliest):
 def get_missing_days():
     now = datetime.now(KST).date()
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
-    return [now - timedelta(days=n) for n in range(6,0,-1)
-            if not (ARCHIVE_DIR / ((now-timedelta(days=n)).isoformat() + ".json")).exists()]
+    days = []
+    for n in range(6, 0, -1):
+        d = now - timedelta(days=n)
+        file = ARCHIVE_DIR / (d.isoformat() + ".json")
+        if not file.exists():
+            days.append(d)
+            continue
+        try:
+            past = json.loads(file.read_text(encoding="utf-8"))
+            if any(len(past.get("categories", {}).get(k, [])) < 2 for k in SECTIONS):
+                days.append(d)
+        except (ValueError, OSError):
+            days.append(d)
+    return days
 
 def main():
     missing = get_missing_days()
@@ -130,8 +142,22 @@ def main():
     for day in missing:
         dstr=day.isoformat()
         categories=by_day[dstr]
+        existing_file = ARCHIVE_DIR / (dstr+".json")
+        if existing_file.exists():
+            old_payload = json.loads(existing_file.read_text(encoding="utf-8"))
+            previous = old_payload.get("categories", {})
+            for key in SECTIONS:
+                verified = list(previous.get(key, []))
+                known_urls = {item.get("url") for item in verified}
+                for item in categories.get(key, []):
+                    if len(verified) >= TOP_N_PER_SECTION:
+                        break
+                    if item.get("url") not in known_urls:
+                        verified.append(item)
+                        known_urls.add(item.get("url"))
+                categories[key] = verified[:TOP_N_PER_SECTION]
         if not any(categories.values()):
-            print(f"  {dstr}: no verified IB articles. Skipping.",flush=True)
+            print(f"  {dstr}: no eligible published articles. Skipping.",flush=True)
             continue
         payload={
             "generated_at":dstr+" 00:00 KST (발행일 기준 소급 구축)",
