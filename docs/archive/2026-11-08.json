@@ -201,7 +201,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.mt.co.kr/finance/2026/11/09/2026110614230969126"
+        "url": "https://www.mt.co.kr/finance/2026/11/09/2026110614230969126",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -213,7 +214,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.businesspost.co.kr/BP?command=article_view&num=451443"
+        "url": "https://www.businesspost.co.kr/BP?command=article_view&num=451443",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -225,7 +227,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://realty.chosun.com/site/data/html_dir/2026/11/06/2026110602414.html"
+        "url": "https://realty.chosun.com/site/data/html_dir/2026/11/06/2026110602414.html",
+        "summary_mode": "source_excerpt"
       }
     ],
     "infra": [
@@ -239,7 +242,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://view.asiae.co.kr/article/2026110722170235717"
+        "url": "https://view.asiae.co.kr/article/2026110722170235717",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -251,7 +255,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443633"
+        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443633",
+        "summary_mode": "source_excerpt"
       }
     ],
     "hana": [],
@@ -267,7 +272,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.mk.co.kr/article/12191699"
+        "url": "https://www.mk.co.kr/article/12191699",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -279,7 +285,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.etnews.com/20261105000132"
+        "url": "https://www.etnews.com/20261105000132",
+        "summary_mode": "source_excerpt"
       },
       {
         "top": false,
@@ -291,7 +298,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.edaily.co.kr/News/Read?newsId=01407126645643752&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+        "url": "https://www.edaily.co.kr/News/Read?newsId=01407126645643752&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+        "summary_mode": "source_excerpt"
       }
     ],
     "productive": [
@@ -305,7 +313,8 @@
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://www.businesspost.co.kr/BP?command=article_view&num=451387"
+        "url": "https://www.businesspost.co.kr/BP?command=article_view&num=451387",
+        "summary_mode": "source_excerpt"
       }
     ]
   },
