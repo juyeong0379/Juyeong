@@ -23,8 +23,8 @@ def classify_sector(title, description=""):
         if not has(r"IPO|공모|회사채|채권 발행|기업금융|인수금융|M&A|상장|신주|토큰증권|PF|리츠",title):
             return None
 
-    # 1) Asset-based real estate overrides generic corporate-debt/hedging words.
-    if has(r"(?<!메)리츠|REIT|부동산\s*PF|부동산PF|브릿지론|본PF|PF\s*사업장|오피스(빌딩)?|물류센터|상업용\s*부동산|부동산(금융|펀드|투자|리파이낸싱)|부동산\s*대출|부동산(시장|매각)",title):
+    # 1) Real estate must be the financial asset, not a family-office/back-office term.
+    if has(r"(?<!메)리츠|REIT|부동산\s*PF|부동산PF|브릿지론|본PF|PF\s*사업장|(?:프라임\s*)?오피스\s*(?:빌딩|매각|임대|공실|시장|자산|리츠|투자|PF)|물류센터|상업용\s*부동산|부동산(금융|펀드|투자|리파이낸싱)|부동산\s*대출|부동산(시장|매각)|물류창고\s*(매각|PF|투자)|상업시설\s*(매각|PF|투자)",title):
         if not has(r"(?<!메)리츠|REIT|부동산|PF|금융|자금|차환|리파이낸싱|공실|임대|매각|인수|오피스|물류|환헤지|투자",title+" "+desc):
             return None
         return "re"
@@ -63,7 +63,7 @@ def classify_sector(title, description=""):
 
     # 6) M&A must describe a real purchase, sale, takeover, PEF deal,
     #    or acquisition-financing transaction (not just business performance).
-    if has(r"인수금융|인수합병|M&A|바이아웃|경영권\s*(매각|인수|분쟁)|기업\s*(인수|매각)|매각\s*(추진|본입찰|예비입찰|주관|가격|협상)|공개매수|매각자문|인수자문|합병\s*(추진|결정|계약)|PEF\s*(인수|매각|회수)|사모펀드\s*(매각|인수|회수)",title):
+    if has(r"인수금융|인수합병|M&A|바이아웃|경영권\s*(매각|인수|분쟁)|기업\s*(인수|매각)|매각\s*(추진|본입찰|예비입찰|주관|가격|협상)|공개\s*매각|매각\s*입찰|공개매수|매각자문|인수자문|합병\s*(추진|결정|계약)|PEF\s*(인수|매각|회수)|사모펀드\s*(매각|인수|회수)",title):
         return "ma"
     if has(r"PEF|사모펀드",title) and has(r"경영권|인수금융|바이아웃|매각|인수|회수|인수합병",title+" "+desc):
         return "ma"
