@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12 07:57 KST",
+  "generated_at": "2026-11-12 08:07 KST",
   "reports": [
     {
       "id": "report-1",
@@ -9,11 +9,10 @@
       "url": "https://www.bok.or.kr/portal/bbs/P0002017/view.do?menuNo=200365&nttId=11066469",
       "type": "금융시장 보고서",
       "related_article_urls": [
+        "https://news.bizwatch.co.kr/article/market/2026/11/11/0036",
         "https://www.ddaily.co.kr/page/view/2026111010585978876",
-        "https://www.fntimes.com/html/view.php?ud=202611062131517509dd55077bc2_18",
         "https://www.hankyung.com/article/202611107549r",
         "https://www.investchosun.com/site/data/html_dir/2026/11/10/2026111080102.html",
-        "https://www.mt.co.kr/stock/2026/11/10/2026110915352317335",
         "https://www.sedaily.com/article/20113124?ref=naver",
         "https://www.sedaily.com/article/20113156?ref=naver"
       ]
@@ -114,6 +113,19 @@
       },
       {
         "top": false,
+        "headline": "[더벨][패스트파이브 IPO] 상장 재도전, 다시 선택한 테슬라 요건",
+        "source": "더벨",
+        "pubDate": "2026-11-12",
+        "summary": [
+          "10일 투자은행(IB) 업계에 따르면 패스트파이브는 신한투자증권과 대신증권을 공동 대표 주관사로 두고 최근 한국거래소에 상장 예비심사 청구를 진행했다. 주관사단은 패스트파이브의 상장 트랙을 놓고 논의 끝에..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611100833374840103931"
+      },
+      {
+        "top": false,
         "headline": "[더벨][thebell interview | 데스틴파워 IPO] 오성진 대표 \"연료전지 인버...",
         "source": "더벨",
         "pubDate": "2026-11-12",
@@ -124,19 +136,6 @@
         "insight": "",
         "reporter": "",
         "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611100704063940103917"
-      },
-      {
-        "top": false,
-        "headline": "[더벨][인스페이스 IPO] 내주 상장 예심 청구, 내년 상반기 코스닥 입성...",
-        "source": "더벨",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "인스페이스가 내주 한국거래소에 코스닥 상장 예비심사를 청구한다. 올해 2월 미승인 통보를 받은 지 9개월 만의 재도전이다. 발목을 잡았던 지배구조 문제를 털어낸 만큼 이번에는 관문을 넘을 것이란 기대가..."
-        ],
-        "summary_mode": "source_excerpt",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611100918510200104680"
       }
     ],
     "corp": [
@@ -209,16 +208,16 @@
       },
       {
         "top": false,
-        "headline": "딜로이트 편제성 상무 \"플랫폼 기업·중소 CDMO M&A 활발해질 것\"[자본시...",
+        "headline": "[사설] 네이버·두나무 결합 심사만 1년째…M&A 불확실성 줄여야",
         "source": "한국경제",
-        "pubDate": "2026-11-10",
+        "pubDate": "2026-11-11",
         "summary": [
-          "헬스케어 M&A 전문가인 편 상무는 2010년 동아제약 영업기획·운영총괄 업무를 시작으로 동아ST, SK케미칼, IQVIA 등을 거치고 2018년 딜로이트 안진에 합류했다. 주요 트랙레코드로는 IMM PE의 제뉴원사이언스 매각 자문..."
+          "가상자산거래소(업비트)를 운영하는 두나무의 기업결합 심의에 본격 착수했다. 공정위 심사관은 10개... 공정위 일정 지연이 인수합병(M&A) 판 자체를 흔드는 위험 요인이 된 것이다. 기업결합 심사 기간은 원칙적으로 30일..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.hankyung.com/article/202611032004r"
+        "url": "https://www.hankyung.com/article/2026111083841"
       }
     ],
     "re": [
@@ -228,12 +227,38 @@
         "source": "머니투데이",
         "pubDate": "2026-11-12",
         "summary": [
-          "미래에셋글로벌리츠가 탬파 물류센터 매각을 결정한 것은 대출 차환에 따른 이자 부담과 환헤지 정산금 부담 때문이다. 미래에셋글로벌리츠가 지난달 주주들에게 보낸 탬파 물류센터 매각 관련 안내문에 따르면 약..."
+          "앞서 회생절차를 신청한 제이알글로벌리츠도 환헤지 정산 부담이 유동성 위기를 키웠다. 11일 금융감독원 전자공시에 따르면 미래에셋글로벌리츠는 지난 10일 올해 4~9월 별도 기준 당기순손실이 627억원이라고..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
         "url": "https://www.mt.co.kr/stock/2026/11/12/2026111120104062792"
+      },
+      {
+        "top": false,
+        "headline": "[더벨][thebell desk] 글로벌리츠 추락과 AMC 역량",
+        "source": "더벨",
+        "pubDate": "2026-11-11",
+        "summary": [
+          "국내 증시에 상장된 글로벌리츠의 출발은 매력적이었다. 해외 우량 부동산에 신용도 높은 글로벌 기업을... 특히 환헤지 관리는 AMC의 전문성이 드러나는 대표적인 영역이다. 해외 부동산은 현지 통화로 임대수익이..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611061131469600108615"
+      },
+      {
+        "top": false,
+        "headline": "[더벨][PF Radar] 신촌 신통기획 사업, 브릿지론 2510억 재구조화",
+        "source": "더벨",
+        "pubDate": "2026-11-11",
+        "summary": [
+          "이 프로젝트는 한국자산관리공사(캠코)의 PF 정상화 지원펀드가 후순위 대출에 참여해 만기연장과... 해당 사업장은 2022년 6월 700억원의 브릿지론을 최초 실행했다. 이후 일부 추가 조달하며 현재 대출잔액은..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611021346525840103063"
       }
     ],
     "infra": [
@@ -321,6 +346,19 @@
     "peer": [
       {
         "top": true,
+        "headline": "메리츠증권, 3분기 영업익 44.7%↓…플랜형 수수료로 고객 잡는다",
+        "source": "비즈워치",
+        "pubDate": "2026-11-11",
+        "summary": [
+          "발행어음도 개인 고객을 유치할 수단으로 활용한다. 메리츠증권은 자체 신용으로 발행어음을 판매해 모은... 메리츠증권이 국고채 전문딜러(PD)로 입찰에 참여하는 과정에서 일부 증권사와의 정보 교환이 문제가 된..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://news.bizwatch.co.kr/article/market/2026/11/11/0036"
+      },
+      {
+        "top": false,
         "headline": "“순익 1조·발행어음 성과”…박종문 삼성증권 대표, 연임 변수는 ‘내...",
         "source": "디지털데일리",
         "pubDate": "2026-11-10",
@@ -334,29 +372,16 @@
       },
       {
         "top": false,
-        "headline": "NH투자증권, 정형증권 중심 토큰화 검토…“MTS 고객경험 유지” [날개 ...",
-        "source": "한국금융신문",
+        "headline": "[더벨][증권사 패밀리오피스 지형도] KB증권, PB 넘어 조직이 잇는 가문...",
+        "source": "더벨",
         "pubDate": "2026-11-09",
         "summary": [
-          "NH투자증권은 선도적인 IB(기업금융) 하우스 증권사로 꼽힌다. 이를 바탕으로 상품 발행과 권리 관리, 상환... 외부 기업 및 플랫폼과 협업하는 컨소시엄 형태의 협력 조직도 주도하고 있다. NH투자증권은 지난 2023년 2월..."
+          "올해 신설한 패밀리오피스(Family Office)부는 이런 협업을 조율하는 전담 조직이다. 투자전략과 기업금융, 금융상품, 컨설팅 등 4개 영역·17개 세부 분야 전문가를 고객 과제에 맞춰 연결한다. 자녀 세대와의 관계도 자산..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.fntimes.com/html/view.php?ud=202611062131517509dd55077bc2_18"
-      },
-      {
-        "top": false,
-        "headline": "[단독]4조 모은 IMA, 가입자 98%가 개인…수익률 계산은 투자자 몫",
-        "source": "머니투데이",
-        "pubDate": "2026-11-09",
-        "summary": [
-          "자기자본 8조원 이상 종합금융투자사업자(종투사)의 IMA(종합투자계좌) 가입자 98.4%가 개인인 것으로 나타났다. IMA를 통한 자금조달이 4조원을 넘어선 가운데 개인 비중이 압도적인 만큼 해외 사모사채 등 운용자산의..."
-        ],
-        "summary_mode": "source_excerpt",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.mt.co.kr/stock/2026/11/10/2026110915352317335"
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611051212435320101849"
       }
     ],
     "sto": [
@@ -429,16 +454,16 @@
       },
       {
         "top": false,
-        "headline": "순천시, 1313억 원 ‘전남광주지역성장펀드’ 합류… 유망 기업 육성",
-        "source": "동아일보",
+        "headline": "순천시, 1313억 지역성장펀드 참여…미래산업 투자 확대",
+        "source": "뉴시스",
         "pubDate": "2026-11-11",
         "summary": [
-          "출자… 첨단 미래전략산업 모험자본 대거 공급 순천시(시장 손훈모)가 1,313억 원 규모로 조성되는... 정부 모태펀드 750억 원을 마중물로 전남광주통합특별시, 지역기업, 금융기관, 대학 등이 다 함께 참여하는 이번 펀드는..."
+          "지역기업, 금융기관, 대학 등이 참여했다. 투자금은 유망기업 발굴을 비롯해 기술개발과 사업화, 생산시설 확충 등에 활용될 예정이다. 시는 이번 펀드를 민선 9기 핵심 전략산업인 방위산업과 그린바이오, 이차전지..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://sports.donga.com/region/article/all/20261111/135005477/1"
+        "url": "https://www.newsis.com/view/NISX20261111_0003864112"
       }
     ]
   }
