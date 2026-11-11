@@ -133,7 +133,7 @@ SECTIONS = {
     "hana": {
         "no": "06", "emoji": "🏛️", "label": "하나금융그룹",
         "desc": "하나금융지주·하나은행·하나증권 IB",
-        "keywords": ["하나증권 IB", "하나금융그룹 기업금융", "하나은행 인수금융", "하나증권 주선", "하나금융 생산적금융", "하나캐피탈 투자금융"],
+        "keywords": ["하나증권 IB", "하나금융그룹 기업금융", "하나은행 인수금융", "하나증권 주선", "하나금융 생산적금융", "하나캐피탈 투자금융", "하나카드 기업금융", "하나자산신탁 부동산금융"],
         "criteria": "하나금융그룹 및 계열사의 IB 사업·자금조달·주선·생산적금융·협업 실적과 전략만 포함. 일반 인사·사회공헌·개인고객 이벤트 제외.",
     },
     "peer": {
@@ -396,7 +396,31 @@ def build_section(meta: dict, used_urls: set) -> list:
         scored.extend(classify_batch(meta, candidates[start:start + BATCH_SIZE]))
     scored.sort(key=lambda x: x["score"], reverse=True)
 
-    top = scored[:TOP_N_PER_SECTION]
+    # 기사 수 부족 시 후보군 확대. 적합한 실재 기사가 없으면 임의로 채우지 않음.
+    if len(scored) < 2:
+        seen = {c["url"] for c in candidates}
+        extra = [c for c in collect_candidates(meta["keywords"]) if c["url"] not in seen and c["url"] not in used_urls][:30]
+        for start in range(0, len(extra), BATCH_SIZE):
+            scored.extend(classify_batch(meta, extra[start:start + BATCH_SIZE]))
+        scored.sort(key=lambda x: x["score"], reverse=True)
+
+    if meta["label"] == "하나금융그룹":
+        # 은행, 증권, 다른 계열사별로 적합한 기사 하나씩 우선 선정
+        groups = [
+            ("하나은행",),
+            ("하나증권",),
+            ("하나캐피탈", "하나카드", "하나자산신탁", "하나대체투자", "하나금융티아이", "하나생명"),
+        ]
+        selected, chosen = [], set()
+        for terms in groups:
+            found = next((x for x in scored if x["url"] not in chosen and any(t in x["title"] for t in terms)), None)
+            if found:
+                selected.append(found)
+                chosen.add(found["url"])
+        selected.extend(x for x in scored if x["url"] not in chosen)
+        top = selected[:TOP_N_PER_SECTION]
+    else:
+        top = scored[:TOP_N_PER_SECTION]
     used_urls.update(item["url"] for item in top)
     print(f"  → {len(top)}건 선정")
 
@@ -434,6 +458,8 @@ def main():
     }
 
     out_path = os.path.join(os.path.dirname(__file__), "..", "docs", "data.json")
+    if sum(len(v) for v in data.values()) == 0:
+        raise RuntimeError("선정 기사 0건: 기존 브리핑 보존")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     # 선택 날짜의 뉴스를 보관하여 최근 30일 검색과 과거 조회에 활용
