@@ -1,0 +1,44 @@
+name: One-time Seven-Day News Backfill
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/backfill_week.py'
+  workflow_dispatch: {}
+
+concurrency:
+  group: ib-daily-briefing
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Backfill genuine articles by publication date
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/backfill_week.py
+      - name: Commit backfilled archives
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "briefing-bot@users.noreply.github.com"
+          git add docs/archive
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: 소급 기사 아카이브 7일 보강"
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
