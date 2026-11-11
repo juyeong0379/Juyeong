@@ -34,7 +34,7 @@ def run(path):
             seen.add(url)
             title=article.get("headline",article.get("title",""))
             summary=article.get("summary",[])
-            excerpt=" ".join(str(x).replace("**","") for x in summary[:2]) if isinstance(summary,list) else ""
+            excerpt=" ".join(str(x).replace("**","") for x in summary[:2]) if isinstance(summary,list) else str(summary or "")
             key=classify_sector(title,excerpt)
             if key is None:
                 removed+=1
@@ -71,3 +71,4 @@ if __name__=="__main__":
 # Regression-tested handling of debt issuers and asset-management names.
 
 # Corrected sector boundary regex handling.
+# Revalidate existing archives after tightening the office-versus-property distinction.
