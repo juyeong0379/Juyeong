@@ -75,7 +75,7 @@ def classify_sector(title, description=""):
 
     # 8) Corporate financing needs a capital raise, credit or refinancing
     #    transaction explicitly in its headline.
-    if has(r"회사채|기업어음|\bCP\b|전자단기사채|여전채|신종자본증권|후순위채|금융채|\bDCM\b|기업(금융|대출|자금조달)|신디케이트론|PRS|크레딧|채권(발행|차환|시장|만기|금리|디폴트)|차환\s*(발행|조달|수요)|사모채|자금\s*조달|금융\s*약정|유동화\s*증권",title):
+    if has(r"회사채|기업어음|\bCP\b|전자단기사채|여전채|신종자본증권|후순위채|금융채|\bDCM\b|기업(금융|대출|자금조달)|신디케이트론|PRS|크레딧|채권(발행|차환|시장|만기|금리|디폴트|엔|의|에)|차환\s*(발행|조달|수요)|사모채|자금\s*조달|금융\s*약정|유동화\s*증권",title):
         return "corp"
 
     # 9) Competitor activity requires a securities house / IB-specific
