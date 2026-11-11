@@ -61,34 +61,6 @@
     "ecm": [
       {
         "top": true,
-        "headline": "아이벡스 상장 무산…3배 비싸게 산 이앤·빗썸 물렸다",
-        "source": "딜사이트",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "아이벡스메디칼이 코스닥 상장예비심사 청구 **자진 철회**, 프리IPO 고점 진입 후 상장 무산",
-          "이앤인베스트먼트, 빗썸 등 시리즈C 141억 규모 투자 엑시트 물거품, PE·VC 회수 사이클 단절",
-          "거래소 심사 제동으로 초기단계 투자자의 자본손실 발생, IPO 회수시장 위축 심화"
-        ],
-        "insight": "프리IPO 투자 회수 부진과 발행 시장 악화의 악순환. 후속투자 및 대체 유동성 수단 수요 증가 가능성 모니터링",
-        "reporter": "",
-        "url": "https://dealsite.co.kr/articles/172309"
-      },
-      {
-        "top": false,
-        "headline": "‘10조 대어’ 구다이글로벌, 코스피 상장 초읽기",
-        "source": "매일경제",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "구다이글로벌이 이달 12일 **코스피 상장예비심사 신청** 예정, 미래에셋증권 주관사로 10조대 대형 IPO",
-          "올해 IPO 시장 최대어로 내년 초 증시 입성 목표, 대규모 자금조달 수요 예상",
-          "주요 협력 주관사에 NH투자증권, 씨티그룹글로벌마켓증권 등 포함, 복수 주관 구조"
-        ],
-        "insight": "초대형 IPO 수주 기회. 기존 주선 경험 및 현황 확인, 집단주관 참여 가능성 검토 필요",
-        "reporter": "",
-        "url": "https://www.mk.co.kr/article/12204008"
-      },
-      {
-        "top": false,
         "headline": "[더벨][SFC IPO] 해외 DR 마무리, 국부펀드 관심 쏟아졌다",
         "source": "더벨",
         "pubDate": "2026-11-10",
@@ -100,25 +72,24 @@
         "insight": "금융회사 코스피 IPO 재개; 해외 DR 동시 공모 구조의 주관사 경쟁 및 배치 전략 검토",
         "reporter": "",
         "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611101547137080104037"
+      },
+      {
+        "top": false,
+        "headline": "엠비디, IPO 공모가 하단 미만…올해 3번째 [시그널]",
+        "source": "서울경제",
+        "pubDate": "2026-11-10",
+        "summary": [
+          "10일 투자은행(IB) 업계에 따르면 엠비디는 이달 2일부터 6일까지 기관 투자자를 대상으로 공모가 수요예측을 진행했다. 회사와 상장 주관사 하나증권이 제시한 희망 공모가 밴드는 9600~1만 1700원으로 인텔리빅스는..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.sedaily.com/article/20112662?ref=naver",
+        "summary_mode": "source_excerpt"
       }
     ],
     "corp": [
       {
         "top": true,
-        "headline": "10월 국고채 전 구간 하락… 외인 선물 매수·안전자산 선호 심리 영향",
-        "source": "머니투데이",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "10월 회사채 수요예측 금액 **2조550억원으로 전년 동월 대비 1조5560억원 감소**",
-          "수요예측 전체 참여금액 11조4500억원으로 전년 동월 대비 9조4210억원 급감, 시장 수요 위축",
-          "참여율 저하로 신용등급별 발행사 차등화 심화, 중등급 이하 발행 환경 악화"
-        ],
-        "insight": "10월 회사채 시장 전반 수요 급락이 11월 이후 DCM 발행 일정에 미칠 영향 모니터링 필수. 안전자산 선호 심리 지속 시 발행 스프레드 선제적 상향 조정 및 발행사별 신용도 재평가 필요.",
-        "reporter": "",
-        "url": "https://www.mt.co.kr/stock/2026/11/10/2026111010223568873"
-      },
-      {
-        "top": false,
         "headline": "외국인, 원화채 8.5조 쓸어담았지만…A급 회사채 투심은 '급랭' [fn마켓워...",
         "source": "파이낸셜뉴스",
         "pubDate": "2026-11-10",
@@ -130,37 +101,9 @@
         "insight": "A급 이하 회사채 수요 급감은 하반기 DCM 발행 일정 분산 필요 시사. 신용등급별 스프레드 확대, 발행사 경쟁력 재평가 및 발행 구조 다양화(분할 발행, 장기물 선호 등) 전략 검토.",
         "reporter": "",
         "url": "https://www.fnnews.com/news/202611101504360565"
-      },
-      {
-        "top": false,
-        "headline": "외국인, 韓채권 8.5조 순매수 전환…국고채 금리 '뚝'",
-        "source": "이데일리",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "10월 회사채 수요예측 규모 **2조550억원으로 전년 동월 비 1조5560억원 감소**",
-          "수요예측 참여율 557.4%로 전년 같은 기간 대비 20.6%포인트 하락, 수요 냉각",
-          "**AA등급 이상 우량회사채만 참여율 623.2% 기록**, 등급별 쏠림 현상 심화"
-        ],
-        "insight": "우량등급 쏠림 심화로 중등급 이하 발행사의 DCM 시장 접근성 악화. 신규 발행 일정 조율, 스프레드 요구 상향 조정, 대면 마케팅 강화 필요.",
-        "reporter": "",
-        "url": "https://www.edaily.co.kr/News/Read?newsId=04441126645644408&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
       }
     ],
     "ma": [
-      {
-        "top": true,
-        "headline": "‘일본의 팔란티어’로 불리는 AI 기업, 왜 주차장 회사를 샀을까? [JAPA...",
-        "source": "매일경제",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "일본 AI 기업이 주차장 관리 회사 아이텍을 인수, 첨단기술과 **오프라인 현장 인프라 통합** 전략",
-          "AI 스타트업의 기술 사업화 한계를 극복하기 위해 기존 운영 네트워크를 보유한 회사 인수 선택",
-          "IT 기업의 레거시 산업 진입, 데이터 수집 기반 구축 목적의 M&A 전략 확산 신호"
-        ],
-        "insight": "AI·디지털 기업의 오프라인 인프라/데이터 기반 기업 인수 수요 확대. 기술 고도화 단계에서 현장 네트워크 확보를 위한 인수금융·유상증자 기회 모니터링",
-        "reporter": "",
-        "url": "https://www.mk.co.kr/article/12204255"
-      },
       {
         "top": true,
         "headline": "與 \"주가누르기 방지법, 정기국회 내 처리…의무공개매수제, 의견 수렴...",
@@ -186,11 +129,9 @@
         "reporter": "",
         "url": "https://www.edaily.co.kr/News/Read?newsId=05589126645644408&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
         "summary_mode": "source_excerpt"
-      }
-    ],
-    "re": [
+      },
       {
-        "top": true,
+        "top": false,
         "headline": "[더벨]우리은행, 인수금융 빅딜 두각…롯데렌탈 공개매수도 주도",
         "source": "더벨",
         "pubDate": "2026-11-10",
@@ -201,9 +142,11 @@
         "reporter": "",
         "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611061028154920103685",
         "summary_mode": "source_excerpt"
-      },
+      }
+    ],
+    "re": [
       {
-        "top": false,
+        "top": true,
         "headline": "부동산 PF 연대보증 엮인 하도급사에 가압류 현실화···구제 방법이 없...",
         "source": "경향신문",
         "pubDate": "2026-11-10",
@@ -214,22 +157,27 @@
         "reporter": "",
         "url": "https://www.khan.co.kr/article/202611101713001",
         "summary_mode": "source_excerpt"
-      },
+      }
+    ],
+    "infra": [],
+    "hana": [],
+    "peer": [
       {
-        "top": false,
-        "headline": "구로구 역세권 3만평 땅에 창고·폐기물 가득…18년째 개발 제자리 이곳...",
-        "source": "조선일보",
+        "top": true,
+        "headline": "“순익 1조·발행어음 성과”…박종문 삼성증권 대표, 연임 변수는 ‘내...",
+        "source": "디지털데일리",
         "pubDate": "2026-11-10",
         "summary": [
-          "안쪽에는 에어컨과 주류, 가구 등을 취급하는 유통업체부터 택배회사 물류센터까지 다양한 업체가 입주해... 이후 동부제강은 계열사였던 동부화재(현 DB손해보험)에 부지를 매각했다. 일부 건물은 지금도 건축물대장상..."
+          "다만 신규 사업의 안정적인 정착을 위해 기존 경영전략을 이어갈 필요가 있다는 점은 박 대표의 연임에... 제재 대상 증권사 6곳 가운데 가장 큰 금액이다. 두 제재 모두 박 대표 개인에게 내려진 것은 아니다. 다만 현..."
         ],
         "insight": "",
         "reporter": "",
-        "url": "https://realty.chosun.com/site/data/html_dir/2026/11/10/2026111000811.html",
+        "url": "https://www.ddaily.co.kr/page/view/2026111010585978876",
         "summary_mode": "source_excerpt"
       }
     ],
-    "infra": [
+    "sto": [],
+    "productive": [
       {
         "top": true,
         "headline": "[Invest]연말 북클로징 앞둔 은행권…국민성장펀드 실적에 12월 PF까지 염...",
@@ -245,144 +193,6 @@
       },
       {
         "top": false,
-        "headline": "[전국 주요 신문 톱뉴스](10일 조간)",
-        "source": "연합뉴스",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "해법 해상풍력 협의체 새판 ▲ 울산신문 = 화재 진압 사명 시민 보호 헌신 사랑 나눔 봉사 ▲ 울산제일일보... 내달초 '금융중심지' 실사 도·정치권 막판 대응 총력 ▲ 금강일보 = '돈줄' 조이는 정부… 지방재정 자율성..."
-        ],
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.yna.co.kr/view/AKR20261110018100011?input=1195m",
-        "summary_mode": "source_excerpt"
-      }
-    ],
-    "hana": [
-      {
-        "top": true,
-        "headline": "엠비디, IPO 공모가 하단 미만…올해 3번째 [시그널]",
-        "source": "서울경제",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "10일 투자은행(IB) 업계에 따르면 엠비디는 이달 2일부터 6일까지 기관 투자자를 대상으로 공모가 수요예측을 진행했다. 회사와 상장 주관사 하나증권이 제시한 희망 공모가 밴드는 9600~1만 1700원으로 인텔리빅스는..."
-        ],
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.sedaily.com/article/20112662?ref=naver",
-        "summary_mode": "source_excerpt"
-      },
-      {
-        "top": false,
-        "headline": "“장기투자 문화 안착·성장 자본 조달에 기여해 달라”",
-        "source": "서울경제",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "미래에셋증권이 수상했다. 증권부문 최우수상은 메리츠증권·하나증권(경영·디지털 혁신 부문), KB증권... 우리투자증권·대신증권(IB〃), 한국투자증권·신한투자증권(리서치〃)이 각각 수상했다. 운용부문 대상은..."
-        ],
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.sedaily.com/article/20112659?ref=naver",
-        "summary_mode": "source_excerpt"
-      },
-      {
-        "top": false,
-        "headline": "[단독] 이지스, 바이오 신사업 본격화…헬스케어 플랫폼 만든다 [시그널...",
-        "source": "서울경제",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "10일 투자은행(IB) 업계에 따르면 이지스아시아는 지방줄기세포 기반의 뷰티·항노화 및 바이오 헬스케어... 하나캐피탈과 SK증권이 프로젝트펀드를 결성했고 이지스아시아가 투자자로 참여했다. 모닛셀은 2019년..."
-        ],
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.sedaily.com/article/20112330?ref=naver",
-        "summary_mode": "source_excerpt"
-      }
-    ],
-    "peer": [
-      {
-        "top": true,
-        "headline": "“순익 1조·발행어음 성과”…박종문 삼성증권 대표, 연임 변수는 ‘내...",
-        "source": "디지털데일리",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "다만 신규 사업의 안정적인 정착을 위해 기존 경영전략을 이어갈 필요가 있다는 점은 박 대표의 연임에... 제재 대상 증권사 6곳 가운데 가장 큰 금액이다. 두 제재 모두 박 대표 개인에게 내려진 것은 아니다. 다만 현..."
-        ],
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.ddaily.co.kr/page/view/2026111010585978876",
-        "summary_mode": "source_excerpt"
-      },
-      {
-        "top": false,
-        "headline": "미래에셋證, 3Q 수천억대 순손실 전망…스페이스X·해킹 '겹악재'",
-        "source": "연합인포맥스",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "증권사의 핵심 경쟁력인 고객 신뢰와 내부통제 역량이 실적 못지 않은 경영 과제로 떠오른 셈이다. 시장에서는 향후 스페이스X 투자자산의 변동성을 줄이기 위한 위험회피 전략과 새로운 주주환원 정책에도 관심을..."
-        ],
-        "insight": "",
-        "reporter": "",
-        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443855",
-        "summary_mode": "source_excerpt"
-      }
-    ],
-    "sto": [
-      {
-        "top": true,
-        "headline": "아이티센글로벌 \"더 안전한 AI 플랫폼 만들겠다\" [AI 대상 2026]",
-        "source": "조선일보",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "IT 컨설팅 및 아웃소싱과 대형 증권사 토큰 증권 발행(STO) 구축 등을 수행하는 아이티센글로벌은 모든 업무에 AI를 내재화하는 '올 어바웃 AI(All about AI)' 전략에 따라 AI 솔루션 전문 기업으로 전환을 가속화하고 있다...."
-        ],
-        "insight": "",
-        "reporter": "",
-        "url": "https://it.chosun.com/news/articleView.html?idxno=3000000000710",
-        "summary_mode": "source_excerpt"
-      },
-      {
-        "top": false,
-        "headline": "두나무, 디콘 2026 개최…디지털자산 글로벌 경쟁력·제도화 해법 모색",
-        "source": "전자신문",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "미국이 주식 거래의 실시간 결제(T+0)를 추진하고 거래시간 확대와 증권토큰화(STO)에 나서는 것도 블록체인 기술이 기존 금융시장에 변화를 가져온 결과라는 설명이다. 김 부회장은 “우리나라는 기술과 인재 측면에서..."
-        ],
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.etnews.com/20261110000330",
-        "summary_mode": "source_excerpt"
-      },
-      {
-        "top": false,
-        "headline": "김정애 시의원, 부동산 토큰화 시범사업 지연…법적 기반과 대상지 한정...",
-        "source": "뉴스핌",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "서울시는 지난해 9월 부동산 조각투자 시범사업을 발표하며 올해 상반기 토큰증권 공모에 들어갈 계획이라고 밝혔지만 현재까지 공모는 진행되지 않았다. 김 의원은 \"사업을 추진하겠다고 발표한 뒤 일정이 지연되면..."
-        ],
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.newspim.com/news/view/20261110001239",
-        "summary_mode": "source_excerpt"
-      }
-    ],
-    "productive": [
-      {
-        "top": true,
-        "headline": "“효율 찾아 삼자동맹\" 이기종 컴퓨팅 기반 소버린 AI 역량 강화 위해 손...",
-        "source": "동아일보",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "대한민국 국민성장펀드가 1호 투자처로 리벨리온을 선택하고, 정부가 AI 관련 대형 프로젝트를 주도하는 이유도 바로 이 토큰 생산 인프라 주권을 지키기 위해서라는 설명이다. 소버린 AI를 바라보는 개인적 시각도..."
-        ],
-        "insight": "",
-        "reporter": "",
-        "url": "https://it.donga.com/109889/",
-        "summary_mode": "source_excerpt"
-      },
-      {
-        "top": false,
         "headline": "[단독]연 40조 확충한다는 국민성장펀드, 국회 심사에 30조 목표로 제출",
         "source": "중앙일보",
         "pubDate": "2026-11-10",
@@ -392,19 +202,6 @@
         "insight": "",
         "reporter": "",
         "url": "https://www.joongang.co.kr/article/25477406",
-        "summary_mode": "source_excerpt"
-      },
-      {
-        "top": false,
-        "headline": "수도권선 발주만 받아와도 대출 … 지방선 중기 기술신용대출 감소",
-        "source": "매일경제",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "기술·자금 수도권 집중에 … 생산적 금융 명암 엇갈려 기업대출 확대가 금융권의 주요 과제로 떠오르면서... 투자자금의 수도권 쏠림은 더 심각하다. 지난해 전체 벤처투자 금액의 73%가 수도권에 집중됐다. 기술기업의..."
-        ],
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.mk.co.kr/article/12204130",
         "summary_mode": "source_excerpt"
       }
     ]
