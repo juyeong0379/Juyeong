@@ -1,5 +1,7 @@
 """Reclassify already-published news with exclusive IB sector rules.
 
+Safe to run multiple times on current and archived news.
+
 Idempotent. Preserves genuine article URL, source, original summary provenance
 and publication date; removes stories unrelated to any IB category.
 """
