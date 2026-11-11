@@ -1,0 +1,37 @@
+name: Repair IB News Sector Archives
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/repair_categories.py'
+  workflow_dispatch: {}
+
+concurrency:
+  group: ib-daily-briefing
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Correct historical and today's archive categories
+        run: python scripts/repair_categories.py
+      - name: Publish corrected categorization
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "briefing-bot@users.noreply.github.com"
+          git add docs/data.json docs/archive
+          if ! git diff --staged --quiet; then
+            git commit -m "fix: 실제 거래유형에 맞춰 IB 뉴스 카테고리 재분류"
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
