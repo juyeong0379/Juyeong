@@ -30,7 +30,7 @@ from email.utils import parsedate_to_datetime
 import requests
 import anthropic
 from sector_rules import classify_sector, sector_matches
-from article_digest import digest
+from article_digest import digest, preview_digest
 from ib_strategy import strategy_insight
 from ib_planning_notes import planning_insight
 from report_sources import collect_reports
@@ -324,8 +324,9 @@ def fallback_classify_batch(meta: dict, batch: list) -> list:
             continue
         # Candidate stage is metadata-only to meet the 08:00 publication window.
         # Full-text requests are made only for the 2–3 final chosen stories.
-        summary = [desc[:180]]
-        mode = "source_excerpt"
+        preview = preview_digest(title, desc)
+        summary = preview if preview else [desc[:180]]
+        mode = "preview_digest" if preview else "source_excerpt"
         age_hours = (datetime.now(KST) - c["pub_dt"]).total_seconds() / 3600
         score = 45 + (2 if c["source"] in PREFERRED_IB_OUTLETS else 0)
         score += min(14, len(desc)/20) + max(0, 13 - age_hours/8)
@@ -520,6 +521,12 @@ def build_section(meta: dict, used_urls: set) -> list:
     for item in top:
         if not item.get("insight") and item.get("summary_mode")=="source_digest":
             item["insight"] = strategy_insight(meta["key"], item["title"], item["summary"])
+    for item in top:
+        if item.get("summary_mode")=="source_excerpt":
+            preview=preview_digest(item["title"],item.get("description",""))
+            if preview:
+                item["summary"]=preview
+                item["summary_mode"]="preview_digest"
     used_urls.update(item["url"] for item in top)
     print(f"  → {len(top)}건 선정")
 
