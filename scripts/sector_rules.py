@@ -6,7 +6,7 @@ Unclear or off-topic news is excluded rather than assigned speculatively.
 """
 import re
 
-PRECEDENCE = ("re","infra","sto","hana","ecm","ma","productive","corp","peer")
+PRECEDENCE = ("re","infra","sto","hana","ecm","ma","growthfund","productive","corp","peer")
 PREFIX = re.compile(r"^(?:\s*\[(?:더벨|Invest|단독|IPO 레이더|기획|분석|이슈|특징|리포트|Company Watch|THE COMPASS|투자노트|금융지주 임원 인사 전망)[^\]]*\]\s*)+",re.I)
 
 def has(pattern, text):
@@ -67,6 +67,16 @@ def classify_sector(title, description=""):
         return "ma"
     if has(r"PEF|사모펀드",title) and has(r"경영권|인수금융|바이아웃|매각|인수|회수|인수합병",title+" "+desc):
         return "ma"
+
+    # 7) National Growth Fund: specifically about the Fund's funding,
+    # selection, investment, allocation or announced governance.
+    # Other policy/venture finance stays in productive finance.
+    national = has(r"국민\\s*성장\\s*펀드|국민성장펀드|국민성장기금", title)
+    national_context = has(r"국민\\s*성장\\s*펀드|국민성장펀드|국민성장기금", desc)
+    decision = has(r"출자|투자|배분|공급|집행|선정|조성|금융지원|계획|운용|사업", title + " " + desc)
+    if (national or (national_context and decision
+                      and has(r"정책금융|성장펀드|지방.*금융|지역.*금융", title))) and decision:
+        return "growthfund"
 
     # 7) Productive finance must be actual investment / policy finance.
     if has(r"생산적\s*금융|국민\s*성장\s*펀드|모험\s*자본|벤처(투자|펀드|캐피탈)|정책\s*금융|성장\s*펀드|BDC|기업\s*성장\s*집합\s*투자|창업\s*투자",title):
