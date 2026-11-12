@@ -9,6 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from datetime import datetime
 from article_digest import digest
+from ib_planning_notes import planning_insight
 
 DOCS = Path(__file__).resolve().parents[1] / "docs"
 LATEST = DOCS / "data.json"
@@ -37,8 +38,15 @@ def main():
                 item["summary"]=summary
                 item["summary_mode"]="source_digest"
                 enriched+=1
-    if enriched==0:
-        print("No publicly readable full articles; preserving original source descriptions.")
+    insights=0
+    for sector, group in payload.get("categories", {}).items():
+        for item in group:
+            note=planning_insight(sector, item.get("headline",""), item.get("summary",[]))
+            if note and not item.get("insight"):
+                item["insight"]=note
+                insights+=1
+    if enriched==0 and insights==0:
+        print("No changes; preserve existing source content.")
         return
     text=json.dumps(payload,ensure_ascii=False,indent=2)+"\n"
     LATEST.write_text(text,encoding="utf-8")
@@ -52,6 +60,8 @@ def main():
                 if other and other.get("summary_mode")=="source_digest":
                     item["summary"]=other["summary"]
                     item["summary_mode"]="source_digest"
+                if other:
+                    item["insight"]=other.get("insight","")
         day.write_text(json.dumps(archived,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(f"Enriched {enriched} of {len(articles)} verified original sources; all URLs retained.",flush=True)
 
