@@ -71,8 +71,8 @@ def classify_sector(title, description=""):
     # 7) National Growth Fund: specifically about the Fund's funding,
     # selection, investment, allocation or announced governance.
     # Other policy/venture finance stays in productive finance.
-    national = has(r"국민\\s*성장\\s*펀드|국민성장펀드|국민성장기금", title)
-    national_context = has(r"국민\\s*성장\\s*펀드|국민성장펀드|국민성장기금", desc)
+    national = has(r"국민\s*성장\s*펀드|국민성장펀드|국민성장기금", title)
+    national_context = has(r"국민\s*성장\s*펀드|국민성장펀드|국민성장기금", desc)
     decision = has(r"출자|투자|배분|공급|집행|선정|조성|금융지원|계획|운용|사업", title + " " + desc)
     if (national or (national_context and decision
                       and has(r"정책금융|성장펀드|지방.*금융|지역.*금융", title))) and decision:
