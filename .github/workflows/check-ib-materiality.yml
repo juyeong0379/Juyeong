@@ -1,0 +1,52 @@
+name: Test Market-Moving IB Selection
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/check-ib-materiality.yml'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  selection-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Test important policy against routine financing announcement
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          PYTHONPATH=scripts python - <<'PY'
+          from datetime import datetime
+          from generate_briefing import classify_batch, SECTIONS, KST
+          meta={**SECTIONS["ecm"],"key":"ecm"}
+          examples=[
+              {
+                "title":"코너스톤 투자자·사전수요예측 제도 시행, IPO 주관사 기관 확보 방식 변화",
+                "description":"코너스톤 투자자와 사전수요예측 제도가 시행되며 기관투자자 배정 및 공모가 산정 방식이 달라진다. IPO 주관사의 기관 확보와 공모 구조 설계에 변화가 예상된다.",
+                "source":"한국경제",
+              },
+              {
+                "title":"A사 250억원 유상증자 청약 마무리",
+                "description":"A사가 250억원 유상증자를 완료했다. 공시된 자금은 기존 운영비로 활용할 예정이며 자금조달 관행이나 규제 변화는 없다.",
+                "source":"한국경제",
+              },
+          ]
+          batch=[{**x,"pub_dt":datetime.now(KST),"url":"https://example.com/"+str(i),"reporter":""}
+                 for i,x in enumerate(examples)]
+          selected=classify_batch(meta,batch)
+          for item in selected:
+              print("Selected:",item["title"],"Summary lines:",len(item["summary"]))
+          assert any("코너스톤" in x["title"] for x in selected), "Major regulatory change should qualify"
+          assert not any("A사 250억원" in x["title"] for x in selected), "Routine financing should be excluded"
+          print("PASS: major policy kept; routine deal removed. NO site files modified.")
+          PY
