@@ -629,11 +629,9 @@ def main():
 
     out_path = os.path.join(os.path.dirname(__file__), "..", "docs", "data.json")
     publishable=sum(len(v) for v in data.values())
-    if publishable < 15:
-        raise RuntimeError(
-            f"검증된 3줄 요약이 {publishable}건뿐입니다. "
-            "기존 정상 브리핑을 보존하고 AI API 크레딧/기사 본문 접근 상태를 점검하세요."
-        )
+    # A sector may have 0–3 genuinely useful articles. No minimum quota.
+    if publishable == 0:
+        raise RuntimeError("검증된 기사가 0건입니다. 기존 정상 브리핑을 보존합니다.")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     # 선택 날짜의 뉴스를 보관하여 최근 30일 검색과 과거 조회에 활용
