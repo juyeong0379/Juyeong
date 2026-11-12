@@ -320,13 +320,10 @@ def fallback_classify_batch(meta: dict, batch: list) -> list:
             continue
         if re.search(r"업무협약|협약식|기념식|인사발령|지점 오픈|행사 개최", title):
             continue
-        article_points = digest(title, c["url"], desc)
-        if article_points:
-            summary = article_points
-            mode = "source_digest"
-        else:
-            summary = [desc[:180]]
-            mode = "source_excerpt"
+        # Candidate stage is metadata-only to meet the 08:00 publication window.
+        # Full-text requests are made only for the 2–3 final chosen stories.
+        summary = [desc[:180]]
+        mode = "source_excerpt"
         age_hours = (datetime.now(KST) - c["pub_dt"]).total_seconds() / 3600
         score = 45 + (2 if c["source"] in PREFERRED_IB_OUTLETS else 0)
         score += min(14, len(desc)/20) + max(0, 13 - age_hours/8)
@@ -499,6 +496,21 @@ def build_section(meta: dict, used_urls: set) -> list:
         top = selected[:TOP_N_PER_SECTION]
     else:
         top = scored[:TOP_N_PER_SECTION]
+    # Only the chosen stories are read in full; preserve all original source URLs.
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    to_enrich = [item for item in top if item.get("summary_mode") == "source_excerpt"]
+    if to_enrich:
+        with ThreadPoolExecutor(max_workers=3) as executor:
+            tasks = {executor.submit(digest, item["title"], item["url"],
+                                     item.get("description","")): item for item in to_enrich}
+            for future in as_completed(tasks):
+                try:
+                    summary = future.result()
+                    if summary:
+                        tasks[future]["summary"] = summary
+                        tasks[future]["summary_mode"] = "source_digest"
+                except Exception as exc:
+                    print(f"  [경고] 원문 핵심 추출 불가: {exc}")
     used_urls.update(item["url"] for item in top)
     print(f"  → {len(top)}건 선정")
 
