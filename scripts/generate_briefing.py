@@ -6,7 +6,7 @@ IB그룹 데일리 뉴스 모니터링 자동 생성 스크립트
   1) 섹션별 키워드로 네이버 뉴스 검색 API를 호출해 후보 기사를 모은다.
      - 메이저 언론사(경제지·IB 전문지·종합지) 기사만 남긴다.
      - [속보]·[포토]·시황·특징주 같은 단신은 제목 단계에서 제외한다.
-  2) 후보 기사를 Claude API에 10개씩 보내, 섹션 기준에 맞는지 판단하고
+  2) 후보 기사를 OpenAI API에 10개씩 보내, 섹션 기준에 맞는지 판단하고
      개조식 요약·기자명·점수를 받는다.
   3) 최종 점수 = 시의성 15% + 중요성 35% + 심층도 35% + 퀄리티 15%
      심층도가 낮은 기사는 탈락. 섹션별 상위 N개만 남긴다.
@@ -16,7 +16,7 @@ IB그룹 데일리 뉴스 모니터링 자동 생성 스크립트
 필요한 환경변수
   - NAVER_CLIENT_ID       (NAVER API HUB의 X-NCP-APIGW-API-KEY-ID)
   - NAVER_CLIENT_SECRET   (NAVER API HUB의 X-NCP-APIGW-API-KEY)
-  - ANTHROPIC_API_KEY     (console.anthropic.com 에서 발급)
+  - OPENAI_API_KEY       (platform.openai.com에서 발급한 GitHub Secret)
 """
 
 import os
@@ -29,7 +29,7 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 import requests
-import anthropic
+from openai import OpenAI, AuthenticationError, PermissionDeniedError, RateLimitError
 from sector_rules import classify_sector, sector_matches
 from article_digest import digest, preview_digest
 from news_quality import duplicate, validate_digest, deduplicate
@@ -37,12 +37,12 @@ from insight_policy import accept_insight
 from report_sources import collect_reports
 
 KST = timezone(timedelta(hours=9))
-MODEL = "claude-haiku-4-5-20251001"
-BATCH_SIZE = 10
+MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
+BATCH_SIZE = 8
 
 TOP_N_PER_SECTION = 3      # 섹션별로 보여줄 기사 수
 NAVER_PER_KEYWORD = 30     # 키워드당 네이버에서 가져올 기사 수 (언론사 필터 전)
-MAX_CANDIDATES = 40        # 섹션별로 Claude에게 보낼 후보 최대 수
+MAX_CANDIDATES = 24        # 섹션별로 OpenAI에게 보낼 후보 최대 수
 MIN_DEPTH = 68
 MIN_QUALITY = 68
 MIN_IMPORTANCE = 62
@@ -255,37 +255,48 @@ def collect_candidates(keywords: list, limit: int = None) -> list:
 
 
 # ─────────────────────────────────────────────────────────────
-# 2) Claude로 분류·요약·점수
+# 2) OpenAI로 분류·요약·점수
 # ─────────────────────────────────────────────────────────────
-client = anthropic.Anthropic()
-CLAUDE_UNAVAILABLE = False
+_openai_client = None
 
-
-def ask_claude_json(prompt: str, max_tokens: int):
-    """Claude에게 JSON으로만 답하게 하고 파싱해서 돌려준다. 실패하면 None."""
-    global CLAUDE_UNAVAILABLE
-    if CLAUDE_UNAVAILABLE:
-        return None
+def ask_openai_json(prompt: str, max_tokens: int):
+    """Ask the OpenAI Responses API for JSON judgments of article candidates."""
+    global _openai_client
+    if not os.getenv("OPENAI_API_KEY"):
+        raise RuntimeError("OPENAI_API_KEY GitHub Actions secret 누락: 기존 뉴스 보존")
+    if _openai_client is None:
+        _openai_client = OpenAI(timeout=75.0, max_retries=2)
     try:
-        resp = client.messages.create(
+        result = _openai_client.responses.create(
             model=MODEL,
-            max_tokens=max_tokens,
-            messages=[{"role": "user", "content": prompt}],
+            instructions=(
+                "증권사 IB기획실 뉴스 품질 평가 전문 분석가. "
+                "정확한 JSON 배열만 출력. Markdown이나 설명은 금지. "
+                "제목과 설명에서 확인되지 않는 사실, 숫자, 당사자를 만들지 말 것."
+            ),
+            input=prompt,
+            max_output_tokens=max_tokens,
+            store=False,
         )
-        raw = resp.content[0].text.strip()
-    except Exception as e:
-        if "credit balance is too low" in str(e).lower():
-            CLAUDE_UNAVAILABLE = True
-            print("  [경고] Claude API 크레딧 부족: 출처 발췌 모드로 전환", flush=True)
-        else:
-            print(f"  [경고] Claude API 호출 실패: {e}")
+        raw = (result.output_text or "").strip()
+    except (AuthenticationError, PermissionDeniedError) as exc:
+        raise RuntimeError("OpenAI API 인증/권한 오류: API 키 및 결제 설정 확인 필요") from exc
+    except RateLimitError as exc:
+        raise RuntimeError("OpenAI API 사용 한도/크레딧 오류: 기존 뉴스 보존") from exc
+    except Exception as exc:
+        print(f"  [경고] OpenAI API 요청 실패 ({type(exc).__name__}): {exc}")
         return None
-
+    if not raw:
+        print("  [경고] OpenAI API 응답이 비어 있습니다.")
+        return None
     raw = re.sub(r"^```(?:json)?|```$", "", raw, flags=re.MULTILINE).strip()
     try:
-        return json.loads(raw)
+        payload = json.loads(raw)
+        if isinstance(payload, dict) and isinstance(payload.get("articles"), list):
+            return payload["articles"]
+        return payload if isinstance(payload, list) else None
     except json.JSONDecodeError:
-        print(f"  [경고] JSON 파싱 실패\n--- 원본 응답 ---\n{raw[:1200]}\n--- 끝 ---")
+        print(f"  [경고] OpenAI JSON 파싱 실패: {raw[:350]}")
         return None
 
 
@@ -320,7 +331,7 @@ FALLBACK_TOPIC_PATTERNS = {
 }
 
 def fallback_classify_batch(meta: dict, batch: list) -> list:
-    """Use verified source-article key points if Claude credits are exhausted.
+    """Use verified source-article key points if OpenAI credits are exhausted.
 
     When the full article cannot be read, the Naver snippet stays explicitly
     labeled and is never presented as a three-point substantive summary.
@@ -385,7 +396,7 @@ def classify_batch(meta: dict, batch: list) -> list:
 - quality: 내용이 구체적이고 신뢰할 만한지
 
 summary 작성 규칙 (개조식):
-- 2~3개 항목. 각 항목 50~70자로 맥락이 드러나게
+- 반드시 3개 항목. 각 항목 40~75자의 완결된 개조식 문장으로 요약할 것
 - 명사형 종결 ("~했다" X → "~흥행", "~확대", "~부담 가중" O)
 - 1번째: 무슨 일인지. 숫자·금액·당사자를 구체적으로
 - 2번째: 배경이나 맥락. 왜 지금 이런 일이 벌어졌는지
@@ -403,7 +414,7 @@ summary 작성 규칙 (개조식):
 - 좋은 예: 'AI 데이터센터 전력·임차계약 리스크 점검 및 그룹 공동 금융주선 가능성 검토'
 - 좋은 예: 'IPO 회수시장 위축에 대응한 프리IPO·후속투자 금융수요 모니터링'
 - 각 항목에서 가장 중요한 부분(숫자, 금액, 당사자, 핵심 변화) 1곳을 **별표 두 개**로 감쌀 것
-- 기사에 근거가 없는 내용은 쓰지 말 것. 3번째가 억지스러우면 2개만 써도 됨
+- 근거가 없어 3개의 사실을 작성할 수 없는 기사는 is_relevant=false로 분류하고 추측성 요약을 만들지 말 것
 - 예: ["3,000억원 모집에 **2.4조원 주문**이 몰리며 5,000억원으로 증액 발행 결정",
        "연말 기관 자금 집행과 금리 하락 기대가 겹치며 **우량 크레딧 수요 급증**",
        "A급 이하 발행사는 **미매각 부담 여전**, 발행 시점 분산과 금리 가산 불가피"]
@@ -432,7 +443,7 @@ summary 작성 규칙 (개조식):
 {numbered}
 """
 
-    judgments = ask_claude_json(prompt, max_tokens=4000)
+    judgments = ask_openai_json(prompt, max_tokens=5500)
     if not isinstance(judgments, list):
         print(f"  [경고] '{meta['label']}' AI 요약 불가 → 원문 검색 발췌 모드")
         return fallback_classify_batch(meta, batch)
@@ -521,7 +532,7 @@ def build_section(meta: dict, used_urls: set) -> list:
         and c["url"] not in used_urls
         and sector_matches(meta["key"], c["title"], c.get("description", ""))
     ][:MAX_CANDIDATES]
-    print(f"  후보 {len(candidates)}건 → Claude 분류 요청 중...")
+    print(f"  후보 {len(candidates)}건 → OpenAI 분류 요청 중...")
 
     scored = []
     for start in range(0, len(candidates), BATCH_SIZE):
@@ -530,12 +541,12 @@ def build_section(meta: dict, used_urls: set) -> list:
     scored=deduplicate(scored)
 
     # 기사 수 부족 시 후보군 확대. 적합한 실재 기사가 없으면 임의로 채우지 않음.
-    if len(scored) < 2:
+    if len(scored) == 0:
         seen = {c["url"] for c in candidates}
         extra = [c for c in collect_candidates(meta["keywords"])
                  if not repeated_last_days(c)
                  and c["url"] not in seen and c["url"] not in used_urls
-                 and sector_matches(meta["key"], c["title"], c.get("description", ""))][:30]
+                 and sector_matches(meta["key"], c["title"], c.get("description", ""))][:12]
         for start in range(0, len(extra), BATCH_SIZE):
             scored.extend(classify_batch(meta, extra[start:start + BATCH_SIZE]))
         scored.sort(key=lambda x: x["score"], reverse=True)
@@ -608,6 +619,8 @@ def build_section(meta: dict, used_urls: set) -> list:
 # 4) 실행
 # ─────────────────────────────────────────────────────────────
 def main():
+    if not os.getenv('OPENAI_API_KEY'):
+        raise RuntimeError('OPENAI_API_KEY 미등록: 기존 브리핑 보존')
     global RECENT_HEADLINES
     RECENT_HEADLINES = load_recent_headlines(datetime.now(KST))
     used_urls = set()
