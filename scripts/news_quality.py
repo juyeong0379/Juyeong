@@ -27,7 +27,7 @@ def entity_tokens(title):
     return {t for t in ENTITIES if t.casefold() in (title or "").casefold()}
 
 NUMERIC_CLAIM = re.compile(
-    r"(?<![A-Za-z0-9])\\d[\\d,.]*(?:\\s*)(?:조원|억원|억달러|만달러|"
+    r"(?<![A-Za-z0-9])\d[\d,.]*(?:\s*)(?:조원|억원|억달러|만달러|"
     r"조|억|만|%|bp|GW|MW|년|월|일|개월|명|건|곳|개|배|주)",
     re.I,
 )
@@ -40,7 +40,7 @@ def numeric_claims_grounded(summary, source):
     published as though the model had read the full article.
     """
     def normalize(x):
-        return re.sub(r"[\\s,]", "", str(x)).lower()
+        return re.sub(r"[\s,]", "", str(x)).lower()
     reference=normalize(source)
     numbers={normalize(x) for line in summary
              for x in NUMERIC_CLAIM.findall(str(line))}
