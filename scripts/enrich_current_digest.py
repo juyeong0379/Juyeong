@@ -8,7 +8,7 @@ import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from datetime import datetime
-from article_digest import digest
+from article_digest import digest, preview_digest
 from ib_planning_notes import planning_insight
 
 DOCS = Path(__file__).resolve().parents[1] / "docs"
@@ -38,6 +38,12 @@ def main():
                 item["summary"]=summary
                 item["summary_mode"]="source_digest"
                 enriched+=1
+            elif item.get("summary_mode")=="source_excerpt":
+                preview=preview_digest(item.get("headline","")," ".join(item.get("summary",[])))
+                if preview:
+                    item["summary"]=preview
+                    item["summary_mode"]="preview_digest"
+                    enriched+=1
     insights=0
     for sector, group in payload.get("categories", {}).items():
         for item in group:
@@ -57,7 +63,7 @@ def main():
         for group in archived.get("categories",{}).values():
             for item in group:
                 other=by_url.get(item.get("url"))
-                if other and other.get("summary_mode")=="source_digest":
+                if other and other.get("summary_mode") in ("source_digest","preview_digest"):
                     item["summary"]=other["summary"]
                     item["summary_mode"]="source_digest"
                 if other:
