@@ -10,7 +10,11 @@ function briefDayShift(day, offset) {
   return d.toISOString().slice(0, 10);
 }
 function briefCategory(key, item) {
-  if (["ecm","corp","ma","re","infra","hana","peer","sto","productive"].includes(key)) return key;
+  if (["ecm","corp","ma","re","infra","hana","peer","sto","productive","growthfund"].includes(key)) {
+    const title=String(item.headline||item.title||"");
+    if(key==="productive" && /국민\s*성장\s*펀드/.test(title)) return "growthfund";
+    return key;
+  }
   const text = [item.headline, item.title, ...(Array.isArray(item.summary) ? item.summary : [])].join(" ");
   if (key === "ipo_ecm") return "ecm";
   if (key === "corp_fin") return /M&A|인수금융|인수합병|사모펀드|경영권|매각|바이아웃|PEF/i.test(text) ? "ma" : "corp";
