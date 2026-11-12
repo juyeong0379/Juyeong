@@ -57,6 +57,10 @@ def classify_sector(title, description=""):
                 return "peer"
 
     # 5) Equity financing and listing regulation.
+    # Include market-wide duplicate-listing regulation even when no "IPO" occurs
+    # in the headline. This is key for financing and FI exit analysis.
+    if has(r"중복\s*상장|자회사\s*(?:기업공개|상장)|모자회사\s*동시상장|모회사\s*주주\s*동의", title):
+        return "ecm"
     if has(r"\bIPO\b|공모(주|가|청약|시장|규모)?|상장(예비심사|심사|추진|철회|폐지|규정|기업|주관|예정)|유상증자|메자닌|블록딜|전환사채|신주인수권부사채|코너스톤|프리\s*IPO|주식\s*발행",title):
         if not has(r"상장사\s*실적|상장사\s*영업이익|상장\s*이후\s*매출",title) or has(r"공모|IPO|상장규정|상장폐지|상장심사",title):
             return "ecm"
