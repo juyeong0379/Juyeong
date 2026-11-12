@@ -1,0 +1,40 @@
+name: Enrich Current IB Article Summaries
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/enrich_current_digest.py'
+  workflow_dispatch: {}
+
+concurrency:
+  group: ib-daily-briefing
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install requirements
+        run: pip install -r requirements.txt
+      - name: Summarize accessible original publisher articles
+        run: python scripts/enrich_current_digest.py
+      - name: Commit summaries without changing original article URLs
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "briefing-bot@users.noreply.github.com"
+          git add docs/data.json docs/archive
+          if ! git diff --staged --quiet; then
+            git commit -m "feat: 검증된 기사 본문 핵심 요약 보강"
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
