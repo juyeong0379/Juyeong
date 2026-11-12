@@ -8,6 +8,7 @@ on:
       - 'scripts/test_openai_adapter.py'
       - 'scripts/test_news_quality.py'
       - 'scripts/news_quality.py'
+      - 'scripts/news_materiality.py'
       - 'scripts/generate_briefing.py'
       - 'requirements.txt'
   workflow_dispatch: {}
