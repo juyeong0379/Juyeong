@@ -51,7 +51,7 @@ def check():
                           "중복상장 규제에 따른 해외 자회사 IPO 조달 제약") == "ecm"
     assert classify_sector("네이버파이낸셜·두나무 기업결합, 중복상장 규제 변수",
                           "향후 IPO와 주주보호 쟁점") == "ecm"
-        print("PASS: duplicate-event and source-grounded number and IB materiality checks")
+    print("PASS: duplicate-event and source-grounded number and IB materiality checks")
 
 if __name__ == "__main__":
     check()
