@@ -51,6 +51,22 @@ def check():
                           "중복상장 규제에 따른 해외 자회사 IPO 조달 제약") == "ecm"
     assert classify_sector("네이버파이낸셜·두나무 기업결합, 중복상장 규제 변수",
                           "향후 IPO와 주주보호 쟁점") == "ecm"
+    assert classify_sector(
+        "정부 1호 타이틀 신안우이해상풍력 중단 위기",
+        "국민성장펀드 1호 사업, EPC 공사대금 미지급 분쟁",
+    ) == "growthfund", "Fund's inaugural-project risk must be on Growth Fund tab"
+    assert classify_sector(
+        "국민성장펀드 10조 목표 차이와 예산심사 논란",
+        "연간 40조 투자 목표와 제출 자료의 차이",
+    ) == "growthfund"
+    assert classify_sector(
+        "하나금융, 기관 중심이던 IR 개인주주로 확대",
+        "하나금융 기업가치 제고·주주환원 IR 간담회 개최",
+    ) == "hana"
+    assert classify_sector(
+        "하나금융, 누적 순익 3.6조 견조…하나은행 건전성 관리 총력",
+        "대손비용과 NPL 커버리지비율 부담",
+    ) == "hana"
     print("PASS: duplicate-event and source-grounded number and IB materiality checks")
 
 if __name__ == "__main__":
