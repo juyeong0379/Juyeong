@@ -93,12 +93,19 @@
       "emoji": "🌱",
       "label": "생산적금융",
       "desc": "모험자본·성장산업·생산적금융 정책"
+    },
+    {
+      "key": "growthfund",
+      "no": "10",
+      "emoji": "🏦",
+      "label": "국민성장펀드",
+      "desc": "국민성장펀드·정책·출자·투자 집행"
     }
   ],
   "categories": {
     "ecm": [
       {
-        "top": false,
+        "top": true,
         "headline": "[더벨][크리오스 IPO] 외형 줄고 적자전환…부채비율도 600% 돌파",
         "source": "더벨",
         "pubDate": "2026-11-12",
@@ -400,21 +407,6 @@
     "productive": [
       {
         "top": true,
-        "headline": "“지방 정책자금 공급 차질 없이“… 대구서 두번째 ‘정책금융 동행’",
-        "source": "조선비즈",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "금융당국, 대구에서 지역 정책금융 공급 확대를 위한 현장 협의 추진",
-          "150조원 규모 국민성장펀드 가운데 40%를 지방에 배분하는 정책 방향 제시",
-          "지역 전용 펀드와 정책 금융기관 지원으로 비수도권 기업의 성장자금 공급 확대 추진"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "지방 기업 대상 정책자금과 후속 민간 투자·기업금융 연계 수요 검토",
-        "reporter": "",
-        "url": "https://biz.chosun.com/stock/finance/2026/11/12/UEEFUOQGLZFQJNKYMEC3M4VTCU/?utm_source=naver&utm_medium=original&utm_campaign=biz"
-      },
-      {
-        "top": false,
         "headline": "순천시, 1,313억 지역성장펀드 참여…미래산업 투자 확대",
         "source": "아시아경제",
         "pubDate": "2026-11-12",
@@ -442,6 +434,23 @@
         "insight": "발행어음 운용수익·모험자본 공급실적·자산한도 관리의 균형 검토",
         "reporter": "",
         "url": "https://www.investchosun.com/site/data/html_dir/2026/11/10/2026111080158.html"
+      }
+    ],
+    "growthfund": [
+      {
+        "top": true,
+        "headline": "“지방 정책자금 공급 차질 없이“… 대구서 두번째 ‘정책금융 동행’",
+        "source": "조선비즈",
+        "pubDate": "2026-11-12",
+        "summary": [
+          "금융당국, 대구에서 지역 정책금융 공급 확대를 위한 현장 협의 추진",
+          "150조원 규모 국민성장펀드 가운데 40%를 지방에 배분하는 정책 방향 제시",
+          "지역 전용 펀드와 정책 금융기관 지원으로 비수도권 기업의 성장자금 공급 확대 추진"
+        ],
+        "summary_mode": "editor_verified",
+        "insight": "지방 기업 대상 정책자금과 후속 민간 투자·기업금융 연계 수요 검토",
+        "reporter": "",
+        "url": "https://biz.chosun.com/stock/finance/2026/11/12/UEEFUOQGLZFQJNKYMEC3M4VTCU/?utm_source=naver&utm_medium=original&utm_campaign=biz"
       }
     ]
   }
