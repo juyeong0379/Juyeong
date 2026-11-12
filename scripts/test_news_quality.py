@@ -1,5 +1,6 @@
 """Offline regression tests; this module never calls any API."""
 from news_quality import duplicate, numeric_claims_grounded, deduplicate
+from news_materiality import is_material_news
 
 def check():
     first={"title":"금감원, IMA·발행어음 증권사에 고금리 경쟁 자제 당부","url":"https://example.com/a"}
@@ -20,7 +21,30 @@ def check():
         ["사업 목표 200조원","성장펀드 지원","지역 투자 확대"],
         "사업 목표 150조원, 국민성장펀드 지역 투자 확대"
     ), "Unsupported magnitude must be blocked"
-    print("PASS: duplicate-event and source-grounded number checks")
+    material={
+        "materiality":88,"importance":90,"depth":83,"quality":87,
+        "impact_type":"policy_regulation",
+        "impact_reason":"코너스톤 투자자 제도 도입으로 IPO 기관 배정과 주관 경쟁의 새로운 판단 기준 발생",
+        "impact_evidence":"코너스톤 투자자 제도 시행",
+    }
+    title="코너스톤 투자자 제도 시행, IPO 주관 전략 변화"
+    assert is_material_news(material,title,"기관 투자자 배정 방식 변화로 공모시장 주관 경쟁 영향")
+    # Amount alone, or a company's ordinary results, is not enough.
+    routine={**material,"impact_type":"transaction_precedent","materiality":68,
+             "impact_evidence":"2,000억원 회사채 발행"}
+    assert not is_material_news(routine,"A사 2,000억원 회사채 발행 완료","2,000억원 회사채 발행 공시")
+    generic={**material,"impact_reason":"시장 확대"}
+    assert not is_material_news(generic,title,"코너스톤 투자자 제도 시행")
+    invented={**material,"impact_evidence":"전혀 없는 정책 변경"}
+    assert not is_material_news(invented,title,"코너스톤 투자자 제도 시행")
+    # A small individual transaction is eligible only if it establishes
+    # a concrete financial-structure precedent and has source evidence.
+    precedent={**material,"materiality":90,
+               "impact_type":"transaction_precedent",
+               "impact_reason":"신규 재구조화 방식의 선례로 부동산 PF 위험 분담과 차환 방식에 영향",
+               "impact_evidence":"첫 PF 재구조화 사례"}
+    assert is_material_news(precedent,"첫 PF 재구조화 사례 발표","소규모 자산의 새로운 금융구조 적용")
+    print("PASS: duplicate-event and source-grounded number and IB materiality checks")
 
 if __name__ == "__main__":
     check()
