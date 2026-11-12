@@ -1,6 +1,7 @@
 """Offline regression tests; this module never calls any API."""
 from news_quality import duplicate, numeric_claims_grounded, deduplicate
 from news_materiality import is_material_news
+from sector_rules import classify_sector
 
 def check():
     first={"title":"금감원, IMA·발행어음 증권사에 고금리 경쟁 자제 당부","url":"https://example.com/a"}
@@ -44,7 +45,13 @@ def check():
                "impact_reason":"신규 재구조화 방식의 선례로 부동산 PF 위험 분담과 차환 방식에 영향",
                "impact_evidence":"첫 PF 재구조화 사례"}
     assert is_material_news(precedent,"첫 PF 재구조화 사례 발표","소규모 자산의 새로운 금융구조 적용")
-    print("PASS: duplicate-event and source-grounded number and IB materiality checks")
+    assert classify_sector("'대기업과 다르다'…자회사 상장 절실한 중견기업들, 내년 주총이 분수령",
+                          "중복상장 규제로 FI 투자금 회수 부담 확대") == "ecm"
+    assert classify_sector("[중복상장 규제 진단] '솔리다임 닮은꼴' 보스턴다이내믹스, 아틀라스 양산 자금은",
+                          "중복상장 규제에 따른 해외 자회사 IPO 조달 제약") == "ecm"
+    assert classify_sector("네이버파이낸셜·두나무 기업결합, 중복상장 규제 변수",
+                          "향후 IPO와 주주보호 쟁점") == "ecm"
+        print("PASS: duplicate-event and source-grounded number and IB materiality checks")
 
 if __name__ == "__main__":
     check()
