@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12 08:07 KST",
+  "generated_at": "2026-11-12 12:12 KST",
   "reports": [
     {
       "id": "report-1",
@@ -13,8 +13,7 @@
         "https://www.ddaily.co.kr/page/view/2026111010585978876",
         "https://www.hankyung.com/article/202611107549r",
         "https://www.investchosun.com/site/data/html_dir/2026/11/10/2026111080102.html",
-        "https://www.sedaily.com/article/20113124?ref=naver",
-        "https://www.sedaily.com/article/20113156?ref=naver"
+        "https://www.sedaily.com/article/20113124?ref=naver"
       ]
     },
     {
@@ -25,8 +24,8 @@
       "url": "https://www.bok.or.kr/portal/bbs/B0000565/view.do?menuNo=201757&nttId=11065947",
       "type": "국제경제이슈",
       "related_article_urls": [
+        "https://news.einfomax.co.kr/news/articleView.html?idxno=4443693",
         "https://news.einfomax.co.kr/news/articleView.html?idxno=4444108",
-        "https://www.bloter.net/news/articleView.html?idxno=678107",
         "https://www.newspim.com/news/view/20261110001225"
       ]
     }
@@ -100,16 +99,29 @@
     "ecm": [
       {
         "top": true,
-        "headline": "[더벨][하나에어로다이내믹스 IPO] 대표이사 겨냥 진정 '돌발변수'…”...",
+        "headline": "[더벨][thebell interview | 패스트파이브 IPO] \"공유 경제 한계 넘는다…...",
         "source": "더벨",
         "pubDate": "2026-11-12",
         "summary": [
-          "진정이 접수된 6일은 하나에어로다이내믹스의 기관투자자 대상 수요예측 마지막 날이었다. 투자자 보호... 아니겠느냐\"며 \"IPO 과정에서 최대주주나 등기임원 등에 대한 개인적인 분쟁을 사유로 진정서가 접수되는 일이..."
+          "패스트파이브는 6년여의 준비 끝에 지난 5일 본격적으로 한국거래소의 상장 예비심사를 청구했다. IPO를 통해 확보한 자금은 공유오피스 지점 수 확대와 디지털 플랫폼 연구개발(R&D), AI 관련 기업 입주 수요 증가에 따른..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611101609514760103679"
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611101406307120102014"
+      },
+      {
+        "top": false,
+        "headline": "[더벨][크리오스 IPO] 외형 줄고 적자전환…부채비율도 600% 돌파",
+        "source": "더벨",
+        "pubDate": "2026-11-12",
+        "summary": [
+          "10일 투자은행(IB) 업계에 따르면 크리오스는 지난달 한국거래소에 코스닥 상장예비심사를 청구하고 IPO 절차에 돌입했다. 크리오스는 액화천연가스(LNG)와 산업용 가스 저장·수송 설비를 공급하는 초저온 솔루션..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611101132142880109486"
       },
       {
         "top": false,
@@ -123,19 +135,6 @@
         "insight": "",
         "reporter": "",
         "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611100833374840103931"
-      },
-      {
-        "top": false,
-        "headline": "[더벨][thebell interview | 데스틴파워 IPO] 오성진 대표 \"연료전지 인버...",
-        "source": "더벨",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "기술특례상장을 준비 중으로 한국거래소 상장 예비심사를 거쳐 지난달 28일 금융위원회에 증권신고서를 제출했다. 현재 타임라인을 고려하면 연내 상장을 마무리하는 것이 가능하다. ◇전력변환시장 산증인, 글로벌..."
-        ],
-        "summary_mode": "source_excerpt",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611100704063940103917"
       }
     ],
     "corp": [
@@ -182,42 +181,42 @@
     "ma": [
       {
         "top": true,
-        "headline": "자금조달 막히고 M&A 내몰려…벤처 위협하는 ‘상폐기준 강화’",
-        "source": "서울경제",
-        "pubDate": "2026-11-11",
+        "headline": "의무공개매수 ‘비례방식’ 부상…M&A 위축 우려",
+        "source": "헤럴드경제",
+        "pubDate": "2026-11-12",
         "summary": [
-          "11일 벤처 업계에 따르면 시총 500억 원 이하 코스닥 기업들이 인수합병(M&A) 제안을 받거나 자금난에 몰리는 사례가 잇따르고 있다. A 기업은 정부가 상폐 시총 기준을 150억 원에서 200억 원으로 올린 7월 이후 국내외..."
+          "쟁점은 경영권을 매각하는 기존 최대주주가 보유 지분을 전량 처분할 수 있는지 여부다. 현행 개정안에 따르면 최대주주가 지분 40%, 일반주주가 60%를 보유한 상장사를 인수할 경우 인수자는 최대주주 지분 40%를 인수하고..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.sedaily.com/article/20113156?ref=naver"
+        "url": "https://biz.heraldcorp.com/article/10934940?ref=naver"
       },
       {
         "top": false,
-        "headline": "“해외·가업승계 M&A 더 나온다” [시그널]",
-        "source": "서울경제",
-        "pubDate": "2026-11-11",
+        "headline": "미래에셋증권 CFO \"선진시장 온라인 자산관리 집중…M&A 추가 검토\"",
+        "source": "연합인포맥스",
+        "pubDate": "2026-11-12",
         "summary": [
-          "올해 하반기 본계약이 체결된 SK실트론 경영권 거래 역시 금전 이상의 이유가 있다고 봤다. SK그룹과... 태평양은 올해 SK그룹의 SK실트론 매각을 비롯해 KKR의 SK호라이즌(SK텔레콤 AI 데이터센터 법인) 투자, 한화손해보험..."
+          "일본 산코증권 인수 후속 절차를 진행하고 있는 가운데 향후 미국 등에 대한 추가 인수·합병(M&A) 옵션도... 그러면서 \"메모리 반도체를 비롯한 한국 업체와 기업에 대한 관심이 높아지는 점도 성공 가능성을 높이는 요인..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.sedaily.com/article/20112859?ref=naver"
+        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444404"
       },
       {
         "top": false,
-        "headline": "[사설] 네이버·두나무 결합 심사만 1년째…M&A 불확실성 줄여야",
-        "source": "한국경제",
-        "pubDate": "2026-11-11",
+        "headline": "VIP운용, 롯데렌탈 공개매수 환영…\"일반주주 보호 장치 필요\"",
+        "source": "뉴스핌",
+        "pubDate": "2026-11-12",
         "summary": [
-          "가상자산거래소(업비트)를 운영하는 두나무의 기업결합 심의에 본격 착수했다. 공정위 심사관은 10개... 공정위 일정 지연이 인수합병(M&A) 판 자체를 흔드는 위험 요인이 된 것이다. 기업결합 심사 기간은 원칙적으로 30일..."
+          "VIP자산운용은 이번 거래에서 일반주주도 롯데그룹과 동일한 주당 5만9000원에 보유 주식을 매각할 수... 국회 정무위원회를 통과한 개정안은 경영권 인수 시 '50%+1주'를 의무매수 기준으로 정하면서 대주주로부터 먼저..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.hankyung.com/article/2026111083841"
+        "url": "https://www.newspim.com/news/view/20261112000399"
       }
     ],
     "re": [
@@ -290,16 +289,16 @@
       },
       {
         "top": false,
-        "headline": "㈜GS, 15조 인공지능 데이터센터 '첫 고객계약' 연말 승부",
-        "source": "블로터",
+        "headline": "[AIDC 투자 점검③] 빅테크 韓 투자 관심에도 전력망 걸림돌",
+        "source": "연합인포맥스",
         "pubDate": "2026-11-09",
         "summary": [
-          "신사업 AIDC, 정유·발전 의존도 낮출까 ㈜GS가 제시한 1단계 AI 데이터센터 사업비는 약 15조원이다. 전체 투자금액의 약 20%인 3조원을 자기자본으로 마련하고 나머지 약 12조원은 PF 등 외부 차입으로 충당할 예정이다...."
+          "브룩필드가 특수목적법인(SPV)을 통해 그래픽처리장치(GPU)와 데이터센터 등 인프라를 확보하고... 반면 전력 공급 시점이나 고객 계약이 불확실하면 프로젝트파이낸싱(PF) 등 외부 자금조달에도 차질이 발생할 수 있다."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.bloter.net/news/articleView.html?idxno=678107"
+        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443693"
       }
     ],
     "hana": [
@@ -346,6 +345,19 @@
     "peer": [
       {
         "top": true,
+        "headline": "'1호 스팩' 띄우는 후발 증권사들…대형사 쏠림 속 합병 완주 '시험대’",
+        "source": "한국경제",
+        "pubDate": "2026-11-12",
+        "summary": [
+          "CIB(기업투자금융) 조직이나 핀테크 네트워크를 활용해 독자적인 합병 대상을 발굴하겠다는 전략이다. 다만 시장 여건은 만만치 않다는 지적도 나온다. 최근 IPO 시장이 대형 증권사 위주로 양극화되는 경향이..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.hankyung.com/article/202611095195r"
+      },
+      {
+        "top": false,
         "headline": "메리츠증권, 3분기 영업익 44.7%↓…플랜형 수수료로 고객 잡는다",
         "source": "비즈워치",
         "pubDate": "2026-11-11",
@@ -369,19 +381,6 @@
         "insight": "",
         "reporter": "",
         "url": "https://www.ddaily.co.kr/page/view/2026111010585978876"
-      },
-      {
-        "top": false,
-        "headline": "[더벨][증권사 패밀리오피스 지형도] KB증권, PB 넘어 조직이 잇는 가문...",
-        "source": "더벨",
-        "pubDate": "2026-11-09",
-        "summary": [
-          "올해 신설한 패밀리오피스(Family Office)부는 이런 협업을 조율하는 전담 조직이다. 투자전략과 기업금융, 금융상품, 컨설팅 등 4개 영역·17개 세부 분야 전문가를 고객 과제에 맞춰 연결한다. 자녀 세대와의 관계도 자산..."
-        ],
-        "summary_mode": "source_excerpt",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611051212435320101849"
       }
     ],
     "sto": [
@@ -428,16 +427,29 @@
     "productive": [
       {
         "top": true,
-        "headline": "성장금융, 혁신성장펀드 3000억 출자…GP 최대 10곳",
-        "source": "딜사이트",
-        "pubDate": "2026-11-11",
+        "headline": "“지방 정책자금 공급 차질 없이“… 대구서 두번째 ‘정책금융 동행’",
+        "source": "조선비즈",
+        "pubDate": "2026-11-12",
         "summary": [
-          "출자 재원은 연기금 국민성장매칭펀드와 연기금공공 국민성장매칭펀드, 연기금 혁신성장벤처펀드 등에서 마련된다. 이번 출자사업은 중소·중견 상장기업에 대한 성장자금 공급에 초점을 맞췄다. 선정 운용사는 펀드..."
+          "이번 행사는 이재명 정부가 추진하는 생산적 금융과 지방 우대 금융 정책을 현장에서 집행하는 자리다. 정부는 150조원 규모의 국민성장펀드 가운데 40%를 지방에 투자하기로 했다. 지난 7월에는 국민성장펀드의 지역..."
         ],
         "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://dealsite.co.kr/articles/172595"
+        "url": "https://biz.chosun.com/stock/finance/2026/11/12/UEEFUOQGLZFQJNKYMEC3M4VTCU/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+      },
+      {
+        "top": false,
+        "headline": "순천시, 1,313억 지역성장펀드 참여…미래산업 투자 확대",
+        "source": "아시아경제",
+        "pubDate": "2026-11-12",
+        "summary": [
+          "순천시는 이번 펀드를 방위산업과 그린바이오, 이차전지 등 민선 9기 핵심 전략산업과 연계해 지역기업의 기술혁신과 투자 유치를 촉진할 계획이다. 특히, 기존 제조업 중심의 산업구조를 고부가가치 첨단산업 중심으로..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://view.asiae.co.kr/article/2026111207464915186"
       },
       {
         "top": false,
@@ -451,19 +463,6 @@
         "insight": "",
         "reporter": "",
         "url": "https://www.investchosun.com/site/data/html_dir/2026/11/10/2026111080158.html"
-      },
-      {
-        "top": false,
-        "headline": "순천시, 1313억 지역성장펀드 참여…미래산업 투자 확대",
-        "source": "뉴시스",
-        "pubDate": "2026-11-11",
-        "summary": [
-          "지역기업, 금융기관, 대학 등이 참여했다. 투자금은 유망기업 발굴을 비롯해 기술개발과 사업화, 생산시설 확충 등에 활용될 예정이다. 시는 이번 펀드를 민선 9기 핵심 전략산업인 방위산업과 그린바이오, 이차전지..."
-        ],
-        "summary_mode": "source_excerpt",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.newsis.com/view/NISX20261111_0003864112"
       }
     ]
   }
