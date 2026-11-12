@@ -137,3 +137,26 @@ def digest(title,url,description="",max_points=3):
         return None
     selected.sort()
     return [concise_point(t) for _,t in selected]
+
+
+def preview_digest(title, description):
+    """Three compact facts using only headline and search description.
+
+    Not a claim that the publisher's complete article was available.
+    """
+    headline=clean(re.sub(r"^\[[^\]]{1,55}\]\s*", "", title))
+    desc=clean(description)
+    if len(headline)<15 or len(desc)<70:
+        return None
+    # Split at a clause boundary, while preserving verifiable source wording.
+    cuts=[m.end() for m in re.finditer(r"[.!?]\s+|[;,]\s+|며\s+|고\s+|지만\s+|면서\s+",desc)
+          if 35<=m.end()<=len(desc)-32]
+    if not cuts:
+        cuts=[len(desc)//2]
+    cut=min(cuts,key=lambda n:abs(n-len(desc)/2))
+    first=concise_point(headline,95)
+    second=concise_point(desc[:cut],95)
+    third=concise_point(desc[cut:],95)
+    if len(second)<25 or len(third)<25 or second==third:
+        return None
+    return [first,second,third]
