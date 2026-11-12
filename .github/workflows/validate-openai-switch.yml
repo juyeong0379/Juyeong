@@ -1,0 +1,29 @@
+name: Validate OpenAI IB News Adapter
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/validate-openai-switch.yml'
+      - 'scripts/test_openai_adapter.py'
+      - 'scripts/generate_briefing.py'
+      - 'requirements.txt'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  syntax-and-adapter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Verify Python syntax
+        run: python -m compileall -q scripts
+      - name: Test OpenAI adapter without API calls
+        run: python scripts/test_openai_adapter.py
