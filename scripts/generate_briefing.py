@@ -31,6 +31,7 @@ import requests
 import anthropic
 from sector_rules import classify_sector, sector_matches
 from article_digest import digest
+from ib_planning_notes import planning_insight
 from report_sources import collect_reports
 
 KST = timezone(timedelta(hours=9))
@@ -311,7 +312,7 @@ def fallback_classify_batch(meta: dict, batch: list) -> list:
     out = []
     for c in batch:
         title = c.get("title", "")
-        desc = re.sub(r"\\s+", " ", c.get("description", "")).strip()
+        desc = re.sub(r"\s+", " ", c.get("description", "")).strip()
         if classify_sector(title, desc) != meta["key"]:
             continue
         if not re.search(pattern, title + " " + desc, re.IGNORECASE):
@@ -511,6 +512,9 @@ def build_section(meta: dict, used_urls: set) -> list:
                         tasks[future]["summary_mode"] = "source_digest"
                 except Exception as exc:
                     print(f"  [경고] 원문 핵심 추출 불가: {exc}")
+    for item in top:
+        if not item.get("insight"):
+            item["insight"] = planning_insight(meta["key"], item.get("title",""), item.get("summary", []))
     used_urls.update(item["url"] for item in top)
     print(f"  → {len(top)}건 선정")
 
