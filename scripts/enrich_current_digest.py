@@ -57,3 +57,5 @@ def main():
 
 if __name__=="__main__":
     main()
+
+# Deploy-compatible one-time enrichment; unchanged original article URLs.
