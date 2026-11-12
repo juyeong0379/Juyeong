@@ -32,7 +32,7 @@ import requests
 from openai import OpenAI, AuthenticationError, PermissionDeniedError, RateLimitError
 from sector_rules import classify_sector, sector_matches
 from article_digest import digest, preview_digest
-from news_quality import duplicate, validate_digest, deduplicate
+from news_quality import duplicate, validate_digest, deduplicate, numeric_claims_grounded
 from insight_policy import accept_insight
 from report_sources import collect_reports
 
@@ -480,6 +480,17 @@ summary 작성 규칙 (개조식):
             summary = [str(summary).strip()]
         else:
             summary = []
+
+        # Search metadata cannot substantiate numerical facts that only
+        # the model appears to know. Omit the article instead of inventing.
+        if (len(summary) != 3
+                or any(len(str(line)) < 22 or len(str(line)) > 190
+                       or str(line).rstrip().endswith(("…","..."))
+                       for line in summary)):
+            continue
+        if not numeric_claims_grounded(summary, c["title"]+" "+c["description"]):
+            print(f"  [검증 제외] 미확인 수치가 포함된 AI 요약: {c['title'][:65]}")
+            continue
 
         results.append({
             **c,
