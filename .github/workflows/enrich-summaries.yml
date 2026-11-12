@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/enrich_current_digest.py'
+      - '.github/workflows/enrich-summaries.yml'
   workflow_dispatch: {}
 
 concurrency:
