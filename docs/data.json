@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13 07:53 KST",
+  "generated_at": "2026-11-13 07:55 KST",
   "reports": [],
   "sections": [
     {
@@ -90,7 +90,8 @@
         "reporter": "",
         "url": "https://www.edaily.co.kr/News/Read?newsId=03762166645645064&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
         "carried_forward": false,
-        "briefing_asof": "2026-11-13"
+        "briefing_asof": "2026-11-13",
+        "carryover": true
       },
       {
         "headline": "'대기업과 다르다'…자회사 상장 절실한 중견기업들, 내년 주총이 분수령",
@@ -106,8 +107,7 @@
         "insight": "중복상장 대상 발행사의 주주영향평가·보호책·FI 회수 조건을 연계한 IPO 및 대체 조달 자문 수요 검토",
         "top": false,
         "summary_mode": "editor_verified",
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       },
       {
         "headline": "[중복상장 규제 진단] '솔리다임 닮은꼴' 보스턴다이내믹스, 아틀라스 양산 자금은",
@@ -123,8 +123,7 @@
         "insight": "대규모 첨단산업 투자에서 자회사 IPO 제약에 따른 프리IPO·인수금융·계열사 출자 대안 비교 검토",
         "top": false,
         "summary_mode": "editor_verified",
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       }
     ],
     "corp": [
@@ -142,8 +141,7 @@
         "insight": "국고채 금리 변동과 전문딜러 입찰 동향을 반영해 회사채 발행금리·차환 일정·DCM 고객 조달 전략 점검",
         "summary_mode": "editor_verified",
         "top": true,
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       },
       {
         "top": false,
@@ -159,8 +157,7 @@
         "insight": "만기별 수요 격차를 고려한 회사채 발행 일정·차환 구조 최적화 제안 검토",
         "reporter": "",
         "url": "https://www.hankyung.com/article/202611107549r",
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       }
     ],
     "ma": [
@@ -178,8 +175,7 @@
         "insight": "공개매수 방식별 인수대금·잔여 지분 처리·인수금융 구조 비교 검토",
         "reporter": "",
         "url": "https://biz.heraldcorp.com/article/10934940?ref=naver",
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       },
       {
         "headline": "[마켓인] 팔리는 기업만 팔린다…글로벌 PEF 엑시트 시장도 양극화",
@@ -195,8 +191,7 @@
         "insight": "현금흐름 안정성과 레버리지 상환능력 중심의 인수금융 심사 및 PEF 매각·회수 자문 대상 재선별",
         "summary_mode": "editor_verified",
         "top": false,
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       }
     ],
     "re": [
@@ -215,7 +210,8 @@
         "reporter": "",
         "url": "https://www.mt.co.kr/stock/2026/11/12/2026111120104062792",
         "carried_forward": false,
-        "briefing_asof": "2026-11-13"
+        "briefing_asof": "2026-11-13",
+        "carryover": true
       },
       {
         "headline": "금리 인상에도 서울 오피스에 6.4조원…큰손들이 찍은 핵심 자산은",
@@ -231,8 +227,7 @@
         "insight": "오피스 투자·대출 심사 시 권역별 공급량·실질임대료·공실 위험을 구분해 LTV 및 수익성 가정 점검",
         "summary_mode": "editor_verified",
         "top": false,
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       }
     ],
     "infra": [
@@ -250,8 +245,7 @@
         "insight": "발전·신재생 PF의 지역별 매출가격 시나리오와 장기 고정가격계약 보유 여부를 반영해 DSCR·차환 위험 재점검",
         "summary_mode": "editor_verified",
         "top": true,
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       },
       {
         "top": false,
@@ -267,8 +261,7 @@
         "insight": "데이터센터 금융주선 시 출자 확약·외부자본 유치·전력계약 리스크 동시 점검",
         "reporter": "",
         "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444108",
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       }
     ],
     "hana": [
@@ -286,8 +279,7 @@
         "insight": "ONE-IB 차원에서 정상화펀드·민간 공동주관을 활용한 PF 재구조화 사례의 수익성·위험분담 검토",
         "summary_mode": "editor_verified",
         "top": true,
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       },
       {
         "headline": "하나금융, 기관 중심이던 IR 개인주주로 확대",
@@ -303,8 +295,7 @@
         "insight": "",
         "summary_mode": "editor_verified",
         "top": false,
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       },
       {
         "headline": "하나금융, 누적 순익 3.6조 견조…하나은행 건전성 관리 총력",
@@ -320,8 +311,7 @@
         "insight": "그룹 대손비용·자본여력을 고려해 신규 IB 자산 편입 시 신용위험·RWA·익스포저 및 회수 가능성 점검",
         "summary_mode": "editor_verified",
         "top": false,
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       }
     ],
     "peer": [
@@ -339,8 +329,7 @@
         "insight": "발행어음 운용금리와 만기 갭, 모험자본 인정액, 투자 심사·사후관리 기준을 통합한 IB 자산한도 및 손익관리 점검",
         "summary_mode": "editor_verified",
         "top": true,
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       },
       {
         "headline": "[현대차증권 IB 대전환] 새 진용 갖추고 은행채 영업 본격화…DCM 첫 드라이브",
@@ -356,8 +345,7 @@
         "insight": "은행·증권 협업으로 조달 접점을 넓히는 경쟁사 전략을 ONE-IB 커버리지 운영 및 비이자수익 확대 과제와 비교",
         "summary_mode": "editor_verified",
         "top": false,
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       }
     ],
     "sto": [
@@ -375,8 +363,7 @@
         "insight": "STO 발행·유통 사업 검토 시 결제자산 적격성·수탁주체·거래 실패 책임·규제 정합성을 선결 요건으로 설정",
         "summary_mode": "editor_verified",
         "top": true,
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       },
       {
         "top": false,
@@ -392,30 +379,12 @@
         "insight": "",
         "reporter": "",
         "url": "https://www.edaily.co.kr/News/Read?newsId=02109046645645064&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       }
     ],
     "productive": [
       {
-        "headline": "성장금융, 상장기업 혁신성장펀드 출자사업 개시…3천억 배정",
-        "source": "연합인포맥스",
-        "pubDate": "2026-11-12",
-        "reporter": "양용비 기자",
-        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444406",
-        "summary": [
-          "한국성장금융이 연기금투자풀 자금으로 **3,000억원 규모 상장기업 혁신성장펀드 출자사업** 추진",
-          "중소·중견 상장기업 대상 펀드를 운용할 GP **5~10곳 선정**, 운용사별 300억~600억원 출자 예정",
-          "상장기업 메자닌·벤처·혁신성장기업에 대한 의무투자 기준으로 **후속 성장자금 공급 경로** 확대"
-        ],
-        "insight": "연기금 기반 모험자본이 상장기업 메자닌·성장자금 시장에 미칠 영향과 증권사 공동투자 기회 점검",
-        "summary_mode": "editor_verified",
         "top": true,
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
-      },
-      {
-        "top": false,
         "headline": "[Invest]브로커리지 무너진 증권사들, '이자 장사'로 연명…모험자본 뒷...",
         "source": "인베스트조선",
         "pubDate": "2026-11-11",
@@ -428,8 +397,21 @@
         "insight": "발행어음 운용수익·모험자본 공급실적·자산한도 관리의 균형 검토",
         "reporter": "",
         "url": "https://www.investchosun.com/site/data/html_dir/2026/11/10/2026111080158.html",
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
+      },
+      {
+        "top": false,
+        "headline": "성장금융, 혁신성장펀드 3000억 출자…GP 최대 10곳",
+        "source": "딜사이트",
+        "pubDate": "2026-11-11",
+        "summary": [
+          "출자 재원은 연기금 국민성장매칭펀드와 연기금공공 국민성장매칭펀드, 연기금 혁신성장벤처펀드 등에서 마련된다. 이번 출자사업은 중소·중견 상장기업에 대한 성장자금 공급에 초점을 맞췄다. 선정 운용사는 펀드..."
+        ],
+        "insight": "",
+        "reporter": "",
+        "url": "https://dealsite.co.kr/articles/172595",
+        "summary_mode": "source_excerpt",
+        "carryover": true
       }
     ],
     "growthfund": [
@@ -447,8 +429,7 @@
         "insight": "정책펀드 연계 인프라 PF의 EPC 책임분담·공사비 지급·공정관리 위험을 사업 초기부터 점검",
         "summary_mode": "editor_verified",
         "top": true,
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       },
       {
         "headline": "연말 북클로징 앞둔 은행권…국민성장펀드 실적에 12월 PF까지 염두",
@@ -464,8 +445,7 @@
         "insight": "국민성장펀드 연계 사업의 승인·약정·실행 기준을 구분해 실적과 자산한도·자금 집행 일정 관리",
         "summary_mode": "editor_verified",
         "top": false,
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       },
       {
         "headline": "국민성장펀드 ‘10조’가 빈다…‘깜깜이’ 심사자료 논란",
@@ -481,11 +461,10 @@
         "insight": "확정된 운용계획과 승인·재원 조달 조건을 구분해 국민성장펀드 공동투자 및 주선 목표의 실현 가능성 점검",
         "summary_mode": "editor_verified",
         "top": false,
-        "carried_forward": true,
-        "briefing_asof": "2026-11-13"
+        "carryover": true
       }
     ]
   },
-  "selection_policy": "Daily updated shortlist: 2-3 per sector. Retained strategic articles keep their actual original publication dates; no fabricated news.",
+  "selection_policy": "Nov 13 executive edition: latest validated news plus transparently dated Nov 10-12 context; 2-3 per category; source dates preserved",
   "curation_note": "11월 13일 아침 기준 핵심 IB 이슈. 최근 중요 기사는 원래 발행일을 표기해 이어서 제공합니다."
 }
