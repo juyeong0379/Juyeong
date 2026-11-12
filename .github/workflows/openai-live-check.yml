@@ -1,0 +1,46 @@
+name: OpenAI API Live Smoke Check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/openai-live-check.yml'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  openai-connection:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Test OpenAI API credentials and 3-bullet JSON generation
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          PYTHONPATH=scripts python - <<'PY'
+          from generate_briefing import ask_openai_json, MODEL
+          sample = """아래는 운영환경 확인을 위한 테스트 사례입니다. 실제 뉴스 게시 금지.
+          제공된 사실: 국내 회사채 시장에서 기관투자자의 단기물 선호 확대.
+          삼양홀딩스 회사채 수요예측에서 2년물 경쟁률은 8대1,
+          5년물 경쟁률은 1.25대1로 나타남.
+          이 사실만 사용해 아래 형식의 JSON 배열 하나만 출력하세요.
+          [{"index":0,"is_relevant":true,"summary":["핵심 사실","배경","시장 영향"],"insight":"","importance":80,"depth":80,"quality":80}]
+          summary에는 세 문장 각각 25자 이상으로 사실 기반 개조식 요약을 쓰세요."""
+          response = ask_openai_json(sample, max_tokens=850)
+          if not isinstance(response, list) or len(response) != 1:
+              raise RuntimeError("OpenAI API 응답이 예상 JSON 배열 형태가 아닙니다.")
+          item = response[0]
+          if not isinstance(item, dict) or len(item.get("summary", [])) != 3:
+              raise RuntimeError("OpenAI API 3줄 요약 스키마 오류")
+          print("PASS: OpenAI API authenticated; JSON response and three-summary structure verified")
+          print("Model:", MODEL)
+          print("This check did not modify docs/data.json or the published website.")
+          PY
