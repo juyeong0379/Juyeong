@@ -1,13 +1,18 @@
 name: Daily News Briefing
 
 on:
-  # News generation runs on schedule or by manual dispatch.
-  # Editing selection logic must not silently overwrite a reviewed live briefing.
+  # GitHub schedule can be delayed: run earlier, with independent backup slots.
+  # The first successful publication wins for the KST date.
   schedule:
-    # 매일 07:05 KST 수집 시작 → 07:30 KST 이전 게시 목표 (전날 22:05 UTC)
-    # GitHub Actions 예약 실행과 Pages 배포는 지연될 수 있어 정확한 분 단위 보장은 불가
-    - cron: "5 22 * * *"
+    - cron: "20 20 * * *"  # 05:20 KST primary
+    - cron: "10 21 * * *"  # 06:10 KST backup
+    - cron: "45 21 * * *"  # 06:45 KST final backup
   workflow_dispatch: {}
+  # Scoped, explicit emergency refresh; unrelated commits never spend API credits.
+  push:
+    branches: [main]
+    paths:
+      - '.github/briefing-refresh-request.txt'
 
 concurrency:
   group: ib-daily-briefing
@@ -25,16 +30,39 @@ jobs:
       - name: 저장소 체크아웃
         uses: actions/checkout@v4
 
+      - name: 오늘자 뉴스 기게시 여부 확인 (중복 API 호출 방지)
+        id: current
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          p = Path("docs/data.json")
+          today = datetime.now(ZoneInfo("Asia/Seoul")).strftime("%Y-%m-%d")
+          try:
+              payload = json.loads(p.read_text(encoding="utf-8"))
+              published = str(payload.get("generated_at", "")).startswith(today)
+              count = sum(len(items) for items in payload.get("categories", {}).values())
+          except (ValueError, OSError, AttributeError):
+              published, count = False, 0
+          skip = published and count > 0
+          print(f"skip={'true' if skip else 'false'}")
+          PY
+
       - name: Python 설치
+        if: steps.current.outputs.skip != 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: pip
 
       - name: 패키지 설치
+        if: steps.current.outputs.skip != 'true'
         run: pip install -r requirements.txt
 
       - name: 브리핑 생성 (뉴스 수집 + OpenAI 분석)
+        if: steps.current.outputs.skip != 'true'
         env:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
@@ -47,6 +75,7 @@ jobs:
           python scripts/generate_briefing.py
 
       - name: 게시 전 뉴스 무결성 점검 (KST 날짜·3줄 요약·중복)
+        if: steps.current.outputs.skip != 'true'
         run: |
           python - <<'PY'
           import json
@@ -74,6 +103,7 @@ jobs:
           PY
 
       - name: 결과 커밋 & 푸시
+        if: steps.current.outputs.skip != 'true'
         run: |
           git config user.name "briefing-bot"
           git config user.email "briefing-bot@users.noreply.github.com"
@@ -84,6 +114,7 @@ jobs:
           git push origin HEAD:main
 
       - name: Request GitHub Pages refresh for updated news
+        if: steps.current.outputs.skip != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
