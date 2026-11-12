@@ -31,12 +31,17 @@ jobs:
       - name: 패키지 설치
         run: pip install -r requirements.txt
 
-      - name: 브리핑 생성 (뉴스 수집 + Claude 분석)
+      - name: 브리핑 생성 (뉴스 수집 + OpenAI 분석)
         env:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python scripts/generate_briefing.py
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "::error::OPENAI_API_KEY secret is missing; existing published news will be preserved."
+            exit 1
+          fi
+          python scripts/generate_briefing.py
 
       - name: 결과 커밋 & 푸시
         run: |
