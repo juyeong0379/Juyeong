@@ -26,14 +26,14 @@ import html
 import time
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
+from pathlib import Path
 
 import requests
 import anthropic
 from sector_rules import classify_sector, sector_matches
 from article_digest import digest, preview_digest
 from news_quality import duplicate, validate_digest, deduplicate
-from ib_strategy import strategy_insight
-from ib_planning_notes import planning_insight
+from insight_policy import accept_insight
 from report_sources import collect_reports
 
 KST = timezone(timedelta(hours=9))
@@ -43,7 +43,10 @@ BATCH_SIZE = 10
 TOP_N_PER_SECTION = 3      # 섹션별로 보여줄 기사 수
 NAVER_PER_KEYWORD = 30     # 키워드당 네이버에서 가져올 기사 수 (언론사 필터 전)
 MAX_CANDIDATES = 40        # 섹션별로 Claude에게 보낼 후보 최대 수
-MIN_DEPTH = 45
+MIN_DEPTH = 68
+MIN_QUALITY = 68
+MIN_IMPORTANCE = 62
+RECENT_HEADLINES = []
 PREFERRED_IB_OUTLETS = {"더벨", "인베스트조선", "딜사이트", "한국경제", "한국금융신문", "법률신문", "딜북"}             # 심층도가 이보다 낮으면 탈락
 
 # ─────────────────────────────────────────────────────────────
@@ -195,6 +198,9 @@ def fetch_naver_news(query: str) -> list:
     res.raise_for_status()
 
     out = []
+    now = datetime.now(KST)
+    # Monday: allow news since Friday; other days: yesterday and today.
+    start_date = (now.date() - timedelta(days=3 if now.weekday() == 0 else 1))
     for it in res.json().get("items", []):
         link = it.get("originallink") or ""
         source = outlet_name(link)
@@ -206,6 +212,8 @@ def fetch_naver_news(query: str) -> list:
         try:
             pub_dt = parsedate_to_datetime(it["pubDate"]).astimezone(KST)
         except Exception:
+            continue
+        if pub_dt.date() < start_date or pub_dt > now:
             continue
         out.append({
             "title": title,
@@ -287,8 +295,8 @@ def freshness_score(pub_dt: datetime, now: datetime) -> int:
         return 100
     if age <= timedelta(hours=48):
         return 88      # 전일 기사도 08시 브리핑 대상
-    if age <= timedelta(days=7):
-        return 25      # 뉴스가 부족할 경우 양질의 과거 기사 보완
+    if age <= timedelta(days=4):
+        return 32      # 월요일에는 직전 금요일 뉴스도 선별 가능
     return 0
 
 
@@ -357,7 +365,12 @@ def classify_batch(meta: dict, batch: list) -> list:
 - 원인·배경·영향·전망을 짚는 분석/기획/해설 기사를 선호
 - 한국경제·한국금융신문·법률신문·자본시장 전문지 등 매체 이름만으로 우대하지 않고, 숫자·거래구조·쟁점·실무 영향을 기준으로 품질 판단
 - 법률신문의 법규 해설은 IPO·인수금융·부동산PF·STO 등에 직접 관련되는 경우만 선정
-- 한국시간 오전 8시 브리핑용이므로 오늘과 전날 발행된 중요한 기사 우대. 신뢰할 만한 분석이 부족한 경우 7일 이내 기사 선택 가능.
+- 한국시간 오전 8시 브리핑 대상: 전일~당일 기사. 월요일만 지난 금요일~월요일까지 검토. 이전 날짜 기사를 끌어와 3건을 채우지 말 것.
+- 직전 브리핑에 게재된 동일 기업·사건을 그대로 반복하는 기사는 제외. 새 정책 결정·금액·거래 단계 등 실질적인 신규 사실이 있을 때만 별개의 기사로 취급.
+- 1면이나 검색어 순위 등 화제성은 근거가 있는 경우만 반영하고, 확인되지 않은 순위·화제성을 지어내지 말 것.
+- 단순 보도자료를 옮겨 적은 제목·설명에는 낮은 depth/quality를 부여. 데이터·거래구조·법규 쟁점과 왜 중요한지가 확인되는 기사 위주로 선정.
+- 언론사 이름 자체가 합격 기준은 아님. IB 전문지·경제지·법률신문·전자신문·딜북 등 해당 주제에 전문성을 지닌 출처도 동등 평가.
+- 반드시 3건을 선정할 필요 없음. 믿을 만한 기사 한 건만 있으면 한 건만 선정.
 
 점수 기준 (0~100 정수):
 - importance: IB 실무자가 알아야 할 중요도 (딜 규모, 시장 영향, 정책 파급력)
@@ -370,7 +383,11 @@ summary 작성 규칙 (개조식):
 - 1번째: 무슨 일인지. 숫자·금액·당사자를 구체적으로
 - 2번째: 배경이나 맥락. 왜 지금 이런 일이 벌어졌는지
 - 3번째: 중요 사실 또는 구체적인 시장 변화 (시사점은 별도 insight 필드로 작성)
-- insight: 하나증권 IB기획실 관점의 전략 검토사항이 명확할 때만 작성. 없으면 빈 문자열 ""로 반환.
+- insight는 **선택 항목**. 기본값은 빈 문자열 ""임.
+- 법률·정책·규제의 실제 제·개정/시행, 대규모 금융사고·신용위기, 업계의 중대한 금융수요·자금흐름 변화, 경쟁사의 구조적 전략 전환 등 **IB 전략·손익·위험한도·대내외 협업 전략에 영향이 큰 사건**만 작성.
+- 일반적인 IPO 청구·회사채 발행·단순 개별 인수/투자 소식은 원칙적으로 insight="" 처리. 기사 3건 모두 시사점이 없어도 정상임.
+- 꼭 넣을 필요 없음. 확인 가능한 변화→새로운 금융 수요/위험→하나증권 IB기획실이 검토할 구체적인 의사결정 또는 실행 방안이 연결될 때만 제시.
+- 뉴스 요약의 사실만으로 중요도를 판단하기 어렵거나 하나증권 고유의 전략적 함의가 모호하면 insight="" 반환.
 - 단순 '시장 확대', '금융 수요 증가', '대응 필요' 등 기사의 내용을 반복하는 일반론은 금지.
 - IB 비즈니스 트렌드로 발생하는 구체적인 자금조달 수요, 위험, 경쟁구도 변화와 연결.
 - 하나증권의 ECM·DCM·인수금융·부동산/인프라금융·생산적금융 또는 그룹 협업 전략에 어떤 의미인지 간결하게 제안.
@@ -422,7 +439,8 @@ summary 작성 규칙 (개조식):
         if not 0 <= idx < len(batch):
             continue
         depth = to_int(j.get("depth"))
-        if depth < MIN_DEPTH:
+        if (depth < MIN_DEPTH or to_int(j.get("quality")) < MIN_QUALITY
+                or to_int(j.get("importance")) < MIN_IMPORTANCE):
             continue
         c = batch[idx]
         if classify_sector(c["title"],c["description"]) != meta["key"]:
@@ -448,11 +466,41 @@ summary 작성 규칙 (개조식):
         results.append({
             **c,
             "summary": summary,
-            "insight": str(j.get("insight") or "").strip(),
+            "insight": accept_insight(
+                c["title"], summary, j.get("insight"),
+                importance=to_int(j.get("importance")), depth=depth,
+            ),
             "reporter": reporter,
             "score": final_score,
         })
     return results
+
+
+def load_recent_headlines(now):
+    """Previous two published days only; date lookup does not change the website."""
+    rows=[]
+    archive=Path(__file__).resolve().parents[1]/"docs"/"archive"
+    for offset in (1,2,3):
+        date=(now.date()-timedelta(days=offset)).isoformat()
+        p=archive/(date+".json")
+        if not p.exists():
+            continue
+        try:
+            content=json.loads(p.read_text(encoding="utf-8"))
+            for group in content.get("categories",{}).values():
+                rows.extend({"title":str(a.get("headline","")),"url":str(a.get("url",""))}
+                            for a in group if isinstance(a,dict))
+        except (OSError,ValueError) as exc:
+            print(f"  [경고] 이전 브리핑 읽기 실패 ({date}): {exc}")
+    return rows
+
+
+def repeated_last_days(candidate):
+    """Suppress substantially repeated articles; no quota to fill."""
+    return any(
+        candidate.get("url")==previous["url"] or duplicate(candidate,previous)
+        for previous in RECENT_HEADLINES
+    )
 
 
 # ─────────────────────────────────────────────────────────────
@@ -462,7 +510,8 @@ def build_section(meta: dict, used_urls: set) -> list:
     print(f"▶ [{meta['no']}] {meta['label']} 수집 중...")
     candidates = [
         c for c in collect_candidates(meta["keywords"])
-        if c["url"] not in used_urls
+        if not repeated_last_days(c)
+        and c["url"] not in used_urls
         and sector_matches(meta["key"], c["title"], c.get("description", ""))
     ][:MAX_CANDIDATES]
     print(f"  후보 {len(candidates)}건 → Claude 분류 요청 중...")
@@ -477,7 +526,8 @@ def build_section(meta: dict, used_urls: set) -> list:
     if len(scored) < 2:
         seen = {c["url"] for c in candidates}
         extra = [c for c in collect_candidates(meta["keywords"])
-                 if c["url"] not in seen and c["url"] not in used_urls
+                 if not repeated_last_days(c)
+                 and c["url"] not in seen and c["url"] not in used_urls
                  and sector_matches(meta["key"], c["title"], c.get("description", ""))][:30]
         for start in range(0, len(extra), BATCH_SIZE):
             scored.extend(classify_batch(meta, extra[start:start + BATCH_SIZE]))
@@ -516,13 +566,10 @@ def build_section(meta: dict, used_urls: set) -> list:
                         tasks[future]["summary_mode"] = "source_digest"
                 except Exception as exc:
                     print(f"  [경고] 원문 핵심 추출 불가: {exc}")
+    # Optional IB strategy note. Never insert generic category-based notes.
+    # The vetted model response is the only source; source-only digest has no note.
     for item in top:
-        if not item.get("insight"):
-            item["insight"] = planning_insight(meta["key"], item.get("title",""), item.get("summary", []))
-    # Add brief, specific IB planning review points under the three facts.
-    for item in top:
-        if not item.get("insight") and item.get("summary_mode")=="source_digest":
-            item["insight"] = strategy_insight(meta["key"], item["title"], item["summary"])
+        item["insight"] = item.get("insight","") if item.get("summary_mode")=="ai_summary" else ""
     # Only publish fully supported 3-point summaries, never a chopped headline
     # or search-description split masquerading as analysis.
     top=[item for item in deduplicate(top)
@@ -554,6 +601,8 @@ def build_section(meta: dict, used_urls: set) -> list:
 # 4) 실행
 # ─────────────────────────────────────────────────────────────
 def main():
+    global RECENT_HEADLINES
+    RECENT_HEADLINES = load_recent_headlines(datetime.now(KST))
     used_urls = set()
     data = {}
     for key, meta in SECTIONS.items():
