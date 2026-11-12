@@ -1,0 +1,58 @@
+name: Preview Real IB News with OpenAI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/preview-openai-news.yml'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Generate candidate news locally (never publish)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: python -u scripts/generate_briefing.py
+      - name: Validate and display generated candidates
+        run: |
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+          news=json.loads(Path('docs/data.json').read_text(encoding='utf-8'))
+          stories=[(name,x) for name,group in news['categories'].items() for x in group]
+          assert stories, 'No articles generated'
+          seen=set()
+          print('Generated:', news['generated_at'], 'total', len(stories), flush=True)
+          for name, story in stories:
+              assert len(story.get('summary',[]))==3, f'Not exactly three bullets: {story.get("headline")}'
+              assert story['url'] not in seen, f'Duplicate article URL: {story["url"]}'
+              seen.add(story['url'])
+              print('['+name+'] '+story['headline'],flush=True)
+              for i,line in enumerate(story['summary'],1):
+                  print('  '+str(i)+'. '+line,flush=True)
+              if story.get('insight'):
+                  print('  IB 시사점: '+story['insight'],flush=True)
+          print('PASS: local news candidate validation; NO live website modification.',flush=True)
+          PY
+      - name: Save preview JSON for review
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: openai-ib-news-preview
+          path: docs/data.json
+          retention-days: 2
