@@ -30,6 +30,13 @@ def classify_sector(title, description=""):
         return "re"
     # Deal-specific RE asset names rarely stand alone; no generic '건설' cue.
 
+    # Policy-fund execution failures are National Growth Fund policy news,
+    # not a generic renewable-power transaction.
+    if (has(r"국민\s*성장\s*펀드|국민성장기금", desc)
+            and has(r"1호\s*(사업|프로젝트)|첫\s*(사업|투자)", title+" "+desc)
+            and has(r"중단|미지급|분쟁|차질|지연|위기", title)):
+        return "growthfund"
+
     # 2) Infrastructure finance, not every AI/energy industry headline.
     infra_asset=has(r"데이터센터|AI\s*데이터센터|GPU|인프라|해상풍력|육상풍력|신재생(에너지)?|발전소|송전망|전력망|민자사업|PPP|SOC|태양광",title)
     infra_deal=has(r"PF|프로젝트\s*금융|파이낸싱|자금\s*조달|신디케이트|투자유치|투자금|대출|주선|금융약정|펀드|금융지원|사업비|민간투자|인프라\s*투자|착공",title+" "+desc)
@@ -44,7 +51,7 @@ def classify_sector(title, description=""):
 
     # 4) Group news must explicitly name an affiliate in the headline.
     hana=has(r"하나(증권|은행|금융(그룹|지주)?|캐피탈|자산신탁|대체투자|금융티아이|생명|카드|벤처스|자산운용)",title)
-    finance=has(r"IB|기업금융|금융(주선|지원|전략|투자)|대출|회사채|채권|자금|펀드|투자금융|인수|M&A|IPO|공모|생산적금융|모험자본|RWA|자본|CET1|사업\s*전략|투자|실적",title+" "+desc)
+    finance=has(r"IB|기업금융|금융(주선|지원|전략|투자|배출량)|대출|회사채|채권|자금|펀드|투자금융|인수|M&A|IPO|공모|생산적금융|모험자본|RWA|자본|CET1|사업\s*전략|투자|실적|대손|충당금|건전성|부실채권|연체율|녹색여신|탄소집약도|주주환원|주주\s*간담회|IR|밸류업|기업가치",title+" "+desc)
     if hana and finance:
         return "hana"
 
