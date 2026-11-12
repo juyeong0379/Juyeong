@@ -6,6 +6,8 @@ on:
     paths:
       - '.github/workflows/validate-openai-switch.yml'
       - 'scripts/test_openai_adapter.py'
+      - 'scripts/test_news_quality.py'
+      - 'scripts/news_quality.py'
       - 'scripts/generate_briefing.py'
       - 'requirements.txt'
   workflow_dispatch: {}
@@ -27,3 +29,5 @@ jobs:
         run: python -m compileall -q scripts
       - name: Test OpenAI adapter without API calls
         run: python scripts/test_openai_adapter.py
+      - name: Test article deduplication and factual grounding
+        run: python scripts/test_news_quality.py
