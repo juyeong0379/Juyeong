@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-11-13 07:48 KST",
+  "reports": [],
+  "sections": [
+    {
+      "key": "ecm",
+      "no": "01",
+      "emoji": "📈",
+      "label": "ECM",
+      "desc": "IPO·유상증자·메자닌·블록딜"
+    },
+    {
+      "key": "corp",
+      "no": "02",
+      "emoji": "🏦",
+      "label": "기업금융",
+      "desc": "DCM·회사채·기업자금 조달"
+    },
+    {
+      "key": "ma",
+      "no": "03",
+      "emoji": "🤝",
+      "label": "M&A·인수금융",
+      "desc": "M&A·경영권 매각·PEF·인수금융"
+    },
+    {
+      "key": "re",
+      "no": "04",
+      "emoji": "🏢",
+      "label": "부동산",
+      "desc": "부동산PF·리츠·상업용부동산"
+    },
+    {
+      "key": "infra",
+      "no": "05",
+      "emoji": "⚡",
+      "label": "인프라",
+      "desc": "데이터센터·전력·재생에너지·민자사업"
+    },
+    {
+      "key": "hana",
+      "no": "06",
+      "emoji": "🏛️",
+      "label": "하나금융그룹",
+      "desc": "하나금융지주·하나은행·하나증권 IB"
+    },
+    {
+      "key": "peer",
+      "no": "07",
+      "emoji": "🏙️",
+      "label": "경쟁사",
+      "desc": "국내외 금융사 IB 전략·주선 경쟁"
+    },
+    {
+      "key": "sto",
+      "no": "08",
+      "emoji": "🔗",
+      "label": "STO",
+      "desc": "토큰증권·디지털증권 제도 및 인프라"
+    },
+    {
+      "key": "productive",
+      "no": "09",
+      "emoji": "🌱",
+      "label": "생산적금융",
+      "desc": "모험자본·성장산업·생산적금융 정책"
+    },
+    {
+      "key": "growthfund",
+      "no": "10",
+      "emoji": "🏦",
+      "label": "국민성장펀드",
+      "desc": "국민성장펀드 정책·조성·투자·집행·운용·출자"
+    }
+  ],
+  "categories": {
+    "ecm": [
+      {
+        "top": true,
+        "headline": "코너스톤·사전수요예측 시행 임박…IPO 주관사, 기관 확보 경쟁 본격화",
+        "source": "이데일리",
+        "pubDate": "2026-11-12",
+        "summary": [
+          "오는 13일 코너스톤 투자자 제도와 사전수요예측 제도가 시행되며 IPO 시장에 구조적 변화 발생",
+          "새 제도 도입 후 증권사들의 장기 투자 기관 확보 경쟁과 공모가 산정 방식 변화가 배경",
+          "IPO 주관사들의 기관 수요 맞춤 전략 강화와 공모 안정성 제고에 따른 주관 경쟁 심화 경로"
+        ],
+        "summary_mode": "ai_summary",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.edaily.co.kr/News/Read?newsId=03762166645645064&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      }
+    ],
+    "corp": [],
+    "ma": [],
+    "re": [
+      {
+        "top": true,
+        "headline": "부메랑이 된 환율 방패… 해외 리츠 덮친 '환헤지 청구서'",
+        "source": "머니투데이",
+        "pubDate": "2026-11-12",
+        "summary": [
+          "해외 리츠의 환헤지 비용 부담이 유동성 위기로 연결되는 금융시스템 리스크 현상이 심화되고 있음",
+          "환헤지 정산 부담으로 인해 제이알글로벌리츠 등 해외 리츠들이 유동성 곤란에 직면한 점이 배경",
+          "해외 부동산 리츠 관련 환율 및 환헤지 위험 관리는 금융기관의 리스크 관리 및 투자 판단에 중대한 영향 미침"
+        ],
+        "summary_mode": "ai_summary",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.mt.co.kr/stock/2026/11/12/2026111120104062792"
+      }
+    ],
+    "infra": [],
+    "hana": [],
+    "peer": [],
+    "sto": [],
+    "productive": [],
+    "growthfund": []
+  }
+}
