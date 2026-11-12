@@ -653,6 +653,85 @@ def build_section(meta: dict, used_urls: set) -> list:
     ]
 
 
+def fill_sector_from_recent_archive(sections: dict, now: datetime) -> dict:
+    """Keep 2–3 important verified articles per sector without fabricating news.
+
+    Current-day high-quality stories always rank ahead of retained coverage.
+    Retained items preserve their *actual* publication date and source URL.
+    Only verified/safely generated recent items may be carried over, and
+    recurring coverage of the same specific issue is deduplicated.
+    """
+    from news_quality import duplicate
+    archive_root = Path(__file__).resolve().parents[1] / "docs" / "archive"
+    max_age_days = 5
+    minimum = 2
+    maximum = TOP_N_PER_SECTION
+    prior = []
+    for offset in range(1, max_age_days + 1):
+        archive_path = archive_root / (
+            now.date() - timedelta(days=offset)
+        ).isoformat()
+        archive_path = archive_path.with_suffix(".json")
+        if not archive_path.exists():
+            continue
+        try:
+            payload = json.loads(archive_path.read_text(encoding="utf-8"))
+            prior.append(payload.get("categories", {}))
+        except (OSError, ValueError, TypeError) as exc:
+            print(f"  [주의] 최근 기사 아카이브 확인 실패: {exc}")
+
+    used = {a["url"] for group in sections.values() for a in group
+            if a.get("url")}
+    for key, items in sections.items():
+        if len(items) >= minimum:
+            continue
+        for archived in prior:
+            for candidate in archived.get(key, []):
+                if len(items) >= minimum:
+                    break
+                if not isinstance(candidate, dict):
+                    continue
+                if candidate.get("summary_mode") not in (
+                        "editor_verified", "ai_summary", "source_digest"):
+                    continue
+                date_str = str(candidate.get("pubDate") or "")
+                try:
+                    article_date = datetime.strptime(date_str, "%Y-%m-%d").date()
+                except ValueError:
+                    continue
+                if not (0 <= (now.date() - article_date).days <= max_age_days):
+                    continue
+                summary = candidate.get("summary", [])
+                if not (isinstance(summary, list) and len(summary) == 3
+                        and all(isinstance(line, str) and len(line.strip()) >= 23
+                                and not line.strip().endswith(("…", "..."))
+                                for line in summary)):
+                    continue
+                url = candidate.get("url")
+                if not url or url in used or any(
+                        duplicate(candidate, existing) for existing in items):
+                    continue
+                retained = dict(candidate)
+                retained["carried_forward"] = True
+                retained["briefing_asof"] = now.date().isoformat()
+                items.append(retained)
+                used.add(url)
+            if len(items) >= minimum:
+                break
+        items[:] = items[:maximum]
+        for i, article in enumerate(items):
+            article["top"] = (i == 0)
+        print(f"  [최근 핵심뉴스 보강] {key}: {len(items)}건")
+
+    missing = [key for key, items in sections.items() if len(items) < minimum]
+    if missing:
+        raise RuntimeError(
+            "검증된 기사 2건 미만 영역 발견: " + ", ".join(missing) +
+            ". 오래되거나 미확인된 기사를 채우지 않고 기존 브리핑 보존."
+        )
+    return sections
+
+
 # ─────────────────────────────────────────────────────────────
 # 4) 실행
 # ─────────────────────────────────────────────────────────────
@@ -666,6 +745,11 @@ def main():
     for key, meta in SECTIONS.items():
         meta = {**meta, "key":key}
         data[key] = build_section(meta, used_urls)
+
+    # Executive briefing: never post a mostly empty 10-section homepage.
+    # Retain only verified strategic coverage within the last five days,
+    # preserving source publication dates and original links.
+    data = fill_sector_from_recent_archive(data, datetime.now(KST))
 
     produced_at = datetime.now(KST)
     try:
