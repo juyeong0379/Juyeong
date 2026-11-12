@@ -471,6 +471,7 @@ def build_section(meta: dict, used_urls: set) -> list:
     for start in range(0, len(candidates), BATCH_SIZE):
         scored.extend(classify_batch(meta, candidates[start:start + BATCH_SIZE]))
     scored.sort(key=lambda x: x["score"], reverse=True)
+    scored=deduplicate(scored)
 
     # 기사 수 부족 시 후보군 확대. 적합한 실재 기사가 없으면 임의로 채우지 않음.
     if len(scored) < 2:
@@ -481,6 +482,7 @@ def build_section(meta: dict, used_urls: set) -> list:
         for start in range(0, len(extra), BATCH_SIZE):
             scored.extend(classify_batch(meta, extra[start:start + BATCH_SIZE]))
         scored.sort(key=lambda x: x["score"], reverse=True)
+    scored=deduplicate(scored)
 
     if meta["label"] == "하나금융그룹":
         # 은행, 증권, 다른 계열사별로 적합한 기사 하나씩 우선 선정
@@ -521,8 +523,14 @@ def build_section(meta: dict, used_urls: set) -> list:
     for item in top:
         if not item.get("insight") and item.get("summary_mode")=="source_digest":
             item["insight"] = strategy_insight(meta["key"], item["title"], item["summary"])
-    # Unique company + event: select at most one overlapping article per briefing.
-    top=deduplicate(top)
+    # Only publish fully supported 3-point summaries, never a chopped headline
+    # or search-description split masquerading as analysis.
+    top=[item for item in deduplicate(top)
+         if isinstance(item.get("summary"),list)
+         and len(item["summary"])==3
+         and item.get("summary_mode") not in ("source_excerpt","preview_digest")
+         and (item.get("summary_mode")=="ai_summary"
+              or validate_digest(item["title"],item["summary"]))]
     used_urls.update(item["url"] for item in top)
     print(f"  → {len(top)}건 선정")
 
@@ -571,8 +579,12 @@ def main():
     }
 
     out_path = os.path.join(os.path.dirname(__file__), "..", "docs", "data.json")
-    if sum(len(v) for v in data.values()) == 0:
-        raise RuntimeError("선정 기사 0건: 기존 브리핑 보존")
+    publishable=sum(len(v) for v in data.values())
+    if publishable < 15:
+        raise RuntimeError(
+            f"검증된 3줄 요약이 {publishable}건뿐입니다. "
+            "기존 정상 브리핑을 보존하고 AI API 크레딧/기사 본문 접근 상태를 점검하세요."
+        )
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     # 선택 날짜의 뉴스를 보관하여 최근 30일 검색과 과거 조회에 활용
