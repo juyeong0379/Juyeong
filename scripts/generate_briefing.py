@@ -33,19 +33,20 @@ from openai import OpenAI, AuthenticationError, PermissionDeniedError, RateLimit
 from sector_rules import classify_sector, sector_matches
 from article_digest import digest, preview_digest
 from news_quality import duplicate, validate_digest, deduplicate, numeric_claims_grounded
+from news_materiality import is_material_news
 from insight_policy import accept_insight
 from report_sources import collect_reports
 
 KST = timezone(timedelta(hours=9))
 MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
-BATCH_SIZE = 8
+BATCH_SIZE = 6
 
 TOP_N_PER_SECTION = 3      # 섹션별로 보여줄 기사 수
 NAVER_PER_KEYWORD = 30     # 키워드당 네이버에서 가져올 기사 수 (언론사 필터 전)
-MAX_CANDIDATES = 24        # 섹션별로 OpenAI에게 보낼 후보 최대 수
-MIN_DEPTH = 68
-MIN_QUALITY = 68
-MIN_IMPORTANCE = 62
+MAX_CANDIDATES = 18        # 섹션별로 OpenAI에게 보낼 후보 최대 수
+MIN_DEPTH = 70
+MIN_QUALITY = 70
+MIN_IMPORTANCE = 75
 RECENT_HEADLINES = []
 PREFERRED_IB_OUTLETS = {"더벨", "인베스트조선", "딜사이트", "한국경제", "한국금융신문", "법률신문", "딜북"}             # 심층도가 이보다 낮으면 탈락
 
@@ -381,6 +382,12 @@ def classify_batch(meta: dict, batch: list) -> list:
 - 검색어가 들어 있어도 기사의 '주제'가 위 기준과 다르면 반드시 is_relevant: false
 - 단신·속보·시황 중계·보도자료 받아쓰기·행사/인사 소식은 is_relevant: false
 - 원인·배경·영향·전망을 짚는 분석/기획/해설 기사를 선호
+- **가장 중요한 원칙: '어떤 회사가 어떤 거래를 성사시켰다'는 실적·동향보다 '이 사건이 IB 사업환경에 무엇을 바꾸는가'를 평가할 것.**
+- 다음처럼 여러 기업이나 IB 사업에 파급되는 뉴스에 높은 점수: 실제 시행·확정된 정책 및 규제 변화, 공모/회사채/인수금융/PF 시장의 구조 변화, 신용·유동성 위기, 자본 조달 조건 변화, 금융기관의 전략적 사업 구조 변화, 생산적금융의 자금 공급·배분 방식 변화.
+- 개별 발행·인수·매각·IPO·수주·분기 실적은 원칙적으로 부적합. 규모가 크다는 이유만으로 선정하지 말고 다른 기업의 조달 관행·회수·주관 경쟁·리스크 분담에 영향을 주는 선례인지 확인.
+- 다만 거래 규모가 크지 않아도 새로운 규제·심사 기준의 첫 적용, 새로운 금융 구조·회수 경로, 위험 분담 관행의 전환처럼 업계에 적용 가능한 선례가 뚜렷하면 선정 가능.
+- 기사에 '왜 IB 실무가 주목해야 하는지'를 객관적인 근거로 설명할 수 없다면 is_relevant=false. 거래 발표 자체는 선정 이유가 될 수 없음.
+- 시장 전체 또는 업계 복수 기업에 영향을 주는 현상을 우대하되, 영향이 언급되지 않은 단일 기업 실적 기사는 제외.
 - 한국경제·한국금융신문·법률신문·자본시장 전문지 등 매체 이름만으로 우대하지 않고, 숫자·거래구조·쟁점·실무 영향을 기준으로 품질 판단
 - 법률신문의 법규 해설은 IPO·인수금융·부동산PF·STO 등에 직접 관련되는 경우만 선정
 - 한국시간 오전 8시 브리핑 대상: 전일~당일 기사. 월요일만 지난 금요일~월요일까지 검토. 이전 날짜 기사를 끌어와 3건을 채우지 말 것.
@@ -391,16 +398,22 @@ def classify_batch(meta: dict, batch: list) -> list:
 - 반드시 3건을 선정할 필요 없음. 믿을 만한 기사 한 건만 있으면 한 건만 선정.
 
 점수 기준 (0~100 정수):
-- importance: IB 실무자가 알아야 할 중요도 (딜 규모, 시장 영향, 정책 파급력)
-- depth: 심층성. 분석·해설이고 숫자와 맥락이 풍부하면 높게, 사실 전달뿐이면 낮게
+- materiality: **IB 비즈니스에 미치는 구조적 중요도**. 금융수요·가격·거래구조·규제·리스크·주관경쟁 등에 실질적인 변화가 있는지. 단순 거래 성사·회사 실적은 50점 이하. 시장 전체 파급/금융관행 선례는 80점 이상.
+- importance: 여러 IB 사업·고객에게 미칠 파급력 (거래 규모 자체보다 조달시장·규제·리스크 변화에 높은 점수)
+- depth: 심층성. 분석·해설이며 원인·근거·거래구조·맥락이 풍부하면 높게, 사실 전달뿐이면 낮게
 - quality: 내용이 구체적이고 신뢰할 만한지
+- impact_type: policy_regulation | capital_market_structure | systemic_risk | financing_conditions | transaction_precedent | industry_investment_shift | competitive_strategy 중 하나. 해당 사항이 없는 일반 단일 거래·실적은 is_relevant=false.
+- impact_reason: **왜 이 이슈를 IB기획실에 공유해야 하는지** 25~90자. 단순 '수요 확대 전망' '동향 주목'이 아니라 사업·금융구조·시장 위험에 대한 영향 경로를 구체적으로 기술.
+- impact_evidence: 제목 또는 검색 설명에 실제 존재하는 7~65자 길이의 **연속된 문구를 그대로 복사**. 이 문구가 핵심 변화의 근거여야 하며 임의로 재작성하면 안 됨. 뚜렷한 원문 근거가 없으면 부적합 처리.
+- 제목·검색 설명만 제공되므로 출처에 없는 전망·금액·인과관계는 절대 지어내지 말 것.
 
 summary 작성 규칙 (개조식):
 - 반드시 3개 항목. 각 항목 40~75자의 완결된 개조식 문장으로 요약할 것
 - 명사형 종결 ("~했다" X → "~흥행", "~확대", "~부담 가중" O)
-- 1번째: 무슨 일인지. 숫자·금액·당사자를 구체적으로
-- 2번째: 배경이나 맥락. 왜 지금 이런 일이 벌어졌는지
-- 3번째: 중요 사실 또는 구체적인 시장 변화 (시사점은 별도 insight 필드로 작성)
+- 1번째: 시장·정책·금융구조에 어떤 **중요한 변화**가 발생했는지 (객관적 사실)
+- 2번째: 그 변화의 **배경과 원인**, 확인된 수치·제도·계약 구조
+- 3번째: 해당 변화가 **IB 사업에 미치는 구체적인 영향 경로** (발행조건·인수금융·투자·위험한도·회수·주관 경쟁 등). 원문에 없는 전망이나 효과는 단정하지 말 것.
+- 단일 기업의 거래 성사·실적 수치를 세 문장 반복하는 요약은 금지. 주목할 만한 영향이 확인되지 않으면 기사를 선정하지 말 것.
 - insight는 **선택 항목**. 기본값은 빈 문자열 ""임.
 - 법률·정책·규제의 실제 제·개정/시행, 대규모 금융사고·신용위기, 업계의 중대한 금융수요·자금흐름 변화, 경쟁사의 구조적 전략 전환 등 **IB 전략·손익·위험한도·대내외 협업 전략에 영향이 큰 사건**만 작성.
 - 일반적인 IPO 청구·회사채 발행·단순 개별 인수/투자 소식은 원칙적으로 insight="" 처리. 기사 3건 모두 시사점이 없어도 정상임.
@@ -432,7 +445,11 @@ summary 작성 규칙 (개조식):
     "insight": "전략적 검토가 필요할 때만 짧은 개조식, 불필요하면 빈 문자열",
     "importance": 0,
     "depth": 0,
-    "quality": 0
+    "quality": 0,
+    "materiality": 0,
+    "impact_type": "policy_regulation",
+    "impact_reason": "왜 여러 IB 사업 또는 금융구조에 중요한지 설명",
+    "impact_evidence": "기사 제목 또는 설명에서 그대로 복사한 연속 문구"
   }}
 ]
 
@@ -443,7 +460,7 @@ summary 작성 규칙 (개조식):
 {numbered}
 """
 
-    judgments = ask_openai_json(prompt, max_tokens=5500)
+    judgments = ask_openai_json(prompt, max_tokens=5000)
     if not isinstance(judgments, list):
         print(f"  [경고] '{meta['label']}' AI 요약 불가 → 원문 검색 발췌 모드")
         return fallback_classify_batch(meta, batch)
@@ -461,15 +478,19 @@ summary 작성 규칙 (개조식):
                 or to_int(j.get("importance")) < MIN_IMPORTANCE):
             continue
         c = batch[idx]
+        if not is_material_news(j, c["title"], c["description"]):
+            print(f"  [선정 제외] 시장 파급력/검증 근거 부족: {c['title'][:60]}")
+            continue
         if classify_sector(c["title"],c["description"]) != meta["key"]:
             continue
 
         final_score = (
-            0.15 * freshness_score(c["pub_dt"], now)
-            + 0.35 * to_int(j.get("importance"))
-            + 0.35 * depth
-            + 0.15 * to_int(j.get("quality"))
-            + (2 if c["source"] in PREFERRED_IB_OUTLETS else 0)
+            0.05 * freshness_score(c["pub_dt"], now)
+            + 0.45 * to_int(j.get("materiality"))
+            + 0.25 * to_int(j.get("importance"))
+            + 0.15 * depth
+            + 0.10 * to_int(j.get("quality"))
+            + (1 if c["source"] in PREFERRED_IB_OUTLETS else 0)
         )
         reporter = re.sub(r"\s+", " ", str(j.get("reporter") or "")).strip()[:20]
 
