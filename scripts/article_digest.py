@@ -50,9 +50,9 @@ def get_article_body(url):
         if "html" not in res.headers.get("content-type","text/html").lower():
             return ""
         tree=BeautifulSoup(res.content,"html.parser")
+        structured=_jsonld_text(tree)
         for tag in tree.select("script,style,nav,header,footer,aside,form,button,iframe,figure,figcaption"):
             tag.decompose()
-        structured=_jsonld_text(tree)
         if len(structured)>420:
             return structured[:16000]
         candidates=[clean(el.get_text(" ",strip=True)) for selector in SELECTORS
