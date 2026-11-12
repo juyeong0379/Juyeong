@@ -153,8 +153,8 @@ SECTIONS = {
     "hana": {
         "no": "06", "emoji": "🏛️", "label": "하나금융그룹",
         "desc": "하나금융지주·하나은행·하나증권 IB",
-        "keywords": ["하나증권 IB", "하나금융그룹 기업금융", "하나은행 인수금융", "하나증권 주선", "하나금융 생산적금융", "하나캐피탈 투자금융", "하나카드 기업금융", "하나자산신탁 부동산금융"],
-        "criteria": "하나금융그룹 및 계열사의 IB 사업·자금조달·주선·생산적금융·협업 실적과 전략만 포함. 일반 인사·사회공헌·개인고객 이벤트 제외.",
+        "keywords": ["하나증권 IB 인수금융", "하나은행 하나증권 공동주선", "하나금융 생산적금융 성과", "하나금융 주주환원 IR", "하나증권 투자금융", "하나금융 녹색금융", "하나은행 건전성 대손비용", "하나증권 인프라 투자", "하나금융 그룹 협업"],
+        "criteria": "하나금융그룹 관련 뉴스를 균형 있게 선별. 좋은 이야기 2건: 실제 기업금융·투자·인수금융 주선, 그룹 ONE-IB 협업, 생산적금융 공급, IR·주주환원·투자자 소통의 주요 행사 및 전략 성과. 개선 과제 1건: 대손·충당금·자본한도·유동성·건전성·실적 부담 등 객관적 지표가 담긴 비판적 분석. 가능하면 긍정 2+과제 1 구성이되 사실이 없으면 빈자리 유지. 일반 기부·봉사·단순 홍보행사, 소액 거래, 인사 단신 제외.",
     },
     "peer": {
         "no": "07", "emoji": "🏙️", "label": "경쟁사",
@@ -177,9 +177,8 @@ SECTIONS = {
     "growthfund": {
         "no": "10", "emoji": "🏦", "label": "국민성장펀드",
         "desc": "국민성장펀드 정책·조성·투자·집행·운용·출자",
-        "keywords": ["국민성장펀드 출자", "국민성장펀드 투자", "국민성장펀드 자금 집행",
-                     "국민성장펀드 첨단전략산업", "국민성장펀드 금융기관", "국민성장펀드 운용"],
-        "criteria": "국민성장펀드 자체의 조성·출자·투자계획·운용·집행과 참여기관의 투자구조를 구체적으로 다룬 기사만 선정. 일반적인 벤처투자·모험자본·정책금융 기사는 생산적금융으로 분류. 단순 행사 소개 제외.",
+        "keywords": ["국민성장펀드 예산안", "국민성장펀드 실적 집행", "국민성장펀드 투자", "국민성장펀드 인프라 PF", "국민성장펀드 운용", "국민성장펀드 1호 사업", "국민성장펀드 금융지주", "국민성장펀드 출자"],
+        "criteria": "국민성장펀드 실제 집행(투자 승인·출자·GP 선정·신규 펀드 결성)과 2027 예산·재원 조달·지주별 실적 인정 기준·대형 PF 연계, 1호 투자사업의 공사 지연·유동성·EPC 위험을 다루는 심층 기사. 정책 성과와 한계 모두 포함. 이름에 펀드가 직접 나타나지 않아도 내용이 국민성장펀드 1호 사업이나 집행 구조를 다루면 적합. 단순 행사·정책 보도자료 전재 제외.",
     },
 }
 
@@ -396,6 +395,9 @@ def classify_batch(meta: dict, batch: list) -> list:
 - 단순 보도자료를 옮겨 적은 제목·설명에는 낮은 depth/quality를 부여. 데이터·거래구조·법규 쟁점과 왜 중요한지가 확인되는 기사 위주로 선정.
 - 언론사 이름 자체가 합격 기준은 아님. IB 전문지·경제지·법률신문·전자신문·딜북 등 해당 주제에 전문성을 지닌 출처도 동등 평가.
 - 반드시 3건을 선정할 필요 없음. 믿을 만한 기사 한 건만 있으면 한 건만 선정.
+- '하나금융그룹' 카테고리는 다른 분야와 달리 **실제 거래·성과·행사 2건 + 객관적 문제·건전성 위험 1건**을 우선. 하나금융 관련 기사라면 단순 특정 거래가 아니라 그룹 영업·자본효율성·ONE-IB 협업의 의미를 평가.
+- 하나금융그룹으로 분류할 때에는 hana_view 필드에 positive(긍정적 실적·신규 금융·주주 소통), risk(문제·규제·대손·부실 등), neutral 중 하나를 기입. 과장이나 억지 구분은 금지.
+- '국민성장펀드'는 일반 생산적금융과 분리하며 정책 목표와 실제 집행, 지주별 참여, 대형 투자사업의 금융 위험 등을 다양하게 확인.
 
 점수 기준 (0~100 정수):
 - materiality: **IB 비즈니스에 미치는 구조적 중요도**. 금융수요·가격·거래구조·규제·리스크·주관경쟁 등에 실질적인 변화가 있는지. 단순 거래 성사·회사 실적은 50점 이하. 시장 전체 파급/금융관행 선례는 80점 이상.
@@ -446,6 +448,7 @@ summary 작성 규칙 (개조식):
     "importance": 0,
     "depth": 0,
     "quality": 0,
+    "hana_view": "positive",
     "materiality": 0,
     "impact_type": "policy_regulation",
     "impact_reason": "왜 여러 IB 사업 또는 금융구조에 중요한지 설명",
@@ -478,7 +481,17 @@ summary 작성 규칙 (개조식):
                 or to_int(j.get("importance")) < MIN_IMPORTANCE):
             continue
         c = batch[idx]
-        if not is_material_news(j, c["title"], c["description"]):
+        # Hana Group: genuine important deals, investor events and objective
+        # credit-quality challenges matter even without economy-wide impact.
+        if meta["key"] == "hana":
+            evidence = str(j.get("impact_evidence") or "").strip()
+            factual = evidence and len(evidence) >= 7 and (
+                "".join(evidence.split()) in "".join((c["title"]+" "+c["description"]).split())
+            )
+            if not (factual and depth >= 65 and to_int(j.get("quality")) >= 68
+                    and to_int(j.get("importance")) >= 65):
+                continue
+        elif not is_material_news(j, c["title"], c["description"]):
             print(f"  [선정 제외] 시장 파급력/검증 근거 부족: {c['title'][:60]}")
             continue
         if classify_sector(c["title"],c["description"]) != meta["key"]:
@@ -522,6 +535,7 @@ summary 작성 규칙 (개조식):
             ),
             "reporter": reporter,
             "score": final_score,
+            "hana_view": str(j.get("hana_view") or "neutral"),
         })
     return results
 
@@ -584,21 +598,13 @@ def build_section(meta: dict, used_urls: set) -> list:
         scored.sort(key=lambda x: x["score"], reverse=True)
     scored=deduplicate(scored)
 
-    if meta["label"] == "하나금융그룹":
-        # 은행, 증권, 다른 계열사별로 적합한 기사 하나씩 우선 선정
-        groups = [
-            ("하나은행",),
-            ("하나증권",),
-            ("하나캐피탈", "하나카드", "하나자산신탁", "하나대체투자", "하나금융티아이", "하나생명"),
-        ]
-        selected, chosen = [], set()
-        for terms in groups:
-            found = next((x for x in scored if x["url"] not in chosen and any(t in x["title"] for t in terms)), None)
-            if found:
-                selected.append(found)
-                chosen.add(found["url"])
-        selected.extend(x for x in scored if x["url"] not in chosen)
-        top = selected[:TOP_N_PER_SECTION]
+    if meta["key"] == "hana":
+        # Group briefing editorial mix: 2 grounded positives + 1 objectively
+        # supported risk/challenge. Never fill a missing side with old articles.
+        positive = [x for x in scored if x.get("hana_view") == "positive"]
+        risk = [x for x in scored if x.get("hana_view") == "risk"]
+        top = deduplicate(positive[:2] + risk[:1])
+        # When insufficient qualified news appears, show fewer than 3 items.
     else:
         top = scored[:TOP_N_PER_SECTION]
     # Only the chosen stories are read in full; preserve all original source URLs.
