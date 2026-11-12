@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup
 HEADERS={"User-Agent":"Mozilla/5.0 (compatible; IBNewsDigest/1.0; +https://github.com/juyeong0379/Juyeong)",
          "Accept-Language":"ko-KR,ko;q=0.9"}
 BAD=re.compile(r"^(사진|자료|출처|기자|관련 기사|관련기사|이 기사는|본 기사는|Copyright|ⓒ|무단전재|구독|광고|기사제보|페이스북|카카오톡|네이버|구글|표제|기획|홈으로|전체메뉴|더보기|ADVERTISEMENT)",re.I)
+NOISE=re.compile(r"AI 추천 뉴스|기사 스크랩|댓글 공유|글자 크기|AI를 넘어서는|구독하기|무단전재|재배포 금지|ADVERTISEMENT|뉴스 홈|기사를 공유|이 기사를|인쇄하기|로그인|비밀번호|SNS 공유|관련기사 보기",re.I)
 MARKET=re.compile(r"억원|조원|억달러|%|bp|금리|차환|주관|인수|지분|발행|계약|PF|M&A|IPO|공모|사채|신용|투자|펀드|리츠|대출|규제|심사|자금")
 SELECTORS=("article","[itemprop=articleBody]","[class*=article-body]","[class*=article_body]",
            "[id*=articleBody]","[id*=article_body]","[class*=news_view]","[id*=newsView]",
@@ -75,7 +76,7 @@ def sentences(body):
     seen=set()
     for item in parts:
         t=clean(item).strip(" \t-·●")
-        if not 35<=len(t)<=230 or BAD.search(t):
+        if not 35<=len(t)<=230 or BAD.search(t) or NOISE.search(t):
             continue
         if re.search(r"로그인|동의합니다|개인정보|구독 신청|기사 공유|이메일 주소|보도자료 다운로드",t):
             continue
