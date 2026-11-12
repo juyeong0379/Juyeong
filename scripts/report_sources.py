@@ -33,6 +33,7 @@ GROUPS = {
     "peer": ("IB", "증권사", "자본시장", "사모", "기업금융"),
     "sto": ("토큰", "디지털", "STO", "증권", "금융인프라"),
     "productive": ("투자", "벤처", "성장", "산업", "모험자본", "생산적", "금융"),
+    "growthfund": ("국민성장펀드", "성장펀드", "정책금융", "출자", "투자집행", "첨단산업"),
 }
 # Existing verified institutional report pages. They remain eligible only
 # while sufficiently recent and relevant to the current day's news.
