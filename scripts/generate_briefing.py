@@ -30,6 +30,7 @@ from email.utils import parsedate_to_datetime
 import requests
 import anthropic
 from sector_rules import classify_sector, sector_matches
+from article_digest import digest
 from report_sources import collect_reports
 
 KST = timezone(timedelta(hours=9))
@@ -301,28 +302,38 @@ FALLBACK_TOPIC_PATTERNS = {
 }
 
 def fallback_classify_batch(meta: dict, batch: list) -> list:
-    """No generative summary when AI is unavailable: show attributable source snippets.
+    """Use verified source-article key points if Claude credits are exhausted.
 
-    These are not AI-verified three-line summaries or strategic insights.
+    When the full article cannot be read, the Naver snippet stays explicitly
+    labeled and is never presented as a three-point substantive summary.
     """
-    pattern=FALLBACK_TOPIC_PATTERNS.get(meta["label"],r"$^")
-    out=[]
+    pattern = FALLBACK_TOPIC_PATTERNS.get(meta["label"], r"$^")
+    out = []
     for c in batch:
-        title=c.get("title","")
-        desc=re.sub(r"\s+"," ",c.get("description","")).strip()
-        if classify_sector(title,desc) != meta["key"]:
+        title = c.get("title", "")
+        desc = re.sub(r"\\s+", " ", c.get("description", "")).strip()
+        if classify_sector(title, desc) != meta["key"]:
             continue
-        if not re.search(pattern,title+" "+desc,re.IGNORECASE):
+        if not re.search(pattern, title + " " + desc, re.IGNORECASE):
             continue
-        if len(desc)<55 or SHORT_NEWS_PATTERN.search(title):
+        if len(desc) < 55 or SHORT_NEWS_PATTERN.search(title):
             continue
-        if re.search(r"업무협약|협약식|기념식|인사발령|지점 오픈|행사 개최",title):
+        if re.search(r"업무협약|협약식|기념식|인사발령|지점 오픈|행사 개최", title):
             continue
-        age_hours=(datetime.now(KST)-c["pub_dt"]).total_seconds()/3600
-        score=45+(2 if c["source"] in PREFERRED_IB_OUTLETS else 0)
-        score+=min(14,len(desc)/20)+max(0,13-age_hours/8)
-        out.append({**c,"summary":[desc[:210]],"insight":"",
-                    "summary_mode":"source_excerpt","reporter":"","score":score})
+        article_points = digest(title, c["url"], desc)
+        if article_points:
+            summary = article_points
+            mode = "source_digest"
+        else:
+            summary = [desc[:180]]
+            mode = "source_excerpt"
+        age_hours = (datetime.now(KST) - c["pub_dt"]).total_seconds() / 3600
+        score = 45 + (2 if c["source"] in PREFERRED_IB_OUTLETS else 0)
+        score += min(14, len(desc)/20) + max(0, 13 - age_hours/8)
+        if mode == "source_digest":
+            score += 10
+        out.append({**c, "summary":summary, "insight":"",
+                    "summary_mode":mode, "reporter":"", "score":score})
     return out
 
 def classify_batch(meta: dict, batch: list) -> list:
