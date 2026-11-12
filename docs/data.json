@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12 16:54 KST",
+  "generated_at": "2026-11-12 17:00 KST",
   "reports": [
     {
       "id": "report-1",
@@ -98,7 +98,53 @@
     }
   ],
   "categories": {
-    "ecm": [],
+    "ecm": [
+      {
+        "headline": "'대기업과 다르다'…자회사 상장 절실한 중견기업들, 내년 주총이 분수령",
+        "source": "인베스트조선",
+        "pubDate": "2026-11-12",
+        "reporter": "최수빈 기자",
+        "url": "https://www.investchosun.com/m/article.html?contid=2026111180176",
+        "summary": [
+          "중복상장 규제 강화로 자회사 IPO를 추진하는 중견기업들이 **모회사 주주 동의·보호 방안 마련**에 직면",
+          "대기업과 달리 FI 지분을 자체 매입하기 어려워 **상장 약정 이행·투자금 회수**를 함께 해결해야 하는 상황",
+          "내년 정기주총을 앞두고 주주 설득과 가치공유 방안이 **IPO 일정·대체 자금조달 구조**의 핵심 변수로 부상"
+        ],
+        "insight": "중복상장 대상 발행사의 주주영향평가·보호책·FI 회수 조건을 연계한 IPO 및 대체 조달 자문 수요 검토",
+        "top": true,
+        "summary_mode": "editor_verified"
+      },
+      {
+        "headline": "[중복상장 규제 진단] '솔리다임 닮은꼴' 보스턴다이내믹스, 아틀라스 양산 자금은",
+        "source": "더벨",
+        "pubDate": "2026-11-12",
+        "reporter": "백승룡 기자",
+        "url": "https://m.thebell.co.kr/m/newsview.asp?newskey=202611101529170840103818&svccode=04",
+        "summary": [
+          "솔리다임 IPO 검토 중단 이후 해외 인수 자회사인 **보스턴다이내믹스의 중복상장 적용 가능성**도 쟁점화",
+          "현대차그룹은 **2028년 아틀라스 양산**을 목표로 자금조달을 준비해왔으나 IPO 활용 가능성이 불투명",
+          "자회사 독자 상장이 어려워지면 **계열사 출자·대체 금융조달 부담**이 커지고 모회사 주주가치와의 균형이 과제로 부각"
+        ],
+        "insight": "대규모 첨단산업 투자에서 자회사 IPO 제약에 따른 프리IPO·인수금융·계열사 출자 대안 비교 검토",
+        "top": false,
+        "summary_mode": "editor_verified"
+      },
+      {
+        "headline": "[thebell's view] '솔리다임 유탄' 맞은 네이버·두나무…IPO 약속 어쩌나",
+        "source": "더벨",
+        "pubDate": "2026-11-12",
+        "reporter": "이민우 기자",
+        "url": "https://www.thebell.co.kr/front/newsview.asp?code=0302&key=202611111643181880107975",
+        "summary": [
+          "네이버파이낸셜·두나무 결합 과정에서 **네이버의 지분율이 낮아져도 연결 지배력이 유지**되는 구조가 중복상장 쟁점",
+          "향후 IPO 추진 약속과 **모회사 주주 보호·공정위 기업결합 심사**가 맞물려 거래 구조의 불확실성 확대",
+          "상장 규제와 기업결합 조건이 동시에 작용하면서 **주식교환 일정·상장 및 투자금 회수 전략**의 재검토 필요성 부각"
+        ],
+        "insight": "그룹 내 지배력 판단과 주주소통·기업결합 조건을 사전 검토하는 크로스보더·계열사 IPO 자문체계 점검",
+        "top": false,
+        "summary_mode": "editor_verified"
+      }
+    ],
     "corp": [
       {
         "top": true,
@@ -235,5 +281,5 @@
     ],
     "growthfund": []
   },
-  "selection_policy": "IB market-moving developments only; no routine single-company deal/results"
+  "selection_policy": "Major IPO market-impact issues prioritized; source-verified nonduplicate regulatory impact news"
 }
