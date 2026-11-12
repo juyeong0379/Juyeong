@@ -4,8 +4,9 @@ on:
   # News generation runs on schedule or by manual dispatch.
   # Editing selection logic must not silently overwrite a reviewed live briefing.
   schedule:
-    # 매일 07:30 KST 수집 시작, 08:00 KST 게시 목표 (전날 22:30 UTC)
-    - cron: "30 22 * * *"
+    # 매일 07:05 KST 수집 시작 → 07:30 KST 이전 게시 목표 (전날 22:05 UTC)
+    # GitHub Actions 예약 실행과 Pages 배포는 지연될 수 있어 정확한 분 단위 보장은 불가
+    - cron: "5 22 * * *"
   workflow_dispatch: {}
 
 concurrency:
@@ -19,6 +20,7 @@ permissions:
 jobs:
   build-briefing:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: 저장소 체크아웃
         uses: actions/checkout@v4
@@ -27,6 +29,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: pip
 
       - name: 패키지 설치
         run: pip install -r requirements.txt
@@ -42,6 +45,33 @@ jobs:
             exit 1
           fi
           python scripts/generate_briefing.py
+
+      - name: 게시 전 뉴스 무결성 점검 (KST 날짜·3줄 요약·중복)
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          data = json.loads(Path("docs/data.json").read_text(encoding="utf-8"))
+          today = datetime.now(ZoneInfo("Asia/Seoul")).strftime("%Y-%m-%d")
+          if not str(data.get("generated_at", "")).startswith(today):
+              raise RuntimeError("오늘자 뉴스가 아니므로 기존 배포 데이터를 유지합니다.")
+          stories = [item for group in data["categories"].values() for item in group]
+          if not stories:
+              raise RuntimeError("게시 가능한 뉴스가 없어 기존 데이터를 유지합니다.")
+          urls = [item.get("url", "") for item in stories]
+          if not all(urls) or len(urls) != len(set(urls)):
+              raise RuntimeError("원문 링크 누락 또는 중복 발견")
+          for section, group in data["categories"].items():
+              if len(group) > 3:
+                  raise RuntimeError(f"{section}: 섹터별 3건 초과")
+              for item in group:
+                  if len(item.get("summary", [])) != 3:
+                      raise RuntimeError(f"{section}: 3줄 요약 미충족")
+          print(f"검증 완료: {today} | {len(stories)}건 | 기존 원문 URL 유지")
+          PY
 
       - name: 결과 커밋 & 푸시
         run: |
