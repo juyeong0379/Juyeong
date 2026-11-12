@@ -56,3 +56,5 @@ jobs:
           name: openai-ib-news-preview
           path: docs/data.json
           retention-days: 2
+
+# Manual on-demand re-evaluation using the updated IB materiality criteria.
