@@ -19,7 +19,7 @@ def main():
     articles = [
         item for group in payload.get("categories", {}).values()
         for item in group
-        if item.get("url") and item.get("summary_mode")=="source_excerpt"
+        if item.get("url") and item.get("summary_mode") in ("source_excerpt", "source_digest")
     ]
     print(f"Digest {len(articles)} search excerpts from {date}",flush=True)
     enriched=0
