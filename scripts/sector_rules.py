@@ -24,7 +24,7 @@ def classify_sector(title, description=""):
             return None
 
     # 1) Real estate must be the financial asset, not a family-office/back-office term.
-    if has(r"(?<!메)리츠|REIT|부동산\s*PF|부동산PF|브릿지론|본PF|PF\s*사업장|(?:프라임\s*)?오피스\s*(?:빌딩|매각|임대|공실|시장|자산|리츠|투자|PF)|물류센터|상업용\s*부동산|부동산(금융|펀드|투자|리파이낸싱)|부동산\s*대출|부동산(시장|매각)|물류창고\s*(매각|PF|투자)|상업시설\s*(매각|PF|투자)",title):
+    if has(r"(?<!메)리츠|REIT|부동산\s*PF|부동산PF|PF\s*보증|정비사업비\s*대출|브릿지론|본PF|PF\s*사업장|(?:프라임\s*)?오피스\s*(?:빌딩|매각|임대|공실|시장|자산|리츠|투자|PF)|물류센터|상업용\s*부동산|부동산(금융|펀드|투자|리파이낸싱)|부동산\s*대출|부동산(시장|매각)|물류창고\s*(매각|PF|투자)|상업시설\s*(매각|PF|투자)",title):
         if not has(r"(?<!메)리츠|REIT|부동산|PF|금융|자금|차환|리파이낸싱|공실|임대|매각|인수|오피스|물류|환헤지|투자",title+" "+desc):
             return None
         return "re"
@@ -38,14 +38,14 @@ def classify_sector(title, description=""):
         return "growthfund"
 
     # 2) Infrastructure finance, not every AI/energy industry headline.
-    infra_asset=has(r"데이터센터|AI\s*데이터센터|GPU|인프라|해상풍력|육상풍력|신재생(에너지)?|발전소|송전망|전력망|민자사업|PPP|SOC|태양광",title)
+    infra_asset=has(r"데이터센터|AI\s*데이터센터|클라우드\s*(?:투자|인프라|데이터센터)|GPU|인프라|해상풍력|육상풍력|신재생(에너지)?|발전소|송전망|전력망|민자사업|PPP|SOC|태양광",title)
     infra_deal=has(r"PF|프로젝트\s*금융|파이낸싱|자금\s*조달|신디케이트|투자유치|투자금|대출|주선|금융약정|펀드|금융지원|사업비|민간투자|인프라\s*투자|착공",title+" "+desc)
     if infra_asset and infra_deal:
         if not has(r"주가|투자노트|수출\s*증가|글로벌\s*경제|실적\s*발표",title):
             return "infra"
 
     # 3) STO and capital-markets digital securities; not coin price.
-    if has(r"토큰증권|토큰\s*증권|STO|증권\s*토큰|조각투자|토큰화\s*(시장|증권|자산)|RWA|토큰주식",title):
+    if has(r"토큰증권|토큰\s*증권|STO|증권\s*토큰|조각투자|토큰화\s*(시장|증권|자산)|RWA|토큰주식|스테이블코인\s*(?:발행|규제|제도|결제|법제|수탁)",title):
         if not has(r"코인\s*가격|비트코인\s*시세|알트코인\s*급등",title):
             return "sto"
 
@@ -74,7 +74,7 @@ def classify_sector(title, description=""):
 
     # 6) M&A must describe a real purchase, sale, takeover, PEF deal,
     #    or acquisition-financing transaction (not just business performance).
-    if has(r"인수금융|인수합병|M&A|바이아웃|경영권\s*(매각|인수|분쟁)|기업\s*(인수|매각)|매각\s*(추진|본입찰|예비입찰|주관|가격|협상)|공개\s*매각|매각\s*입찰|공개매수|매각자문|인수자문|합병\s*(추진|결정|계약)|PEF\s*(인수|매각|회수)|사모펀드\s*(매각|인수|회수)",title):
+    if has(r"인수금융|인수합병|M&A|지분\s*[0-9]+%?\s*인수|인수\s*(?:추진|검토)|바이아웃|경영권\s*(매각|인수|분쟁)|기업\s*(인수|매각)|매각\s*(추진|본입찰|예비입찰|주관|가격|협상)|공개\s*매각|매각\s*입찰|공개매수|매각자문|인수자문|합병\s*(추진|결정|계약)|PEF\s*(인수|매각|회수)|사모펀드\s*(매각|인수|회수)",title):
         return "ma"
     if has(r"PEF|사모펀드",title) and has(r"경영권|인수금융|바이아웃|매각|인수|회수|인수합병",title+" "+desc):
         return "ma"
@@ -90,13 +90,13 @@ def classify_sector(title, description=""):
         return "growthfund"
 
     # 7) Productive finance must be actual investment / policy finance.
-    if has(r"생산적\s*금융|국민\s*성장\s*펀드|모험\s*자본|벤처(투자|펀드|캐피탈)|정책\s*금융|성장\s*펀드|BDC|기업\s*성장\s*집합\s*투자|창업\s*투자",title):
+    if has(r"코스닥\s*육성|AI\s*유니콘|혁신기업\s*자금|생산적\s*금융|국민\s*성장\s*펀드|모험\s*자본|벤처(투자|펀드|캐피탈)|정책\s*금융|성장\s*펀드|BDC|기업\s*성장\s*집합\s*투자|창업\s*투자",title):
         if has(r"투자|자금|금융|지원|펀드|출자|회수|대출|육성|조달|정책",title+" "+desc):
             return "productive"
 
     # 8) Corporate financing needs a capital raise, credit or refinancing
     #    transaction explicitly in its headline.
-    if has(r"회사채|기업어음|\bCP\b|전자단기사채|여전채|신종자본증권|후순위채|금융채|\bDCM\b|기업(금융|대출|자금조달)|신디케이트론|PRS|크레딧|채권(발행|차환|시장|만기|금리|디폴트|엔|의|에|\s*디폴트|\s*상환)|차환\s*(발행|조달|수요)|사모채|자금\s*조달|금융\s*약정|유동화\s*증권",title):
+    if has(r"딤섬본드|외화채|위안화채|회사채|기업어음|\bCP\b|전자단기사채|여전채|신종자본증권|후순위채|금융채|\bDCM\b|기업(금융|대출|자금조달)|신디케이트론|PRS|크레딧|채권(발행|차환|시장|만기|금리|디폴트|엔|의|에|\s*디폴트|\s*상환)|차환\s*(발행|조달|수요)|사모채|자금\s*조달|금융\s*약정|유동화\s*증권",title):
         return "corp"
 
     # 9) Competitor activity requires a securities house / IB-specific
