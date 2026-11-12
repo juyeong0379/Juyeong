@@ -67,6 +67,19 @@ def check():
         "하나금융, 누적 순익 3.6조 견조…하나은행 건전성 관리 총력",
         "대손비용과 NPL 커버리지비율 부담",
     ) == "hana"
+    # Tomorrow's executive dashboard should retain verified strategic stories
+    # from today's dated archive if new IB news is scarce at 07:30.
+    from datetime import datetime
+    from generate_briefing import SECTIONS, KST, fill_sector_from_recent_archive
+    next_day = datetime(2026, 11, 14, 7, 15, tzinfo=KST)
+    empty = {key: [] for key in SECTIONS}
+    result = fill_sector_from_recent_archive(empty, next_day)
+    assert len(result) == 10
+    assert all(2 <= len(group) <= 3 for group in result.values())
+    assert all(story.get("carried_forward") for items in result.values()
+               for story in items)
+    assert all(story.get("pubDate") != "2026-11-14"
+               for items in result.values() for story in items)
     print("PASS: duplicate-event and source-grounded number and IB materiality checks")
 
 if __name__ == "__main__":
