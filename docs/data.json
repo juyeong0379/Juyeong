@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12 13:36 KST",
+  "generated_at": "2026-11-12 16:54 KST",
   "reports": [
     {
       "id": "report-1",
@@ -9,11 +9,7 @@
       "url": "https://www.bok.or.kr/portal/bbs/P0002017/view.do?menuNo=200365&nttId=11066469",
       "type": "금융시장 보고서",
       "related_article_urls": [
-        "https://news.bizwatch.co.kr/article/market/2026/11/11/0036",
-        "https://www.hankyung.com/article/202611107549r",
-        "https://www.investchosun.com/site/data/html_dir/2026/11/10/2026111080102.html",
-        "https://www.investchosun.com/site/data/html_dir/2026/11/12/2026111280085.html",
-        "https://www.yna.co.kr/view/AKR20261112087000008?input=1195m"
+        "https://www.hankyung.com/article/202611107549r"
       ]
     },
     {
@@ -25,8 +21,7 @@
       "type": "국제경제이슈",
       "related_article_urls": [
         "https://news.einfomax.co.kr/news/articleView.html?idxno=4443693",
-        "https://news.einfomax.co.kr/news/articleView.html?idxno=4444108",
-        "https://www.newspim.com/news/view/20261110001225"
+        "https://news.einfomax.co.kr/news/articleView.html?idxno=4444108"
       ]
     }
   ],
@@ -103,38 +98,7 @@
     }
   ],
   "categories": {
-    "ecm": [
-      {
-        "top": true,
-        "headline": "[더벨][크리오스 IPO] 외형 줄고 적자전환…부채비율도 600% 돌파",
-        "source": "더벨",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "크리오스, 코스닥 상장예비심사 청구로 IPO 절차 착수",
-          "최근 2년 연속 매출 감소·지난해 영업손익과 순손익 모두 적자 전환",
-          "부채비율 600% 초과…상반기 실적 개선이 지속될지가 상장 심사 쟁점"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611101132142880109486"
-      },
-      {
-        "top": false,
-        "headline": "[더벨][패스트파이브 IPO] 상장 재도전, 다시 선택한 테슬라 요건",
-        "source": "더벨",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "패스트파이브, 약 6년 만에 IPO 재도전하며 상장예비심사 청구",
-          "이익미실현기업 특례인 테슬라 요건을 다시 활용하는 방향으로 상장 준비",
-          "지난해 매출 1,500억원에 근접하며 6년 전보다 사업 규모·재무체력 개선"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611100833374840103931"
-      }
-    ],
+    "ecm": [],
     "corp": [
       {
         "top": true,
@@ -150,41 +114,11 @@
         "insight": "만기별 수요 격차를 고려한 회사채 발행 일정·차환 구조 최적화 제안 검토",
         "reporter": "",
         "url": "https://www.hankyung.com/article/202611107549r"
-      },
-      {
-        "top": false,
-        "headline": "[Invest]다우기술, 중앙일보 인수 앞두고 회사채 최대 2000억 발행",
-        "source": "인베스트조선",
-        "pubDate": "2026-11-10",
-        "summary": [
-          "다우기술, 중앙일보 인수 추진을 앞두고 3년물 공모 회사채 발행 계획",
-          "기본 발행액 1,000억원·수요예측 결과에 따라 최대 2,000억원 증액 가능",
-          "희망금리 민평 대비 ±30bp 제시…KB증권·한국투자증권이 공동 주관"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/10/2026111080102.html"
       }
     ],
     "ma": [
       {
         "top": true,
-        "headline": "[Invest]넥스플렉스 매각, 인수금융 승인에도 자금조달 숙제 남아…MBK는...",
-        "source": "인베스트조선",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "부산EP 컨소시엄, 넥스플렉스 인수를 위한 금융기관 내부 승인 확보",
-          "인수대금 약 절반을 인수금융으로 조달하고 MBK 재출자·어펄마 출자로 자기자본 보완",
-          "인수금융 재협상 끝에 본계약 추진…매도자 재출자를 활용한 거래 종결 구조가 특징"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/12/2026111280085.html"
-      },
-      {
-        "top": false,
         "headline": "의무공개매수 ‘비례방식’ 부상…M&A 위축 우려",
         "source": "헤럴드경제",
         "pubDate": "2026-11-12",
@@ -197,21 +131,6 @@
         "insight": "공개매수 방식별 인수대금·잔여 지분 처리·인수금융 구조 비교 검토",
         "reporter": "",
         "url": "https://biz.heraldcorp.com/article/10934940?ref=naver"
-      },
-      {
-        "top": false,
-        "headline": "미래에셋증권 CFO \"선진시장 온라인 자산관리 집중…M&A 추가 검토\"",
-        "source": "연합인포맥스",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "미래에셋증권, 일본 산코증권 인수를 통해 현지 온라인 자산관리 사업 진출 추진",
-          "산코증권 지분 100% 인수로 현지 증권업 라이선스와 영업 기반 확보 구상",
-          "일본 진출 후 미국 등 추가 M&A 검토…인수 완료 후 MTS 출시까지 1년 6개월~2년 예상"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "",
-        "reporter": "",
-        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444404"
       }
     ],
     "re": [
@@ -229,21 +148,6 @@
         "insight": "해외 부동산 익스포저의 환헤지 정산·차환 시점을 통합 점검하는 관리체계 검토",
         "reporter": "",
         "url": "https://www.mt.co.kr/stock/2026/11/12/2026111120104062792"
-      },
-      {
-        "top": false,
-        "headline": "[더벨][PF Radar] 신촌 신통기획 사업, 브릿지론 2510억 재구조화",
-        "source": "더벨",
-        "pubDate": "2026-11-11",
-        "summary": [
-          "신촌 4-1·4-12지구 정비사업 브릿지론 2,510억원 재구조화 추진",
-          "하나증권·메리츠증권·NH투자증권 공동 금융주관, 캠코 정상화펀드 660억원 참여",
-          "만기연장과 이자유예가 반복된 채권을 재편해 다음 해 9월 본PF 전환 목표"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611021346525840103063"
       }
     ],
     "infra": [
@@ -264,21 +168,6 @@
       },
       {
         "top": false,
-        "headline": "[르포] \"독산동만 데이터센터 몰아넣나\"…AI가 만드는 지역 불균형",
-        "source": "뉴스핌",
-        "pubDate": "2026-11-11",
-        "summary": [
-          "서울 독산동 주거지 인근 4.98MW 데이터센터 공사에 주민 반대 발생",
-          "인근에도 9MW·9.9MW급 데이터센터 2곳 건립 추진",
-          "수도권에 전기사용 신청 약 81% 집중…전력망과 주민 수용성이 사업 추진 제약"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.newspim.com/news/view/20261110001225"
-      },
-      {
-        "top": false,
         "headline": "[AIDC 투자 점검③] 빅테크 韓 투자 관심에도 전력망 걸림돌",
         "source": "연합인포맥스",
         "pubDate": "2026-11-09",
@@ -293,70 +182,8 @@
         "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443693"
       }
     ],
-    "hana": [
-      {
-        "top": true,
-        "headline": "함영주號 하나금융, 탄소집약도 19.6% 개선…공급망 등 금융배출량 6.6%...",
-        "source": "한국금융신문",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "하나금융, 금융배출량 6.6% 감소·측정 자산 대비 탄소집약도 19.6% 개선",
-          "하나은행의 K-택소노미 기준 녹색여신 9,890억원으로 전년 대비 증가",
-          "재생에너지·에너지 인프라 금융주선과 계열사 공동펀드를 통한 녹색금융 공급 추진"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.fntimes.com/html/view.php?ud=2026111118044779995e6e69892f_18"
-      }
-    ],
-    "peer": [
-      {
-        "top": true,
-        "headline": "'1호 스팩' 띄우는 후발 증권사들…대형사 쏠림 속 합병 완주 '시험대’",
-        "source": "한국경제",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "카카오페이증권, 첫 스팩 상장예비심사 청구로 스팩 시장 진출",
-          "메리츠·우리 등 후발사 진입과 기존 증권사의 스팩 브랜드 재정비 움직임",
-          "IPO 시장 대형사 쏠림 속 우량 합병 대상 발굴과 합병 성공 가능성이 관건"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.hankyung.com/article/202611095195r"
-      },
-      {
-        "top": false,
-        "headline": "증시부진·금리상승에 '직격탄'…증권사 3분기 실적 줄줄이 악화",
-        "source": "연합뉴스",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "주요 증권사 3분기 실적, 거래대금 감소와 시장금리 상승으로 전분기 대비 악화",
-          "한국투자증권 순이익 전분기 대비 70.23% 감소, 키움증권 64.95% 감소",
-          "위탁매매·채권운용 수익 부진으로 시장 환경에 따른 손익 변동성 확대"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.yna.co.kr/view/AKR20261112087000008?input=1195m"
-      },
-      {
-        "top": false,
-        "headline": "메리츠증권, 3분기 영업익 44.7%↓…플랜형 수수료로 고객 잡는다",
-        "source": "비즈워치",
-        "pubDate": "2026-11-11",
-        "summary": [
-          "메리츠증권 3분기 영업이익 1,400억원으로 전년 동기 대비 44.7% 감소",
-          "증시 조정 속 운용·중개 수익 감소로 수익원 다변화 필요성 부각",
-          "발행어음 사업 확대와 투자 앱 수수료 체계 개편 등을 병행"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "",
-        "reporter": "",
-        "url": "https://news.bizwatch.co.kr/article/market/2026/11/11/0036"
-      }
-    ],
+    "hana": [],
+    "peer": [],
     "sto": [
       {
         "top": true,
@@ -387,41 +214,11 @@
         "insight": "초기 STO 기초자산별 권리 구조·투자자 수요·발행 및 유통 인가 요건 점검",
         "reporter": "",
         "url": "https://biz.chosun.com/stock/stock_general/2026/11/11/CTX3S65U3FGWVITVTNZPL3CI4Y/?utm_source=naver&utm_medium=original&utm_campaign=biz"
-      },
-      {
-        "top": false,
-        "headline": "\"K팝 팬덤을 투자로 이끌 토큰증권 상품 개발해야\"",
-        "source": "매일경제",
-        "pubDate": "2026-11-11",
-        "summary": [
-          "토큰증권을 활용해 K팝 콘텐츠와 음악 저작권의 투자상품화 필요성 제기",
-          "글로벌 팬덤의 참여를 문화산업 신규 자금조달 수요와 연결하는 구상",
-          "음악 저작권 수익 배분·투자자 보호 체계 등 상품화 단계의 실무 쟁점 부각"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.mk.co.kr/article/12205636"
       }
     ],
     "productive": [
       {
         "top": true,
-        "headline": "순천시, 1,313억 지역성장펀드 참여…미래산업 투자 확대",
-        "source": "아시아경제",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "전남·광주 지역성장펀드가 1,313억원 규모로 결성돼 순천시도 참여",
-          "순천시는 향후 3년 동안 총 10억원을 출자해 지역 기업 성장 지원",
-          "방산·바이오·이차전지 등 지역 미래산업 기업의 투자생태계 조성이 목표"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "",
-        "reporter": "",
-        "url": "https://view.asiae.co.kr/article/2026111207464915186"
-      },
-      {
-        "top": false,
         "headline": "[Invest]브로커리지 무너진 증권사들, '이자 장사'로 연명…모험자본 뒷...",
         "source": "인베스트조선",
         "pubDate": "2026-11-11",
@@ -436,22 +233,7 @@
         "url": "https://www.investchosun.com/site/data/html_dir/2026/11/10/2026111080158.html"
       }
     ],
-    "growthfund": [
-      {
-        "top": true,
-        "headline": "“지방 정책자금 공급 차질 없이“… 대구서 두번째 ‘정책금융 동행’",
-        "source": "조선비즈",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "금융당국, 대구에서 지역 정책금융 공급 확대를 위한 현장 협의 추진",
-          "150조원 규모 국민성장펀드 가운데 40%를 지방에 배분하는 정책 방향 제시",
-          "지역 전용 펀드와 정책 금융기관 지원으로 비수도권 기업의 성장자금 공급 확대 추진"
-        ],
-        "summary_mode": "editor_verified",
-        "insight": "지방 기업 대상 정책자금과 후속 민간 투자·기업금융 연계 수요 검토",
-        "reporter": "",
-        "url": "https://biz.chosun.com/stock/finance/2026/11/12/UEEFUOQGLZFQJNKYMEC3M4VTCU/?utm_source=naver&utm_medium=original&utm_campaign=biz"
-      }
-    ]
-  }
+    "growthfund": []
+  },
+  "selection_policy": "IB market-moving developments only; no routine single-company deal/results"
 }
