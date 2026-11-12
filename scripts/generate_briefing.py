@@ -31,6 +31,7 @@ import requests
 import anthropic
 from sector_rules import classify_sector, sector_matches
 from article_digest import digest
+from ib_strategy import strategy_insight
 from ib_planning_notes import planning_insight
 from report_sources import collect_reports
 
@@ -515,6 +516,10 @@ def build_section(meta: dict, used_urls: set) -> list:
     for item in top:
         if not item.get("insight"):
             item["insight"] = planning_insight(meta["key"], item.get("title",""), item.get("summary", []))
+    # Add brief, specific IB planning review points under the three facts.
+    for item in top:
+        if not item.get("insight") and item.get("summary_mode")=="source_digest":
+            item["insight"] = strategy_insight(meta["key"], item["title"], item["summary"])
     used_urls.update(item["url"] for item in top)
     print(f"  → {len(top)}건 선정")
 
