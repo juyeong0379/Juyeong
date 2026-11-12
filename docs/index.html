@@ -33,6 +33,16 @@ a{color:inherit}button,input{font:inherit}button{cursor:pointer;border:0;backgro
 
 /* Category subtitle below ECM (date / keywords): always hidden */
 .headrow .desc, .headrow #sectionDesc{display:none!important}
+
+/* Card alignment: same title / bullet #1-3 / source / optional insight rows in each desktop pair. */
+.story{grid-template-rows:subgrid;grid-row:span 6;row-gap:12px}
+.story>.summary{display:contents}
+.story>.summary>li{margin:0;min-height:calc(14px * 1.75 * 2);align-self:stretch}
+.story>.summary>li.summary-pad::before{display:none}
+.story>.meta{align-self:start;min-height:25px;padding-top:0}
+.story>.insight-empty{min-height:0}
+.story .source-note{font-size:11px;line-height:1.5;color:#819588}
+@media (max-width:700px){.story>.summary>li{min-height:calc(13px * 1.75 * 2)}}
 </style>
 </head>
 <body>
@@ -120,6 +130,7 @@ a{color:inherit}button,input{font:inherit}button{cursor:pointer;border:0;backgro
 'use strict';
 const MAX=briefKSTDate(), MIN=briefDayShift(MAX,-29);
 const CATEGORIES=[
+  {key:'all',name:'ALL',desc:'당일 전체 IB 뉴스'},
   {key:'ecm',name:'ECM',desc:'기업공개 · 공모시장 · 유상증자'},
   {key:'corp',name:'기업금융',desc:'회사채 · DCM · 기업 자금조달'},
   {key:'ma',name:'M&A·인수금융',desc:'인수합병 · PEF · 인수금융'},
@@ -128,7 +139,8 @@ const CATEGORIES=[
   {key:'hana',name:'하나금융그룹',desc:'하나금융그룹 · 계열사 동향'},
   {key:'peer',name:'경쟁사',desc:'증권사 · 은행 · 경쟁사 동향'},
   {key:'sto',name:'STO',desc:'토큰증권 · 디지털자산 제도'},
-  {key:'productive',name:'생산적금융',desc:'모험자본 · 정책금융 · 성장지원'}
+  {key:'productive',name:'생산적금융',desc:'모험자본 · 정책금융 · 성장지원'},
+  {key:'growthfund',name:'국민성장펀드',desc:'국민성장펀드 · 정책·출자·투자 집행'}
 ];
 
 let NEWS = []; // 실제 뉴스는 docs/data.json 및 docs/archive 에서 읽음
@@ -139,20 +151,20 @@ const strong=s=>escapeHTML(s).replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>');
 const fmt=s=>s.replaceAll('-','.');
 const normalize=s=>String(s||'').replace(/\s+/g,'').toLocaleLowerCase('ko');
 const DEFAULT_KEYWORDS=['인수금융','PF','IPO','STO','생산적금융'];
-let selectedDate=MAX, activeCat='ecm', searchTerm='', searchMode=false, mineOnly=false;
+let selectedDate=MAX, activeCat='all', searchTerm='', searchMode=false, mineOnly=false;
 let keywords=(()=>{try{const a=JSON.parse(localStorage.getItem('ib-brief-keywords-v5'));return Array.isArray(a)?a.filter(x=>typeof x==='string'&&x.trim()):DEFAULT_KEYWORDS.slice();}catch(e){return DEFAULT_KEYWORDS.slice();}})();
 function saveKeywords(){try{localStorage.setItem('ib-brief-keywords-v5',JSON.stringify(keywords));}catch(e){}}
 function daysUTC(s,n){const d=new Date(s+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10)}
 function renderTabs(){
   const mk=c=>`<button type="button" class="tab ${!searchMode&&activeCat===c.key?'active':''}" data-key="${c.key}" aria-pressed="${!searchMode&&activeCat===c.key}">${escapeHTML(c.name)}</button>`;
   $('tabs').innerHTML=[
-    ...CATEGORIES.slice(0,5).map(mk),
+    mk(CATEGORIES[0]), // ALL: all sectors on the selected date
     '<span class="separator" aria-hidden="true"></span>',
-    mk(CATEGORIES[5]),
-    mk(CATEGORIES[6]),
+    ...CATEGORIES.slice(1,6).map(mk), // ECM → infra
     '<span class="separator" aria-hidden="true"></span>',
-    mk(CATEGORIES[7]),
-    mk(CATEGORIES[8])
+    ...CATEGORIES.slice(6,8).map(mk), // Hana + peers
+    '<span class="separator" aria-hidden="true"></span>',
+    ...CATEGORIES.slice(8).map(mk) // STO, productive finance, national growth fund
   ].join('');
   $('tabs').querySelectorAll('.tab').forEach(b=>b.onclick=()=>{activeCat=b.dataset.key;searchMode=false;searchTerm='';$('searchInput').value='';render();});
 }
@@ -171,11 +183,13 @@ function articleCard(item){
   const matchedReport=REPORTS.find(r=>r.briefDate===item.date && r.related_article_urls.includes(item.url));
   const excerptNote=item.summary_mode==="source_excerpt"?'<span class="source-note">🔎 원문 접근 제한 · 검색 설명문만 제공</span>':item.summary_mode==="source_digest"?'<span class="source-note">📄 원문 기반 개조식 요약</span>':item.summary_mode==="preview_digest"?'<span class="source-note">🔎 제목·검색 설명 기반 요약 (원문 접근 제한)</span>':"";
   const reportIndicator=matchedReport?'<a class="report-marker" href="#refs" title="하단 관련 보고서 확인" aria-label="관련 연구 보고서">📑</a>':"";
+  const categoryBadge=activeCat==="all"?'<span class="kind-badge">'+escapeHTML(CATEGORIES.find(c=>c.key===item.cat)?.name||item.cat)+'</span>':item.kind?'<span class="kind-badge">'+escapeHTML(item.kind)+'</span>':"";
+  const summaryLines=Array.from({length:3},(_,i)=>item.summary[i]?'<li>'+strong(item.summary[i])+'</li>':'<li class="summary-pad" aria-hidden="true"></li>').join('');
   return `<article class="story ${item.kind?'gov':''}">
-    <h3>${item.kind?`<span class="kind-badge">${escapeHTML(item.kind)}</span>`:''}${escapeHTML(item.title)}${reportIndicator}</h3>
-    <ul class="summary">${item.summary.slice(0,3).map(line=>`<li>${strong(line)}</li>`).join('')}</ul>${excerptNote}
-    ${item.insight&&item.insight.trim()?`<div class="insight"><span class="label">IB기획실 검토사항</span><p>${strong(item.insight)}</p></div>`:""}
-    <div class="meta"><span class="name">${escapeHTML(item.source)}</span><span class="dividerdot">│</span><span>${fmt(item.date)}</span><span class="dividerdot">│</span><div class="links">${item.url?`<a target="_blank" rel="noopener noreferrer" href="${escapeHTML(item.url)}">원문 보기 ↗</a>`:'<span class="no-link">시연용 · 원문 미연결</span>'}${hasPdf?`<a class="pdf" target="_blank" rel="noopener noreferrer" href="${escapeHTML(item.pdf)}">PDF 다운로드 ↓</a>`:''}</div></div>
+    <h3>${categoryBadge}${escapeHTML(item.title)}${reportIndicator}</h3>
+    <ul class="summary">${summaryLines}</ul>
+    <div class="meta"><span class="name">${escapeHTML(item.source)}</span><span class="dividerdot">│</span><span>${fmt(item.date)}</span><span class="dividerdot">│</span><div class="links">${item.url?'<a target="_blank" rel="noopener noreferrer" href="'+escapeHTML(item.url)+'">원문 보기 ↗</a>':'<span class="no-link">시연용 · 원문 미연결</span>'}${hasPdf?'<a class="pdf" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(item.pdf)+'">PDF 다운로드 ↓</a>':''}</div>${excerptNote}</div>
+    ${item.insight&&item.insight.trim()?'<div class="insight"><span class="label">IB기획실 검토사항</span><p>'+strong(item.insight)+'</p></div>':'<div class="insight-empty" aria-hidden="true"></div>'}
   </article>`;
 }
 function render(){
@@ -193,10 +207,10 @@ function render(){
   $('sectionName').textContent=searchMode?`‘${searchTerm}’ 검색 결과`:cat.name;
 
   let list=NEWS.filter(a=>a.date>=MIN&&a.date<=MAX)
-    .filter(a=>searchMode?matchesSearch(a):(a.date===selectedDate&&a.cat===activeCat))
+    .filter(a=>searchMode?matchesSearch(a):(a.date===selectedDate&&(activeCat==='all'||a.cat===activeCat)))
     .filter(a=>!mineOnly||matchesKeywords(a))
-    .sort((a,b)=>b.date.localeCompare(a.date)||a.id-b.id);
-  if(!searchMode) list=list.slice(0,3);
+    .sort((a,b)=>b.date.localeCompare(a.date)||(CATEGORIES.findIndex(c=>c.key===a.cat)-CATEGORIES.findIndex(c=>c.key===b.cat))||a.id.localeCompare(b.id));
+  if(!searchMode && activeCat!=='all') list=list.slice(0,3);
   renderOfficial();
   $('articleCount').textContent=`${list.length}건`;
   $('stories').innerHTML=list.length?list.map(articleCard).join(''):`<div class="empty"><strong>선택한 조건에 맞는 기사가 없습니다.</strong><br>${searchMode?'다른 키워드를 검색하거나 검색을 해제해 주세요.':mineOnly?'내 키워드 필터를 끄거나 키워드를 변경해 주세요.':'이 날짜에 보관된 기사가 없습니다.'}</div>`;
