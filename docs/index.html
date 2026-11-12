@@ -169,7 +169,7 @@ function matchesSearch(item){
 function articleCard(item){
   const hasPdf=Boolean(item.pdf);
   const matchedReport=REPORTS.find(r=>r.briefDate===item.date && r.related_article_urls.includes(item.url));
-  const excerptNote=item.summary_mode==="source_excerpt"?'<span class="source-note">🔎 기사 검색 설명문 · AI 요약 미제공</span>':"";
+  const excerptNote=item.summary_mode==="source_excerpt"?'<span class="source-note">🔎 원문 접근 제한 · 검색 설명문만 제공</span>':item.summary_mode==="source_digest"?'<span class="source-note">📄 기사 원문 기반 핵심 정리 · AI 분석 아님</span>':"";
   const reportIndicator=matchedReport?'<a class="report-marker" href="#refs" title="하단 관련 보고서 확인" aria-label="관련 연구 보고서">📑</a>':"";
   return `<article class="story ${item.kind?'gov':''}">
     <h3>${item.kind?`<span class="kind-badge">${escapeHTML(item.kind)}</span>`:''}${escapeHTML(item.title)}${reportIndicator}</h3>
