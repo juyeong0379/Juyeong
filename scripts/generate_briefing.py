@@ -765,6 +765,28 @@ def main():
     # preserving source publication dates and original links.
     # Never recycle older articles: publish only news from the defined window.
 
+    # On morning refreshes retain earlier verified stories from the same day,
+    # without recycling previous-day articles. New stories take priority.
+    today_path = Path(__file__).resolve().parents[1] / "docs" / "archive" / (datetime.now(KST).date().isoformat() + ".json")
+    if today_path.exists():
+        try:
+            previous_payload = json.loads(today_path.read_text(encoding="utf-8"))
+            existing_urls = {a.get("url") for items in data.values() for a in items}
+            for key, items in data.items():
+                for prior in previous_payload.get("categories", {}).get(key, []):
+                    if len(items) >= TOP_N_PER_SECTION:
+                        break
+                    if not isinstance(prior, dict) or not prior.get("url") or prior["url"] in existing_urls:
+                        continue
+                    if any(duplicate({"title":prior.get("headline","")}, {"title":x.get("headline","")}) for x in items):
+                        continue
+                    items.append(prior)
+                    existing_urls.add(prior["url"])
+                for i, article in enumerate(items):
+                    article["top"] = i == 0
+        except (OSError, ValueError, TypeError) as exc:
+            print(f"  [주의] 당일 기사 병합 실패: {exc}")
+
     produced_at = datetime.now(KST)
     try:
         reports = collect_reports(data, produced_at)
