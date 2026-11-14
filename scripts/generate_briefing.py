@@ -212,8 +212,9 @@ def fetch_naver_news(query: str) -> list:
 
     out = []
     now = datetime.now(KST)
-    # Strict publication window: previous day 20:00 KST through collection time.
-    start_date = (now - timedelta(days=1)).replace(hour=20, minute=0, second=0, microsecond=0)
+    # First edition: previous day 12:00 KST to 07:30. Updates: stop at 13:00.
+    start_date = briefing_start(now)
+    end_date = min(now, now.replace(hour=13, minute=0, second=0, microsecond=0))
     for it in res.json().get("items", []):
         link = it.get("originallink") or ""
         source = outlet_name(link)
@@ -226,7 +227,7 @@ def fetch_naver_news(query: str) -> list:
             pub_dt = parsedate_to_datetime(it["pubDate"]).astimezone(KST)
         except Exception:
             continue
-        if pub_dt < start_date or pub_dt > now:
+        if pub_dt < start_date or pub_dt > end_date:
             continue
         out.append({
             "title": title,
@@ -398,7 +399,7 @@ def classify_batch(meta: dict, batch: list) -> list:
 - 시장 전체 또는 업계 복수 기업에 영향을 주는 현상을 우대하되, 영향이 언급되지 않은 단일 기업 실적 기사는 제외.
 - 한국경제·한국금융신문·법률신문·자본시장 전문지 등 매체 이름만으로 우대하지 않고, 숫자·거래구조·쟁점·실무 영향을 기준으로 품질 판단
 - 법률신문의 법규 해설은 IPO·인수금융·부동산PF·STO 등에 직접 관련되는 경우만 선정
-- 한국시간 브리핑 대상: 전일 오후 8시부터 당일 뉴스 수집 시점까지 최초 발행된 기사만 선정. 주말·월요일에도 동일한 시간 창 적용. 오래된 기사를 끌어와 채우지 말 것.
+- 한국시간 브리핑 대상: 첫 브리핑은 전일 낮 12:00~당일 07:30까지 최초 발행된 기사를 선정. 07:30~13:00에는 그 사이 새로 발행된 중요 기사만 추가. 주말·월요일도 동일. 전날 브리핑에 게재된 기사는 새 브리핑에 재사용 금지.
 - 직전 브리핑에 게재된 동일 기업·사건을 그대로 반복하는 기사는 제외. 다만 신규 공식 결정·금액·거래 단계·확인된 영향 등 구체적 신규 사실이 있다면 후속 보도로 선정 가능. 단순 재해석이나 제목만 바꾼 보도는 제외.
 - 1면이나 검색어 순위 등 화제성은 근거가 있는 경우만 반영하고, 확인되지 않은 순위·화제성을 지어내지 말 것.
 - 단순 보도자료를 옮겨 적은 제목·설명에는 낮은 depth/quality를 부여. 데이터·거래구조·법규 쟁점과 왜 중요한지가 확인되는 기사 위주로 선정.
@@ -616,7 +617,7 @@ def repeated_last_days(candidate):
 # ─────────────────────────────────────────────────────────────
 # 3) 섹션별 기사 선정
 # ─────────────────────────────────────────────────────────────
-def build_section(meta: dict, used_urls: set, target_limit: int = TOP_N_PER_SECTION) -> list:
+def build_section(meta: dict, used_urls: set, target_limit: int = TOP_N_PER_SECTION, new_only: bool = False) -> list:
     # Only select this slot's missing number of genuinely new stories.
     if target_limit <= 0:
         return []
@@ -625,6 +626,7 @@ def build_section(meta: dict, used_urls: set, target_limit: int = TOP_N_PER_SECT
         c for c in collect_candidates(meta["keywords"])
         if not repeated_last_days(c)
         and c["url"] not in used_urls
+        and (not new_only or c["pub_dt"] >= briefing_morning_end(datetime.now(KST)))
         and sector_matches(meta["key"], c["title"], c.get("description", ""))
     ]
     candidates = eligible_candidates[:MAX_CANDIDATES]
@@ -738,17 +740,24 @@ def build_section(meta: dict, used_urls: set, target_limit: int = TOP_N_PER_SECT
 
 # Previous-day archive filler intentionally removed: never recycle old news.
 
+def briefing_start(now: datetime) -> datetime:
+    """Daily coverage begins at 12:00 KST on the previous calendar day."""
+    return (now - timedelta(days=1)).replace(
+        hour=12, minute=0, second=0, microsecond=0)
+
+
+def briefing_morning_end(now: datetime) -> datetime:
+    """Exact fixed first-edition boundary (07:30 KST)."""
+    return now.replace(hour=7, minute=30, second=0, microsecond=0)
+
+
 def target_story_count(now: datetime) -> int:
-    """Morning 1-2 stories; reach 3 by 13:00 and up to 4 after 15:00."""
-    if now.hour < 13:
-        return 2
-    if now.hour < 15:
-        return 3
-    return TOP_N_PER_SECTION
+    """Initial 1-2 stories per category; grow only when important new stories emerge."""
+    return 2 if now < briefing_morning_end(now) else TOP_N_PER_SECTION
 
 
 def is_current_day_article(article: dict, now: datetime) -> bool:
-    """Retain only stories eligible for today's original 20:00-to-now window."""
+    """Retain only articles from the defined previous-noon-to-today period."""
     if not isinstance(article, dict) or not article.get("url"):
         return False
     try:
@@ -759,9 +768,8 @@ def is_current_day_article(article: dict, now: datetime) -> bool:
         ).replace(tzinfo=KST)
     except ValueError:
         return False
-    cutoff = (now - timedelta(days=1)).replace(
-        hour=20, minute=0, second=0, microsecond=0)
-    return cutoff <= published <= now
+    return briefing_start(now) <= published <= min(
+        now, now.replace(hour=13, minute=0, second=0, microsecond=0))
 
 
 def main():
@@ -806,7 +814,8 @@ def main():
         remaining = max(0, limit - len(data[key]))
         if remaining:
             new_stories = build_section(
-                {**meta, "key": key}, used_urls, target_limit=remaining)
+                {**meta, "key": key}, used_urls, target_limit=remaining,
+                new_only=(now >= briefing_morning_end(now) and bool(data[key])))
             for article in new_stories:
                 if (article["url"] in {p["url"] for p in data[key]}
                         or any(duplicate(article, prior) for prior in data[key])):
