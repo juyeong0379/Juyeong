@@ -134,8 +134,12 @@ jobs:
                       raise RuntimeError(f"{section}: 3줄 요약 미충족")
                   if not str(item.get("url", "")).startswith(("https://", "http://")):
                       raise RuntimeError(f"{section}: 원문 링크 누락")
-                  timestamp = str(item.get("pubDate", "")) + " " + str(item.get("pubTime", "")).replace(" KST", "")
-                  published = datetime.strptime(timestamp, "%Y-%m-%d %H:%M").replace(tzinfo=KST)
+                  exact = str(item.get("publishedAt") or "").strip()
+                  if exact:
+                      published = datetime.fromisoformat(exact).astimezone(KST)
+                  else:
+                      timestamp = str(item.get("pubDate", "")) + " " + str(item.get("pubTime", "")).replace(" KST", "")
+                      published = datetime.strptime(timestamp, "%Y-%m-%d %H:%M").replace(tzinfo=KST)
                   if not in_day_window(published, now):
                       raise RuntimeError(f"{section}: 발행 시각이 오늘의 수집 범위 밖")
                   edition = item.get("edition")
