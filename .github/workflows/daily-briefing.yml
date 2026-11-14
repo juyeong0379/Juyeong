@@ -1,11 +1,12 @@
 name: Daily News Briefing
 
 on:
-  # Once daily, including weekends and holidays. Execution may start late.
-  # News publication window is fixed to yesterday 07:30 (exclusive) through
-  # today 07:30 KST (inclusive), regardless of GitHub Actions queue delay.
+  # Start at 07:30 KST, aim to publish by 08:00; retry at 07:45 if thin/failed.
+  # Both calls use the SAME fixed prior-day 07:30–today 07:30 publication window.
+  # GitHub Actions scheduling/Pages delivery can be delayed; 08:00 is a target.
   schedule:
-    - cron: "30 22 * * *"  # Daily 07:30 KST
+    - cron: "30 22 * * *"  # Daily 07:30 KST initial
+    - cron: "45 22 * * *"  # Daily 07:45 KST coverage/deployment retry
   workflow_dispatch: {}
   # Scoped, explicit emergency refresh; unrelated commits never spend API credits.
   push:
@@ -24,7 +25,7 @@ permissions:
 jobs:
   build-briefing:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 22
     steps:
       - name: 저장소 체크아웃
         uses: actions/checkout@v4
@@ -54,8 +55,12 @@ jobs:
               published_at = datetime.strptime(stamp, "%Y-%m-%d %H:%M").replace(tzinfo=now.tzinfo)
           except (NameError, ValueError, TypeError):
               published_at = now.replace(year=2000)
+          # The 07:45 retry is useful if 07:30 published only 1-2 sectors.
+          groups = data.get("categories", {}) if todays else {}
+          covered = sum(bool(items) for items in groups.values())
           skip = (os.getenv("EVENT_NAME") == "schedule"
-                  and todays and edition in completed and published_at >= deadline)
+                  and todays and edition in completed and published_at >= deadline
+                  and covered >= 9)
           print("skip=" + ("true" if skip else "false"))
           print(f"edition={edition}")
           PY
