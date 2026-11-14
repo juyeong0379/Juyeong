@@ -1,1 +1,1 @@
-2026-11-15 07:10 KST urgency: regenerate and validate first edition with final tested rules; hourly coverage target and two-hour refresh remain enabled.
+2026-11-15: request latest stable version immediately for 07:30 edition. Include full smoke tests, strict deduplication, cumulative updates, source verification, and one-pass collection.
