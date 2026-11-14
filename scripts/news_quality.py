@@ -74,6 +74,52 @@ def duplicate(a,b):
         return True
     return overlap>=.69 and len(wa&wb)>=2
 
+# A follow-up is new only when its headline provides a distinguishable
+# confirmed milestone or revised financial number, not merely new wording.
+UPDATE_MILESTONES = (
+    "확정", "승인", "의결", "통과", "인가", "체결", "완료",
+    "철회", "취소", "중단", "재개", "기각", "선정", "착공",
+    "증액", "감액", "상향", "하향", "결정", "파기", "부결",
+    "공식 발표", "매각 완료", "계약 체결",
+)
+SIGNIFICANT_NUMERIC = re.compile(
+    r"\\d[\\d,.]*\\s*(?:조원|억원|억달러|만달러|조|억|%|bp|GW|MW|배)",
+    re.I,
+)
+
+
+def substantive_update(candidate, previous):
+    """Conservative exception to duplicate suppression for new confirmed facts."""
+    newer = cleanup_title(candidate.get("title", candidate.get("headline", "")))
+    older = cleanup_title(previous.get("title", previous.get("headline", "")))
+    if not newer or not older or newer == older:
+        return False
+    if candidate.get("url") and candidate.get("url") == previous.get("url"):
+        return False
+    if not duplicate(candidate, previous):
+        return False
+
+    new_milestones = {word for word in UPDATE_MILESTONES if word in newer}
+    old_milestones = {word for word in UPDATE_MILESTONES if word in older}
+    if new_milestones - old_milestones:
+        return True
+
+    new_values = {re.sub(r"\\s+", "", v) for v in SIGNIFICANT_NUMERIC.findall(newer)}
+    old_values = {re.sub(r"\\s+", "", v) for v in SIGNIFICANT_NUMERIC.findall(older)}
+    has_revised_amount = bool(new_values - old_values)
+    if has_revised_amount and re.search(r"증액|감액|상향|하향|변경|수정|최종|확정", newer):
+        return True
+    return False
+
+
+def repeated_without_update(candidate, previous):
+    """Suppress identical URLs and substantially same-issue coverage."""
+    url = candidate.get("url")
+    if url and url == previous.get("url"):
+        return True
+    return duplicate(candidate, previous) and not substantive_update(candidate, previous)
+
+
 def validate_digest(title,points):
     if not isinstance(points,list) or len(points)!=3:return False
     if any(not isinstance(x,str) or len(x)<23 or len(x)>190 or
