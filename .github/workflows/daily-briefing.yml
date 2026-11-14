@@ -1,9 +1,12 @@
 name: Daily News Briefing
 
 on:
-  # First publication by 07:30 KST target; review new articles roughly every two hours through 17:00.
+  # Early launch + retries target first publication before 07:30 KST; thereafter two-hour checks.
   schedule:
-    - cron: "50 21 * * *"  # 06:50 KST initial (target by 07:30)
+    - cron: "0 21 * * *"   # 06:00 KST initial (early enough for generation)
+    - cron: "30 21 * * *"  # 06:30 KST backup
+    - cron: "55 21 * * *"  # 06:55 KST backup
+    - cron: "10 22 * * *"  # 07:10 KST last morning retry
     - cron: "0 0 * * *"    # 09:00 KST
     - cron: "0 2 * * *"    # 11:00 KST
     - cron: "0 4 * * *"    # 13:00 KST
@@ -43,7 +46,7 @@ jobs:
           p = Path("docs/data.json")
           now = datetime.now(ZoneInfo("Asia/Seoul"))
           today = now.strftime("%Y-%m-%d")
-          slots = [(6,50),(9,0),(11,0),(13,0),(15,0),(17,0)]
+          slots = [(6,0),(9,0),(11,0),(13,0),(15,0),(17,0)]
           current_slot = max((h*60+m for h,m in slots if h*60+m <= now.hour*60+now.minute), default=0)
           try:
               payload = json.loads(p.read_text(encoding="utf-8"))
@@ -68,6 +71,10 @@ jobs:
         if: steps.current.outputs.skip != 'true'
         run: pip install -r requirements.txt
 
+      - name: 파이썬 코드 사전 검증
+        if: steps.current.outputs.skip != 'true'
+        run: python -m py_compile scripts/generate_briefing.py scripts/sector_rules.py scripts/news_quality.py
+
       - name: 브리핑 생성 (뉴스 수집 + OpenAI 분석)
         if: steps.current.outputs.skip != 'true'
         env:
@@ -91,7 +98,8 @@ jobs:
           from zoneinfo import ZoneInfo
 
           data = json.loads(Path("docs/data.json").read_text(encoding="utf-8"))
-          today = datetime.now(ZoneInfo("Asia/Seoul")).strftime("%Y-%m-%d")
+          now = datetime.now(ZoneInfo("Asia/Seoul"))
+          today = now.strftime("%Y-%m-%d")
           if not str(data.get("generated_at", "")).startswith(today):
               raise RuntimeError("오늘자 뉴스가 아니므로 기존 배포 데이터를 유지합니다.")
           stories = [item for group in data["categories"].values() for item in group]
@@ -100,13 +108,15 @@ jobs:
           urls = [item.get("url", "") for item in stories]
           if not all(urls) or len(urls) != len(set(urls)):
               raise RuntimeError("원문 링크 누락 또는 중복 발견")
-          cutoff = (datetime.now(ZoneInfo("Asia/Seoul")) - timedelta(days=1)).replace(hour=20,minute=0,second=0,microsecond=0)
+          cutoff = (now - timedelta(days=1)).replace(hour=20,minute=0,second=0,microsecond=0)
           for section, group in data["categories"].items():
               if len(group) > 4:
                   raise RuntimeError(f"{section}: 섹터별 4건 초과")
               for item in group:
-                  if datetime.strptime(item["pubDate"], "%Y-%m-%d").date() < cutoff.date():
-                      raise RuntimeError(f"{section}: 오래된 기사 발견")
+                  timestamp = str(item.get("pubDate", "")) + " " + str(item.get("pubTime", "")).replace(" KST", "")
+                  published_at = datetime.strptime(timestamp, "%Y-%m-%d %H:%M").replace(tzinfo=ZoneInfo("Asia/Seoul"))
+                  if not cutoff <= published_at <= now:
+                      raise RuntimeError(f"{section}: 발행 시각이 오늘의 뉴스 수집 구간 밖에 있습니다: {timestamp}")
                   if len(item.get("summary", [])) != 3:
                       raise RuntimeError(f"{section}: 3줄 요약 미충족")
           print(f"검증 완료: {today} | {len(stories)}건 | 기존 원문 URL 유지")
