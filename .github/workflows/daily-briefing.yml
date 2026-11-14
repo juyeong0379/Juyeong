@@ -1,12 +1,14 @@
 name: Daily News Briefing
 
 on:
-  # First run targets a published briefing by 07:30 KST; refresh through late morning.
+  # First publication by 07:30 KST target; review new articles roughly every two hours through 17:00.
   schedule:
-    - cron: "55 21 * * *"  # 06:55 KST first run
-    - cron: "30 23 * * *"  # 08:30 KST refresh
-    - cron: "0 1 * * *"    # 10:00 KST refresh
-    - cron: "15 2 * * *"   # 11:15 KST final refresh
+    - cron: "50 21 * * *"  # 06:50 KST initial (target by 07:30)
+    - cron: "0 0 * * *"    # 09:00 KST
+    - cron: "0 2 * * *"    # 11:00 KST
+    - cron: "0 4 * * *"    # 13:00 KST
+    - cron: "0 6 * * *"    # 15:00 KST
+    - cron: "0 8 * * *"    # 17:00 KST final
   workflow_dispatch: {}
   # Scoped, explicit emergency refresh; unrelated commits never spend API credits.
   push:
@@ -41,7 +43,7 @@ jobs:
           p = Path("docs/data.json")
           now = datetime.now(ZoneInfo("Asia/Seoul"))
           today = now.strftime("%Y-%m-%d")
-          slots = [(6,55),(8,30),(10,0),(11,15)]
+          slots = [(6,50),(9,0),(11,0),(13,0),(15,0),(17,0)]
           current_slot = max((h*60+m for h,m in slots if h*60+m <= now.hour*60+now.minute), default=0)
           try:
               payload = json.loads(p.read_text(encoding="utf-8"))
