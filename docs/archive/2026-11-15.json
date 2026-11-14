@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15 08:08 KST",
+  "generated_at": "2026-11-15 08:14 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -183,6 +183,26 @@
     "sto": [],
     "productive": [],
     "growthfund": [],
-    "other": []
+    "other": [
+      {
+        "top": true,
+        "headline": "'젠슨황 스캔들'에 짓눌린 증시…엔비디아 실적·앤트로픽 상장 주시",
+        "source": "연합뉴스",
+        "pubDate": "2026-11-15",
+        "pubTime": "06:00 KST",
+        "publishedAt": "2026-11-15T06:00:00+09:00",
+        "summary": [
+          "젠슨 황 엔비디아 CEO 사임 이후 경영 승계 불확실성이 부각되며 글로벌 AI·반도체 관련주의 투자심리 위축",
+          "13일 필라델피아 반도체지수 3.43% 하락, 엔비디아 2.01% 하락 등 기술주 전반의 변동성 확대",
+          "17일 엔비디아 실적발표에서 투자전략 지속 여부가 핵심 관전점으로 부상, AI 데이터센터 자금조달 위험에 주목"
+        ],
+        "summary_mode": "source_digest",
+        "insight": "엔비디아 의존 GPU·데이터센터 금융의 장기 공급계약·투자집행·자금조달 리스크 점검",
+        "reporter": "황철환 기자",
+        "url": "https://www.yna.co.kr/view/AKR20261113177200008",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ]
   }
 }
