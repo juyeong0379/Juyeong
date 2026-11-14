@@ -1,12 +1,11 @@
 name: Daily News Briefing
 
 on:
-  # Exactly three KST editions each day, including weekends and holidays.
-  # GitHub Actions scheduled execution may be delayed; publication is best effort.
+  # Once daily, including weekends and holidays. Execution may start late.
+  # News publication window is fixed to yesterday 07:30 (exclusive) through
+  # today 07:30 KST (inclusive), regardless of GitHub Actions queue delay.
   schedule:
-    - cron: "30 22 * * *"  # 07:30 KST: previous day 15:00 - today 07:30
-    - cron: "0 1 * * *"    # 10:00 KST: today 07:30 - 10:00
-    - cron: "0 6 * * *"    # 15:00 KST: today 10:00 - 15:00
+    - cron: "30 22 * * *"  # Daily 07:30 KST
   workflow_dispatch: {}
   # Scoped, explicit emergency refresh; unrelated commits never spend API credits.
   push:
@@ -41,8 +40,7 @@ jobs:
           from pathlib import Path
           from zoneinfo import ZoneInfo
           now = datetime.now(ZoneInfo("Asia/Seoul"))
-          minute = now.hour * 60 + now.minute
-          edition = "0730" if minute < 600 else ("1000" if minute < 900 else "1500")
+          edition = "0730"
           try:
               data = json.loads(Path("docs/data.json").read_text(encoding="utf-8"))
               todays = str(data.get("generated_at", "")).startswith(now.date().isoformat())
@@ -50,8 +48,7 @@ jobs:
           except (OSError, ValueError, TypeError):
               todays, completed = False, []
           # Never let an early manual draft suppress the full cutoff-time run.
-          deadline_h, deadline_m = {"0730": (7, 30), "1000": (10, 0), "1500": (15, 0)}[edition]
-          deadline = now.replace(hour=deadline_h, minute=deadline_m, second=0, microsecond=0)
+          deadline = now.replace(hour=7, minute=30, second=0, microsecond=0)
           try:
               stamp = str(data.get("generated_at", "")).replace(" KST", "")
               published_at = datetime.strptime(stamp, "%Y-%m-%d %H:%M").replace(tzinfo=now.tzinfo)
@@ -94,7 +91,7 @@ jobs:
           fi
           python scripts/generate_briefing.py
 
-      - name: 게시 전 뉴스 무결성 점검 (회차별 시간·2건·중복·3줄 요약)
+      - name: 게시 전 뉴스 무결성 점검 (최근 24시간·카테고리별 3건·중복·3줄 요약)
         id: validate
         if: steps.current.outputs.skip != 'true'
         run: |
@@ -127,11 +124,11 @@ jobs:
           seen = []
           for section, group in data["categories"].items():
               if len(group) > MAX_STORIES_PER_CATEGORY:
-                  raise RuntimeError(f"{section}: 누적 6건 초과")
+                  raise RuntimeError(f"{section}: 3건 초과")
               for edition in EDITION_ORDER:
                   count = sum(a.get("edition") == edition for a in group)
                   if count > PER_EDITION_LIMIT:
-                      raise RuntimeError(f"{section}: {edition} 회차 2건 초과")
+                      raise RuntimeError(f"{section}: 3건 초과")
               for item in group:
                   if len(item.get("summary", [])) != 3:
                       raise RuntimeError(f"{section}: 3줄 요약 미충족")
@@ -143,14 +140,14 @@ jobs:
                       raise RuntimeError(f"{section}: 발행 시각이 오늘의 수집 범위 밖")
                   edition = item.get("edition")
                   if edition not in EDITION_ORDER or not in_edition_window(published, now, edition):
-                      raise RuntimeError(f"{section}: {edition} 회차 시간 범위 위반")
+                      raise RuntimeError(f"{section}: 오전 07:30 기준 24시간 발행 범위 위반")
                   candidate = {"title": item.get("headline", ""), "url": item["url"]}
                   if any(repeated_without_update(candidate, old) for old in previous_day):
                       raise RuntimeError(f"{section}: 전일 기사 또는 신규 사실 없는 반복 기사")
                   if any(repeated_without_update(candidate, old) for old in seen):
                       raise RuntimeError(f"{section}: 당일 동일 이슈 중복")
                   seen.append(candidate)
-          print(f"정상: {today} | {len(seen)}건 | 각 회차별 발행시각·중복 검증 완료")
+          print(f"정상: {today} | {len(seen)}건 | 07:30 기준 최근 24시간·중복 검증 완료")
           PY
 
       - name: 결과 커밋 & 푸시
