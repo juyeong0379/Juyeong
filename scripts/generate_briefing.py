@@ -41,7 +41,7 @@ KST = timezone(timedelta(hours=9))
 MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
 BATCH_SIZE = 8
 
-TOP_N_PER_SECTION = 4      # 섹션별로 보여줄 기사 수
+TOP_N_PER_SECTION = 4      # 섹션별 최종 상한: 중요한 뉴스가 있으면 4건까지
 NAVER_PER_KEYWORD = 30     # 키워드당 네이버에서 가져올 기사 수 (언론사 필터 전)
 MAX_CANDIDATES = 30        # 섹션별로 OpenAI에게 보낼 후보 최대 수
 MIN_DEPTH = 67
@@ -578,6 +578,9 @@ def repeated_last_days(candidate):
 # 3) 섹션별 기사 선정
 # ─────────────────────────────────────────────────────────────
 def build_section(meta: dict, used_urls: set) -> list:
+    # Morning brief: 1-2 stories; afternoon: grow toward 3-4 as new facts arrive.
+    hour = datetime.now(KST).hour
+    target_limit = 2 if hour < 13 else (3 if hour < 15 else 4)
     print(f"▶ [{meta['no']}] {meta['label']} 수집 중...")
     candidates = [
         c for c in collect_candidates(meta["keywords"])
@@ -611,12 +614,12 @@ def build_section(meta: dict, used_urls: set) -> list:
         positive = [x for x in scored if x.get("hana_view") == "positive"]
         risk = [x for x in scored if x.get("hana_view") == "risk"]
         neutral = [x for x in scored if x.get("hana_view") == "neutral"]
-        top = deduplicate(positive[:3] + risk[:1] + neutral[:1])[:TOP_N_PER_SECTION]
+        top = deduplicate(positive[:3] + risk[:1] + neutral[:1])[:target_limit]
         # Preserve the 2 positive + 1 challenge target when evidence exists.
         # Include only objectively evaluated neutral strategic developments if
         # the model has not produced enough positive/challenge candidates.
         if len(top) < 1:
-            top = scored[:TOP_N_PER_SECTION]
+            top = scored[:target_limit]
         # Never invent additional news solely to fill a quota.
     else:
         top = scored[:TOP_N_PER_SECTION]
@@ -772,9 +775,10 @@ def main():
         try:
             previous_payload = json.loads(today_path.read_text(encoding="utf-8"))
             existing_urls = {a.get("url") for items in data.values() for a in items}
+            target_limit = 2 if datetime.now(KST).hour < 13 else (3 if datetime.now(KST).hour < 15 else 4)
             for key, items in data.items():
                 for prior in previous_payload.get("categories", {}).get(key, []):
-                    if len(items) >= TOP_N_PER_SECTION:
+                    if len(items) >= target_limit:
                         break
                     if not isinstance(prior, dict) or not prior.get("url") or prior["url"] in existing_urls:
                         continue
