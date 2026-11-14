@@ -130,4 +130,28 @@ def classify_sector(title, description=""):
     return None
 
 def sector_matches(section, title, description=""):
-    return classify_sector(title,description)==section
+    """Primary sector plus targeted headline-led fallback for specialist desks."""
+    primary = classify_sector(title, description)
+    if primary == section:
+        return True
+    details = (title or "") + " " + (description or "")
+    if section == "ecm" and has(r"엠비디|MBD바이오|MBDBIOTECH", title):
+        return has(r"청약|공모|IPO|상장|주관|수요예측|증권신고서", details)
+    if primary is not None:
+        return False
+    desk_fallback = {
+        "ecm": r"IPO|공모주|청약\s*경쟁률|공모가|기관\s*수요예측|코스닥\s*상장|유상증자|상장\s*예비",
+        "hana": r"하나금융|하나증권|하나은행|하나캐피탈|하나벤처스",
+        "peer": r"증권사|발행어음|종투사|종합투자계좌|IMA|한국투자증권|미래에셋증권|메리츠증권|KB증권|NH투자증권",
+        "sto": r"토큰증권|STO|조각투자|스테이블코인|디지털자산\s*법|RWA|토큰화",
+        "productive": r"생산적금융|정책금융|모험자본|벤처투자|AI\s*유니콘|창업\s*금융|성장금융",
+        "growthfund": r"국민\s*성장\s*펀드|국민성장기금|국민참여성장펀드",
+    }
+    if section not in desk_fallback or not has(desk_fallback[section], title):
+        return False
+    return has(
+        r"공모|청약|투자|출자|조달|금융|펀드|정책|자본|증권|주관|"
+        r"지주|은행|운용|수익|실적|규제|제도|사업|시장|집행|지원|발행|"
+        r"유통|인가|인수|성과|추진|선정|자금|IR",
+        details,
+    )
