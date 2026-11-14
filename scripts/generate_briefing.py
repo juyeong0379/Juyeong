@@ -376,6 +376,7 @@ def classify_batch(meta: dict, batch: list) -> list:
         for i, c in enumerate(batch)
     )
 
+    morning_priority = ("- [아침 첫 브리핑] 아직 비어 있는 카테고리의 첫 1건은 시장 전체 구조 변화가 아니어도 실재하는 중요한 IB 거래, 투자·조달 금액, 새 정책·행사·성과 또는 객관적으로 확인된 경쟁 동향이라면 선정. 확인된 사실과 금융 관련성이 있어야 하며 기사 제목·설명에 없는 숫자/영향은 만들지 말 것. 전문지의 구체적 정보가 있는 일반 거래 기사도 허용.\n" if datetime.now(KST).hour < 12 else "")
     scope_exception = ("- [기타 카테고리 예외] 글로벌 AI·반도체·미중 기술규제·거시경제·정책의 중요한 변화는 특정 IB 거래가 없어도 산업 공급망과 기업 투자계획에 광범위한 영향을 미치면 선정 가능. 확인되지 않은 CEO 사생활 의혹은 선정 금지.\n" if meta["key"] == "other" else "")
     prompt = f"""너는 증권사 IB그룹 기획실에서 데일리 뉴스 모니터링을 담당하는 애널리스트야.
 아래는 '{meta['label']}' 섹션의 후보 기사 목록이야. 각 기사를 판단해줘.
@@ -386,7 +387,7 @@ def classify_batch(meta: dict, batch: list) -> list:
 {meta['criteria']}
 
 공통 기준:
-{scope_exception}- 검색어가 들어 있어도 기사의 '주제'가 위 기준과 다르면 반드시 is_relevant: false
+{morning_priority}{scope_exception}- 검색어가 들어 있어도 기사의 '주제'가 위 기준과 다르면 반드시 is_relevant: false
 - 단신·속보·시황 중계·보도자료 받아쓰기·행사/인사 소식은 is_relevant: false
 - 원인·배경·영향·전망을 짚는 분석/기획/해설 기사를 선호
 - **가장 중요한 원칙: '어떤 회사가 어떤 거래를 성사시켰다'는 실적·동향보다 '이 사건이 IB 사업환경에 무엇을 바꾸는가'를 평가할 것.**
@@ -485,8 +486,14 @@ summary 작성 규칙 (개조식):
         if not 0 <= idx < len(batch):
             continue
         depth = to_int(j.get("depth"))
-        if (depth < MIN_DEPTH or to_int(j.get("quality")) < MIN_QUALITY
-                or to_int(j.get("importance")) < MIN_IMPORTANCE):
+        # The first morning story has a grounded-news gate, not the stricter
+        # afternoon deep-analysis gate. This improves coverage without invention.
+        morning = datetime.now(KST).hour < 12
+        depth_floor = 58 if morning else MIN_DEPTH
+        quality_floor = 64 if morning else MIN_QUALITY
+        importance_floor = 60 if morning else MIN_IMPORTANCE
+        if (depth < depth_floor or to_int(j.get("quality")) < quality_floor
+                or to_int(j.get("importance")) < importance_floor):
             continue
         c = batch[idx]
         # Hana Group: genuine important deals, investor events and objective
@@ -515,14 +522,21 @@ summary 작성 규칙 (개조식):
             evidence = re.sub(r"\s+", "", str(j.get("impact_evidence") or "")).casefold()
             reference = re.sub(r"\s+", "", c["title"] + " " + c["description"]).casefold()
             reason = str(j.get("impact_reason") or "")
-            secondary = (to_int(j.get("importance")) >= 65
-                         and to_int(j.get("materiality")) >= 60
-                         and to_int(j.get("quality")) >= 70
+            secondary = (to_int(j.get("importance")) >= (60 if morning else 65)
+                         and to_int(j.get("materiality")) >= (55 if morning else 60)
+                         and to_int(j.get("quality")) >= (64 if morning else 70)
                          and str(j.get("impact_type") or "") in (
                              "transaction_precedent", "financing_conditions",
                              "competitive_strategy", "industry_investment_shift")
                          and len(reason) >= 24
                          and 7 <= len(evidence) <= 110 and evidence in reference)
+            if (not secondary and morning and meta["key"] != "other"
+                    and to_int(j.get("importance")) >= 65
+                    and to_int(j.get("quality")) >= 64
+                    and len(reason) >= 18
+                    and 7 <= len(evidence) <= 110 and evidence in reference
+                    and not re.search(r"^(?:주가|특징주|증시시황|연예)", c["title"])):
+                secondary = True
             if not secondary:
                 print(f"  [선정 제외] 중요도/원문 근거 부족: {c['title'][:60]}")
                 continue
