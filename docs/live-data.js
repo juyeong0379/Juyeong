@@ -78,7 +78,7 @@ async function loadBriefings() {
   const dates = [];
   let currentPayload = null;
   try {
-    const resp = await fetch("data.json", { cache: "no-store" });
+    const resp = await fetch("data.json?refresh=" + Date.now(), { cache: "no-store" });
     if (resp.ok) currentPayload = await resp.json();
   } catch(e) { /* archived data may remain available */ }
   try {
