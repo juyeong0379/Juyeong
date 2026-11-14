@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15 08:21 KST",
+  "generated_at": "2026-11-15 08:43 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -98,7 +98,27 @@
     }
   ],
   "categories": {
-    "ecm": [],
+    "ecm": [
+      {
+        "top": true,
+        "headline": "“핵심은 경영상 필요성”…제3자 유상증자 둘러싼 법원 판단은 [서초동...",
+        "source": "서울경제",
+        "pubDate": "2026-11-14",
+        "pubTime": "19:31 KST",
+        "publishedAt": "2026-11-14T19:31:00+09:00",
+        "summary": [
+          "제3자 유상증자 법원 판단에서 경영상 필요성 인정 여부가 거래 성사 조건으로 부각",
+          "기존 주주 대상 자금조달 가능성에도 제3자 배정시 경영상 긴급 필요성 요구됨",
+          "법원 판단이 유상증자 대표주관사의 심사 기준과 투자자 보호 정책에 직접 영향"
+        ],
+        "summary_mode": "ai_summary",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.sedaily.com/article/20114335?ref=naver",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
     "corp": [
       {
         "top": true,
