@@ -1,1 +1,1 @@
-2026-11-15: Refresh today's briefing now; progressive 07:30 first edition and 09/11/13/15/17 KST checks, no yesterday's articles.
+Manual fresh execution requested for 2026-11-15 KST: verified morning briefing, preserve only same-day stories, two-hour refresh schedule, strict previous-day duplicate exclusion.
