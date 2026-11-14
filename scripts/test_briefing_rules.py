@@ -122,6 +122,30 @@ class BriefingRulesTest(unittest.TestCase):
         self.assertEqual(classify_sector(headline, desc), "other")
         self.assertFalse(briefing.is_personnel_only(headline))
 
+    def test_ecm_issuer_and_specialist_sector_fallbacks(self):
+        from sector_rules import sector_matches
+        self.assertTrue(sector_matches(
+            "ecm", "엠비디 최종 수요예측 결과 발표",
+            "하나증권 주관 코스닥 기업공개 공모가 확정"))
+        self.assertTrue(sector_matches(
+            "ecm", "공모주 청약 흥행", "IPO 수요예측 결과 공개"))
+        self.assertTrue(sector_matches(
+            "hana", "하나금융 미래전략 발표", "그룹 투자 전략과 자금 공급"))
+        self.assertTrue(sector_matches(
+            "growthfund", "국민성장펀드 발표", "신규 운영 정책 및 참여 계획"))
+        self.assertTrue(sector_matches(
+            "sto", "토큰증권 신규 제도", "발행 시장 정책"))
+        self.assertFalse(sector_matches(
+            "ecm", "데이터센터 PF 투자 결정", "발전소 차환"))
+
+    def test_specialist_desks_have_explicit_relaxed_rules(self):
+        self.assertEqual(
+            briefing.RELAXED_SECTIONS,
+            {"hana", "peer", "sto", "productive", "growthfund"},
+        )
+        self.assertNotIn("other", briefing.RELAXED_SECTIONS)
+        self.assertNotIn("ecm", briefing.RELAXED_SECTIONS)
+
     def test_previous_briefing_dedup(self):
         before = briefing.RECENT_HEADLINES
         try:
