@@ -786,7 +786,7 @@ def main():
     now = datetime.now(KST)
     edition = edition_for_run(now)
     window_start, window_end = edition_window(now, edition)
-    print(f"▶ {EDITION_LABELS[edition]} 회차 기사 발행구간: "
+    print(f"▶ 매일 {EDITION_LABELS[edition]} 기준 기사 발행구간: "
           f"{window_start:%m-%d %H:%M} ~ {window_end:%m-%d %H:%M} KST")
     RECENT_HEADLINES = load_recent_headlines(now)
     today_path = (Path(__file__).resolve().parents[1] / "docs" / "archive"
@@ -819,16 +819,15 @@ def main():
             if any(repeated_without_update(article, p) for p in prior_articles):
                 continue
             article = dict(article)
-            article["edition"] = article.get("edition") or edition_for_published(
-                article_timestamp(article), now) or "0730"
+            article["edition"] = "0730"  # migrate older multi-edition articles
             article["editionLabel"] = EDITION_LABELS[article["edition"]]
             retained.append(article)
             used_urls.add(article["url"])
             prior_articles.append(article)
         data[key] = retained[:MAX_STORIES_PER_CATEGORY]
 
-    # Daily morning briefing: select at most 3 current stories per category.
-    # Same-day manual retries may add verified stories, never carry old news.
+    # Single daily briefing: up to 3 current stories per category.
+    # Manual retries may add verified stories without carrying old news.
     for key, meta in SECTIONS.items():
         already = sum(item.get("edition") == edition for item in data[key])
         remaining = max(0, min(PER_EDITION_LIMIT - already,
@@ -850,7 +849,7 @@ def main():
                 prior_articles.append(item)
                 if sum(a.get("edition") == edition for a in data[key]) >= PER_EDITION_LIMIT:
                     break
-        # Newest edition first on the same page. Historical details preserved.
+        # Newest verified story first. Historical dates remain available.
         data[key].sort(key=lambda item: (
             EDITION_ORDER.index(item.get("edition", "0730")),
             str(item.get("pubDate", "")),
@@ -872,7 +871,7 @@ def main():
     output = {
         "generated_at": produced_at.strftime("%Y-%m-%d %H:%M KST"),
         "last_edition": edition,
-        "editions_completed": sorted(set(previous_payload.get("editions_completed", [])) | {edition}, key=EDITION_ORDER.index),
+        "editions_completed": ["0730"],
         "reports": reports,
         "sections": [
             {"key": k, "no": m["no"], "emoji": m["emoji"], "label": m["label"], "desc": m["desc"]}
