@@ -21,6 +21,13 @@ def classify_sector(title, description=""):
     # Pure staffing changes and profile stories have no market-wide impact.
     if has(r"임원\s*인사|인사\s*발령|대표\s*취임|대표\s*선임|전담팀\s*꾸린다|CEO\s*인터뷰|성공\s*스토리|연예|이혼",title):
         return None
+    # A broad Nvidia/Jensen Huang leadership shock is global market analysis,
+    # even if the headline also mentions an upcoming AI company's IPO.
+    # Do not mistake "Anthropic listing watch" for a dedicated ECM article.
+    if has(r"젠슨\s*황|젠슨황|엔비디아.{0,16}(?:CEO|경영진|대표)", title):
+        if has(r"사임|퇴진|경영\s*공백|후임|실적|주가|증시|반도체|AI\s*산업|GPU|수출\s*규제", title+" "+desc):
+            return "other"
+
     # Cross-company profitability, credit and capital efficiency are strategic.
     market_metrics = has(
         r"증권사|은행권|금융업계|증권업계|금융시장|증권업|(?:4|5|6)대\\s*금융지주|금융지주\\s*(?:업계|전체|평균)",
