@@ -60,7 +60,7 @@ jobs:
               published, count, covered = False, 0, 0
           # A draft with one story should not disable remaining morning retries.
           # Avoid wasteful repeat calls only once most categories have coverage.
-          min_covered = min(7, len(payload.get("categories", {}))) if published else 7
+          min_covered = len(payload.get("categories", {})) if published else 11
           skip = published and count > 0 and covered >= min_covered
           print(f"skip={'true' if skip else 'false'}")
           PY
