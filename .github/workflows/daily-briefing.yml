@@ -16,7 +16,7 @@ on:
 
 concurrency:
   group: ib-daily-briefing
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -25,7 +25,7 @@ permissions:
 jobs:
   build-briefing:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     steps:
       - name: 저장소 체크아웃
         uses: actions/checkout@v4
@@ -81,6 +81,7 @@ jobs:
           python -m unittest discover -s scripts -p 'test_briefing_rules.py'
 
       - name: 브리핑 생성 (뉴스 수집 + OpenAI 분석)
+        id: generate
         if: steps.current.outputs.skip != 'true'
         env:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
@@ -94,6 +95,7 @@ jobs:
           python scripts/generate_briefing.py
 
       - name: 게시 전 뉴스 무결성 점검 (회차별 시간·2건·중복·3줄 요약)
+        id: validate
         if: steps.current.outputs.skip != 'true'
         run: |
           python - <<'PY'
@@ -152,6 +154,7 @@ jobs:
           PY
 
       - name: 결과 커밋 & 푸시
+        id: publish
         if: steps.current.outputs.skip != 'true'
         run: |
           git config user.name "briefing-bot"
@@ -163,6 +166,7 @@ jobs:
           git push origin HEAD:main
 
       - name: Request GitHub Pages refresh for updated news
+        id: pages
         if: steps.current.outputs.skip != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
