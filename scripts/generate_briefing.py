@@ -32,18 +32,22 @@ import requests
 from openai import OpenAI, AuthenticationError, PermissionDeniedError, RateLimitError
 from sector_rules import classify_sector, sector_matches
 from article_digest import digest, preview_digest
-from news_quality import duplicate, validate_digest, deduplicate, numeric_claims_grounded
+from news_quality import duplicate, validate_digest, deduplicate, numeric_claims_grounded, repeated_without_update
 from news_materiality import is_material_news
 from insight_policy import accept_insight
 from report_sources import collect_reports
+from briefing_windows import (edition_for_run, edition_window, in_edition_window,
+                              in_day_window, edition_for_published,
+                              EDITION_LABELS, EDITION_ORDER, PER_EDITION_LIMIT,
+                              MAX_STORIES_PER_CATEGORY)
 
 KST = timezone(timedelta(hours=9))
 MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
 BATCH_SIZE = 8
 
-TOP_N_PER_SECTION = 4      # 섹션별 최종 상한: 중요한 뉴스가 있으면 4건까지
+TOP_N_PER_SECTION = PER_EDITION_LIMIT  # 한 회차 카테고리별 최대 두 건
 NAVER_PER_KEYWORD = 30     # 키워드당 네이버에서 가져올 기사 수 (언론사 필터 전)
-MAX_CANDIDATES = 30        # 섹션별로 OpenAI에게 보낼 후보 최대 수
+MAX_CANDIDATES = 20        # 회차당 섹션별 LLM 후보 상한
 MIN_DEPTH = 67
 MIN_QUALITY = 68
 MIN_IMPORTANCE = 70
@@ -200,7 +204,7 @@ def normalize_title(title: str) -> str:
     return re.sub(r"[\W_]+", "", title).lower()
 
 
-def fetch_naver_news(query: str) -> list:
+def fetch_naver_news(query: str, edition: str = None) -> list:
     url = "https://naverapihub.apigw.ntruss.com/search/v1/news"
     headers = {
         "X-NCP-APIGW-API-KEY-ID": os.environ["NAVER_CLIENT_ID"],
@@ -212,9 +216,9 @@ def fetch_naver_news(query: str) -> list:
 
     out = []
     now = datetime.now(KST)
-    # First edition: previous day 12:00 KST to 07:30. Updates: stop at 13:00.
-    start_date = briefing_start(now)
-    end_date = min(now, now.replace(hour=13, minute=0, second=0, microsecond=0))
+    edition = edition or edition_for_run(now)
+    start_date, end_date = edition_window(now, edition)
+    end_date = min(end_date, now)
     for it in res.json().get("items", []):
         link = it.get("originallink") or ""
         source = outlet_name(link)
@@ -227,7 +231,7 @@ def fetch_naver_news(query: str) -> list:
             pub_dt = parsedate_to_datetime(it["pubDate"]).astimezone(KST)
         except Exception:
             continue
-        if pub_dt < start_date or pub_dt > end_date:
+        if not in_edition_window(pub_dt, now, edition):
             continue
         out.append({
             "title": title,
@@ -241,11 +245,11 @@ def fetch_naver_news(query: str) -> list:
     return out
 
 
-def collect_candidates(keywords: list, limit: int = None) -> list:
+def collect_candidates(keywords: list, limit: int = None, edition: str = None) -> list:
     seen_urls, seen_titles, items = set(), set(), []
     for kw in keywords:
         try:
-            fetched = fetch_naver_news(kw)
+            fetched = fetch_naver_news(kw, edition=edition)
         except Exception as e:  # 키워드 하나가 실패해도 전체는 계속 진행
             print(f"  [경고] '{kw}' 검색 실패, 건너뜁니다: {e}")
             continue
@@ -377,7 +381,7 @@ def classify_batch(meta: dict, batch: list) -> list:
         for i, c in enumerate(batch)
     )
 
-    morning_priority = ("- [아침 첫 브리핑] 아직 비어 있는 카테고리의 첫 1건은 시장 전체 구조 변화가 아니어도 실재하는 중요한 IB 거래, 투자·조달 금액, 새 정책·행사·성과 또는 객관적으로 확인된 경쟁 동향이라면 선정. 확인된 사실과 금융 관련성이 있어야 하며 기사 제목·설명에 없는 숫자/영향은 만들지 말 것. 전문지의 구체적 정보가 있는 일반 거래 기사도 허용.\n" if datetime.now(KST) < briefing_morning_end(datetime.now(KST)) else "")
+    market_priority = ("- [최우선 시장성] 개별 기업의 인사·조직 내 인력 이동·통상적 실적 발표는 원칙적으로 제외. 시장 전체 수요, 조달비용, IB 경쟁 판도, 거래 관행, 업계 여러 기업의 재무지표 및 정책·규제 변화에 영향이 큰 이슈를 우선. 중요한 거래라도 업계 선례·가격 신호·금융구조와 위험 분담이 확인되어야 함.\n")
     scope_exception = ("- [기타 카테고리 예외] 글로벌 AI·반도체·미중 기술규제·거시경제·정책의 중요한 변화는 특정 IB 거래가 없어도 산업 공급망과 기업 투자계획에 광범위한 영향을 미치면 선정 가능. 확인되지 않은 CEO 사생활 의혹은 선정 금지.\n" if meta["key"] == "other" else "")
     prompt = f"""너는 증권사 IB그룹 기획실에서 데일리 뉴스 모니터링을 담당하는 애널리스트야.
 아래는 '{meta['label']}' 섹션의 후보 기사 목록이야. 각 기사를 판단해줘.
@@ -388,18 +392,19 @@ def classify_batch(meta: dict, batch: list) -> list:
 {meta['criteria']}
 
 공통 기준:
-{morning_priority}{scope_exception}- 검색어가 들어 있어도 기사의 '주제'가 위 기준과 다르면 반드시 is_relevant: false
-- 단신·속보·시황 중계·보도자료 받아쓰기·행사/인사 소식은 is_relevant: false
+{market_priority}{scope_exception}- 검색어가 들어 있어도 기사의 '주제'가 위 기준과 다르면 반드시 is_relevant: false
+- 단신·시황 중계·보도자료 받아쓰기·개별 회사의 임원 인사/조직 내 인력 이동과 일반 홍보 행사는 is_relevant: false
 - 원인·배경·영향·전망을 짚는 분석/기획/해설 기사를 선호
 - **가장 중요한 원칙: '어떤 회사가 어떤 거래를 성사시켰다'는 실적·동향보다 '이 사건이 IB 사업환경에 무엇을 바꾸는가'를 평가할 것.**
 - 다음처럼 여러 기업이나 IB 사업에 파급되는 뉴스에 높은 점수: 실제 시행·확정된 정책 및 규제 변화, 공모/회사채/인수금융/PF 시장의 구조 변화, 신용·유동성 위기, 자본 조달 조건 변화, 금융기관의 전략적 사업 구조 변화, 생산적금융의 자금 공급·배분 방식 변화.
-- 개별 발행·인수·매각·IPO·투자는 **구체적인 조달구조·리스크·경쟁사 주관전략·업계 선례를 파악하는 데 유용한 중요 거래**라면 선정 가능. 단순 성사/실적 기사는 제외하며, 거래 규모만 큰 기사는 낮게 평가.
+- 개별 발행·인수·매각·IPO·투자는 **시장 가격형성, 자금조달 조건, 투자자 회수, 금융사 경쟁구도를 바꾸는 중요한 거래**만 선정. 단순 성사, 개인 인사 및 개별 회사의 평범한 실적은 제외.
+- 금융회사와 상장사의 실적은 **업계 전체 또는 복수 회사 실적·자본효율성·수익구조·부실과 충당금의 구조적 추세**를 평가하는 기사일 때 선정 가능.
 - 다만 거래 규모가 크지 않아도 새로운 규제·심사 기준의 첫 적용, 새로운 금융 구조·회수 경로, 위험 분담 관행의 전환처럼 업계에 적용 가능한 선례가 뚜렷하면 선정 가능.
 - 기사에 '왜 IB 실무가 주목해야 하는지'를 객관적인 근거로 설명할 수 없다면 is_relevant=false. 거래 발표 자체는 선정 이유가 될 수 없음.
 - 시장 전체 또는 업계 복수 기업에 영향을 주는 현상을 우대하되, 영향이 언급되지 않은 단일 기업 실적 기사는 제외.
 - 한국경제·한국금융신문·법률신문·자본시장 전문지 등 매체 이름만으로 우대하지 않고, 숫자·거래구조·쟁점·실무 영향을 기준으로 품질 판단
 - 법률신문의 법규 해설은 IPO·인수금융·부동산PF·STO 등에 직접 관련되는 경우만 선정
-- 한국시간 브리핑 대상: 첫 브리핑은 전일 낮 12:00~당일 07:30까지 최초 발행된 기사를 선정. 07:30~13:00에는 그 사이 새로 발행된 중요 기사만 추가. 주말·월요일도 동일. 전날 브리핑에 게재된 기사는 새 브리핑에 재사용 금지.
+- **회차별 한국시간 발행 기준 엄수**: ① 07:30판은 전일 15:00~금일 07:30 ② 10:00판은 금일 07:30 초과~10:00 ③ 15:00판은 금일 10:00 초과~15:00. 각 회차는 카테고리별 최대 2건, 이미 실린 기사와 새로운 사실 없는 동일 이슈 반복 금지. 공식 결정·승인·금액 변경·계약 체결 등 실질적 신규 사실이 있는 후속 보도만 예외. 주말·월요일에도 동일 적용.
 - 직전 브리핑에 게재된 동일 기업·사건을 그대로 반복하는 기사는 제외. 다만 신규 공식 결정·금액·거래 단계·확인된 영향 등 구체적 신규 사실이 있다면 후속 보도로 선정 가능. 단순 재해석이나 제목만 바꾼 보도는 제외.
 - 1면이나 검색어 순위 등 화제성은 근거가 있는 경우만 반영하고, 확인되지 않은 순위·화제성을 지어내지 말 것.
 - 단순 보도자료를 옮겨 적은 제목·설명에는 낮은 depth/quality를 부여. 데이터·거래구조·법규 쟁점과 왜 중요한지가 확인되는 기사 위주로 선정.
@@ -489,7 +494,7 @@ summary 작성 규칙 (개조식):
         depth = to_int(j.get("depth"))
         # The first morning story has a grounded-news gate, not the stricter
         # afternoon deep-analysis gate. This improves coverage without invention.
-        morning = datetime.now(KST) < briefing_morning_end(datetime.now(KST))
+        morning = edition_for_run(datetime.now(KST)) == "0730"
         depth_floor = 58 if morning else MIN_DEPTH
         quality_floor = 64 if morning else MIN_QUALITY
         importance_floor = 60 if morning else MIN_IMPORTANCE
@@ -588,7 +593,7 @@ summary 작성 규칙 (개조식):
 
 
 def load_recent_headlines(now):
-    """Previous two published days only; date lookup does not change the website."""
+    """Previous three published dates only for duplicate checks, never to refill."""
     rows=[]
     archive=Path(__file__).resolve().parents[1]/"docs"/"archive"
     for offset in (1,2,3):
@@ -609,7 +614,7 @@ def load_recent_headlines(now):
 def repeated_last_days(candidate):
     """Suppress substantially repeated articles; no quota to fill."""
     return any(
-        candidate.get("url")==previous["url"] or duplicate(candidate,previous)
+        repeated_without_update(candidate,previous)
         for previous in RECENT_HEADLINES
     )
 
