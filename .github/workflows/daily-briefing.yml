@@ -49,8 +49,16 @@ jobs:
               completed = data.get("editions_completed", [])
           except (OSError, ValueError, TypeError):
               todays, completed = False, []
-          # Scheduled reruns are idempotent; manual refreshes may retry a thin edition.
-          skip = os.getenv("EVENT_NAME") == "schedule" and todays and edition in completed
+          # Never let an early manual draft suppress the full cutoff-time run.
+          deadline_h, deadline_m = {"0730": (7, 30), "1000": (10, 0), "1500": (15, 0)}[edition]
+          deadline = now.replace(hour=deadline_h, minute=deadline_m, second=0, microsecond=0)
+          try:
+              stamp = str(data.get("generated_at", "")).replace(" KST", "")
+              published_at = datetime.strptime(stamp, "%Y-%m-%d %H:%M").replace(tzinfo=now.tzinfo)
+          except (NameError, ValueError, TypeError):
+              published_at = now.replace(year=2000)
+          skip = (os.getenv("EVENT_NAME") == "schedule"
+                  and todays and edition in completed and published_at >= deadline)
           print("skip=" + ("true" if skip else "false"))
           print(f"edition={edition}")
           PY
