@@ -115,6 +115,13 @@ class BriefingRulesTest(unittest.TestCase):
         self.assertEqual(classify_sector("증권사 3분기 누적 순이익 비교, 업계 자본효율 경쟁"), "peer")
         self.assertIsNone(classify_sector("VIG, 그로쓰 전담팀 꾸린다"))
 
+    def test_jensen_huang_market_shock_goes_to_other_not_ecm(self):
+        from sector_rules import classify_sector
+        headline = "'젠슨황 스캔들'에 짓눌린 증시…엔비디아 실적·앤트로픽 상장 주시"
+        desc = "엔비디아 전 CEO 사임 이후 미국 반도체 시장·AI 투자 불확실성"
+        self.assertEqual(classify_sector(headline, desc), "other")
+        self.assertFalse(briefing.is_personnel_only(headline))
+
     def test_previous_briefing_dedup(self):
         before = briefing.RECENT_HEADLINES
         try:
