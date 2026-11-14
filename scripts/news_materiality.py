@@ -74,8 +74,12 @@ def is_material_news(judgment, title, description):
         return False
 
     if ROUTINE_HEADLINE.search(title):
-        # A routine results/HR story is not promoted solely by model enthusiasm.
-        return False
+        # Never promote routine personnel or single-firm results. Industry-wide
+        # aggregate profitability/credit/capital metrics are an explicit exception.
+        aggregate = (re.search(r"증권사|은행권|금융업계|증권업계|증권업|금융지주\s*(?:전체|업계|평균)", title)
+                     and re.search(r"누적|전체|업계|순이익|ROE|수익성|자기자본|충당금|건전성|연체율|자본효율", title))
+        if not aggregate:
+            return False
 
     # Transaction-specific exception: a precedent must explain a concrete
     # financing / underwriting / risk-distribution effect, not deal execution.
