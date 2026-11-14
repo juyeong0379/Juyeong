@@ -23,7 +23,7 @@ def classify_sector(title, description=""):
         return None
     # Cross-company profitability, credit and capital efficiency are strategic.
     market_metrics = has(
-        r"증권사|은행권|금융지주|금융업계|증권업계|금융시장|증권업",
+        r"증권사|은행권|금융업계|증권업계|금융시장|증권업|(?:4|5|6)대\\s*금융지주|금융지주\\s*(?:업계|전체|평균)",
         title,
     ) and has(
         r"누적|전체|업계|실적|순이익|ROE|수익성|자기자본|충당금|건전성|연체율|PF\s*위험|자본효율|신용위험",
