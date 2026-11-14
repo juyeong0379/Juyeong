@@ -1,12 +1,12 @@
 name: Daily News Briefing
 
 on:
-  # GitHub schedule can be delayed: run earlier, with independent backup slots.
-  # The first successful publication wins for the KST date.
+  # First run targets a published briefing by 07:30 KST; refresh through late morning.
   schedule:
-    - cron: "45 21 * * *"  # 06:45 KST primary
-    - cron: "0 22 * * *"   # 07:00 KST backup
-    - cron: "10 22 * * *"  # 07:10 KST final backup
+    - cron: "55 21 * * *"  # 06:55 KST first run
+    - cron: "30 23 * * *"  # 08:30 KST refresh
+    - cron: "0 1 * * *"    # 10:00 KST refresh
+    - cron: "15 2 * * *"   # 11:15 KST final refresh
   workflow_dispatch: {}
   # Scoped, explicit emergency refresh; unrelated commits never spend API credits.
   push:
@@ -30,7 +30,7 @@ jobs:
       - name: 저장소 체크아웃
         uses: actions/checkout@v4
 
-      - name: 오늘자 뉴스 기게시 여부 확인 (중복 API 호출 방지)
+      - name: 이번 갱신 구간 기게시 여부 확인 (중복 API 호출 방지)
         id: current
         run: |
           python - <<'PY' >> "$GITHUB_OUTPUT"
@@ -39,10 +39,15 @@ jobs:
           from pathlib import Path
           from zoneinfo import ZoneInfo
           p = Path("docs/data.json")
-          today = datetime.now(ZoneInfo("Asia/Seoul")).strftime("%Y-%m-%d")
+          now = datetime.now(ZoneInfo("Asia/Seoul"))
+          today = now.strftime("%Y-%m-%d")
+          slots = [(6,55),(8,30),(10,0),(11,15)]
+          current_slot = max((h*60+m for h,m in slots if h*60+m <= now.hour*60+now.minute), default=0)
           try:
               payload = json.loads(p.read_text(encoding="utf-8"))
-              published = str(payload.get("generated_at", "")).startswith(today)
+              stamp = str(payload.get("generated_at", "")).replace(" KST","")
+              published_at = datetime.strptime(stamp, "%Y-%m-%d %H:%M")
+              published = published_at.date().isoformat() == today and (published_at.hour*60+published_at.minute) >= current_slot
               count = sum(len(items) for items in payload.get("categories", {}).values())
           except (ValueError, OSError, AttributeError):
               published, count = False, 0
