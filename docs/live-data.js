@@ -75,6 +75,16 @@ function normalizeReports(payload) {
 }
 async function loadBriefings() {
   const now = briefKSTDate();
+  try {
+    const response = await fetch("ipo-watch.json?refresh=" + Date.now(), {cache:"no-store"});
+    if (response.ok) {
+      const payload = await response.json();
+      const note = String(payload.source_note || "");
+      IPO_WATCH = (Array.isArray(payload.items) ? payload.items : [])
+        .filter(w => w && w.issuer && /^https:\/\//.test(String(w.url)))
+        .map(w => ({...w,source_note:note}));
+    }
+  } catch(e) { IPO_WATCH = []; }
   const dates = [];
   let currentPayload = null;
   try {
