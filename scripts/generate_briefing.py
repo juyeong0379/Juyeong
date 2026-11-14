@@ -808,6 +808,8 @@ def main():
         for article in previous_sections.get(key, []):
             if not is_current_day_article(article, now):
                 continue
+            if is_personnel_only(article.get("headline", "")):
+                continue
             if repeated_last_days({
                     "title": article.get("headline", ""),
                     "url": article.get("url", "")}):
