@@ -212,10 +212,10 @@ function render(){
     .filter(a=>searchMode?matchesSearch(a):(a.date===selectedDate&&(activeCat==='all'||a.cat===activeCat)))
     .filter(a=>!mineOnly||matchesKeywords(a))
     .sort((a,b)=>b.date.localeCompare(a.date)||(CATEGORIES.findIndex(c=>c.key===a.cat)-CATEGORIES.findIndex(c=>c.key===b.cat))||a.id.localeCompare(b.id));
-  if(!searchMode && activeCat!=='all') list=list.slice(0,3);
+  if(!searchMode && activeCat!=='all') list=list.slice(0,4);
   renderOfficial();
   $('articleCount').textContent=`${list.length}건`;
-  $('stories').innerHTML=list.length?list.map(articleCard).join(''):`<div class="empty"><strong>선택한 조건에 맞는 기사가 없습니다.</strong><br>${searchMode?'다른 키워드를 검색하거나 검색을 해제해 주세요.':mineOnly?'내 키워드 필터를 끄거나 키워드를 변경해 주세요.':'이 날짜에 보관된 기사가 없습니다.'}</div>`;
+  $('stories').innerHTML=list.length?list.map(articleCard).join(''):`<div class="empty"><strong>선택한 조건에 맞는 기사가 없습니다.</strong><br>${searchMode?'다른 키워드를 검색하거나 검색을 해제해 주세요.':mineOnly?'내 키워드 필터를 끄거나 키워드를 변경해 주세요.':'해당 날짜에 새로 확인된 주요 기사가 없습니다. 전일 기사는 중복 게시하지 않습니다.'}</div>`;
 }
 function renderOfficial(){
   const selected=REPORTS.filter(x=>x.briefDate===selectedDate).slice(0,2);
@@ -248,6 +248,11 @@ $('keywordOverlay').addEventListener('click',e=>{if(e.target===e.currentTarget)e
 $('keywordForm').onsubmit=e=>{e.preventDefault();const v=$('newKeyword').value.trim();if(!v)return;if(!keywords.includes(v))keywords.push(v);$('newKeyword').value='';saveKeywords();renderKeywordDialog();render();};
 $('resetKeywords').onclick=()=>{keywords=DEFAULT_KEYWORDS.slice();saveKeywords();renderKeywordDialog();render();};
 render(); renderOfficial(); loadBriefings();
+// Keep an open dashboard current without requiring a manual page reload.
+// The poll only updates data; it preserves the user's selected historical date.
+setInterval(() => {
+  if (selectedDate === briefKSTDate()) loadBriefings();
+}, 15 * 60 * 1000);
 </script>
 </body>
 </html>
