@@ -1,16 +1,12 @@
 name: Daily News Briefing
 
 on:
-  # By 07:30: previous-day noon to 07:30 stories, then checks at 09/11/13 KST.
+  # Exactly three KST editions each day, including weekends and holidays.
+  # GitHub Actions scheduled execution may be delayed; publication is best effort.
   schedule:
-    - cron: "0 21 * * *"   # 06:00 KST initial (early enough for generation)
-    - cron: "30 21 * * *"  # 06:30 KST backup
-    - cron: "55 21 * * *"  # 06:55 KST backup
-    - cron: "10 22 * * *"  # 07:10 KST backup
-    - cron: "25 22 * * *"  # 07:25 KST final morning retry
-    - cron: "0 0 * * *"    # 09:00 KST
-    - cron: "0 2 * * *"    # 11:00 KST
-    - cron: "0 4 * * *"    # 13:00 KST final new-article check
+    - cron: "30 22 * * *"  # 07:30 KST: previous day 15:00 - today 07:30
+    - cron: "0 1 * * *"    # 10:00 KST: today 07:30 - 10:00
+    - cron: "0 6 * * *"    # 15:00 KST: today 10:00 - 15:00
   workflow_dispatch: {}
   # Scoped, explicit emergency refresh; unrelated commits never spend API credits.
   push:
@@ -34,34 +30,29 @@ jobs:
       - name: 저장소 체크아웃
         uses: actions/checkout@v4
 
-      - name: 이번 갱신 구간 기게시 여부 확인 (중복 API 호출 방지)
+      - name: 동일 회차 자동 중복 실행 방지
         id: current
+        env:
+          EVENT_NAME: ${{ github.event_name }}
         run: |
           python - <<'PY' >> "$GITHUB_OUTPUT"
-          import json
+          import json, os
           from datetime import datetime
           from pathlib import Path
           from zoneinfo import ZoneInfo
-          p = Path("docs/data.json")
           now = datetime.now(ZoneInfo("Asia/Seoul"))
-          today = now.strftime("%Y-%m-%d")
-          slots = [(6,0),(9,0),(11,0),(13,0)]
-          current_slot = max((h*60+m for h,m in slots if h*60+m <= now.hour*60+now.minute), default=0)
+          minute = now.hour * 60 + now.minute
+          edition = "0730" if minute < 600 else ("1000" if minute < 900 else "1500")
           try:
-              payload = json.loads(p.read_text(encoding="utf-8"))
-              stamp = str(payload.get("generated_at", "")).replace(" KST","")
-              published_at = datetime.strptime(stamp, "%Y-%m-%d %H:%M")
-              published = published_at.date().isoformat() == today and (published_at.hour*60+published_at.minute) >= current_slot
-              groups = payload.get("categories", {})
-              count = sum(len(items) for items in groups.values())
-              covered = sum(bool(items) for items in groups.values())
-          except (ValueError, OSError, AttributeError):
-              published, count, covered = False, 0, 0
-          # A draft with one story should not disable remaining morning retries.
-          # Avoid wasteful repeat calls only once most categories have coverage.
-          min_covered = len(payload.get("categories", {})) if published else 11
-          skip = published and count > 0 and covered >= min_covered
-          print(f"skip={'true' if skip else 'false'}")
+              data = json.loads(Path("docs/data.json").read_text(encoding="utf-8"))
+              todays = str(data.get("generated_at", "")).startswith(now.date().isoformat())
+              completed = data.get("editions_completed", [])
+          except (OSError, ValueError, TypeError):
+              todays, completed = False, []
+          # Scheduled reruns are idempotent; manual refreshes may retry a thin edition.
+          skip = os.getenv("EVENT_NAME") == "schedule" and todays and edition in completed
+          print("skip=" + ("true" if skip else "false"))
+          print(f"edition={edition}")
           PY
 
       - name: Python 설치
@@ -94,39 +85,62 @@ jobs:
           fi
           python scripts/generate_briefing.py
 
-      - name: 게시 전 뉴스 무결성 점검 (KST 날짜·3줄 요약·중복)
+      - name: 게시 전 뉴스 무결성 점검 (회차별 시간·2건·중복·3줄 요약)
         if: steps.current.outputs.skip != 'true'
         run: |
           python - <<'PY'
-          import json
-          from datetime import datetime, timedelta
+          import json, sys
+          from datetime import datetime, timezone, timedelta
           from pathlib import Path
-          from zoneinfo import ZoneInfo
+          sys.path.insert(0, "scripts")
+          from briefing_windows import (
+              KST, EDITION_ORDER, PER_EDITION_LIMIT,
+              MAX_STORIES_PER_CATEGORY, in_edition_window, in_day_window,
+              edition_for_published,
+          )
+          from news_quality import repeated_without_update
 
           data = json.loads(Path("docs/data.json").read_text(encoding="utf-8"))
-          now = datetime.now(ZoneInfo("Asia/Seoul"))
-          today = now.strftime("%Y-%m-%d")
+          now = datetime.now(KST)
+          today = now.date().isoformat()
           if not str(data.get("generated_at", "")).startswith(today):
-              raise RuntimeError("오늘자 뉴스가 아니므로 기존 배포 데이터를 유지합니다.")
-          stories = [item for group in data["categories"].values() for item in group]
-          if not stories:
-              raise RuntimeError("게시 가능한 뉴스가 없어 기존 데이터를 유지합니다.")
-          urls = [item.get("url", "") for item in stories]
-          if not all(urls) or len(urls) != len(set(urls)):
-              raise RuntimeError("원문 링크 누락 또는 중복 발견")
-          cutoff = (now - timedelta(days=1)).replace(hour=12,minute=0,second=0,microsecond=0)
-          deadline = now.replace(hour=13,minute=0,second=0,microsecond=0)
+              raise RuntimeError("오늘자 브리핑이 아닙니다.")
+
+          prior_path = Path("docs/archive") / (
+              (now.date() - timedelta(days=1)).isoformat() + ".json"
+          )
+          previous_day = []
+          if prior_path.exists():
+              older = json.loads(prior_path.read_text(encoding="utf-8"))
+              previous_day = [a for group in older.get("categories", {}).values() for a in group]
+
+          seen = []
           for section, group in data["categories"].items():
-              if len(group) > 4:
-                  raise RuntimeError(f"{section}: 섹터별 4건 초과")
+              if len(group) > MAX_STORIES_PER_CATEGORY:
+                  raise RuntimeError(f"{section}: 누적 6건 초과")
+              for edition in EDITION_ORDER:
+                  count = sum(a.get("edition") == edition for a in group)
+                  if count > PER_EDITION_LIMIT:
+                      raise RuntimeError(f"{section}: {edition} 회차 2건 초과")
               for item in group:
-                  timestamp = str(item.get("pubDate", "")) + " " + str(item.get("pubTime", "")).replace(" KST", "")
-                  published_at = datetime.strptime(timestamp, "%Y-%m-%d %H:%M").replace(tzinfo=ZoneInfo("Asia/Seoul"))
-                  if not cutoff <= published_at <= min(now, deadline):
-                      raise RuntimeError(f"{section}: 발행 시각이 오늘의 뉴스 수집 구간 밖에 있습니다: {timestamp}")
                   if len(item.get("summary", [])) != 3:
                       raise RuntimeError(f"{section}: 3줄 요약 미충족")
-          print(f"검증 완료: {today} | {len(stories)}건 | 기존 원문 URL 유지")
+                  if not str(item.get("url", "")).startswith(("https://", "http://")):
+                      raise RuntimeError(f"{section}: 원문 링크 누락")
+                  timestamp = str(item.get("pubDate", "")) + " " + str(item.get("pubTime", "")).replace(" KST", "")
+                  published = datetime.strptime(timestamp, "%Y-%m-%d %H:%M").replace(tzinfo=KST)
+                  if not in_day_window(published, now):
+                      raise RuntimeError(f"{section}: 발행 시각이 오늘의 수집 범위 밖")
+                  edition = item.get("edition")
+                  if edition not in EDITION_ORDER or not in_edition_window(published, now, edition):
+                      raise RuntimeError(f"{section}: {edition} 회차 시간 범위 위반")
+                  candidate = {"title": item.get("headline", ""), "url": item["url"]}
+                  if any(repeated_without_update(candidate, old) for old in previous_day):
+                      raise RuntimeError(f"{section}: 전일 기사 또는 신규 사실 없는 반복 기사")
+                  if any(repeated_without_update(candidate, old) for old in seen):
+                      raise RuntimeError(f"{section}: 당일 동일 이슈 중복")
+                  seen.append(candidate)
+          print(f"정상: {today} | {len(seen)}건 | 각 회차별 발행시각·중복 검증 완료")
           PY
 
       - name: 결과 커밋 & 푸시
