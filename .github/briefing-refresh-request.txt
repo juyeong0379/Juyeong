@@ -1,1 +1,1 @@
-2026-11-15 FINAL 3-EDITION POLICY: 07:30 previous day 15:00–today 07:30; 10:00 today 07:30–10:00; 15:00 today 10:00–15:00. Up to 2 genuine market-impact articles per category per edition. Preserve earlier editions, block cross-day and same-day repeated issues unless verified milestone. No individual personnel moves. Execute latest committed code.
+2026-11-15 07:5x KST: single controlled retry after preventing cancellation and adding persistent runtime diagnostics. Run new code and publish verified 07:30 edition; save diagnostic status whether success or failure.
