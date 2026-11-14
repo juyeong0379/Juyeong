@@ -187,7 +187,7 @@ SECTIONS = {
     "other": {
         "no": "11", "emoji": "🌍", "label": "기타",
         "desc": "글로벌 경제·산업·정책·AI 및 지정학적 핵심 이슈",
-        "keywords": ["글로벌 경제 AI 반도체", "글로벌 AI 산업 리스크", "엔비디아 CEO 경영 리스크", "미중 AI 반도체 규제", "미국 반독점 M&A", "글로벌 금융시장 충격", "빅테크 AI 투자 변화", "글로벌 반도체 공급망", "국제 무역 제재 경제 영향"],
+        "keywords": ["젠슨 황 사임 엔비디아 반도체 증시", "엔비디아 경영권 AI 투자 불확실성", "젠슨 황 엔비디아 GPU AI", "글로벌 경제 AI 반도체", "글로벌 AI 산업 리스크", "엔비디아 CEO 경영 리스크", "미중 AI 반도체 규제", "미국 반독점 M&A", "글로벌 금융시장 충격", "빅테크 AI 투자 변화", "글로벌 반도체 공급망", "국제 무역 제재 경제 영향"],
         "criteria": "다른 IB 카테고리에 명확히 속하지 않으나 글로벌 산업·경제·정책·기술 경쟁구도에 실질적인 영향을 미치는 핵심 이슈. CEO 관련 의혹은 사실 확인과 공식 조치가 있는 경우만 선정하고 선정적 사생활 보도는 제외. 시장 및 국내 산업·금융 영향 경로가 분명한 심층 분석을 우대.",
     },
 }
@@ -382,7 +382,7 @@ def classify_batch(meta: dict, batch: list) -> list:
     )
 
     market_priority = ("- [최우선 시장성] 개별 기업의 인사·조직 내 인력 이동·통상적 실적 발표는 원칙적으로 제외. 시장 전체 수요, 조달비용, IB 경쟁 판도, 거래 관행, 업계 여러 기업의 재무지표 및 정책·규제 변화에 영향이 큰 이슈를 우선. 중요한 거래라도 업계 선례·가격 신호·금융구조와 위험 분담이 확인되어야 함.\n")
-    scope_exception = ("- [기타 카테고리 예외] 글로벌 AI·반도체·미중 기술규제·거시경제·정책의 중요한 변화는 특정 IB 거래가 없어도 산업 공급망과 기업 투자계획에 광범위한 영향을 미치면 선정 가능. 확인되지 않은 CEO 사생활 의혹은 선정 금지.\n" if meta["key"] == "other" else "")
+    scope_exception = ("- [기타 카테고리 중요] 공식 확인된 엔비디아 CEO 사임/교체가 AI반도체·GPU 공급망·증시·투자수요·대중국 기술제재에 미치는 영향은 반드시 중요한 시장 이슈로 평가. 스캔들 자체와 확인되지 않은 사생활/첩보 의혹은 선정 사유가 아니지만, 공식 경영진 교체와 투자자·시장 전체의 실제 반응을 다룬 후속 분석은 선정 가능. 글로벌 AI·반도체·금리·미중 기술규제는 특정 IB 거래가 없어도 여러 산업/금융기관에 영향을 주면 대상.\n" if meta["key"] == "other" else "")
     prompt = f"""너는 증권사 IB그룹 기획실에서 데일리 뉴스 모니터링을 담당하는 애널리스트야.
 아래는 '{meta['label']}' 섹션의 후보 기사 목록이야. 각 기사를 판단해줘.
 
@@ -520,7 +520,8 @@ summary 작성 규칙 (개조식):
             if (to_int(j.get("importance")) < 75
                     or to_int(j.get("materiality")) < 65
                     or not (7 <= len(evidence) <= 110 and evidence in reference)
-                    or re.search(r"불륜|내연|사생활|루머|음모론", c["title"])):
+                    or (re.search(r"불륜|내연|사생활|루머|음모론", c["title"])
+                        and not re.search(r"사임|퇴진|경영진|증시|금융시장|반도체|GPU|AI 투자|주가", c["title"] + " " + c["description"]))):
                 continue
         elif not is_material_news(j, c["title"], c["description"]):
             # A verified, strategically informative financing/deal may matter
