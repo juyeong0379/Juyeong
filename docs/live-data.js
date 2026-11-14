@@ -10,7 +10,7 @@ function briefDayShift(day, offset) {
   return d.toISOString().slice(0, 10);
 }
 function briefCategory(key, item) {
-  if (["ecm","corp","ma","re","infra","hana","peer","sto","productive","growthfund"].includes(key)) {
+  if (["ecm","corp","ma","re","infra","hana","peer","sto","productive","growthfund","other"].includes(key)) {
     const title=String(item.headline||item.title||"");
     if(key==="productive" && /국민\s*성장\s*펀드/.test(title)) return "growthfund";
     return key;
@@ -49,6 +49,7 @@ function normalizeBriefing(payload) {
         insight: String(item.insight || ""),
         summary_mode: String(item.summary_mode || "ai_summary"),
         pubDate: String(item.pubDate || date),
+        pubTime: String(item.pubTime || ""),
         kind: String(item.kind || ""),
         pdf: String(item.pdf || "")
       });
