@@ -377,7 +377,7 @@ def classify_batch(meta: dict, batch: list) -> list:
         for i, c in enumerate(batch)
     )
 
-    morning_priority = ("- [아침 첫 브리핑] 아직 비어 있는 카테고리의 첫 1건은 시장 전체 구조 변화가 아니어도 실재하는 중요한 IB 거래, 투자·조달 금액, 새 정책·행사·성과 또는 객관적으로 확인된 경쟁 동향이라면 선정. 확인된 사실과 금융 관련성이 있어야 하며 기사 제목·설명에 없는 숫자/영향은 만들지 말 것. 전문지의 구체적 정보가 있는 일반 거래 기사도 허용.\n" if datetime.now(KST).hour < 12 else "")
+    morning_priority = ("- [아침 첫 브리핑] 아직 비어 있는 카테고리의 첫 1건은 시장 전체 구조 변화가 아니어도 실재하는 중요한 IB 거래, 투자·조달 금액, 새 정책·행사·성과 또는 객관적으로 확인된 경쟁 동향이라면 선정. 확인된 사실과 금융 관련성이 있어야 하며 기사 제목·설명에 없는 숫자/영향은 만들지 말 것. 전문지의 구체적 정보가 있는 일반 거래 기사도 허용.\n" if datetime.now(KST) < briefing_morning_end(datetime.now(KST)) else "")
     scope_exception = ("- [기타 카테고리 예외] 글로벌 AI·반도체·미중 기술규제·거시경제·정책의 중요한 변화는 특정 IB 거래가 없어도 산업 공급망과 기업 투자계획에 광범위한 영향을 미치면 선정 가능. 확인되지 않은 CEO 사생활 의혹은 선정 금지.\n" if meta["key"] == "other" else "")
     prompt = f"""너는 증권사 IB그룹 기획실에서 데일리 뉴스 모니터링을 담당하는 애널리스트야.
 아래는 '{meta['label']}' 섹션의 후보 기사 목록이야. 각 기사를 판단해줘.
@@ -489,7 +489,7 @@ summary 작성 규칙 (개조식):
         depth = to_int(j.get("depth"))
         # The first morning story has a grounded-news gate, not the stricter
         # afternoon deep-analysis gate. This improves coverage without invention.
-        morning = datetime.now(KST).hour < 12
+        morning = datetime.now(KST) < briefing_morning_end(datetime.now(KST))
         depth_floor = 58 if morning else MIN_DEPTH
         quality_floor = 64 if morning else MIN_QUALITY
         importance_floor = 60 if morning else MIN_IMPORTANCE
@@ -650,7 +650,7 @@ def build_section(meta: dict, used_urls: set, target_limit: int = TOP_N_PER_SECT
     # Morning first-edition rescue: a genuinely new, classified article whose
     # full body is accessible can supply three source-extracted factual points.
     # Never promote a search snippet, older article or a fabricated summary.
-    if not scored and datetime.now(KST).hour < 12:
+    if not scored and datetime.now(KST) < briefing_morning_end(datetime.now(KST)):
         from concurrent.futures import ThreadPoolExecutor
         rescue = eligible_candidates[:4]
         if rescue:
@@ -811,7 +811,10 @@ def main():
     # Each refresh searches for NEW material, preserving previously
     # published same-day coverage and never recycling older archives.
     for key, meta in SECTIONS.items():
-        remaining = max(0, limit - len(data[key]))
+        # A category missing its first story should still start with 1-2;
+        # only categories already initialized can grow to 3-4 later.
+        available_limit = (min(2, limit) if not data[key] else limit)
+        remaining = max(0, available_limit - len(data[key]))
         if remaining:
             new_stories = build_section(
                 {**meta, "key": key}, used_urls, target_limit=remaining,
