@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15 08:43 KST",
+  "generated_at": "2026-11-15 08:44 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -115,6 +115,25 @@
         "insight": "",
         "reporter": "",
         "url": "https://www.sedaily.com/article/20114335?ref=naver",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[IPO챗] 내주 영광와이케이엠씨 등 3개사 코스닥 입성",
+        "source": "연합뉴스",
+        "pubDate": "2026-11-14",
+        "pubTime": "09:00 KST",
+        "publishedAt": "2026-11-14T09:00:00+09:00",
+        "summary": [
+          "11월 16~18일 영광와이케이엠씨·옵토닉스·에이엘로봇 3개 기업의 코스닥시장 순차 상장 예정",
+          "세 기업의 확정 공모가는 각각 1만1000원·1만2000원·1만7600원으로 기업별 상장 일정 구체화",
+          "에스에프씨·유캐스트는 18~19일 일반청약 예정으로 신규 상장 기업과 후속 공모의 투자자 수요 비교 가능"
+        ],
+        "summary_mode": "source_digest",
+        "insight": "공모가 대비 신규 상장 성과와 후속 청약 수요를 비교하여 ECM 주관·가격 전략 점검",
+        "reporter": "정회인 기자",
+        "url": "https://www.yna.co.kr/amp/view/AKR20261113076800008",
         "edition": "0730",
         "editionLabel": "07:30"
       }
