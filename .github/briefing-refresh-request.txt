@@ -1,1 +1,1 @@
-2026-11-15 morning refresh: collect articles first published from 2026-11-14 12:00 KST through 2026-11-15 07:30 KST, 1-2 per category, never reuse already published November 14 articles. Only new substantial updates from 07:30 to 13:00 KST.
+2026-11-15: Execute first verified 07:30 edition under new exactly-three-slot policy (prior day 15:00–today 07:30, 1–2 stories each section). 10:00 and 15:00 subsequent editions only newly published news, market-wide effects, dedup with material updates allowed.
