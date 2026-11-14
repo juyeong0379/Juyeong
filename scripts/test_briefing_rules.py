@@ -78,6 +78,19 @@ class BriefingRulesTest(unittest.TestCase):
                 self.assertEqual(
                     briefing.is_current_day_article(article, self.day), expected)
 
+    def test_exact_seconds_are_preserved_at_start_boundary(self):
+        actual = self.at(14, 7, 30, 1)
+        article = {
+            "url": "https://example.org/new-development",
+            "pubDate": "2026-11-14",
+            "pubTime": "07:30 KST",
+            "publishedAt": actual.isoformat(),
+        }
+        self.assertEqual(briefing.article_timestamp(article), actual)
+        self.assertTrue(briefing.is_current_day_article(article, self.day))
+        article["publishedAt"] = self.at(14, 7, 30).isoformat()
+        self.assertFalse(briefing.is_current_day_article(article, self.day))
+
     def test_identical_article_or_same_issue_rejected(self):
         original = {"title": "의무공개매수 법안 국회 본회의 상정", "url": "https://a.com/1"}
         self.assertTrue(repeated_without_update(original, original))
