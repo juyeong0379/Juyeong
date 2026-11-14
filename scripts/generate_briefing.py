@@ -52,6 +52,9 @@ MIN_DEPTH = 67
 MIN_QUALITY = 68
 MIN_IMPORTANCE = 70
 RECENT_HEADLINES = []
+# These strategy desk categories should cover verified institutional actions,
+# policy developments and concrete funding outcomes, not only systemic shocks.
+RELAXED_SECTIONS = {"hana", "peer", "sto", "productive", "growthfund"}
 PREFERRED_IB_OUTLETS = {"더벨", "인베스트조선", "딜사이트", "한국경제", "한국금융신문", "법률신문", "딜북"}             # 심층도가 이보다 낮으면 탈락
 
 # ─────────────────────────────────────────────────────────────
@@ -382,6 +385,8 @@ def classify_batch(meta: dict, batch: list) -> list:
     )
 
     market_priority = ("- [최우선 시장성] 개별 기업의 인사·조직 내 인력 이동·통상적 실적 발표는 원칙적으로 제외. 시장 전체 수요, 조달비용, IB 경쟁 판도, 거래 관행, 업계 여러 기업의 재무지표 및 정책·규제 변화에 영향이 큰 이슈를 우선. 중요한 거래라도 업계 선례·가격 신호·금융구조와 위험 분담이 확인되어야 함.\n")
+    section_exception = ("- [해당 분야 선정 완화] 하나금융그룹·경쟁사·STO·생산적금융·국민성장펀드는 시장 전체의 구조적 변화를 필수로 요구하지 않는다. 중요 금융기관의 실제 거래·주선·상품 도입·정책 결정·집행계획·실적·사업전략·투자자 설명회 및 산업 전반에 의미 있는 제도 진전은 사실과 수치가 확인되면 채택 가능. 단순 인사·홍보·시장과 무관한 행사는 제외.\n" if meta["key"] in RELAXED_SECTIONS else "")
+    ecm_exception = ("- [ECM 실무 중요] 대표 IPO 기업의 공모가 확정, 밴드 대비 할인, 기관 수요예측 경쟁률, 청약 결과, 대표 주관사 성과, 구주/신주 비율 및 상장 추진은 구체적 사실과 공모시장 평가의 의미가 있다면 선정. 단, 반드시 지정된 24시간 내 발행된 실제 기사여야 한다.\n" if meta["key"] == "ecm" else "")
     scope_exception = ("- [기타 카테고리 중요] 공식 확인된 엔비디아 CEO 사임/교체가 AI반도체·GPU 공급망·증시·투자수요·대중국 기술제재에 미치는 영향은 반드시 중요한 시장 이슈로 평가. 스캔들 자체와 확인되지 않은 사생활/첩보 의혹은 선정 사유가 아니지만, 공식 경영진 교체와 투자자·시장 전체의 실제 반응을 다룬 후속 분석은 선정 가능. 글로벌 AI·반도체·금리·미중 기술규제는 특정 IB 거래가 없어도 여러 산업/금융기관에 영향을 주면 대상.\n" if meta["key"] == "other" else "")
     prompt = f"""너는 증권사 IB그룹 기획실에서 데일리 뉴스 모니터링을 담당하는 애널리스트야.
 아래는 '{meta['label']}' 섹션의 후보 기사 목록이야. 각 기사를 판단해줘.
@@ -392,7 +397,7 @@ def classify_batch(meta: dict, batch: list) -> list:
 {meta['criteria']}
 
 공통 기준:
-{market_priority}{scope_exception}- 검색어가 들어 있어도 기사의 '주제'가 위 기준과 다르면 반드시 is_relevant: false
+{section_exception}{ecm_exception}{market_priority}{scope_exception}- 검색어가 들어 있어도 기사의 '주제'가 위 기준과 다르면 반드시 is_relevant: false
 - 단신·시황 중계·보도자료 받아쓰기·개별 회사의 임원 인사/조직 내 인력 이동과 일반 홍보 행사는 is_relevant: false
 - 원인·배경·영향·전망을 짚는 분석/기획/해설 기사를 선호
 - **가장 중요한 원칙: '어떤 회사가 어떤 거래를 성사시켰다'는 실적·동향보다 '이 사건이 IB 사업환경에 무엇을 바꾸는가'를 평가할 것.**
@@ -498,9 +503,10 @@ summary 작성 규칙 (개조식):
         # The first morning story has a grounded-news gate, not the stricter
         # afternoon deep-analysis gate. This improves coverage without invention.
         morning = edition_for_run(datetime.now(KST)) == "0730"
-        depth_floor = 58 if morning else MIN_DEPTH
-        quality_floor = 64 if morning else MIN_QUALITY
-        importance_floor = 60 if morning else MIN_IMPORTANCE
+        relaxed = meta["key"] in RELAXED_SECTIONS
+        depth_floor = 49 if relaxed else (58 if morning else MIN_DEPTH)
+        quality_floor = 57 if relaxed else (64 if morning else MIN_QUALITY)
+        importance_floor = 52 if relaxed else (60 if morning else MIN_IMPORTANCE)
         if (depth < depth_floor or to_int(j.get("quality")) < quality_floor
                 or to_int(j.get("importance")) < importance_floor):
             continue
@@ -512,8 +518,8 @@ summary 작성 규칙 (개조식):
             factual = evidence and len(evidence) >= 7 and (
                 "".join(evidence.split()) in "".join((c["title"]+" "+c["description"]).split())
             )
-            if not (factual and depth >= 65 and to_int(j.get("quality")) >= 68
-                    and to_int(j.get("importance")) >= 65):
+            if not (factual and depth >= 49 and to_int(j.get("quality")) >= 57
+                    and to_int(j.get("importance")) >= 52):
                 continue
         elif meta["key"] == "other":
             # Global system-wide industry/economic shifts need not be a named IB deal.
@@ -540,6 +546,14 @@ summary 작성 규칙 (개조식):
                              "competitive_strategy", "industry_investment_shift")
                          and len(reason) >= 24
                          and 7 <= len(evidence) <= 110 and evidence in reference)
+            if (not secondary and relaxed and meta["key"] != "other"
+                    and to_int(j.get("importance")) >= 52
+                    and to_int(j.get("materiality")) >= 43
+                    and to_int(j.get("quality")) >= 57
+                    and len(reason) >= 14
+                    and 7 <= len(evidence) <= 110 and evidence in reference
+                    and not is_personnel_only(c["title"])):
+                secondary = True
             if (not secondary and morning and meta["key"] != "other"
                     and to_int(j.get("importance")) >= 65
                     and to_int(j.get("quality")) >= 64
