@@ -67,19 +67,18 @@ def check():
         "하나금융, 누적 순익 3.6조 견조…하나은행 건전성 관리 총력",
         "대손비용과 NPL 커버리지비율 부담",
     ) == "hana"
-    # Tomorrow's executive dashboard should retain verified strategic stories
-    # from today's dated archive if new IB news is scarce at 07:30.
+    # A new briefing must NEVER backfill yesterday's archived articles.
+    # The prior-day 07:30 to current-day 07:30 publication window is strict.
     from datetime import datetime
-    from generate_briefing import SECTIONS, KST, fill_sector_from_recent_archive
-    next_day = datetime(2026, 11, 14, 7, 15, tzinfo=KST)
-    empty = {key: [] for key in SECTIONS}
-    result = fill_sector_from_recent_archive(empty, next_day)
-    assert len(result) == 10
-    assert all(2 <= len(group) <= 3 for group in result.values())
-    assert all(story.get("carried_forward") for items in result.values()
-               for story in items)
-    assert all(story.get("pubDate") != "2026-11-14"
-               for items in result.values() for story in items)
+    from generate_briefing import KST, is_current_day_article
+    target = datetime(2026, 11, 15, 8, 0, tzinfo=KST)
+    older = {"url": "https://example.org/old", "pubDate": "2026-11-13",
+             "pubTime": "16:31 KST"}
+    current = {"url": "https://example.org/new", "pubDate": "2026-11-14",
+               "pubTime": "08:05 KST"}
+    assert not is_current_day_article(older, target), "Old stories must not backfill"
+    assert is_current_day_article(current, target)
+
     print("PASS: duplicate-event and source-grounded number and IB materiality checks")
 
 if __name__ == "__main__":
