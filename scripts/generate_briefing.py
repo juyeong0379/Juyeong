@@ -622,17 +622,18 @@ def repeated_last_days(candidate):
 # ─────────────────────────────────────────────────────────────
 # 3) 섹션별 기사 선정
 # ─────────────────────────────────────────────────────────────
-def build_section(meta: dict, used_urls: set, target_limit: int = TOP_N_PER_SECTION, new_only: bool = False) -> list:
+def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list, target_limit: int = PER_EDITION_LIMIT) -> list:
     # Only select this slot's missing number of genuinely new stories.
     if target_limit <= 0:
         return []
     print(f"▶ [{meta['no']}] {meta['label']} 수집 중...")
     eligible_candidates = [
-        c for c in collect_candidates(meta["keywords"])
+        c for c in collect_candidates(meta["keywords"], edition=edition)
         if not repeated_last_days(c)
         and c["url"] not in used_urls
-        and (not new_only or c["pub_dt"] >= briefing_morning_end(datetime.now(KST)))
+        and not any(repeated_without_update(c, p) for p in prior_articles)
         and sector_matches(meta["key"], c["title"], c.get("description", ""))
+        and not is_personnel_only(c["title"])
     ]
     candidates = eligible_candidates[:MAX_CANDIDATES]
     print(f"  후보 {len(candidates)}건 → OpenAI 분류 요청 중...")
@@ -655,7 +656,7 @@ def build_section(meta: dict, used_urls: set, target_limit: int = TOP_N_PER_SECT
     # Morning first-edition rescue: a genuinely new, classified article whose
     # full body is accessible can supply three source-extracted factual points.
     # Never promote a search snippet, older article or a fabricated summary.
-    if not scored and datetime.now(KST) < briefing_morning_end(datetime.now(KST)):
+    if not scored and edition == "0730":
         from concurrent.futures import ThreadPoolExecutor
         rescue = eligible_candidates[:4]
         if rescue:
@@ -738,6 +739,8 @@ def build_section(meta: dict, used_urls: set, target_limit: int = TOP_N_PER_SECT
             "insight": item.get("insight", ""),
             "reporter": item["reporter"],
             "url": item["url"],
+            "edition": edition,
+            "editionLabel": EDITION_LABELS[edition],
         }
         for i, item in enumerate(top)
     ]
@@ -745,36 +748,35 @@ def build_section(meta: dict, used_urls: set, target_limit: int = TOP_N_PER_SECT
 
 # Previous-day archive filler intentionally removed: never recycle old news.
 
-def briefing_start(now: datetime) -> datetime:
-    """Daily coverage begins at 12:00 KST on the previous calendar day."""
-    return (now - timedelta(days=1)).replace(
-        hour=12, minute=0, second=0, microsecond=0)
+# Suppress routine staffing changes, even if the headline mentions IB.
+PERSONNEL_ONLY = re.compile(
+    r"임원\s*(?:인사|선임|교체|영입)|대표\s*(?:취임|선임|교체|인사)|"
+    r"사장\s*(?:교체|선임|취임)|CEO\s*(?:취임|영입|선임|인사)|"
+    r"인사\s*발령|조직\s*내\s*이동|본부장\s*(?:선임|교체)",
+    re.I,
+)
 
 
-def briefing_morning_end(now: datetime) -> datetime:
-    """Exact fixed first-edition boundary (07:30 KST)."""
-    return now.replace(hour=7, minute=30, second=0, microsecond=0)
+def is_personnel_only(title: str) -> bool:
+    return bool(PERSONNEL_ONLY.search(title or ""))
 
 
-def target_story_count(now: datetime) -> int:
-    """Initial 1-2 stories per category; grow only when important new stories emerge."""
-    return 2 if now < briefing_morning_end(now) else TOP_N_PER_SECTION
-
-
-def is_current_day_article(article: dict, now: datetime) -> bool:
-    """Retain only articles from the defined previous-noon-to-today period."""
+def article_timestamp(article: dict):
     if not isinstance(article, dict) or not article.get("url"):
-        return False
+        return None
     try:
-        published = datetime.strptime(
+        return datetime.strptime(
             str(article.get("pubDate", "")) + " " +
             str(article.get("pubTime", "")).replace(" KST", ""),
             "%Y-%m-%d %H:%M"
         ).replace(tzinfo=KST)
-    except ValueError:
-        return False
-    return briefing_start(now) <= published <= min(
-        now, now.replace(hour=13, minute=0, second=0, microsecond=0))
+    except (ValueError, TypeError):
+        return None
+
+
+def is_current_day_article(article: dict, now: datetime) -> bool:
+    published = article_timestamp(article)
+    return published is not None and in_day_window(published, now)
 
 
 def main():
