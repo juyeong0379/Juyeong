@@ -483,6 +483,9 @@ summary 작성 규칙 (개조식):
         print(f"  [경고] '{meta['label']}' AI 요약 불가 → 원문 검색 발췌 모드")
         return fallback_classify_batch(meta, batch)
 
+    if meta["key"] == "other":
+        yes_count = sum(bool(j.get("is_relevant")) for j in judgments if isinstance(j, dict))
+        print(f"  [기타 진단] LLM 입력 {len(batch)}건, 후보 적합 판단 {yes_count}건")
     now = datetime.now(KST)
     results = []
     for j in judgments:
@@ -654,32 +657,71 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
         scored.sort(key=lambda x: x["score"], reverse=True)
     scored=deduplicate(scored)
 
-    # Morning first-edition rescue: a genuinely new, classified article whose
-    # full body is accessible can supply three source-extracted factual points.
-    # Never promote a search snippet, older article or a fabricated summary.
-    if not scored and edition == "0730":
+    # Source-grounded editorial rescue: the LLM can reject legitimate market
+    # analysis in a sparse weekend edition. Only verified *full-body* content
+    # can supplement the selected set; never invent a summary or reuse old news.
+    if len(scored) < target_limit and edition == "0730":
         from concurrent.futures import ThreadPoolExecutor
-        rescue = eligible_candidates[:4]
+
+        def editorial_importance(candidate):
+            headline = candidate.get("title", "")
+            context = headline + " " + candidate.get("description", "")
+            total = 0
+            if re.search(r"엔비디아|NVIDIA|젠슨\\s*황", headline, re.I):
+                total += 6
+                if re.search(r"사임|퇴진|CEO|경영진|임시\\s*CEO", context, re.I):
+                    total += 9
+            if re.search(r"시장\\s*전체|금융시장|증시|반도체|GPU|데이터센터|공급망|수출규제|산업\\s*전반|시가총액", context, re.I):
+                total += 7
+            if re.search(r"제도|규제|정책|국민성장펀드|인수금융|자금조달|투자위축|신용위험", headline):
+                total += 5
+            if candidate.get("source") in PREFERRED_IB_OUTLETS:
+                total += 2
+            return total
+
+        rescue = [
+            candidate for candidate in eligible_candidates
+            if not any(duplicate(candidate, old) for old in scored)
+        ]
+        rescue.sort(key=editorial_importance, reverse=True)
+        rescue = rescue[:12 if meta["key"] == "other" else 8]
         if rescue:
             with ThreadPoolExecutor(max_workers=4) as pool:
                 summaries = list(pool.map(
                     lambda c: digest(c["title"], c["url"], c.get("description", "")),
                     rescue,
                 ))
-            for c, facts in zip(rescue, summaries):
-                if not facts or not validate_digest(c["title"], facts):
+            for candidate, facts in zip(rescue, summaries):
+                if not facts or not validate_digest(candidate["title"], facts):
                     continue
-                scored = [{
-                    **c,
+                # For global articles, reject salacious/individual claims
+                # without a verifiable wider financial/industrial implication.
+                if meta["key"] == "other":
+                    context = candidate["title"] + " " + candidate.get("description", "")
+                    if not re.search(
+                        r"증시|반도체|AI|엔비디아|GPU|금융시장|수출규제|"
+                        r"경제|무역|금리|투자|데이터센터|공급망", context, re.I
+                    ):
+                        continue
+                    if re.search(r"불륜|내연|사생활|스캔들", candidate["title"]):
+                        if not re.search(
+                            r"사임|퇴진|주가|시장|증시|경영진|반도체|"
+                            r"AI\\s*산업|GPU", context, re.I
+                        ):
+                            continue
+                scored.append({
+                    **candidate,
                     "summary": facts,
                     "summary_mode": "source_digest",
                     "insight": "",
                     "reporter": "",
-                    "score": 60,
+                    "score": 59 + editorial_importance(candidate),
                     "hana_view": "neutral",
-                }]
-                print(f"  [아침 근거확인 기사] {c['source']} | {c['title'][:55]}")
-                break
+                })
+                scored = deduplicate(sorted(scored, key=lambda x: x["score"], reverse=True))
+                print(f"  [원문 재검토] {candidate['source']} | {candidate['title'][:60]}")
+                if len(scored) >= target_limit:
+                    break
 
     if meta["key"] == "hana":
         # Group briefing editorial mix: 2 grounded positives + 1 objectively
