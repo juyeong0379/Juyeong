@@ -1,1 +1,1 @@
-2026-11-15: request latest stable version immediately for 07:30 edition. Include full smoke tests, strict deduplication, cumulative updates, source verification, and one-pass collection.
+2026-11-15 07:27 KST: generate improved 07:30 first edition, search broadly for at least one verified original article in every one of 11 categories; no recycled previous-day article.
