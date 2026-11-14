@@ -391,7 +391,7 @@ def classify_batch(meta: dict, batch: list) -> list:
 - 원인·배경·영향·전망을 짚는 분석/기획/해설 기사를 선호
 - **가장 중요한 원칙: '어떤 회사가 어떤 거래를 성사시켰다'는 실적·동향보다 '이 사건이 IB 사업환경에 무엇을 바꾸는가'를 평가할 것.**
 - 다음처럼 여러 기업이나 IB 사업에 파급되는 뉴스에 높은 점수: 실제 시행·확정된 정책 및 규제 변화, 공모/회사채/인수금융/PF 시장의 구조 변화, 신용·유동성 위기, 자본 조달 조건 변화, 금융기관의 전략적 사업 구조 변화, 생산적금융의 자금 공급·배분 방식 변화.
-- 개별 발행·인수·매각·IPO·수주·분기 실적은 원칙적으로 부적합. 규모가 크다는 이유만으로 선정하지 말고 다른 기업의 조달 관행·회수·주관 경쟁·리스크 분담에 영향을 주는 선례인지 확인.
+- 개별 발행·인수·매각·IPO·투자는 **구체적인 조달구조·리스크·경쟁사 주관전략·업계 선례를 파악하는 데 유용한 중요 거래**라면 선정 가능. 단순 성사/실적 기사는 제외하며, 거래 규모만 큰 기사는 낮게 평가.
 - 다만 거래 규모가 크지 않아도 새로운 규제·심사 기준의 첫 적용, 새로운 금융 구조·회수 경로, 위험 분담 관행의 전환처럼 업계에 적용 가능한 선례가 뚜렷하면 선정 가능.
 - 기사에 '왜 IB 실무가 주목해야 하는지'를 객관적인 근거로 설명할 수 없다면 is_relevant=false. 거래 발표 자체는 선정 이유가 될 수 없음.
 - 시장 전체 또는 업계 복수 기업에 영향을 주는 현상을 우대하되, 영향이 언급되지 않은 단일 기업 실적 기사는 제외.
@@ -510,8 +510,22 @@ summary 작성 규칙 (개조식):
                     or re.search(r"불륜|내연|사생활|루머|음모론", c["title"])):
                 continue
         elif not is_material_news(j, c["title"], c["description"]):
-            print(f"  [선정 제외] 시장 파급력/검증 근거 부족: {c['title'][:60]}")
-            continue
+            # A verified, strategically informative financing/deal may matter
+            # in a specialist desk even without economy-wide materiality.
+            evidence = re.sub(r"\s+", "", str(j.get("impact_evidence") or "")).casefold()
+            reference = re.sub(r"\s+", "", c["title"] + " " + c["description"]).casefold()
+            reason = str(j.get("impact_reason") or "")
+            secondary = (to_int(j.get("importance")) >= 65
+                         and to_int(j.get("materiality")) >= 60
+                         and to_int(j.get("quality")) >= 70
+                         and str(j.get("impact_type") or "") in (
+                             "transaction_precedent", "financing_conditions",
+                             "competitive_strategy", "industry_investment_shift")
+                         and len(reason) >= 24
+                         and 7 <= len(evidence) <= 110 and evidence in reference)
+            if not secondary:
+                print(f"  [선정 제외] 중요도/원문 근거 부족: {c['title'][:60]}")
+                continue
         if classify_sector(c["title"],c["description"]) != meta["key"]:
             continue
 
