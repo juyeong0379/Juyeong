@@ -734,6 +734,7 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
             "source": item["source"],
             "pubDate": item["pub_dt"].strftime("%Y-%m-%d"),
             "pubTime": item["pub_dt"].strftime("%H:%M KST"),
+            "publishedAt": item["pub_dt"].isoformat(),  # seconds retained for strict 07:30 boundary
             "summary": item["summary"][:3],
             "summary_mode": item.get("summary_mode", "ai_summary"),
             "insight": item.get("insight", ""),
@@ -764,6 +765,14 @@ def is_personnel_only(title: str) -> bool:
 def article_timestamp(article: dict):
     if not isinstance(article, dict) or not article.get("url"):
         return None
+    exact = str(article.get("publishedAt") or "").strip()
+    if exact:
+        try:
+            parsed = datetime.fromisoformat(exact)
+            if parsed.tzinfo:
+                return parsed.astimezone(KST)
+        except ValueError:
+            pass
     try:
         return datetime.strptime(
             str(article.get("pubDate", "")) + " " +
