@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15 08:14 KST",
+  "generated_at": "2026-11-15 08:21 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -200,6 +200,25 @@
         "insight": "엔비디아 의존 GPU·데이터센터 금융의 장기 공급계약·투자집행·자금조달 리스크 점검",
         "reporter": "황철환 기자",
         "url": "https://www.yna.co.kr/view/AKR20261113177200008",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "젠슨 황 여파에 美 '칩 규제' 칼바람…중국 \"희토류 맞불\"",
+        "source": "한국경제",
+        "pubDate": "2026-11-14",
+        "pubTime": "14:08 KST",
+        "publishedAt": "2026-11-14T14:08:00+09:00",
+        "summary": [
+          "미중 무역전쟁 과정에서 희토류 수출 통제와 반도체 수출 규제가 핵심 무기로 자리잡음",
+          "트럼프 행정부 출범 이후 중국 희토류 맞불과 미국 칩 규제 강화가 양측 전략의 핵심 배경",
+          "대중국 반도체 규제와 희토류 대응이 글로벌 반도체 공급망과 기술 경쟁에 직접적 영향"
+        ],
+        "summary_mode": "ai_summary",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.hankyung.com/article/2026111464557",
         "edition": "0730",
         "editionLabel": "07:30"
       }
