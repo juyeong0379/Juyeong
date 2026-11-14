@@ -1,1 +1,1 @@
-2026-11-15 07:5x KST: single controlled retry after preventing cancellation and adding persistent runtime diagnostics. Run new code and publish verified 07:30 edition; save diagnostic status whether success or failure.
+2026-11-15: manually regenerate using FINAL one-daily-run policy. Strict publication window: yesterday 07:30 exclusive to today 07:30 inclusive (KST); target 2-3 significant market-wide IB stories per each of 11 categories. Same relevance and dedup rules, no stale padding. One scheduled refresh at 07:30 only. Run latest generator and validate.
