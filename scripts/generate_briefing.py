@@ -180,6 +180,12 @@ SECTIONS = {
         "keywords": ["국민성장펀드", "국민참여성장펀드", "국민성장펀드 예산안", "국민성장펀드 실적 집행", "국민성장펀드 투자", "국민성장펀드 인프라 PF", "국민성장펀드 운용", "국민성장펀드 1호 사업", "국민성장펀드 금융지주", "국민성장펀드 출자"],
         "criteria": "국민성장펀드 실제 집행(투자 승인·출자·GP 선정·신규 펀드 결성)과 2027 예산·재원 조달·지주별 실적 인정 기준·대형 PF 연계, 1호 투자사업의 공사 지연·유동성·EPC 위험을 다루는 심층 기사. 정책 성과와 한계 모두 포함. 이름에 펀드가 직접 나타나지 않아도 내용이 국민성장펀드 1호 사업이나 집행 구조를 다루면 적합. 단순 행사·정책 보도자료 전재 제외.",
     },
+    "other": {
+        "no": "11", "emoji": "🌍", "label": "기타",
+        "desc": "글로벌 경제·산업·정책·AI 및 지정학적 핵심 이슈",
+        "keywords": ["글로벌 AI 산업 리스크", "엔비디아 CEO 경영 리스크", "미중 AI 반도체 규제", "미국 반독점 M&A", "글로벌 금융시장 충격", "빅테크 AI 투자 변화", "글로벌 반도체 공급망", "국제 무역 제재 경제 영향"],
+        "criteria": "다른 IB 카테고리에 명확히 속하지 않으나 글로벌 산업·경제·정책·기술 경쟁구도에 실질적인 영향을 미치는 핵심 이슈. CEO 관련 의혹은 사실 확인과 공식 조치가 있는 경우만 선정하고 선정적 사생활 보도는 제외. 시장 및 국내 산업·금융 영향 경로가 분명한 심층 분석을 우대.",
+    },
 }
 
 # ─────────────────────────────────────────────────────────────
@@ -206,8 +212,8 @@ def fetch_naver_news(query: str) -> list:
 
     out = []
     now = datetime.now(KST)
-    # Monday: allow news since Friday; other days: yesterday and today.
-    start_date = (now.date() - timedelta(days=3 if now.weekday() == 0 else 1))
+    # Strict publication window: previous day 20:00 KST through collection time.
+    start_date = (now - timedelta(days=1)).replace(hour=20, minute=0, second=0, microsecond=0)
     for it in res.json().get("items", []):
         link = it.get("originallink") or ""
         source = outlet_name(link)
@@ -220,7 +226,7 @@ def fetch_naver_news(query: str) -> list:
             pub_dt = parsedate_to_datetime(it["pubDate"]).astimezone(KST)
         except Exception:
             continue
-        if pub_dt.date() < start_date or pub_dt > now:
+        if pub_dt < start_date or pub_dt > now:
             continue
         out.append({
             "title": title,
@@ -328,6 +334,7 @@ FALLBACK_TOPIC_PATTERNS = {
     "경쟁사": r"증권사|IB본부|한국투자증권|KB증권|NH투자증권|신한투자증권|미래에셋증권|메리츠증권|발행어음|IMA",
     "STO": r"STO|토큰증권|토큰화|조각투자|RWA|증권형 토큰",
     "생산적금융": r"생산적금융|국민성장펀드|모험자본|벤처투자|유니콘|정책금융|성장금융|성장펀드",
+    "기타": r"AI|엔비디아|반도체|미중|빅테크|글로벌|무역|관세|반독점|금융시장|지정학",
 }
 
 def fallback_classify_batch(meta: dict, batch: list) -> list:
@@ -389,8 +396,8 @@ def classify_batch(meta: dict, batch: list) -> list:
 - 시장 전체 또는 업계 복수 기업에 영향을 주는 현상을 우대하되, 영향이 언급되지 않은 단일 기업 실적 기사는 제외.
 - 한국경제·한국금융신문·법률신문·자본시장 전문지 등 매체 이름만으로 우대하지 않고, 숫자·거래구조·쟁점·실무 영향을 기준으로 품질 판단
 - 법률신문의 법규 해설은 IPO·인수금융·부동산PF·STO 등에 직접 관련되는 경우만 선정
-- 한국시간 오전 8시 브리핑 대상: 전일~당일 기사. 월요일만 지난 금요일~월요일까지 검토. 이전 날짜 기사를 끌어와 3건을 채우지 말 것.
-- 직전 브리핑에 게재된 동일 기업·사건을 그대로 반복하는 기사는 제외. 새 정책 결정·금액·거래 단계 등 실질적인 신규 사실이 있을 때만 별개의 기사로 취급.
+- 한국시간 브리핑 대상: 전일 오후 8시부터 당일 뉴스 수집 시점까지 최초 발행된 기사만 선정. 주말·월요일에도 동일한 시간 창 적용. 오래된 기사를 끌어와 채우지 말 것.
+- 직전 브리핑에 게재된 동일 기업·사건을 그대로 반복하는 기사는 제외. 다만 신규 공식 결정·금액·거래 단계·확인된 영향 등 구체적 신규 사실이 있다면 후속 보도로 선정 가능. 단순 재해석이나 제목만 바꾼 보도는 제외.
 - 1면이나 검색어 순위 등 화제성은 근거가 있는 경우만 반영하고, 확인되지 않은 순위·화제성을 지어내지 말 것.
 - 단순 보도자료를 옮겨 적은 제목·설명에는 낮은 depth/quality를 부여. 데이터·거래구조·법규 쟁점과 왜 중요한지가 확인되는 기사 위주로 선정.
 - 언론사 이름 자체가 합격 기준은 아님. IB 전문지·경제지·법률신문·전자신문·딜북 등 해당 주제에 전문성을 지닌 출처도 동등 평가.
@@ -648,6 +655,7 @@ def build_section(meta: dict, used_urls: set) -> list:
             "headline": item["title"],
             "source": item["source"],
             "pubDate": item["pub_dt"].strftime("%Y-%m-%d"),
+            "pubTime": item["pub_dt"].strftime("%H:%M KST"),
             "summary": item["summary"][:3],
             "summary_mode": item.get("summary_mode", "ai_summary"),
             "insight": item.get("insight", ""),
@@ -754,7 +762,7 @@ def main():
     # Executive briefing: never post a mostly empty 10-section homepage.
     # Retain only verified strategic coverage within the last five days,
     # preserving source publication dates and original links.
-    data = fill_sector_from_recent_archive(data, datetime.now(KST))
+    # Never recycle older articles: publish only news from the defined window.
 
     produced_at = datetime.now(KST)
     try:
