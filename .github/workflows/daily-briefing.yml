@@ -16,7 +16,7 @@ on:
 
 concurrency:
   group: ib-daily-briefing
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 permissions:
   contents: write
