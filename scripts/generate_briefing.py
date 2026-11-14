@@ -502,8 +502,8 @@ summary 작성 규칙 (개조식):
         elif meta["key"] == "other":
             # Global system-wide industry/economic shifts need not be a named IB deal.
             # Require concrete evidence in the article metadata, not market gossip.
-            evidence = re.sub(r"\\s+", "", str(j.get("impact_evidence") or "")).casefold()
-            reference = re.sub(r"\\s+", "", c["title"] + " " + c["description"]).casefold()
+            evidence = re.sub(r"\s+", "", str(j.get("impact_evidence") or "")).casefold()
+            reference = re.sub(r"\s+", "", c["title"] + " " + c["description"]).casefold()
             if (to_int(j.get("importance")) < 75
                     or to_int(j.get("materiality")) < 65
                     or not (7 <= len(evidence) <= 110 and evidence in reference)
