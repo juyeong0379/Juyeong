@@ -176,3 +176,55 @@ jobs:
             -H "Authorization: Bearer $GH_TOKEN" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             "https://api.github.com/repos/${{ github.repository }}/pages/builds"
+
+      - name: 실행 결과 진단 기록 (게시 실패도 저장)
+        if: ${{ always() && steps.current.outputs.skip != 'true' }}
+        env:
+          GENERATE_OUTCOME: ${{ steps.generate.outcome }}
+          VALIDATE_OUTCOME: ${{ steps.validate.outcome }}
+          PUBLISH_OUTCOME: ${{ steps.publish.outcome }}
+          PAGES_OUTCOME: ${{ steps.pages.outcome }}
+          RUN_ID: ${{ github.run_id }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          now = datetime.now(ZoneInfo("Asia/Seoul")).strftime("%Y-%m-%d %H:%M KST")
+          outcomes = {
+              key: os.getenv(key + "_OUTCOME", "unknown")
+              for key in ("GENERATE", "VALIDATE", "PUBLISH", "PAGES")
+          }
+          published = outcomes.get("PUBLISH") == "success"
+          current_data = Path("docs/data.json")
+          try:
+              payload = json.loads(current_data.read_text(encoding="utf-8"))
+              totals = {key: len(items) for key, items in payload.get("categories", {}).items()}
+              generated = payload.get("generated_at", "")
+          except (OSError, ValueError, TypeError, AttributeError):
+              totals, generated = {}, ""
+          result = {
+              "attempted_at": now,
+              "state": "published" if published else "failed",
+              "run_url": "https://github.com/" + os.getenv("REPOSITORY", "") +
+                         "/actions/runs/" + os.getenv("RUN_ID", ""),
+              "steps": outcomes,
+              "data_generated_at": generated,
+              "article_counts": totals,
+          }
+          path = Path("docs/briefing-status.json")
+          path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          print(json.dumps(result, ensure_ascii=False, indent=2))
+          PY
+          # A failed validation may leave edited news locally: never commit it.
+          git restore -- docs/data.json docs/archive 2>/dev/null || true
+          git config user.name "briefing-bot"
+          git config user.email "briefing-bot@users.noreply.github.com"
+          git add docs/briefing-status.json
+          git diff --staged --quiet || git commit -m "chore: record IB briefing run outcome"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
