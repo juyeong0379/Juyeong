@@ -83,7 +83,7 @@ UPDATE_MILESTONES = (
     "공식 발표", "매각 완료", "계약 체결",
 )
 SIGNIFICANT_NUMERIC = re.compile(
-    r"\\d[\\d,.]*\\s*(?:조원|억원|억달러|만달러|조|억|%|bp|GW|MW|배)",
+    r"\d[\d,.]*\s*(?:조원|억원|억달러|만달러|조|억|%|bp|GW|MW|배)",
     re.I,
 )
 
@@ -104,8 +104,8 @@ def substantive_update(candidate, previous):
     if new_milestones - old_milestones:
         return True
 
-    new_values = {re.sub(r"\\s+", "", v) for v in SIGNIFICANT_NUMERIC.findall(newer)}
-    old_values = {re.sub(r"\\s+", "", v) for v in SIGNIFICANT_NUMERIC.findall(older)}
+    new_values = {re.sub(r"\s+", "", v) for v in SIGNIFICANT_NUMERIC.findall(newer)}
+    old_values = {re.sub(r"\s+", "", v) for v in SIGNIFICANT_NUMERIC.findall(older)}
     has_revised_amount = bool(new_values - old_values)
     if has_revised_amount and re.search(r"증액|감액|상향|하향|변경|수정|최종|확정", newer):
         return True
