@@ -607,12 +607,13 @@ def build_section(meta: dict, used_urls: set, target_limit: int = TOP_N_PER_SECT
     if target_limit <= 0:
         return []
     print(f"▶ [{meta['no']}] {meta['label']} 수집 중...")
-    candidates = [
+    eligible_candidates = [
         c for c in collect_candidates(meta["keywords"])
         if not repeated_last_days(c)
         and c["url"] not in used_urls
         and sector_matches(meta["key"], c["title"], c.get("description", ""))
-    ][:MAX_CANDIDATES]
+    ]
+    candidates = eligible_candidates[:MAX_CANDIDATES]
     print(f"  후보 {len(candidates)}건 → OpenAI 분류 요청 중...")
 
     scored = []
@@ -623,11 +624,8 @@ def build_section(meta: dict, used_urls: set, target_limit: int = TOP_N_PER_SECT
 
     # 기사 수 부족 시 후보군 확대. 적합한 실재 기사가 없으면 임의로 채우지 않음.
     if len(scored) == 0:
-        seen = {c["url"] for c in candidates}
-        extra = [c for c in collect_candidates(meta["keywords"])
-                 if not repeated_last_days(c)
-                 and c["url"] not in seen and c["url"] not in used_urls
-                 and sector_matches(meta["key"], c["title"], c.get("description", ""))][:12]
+        # Reuse the first discovery pass instead of refetching every keyword.
+        extra = eligible_candidates[MAX_CANDIDATES:MAX_CANDIDATES + 12]
         for start in range(0, len(extra), BATCH_SIZE):
             scored.extend(classify_batch(meta, extra[start:start + BATCH_SIZE]))
         scored.sort(key=lambda x: x["score"], reverse=True)
