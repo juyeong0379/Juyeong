@@ -1,17 +1,16 @@
 name: Daily News Briefing
 
 on:
-  # Early launch + retries target first publication before 07:30 KST; thereafter two-hour checks.
+  # By 07:30: previous-day noon to 07:30 stories, then checks at 09/11/13 KST.
   schedule:
     - cron: "0 21 * * *"   # 06:00 KST initial (early enough for generation)
     - cron: "30 21 * * *"  # 06:30 KST backup
     - cron: "55 21 * * *"  # 06:55 KST backup
-    - cron: "10 22 * * *"  # 07:10 KST last morning retry
+    - cron: "10 22 * * *"  # 07:10 KST backup
+    - cron: "25 22 * * *"  # 07:25 KST final morning retry
     - cron: "0 0 * * *"    # 09:00 KST
     - cron: "0 2 * * *"    # 11:00 KST
-    - cron: "0 4 * * *"    # 13:00 KST
-    - cron: "0 6 * * *"    # 15:00 KST
-    - cron: "0 8 * * *"    # 17:00 KST final
+    - cron: "0 4 * * *"    # 13:00 KST final new-article check
   workflow_dispatch: {}
   # Scoped, explicit emergency refresh; unrelated commits never spend API credits.
   push:
@@ -46,7 +45,7 @@ jobs:
           p = Path("docs/data.json")
           now = datetime.now(ZoneInfo("Asia/Seoul"))
           today = now.strftime("%Y-%m-%d")
-          slots = [(6,0),(9,0),(11,0),(13,0),(15,0),(17,0)]
+          slots = [(6,0),(9,0),(11,0),(13,0)]
           current_slot = max((h*60+m for h,m in slots if h*60+m <= now.hour*60+now.minute), default=0)
           try:
               payload = json.loads(p.read_text(encoding="utf-8"))
@@ -115,14 +114,15 @@ jobs:
           urls = [item.get("url", "") for item in stories]
           if not all(urls) or len(urls) != len(set(urls)):
               raise RuntimeError("원문 링크 누락 또는 중복 발견")
-          cutoff = (now - timedelta(days=1)).replace(hour=20,minute=0,second=0,microsecond=0)
+          cutoff = (now - timedelta(days=1)).replace(hour=12,minute=0,second=0,microsecond=0)
+          deadline = now.replace(hour=13,minute=0,second=0,microsecond=0)
           for section, group in data["categories"].items():
               if len(group) > 4:
                   raise RuntimeError(f"{section}: 섹터별 4건 초과")
               for item in group:
                   timestamp = str(item.get("pubDate", "")) + " " + str(item.get("pubTime", "")).replace(" KST", "")
                   published_at = datetime.strptime(timestamp, "%Y-%m-%d %H:%M").replace(tzinfo=ZoneInfo("Asia/Seoul"))
-                  if not cutoff <= published_at <= now:
+                  if not cutoff <= published_at <= min(now, deadline):
                       raise RuntimeError(f"{section}: 발행 시각이 오늘의 뉴스 수집 구간 밖에 있습니다: {timestamp}")
                   if len(item.get("summary", [])) != 3:
                       raise RuntimeError(f"{section}: 3줄 요약 미충족")
