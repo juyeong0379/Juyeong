@@ -667,11 +667,11 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
             headline = candidate.get("title", "")
             context = headline + " " + candidate.get("description", "")
             total = 0
-            if re.search(r"엔비디아|NVIDIA|젠슨\\s*황", headline, re.I):
+            if re.search(r"엔비디아|NVIDIA|젠슨\s*황", headline, re.I):
                 total += 6
-                if re.search(r"사임|퇴진|CEO|경영진|임시\\s*CEO", context, re.I):
+                if re.search(r"사임|퇴진|CEO|경영진|임시\s*CEO", context, re.I):
                     total += 9
-            if re.search(r"시장\\s*전체|금융시장|증시|반도체|GPU|데이터센터|공급망|수출규제|산업\\s*전반|시가총액", context, re.I):
+            if re.search(r"시장\s*전체|금융시장|증시|반도체|GPU|데이터센터|공급망|수출규제|산업\s*전반|시가총액", context, re.I):
                 total += 7
             if re.search(r"제도|규제|정책|국민성장펀드|인수금융|자금조달|투자위축|신용위험", headline):
                 total += 5
@@ -706,7 +706,7 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
                     if re.search(r"불륜|내연|사생활|스캔들", candidate["title"]):
                         if not re.search(
                             r"사임|퇴진|주가|시장|증시|경영진|반도체|"
-                            r"AI\\s*산업|GPU", context, re.I
+                            r"AI\s*산업|GPU", context, re.I
                         ):
                             continue
                 scored.append({
