@@ -190,7 +190,7 @@ function articleCard(item){
   return `<article class="story ${item.kind?'gov':''}">
     <h3>${categoryBadge}${escapeHTML(item.title)}${reportIndicator}</h3>
     <ul class="summary">${summaryLines}</ul>
-    <div class="meta"><span class="name">${escapeHTML(item.source)}</span><span class="dividerdot">│</span><span>${fmt(item.pubDate||item.date)} ${escapeHTML(item.pubTime||"")}</span>${item.editionLabel?'<span class="dividerdot">│</span><span>'+escapeHTML(item.editionLabel)+' 회차</span>':""}<span class="dividerdot">│</span><div class="links">${item.url?'<a target="_blank" rel="noopener noreferrer" href="'+escapeHTML(item.url)+'">원문 보기 ↗</a>':'<span class="no-link">시연용 · 원문 미연결</span>'}${hasPdf?'<a class="pdf" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(item.pdf)+'">PDF 다운로드 ↓</a>':''}</div>${excerptNote}</div>
+    <div class="meta"><span class="name">${escapeHTML(item.source)}</span><span class="dividerdot">│</span><span>${fmt(item.pubDate||item.date)} ${escapeHTML(item.pubTime||"")}</span><span class="dividerdot">│</span><div class="links">${item.url?'<a target="_blank" rel="noopener noreferrer" href="'+escapeHTML(item.url)+'">원문 보기 ↗</a>':'<span class="no-link">시연용 · 원문 미연결</span>'}${hasPdf?'<a class="pdf" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(item.pdf)+'">PDF 다운로드 ↓</a>':''}</div>${excerptNote}</div>
     ${item.insight&&item.insight.trim()?'<div class="insight"><span class="label">IB기획실 검토사항</span><p>'+strong(item.insight)+'</p></div>':'<div class="insight-empty" aria-hidden="true"></div>'}
   </article>`;
 }
@@ -212,7 +212,7 @@ function render(){
     .filter(a=>searchMode?matchesSearch(a):(a.date===selectedDate&&(activeCat==='all'||a.cat===activeCat)))
     .filter(a=>!mineOnly||matchesKeywords(a))
     .sort((a,b)=>b.date.localeCompare(a.date)||(CATEGORIES.findIndex(c=>c.key===a.cat)-CATEGORIES.findIndex(c=>c.key===b.cat))||a.id.localeCompare(b.id));
-  if(!searchMode && activeCat!=='all') list=list.slice(0,6);
+  if(!searchMode && activeCat!=='all') list=list.slice(0,3);
   renderOfficial();
   $('articleCount').textContent=`${list.length}건`;
   $('stories').innerHTML=list.length?list.map(articleCard).join(''):`<div class="empty"><strong>선택한 조건에 맞는 기사가 없습니다.</strong><br>${searchMode?'다른 키워드를 검색하거나 검색을 해제해 주세요.':mineOnly?'내 키워드 필터를 끄거나 키워드를 변경해 주세요.':'해당 날짜에 새로 확인된 주요 기사가 없습니다. 전일 기사는 중복 게시하지 않습니다.'}</div>`;
