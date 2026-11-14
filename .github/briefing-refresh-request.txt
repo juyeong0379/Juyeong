@@ -1,1 +1,1 @@
-Refresh request: 2026-11-15 Sunday briefing. Run daily including weekends, 1-4 stories per category, strict original publication window.
+Refresh Sunday 2026-11-15 briefing with morning rolling updates, requested after workflow revision.
