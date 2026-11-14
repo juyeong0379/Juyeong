@@ -100,6 +100,17 @@ class BriefingRulesTest(unittest.TestCase):
         self.assertTrue(briefing.is_personnel_only("B그룹 대표 선임"))
         self.assertFalse(briefing.is_personnel_only("증권업계 순이익 증가와 자본효율성 경쟁"))
 
+    def test_marketwide_metrics_and_personnel_sector_rules(self):
+        from sector_rules import classify_sector
+        self.assertEqual(
+            classify_sector("증권사 3분기 누적 순이익 비교, 업계 자본효율 경쟁"),
+            "peer",
+        )
+        self.assertEqual(
+            classify_sector("VIG, 그로쓰 전담팀 꾸린다"),
+            None,
+        )
+
     def test_repeated_last_days(self):
         old = briefing.RECENT_HEADLINES
         try:
