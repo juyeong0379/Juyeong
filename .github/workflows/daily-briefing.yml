@@ -78,7 +78,9 @@ jobs:
 
       - name: 파이썬 코드 사전 검증
         if: steps.current.outputs.skip != 'true'
-        run: python -m py_compile scripts/generate_briefing.py scripts/sector_rules.py scripts/news_quality.py
+        run: |
+          python -m py_compile scripts/generate_briefing.py scripts/sector_rules.py scripts/news_quality.py
+          python -m unittest discover -s scripts -p 'test_briefing_rules.py'
 
       - name: 브리핑 생성 (뉴스 수집 + OpenAI 분석)
         if: steps.current.outputs.skip != 'true'
