@@ -376,6 +376,7 @@ def classify_batch(meta: dict, batch: list) -> list:
         for i, c in enumerate(batch)
     )
 
+    scope_exception = ("- [기타 카테고리 예외] 글로벌 AI·반도체·미중 기술규제·거시경제·정책의 중요한 변화는 특정 IB 거래가 없어도 산업 공급망과 기업 투자계획에 광범위한 영향을 미치면 선정 가능. 확인되지 않은 CEO 사생활 의혹은 선정 금지.\n" if meta["key"] == "other" else "")
     prompt = f"""너는 증권사 IB그룹 기획실에서 데일리 뉴스 모니터링을 담당하는 애널리스트야.
 아래는 '{meta['label']}' 섹션의 후보 기사 목록이야. 각 기사를 판단해줘.
 
@@ -385,7 +386,7 @@ def classify_batch(meta: dict, batch: list) -> list:
 {meta['criteria']}
 
 공통 기준:
-- 검색어가 들어 있어도 기사의 '주제'가 위 기준과 다르면 반드시 is_relevant: false
+{scope_exception}- 검색어가 들어 있어도 기사의 '주제'가 위 기준과 다르면 반드시 is_relevant: false
 - 단신·속보·시황 중계·보도자료 받아쓰기·행사/인사 소식은 is_relevant: false
 - 원인·배경·영향·전망을 짚는 분석/기획/해설 기사를 선호
 - **가장 중요한 원칙: '어떤 회사가 어떤 거래를 성사시켰다'는 실적·동향보다 '이 사건이 IB 사업환경에 무엇을 바꾸는가'를 평가할 것.**
@@ -497,6 +498,16 @@ summary 작성 규칙 (개조식):
             )
             if not (factual and depth >= 65 and to_int(j.get("quality")) >= 68
                     and to_int(j.get("importance")) >= 65):
+                continue
+        elif meta["key"] == "other":
+            # Global system-wide industry/economic shifts need not be a named IB deal.
+            # Require concrete evidence in the article metadata, not market gossip.
+            evidence = re.sub(r"\\s+", "", str(j.get("impact_evidence") or "")).casefold()
+            reference = re.sub(r"\\s+", "", c["title"] + " " + c["description"]).casefold()
+            if (to_int(j.get("importance")) < 75
+                    or to_int(j.get("materiality")) < 65
+                    or not (7 <= len(evidence) <= 110 and evidence in reference)
+                    or re.search(r"불륜|내연|사생활|루머|음모론", c["title"])):
                 continue
         elif not is_material_news(j, c["title"], c["description"]):
             print(f"  [선정 제외] 시장 파급력/검증 근거 부족: {c['title'][:60]}")
@@ -614,7 +625,9 @@ def build_section(meta: dict, used_urls: set, target_limit: int = TOP_N_PER_SECT
         positive = [x for x in scored if x.get("hana_view") == "positive"]
         risk = [x for x in scored if x.get("hana_view") == "risk"]
         neutral = [x for x in scored if x.get("hana_view") == "neutral"]
-        top = deduplicate(positive[:3] + risk[:1] + neutral[:1])[:target_limit]
+        priority_mix = (positive[:2] + risk[:1] + positive[2:] + neutral
+                        if target_limit >= 3 else positive + risk + neutral)
+        top = deduplicate(priority_mix)[:target_limit]
         # Preserve the 2 positive + 1 challenge target when evidence exists.
         # Include only objectively evaluated neutral strategic developments if
         # the model has not produced enough positive/challenge candidates.
