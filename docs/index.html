@@ -141,7 +141,8 @@ const CATEGORIES=[
   {key:'peer',name:'경쟁사',desc:'증권사 · 은행 · 경쟁사 동향'},
   {key:'sto',name:'STO',desc:'토큰증권 · 디지털자산 제도'},
   {key:'productive',name:'생산적금융',desc:'모험자본 · 정책금융 · 성장지원'},
-  {key:'growthfund',name:'국민성장펀드',desc:'국민성장펀드 · 정책·출자·투자 집행'}
+  {key:'growthfund',name:'국민성장펀드',desc:'국민성장펀드 · 정책·출자·투자 집행'},
+  {key:'other',name:'기타',desc:'글로벌 산업 · 경제 · 정책 주요 이슈'}
 ];
 
 let NEWS = []; // 실제 뉴스는 docs/data.json 및 docs/archive 에서 읽음
@@ -189,7 +190,7 @@ function articleCard(item){
   return `<article class="story ${item.kind?'gov':''}">
     <h3>${categoryBadge}${escapeHTML(item.title)}${reportIndicator}</h3>
     <ul class="summary">${summaryLines}</ul>
-    <div class="meta"><span class="name">${escapeHTML(item.source)}</span><span class="dividerdot">│</span><span>${fmt(item.date)}</span><span class="dividerdot">│</span><div class="links">${item.url?'<a target="_blank" rel="noopener noreferrer" href="'+escapeHTML(item.url)+'">원문 보기 ↗</a>':'<span class="no-link">시연용 · 원문 미연결</span>'}${hasPdf?'<a class="pdf" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(item.pdf)+'">PDF 다운로드 ↓</a>':''}</div>${excerptNote}</div>
+    <div class="meta"><span class="name">${escapeHTML(item.source)}</span><span class="dividerdot">│</span><span>${fmt(item.pubDate||item.date)} ${escapeHTML(item.pubTime||"")}</span><span class="dividerdot">│</span><div class="links">${item.url?'<a target="_blank" rel="noopener noreferrer" href="'+escapeHTML(item.url)+'">원문 보기 ↗</a>':'<span class="no-link">시연용 · 원문 미연결</span>'}${hasPdf?'<a class="pdf" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(item.pdf)+'">PDF 다운로드 ↓</a>':''}</div>${excerptNote}</div>
     ${item.insight&&item.insight.trim()?'<div class="insight"><span class="label">IB기획실 검토사항</span><p>'+strong(item.insight)+'</p></div>':'<div class="insight-empty" aria-hidden="true"></div>'}
   </article>`;
 }
