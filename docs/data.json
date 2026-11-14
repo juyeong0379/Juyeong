@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-11-13 08:15 KST",
-  "reports": [],
+  "generated_at": "2026-11-14 09:59 KST",
+  "reports": [
+    {
+      "id": "report-1",
+      "title": "2026년 10월 금융시장 동향",
+      "source": "한국은행",
+      "date": "2026-11-11",
+      "url": "https://www.bok.or.kr/portal/bbs/P0002017/view.do?menuNo=200365&nttId=11066469",
+      "type": "금융시장 보고서",
+      "related_article_urls": [
+        "https://www.thebell.co.kr/front/newsview.asp?code=0102&key=202611121035469960101886",
+        "https://www.thebell.co.kr/front/newsview.asp?code=0401&key=202611121833216960102658",
+        "https://www.yna.co.kr/view/AKR20261112045300008"
+      ]
+    },
+    {
+      "id": "report-2",
+      "title": "AI 산업 자금조달의 주요 특징과 리스크 평가",
+      "source": "한국은행",
+      "date": "2026-10-27",
+      "url": "https://www.bok.or.kr/portal/bbs/B0000565/view.do?menuNo=201757&nttId=11065947",
+      "type": "국제경제이슈",
+      "related_article_urls": [
+        "https://www.mt.co.kr/future/2026/11/12/2026111119532536700",
+        "https://www.newsis.com/view/NISX20261112_0003865865",
+        "https://www.thebell.co.kr/front/newsview.asp?code=15&key=202611121318353080103635"
+      ]
+    }
+  ],
   "sections": [
     {
       "key": "ecm",
@@ -77,18 +104,33 @@
     "ecm": [
       {
         "top": true,
-        "headline": "IPO 눈치보기 장세, SFC 수요예측 '분수령'",
-        "source": "더벨",
-        "pubDate": "2026-11-12",
+        "headline": "\"자금줄 묶이고 M&A도 빨간불\"…'중복상장 빗장'에 가로막힌 기업들",
+        "source": "뉴시스",
+        "pubDate": "2026-11-14",
         "summary": [
-          "기관투자자의 IPO 수요예측 참여가 줄며 **상장 일정·공모가 조정** 우려 확대",
-          "공모 규모가 큰 **SFC 수요예측 결과**가 냉각된 IPO 시장의 방향을 가늠할 변수",
-          "주관사들은 기관 수요 확인과 발행사 일정 조율 등 **IPO 주관 리스크 관리** 필요"
+          "금융당국의 중복상장 규제 강화로 인해 기업들의 자금조달과 M&A 활동에 제약 발생",
+          "중복상장 빗장 강화 배경은 금융시장 변동성 확대와 감독원장의 규제 강화 기조에서 기인",
+          "규제 강화가 기업들의 IPO 중단과 금융시장 자금 흐름을 위축시키며 IB의 발행과 회수 전략에 영향"
         ],
-        "insight": "수요예측 부진 시 공모구조·상장 일정 재조정 사례 점검",
+        "summary_mode": "ai_summary",
+        "insight": "",
         "reporter": "",
-        "url": "https://www.thebell.co.kr/front/newsview.asp?code=0405&key=202611121456559240102589",
-        "summary_mode": "editor_verified"
+        "url": "https://www.newsis.com/view/NISX20261112_0003865814"
+      },
+      {
+        "top": false,
+        "headline": "[Invest]장기투자 부담에 기관도 시큰둥...코너스톤 도입 앞두고 실효성...",
+        "source": "인베스트조선",
+        "pubDate": "2026-11-13",
+        "summary": [
+          "IPO 과정에 장기 투자 약속 기관에 공모주 배정하는 코너스톤 제도 실효성 의문 증가",
+          "기관들의 최장 10개월 보호예수 부담이 장기투자 활성화 장벽으로 작용하는 점이 배경",
+          "코너스톤 도입이 FI 투자금 회수 및 주주가치 보호 방안으로서 IB 금융 실무에 변화 요구"
+        ],
+        "summary_mode": "ai_summary",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/12/2026111280167.html"
       }
     ],
     "corp": [
@@ -105,12 +147,46 @@
         "insight": "스와프 후 실질 조달비용 기준으로 외화채 발행통화 선택 자문 검토",
         "reporter": "",
         "url": "https://www.thebell.co.kr/front/newsview.asp?code=0401&key=202611121833216960102658",
-        "summary_mode": "editor_verified"
+        "summary_mode": "editor_verified",
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
+      },
+      {
+        "headline": "공정위 과징금·외인 선물 매도 겹친 채권시장…약세로 돌아설까",
+        "source": "연합뉴스",
+        "pubDate": "2026-11-12",
+        "reporter": "강수지 기자",
+        "url": "https://www.yna.co.kr/view/AKR20261112045300008",
+        "summary": [
+          "**국고채 입찰 담합 과징금 약 1.6조원**과 외국인 국채선물 순매도가 겹치며 채권시장 불안 확대",
+          "미국 금리 상승 영향 속 국고채 3년·10년 금리는 전일 각각 **9.6bp·10.0bp 상승**",
+          "전문딜러 입찰 참여가 위축될 경우 **국고채 발행금리와 기업 자금조달 비용 상승**으로 전이될 우려"
+        ],
+        "insight": "국고채 금리 변동과 전문딜러 입찰 동향을 반영해 회사채 발행금리·차환 일정·DCM 고객 조달 전략 점검",
+        "summary_mode": "editor_verified",
+        "top": false,
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
       }
     ],
     "ma": [
       {
         "top": true,
+        "headline": "진화하는 대기업–글로벌 PEF 동맹…'재무해결사'서 '성장 파트너'로",
+        "source": "한국경제",
+        "pubDate": "2026-11-13",
+        "summary": [
+          "대기업과 글로벌 PEF 간 협력 관계가 재무해결사에서 성장 파트너로 진화하는 변화 발생",
+          "삼성SDS가 6조원대 현금성 자산에도 외부 자금을 조달해 KKR의 글로벌 네트워크와 M&A 역량 활용",
+          "대기업과 글로벌 PEF 동맹은 IB 사업에서 성장투자와 금융구조 설계 측면에 새로운 파트너십 영향 미침"
+        ],
+        "summary_mode": "ai_summary",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.hankyung.com/article/202611122365r"
+      },
+      {
+        "top": false,
         "headline": "교보생명, 악사손보 지분 51% 인수 추진",
         "source": "한국경제",
         "pubDate": "2026-11-12",
@@ -122,22 +198,9 @@
         "insight": "금융회사 M&A에서 구주·신주 인수 구조의 자본효율과 리스크 차이 비교",
         "reporter": "",
         "url": "https://www.hankyung.com/article/2026111235531",
-        "summary_mode": "editor_verified"
-      },
-      {
-        "top": false,
-        "headline": "MBK, 모던하우스 3100억 인수금융 리파이낸싱 완료",
-        "source": "더벨",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "모던하우스 운영사 **3,100억원 인수금융 만기를 17개월 연장**하기로 대주단 합의",
-          "기존 대주단 전원 동의를 확보해 **신규 조달 대신 조건 재조정**으로 만기에 대응",
-          "금리·담보·상환 조건 협상의 중요성이 커지는 **레버리지 금융 차환** 사례"
-        ],
-        "insight": "인수금융 만기연장·신규 차환 구조별 금융비용과 대주단 협상 조건 검토",
-        "reporter": "",
-        "url": "https://www.thebell.co.kr/front/newsview.asp?code=0408&key=202611121135575760104913",
-        "summary_mode": "editor_verified"
+        "summary_mode": "editor_verified",
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
       }
     ],
     "re": [
@@ -154,12 +217,46 @@
         "insight": "PF 보증 승인 시점·보증한도 변화에 따른 정비사업 금융약정 일정 검토",
         "reporter": "",
         "url": "https://dokyungch.com/article/1065576417022492",
-        "summary_mode": "editor_verified"
+        "summary_mode": "editor_verified",
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
+      },
+      {
+        "headline": "금리 인상에도 서울 오피스에 6.4조원…큰손들이 찍은 핵심 자산은",
+        "source": "이데일리",
+        "pubDate": "2026-11-11",
+        "reporter": "김성수 기자",
+        "url": "https://marketin.edaily.co.kr/News/Read?newsId=05218486645644736",
+        "summary": [
+          "기준금리 인상기에도 3분기 서울 A급 오피스 **거래금액 6조4,077억원**으로 국내 기관투자자의 핵심 자산 선호 확인",
+          "A급 오피스 평균 공실률은 **5.8%**, 실질임대료는 전년 대비 7.6% 상승하며 우량 지역의 임대수익 방어",
+          "도심 신규 공급과 권역별 수요 격차가 확대돼 **자산 입지·임대차 안정성에 따른 투자금융 조건 차별화** 가능성"
+        ],
+        "insight": "오피스 투자·대출 심사 시 권역별 공급량·실질임대료·공실 위험을 구분해 LTV 및 수익성 가정 점검",
+        "summary_mode": "editor_verified",
+        "top": false,
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
       }
     ],
     "infra": [
       {
         "top": true,
+        "headline": "\"계획만 쏟아진다\"…美 AI 데이터센터, 전력난·인허가 발목 우려감",
+        "source": "뉴시스",
+        "pubDate": "2026-11-13",
+        "summary": [
+          "미국 AI 데이터센터의 신규 투자 계획 대비 전력난과 인허가 문제로 프로젝트 실행 리스크 증대",
+          "계획 대비 실제 전력 확보 및 인허가, 자금 조달의 선행 필요성이 강조되며 투자 착공 간극 존재",
+          "데이터센터 인프라 자금조달 구조와 사업화 리스크가 실제 실행 가능성에 따라 변동될 수 있어 IB 전략에 영향"
+        ],
+        "summary_mode": "ai_summary",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261112_0003865865"
+      },
+      {
+        "top": false,
         "headline": "KT클라우드, 조단위 신규 투자유치 시동…UBS 주관 유력",
         "source": "더벨",
         "pubDate": "2026-11-12",
@@ -171,22 +268,9 @@
         "insight": "클라우드 인프라 투자의 신주·구주 병행 금융구조와 FI 회수 수요 점검",
         "reporter": "",
         "url": "https://www.thebell.co.kr/front/newsview.asp?code=15&key=202611121318353080103635",
-        "summary_mode": "editor_verified"
-      },
-      {
-        "top": false,
-        "headline": "JKL인베, 무공해차 펀드 윤곽…블라인드 결성도 시동",
-        "source": "더벨",
-        "pubDate": "2026-11-12",
-        "summary": [
-          "JKL이 한국성장금융을 앵커 투자자로 하는 **무공해차 인프라 펀드** 결성 마무리",
-          "**400억원 이상 규모**로 펀드를 만들어 내년 1분기까지 투자 집행 추진",
-          "정책성 자금과 민간 운용사의 결합을 통한 **친환경 인프라 투자 모델** 가시화"
-        ],
-        "insight": "친환경 인프라에서 정책 LP 출자와 민간 프로젝트금융 연계 가능성 검토",
-        "reporter": "",
-        "url": "https://www.thebell.co.kr/front/newsview.asp?code=0104&key=202611110920088200101881",
-        "summary_mode": "editor_verified"
+        "summary_mode": "editor_verified",
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
       }
     ],
     "hana": [
@@ -203,7 +287,26 @@
         "insight": "",
         "reporter": "",
         "url": "https://www.mt.co.kr/finance/2026/11/12/2026111209134087964",
-        "summary_mode": "editor_verified"
+        "summary_mode": "editor_verified",
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
+      },
+      {
+        "headline": "[더벨][PF Radar] 신촌 신통기획 사업, 브릿지론 2510억 재구조화",
+        "source": "더벨",
+        "pubDate": "2026-11-11",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611021346525840103063",
+        "summary": [
+          "신촌 4-1·4-12지구 정비사업의 **브릿지론 2,510억원 재구조화**를 추진하며 장기 지연 사업 정상화 모색",
+          "**하나증권·메리츠증권·NH투자증권 공동 금융주관**, 캠코 PF 정상화펀드 660억원 참여로 차환 구조 재편",
+          "반복된 만기연장·이자유예 이후 **2027년 9월 본PF 전환**을 목표로 금융구조 정상화 추진"
+        ],
+        "insight": "ONE-IB 차원에서 정상화펀드·민간 공동주관을 활용한 PF 재구조화 사례의 수익성·위험분담 검토",
+        "summary_mode": "editor_verified",
+        "top": false,
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
       }
     ],
     "peer": [
@@ -220,7 +323,9 @@
         "insight": "규제 제재·충당금이 경쟁사 수익성과 건전성에 미치는 효과 점검",
         "reporter": "",
         "url": "https://www.thebell.co.kr/front/newsview.asp?code=0102&key=202611121035469960101886",
-        "summary_mode": "editor_verified"
+        "summary_mode": "editor_verified",
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
       },
       {
         "top": false,
@@ -235,7 +340,9 @@
         "insight": "증권사별 수익구조·자기자본 효율·손익 변동성 비교",
         "reporter": "",
         "url": "https://www.4th.kr/news/articleView.html?idxno=2120823",
-        "summary_mode": "editor_verified"
+        "summary_mode": "editor_verified",
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
       }
     ],
     "sto": [
@@ -252,7 +359,26 @@
         "insight": "디지털자산 발행·수탁·결제 분야별 진입조건과 위험분담 구조 검토",
         "reporter": "",
         "url": "https://www.thebell.co.kr/front/newsview.asp?code=0702&key=202611121819006880105118",
-        "summary_mode": "editor_verified"
+        "summary_mode": "editor_verified",
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
+      },
+      {
+        "headline": "토큰증권 시행 3개월 앞으로…“결제는 어떻게? 준비 미진”",
+        "source": "연합뉴스",
+        "pubDate": "2026-11-12",
+        "reporter": "곽윤아 기자",
+        "url": "https://www.yna.co.kr/amp/view/AKR20261112117000008",
+        "summary": [
+          "**2027년 2월 4일 토큰증권 제도 시행**을 앞두고 업계·학계가 결제자산 설계와 단계적 실증 미비를 지적",
+          "토큰 이전·대금 지급·상환·은행 간 결제의 **법적 효력과 실패 책임**, 디지털자산기본법과의 정합성 확보 필요",
+          "규제 틀이 마련돼도 **현금 결제·수탁·거래 후처리 인프라**가 갖춰져야 STO 발행과 유통의 안정적 사업화 가능"
+        ],
+        "insight": "STO 발행·유통 사업 검토 시 결제자산 적격성·수탁주체·거래 실패 책임·규제 정합성을 선결 요건으로 설정",
+        "summary_mode": "editor_verified",
+        "top": false,
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
       }
     ],
     "productive": [
@@ -269,7 +395,9 @@
         "insight": "정책 변화에 따른 초기투자·프리IPO·후속투자 시장의 금융 수요 점검",
         "reporter": "",
         "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1731470",
-        "summary_mode": "editor_verified"
+        "summary_mode": "editor_verified",
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
       },
       {
         "top": false,
@@ -284,7 +412,9 @@
         "insight": "AI 정책지원 수혜 기업의 후속 투자유치·프리IPO·금융주선 기회 검토",
         "reporter": "",
         "url": "https://www.mt.co.kr/future/2026/11/12/2026111119532536700",
-        "summary_mode": "editor_verified"
+        "summary_mode": "editor_verified",
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
       }
     ],
     "growthfund": [
@@ -301,10 +431,27 @@
         "insight": "승인액·집행액·민간자금 참여 실적을 구분한 국민성장펀드 성과 분석",
         "reporter": "",
         "url": "https://www.mk.co.kr/news/economy/12206428",
-        "summary_mode": "editor_verified"
+        "summary_mode": "editor_verified",
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
+      },
+      {
+        "headline": "정부 1호 타이틀 신안우이해상풍력 '중단 위기'",
+        "source": "더벨",
+        "pubDate": "2026-11-11",
+        "reporter": "안상민 기자",
+        "url": "https://www.thebell.co.kr/front/newsview.asp?code=0301&key=202611111639505680102993",
+        "summary": [
+          "**국민성장펀드 1호 사업인 신안우이해상풍력**이 공사대금 미지급 논란으로 공사 중단 위험에 직면",
+          "해저지반 조사 미흡에 따른 공사 지연 이후 **한화오션과 하도급 업체 간 책임·대금 지급 분쟁** 발생",
+          "정책금융 지원 사업도 **EPC 계약·공정 지연·대금 지급 위험**을 통제하지 못하면 사업 추진과 PF 안정성에 부담"
+        ],
+        "insight": "정책펀드 연계 인프라 PF의 EPC 책임분담·공사비 지급·공정관리 위험을 사업 초기부터 점검",
+        "summary_mode": "editor_verified",
+        "top": false,
+        "carried_forward": true,
+        "briefing_asof": "2026-11-14"
       }
     ]
-  },
-  "selection_policy": "Nov 13 KST IB briefing, Nov 12 newly published articles; no repeated source URLs from Nov 12 archive",
-  "curation_note": "11월 13일 아침 기준 핵심 IB 이슈. 최근 중요 기사는 원래 발행일을 표기해 이어서 제공합니다."
+  }
 }
