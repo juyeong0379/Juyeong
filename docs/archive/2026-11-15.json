@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-11-15 07:01 KST",
+  "reports": [],
+  "sections": [
+    {
+      "key": "ecm",
+      "no": "01",
+      "emoji": "📈",
+      "label": "ECM",
+      "desc": "IPO·유상증자·메자닌·블록딜"
+    },
+    {
+      "key": "corp",
+      "no": "02",
+      "emoji": "🏦",
+      "label": "기업금융",
+      "desc": "DCM·회사채·기업자금 조달"
+    },
+    {
+      "key": "ma",
+      "no": "03",
+      "emoji": "🤝",
+      "label": "M&A·인수금융",
+      "desc": "M&A·경영권 매각·PEF·인수금융"
+    },
+    {
+      "key": "re",
+      "no": "04",
+      "emoji": "🏢",
+      "label": "부동산",
+      "desc": "부동산PF·리츠·상업용부동산"
+    },
+    {
+      "key": "infra",
+      "no": "05",
+      "emoji": "⚡",
+      "label": "인프라",
+      "desc": "데이터센터·전력·재생에너지·민자사업"
+    },
+    {
+      "key": "hana",
+      "no": "06",
+      "emoji": "🏛️",
+      "label": "하나금융그룹",
+      "desc": "하나금융지주·하나은행·하나증권 IB"
+    },
+    {
+      "key": "peer",
+      "no": "07",
+      "emoji": "🏙️",
+      "label": "경쟁사",
+      "desc": "국내외 금융사 IB 전략·주선 경쟁"
+    },
+    {
+      "key": "sto",
+      "no": "08",
+      "emoji": "🔗",
+      "label": "STO",
+      "desc": "토큰증권·디지털증권 제도 및 인프라"
+    },
+    {
+      "key": "productive",
+      "no": "09",
+      "emoji": "🌱",
+      "label": "생산적금융",
+      "desc": "모험자본·성장산업·생산적금융 정책"
+    },
+    {
+      "key": "growthfund",
+      "no": "10",
+      "emoji": "🏦",
+      "label": "국민성장펀드",
+      "desc": "국민성장펀드 정책·조성·투자·집행·운용·출자"
+    },
+    {
+      "key": "other",
+      "no": "11",
+      "emoji": "🌍",
+      "label": "기타",
+      "desc": "글로벌 경제·산업·정책·AI 및 지정학적 핵심 이슈"
+    }
+  ],
+  "categories": {
+    "ecm": [],
+    "corp": [],
+    "ma": [
+      {
+        "top": true,
+        "headline": "의무공개매수제 합의안 본회의 문턱 앞 48일째, 이재명의 'M&A 활성화'에...",
+        "source": "비즈니스포스트",
+        "pubDate": "2026-11-15",
+        "pubTime": "06:02 KST",
+        "summary": [
+          "의무공개매수제 변경과 관련한 합의안 본회의 상정이 48일째 지연되는 중요한 입법 이슈 발생",
+          "이재명 대통령의 M&A 활성화 주문과 여야의 수정안 마련 논의가 기존 합의안 처리 여부를 둘러싸고 진행 중",
+          "의무공개매수제 조정은 기업 인수구조 및 거래 실행 환경에 변화를 주어 IB 사업 전반의 주관 경쟁과 거래 위험 관리에 영향을 미침"
+        ],
+        "summary_mode": "ai_summary",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.businesspost.co.kr/BP?command=article_view&num=451960"
+      }
+    ],
+    "re": [],
+    "infra": [],
+    "hana": [],
+    "peer": [],
+    "sto": [],
+    "productive": [],
+    "growthfund": [],
+    "other": []
+  }
+}
