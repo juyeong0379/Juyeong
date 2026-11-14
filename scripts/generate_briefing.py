@@ -752,7 +752,7 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
 PERSONNEL_ONLY = re.compile(
     r"임원\s*(?:인사|선임|교체|영입)|대표\s*(?:취임|선임|교체|인사)|"
     r"사장\s*(?:교체|선임|취임)|CEO\s*(?:취임|영입|선임|인사)|"
-    r"인사\s*발령|조직\s*내\s*이동|본부장\s*(?:선임|교체)",
+    r"인사\s*발령|조직\s*내\s*이동|본부장\s*(?:선임|교체)|전담팀\s*꾸린다|본부장\s*인사",
     re.I,
 )
 
@@ -815,6 +815,8 @@ def main():
                     "url": article.get("url", "")}):
                 continue
             if article["url"] in used_urls:
+                continue
+            if any(repeated_without_update(article, p) for p in prior_articles):
                 continue
             article = dict(article)
             article["edition"] = article.get("edition") or edition_for_published(
