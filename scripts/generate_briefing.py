@@ -45,9 +45,9 @@ KST = timezone(timedelta(hours=9))
 MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
 BATCH_SIZE = 8
 
-TOP_N_PER_SECTION = PER_EDITION_LIMIT  # 한 회차 카테고리별 최대 두 건
+TOP_N_PER_SECTION = PER_EDITION_LIMIT  # 오전 07:30 일괄 브리핑 카테고리별 최대 3건
 NAVER_PER_KEYWORD = 30     # 키워드당 네이버에서 가져올 기사 수 (언론사 필터 전)
-MAX_CANDIDATES = 20        # 회차당 섹션별 LLM 후보 상한
+MAX_CANDIDATES = 30        # 최근 24시간의 심층 후보 검토 (선정 점수 기준 유지)
 MIN_DEPTH = 67
 MIN_QUALITY = 68
 MIN_IMPORTANCE = 70
@@ -404,7 +404,7 @@ def classify_batch(meta: dict, batch: list) -> list:
 - 시장 전체 또는 업계 복수 기업에 영향을 주는 현상을 우대하되, 영향이 언급되지 않은 단일 기업 실적 기사는 제외.
 - 한국경제·한국금융신문·법률신문·자본시장 전문지 등 매체 이름만으로 우대하지 않고, 숫자·거래구조·쟁점·실무 영향을 기준으로 품질 판단
 - 법률신문의 법규 해설은 IPO·인수금융·부동산PF·STO 등에 직접 관련되는 경우만 선정
-- **회차별 한국시간 발행 기준 엄수**: ① 07:30판은 전일 15:00~금일 07:30 ② 10:00판은 금일 07:30 초과~10:00 ③ 15:00판은 금일 10:00 초과~15:00. 각 회차는 카테고리별 최대 2건, 이미 실린 기사와 새로운 사실 없는 동일 이슈 반복 금지. 공식 결정·승인·금액 변경·계약 체결 등 실질적 신규 사실이 있는 후속 보도만 예외. 주말·월요일에도 동일 적용.
+- **매일 한국시간 07:30 일괄 브리핑**: 전일 오전 07:30을 초과한 시각부터 금일 오전 07:30까지 최초 발행된 기사만 검토. 각 카테고리에서 시장 영향도가 높은 2~3건을 목표로 선정하되, 해당 기간에 가치 있는 기사가 부족하면 억지로 채우지 않음. 기존 게시 기사와 같은 내용의 반복 보도는 금지. 공식 결정·승인·금액 변경·계약 체결 등 실질적 신규 사실이 있는 후속 보도만 예외. 주말·월요일에도 동일.
 - 직전 브리핑에 게재된 동일 기업·사건을 그대로 반복하는 기사는 제외. 다만 신규 공식 결정·금액·거래 단계·확인된 영향 등 구체적 신규 사실이 있다면 후속 보도로 선정 가능. 단순 재해석이나 제목만 바꾼 보도는 제외.
 - 1면이나 검색어 순위 등 화제성은 근거가 있는 경우만 반영하고, 확인되지 않은 순위·화제성을 지어내지 말 것.
 - 단순 보도자료를 옮겨 적은 제목·설명에는 낮은 depth/quality를 부여. 데이터·거래구조·법규 쟁점과 왜 중요한지가 확인되는 기사 위주로 선정.
@@ -644,10 +644,10 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
     scored.sort(key=lambda x: x["score"], reverse=True)
     scored=deduplicate(scored)
 
-    # 기사 수 부족 시 후보군 확대. 적합한 실재 기사가 없으면 임의로 채우지 않음.
-    if len(scored) == 0:
+    # 2~3건 목표에 못 미치면 더 많은 후보를 검토하되 품질 기준은 그대로 유지.
+    if len(scored) < target_limit:
         # Reuse the first discovery pass instead of refetching every keyword.
-        extra = eligible_candidates[MAX_CANDIDATES:MAX_CANDIDATES + 12]
+        extra = eligible_candidates[MAX_CANDIDATES:MAX_CANDIDATES + 24]
         for start in range(0, len(extra), BATCH_SIZE):
             scored.extend(classify_batch(meta, extra[start:start + BATCH_SIZE]))
         scored.sort(key=lambda x: x["score"], reverse=True)
@@ -827,8 +827,8 @@ def main():
             prior_articles.append(article)
         data[key] = retained[:MAX_STORIES_PER_CATEGORY]
 
-    # Add up to TWO newly published articles per category and edition.
-    # The three slots are cumulative but their publication windows never overlap.
+    # Daily morning briefing: select at most 3 current stories per category.
+    # Same-day manual retries may add verified stories, never carry old news.
     for key, meta in SECTIONS.items():
         already = sum(item.get("edition") == edition for item in data[key])
         remaining = max(0, min(PER_EDITION_LIMIT - already,
@@ -883,7 +883,7 @@ def main():
 
     out_path = os.path.join(os.path.dirname(__file__), "..", "docs", "data.json")
     publishable=sum(len(v) for v in data.values())
-    # Two per category and edition, maximum six across the day; no old backfill.
+    # Target 2-3 genuinely important stories per category; no stale backfill.
     if publishable == 0:
         print("  [공지] 대상 시간대에 검증된 중요 기사가 없습니다. 빈 오늘자 브리핑을 정상 게시합니다.")
     with open(out_path, "w", encoding="utf-8") as f:
