@@ -146,6 +146,7 @@ const CATEGORIES=[
 ];
 
 let NEWS = []; // 실제 뉴스는 docs/data.json 및 docs/archive 에서 읽음
+let IPO_WATCH = []; // 공모 일정 참고: 새로운 기사와 명확히 구분
 
 const $=id=>document.getElementById(id);
 const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -215,7 +216,17 @@ function render(){
   if(!searchMode && activeCat!=='all') list=list.slice(0,3);
   renderOfficial();
   $('articleCount').textContent=`${list.length}건`;
-  $('stories').innerHTML=list.length?list.map(articleCard).join(''):`<div class="empty"><strong>선택한 조건에 맞는 기사가 없습니다.</strong><br>${searchMode?'다른 키워드를 검색하거나 검색을 해제해 주세요.':mineOnly?'내 키워드 필터를 끄거나 키워드를 변경해 주세요.':'해당 날짜에 새로 확인된 주요 기사가 없습니다. 전일 기사는 중복 게시하지 않습니다.'}</div>`;
+  const ipoSchedule = (!searchMode && !mineOnly && activeCat === "ecm")
+    ? IPO_WATCH.filter(w => w.category === "ecm" && selectedDate >= w.valid_from && selectedDate <= w.valid_until)
+    : [];
+  const ipoHTML = ipoSchedule.map(w => 
+    '<article class="story" style="border-left:3px solid var(--accent, #8a9a9a)">' +
+    '<div class="source-note">📅 IPO 진행 일정 참고 · 최근 24시간 뉴스 건수에는 포함되지 않음</div>' +
+    '<h3>'+escapeHTML(w.issuer)+' IPO 진행 현황</h3>' +
+    '<ul class="summary"><li>'+escapeHTML(w.detail)+'</li><li>'+escapeHTML(w.next_event)+'</li><li>'+escapeHTML(w.source_note||"공식 IR 기준, 일정 변경 가능")+'</li></ul>' +
+    '<div class="meta"><span class="name">'+escapeHTML(w.source)+'</span><span class="dividerdot">│</span><a target="_blank" rel="noopener noreferrer" href="'+escapeHTML(w.url)+'">공식 IR 확인 ↗</a></div></article>'
+  ).join('');
+  $('stories').innerHTML=ipoHTML+(list.length?list.map(articleCard).join(''):`<div class="empty"><strong>선택한 조건에 맞는 기사가 없습니다.</strong><br>${searchMode?'다른 키워드를 검색하거나 검색을 해제해 주세요.':mineOnly?'내 키워드 필터를 끄거나 키워드를 변경해 주세요.':'해당 날짜에 새로 확인된 주요 기사가 없습니다. 전일 기사는 중복 게시하지 않습니다.'}</div>`);
 }
 function renderOfficial(){
   const selected=REPORTS.filter(x=>x.briefDate===selectedDate).slice(0,2);
