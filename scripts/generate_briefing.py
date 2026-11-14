@@ -41,7 +41,7 @@ KST = timezone(timedelta(hours=9))
 MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
 BATCH_SIZE = 8
 
-TOP_N_PER_SECTION = 3      # 섹션별로 보여줄 기사 수
+TOP_N_PER_SECTION = 4      # 섹션별로 보여줄 기사 수
 NAVER_PER_KEYWORD = 30     # 키워드당 네이버에서 가져올 기사 수 (언론사 필터 전)
 MAX_CANDIDATES = 30        # 섹션별로 OpenAI에게 보낼 후보 최대 수
 MIN_DEPTH = 67
@@ -610,12 +610,13 @@ def build_section(meta: dict, used_urls: set) -> list:
         # supported risk/challenge. Never fill a missing side with old articles.
         positive = [x for x in scored if x.get("hana_view") == "positive"]
         risk = [x for x in scored if x.get("hana_view") == "risk"]
-        top = deduplicate(positive[:2] + risk[:1])
+        neutral = [x for x in scored if x.get("hana_view") == "neutral"]
+        top = deduplicate(positive[:3] + risk[:1] + neutral[:1])[:TOP_N_PER_SECTION]
         # Preserve the 2 positive + 1 challenge target when evidence exists.
         # Include only objectively evaluated neutral strategic developments if
         # the model has not produced enough positive/challenge candidates.
         if len(top) < 1:
-            top = scored[:1]
+            top = scored[:TOP_N_PER_SECTION]
         # Never invent additional news solely to fill a quota.
     else:
         top = scored[:TOP_N_PER_SECTION]
