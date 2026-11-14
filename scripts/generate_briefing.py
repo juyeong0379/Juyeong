@@ -645,6 +645,33 @@ def build_section(meta: dict, used_urls: set, target_limit: int = TOP_N_PER_SECT
         scored.sort(key=lambda x: x["score"], reverse=True)
     scored=deduplicate(scored)
 
+    # Morning first-edition rescue: a genuinely new, classified article whose
+    # full body is accessible can supply three source-extracted factual points.
+    # Never promote a search snippet, older article or a fabricated summary.
+    if not scored and datetime.now(KST).hour < 12:
+        from concurrent.futures import ThreadPoolExecutor
+        rescue = eligible_candidates[:4]
+        if rescue:
+            with ThreadPoolExecutor(max_workers=4) as pool:
+                summaries = list(pool.map(
+                    lambda c: digest(c["title"], c["url"], c.get("description", "")),
+                    rescue,
+                ))
+            for c, facts in zip(rescue, summaries):
+                if not facts or not validate_digest(c["title"], facts):
+                    continue
+                scored = [{
+                    **c,
+                    "summary": facts,
+                    "summary_mode": "source_digest",
+                    "insight": "",
+                    "reporter": "",
+                    "score": 60,
+                    "hana_view": "neutral",
+                }]
+                print(f"  [아침 근거확인 기사] {c['source']} | {c['title'][:55]}")
+                break
+
     if meta["key"] == "hana":
         # Group briefing editorial mix: 2 grounded positives + 1 objectively
         # supported risk/challenge. Never fill a missing side with old articles.
