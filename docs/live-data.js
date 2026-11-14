@@ -50,6 +50,8 @@ function normalizeBriefing(payload) {
         summary_mode: String(item.summary_mode || "ai_summary"),
         pubDate: String(item.pubDate || date),
         pubTime: String(item.pubTime || ""),
+        edition: String(item.edition || ""),
+        editionLabel: String(item.editionLabel || ""),
         kind: String(item.kind || ""),
         pdf: String(item.pdf || "")
       });
