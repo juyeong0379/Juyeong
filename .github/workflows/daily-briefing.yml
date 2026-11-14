@@ -53,10 +53,15 @@ jobs:
               stamp = str(payload.get("generated_at", "")).replace(" KST","")
               published_at = datetime.strptime(stamp, "%Y-%m-%d %H:%M")
               published = published_at.date().isoformat() == today and (published_at.hour*60+published_at.minute) >= current_slot
-              count = sum(len(items) for items in payload.get("categories", {}).values())
+              groups = payload.get("categories", {})
+              count = sum(len(items) for items in groups.values())
+              covered = sum(bool(items) for items in groups.values())
           except (ValueError, OSError, AttributeError):
-              published, count = False, 0
-          skip = published and count > 0
+              published, count, covered = False, 0, 0
+          # A draft with one story should not disable remaining morning retries.
+          # Avoid wasteful repeat calls only once most categories have coverage.
+          min_covered = min(7, len(payload.get("categories", {}))) if published else 7
+          skip = published and count > 0 and covered >= min_covered
           print(f"skip={'true' if skip else 'false'}")
           PY
 
