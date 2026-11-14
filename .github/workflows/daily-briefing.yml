@@ -4,9 +4,9 @@ on:
   # GitHub schedule can be delayed: run earlier, with independent backup slots.
   # The first successful publication wins for the KST date.
   schedule:
-    - cron: "20 20 * * *"  # 05:20 KST primary
-    - cron: "10 21 * * *"  # 06:10 KST backup
-    - cron: "45 21 * * *"  # 06:45 KST final backup
+    - cron: "45 21 * * 1-5"  # 06:45 KST primary
+    - cron: "0 22 * * 1-5"   # 07:00 KST backup
+    - cron: "10 22 * * 1-5"  # 07:10 KST final backup
   workflow_dispatch: {}
   # Scoped, explicit emergency refresh; unrelated commits never spend API credits.
   push:
@@ -79,7 +79,7 @@ jobs:
         run: |
           python - <<'PY'
           import json
-          from datetime import datetime
+          from datetime import datetime, timedelta
           from pathlib import Path
           from zoneinfo import ZoneInfo
 
@@ -93,10 +93,13 @@ jobs:
           urls = [item.get("url", "") for item in stories]
           if not all(urls) or len(urls) != len(set(urls)):
               raise RuntimeError("원문 링크 누락 또는 중복 발견")
+          cutoff = (datetime.now(ZoneInfo("Asia/Seoul")) - timedelta(days=1)).replace(hour=20,minute=0,second=0,microsecond=0)
           for section, group in data["categories"].items():
               if len(group) > 3:
                   raise RuntimeError(f"{section}: 섹터별 3건 초과")
               for item in group:
+                  if datetime.strptime(item["pubDate"], "%Y-%m-%d").date() < cutoff.date():
+                      raise RuntimeError(f"{section}: 오래된 기사 발견")
                   if len(item.get("summary", [])) != 3:
                       raise RuntimeError(f"{section}: 3줄 요약 미충족")
           print(f"검증 완료: {today} | {len(stories)}건 | 기존 원문 URL 유지")
