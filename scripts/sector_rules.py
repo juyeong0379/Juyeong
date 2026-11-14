@@ -18,9 +18,21 @@ def classify_sector(title, description=""):
     if not title:
         return None
 
-    # Exclude generic corporate earnings, promotions, profiles and commentary.
-    if has(r"인사 전망|임원 인사|취임|실적 발표|주가 등락|연예|이혼|스캔들|이익 감소|흑자전환|게임 매출|성장률|CEO 인터뷰|치과의사|성공 스토리",title):
-        if not has(r"IPO|공모|회사채|채권 발행|기업금융|인수금융|M&A|상장|신주|토큰증권|PF|리츠|엔비디아|NVIDIA|AI|반도체|글로벌",title):
+    # Pure staffing changes and profile stories have no market-wide impact.
+    if has(r"임원\s*인사|인사\s*발령|대표\s*취임|대표\s*선임|전담팀\s*꾸린다|CEO\s*인터뷰|성공\s*스토리|연예|이혼",title):
+        return None
+    # Cross-company profitability, credit and capital efficiency are strategic.
+    market_metrics = has(
+        r"증권사|은행권|금융지주|금융업계|증권업계|금융시장|증권업",
+        title,
+    ) and has(
+        r"누적|전체|업계|실적|순이익|ROE|수익성|자기자본|충당금|건전성|연체율|PF\s*위험|자본효율|신용위험",
+        title + " " + desc,
+    )
+    if market_metrics:
+        return "peer"
+    if has(r"주가 등락|연예|이혼|스캔들|게임 매출|치과의사|성공 스토리",title):
+        if not has(r"IPO|공모|회사채|기업금융|M&A|상장|토큰증권|PF|엔비디아|NVIDIA|AI|반도체|글로벌",title):
             return None
 
     # 1) Real estate must be the financial asset, not a family-office/back-office term.
@@ -106,7 +118,7 @@ def classify_sector(title, description=""):
     if peer and ib:
         return "peer"
     # Globally material topics with a clear cross-industry impact go to Other.
-    if has(r"엔비디아|NVIDIA|AI\s*패권|미중\s*(기술|무역)|반도체\s*(규제|제재|공급망)|빅테크\s*AI|글로벌\s*금융위기|미국\s*반독점|AI\s*규제|데이터센터\s*규제", title):
+    if has(r"엔비디아|NVIDIA|AI\s*패권|미중\s*(기술|무역)|반도체\s*(규제|제재|공급망)|빅테크\s*AI|글로벌\s*금융위기|미국\s*반독점|AI\s*규제|데이터센터\s*규제|FOMC|연방준비제도|연준\s*(?:금리|정책)|미국\s*(?:고용|물가|CPI|관세|대중\s*제재)|국제\s*유가|글로벌\s*M&A|미중\s*무역|원달러\s*환율\s*(?:급등|급락)|한국은행\s*기준금리", title):
         return "other"
     return None
 
