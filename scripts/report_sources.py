@@ -112,7 +112,10 @@ def search_institutional_reports(today):
     found = []
     for query in queries:
         try:
-            res = requests.get(url, headers=headers, params={"query": query, "display": 35}, timeout=8)
+            res = requests.get(url, headers=headers, params={"query": query, "display": 35}, timeout=5)
+            if res.status_code in (401, 403):
+                print("  [자료 검색] 기관 문서 검색 API 미승인: 후속 무효 요청 중단, 검증된 기존 보고서만 사용")
+                break
             res.raise_for_status()
             items = res.json().get("items", [])
         except Exception as exc:
