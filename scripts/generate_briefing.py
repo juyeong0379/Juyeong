@@ -356,7 +356,7 @@ def fallback_classify_batch(meta: dict, batch: list) -> list:
     for c in batch:
         title = c.get("title", "")
         desc = re.sub(r"\s+", " ", c.get("description", "")).strip()
-        if classify_sector(title, desc) != meta["key"]:
+        if not sector_matches(meta["key"], title, desc):
             continue
         if not re.search(pattern, title + " " + desc, re.IGNORECASE):
             continue
@@ -564,7 +564,7 @@ summary 작성 규칙 (개조식):
             if not secondary:
                 print(f"  [선정 제외] 중요도/원문 근거 부족: {c['title'][:60]}")
                 continue
-        if classify_sector(c["title"],c["description"]) != meta["key"]:
+        if not sector_matches(meta["key"], c["title"], c["description"]):
             continue
 
         final_score = (
