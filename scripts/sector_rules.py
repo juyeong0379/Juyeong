@@ -6,7 +6,7 @@ Unclear or off-topic news is excluded rather than assigned speculatively.
 """
 import re
 
-PRECEDENCE = ("re","infra","sto","hana","ecm","ma","growthfund","productive","corp","peer")
+PRECEDENCE = ("re","infra","sto","hana","ecm","ma","growthfund","productive","corp","peer","other")
 PREFIX = re.compile(r"^(?:\s*\[(?:더벨|Invest|단독|IPO 레이더|기획|분석|이슈|특징|리포트|Company Watch|THE COMPASS|투자노트|금융지주 임원 인사 전망)[^\]]*\]\s*)+",re.I)
 
 def has(pattern, text):
@@ -20,7 +20,7 @@ def classify_sector(title, description=""):
 
     # Exclude generic corporate earnings, promotions, profiles and commentary.
     if has(r"인사 전망|임원 인사|취임|실적 발표|주가 등락|연예|이혼|스캔들|이익 감소|흑자전환|게임 매출|성장률|CEO 인터뷰|치과의사|성공 스토리",title):
-        if not has(r"IPO|공모|회사채|채권 발행|기업금융|인수금융|M&A|상장|신주|토큰증권|PF|리츠",title):
+        if not has(r"IPO|공모|회사채|채권 발행|기업금융|인수금융|M&A|상장|신주|토큰증권|PF|리츠|엔비디아|NVIDIA|AI|반도체|글로벌",title):
             return None
 
     # 1) Real estate must be the financial asset, not a family-office/back-office term.
@@ -105,6 +105,9 @@ def classify_sector(title, description=""):
     ib=has(r"\bIB\b|기업금융|인수금융|모험자본|생산적금융|발행어음|\bIMA\b|인수\s*주선|자기자본\s*투자|투자금융|증권사\s*전략|주선\s*실적|종투사|자본\s*규제|자본\s*확충",title+" "+desc)
     if peer and ib:
         return "peer"
+    # Globally material topics with a clear cross-industry impact go to Other.
+    if has(r"엔비디아|NVIDIA|AI\s*패권|미중\s*(기술|무역)|반도체\s*(규제|제재|공급망)|빅테크\s*AI|글로벌\s*금융위기|미국\s*반독점|AI\s*규제|데이터센터\s*규제", title):
+        return "other"
     return None
 
 def sector_matches(section, title, description=""):
