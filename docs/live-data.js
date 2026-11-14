@@ -110,7 +110,9 @@ async function loadBriefings() {
   for (const item of merged) byUrl.set(item.date + "|" + item.url, item);
   NEWS = [...byUrl.values()].filter(item => item.date >= min && item.date <= now);
   const lastDay = NEWS.map(item => item.date).sort().at(-1);
-  selectedDate = lastDay || now;
+  // Initial load chooses newest archive; later refreshes preserve manual browsing.
+  if (!loadBriefings.initialized || selectedDate > now) selectedDate = lastDay || now;
+  loadBriefings.initialized = true;
   const dateInput = document.getElementById("dateInput");
   dateInput.min = min;
   dateInput.max = now;
