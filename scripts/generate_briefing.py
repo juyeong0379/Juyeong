@@ -645,14 +645,22 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
     if target_limit <= 0:
         return []
     print(f"▶ [{meta['no']}] {meta['label']} 수집 중...")
+    collected = collect_candidates(meta["keywords"], edition=edition)
+    matching = [
+        c for c in collected
+        if sector_matches(meta["key"], c["title"], c.get("description", ""))
+        and not is_personnel_only(c["title"])
+    ]
     eligible_candidates = [
-        c for c in collect_candidates(meta["keywords"], edition=edition)
+        c for c in matching
         if not repeated_last_days(c)
         and c["url"] not in used_urls
         and not any(repeated_without_update(c, p) for p in prior_articles)
-        and sector_matches(meta["key"], c["title"], c.get("description", ""))
-        and not is_personnel_only(c["title"])
     ]
+    if len(matching) == 0:
+        print(f"  [수집 진단] {meta['key']}: 24시간 내 수집 {len(collected)}건, 분야 일치 0건. 검색어/출처/시간대 검토 필요")
+    else:
+        print(f"  [수집 진단] {meta['key']}: 수집 {len(collected)}건 → 분야 일치 {len(matching)}건 → 전일/당일 중복 제외 후 {len(eligible_candidates)}건")
     candidates = eligible_candidates[:MAX_CANDIDATES]
     print(f"  후보 {len(candidates)}건 → OpenAI 분류 요청 중...")
 
