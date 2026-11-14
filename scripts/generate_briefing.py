@@ -780,62 +780,82 @@ def is_current_day_article(article: dict, now: datetime) -> bool:
 
 
 def main():
-    if not os.getenv('OPENAI_API_KEY'):
-        raise RuntimeError('OPENAI_API_KEY 미등록: 기존 브리핑 보존')
+    if not os.getenv("OPENAI_API_KEY"):
+        raise RuntimeError("OPENAI_API_KEY 미등록: 기존 브리핑 보존")
     global RECENT_HEADLINES
     now = datetime.now(KST)
+    edition = edition_for_run(now)
+    window_start, window_end = edition_window(now, edition)
+    print(f"▶ {EDITION_LABELS[edition]} 회차 기사 발행구간: "
+          f"{window_start:%m-%d %H:%M} ~ {window_end:%m-%d %H:%M} KST")
     RECENT_HEADLINES = load_recent_headlines(now)
-    limit = target_story_count(now)
     today_path = (Path(__file__).resolve().parents[1] / "docs" / "archive"
                   / (now.date().isoformat() + ".json"))
 
-    # Never carry over the prior day's news. On this day's later refreshes,
-    # keep previously published articles first, then append genuinely new ones.
-    previous_sections = {}
+    previous_payload = {}
     if today_path.exists():
         try:
             previous_payload = json.loads(today_path.read_text(encoding="utf-8"))
-            previous_sections = previous_payload.get("categories", {})
         except (OSError, ValueError, TypeError) as exc:
-            print(f"  [주의] 당일 브리핑 읽기 실패: {exc}")
+            print(f"  [경고] 당일 아카이브 읽기 실패: {exc}")
 
+    previous_sections = previous_payload.get("categories", {})
     used_urls = set()
+    prior_articles = []
     data = {}
-    for key, meta in SECTIONS.items():
-        valid_prior = []
+    for key in SECTIONS:
+        retained = []
         for article in previous_sections.get(key, []):
-            if (is_current_day_article(article, now)
-                    and article["url"] not in used_urls
-                    and not repeated_last_days({
-                        "url": article["url"], "title": article.get("headline", "")})
-                    and not any(duplicate(article, old) for old in valid_prior)):
-                valid_prior.append(dict(article))
-                used_urls.add(article["url"])
-            if len(valid_prior) >= limit:
-                break
-        data[key] = valid_prior
+            if not is_current_day_article(article, now):
+                continue
+            if repeated_last_days({
+                    "title": article.get("headline", ""),
+                    "url": article.get("url", "")}):
+                continue
+            if article["url"] in used_urls:
+                continue
+            article = dict(article)
+            article["edition"] = article.get("edition") or edition_for_published(
+                article_timestamp(article), now) or "0730"
+            article["editionLabel"] = EDITION_LABELS[article["edition"]]
+            retained.append(article)
+            used_urls.add(article["url"])
+            prior_articles.append(article)
+        data[key] = retained[:MAX_STORIES_PER_CATEGORY]
 
-    # Each refresh searches for NEW material, preserving previously
-    # published same-day coverage and never recycling older archives.
+    # Add up to TWO newly published articles per category and edition.
+    # The three slots are cumulative but their publication windows never overlap.
     for key, meta in SECTIONS.items():
-        # A category missing its first story should still start with 1-2;
-        # only categories already initialized can grow to 3-4 later.
-        available_limit = (min(2, limit) if not data[key] else limit)
-        remaining = max(0, available_limit - len(data[key]))
+        already = sum(item.get("edition") == edition for item in data[key])
+        remaining = max(0, min(PER_EDITION_LIMIT - already,
+                               MAX_STORIES_PER_CATEGORY - len(data[key])))
         if remaining:
-            new_stories = build_section(
-                {**meta, "key": key}, used_urls, target_limit=remaining,
-                new_only=(now >= briefing_morning_end(now) and bool(data[key])))
-            for article in new_stories:
-                if (article["url"] in {p["url"] for p in data[key]}
-                        or any(duplicate(article, prior) for prior in data[key])):
+            added = build_section(
+                {**meta, "key": key}, used_urls,
+                edition=edition,
+                prior_articles=prior_articles,
+                target_limit=remaining,
+            )
+            for item in added:
+                if item["url"] in {p["url"] for p in data[key]}:
                     continue
-                data[key].append(article)
-                if len(data[key]) >= limit:
+                if any(repeated_without_update(item, p) for p in prior_articles):
+                    continue
+                data[key].append(item)
+                used_urls.add(item["url"])
+                prior_articles.append(item)
+                if sum(a.get("edition") == edition for a in data[key]) >= PER_EDITION_LIMIT:
                     break
-        for idx, article in enumerate(data[key]):
-            article["top"] = (idx == 0)
-        print(f"  [당일 누적] {key}: {len(data[key])}/{limit}건")
+        # Newest edition first on the same page. Historical details preserved.
+        data[key].sort(key=lambda item: (
+            EDITION_ORDER.index(item.get("edition", "0730")),
+            str(item.get("pubDate", "")),
+            str(item.get("pubTime", "")),
+        ), reverse=True)
+        for i, item in enumerate(data[key]):
+            item["top"] = i == 0
+        n_new = sum(x.get("edition") == edition for x in data[key])
+        print(f"  [회차별 누적] {key}: 이번 {n_new}건 / 총 {len(data[key])}건")
 
     produced_at = datetime.now(KST)
     try:
@@ -847,6 +867,8 @@ def main():
 
     output = {
         "generated_at": produced_at.strftime("%Y-%m-%d %H:%M KST"),
+        "last_edition": edition,
+        "editions_completed": sorted(set(previous_payload.get("editions_completed", [])) | {edition}, key=EDITION_ORDER.index),
         "reports": reports,
         "sections": [
             {"key": k, "no": m["no"], "emoji": m["emoji"], "label": m["label"], "desc": m["desc"]}
@@ -857,9 +879,9 @@ def main():
 
     out_path = os.path.join(os.path.dirname(__file__), "..", "docs", "data.json")
     publishable=sum(len(v) for v in data.values())
-    # Target 1-2 in the morning and up to 3-4 later; never backfill stale news.
+    # Two per category and edition, maximum six across the day; no old backfill.
     if publishable == 0:
-        raise RuntimeError("검증된 기사가 0건입니다. 기존 정상 브리핑을 보존합니다.")
+        print("  [공지] 대상 시간대에 검증된 중요 기사가 없습니다. 빈 오늘자 브리핑을 정상 게시합니다.")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     # 선택 날짜의 뉴스를 보관하여 최근 30일 검색과 과거 조회에 활용
