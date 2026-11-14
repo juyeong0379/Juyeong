@@ -13,7 +13,7 @@ class BriefingRulesTest(unittest.TestCase):
         self.now = datetime(2026, 11, 15, 7, 10, tzinfo=briefing.KST)
 
     def test_morning_and_afternoon_limits(self):
-        for hour, expected in [(6, 2), (9, 2), (11, 2), (13, 3), (15, 4), (17, 4)]:
+        for hour, expected in [(6, 2), (7, 2), (9, 4), (11, 4), (13, 4)]:
             with self.subTest(hour=hour):
                 self.assertEqual(
                     briefing.target_story_count(self.now.replace(hour=hour)),
@@ -21,8 +21,9 @@ class BriefingRulesTest(unittest.TestCase):
 
     def test_strict_publication_window_and_timestamp(self):
         cases = [
-            ("2026-11-14", "19:59 KST", False),
-            ("2026-11-14", "20:00 KST", True),
+            ("2026-11-14", "11:59 KST", False),
+            ("2026-11-14", "12:00 KST", True),
+            ("2026-11-14", "19:59 KST", True),
             ("2026-11-15", "06:45 KST", True),
             ("2026-11-15", "07:11 KST", False),
             ("2026-11-13", "23:00 KST", False),
@@ -37,6 +38,15 @@ class BriefingRulesTest(unittest.TestCase):
                 self.assertEqual(
                     briefing.is_current_day_article(article, self.now),
                     accepted)
+
+    def test_initial_and_followup_boundaries(self):
+        self.assertEqual(briefing.briefing_start(self.now).hour, 12)
+        self.assertEqual(briefing.briefing_start(self.now).day, 14)
+        self.assertEqual(briefing.briefing_morning_end(self.now).hour, 7)
+        self.assertEqual(briefing.briefing_morning_end(self.now).minute, 30)
+        at_boundary = self.now.replace(hour=7, minute=30)
+        self.assertEqual(briefing.target_story_count(at_boundary), 4)
+        self.assertEqual(briefing.target_story_count(self.now), 2)
 
     def test_no_yesterday_reuse_by_url_or_near_identical_headline(self):
         previous = briefing.RECENT_HEADLINES
