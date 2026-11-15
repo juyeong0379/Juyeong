@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15 08:44 KST",
+  "generated_at": "2026-11-15 16:15 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -7,15 +7,24 @@
   "reports": [
     {
       "id": "report-1",
-      "title": "2026년 10월 금융시장 동향",
-      "source": "한국은행",
-      "date": "2026-11-11",
-      "url": "https://www.bok.or.kr/portal/bbs/P0002017/view.do?menuNo=200365&nttId=11066469",
-      "type": "금융시장 보고서",
+      "title": "기술특례상장기업의 성장을 위한 코스닥시장의 과제",
+      "source": "자본시장연구원",
+      "date": "2026-11-02",
+      "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6883&syear=2026&zcd=002001016&zno=1944",
+      "type": "자본시장포커스",
       "related_article_urls": [
-        "https://www.bloter.net/news/articleView.html?idxno=678498",
-        "https://www.edaily.co.kr/News/Read?newsId=02745366645645720&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+        "https://www.sedaily.com/article/20114335?ref=naver",
+        "https://www.yna.co.kr/amp/view/AKR20261113076800008"
       ]
+    },
+    {
+      "id": "report-2",
+      "title": "투자판단에서의 핀플루언서 의존 실태와 규제 방안",
+      "source": "자본시장연구원",
+      "date": "2026-11-11",
+      "url": "https://www.kcmi.re.kr/report/report_view?report_no=2350",
+      "type": "이슈보고서",
+      "related_article_urls": []
     }
   ],
   "sections": [
@@ -262,5 +271,6 @@
         "editionLabel": "07:30"
       }
     ]
-  }
+  },
+  "reports_updated_at": "2026-11-15 16:15 KST"
 }
