@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16 07:16 KST",
+  "generated_at": "2026-11-16 07:24 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -287,7 +287,28 @@
         "editionLabel": "07:30"
       }
     ],
-    "hana": [],
+    "hana": [
+      {
+        "top": true,
+        "headline": "은행(Overweight): 글로벌 금리 급등으로 다시 부각된 defensive 매력",
+        "source": "하나증권 리서치센터",
+        "pubDate": "2026-11-15",
+        "pubTime": "14:11 KST",
+        "publishedAt": "2026-11-15T14:11:26+09:00",
+        "summary": [
+          "하나증권 은행 Weekly에 따르면 하나금융은 전주 5.3% 상승해 KB금융과 함께 주요 은행지주 중 가장 높은 주간 상승률 기록",
+          "외국인 은행주 순매수가 KB금융·하나금융에 집중됐으며, 하나금융의 주간 외국인 순매수 규모는 약 345억원으로 집계",
+          "리포트는 하나금융 은행 국고채 PD 과징금 254억원을 제시하고, 홍콩 ELS 관련 환입금이 과징금보다 90억원 많은 것으로 분석"
+        ],
+        "summary_mode": "source_digest",
+        "insight": "은행그룹 자본시장 수급 및 일회성 제재비용의 손익 영향 점검",
+        "reporter": "최정욱·정소영",
+        "url": "https://file.hanaw.com/download/research/FileServer/WEB/industry/industry/2026/11/15/Bank_Weekly_20261116.pdf",
+        "kind": "그룹 관련 리서치",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
     "peer": [
       {
         "top": true,
@@ -468,35 +489,39 @@
       },
       {
         "top": false,
-        "headline": "베선트 \"엔비디아 CEO 외부 영입해야\"…中 우회 수출 의혹 해명 촉구",
-        "source": "뉴시스",
-        "pubDate": "2026-11-16",
-        "pubTime": "03:12 KST",
-        "publishedAt": "2026-11-16T03:12:25+09:00",
+        "headline": "올해 마지막 연준 회의…'빅스텝' 확률 얼마나 되나 [한상춘의 국제경제 읽기]",
+        "source": "한국경제",
+        "pubDate": "2026-11-15",
+        "pubTime": "17:30 KST",
+        "publishedAt": "2026-11-15T17:30:00+09:00",
         "summary": [
-          "[서울=뉴시스]박미선 기자 = 스콧 베선트 미국 재무장관이 젠슨 황 전 최고경영자(CEO)의 불륜 스캔들로 혼란에 빠진 엔비디아에 외부 CEO 영입을 통한 대대적인 쇄신을 촉구했다. 중국에 대한 첨단 반도체 우회 수출 의혹과 관련해서도 열흘 내 해명을 요구하며 압박 수위를 높였다. 15일(현지 시간) 파이낸셜타임스(FT)에 따르면 베선트 장관은 이날 폭스뉴스와의 인터뷰에서 엔비디아의 차기 CEO 선임과 관련해"
+          "미국 10월 CPI의 상승세가 예상을 웃돈 뒤 12월 FOMC의 추가 금리인상과 인상 폭에 대한 논쟁 확대",
+          "기조적 물가 압력이 지속되는 가운데 기준금리 0.5%포인트 인상 가능성도 일부 제기되는 상황",
+          "급격한 긴축은 미국 국채시장 불안과 경기 둔화 부담을 키울 수 있어 실제 정책 선택과 장기금리가 관전 포인트"
         ],
-        "summary_mode": "source_excerpt",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.newsis.com/view/NISX20261116_0003868835",
+        "summary_mode": "source_digest",
+        "insight": "고금리 장기화 시 회사채 발행·차환 및 인수금융 조달비용 상승 위험 점검",
+        "reporter": "한상춘",
+        "url": "https://www.hankyung.com/article/2026111574491",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "젠슨 황 스캔들 후폭풍…美 의회, 中 AI 반도체 수출 규제 속도",
-        "source": "뉴시스",
+        "headline": "나토 가입·돈바스 철수 맞교환…美, 우크라에 종전안 타진",
+        "source": "한국경제",
         "pubDate": "2026-11-15",
-        "pubTime": "23:03 KST",
-        "publishedAt": "2026-11-15T23:03:54+09:00",
+        "pubTime": "17:42 KST",
+        "publishedAt": "2026-11-15T17:42:00+09:00",
         "summary": [
-          "[서울=뉴시스]박미선 기자 = 미국 의회가 젠슨 황 엔비디아 전 최고경영자(CEO)의 불륜 스캔들을 계기로 중국에 대한 첨단 인공지능(AI) 반도체 수출 규제를 강화하는 데 속도를 내고 있다. 14일(현지 시간) 파이낸셜타임스(FT)에 따르면 민주·공화 양당 의원들은 민감한 반도체의 해외 판매를 제한하고, 도널드 트럼프 행정부가 이미 승인한 수출도 의회가 재검토해 차단할 수 있게 하는 법안들을 추진하고 있다."
+          "미국이 중재하는 러시아·우크라이나 종전 협상에서 나토 가입과 돈바스 철수의 연계 방안이 논의됨",
+          "우크라이나 대통령은 동부 영토 철수 반대 입장을 재확인했으나, 충분한 안보·재건 지원이 있다면 국민투표 가능성 언급",
+          "안보 조건과 재건 자금 제공 범위가 향후 협상의 주요 변수로 남아 유럽 지정학적 위험과 인프라 재건 투자에 주목"
         ],
-        "summary_mode": "source_excerpt",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.newsis.com/view/NISX20261115_0003868807",
+        "summary_mode": "source_digest",
+        "insight": "유럽 재건·인프라 금융 및 지정학적 신용·환율 위험 변화 모니터링",
+        "reporter": "김주완",
+        "url": "https://www.hankyung.com/article/2026111575231",
         "edition": "0730",
         "editionLabel": "07:30"
       }
