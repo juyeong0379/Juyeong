@@ -873,6 +873,51 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
                   and item.get("summary_mode") in ("ai_summary", "source_digest")
                   and (item.get("summary_mode") == "ai_summary"
                        or validate_digest(item["title"],item["summary"]))))]
+    # POST-VALIDATION RECOVERY: some scored stories are discarded above
+    # because AI output/whole-body extraction was incomplete.  In that case
+    # the old flow printed zero although many real dated articles were found.
+    # Revisit raw candidate descriptions only after ALL stronger summaries are
+    # validated, and transparently show source text instead of fabricated lines.
+    if len(top) < target_limit:
+        def reliable_preview(candidate):
+            title = candidate.get("title", "")
+            desc = re.sub(r"\s+", " ", candidate.get("description", "")).strip()
+            if len(desc) < 45 or len(title) < 12:
+                return False
+            if SHORT_NEWS_PATTERN.search(title) or is_personnel_only(title):
+                return False
+            if re.search(r"연예|사생활|불륜|팬미팅|광고모델|단순인사|포토", title):
+                return False
+            return True
+
+        additional = [c for c in eligible_candidates
+                      if reliable_preview(c)
+                      and not any(repeated_without_update(c, v) for v in top)]
+        additional.sort(key=lambda c: (
+            c.get("source") in PREFERRED_IB_OUTLETS,
+            len(c.get("description", "")),
+            c["pub_dt"],
+        ), reverse=True)
+        for c in additional:
+            if any(repeated_without_update(c, v) for v in top):
+                continue
+            # Copy source metadata excerpt exactly as issued, without
+            # attributing additional fabricated business or numeric facts.
+            snippet = re.sub(r"\s+", " ", c["description"]).strip()[:230].rstrip()
+            if len(snippet) < 45:
+                continue
+            top.append({
+                **c, "summary": [snippet],
+                "summary_mode": "source_excerpt",
+                "insight": "", "reporter": "",
+                "score": 32, "hana_view": "neutral",
+            })
+            print(f"  [선정 보완] {meta['key']}: 본문 확보 전 출처 설명 발췌 | {c['title'][:65]}")
+            if len(top) >= target_limit:
+                break
+        top=deduplicate(top)[:target_limit]
+    if len(top) < 2:
+        print(f"  [기사 부족] {meta['key']}: 마지막 원문 재검증 후 {len(top)}건 (누락 방지 검색 확대 필요)")
     used_urls.update(item["url"] for item in top)
     print(f"  → {len(top)}건 선정")
 
