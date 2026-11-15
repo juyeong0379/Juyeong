@@ -146,6 +146,38 @@ class BriefingRulesTest(unittest.TestCase):
         self.assertNotIn("other", briefing.RELAXED_SECTIONS)
         self.assertNotIn("ecm", briefing.RELAXED_SECTIONS)
 
+    def test_final_validation_does_not_leave_real_article_candidates_empty(self):
+        from unittest.mock import patch
+        from datetime import datetime
+        dt = datetime(2026, 11, 16, 4, 15, tzinfo=KST)
+        stories = [
+            {
+                "title": f"IPO 공모주 기업 {i} 신규 수요예측 결과 발표",
+                "description": (
+                    f"신규 상장기업 {i}는 증권사 주관 아래 기관 수요예측 절차를 거쳤다. "
+                    "공모가 결정 및 상장 절차가 진행되며 투자자 수요와 주관 전략에 의미를 준다."
+                ),
+                "url": f"https://www.hankyung.com/article/2026111600{i}",
+                "source": "한국경제", "reporter": "",
+                "pub_dt": dt, "matched_keyword": "IPO",
+            }
+            for i in range(3)
+        ]
+        with patch("generate_briefing.collect_candidates", return_value=stories), \
+             patch("generate_briefing.classify_batch", return_value=[]), \
+             patch("generate_briefing.digest", return_value=None), \
+             patch("generate_briefing.repeated_last_days", return_value=False):
+            result = briefing.build_section(
+                {**briefing.SECTIONS["ecm"], "key": "ecm"},
+                used_urls=set(), edition="0730", prior_articles=[],
+                target_limit=3,
+            )
+        self.assertGreaterEqual(len(result), 2)
+        self.assertTrue(all(
+            x["summary_mode"] == "source_excerpt" and len(x["summary"]) == 1
+            for x in result
+        ))
+
     def test_previous_briefing_dedup(self):
         before = briefing.RECENT_HEADLINES
         try:
