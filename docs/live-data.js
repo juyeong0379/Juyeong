@@ -53,7 +53,16 @@ function normalizeBriefing(payload) {
         edition: String(item.edition || ""),
         editionLabel: String(item.editionLabel || ""),
         kind: String(item.kind || ""),
-        pdf: String(item.pdf || "")
+        pdf: String(item.pdf || ""),
+        ipoSchedule: (cat === "ecm" && item.ipo_schedule &&
+          item.ipo_schedule.listing && item.ipo_schedule.payment)
+          ? {
+              listing: String(item.ipo_schedule.listing),
+              payment: String(item.ipo_schedule.payment),
+              subscription: String(item.ipo_schedule.subscription || ""),
+              status: String(item.ipo_schedule.listing_status || "예정"),
+              source: String(item.ipo_schedule.schedule_source || ""),
+            } : null
       });
     });
   });
