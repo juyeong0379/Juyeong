@@ -125,7 +125,7 @@ def classify_sector(title, description=""):
     if peer and ib:
         return "peer"
     # Globally material topics with a clear cross-industry impact go to Other.
-    if has(r"엔비디아|NVIDIA|AI\s*패권|미중\s*(기술|무역)|반도체\s*(규제|제재|공급망)|빅테크\s*AI|글로벌\s*금융위기|미국\s*반독점|AI\s*규제|데이터센터\s*규제|FOMC|연방준비제도|연준\s*(?:금리|정책)|미국\s*(?:고용|물가|CPI|관세|대중\s*제재)|국제\s*유가|글로벌\s*M&A|미중\s*무역|원달러\s*환율\s*(?:급등|급락)|한국은행\s*기준금리", title):
+    if has(r"엔비디아|NVIDIA|AI\s*패권|미중\s*(기술|무역)|반도체\s*(규제|제재|공급망)|빅테크\s*AI|글로벌\s*금융위기|미국\s*반독점|AI\s*규제|데이터센터\s*규제|FOMC|연방준비제도|연준\s*(?:금리|정책)|미국\s*(?:고용|물가|CPI|관세|대중\s*제재)|국제\s*유가|글로벌\s*M&A|미중\s*무역|원달러\s*환율\s*(?:급등|급락)|한국은행\s*기준금리|우크라이나\s*(?:종전|휴전|전쟁)|러시아.?우크라이나\s*협상|미국\s*(?:이란|연준|국채금리|금리인상)|일본\s*(?:경기|GDP|금리|재정)|유럽\s*(?:국채|재정|금리)|국제\s*(?:원유|에너지)|호르무즈\s*해협|글로벌\s*(?:경기|성장|금리|원자재)|미국\s*무역\s*협상", title):
         return "other"
     return None
 
