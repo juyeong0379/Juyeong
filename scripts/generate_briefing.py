@@ -372,6 +372,55 @@ FALLBACK_TOPIC_PATTERNS = {
     "기타": r"AI|엔비디아|반도체|미중|빅테크|글로벌|무역|관세|반독점|금융시장|지정학",
 }
 
+def write_three_line_briefing(article: dict):
+    """Transform a publisher article into exactly three concise source-backed points.
+
+    An accessible body is preferred and may already have been extracted earlier.
+    Search excerpts alone may be used as evidence, never displayed verbatim as
+    a one-line substitute. OpenAI is asked to WRITE, not extend, grounded facts.
+    Inadequate evidence causes omission rather than fabricated details.
+    """
+    title = str(article.get("title") or article.get("headline") or "").strip()
+    description = re.sub(r"\s+", " ", str(article.get("description") or "").strip())
+    if len(title) < 10 or len(description) < 45:
+        return None
+    evidence = title + "\n" + description
+    prompt = (
+        "하나증권 IB 기획실 임원용 기사 핵심 요약을 작성한다.\n"
+        "아래 기사의 제목과 출처 제공 설명에 확인되는 사실만 사용하라.\n"
+        "정확히 3개의 한국어 개조식 문장으로 핵심만 전달하라.\n"
+        "① 핵심 사건/변화 ② 구체적 사실·수치/배경 ③ 확인된 영향/관전 쟁점.\n"
+        "각 문장은 28~105자, 서로 다른 정보, 명사형 종결을 우대.\n"
+        "제목이나 설명 문장을 그대로 붙여넣거나 중간에서 자르지 말 것.\n"
+        "출처에 없는 숫자·추가 당사자·확정되지 않은 사실은 추가 금지.\n"
+        "제목·설명만으로 3가지 서로 다른 핵심을 확인할 수 없으면 빈 배열 [] 반환.\n"
+        "JSON 문자열 배열만 출력: [\"문장1\",\"문장2\",\"문장3\"]\n\n"
+        f"기사 제목: {title}\n출처 설명: {description}"
+    )
+    candidate = None
+    try:
+        if os.getenv("OPENAI_API_KEY"):
+            candidate = ask_openai_json(prompt, max_tokens=450)
+    except Exception as exc:
+        print(f"  [요약 생성 경고] {title[:38]}: {type(exc).__name__}")
+    if isinstance(candidate, list) and len(candidate) == 3:
+        points = [re.sub(r"^\s*(?:[①②③]|\d[.)]|[-*•])\s*", "", str(x)).strip()
+                  for x in candidate]
+        if (all(23 <= len(x) <= 120 and not x.endswith(("…", "...")) for x in points)
+                and numeric_claims_grounded(points, evidence)
+                and validate_digest(title, points)
+                and len({re.sub(r"\W+", "", x) for x in points}) == 3):
+            return points
+    # Model failure: use a conservative, explicitly labelled metadata-based
+    # three-point briefing only when separate complete clauses are available.
+    points = preview_digest(title, description)
+    if (points and validate_digest(title, points)
+            and numeric_claims_grounded(points, evidence)
+            and all(not x.endswith(("…", "...")) for x in points)):
+        return points
+    return None
+
+
 def fallback_classify_batch(meta: dict, batch: list) -> list:
     """Use verified source-article key points if OpenAI credits are exhausted.
 
@@ -862,17 +911,20 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
     # The vetted model response is the only source; source-only digest has no note.
     for item in top:
         item["insight"] = item.get("insight","") if item.get("summary_mode")=="ai_summary" else ""
-    # Label 1-point source excerpts transparently when full text is
-    # unavailable; AI/source digests still require three verified points.
+    # Never send raw snippets to the executive website. Turn metadata-backed
+    # excerpts into three paraphrased points, or exclude the article.
+    for item in top:
+        if item.get("summary_mode") == "source_excerpt":
+            points = write_three_line_briefing(item)
+            if points:
+                item["summary"] = points
+                item["summary_mode"] = "preview_digest"
     top=[item for item in deduplicate(top)
-         if isinstance(item.get("summary"),list)
-         and ((item.get("summary_mode") == "source_excerpt"
-               and len(item["summary"]) == 1
-               and len(item["summary"][0]) >= 45)
-              or (len(item["summary"]) == 3
-                  and item.get("summary_mode") in ("ai_summary", "source_digest")
-                  and (item.get("summary_mode") == "ai_summary"
-                       or validate_digest(item["title"],item["summary"]))))]
+         if isinstance(item.get("summary"), list)
+         and len(item["summary"]) == 3
+         and item.get("summary_mode") in ("ai_summary", "source_digest", "preview_digest")
+         and (item.get("summary_mode") == "ai_summary"
+              or validate_digest(item["title"], item["summary"]))]
     # POST-VALIDATION RECOVERY: some scored stories are discarded above
     # because AI output/whole-body extraction was incomplete.  In that case
     # the old flow printed zero although many real dated articles were found.
@@ -901,18 +953,16 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
         for c in additional:
             if any(repeated_without_update(c, v) for v in top):
                 continue
-            # Copy source metadata excerpt exactly as issued, without
-            # attributing additional fabricated business or numeric facts.
-            snippet = re.sub(r"\s+", " ", c["description"]).strip()[:230].rstrip()
-            if len(snippet) < 45:
+            points = write_three_line_briefing(c)
+            if not points:
                 continue
             top.append({
-                **c, "summary": [snippet],
-                "summary_mode": "source_excerpt",
+                **c, "summary": points,
+                "summary_mode": "preview_digest",
                 "insight": "", "reporter": "",
                 "score": 32, "hana_view": "neutral",
             })
-            print(f"  [선정 보완] {meta['key']}: 본문 확보 전 출처 설명 발췌 | {c['title'][:65]}")
+            print(f"  [선정 보완] {meta['key']}: 원문 메타데이터 기반 3줄 요약 | {c['title'][:65]}")
             if len(top) >= target_limit:
                 break
         top=deduplicate(top)[:target_limit]
@@ -944,10 +994,13 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
             for candidate in diversified:
                 if any(repeated_without_update(candidate, p) for p in retained):
                     continue
+                points = write_three_line_briefing(candidate)
+                if not points:
+                    continue
                 retained.append({
                     **candidate,
-                    "summary": [candidate.get("description", "").strip()[:230]],
-                    "summary_mode": "source_excerpt",
+                    "summary": points,
+                    "summary_mode": "preview_digest",
                     "insight": "", "reporter": "", "score": 30,
                 })
                 if len(retained) >= target_limit:
