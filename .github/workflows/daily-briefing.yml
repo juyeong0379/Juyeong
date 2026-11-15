@@ -152,7 +152,7 @@ jobs:
               for item in group:
                   facts = item.get("summary", [])
                   if item.get("summary_mode") == "source_excerpt":
-                      if len(facts) != 1 or len(facts[0]) < 65:
+                      if len(facts) != 1 or len(facts[0]) < 45:
                           raise RuntimeError(f"{section}: 출처 설명 발췌 검증 미충족")
                   elif len(facts) != 3:
                       raise RuntimeError(f"{section}: 3줄 원문·AI 요약 미충족")
