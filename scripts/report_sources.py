@@ -94,6 +94,24 @@ SEEDS = [
         "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6883&syear=2026&zcd=002001016&zno=1944",
         "categories": ["ecm", "productive", "peer"], "type": "자본시장포커스",
     },
+    {
+        "title": "글로벌 시장을 통해 본 한국 세컨더리 시장 활성화 방안",
+        "source": "자본시장연구원", "date": "2026-10-19",
+        "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6867&syear=2026&zcd=002001016&zno=1942",
+        "categories": ["ma", "productive", "ecm"], "type": "자본시장포커스",
+    },
+    {
+        "title": "테마형 ETF 확산과 과제",
+        "source": "자본시장연구원", "date": "2026-11-02",
+        "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6875&syear=2026&zcd=002001016&zno=1944",
+        "categories": ["peer", "ecm"], "type": "자본시장포커스",
+    },
+    {
+        "title": "AI 투자 확대와 전환사채 시장의 부상: 미국 사례",
+        "source": "자본시장연구원", "date": "2026-09-21",
+        "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6847",
+        "categories": ["infra", "corp", "ecm"], "type": "자본시장포커스",
+    },
 ]
 
 def host_source(url):
