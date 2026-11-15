@@ -172,6 +172,11 @@ class BriefingRulesTest(unittest.TestCase):
         with patch("generate_briefing.collect_candidates", return_value=stories), \
              patch("generate_briefing.classify_batch", return_value=[]), \
              patch("generate_briefing.digest", return_value=None), \
+             patch("generate_briefing.write_three_line_briefing", return_value=[
+                 "증권사 IPO 기업공개에서 투자자 수요예측 결과가 확인된 사례",
+                 "기관 참여 여부와 공모가 등 공모 조건이 결정되는 상황",
+                 "공모시장 조달 비용과 투자자 회수 조건이 주요 검토 대상",
+             ]), \
              patch("generate_briefing.repeated_last_days", return_value=False):
             result = briefing.build_section(
                 {**briefing.SECTIONS["ecm"], "key": "ecm"},
@@ -180,7 +185,7 @@ class BriefingRulesTest(unittest.TestCase):
             )
         self.assertGreaterEqual(len(result), 2)
         self.assertTrue(all(
-            x["summary_mode"] == "source_excerpt" and len(x["summary"]) == 1
+            x["summary_mode"] == "preview_digest" and len(x["summary"]) == 3
             for x in result
         ))
 
