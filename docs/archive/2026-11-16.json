@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16 07:48 KST",
+  "generated_at": "2026-11-16 08:10 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -120,15 +120,21 @@
         "publishedAt": "2026-11-16T07:04:00+09:00",
         "summary": [
           "엠비디, 기관 수요예측 이후 확정 공모가를 7,000원으로 결정",
-          "희망 공모가 밴드 하단보다 27% 낮은 가격으로 공모가 확정",
-          "참여 기관 925곳의 의무보유 확약이 없어 상장 초기 매물 부담에 주목"
+          "희망 공모가 밴드 하단보다 27% 낮은 가격으로 공모가 확정"
         ],
         "summary_mode": "editorial_digest",
         "insight": "",
         "reporter": "",
         "url": "https://dealsite.co.kr/articles/172769",
         "edition": "0730",
-        "editionLabel": "07:30"
+        "editionLabel": "07:30",
+        "ipo_schedule": {
+          "subscription": "2026-11-12 ~ 2026-11-13",
+          "payment": "2026-11-17",
+          "listing": "2026-11-24",
+          "listing_status": "예정",
+          "schedule_source": "https://mbdbiotech.irpage.co.kr/"
+        }
       },
       {
         "top": false,
