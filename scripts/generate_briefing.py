@@ -868,7 +868,7 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
          if isinstance(item.get("summary"),list)
          and ((item.get("summary_mode") == "source_excerpt"
                and len(item["summary"]) == 1
-               and len(item["summary"][0]) >= 65)
+               and len(item["summary"][0]) >= 45)
               or (len(item["summary"]) == 3
                   and item.get("summary_mode") in ("ai_summary", "source_digest")
                   and (item.get("summary_mode") == "ai_summary"
