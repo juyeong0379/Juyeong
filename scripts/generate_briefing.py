@@ -192,7 +192,7 @@ SECTIONS = {
     "other": {
         "no": "11", "emoji": "🌍", "label": "기타",
         "desc": "글로벌 경제·산업·정책·AI 및 지정학적 핵심 이슈",
-        "keywords": ["젠슨 황 사임 엔비디아 반도체 증시", "엔비디아 경영권 AI 투자 불확실성", "젠슨 황 엔비디아 GPU AI", "글로벌 경제 AI 반도체", "글로벌 AI 산업 리스크", "엔비디아 CEO 경영 리스크", "미중 AI 반도체 규제", "미국 반독점 M&A", "글로벌 금융시장 충격", "빅테크 AI 투자 변화", "글로벌 반도체 공급망", "국제 무역 제재 경제 영향"],
+        "keywords": ["미국 연준 12월 FOMC 기준금리 물가", "미국 국채금리 인상 금융시장", "미국 이란 국제유가 호르무즈", "러시아 우크라이나 종전 협상", "중국 무역 경기 제조업", "미국 중국 관세 희토류 무역", "일본 경제 성장 금리 GDP", "유럽 국채 재정 위기", "글로벌 반도체 공급망", "글로벌 금융시장 위험", "국제 무역 제재 경제 영향", "AI 데이터센터 글로벌 규제", "미국 반독점 M&A", "글로벌 경제 AI 반도체", "엔비디아 경영권 AI 투자 불확실성", "젠슨 황 엔비디아 GPU AI", "젠슨 황 사임 엔비디아 반도체 증시"],
         "criteria": "다른 IB 카테고리에 명확히 속하지 않으나 글로벌 산업·경제·정책·기술 경쟁구도에 실질적인 영향을 미치는 핵심 이슈. CEO 관련 의혹은 사실 확인과 공식 조치가 있는 경우만 선정하고 선정적 사생활 보도는 제외. 시장 및 국내 산업·금융 영향 경로가 분명한 심층 분석을 우대.",
     },
 }
@@ -916,6 +916,44 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
             if len(top) >= target_limit:
                 break
         top=deduplicate(top)[:target_limit]
+    # Global news must not become an Nvidia-only feed. Keep at most one
+    # Huang/Nvidia article and fill remaining slots with distinct macro,
+    # geopolitics, trade, rates or other international industry developments.
+    if meta["key"] == "other":
+        nvidia = re.compile(r"젠슨\s*황|엔비디아|NVIDIA", re.I)
+        retained = []
+        for item in top:
+            if nvidia.search(item.get("title", "")) and any(
+                nvidia.search(p.get("title", "")) for p in retained):
+                continue
+            retained.append(item)
+        if len(retained) < target_limit:
+            diversified = [
+                c for c in eligible_candidates
+                if not nvidia.search(c.get("title", ""))
+                and len(c.get("description", "").strip()) >= 45
+                and not is_personnel_only(c.get("title", ""))
+                and not SHORT_NEWS_PATTERN.search(c.get("title", ""))
+            ]
+            diversified.sort(
+                key=lambda c: (
+                    c.get("source") in PREFERRED_IB_OUTLETS,
+                    len(c.get("description", "")),
+                    c["pub_dt"],
+                ), reverse=True)
+            for candidate in diversified:
+                if any(repeated_without_update(candidate, p) for p in retained):
+                    continue
+                retained.append({
+                    **candidate,
+                    "summary": [candidate.get("description", "").strip()[:230]],
+                    "summary_mode": "source_excerpt",
+                    "insight": "", "reporter": "", "score": 30,
+                })
+                if len(retained) >= target_limit:
+                    break
+        top = retained[:target_limit]
+        print(f"  [기타 다양성 검증] 엔비디아·젠슨 황 최대 1건, 글로벌 거시/산업 기사 {len(top)}건")
     if len(top) < 2:
         print(f"  [기사 부족] {meta['key']}: 마지막 원문 재검증 후 {len(top)}건 (누락 방지 검색 확대 필요)")
     used_urls.update(item["url"] for item in top)
