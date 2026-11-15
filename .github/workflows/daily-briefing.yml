@@ -55,12 +55,14 @@ jobs:
               published_at = datetime.strptime(stamp, "%Y-%m-%d %H:%M").replace(tzinfo=now.tzinfo)
           except (NameError, ValueError, TypeError):
               published_at = now.replace(year=2000)
-          # The 07:45 retry is useful if 07:30 published only 1-2 sectors.
+          # Retry whenever any of the eleven desks is below the target of TWO.
+          # Never treat a one-article section as complete.
           groups = data.get("categories", {}) if todays else {}
-          covered = sum(bool(items) for items in groups.values())
+          enough = sum(len(items) >= 2 for items in groups.values())
           skip = (os.getenv("EVENT_NAME") == "schedule"
                   and todays and edition in completed and published_at >= deadline
-                  and covered >= 9)
+                  and enough == 11)
+          print(f"covered_with_2_or_more={enough}/11")
           print("skip=" + ("true" if skip else "false"))
           print(f"edition={edition}")
           PY
