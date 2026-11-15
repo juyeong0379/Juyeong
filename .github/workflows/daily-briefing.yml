@@ -151,11 +151,11 @@ jobs:
                       raise RuntimeError(f"{section}: 3건 초과")
               for item in group:
                   facts = item.get("summary", [])
-                  if item.get("summary_mode") == "source_excerpt":
-                      if len(facts) != 1 or len(facts[0]) < 45:
-                          raise RuntimeError(f"{section}: 출처 설명 발췌 검증 미충족")
-                  elif len(facts) != 3:
-                      raise RuntimeError(f"{section}: 3줄 원문·AI 요약 미충족")
+                  if (not isinstance(facts, list) or len(facts) != 3
+                          or item.get("summary_mode") == "source_excerpt"
+                          or any(not isinstance(x, str) or len(x.strip()) < 20
+                                 or x.strip().endswith(("…", "...")) for x in facts)):
+                      raise RuntimeError(f"{section}: 모든 뉴스는 핵심 3줄 요약 필수, 원문 발췌 1줄 금지")
                   if not str(item.get("url", "")).startswith(("https://", "http://")):
                       raise RuntimeError(f"{section}: 원문 링크 누락")
                   exact = str(item.get("publishedAt") or "").strip()
