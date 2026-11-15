@@ -260,11 +260,14 @@ def collect_reports(categories, now):
                     matched_urls.append(story["url"])
                     overlap += min(3, len(matched))
         if not matched_urls:
-            # On a quiet day, a recent institution-owned strategic report may
-            # stand independently; do not recycle irrelevant links from news.
-            if not any(categories.get(key) for key in report.get("categories", [])):
+            # Research is a distinct section, not a fake news article.
+            # A source-verified research item can still be useful on a sparse
+            # news day, provided its publication is recent and relevant to IB.
+            if age > 30:
                 continue
         score = 85 - age + min(25, 5 * overlap)
+        if not matched_urls:
+            score -= 8
         if recent_use <= 30:
             score -= 20  # avoid repeatedly selecting same older publication
         scored.append((score, report, sorted(set(matched_urls))))
