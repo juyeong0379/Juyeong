@@ -150,13 +150,19 @@ class BriefingRulesTest(unittest.TestCase):
         from unittest.mock import patch
         from datetime import datetime
         dt = datetime(2026, 11, 16, 4, 15, tzinfo=KST)
+        headlines = [
+            "코스닥 신규 상장기업 기관 수요예측 결과 확정",
+            "유상증자 신주 발행과 자금조달 금액 조정",
+            "IPO 구주매출 비중 변화 투자자 회수 전망",
+        ]
+        descriptions = [
+            "신규 코스닥 상장 기업은 기관 투자자의 수요예측 절차를 진행했으며 대표 주관사가 확정 공모가격과 투자자 수요를 공개했다.",
+            "상장회사가 유상증자 신주 발행 규모와 발행 조건을 조정했다. 기업의 자금조달 방식과 주주 지분희석 문제가 핵심 쟁점이다.",
+            "IPO 공모시장에서 구주매출 비중의 변화가 논의됐다. 초기 투자자들의 회수 조건과 발행시장의 수급 구조를 분석하는 내용이다.",
+        ]
         stories = [
             {
-                "title": f"IPO 공모주 기업 {i} 신규 수요예측 결과 발표",
-                "description": (
-                    f"신규 상장기업 {i}는 증권사 주관 아래 기관 수요예측 절차를 거쳤다. "
-                    "공모가 결정 및 상장 절차가 진행되며 투자자 수요와 주관 전략에 의미를 준다."
-                ),
+                "title": headlines[i], "description": descriptions[i],
                 "url": f"https://www.hankyung.com/article/2026111600{i}",
                 "source": "한국경제", "reporter": "",
                 "pub_dt": dt, "matched_keyword": "IPO",
