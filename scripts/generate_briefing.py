@@ -813,7 +813,7 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
                 **c, "summary": [preview],
                 "summary_mode": "source_excerpt",
                 "insight": "", "reporter": "",
-                "score": 41 + preview_rank(c),
+                "score": min(56, 35 + preview_rank(c) / 3),
                 "hana_view": "neutral",
             })
             scored = deduplicate(sorted(scored, key=lambda x: x["score"], reverse=True))
