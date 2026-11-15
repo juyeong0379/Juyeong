@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15 16:19 KST",
+  "generated_at": "2026-11-16 07:11 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -7,19 +7,21 @@
   "reports": [
     {
       "id": "report-1",
-      "title": "투자판단에서의 핀플루언서 의존 실태와 규제 방안",
+      "title": "임팩트투자 생태계 현황과 과제",
       "source": "자본시장연구원",
-      "date": "2026-11-11",
-      "url": "https://www.kcmi.re.kr/report/report_view?report_no=2350",
-      "type": "이슈보고서",
-      "related_article_urls": []
+      "date": "2026-10-26",
+      "url": "https://www.kcmi.re.kr/report/report_view?report_no=2341",
+      "type": "조사보고서",
+      "related_article_urls": [
+        "https://www.fntimes.com/html/view.php?ud=202611152044599560b4a7c6999c_18"
+      ]
     },
     {
       "id": "report-2",
-      "title": "기술특례상장기업의 성장을 위한 코스닥시장의 과제",
+      "title": "테마형 ETF 확산과 과제",
       "source": "자본시장연구원",
       "date": "2026-11-02",
-      "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6883&syear=2026&zcd=002001016&zno=1944",
+      "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6875&syear=2026&zcd=002001016&zno=1944",
       "type": "자본시장포커스",
       "related_article_urls": []
     }
@@ -104,169 +106,106 @@
     }
   ],
   "categories": {
-    "ecm": [
-      {
-        "top": true,
-        "headline": "“핵심은 경영상 필요성”…제3자 유상증자 둘러싼 법원 판단은 [서초동...",
-        "source": "서울경제",
-        "pubDate": "2026-11-14",
-        "pubTime": "19:31 KST",
-        "publishedAt": "2026-11-14T19:31:00+09:00",
-        "summary": [
-          "제3자 유상증자 법원 판단에서 경영상 필요성 인정 여부가 거래 성사 조건으로 부각",
-          "기존 주주 대상 자금조달 가능성에도 제3자 배정시 경영상 긴급 필요성 요구됨",
-          "법원 판단이 유상증자 대표주관사의 심사 기준과 투자자 보호 정책에 직접 영향"
-        ],
-        "summary_mode": "ai_summary",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.sedaily.com/article/20114335?ref=naver",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "[IPO챗] 내주 영광와이케이엠씨 등 3개사 코스닥 입성",
-        "source": "연합뉴스",
-        "pubDate": "2026-11-14",
-        "pubTime": "09:00 KST",
-        "publishedAt": "2026-11-14T09:00:00+09:00",
-        "summary": [
-          "11월 16~18일 영광와이케이엠씨·옵토닉스·에이엘로봇 3개 기업의 코스닥시장 순차 상장 예정",
-          "세 기업의 확정 공모가는 각각 1만1000원·1만2000원·1만7600원으로 기업별 상장 일정 구체화",
-          "에스에프씨·유캐스트는 18~19일 일반청약 예정으로 신규 상장 기업과 후속 공모의 투자자 수요 비교 가능"
-        ],
-        "summary_mode": "source_digest",
-        "insight": "공모가 대비 신규 상장 성과와 후속 청약 수요를 비교하여 ECM 주관·가격 전략 점검",
-        "reporter": "정회인 기자",
-        "url": "https://www.yna.co.kr/amp/view/AKR20261113076800008",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      }
-    ],
+    "ecm": [],
     "corp": [
       {
         "top": true,
-        "headline": "은행 기업대출 증가분 52% '대기업' 차지…회사채 상환 집중",
-        "source": "블로터",
-        "pubDate": "2026-11-15",
-        "pubTime": "06:00 KST",
+        "headline": "[Invest]'블루쓰나미'에 AI 투자도 금리도 흔들…국내 채권시장 셈법 복...",
+        "source": "인베스트조선",
+        "pubDate": "2026-11-16",
+        "pubTime": "07:02 KST",
+        "publishedAt": "2026-11-16T07:02:00+09:00",
         "summary": [
-          "회사채 상환을 위한 자금 수요로 은행의 기업대출 중 대기업 비중이 52%로 확대됨",
-          "시장금리 상승에 따른 회사채 발행 부담 증가와 은행의 기업금융 영업 강화가 배경임",
-          "대기업 중심 은행 대출 증가가 회사채 시장 위축과 기업 자금조달 구조 변화를 야기함"
+          "AI 투자 둔화가 성장 우려를 자극해 국채금리를 끌어내리는 한편, 관련 회사채 공급 확대는 국채 수요를 잠식할 수 있는 상반된 요인으로 작용하는 셈이다.블루쓰나미 이후 미국의 재정정책도 당초 시장의 기대와는 다른"
         ],
-        "summary_mode": "ai_summary",
+        "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.bloter.net/news/articleView.html?idxno=678498",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "[마켓인]회사채 대신 은행 대출로…내년 A급 기업도 채권시장 등 돌리나",
-        "source": "이데일리",
-        "pubDate": "2026-11-14",
-        "pubTime": "16:06 KST",
-        "summary": [
-          "2026년 회사채 발행 부진과 단기조달 및 은행대출 증가세가 지속되고 있음",
-          "회사채 금리와 단기금리 간 괴리 확대와 A급 기업의 채권시장 이탈이 배경임",
-          "회사의 채권시장 이탈 현상이 기업 자금조달 방식과 발행 전략에 구조적 변화를 유도함"
-        ],
-        "summary_mode": "ai_summary",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.edaily.co.kr/News/Read?newsId=02745366645645720&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/15/2026111580033.html",
         "edition": "0730",
         "editionLabel": "07:30"
       }
     ],
-    "ma": [
+    "ma": [],
+    "re": [],
+    "infra": [
       {
         "top": true,
-        "headline": "의무공개매수제 합의안 본회의 문턱 앞 48일째, 이재명의 'M&A 활성화'에...",
-        "source": "비즈니스포스트",
+        "headline": "찬바람 맞은 AI 투자…데이터센터 건설 관련주 5600조원 증발",
+        "source": "아시아경제",
         "pubDate": "2026-11-15",
-        "pubTime": "06:02 KST",
+        "pubTime": "18:52 KST",
+        "publishedAt": "2026-11-15T18:52:00+09:00",
         "summary": [
-          "의무공개매수제 변경과 관련한 합의안 본회의 상정이 48일째 지연되는 중요한 입법 이슈 발생",
-          "이재명 대통령의 M&A 활성화 주문과 여야의 수정안 마련 논의가 기존 합의안 처리 여부를 둘러싸고 진행 중",
-          "의무공개매수제 조정은 기업 인수구조 및 거래 실행 환경에 변화를 주어 IB 사업 전반의 주관 경쟁과 거래 위험 관리에 영향을 미침"
+          "물리적 인프라를 공급하는 전통 산업 및 에너지 기업 주식을 앞다퉈 사들였다. 그러나 지난 6월을 기점으로... 그는 \"헤지펀드와 이야기를 나누다 보면 이제는 모든 종목이 성장주라는 생각이 끝없이 등장했다. 물론"
         ],
-        "summary_mode": "ai_summary",
+        "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.businesspost.co.kr/BP?command=article_view&num=451960",
+        "url": "https://view.asiae.co.kr/article/2026111518491431012",
         "edition": "0730",
         "editionLabel": "07:30"
       }
     ],
-    "re": [
-      {
-        "top": true,
-        "headline": "美 연준 '빅스텝' 공포에 상업용부동산 시장도 긴장…\"거래 깨질라\"",
-        "source": "이데일리",
-        "pubDate": "2026-11-14",
-        "pubTime": "12:07 KST",
-        "summary": [
-          "미 연준의 ‘빅스텝’ 긴축으로 **상업용부동산 매물**이 급증하며 시장이 위축",
-          "거래 중단 사례와 NH리츠운용의 인수 실패가 **금융비용 상승과 투자 심리 위축** 배경",
-          "상업용부동산 거래 감소가 **PF 조달 조건 악화와 투자회수 지연**으로 IB 사업에 부담"
-        ],
-        "summary_mode": "ai_summary",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.edaily.co.kr/News/Read?newsId=02643686645645720&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      }
-    ],
-    "infra": [],
     "hana": [],
-    "peer": [],
-    "sto": [],
-    "productive": [],
-    "growthfund": [],
-    "other": [
+    "peer": [
       {
         "top": true,
-        "headline": "'젠슨황 스캔들'에 짓눌린 증시…엔비디아 실적·앤트로픽 상장 주시",
-        "source": "연합뉴스",
+        "headline": "\"하락장, 연금 계좌 적립식 투자로 버텨야\"…증권사 경험이 증명한 데이터",
+        "source": "뉴시스",
         "pubDate": "2026-11-15",
-        "pubTime": "06:00 KST",
-        "publishedAt": "2026-11-15T06:00:00+09:00",
+        "pubTime": "13:41 KST",
+        "publishedAt": "2026-11-15T13:41:00+09:00",
         "summary": [
-          "젠슨 황 엔비디아 CEO 사임 이후 경영 승계 불확실성이 부각되며 글로벌 AI·반도체 관련주의 투자심리 위축",
-          "13일 필라델피아 반도체지수 3.43% 하락, 엔비디아 2.01% 하락 등 기술주 전반의 변동성 확대",
-          "17일 엔비디아 실적발표에서 투자전략 지속 여부가 핵심 관전점으로 부상, AI 데이터센터 자금조달 위험에 주목"
+          "[서울=뉴시스]이준형 인턴 기자 = 최근 모든 자산 시장이 동반 하락하는 극심한 변동성 장세 속에서 자산을 지키는 해법으로 '연금 계좌를 통한 적립식 자산 배분'이 제시됐다. 14일 유튜브 채널 '신사임당'에 출연한 박동호(박곰희) 작가는 최근 채권, 금, 주식 등 모든 자산이 순차적으로 조정을 받는 시장 상황을 진단하며 \"이때 돈을 벌 수 있다는 생각은 우리의 욕심이며, 결국 하락을 받아들이고 시장 안에 머"
         ],
-        "summary_mode": "source_digest",
-        "insight": "엔비디아 의존 GPU·데이터센터 금융의 장기 공급계약·투자집행·자금조달 리스크 점검",
-        "reporter": "황철환 기자",
-        "url": "https://www.yna.co.kr/view/AKR20261113177200008",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "젠슨 황 여파에 美 '칩 규제' 칼바람…중국 \"희토류 맞불\"",
-        "source": "한국경제",
-        "pubDate": "2026-11-14",
-        "pubTime": "14:08 KST",
-        "publishedAt": "2026-11-14T14:08:00+09:00",
-        "summary": [
-          "미중 무역전쟁 과정에서 희토류 수출 통제와 반도체 수출 규제가 핵심 무기로 자리잡음",
-          "트럼프 행정부 출범 이후 중국 희토류 맞불과 미국 칩 규제 강화가 양측 전략의 핵심 배경",
-          "대중국 반도체 규제와 희토류 대응이 글로벌 반도체 공급망과 기술 경쟁에 직접적 영향"
-        ],
-        "summary_mode": "ai_summary",
+        "summary_mode": "source_excerpt",
         "insight": "",
         "reporter": "",
-        "url": "https://www.hankyung.com/article/2026111464557",
+        "url": "https://www.newsis.com/view/NISX20261115_0003868461",
         "edition": "0730",
         "editionLabel": "07:30"
       }
-    ]
+    ],
+    "sto": [
+      {
+        "top": true,
+        "headline": "스테이블코인 카드 결제, 월 13억달러 돌파… 1년 새 3배 성장",
+        "source": "파이낸셜뉴스",
+        "pubDate": "2026-11-15",
+        "pubTime": "18:56 KST",
+        "publishedAt": "2026-11-15T18:56:00+09:00",
+        "summary": [
+          "15일 결제 데이터 분석업체인 페이먼트스캔 자료에 따르면 이 업체가 추적하는 스테이블코인 연계 카드의... 이어 지난해 6월에는 원화 스테이블코인 발행을 허용하는 디지털자산기본법안이 발의됐지만 1년 넘도록"
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.fnnews.com/news/202611151854452362",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "productive": [
+      {
+        "top": true,
+        "headline": "윤종원 후보, 혁신기업에 모험자본 1.5조 공급 경험···시중은행 공감...",
+        "source": "한국금융신문",
+        "pubDate": "2026-11-16",
+        "pubTime": "07:02 KST",
+        "publishedAt": "2026-11-16T07:02:00+09:00",
+        "summary": [
+          "기업은행장으로서 재임 기간 동안 중소기업대출을 확대하는 동시에 혁신기업에 1조 5000억원의 모험자본을 공급한 성과가 있어 은행권의 생산적 금융 전환을 지원할 수 있다는 기대도 나온다. 다만 시중은행 경영"
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.fntimes.com/html/view.php?ud=202611152044599560b4a7c6999c_18",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "growthfund": [],
+    "other": []
   }
 }

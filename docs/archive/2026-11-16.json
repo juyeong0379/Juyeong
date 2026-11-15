@@ -1,0 +1,211 @@
+{
+  "generated_at": "2026-11-16 07:11 KST",
+  "last_edition": "0730",
+  "editions_completed": [
+    "0730"
+  ],
+  "reports": [
+    {
+      "id": "report-1",
+      "title": "임팩트투자 생태계 현황과 과제",
+      "source": "자본시장연구원",
+      "date": "2026-10-26",
+      "url": "https://www.kcmi.re.kr/report/report_view?report_no=2341",
+      "type": "조사보고서",
+      "related_article_urls": [
+        "https://www.fntimes.com/html/view.php?ud=202611152044599560b4a7c6999c_18"
+      ]
+    },
+    {
+      "id": "report-2",
+      "title": "테마형 ETF 확산과 과제",
+      "source": "자본시장연구원",
+      "date": "2026-11-02",
+      "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6875&syear=2026&zcd=002001016&zno=1944",
+      "type": "자본시장포커스",
+      "related_article_urls": []
+    }
+  ],
+  "sections": [
+    {
+      "key": "ecm",
+      "no": "01",
+      "emoji": "📈",
+      "label": "ECM",
+      "desc": "IPO·유상증자·메자닌·블록딜"
+    },
+    {
+      "key": "corp",
+      "no": "02",
+      "emoji": "🏦",
+      "label": "기업금융",
+      "desc": "DCM·회사채·기업자금 조달"
+    },
+    {
+      "key": "ma",
+      "no": "03",
+      "emoji": "🤝",
+      "label": "M&A·인수금융",
+      "desc": "M&A·경영권 매각·PEF·인수금융"
+    },
+    {
+      "key": "re",
+      "no": "04",
+      "emoji": "🏢",
+      "label": "부동산",
+      "desc": "부동산PF·리츠·상업용부동산"
+    },
+    {
+      "key": "infra",
+      "no": "05",
+      "emoji": "⚡",
+      "label": "인프라",
+      "desc": "데이터센터·전력·재생에너지·민자사업"
+    },
+    {
+      "key": "hana",
+      "no": "06",
+      "emoji": "🏛️",
+      "label": "하나금융그룹",
+      "desc": "하나금융지주·하나은행·하나증권 IB"
+    },
+    {
+      "key": "peer",
+      "no": "07",
+      "emoji": "🏙️",
+      "label": "경쟁사",
+      "desc": "국내외 금융사 IB 전략·주선 경쟁"
+    },
+    {
+      "key": "sto",
+      "no": "08",
+      "emoji": "🔗",
+      "label": "STO",
+      "desc": "토큰증권·디지털증권 제도 및 인프라"
+    },
+    {
+      "key": "productive",
+      "no": "09",
+      "emoji": "🌱",
+      "label": "생산적금융",
+      "desc": "모험자본·성장산업·생산적금융 정책"
+    },
+    {
+      "key": "growthfund",
+      "no": "10",
+      "emoji": "🏦",
+      "label": "국민성장펀드",
+      "desc": "국민성장펀드 정책·조성·투자·집행·운용·출자"
+    },
+    {
+      "key": "other",
+      "no": "11",
+      "emoji": "🌍",
+      "label": "기타",
+      "desc": "글로벌 경제·산업·정책·AI 및 지정학적 핵심 이슈"
+    }
+  ],
+  "categories": {
+    "ecm": [],
+    "corp": [
+      {
+        "top": true,
+        "headline": "[Invest]'블루쓰나미'에 AI 투자도 금리도 흔들…국내 채권시장 셈법 복...",
+        "source": "인베스트조선",
+        "pubDate": "2026-11-16",
+        "pubTime": "07:02 KST",
+        "publishedAt": "2026-11-16T07:02:00+09:00",
+        "summary": [
+          "AI 투자 둔화가 성장 우려를 자극해 국채금리를 끌어내리는 한편, 관련 회사채 공급 확대는 국채 수요를 잠식할 수 있는 상반된 요인으로 작용하는 셈이다.블루쓰나미 이후 미국의 재정정책도 당초 시장의 기대와는 다른"
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/15/2026111580033.html",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "ma": [],
+    "re": [],
+    "infra": [
+      {
+        "top": true,
+        "headline": "찬바람 맞은 AI 투자…데이터센터 건설 관련주 5600조원 증발",
+        "source": "아시아경제",
+        "pubDate": "2026-11-15",
+        "pubTime": "18:52 KST",
+        "publishedAt": "2026-11-15T18:52:00+09:00",
+        "summary": [
+          "물리적 인프라를 공급하는 전통 산업 및 에너지 기업 주식을 앞다퉈 사들였다. 그러나 지난 6월을 기점으로... 그는 \"헤지펀드와 이야기를 나누다 보면 이제는 모든 종목이 성장주라는 생각이 끝없이 등장했다. 물론"
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://view.asiae.co.kr/article/2026111518491431012",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "hana": [],
+    "peer": [
+      {
+        "top": true,
+        "headline": "\"하락장, 연금 계좌 적립식 투자로 버텨야\"…증권사 경험이 증명한 데이터",
+        "source": "뉴시스",
+        "pubDate": "2026-11-15",
+        "pubTime": "13:41 KST",
+        "publishedAt": "2026-11-15T13:41:00+09:00",
+        "summary": [
+          "[서울=뉴시스]이준형 인턴 기자 = 최근 모든 자산 시장이 동반 하락하는 극심한 변동성 장세 속에서 자산을 지키는 해법으로 '연금 계좌를 통한 적립식 자산 배분'이 제시됐다. 14일 유튜브 채널 '신사임당'에 출연한 박동호(박곰희) 작가는 최근 채권, 금, 주식 등 모든 자산이 순차적으로 조정을 받는 시장 상황을 진단하며 \"이때 돈을 벌 수 있다는 생각은 우리의 욕심이며, 결국 하락을 받아들이고 시장 안에 머"
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261115_0003868461",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "sto": [
+      {
+        "top": true,
+        "headline": "스테이블코인 카드 결제, 월 13억달러 돌파… 1년 새 3배 성장",
+        "source": "파이낸셜뉴스",
+        "pubDate": "2026-11-15",
+        "pubTime": "18:56 KST",
+        "publishedAt": "2026-11-15T18:56:00+09:00",
+        "summary": [
+          "15일 결제 데이터 분석업체인 페이먼트스캔 자료에 따르면 이 업체가 추적하는 스테이블코인 연계 카드의... 이어 지난해 6월에는 원화 스테이블코인 발행을 허용하는 디지털자산기본법안이 발의됐지만 1년 넘도록"
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.fnnews.com/news/202611151854452362",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "productive": [
+      {
+        "top": true,
+        "headline": "윤종원 후보, 혁신기업에 모험자본 1.5조 공급 경험···시중은행 공감...",
+        "source": "한국금융신문",
+        "pubDate": "2026-11-16",
+        "pubTime": "07:02 KST",
+        "publishedAt": "2026-11-16T07:02:00+09:00",
+        "summary": [
+          "기업은행장으로서 재임 기간 동안 중소기업대출을 확대하는 동시에 혁신기업에 1조 5000억원의 모험자본을 공급한 성과가 있어 은행권의 생산적 금융 전환을 지원할 수 있다는 기대도 나온다. 다만 시중은행 경영"
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.fntimes.com/html/view.php?ud=202611152044599560b4a7c6999c_18",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "growthfund": [],
+    "other": []
+  }
+}
