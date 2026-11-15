@@ -19,6 +19,7 @@ TRUSTED = {
     "kiri.or.kr": "보험연구원",
     "fsc.go.kr": "금융위원회",
     "korea.kr": "대한민국 정책브리핑",
+    "hanaw.com": "하나증권",
 }
 REPORT_WORDS = re.compile(r"보고서|이슈|리서치|금융시장 동향|연구|분석|전망|브리프|포커스|정책자료")
 NO_REPORT = re.compile(r"블로그|카페|위키|뉴스기사|연구원 소개|공지사항|채용|홈페이지|검색결과|전체보기|정책브리핑 홈페이지")
@@ -38,6 +39,13 @@ GROUPS = {
 # Existing verified institutional report pages. They remain eligible only
 # while sufficiently recent and relevant to the current day's news.
 SEEDS = [
+    {
+        "title": "은행 Weekly 2026.11.16",
+        "source": "하나증권", "date": "2026-11-16",
+        "url": "https://file.hanaw.com/download/research/FileServer/WEB/industry/industry/2026/11/15/Bank_Weekly_20261116.pdf",
+        "categories": ["peer", "corp", "hana", "other"],
+        "type": "증권사 업종 보고서",
+    },
     {
         "title": "2026년 10월 금융시장 동향",
         "source": "한국은행",
