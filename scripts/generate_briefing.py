@@ -767,6 +767,60 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
                 if len(scored) >= target_limit:
                     break
 
+    # Last-resort SOURCE PREVIEW (not a fabricated article summary).
+    # If paywalls/robot blocking prevent fetching body and a news-specific
+    # AI filter rejects every meaningful story, publish clearly labelled
+    # extractive source-preview text, never pretend it is a 3-point digest.
+    # One preview must NOT outrank source-verified three-point summaries.
+    if len(scored) < target_limit:
+        preview_candidates = [
+            c for c in eligible_candidates
+            if not any(duplicate(c, old) for old in scored)
+            and len(re.sub(r"\s+", " ", c.get("description", "")).strip()) >= 65
+            and not is_personnel_only(c.get("title", ""))
+            and not SHORT_NEWS_PATTERN.search(c.get("title", ""))
+        ]
+
+        def preview_rank(c):
+            title = c.get("title", "")
+            desc = c.get("description", "")
+            high_signal = re.search(
+                r"IPO|공모|상장|청약|유상증자|주관|기업대출|회사채|"
+                r"인수금융|M&A|매각|인수|PF|리츠|데이터센터|GPU|"
+                r"전력망|투자|주선|실적|종투사|발행어음|금융지주|"
+                r"STO|토큰증권|스테이블코인|정책금융|생산적금융|"
+                r"국민성장펀드|규제|제도|승인|집행|펀드|AI", title, re.I)
+            return (35 if high_signal else 0) + min(len(desc), 180) / 20 + (
+                9 if c.get("source") in PREFERRED_IB_OUTLETS else 0)
+
+        preview_candidates.sort(key=preview_rank, reverse=True)
+        for c in preview_candidates:
+            title = c["title"]
+            desc = re.sub(r"\s+", " ", c["description"]).strip()
+            if meta["key"] == "other" and not re.search(
+                r"금융시장|거시|AI|반도체|엔비디아|금리|미중|관세|수출|"
+                r"산업|데이터센터|경제|투자|무역", title + " " + desc, re.I):
+                continue
+            # Avoid listing PR-only or personal announcements as meaningful news.
+            if re.search(
+                r"임원\s*인사|기부|봉사|캠페인|홍보대사|사생활|"
+                r"불륜|화보|팬미팅|광고모델|기념식|지점\s*오픈", title):
+                continue
+            preview = desc[:230].rstrip(" .,;")
+            if len(preview) < 65:
+                continue
+            scored.append({
+                **c, "summary": [preview],
+                "summary_mode": "source_excerpt",
+                "insight": "", "reporter": "",
+                "score": 41 + preview_rank(c),
+                "hana_view": "neutral",
+            })
+            scored = deduplicate(sorted(scored, key=lambda x: x["score"], reverse=True))
+            print(f"  [추가 원문 후보] {meta['key']}: 출처 제공 기사 설명만 게시 | {title[:65]}")
+            if len(scored) >= target_limit:
+                break
+
     if meta["key"] == "hana":
         # Group briefing editorial mix: 2 grounded positives + 1 objectively
         # supported risk/challenge. Never fill a missing side with old articles.
@@ -803,14 +857,17 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
     # The vetted model response is the only source; source-only digest has no note.
     for item in top:
         item["insight"] = item.get("insight","") if item.get("summary_mode")=="ai_summary" else ""
-    # Only publish fully supported 3-point summaries, never a chopped headline
-    # or search-description split masquerading as analysis.
+    # Label 1-point source excerpts transparently when full text is
+    # unavailable; AI/source digests still require three verified points.
     top=[item for item in deduplicate(top)
          if isinstance(item.get("summary"),list)
-         and len(item["summary"])==3
-         and item.get("summary_mode") not in ("source_excerpt","preview_digest")
-         and (item.get("summary_mode")=="ai_summary"
-              or validate_digest(item["title"],item["summary"]))]
+         and ((item.get("summary_mode") == "source_excerpt"
+               and len(item["summary"]) == 1
+               and len(item["summary"][0]) >= 65)
+              or (len(item["summary"]) == 3
+                  and item.get("summary_mode") in ("ai_summary", "source_digest")
+                  and (item.get("summary_mode") == "ai_summary"
+                       or validate_digest(item["title"],item["summary"]))))]
     used_urls.update(item["url"] for item in top)
     print(f"  → {len(top)}건 선정")
 
