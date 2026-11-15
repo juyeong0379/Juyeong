@@ -36,6 +36,7 @@ from news_quality import duplicate, validate_digest, deduplicate, numeric_claims
 from news_materiality import is_material_news
 from insight_policy import accept_insight
 from report_sources import collect_reports
+from rss_sources import recent_publisher_news
 from briefing_windows import (edition_for_run, edition_window, in_edition_window,
                               in_day_window, edition_for_published,
                               EDITION_LABELS, EDITION_ORDER, PER_EDITION_LIMIT,
@@ -248,7 +249,7 @@ def fetch_naver_news(query: str, edition: str = None) -> list:
     return out
 
 
-def collect_candidates(keywords: list, limit: int = None, edition: str = None) -> list:
+def collect_candidates(keywords: list, limit: int = None, edition: str = None, section: str = None) -> list:
     seen_urls, seen_titles, items = set(), set(), []
     for kw in keywords:
         try:
@@ -264,6 +265,26 @@ def collect_candidates(keywords: list, limit: int = None, edition: str = None) -
             seen_titles.add(key_t)
             items.append(it)
         time.sleep(0.2)
+    # Independent, publisher-original RSS supplements narrow Naver queries.
+    # RSS records must satisfy the SAME 24-hour KST publication filter.
+    if section:
+        rss_added = 0
+        now = datetime.now(KST)
+        for it in recent_publisher_news():
+            if not in_edition_window(it["pub_dt"], now, edition or edition_for_run(now)):
+                continue
+            if not sector_matches(section, it["title"], it["description"]):
+                continue
+            if SHORT_NEWS_PATTERN.search(it["title"]):
+                continue
+            key_t = normalize_title(it["title"])
+            if it["url"] in seen_urls or key_t in seen_titles:
+                continue
+            seen_urls.add(it["url"])
+            seen_titles.add(key_t)
+            items.append(it)
+            rss_added += 1
+        print(f"  [출처 교차검색] {section}: RSS 원문 직접 발행 뉴스 추가 {rss_added}건")
     items.sort(key=lambda x: x["pub_dt"], reverse=True)  # 최신순으로 자르기
     return items[:limit] if limit else items
 
@@ -645,7 +666,7 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
     if target_limit <= 0:
         return []
     print(f"▶ [{meta['no']}] {meta['label']} 수집 중...")
-    collected = collect_candidates(meta["keywords"], edition=edition)
+    collected = collect_candidates(meta["keywords"], edition=edition, section=meta["key"])
     matching = [
         c for c in collected
         if sector_matches(meta["key"], c["title"], c.get("description", ""))
