@@ -1,16 +1,16 @@
 {
-  "attempted_at": "2026-11-15 08:43 KST",
+  "attempted_at": "2026-11-15 16:19 KST",
   "state": "published",
-  "run_url": "https://github.com/juyeong0379/Juyeong/actions/runs/43654353082",
+  "run_url": "https://github.com/juyeong0379/Juyeong/actions/runs/43689139025",
   "steps": {
     "GENERATE": "success",
     "VALIDATE": "success",
     "PUBLISH": "success",
     "PAGES": "success"
   },
-  "data_generated_at": "2026-11-15 08:43 KST",
+  "data_generated_at": "2026-11-15 16:19 KST",
   "article_counts": {
-    "ecm": 1,
+    "ecm": 2,
     "corp": 2,
     "ma": 1,
     "re": 1,
