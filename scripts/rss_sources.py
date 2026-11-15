@@ -29,9 +29,14 @@ RSS_FEEDS = (
     "https://nwww.newsis.com/RSS/bank.xml",
     "https://nwww.newsis.com/RSS/industry.xml",
     "https://nwww.newsis.com/RSS/international.xml",
+    "https://news.dealsitetv.com/rss/011000.xml",  # 증권
+    "https://news.dealsitetv.com/rss/016000.xml",  # STO/디지털
+    "https://news.dealsitetv.com/rss/005000.xml",  # 금융
+    "https://news.dealsitetv.com/rss/020000.xml",  # 부동산
+    "https://news.dealsitetv.com/rss/001000.xml",  # 산업
 )
 
-TRUSTED_HOSTS = ("hankyung.com", "yna.co.kr", "edaily.co.kr", "newsis.com")
+TRUSTED_HOSTS = ("hankyung.com", "yna.co.kr", "edaily.co.kr", "newsis.com", "dealsitetv.com")
 XML_DATE = ("pubDate", "published", "updated")
 
 
@@ -103,7 +108,8 @@ def parse_rss(content, feed_url):
             "url": url.strip(), "pub_dt": date,
             "source": ("한국경제" if "hankyung" in url else
                        "연합뉴스" if "yna.co.kr" in url else
-                       "뉴시스" if "newsis.com" in url else "이데일리"),
+                       "뉴시스" if "newsis.com" in url else
+                       "딜사이트경제TV" if "dealsitetv.com" in url else "이데일리"),
             "reporter": "", "matched_keyword": "publisher_rss",
         })
     return articles
@@ -123,7 +129,7 @@ def _fetch(url):
 
 @lru_cache(maxsize=1)
 def recent_publisher_news():
-    """13 trusted publisher feeds checked concurrently; no news invented."""
+    """Trusted original-source feeds checked concurrently; no news invented."""
     found = []
     with ThreadPoolExecutor(max_workers=5) as pool:
         tasks = [pool.submit(_fetch, url) for url in RSS_FEEDS]
