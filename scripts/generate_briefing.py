@@ -47,7 +47,7 @@ MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
 BATCH_SIZE = 8
 
 TOP_N_PER_SECTION = PER_EDITION_LIMIT  # 오전 07:30 일괄 브리핑 카테고리별 최대 3건
-NAVER_PER_KEYWORD = 30     # 키워드당 네이버에서 가져올 기사 수 (언론사 필터 전)
+NAVER_PER_KEYWORD = 100    # 검색어당 최근 100건까지 확인해 24시간 기사 누락 축소
 MAX_CANDIDATES = 30        # 최근 24시간의 심층 후보 검토 (선정 점수 기준 유지)
 MIN_DEPTH = 67
 MIN_QUALITY = 68
@@ -252,12 +252,18 @@ def fetch_naver_news(query: str, edition: str = None) -> list:
 
 def collect_candidates(keywords: list, limit: int = None, edition: str = None, section: str = None) -> list:
     seen_urls, seen_titles, items = set(), set(), []
-    for kw in keywords:
+    from concurrent.futures import ThreadPoolExecutor
+    # Source search can be slow; safely parallelize Naver keyword discovery
+    # without changing article release-date or dedup requirements.
+    def retrieve(kw):
         try:
-            fetched = fetch_naver_news(kw, edition=edition)
-        except Exception as e:  # 키워드 하나가 실패해도 전체는 계속 진행
+            return kw, fetch_naver_news(kw, edition=edition)
+        except Exception as e:
             print(f"  [경고] '{kw}' 검색 실패, 건너뜁니다: {e}")
-            continue
+            return kw, []
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        results = list(pool.map(retrieve, keywords))
+    for kw, fetched in results:
         for it in fetched:
             key_t = normalize_title(it["title"])
             if not it["url"] or it["url"] in seen_urls or key_t in seen_titles:
@@ -265,7 +271,6 @@ def collect_candidates(keywords: list, limit: int = None, edition: str = None, s
             seen_urls.add(it["url"])
             seen_titles.add(key_t)
             items.append(it)
-        time.sleep(0.2)
     # Independent, publisher-original RSS supplements narrow Naver queries.
     # RSS records must satisfy the SAME 24-hour KST publication filter.
     if section:
