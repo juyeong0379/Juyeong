@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16 07:11 KST",
+  "generated_at": "2026-11-16 07:16 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -13,16 +13,18 @@
       "url": "https://www.kcmi.re.kr/report/report_view?report_no=2341",
       "type": "조사보고서",
       "related_article_urls": [
-        "https://www.fntimes.com/html/view.php?ud=202611152044599560b4a7c6999c_18"
+        "https://www.fntimes.com/html/view.php?ud=202611152044599560b4a7c6999c_18",
+        "https://www.mt.co.kr/future/2026/11/15/2026111514283432766",
+        "https://www.sedaily.com/article/20114491?ref=naver"
       ]
     },
     {
       "id": "report-2",
-      "title": "테마형 ETF 확산과 과제",
-      "source": "자본시장연구원",
-      "date": "2026-11-02",
-      "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6875&syear=2026&zcd=002001016&zno=1944",
-      "type": "자본시장포커스",
+      "title": "은행 Weekly 2026.11.16",
+      "source": "하나증권",
+      "date": "2026-11-16",
+      "url": "https://file.hanaw.com/download/research/FileServer/WEB/industry/industry/2026/11/15/Bank_Weekly_20261116.pdf",
+      "type": "증권사 업종 보고서",
       "related_article_urls": []
     }
   ],
@@ -106,7 +108,59 @@
     }
   ],
   "categories": {
-    "ecm": [],
+    "ecm": [
+      {
+        "top": true,
+        "headline": "[엠비디 IPO] 공모가 27% 낮춘 엠비디…기관 925곳 의무보유 제로",
+        "source": "딜사이트",
+        "pubDate": "2026-11-16",
+        "pubTime": "07:04 KST",
+        "publishedAt": "2026-11-16T07:04:00+09:00",
+        "summary": [
+          "추진하는 엠비디가 희망 공모가 밴드 하단보다 27% 낮은 가격에 공모가를 확정했는데 기관투자가 925곳이... 13일 금융감독원에 따르면 엠비디는 최근 기관투자가 대상 수요예측을 거쳐 공모가를 7000원으로 확정했다. 당초..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://dealsite.co.kr/articles/172769",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[더벨][에이엔에이치스트럭쳐 IPO] 대주주 지분 3년 락업, 초기 매물 부...",
+        "source": "더벨",
+        "pubDate": "2026-11-16",
+        "pubTime": "07:02 KST",
+        "publishedAt": "2026-11-16T07:02:00+09:00",
+        "summary": [
+          "에이엔에이치스트럭쳐는 지난 2019년과 지난해 프리 IPO 투자를 유치했다. 상환전환우선주(RCPS)를 발행해... 지난해 프리 IPO에 참여한 엠더블유스톤엔에이치뉴프론티어 조합 등은 주당 9504원에 투자했다. 모두 희망..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611120904548180107032",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[더벨][코스닥 상장사 매물 분석] 디에스케이, 172억 걸린 딜 성사 변수...",
+        "source": "더벨",
+        "pubDate": "2026-11-16",
+        "pubTime": "07:02 KST",
+        "publishedAt": "2026-11-16T07:02:00+09:00",
+        "summary": [
+          "디에스케이는 지난 1995년 설립돼 2009년 코스닥 시장에 상장한 법인이다. 이차전지 장비, 카메라모듈 장비 등을 제작, 판매하는 사업을 주 사업으로 영위하고 있다. 디에스케이의 매각은 지난해부터 진행되고 있다. 구주..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611121414408040101764",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
     "corp": [
       {
         "top": true,
@@ -126,11 +180,80 @@
         "editionLabel": "07:30"
       }
     ],
-    "ma": [],
+    "ma": [
+      {
+        "top": true,
+        "headline": "[LP Scope] 기업은행, 중소기업승계 M&A에 3년간 1.5조 투입한다",
+        "source": "딜사이트",
+        "pubDate": "2026-11-16",
+        "pubTime": "07:12 KST",
+        "publishedAt": "2026-11-16T07:12:00+09:00",
+        "summary": [
+          "자녀에게 경영권을 물려주기 어렵거나 전문경영인을 확보하지 못하면 사업 기반이 건실하더라도 매각이나 폐업을 고민해야 한다. 기업승계형 M&A는 이러한 기업을 PEF 운용사가 인수해 경영권을 이어받고 사업의..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://dealsite.co.kr/articles/172751",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[Invest]조원태 우호펀드, 만기 없앴다…한진칼 경영권 분쟁 장기전 대비",
+        "source": "인베스트조선",
+        "pubDate": "2026-11-16",
+        "pubTime": "07:00 KST",
+        "publishedAt": "2026-11-16T07:00:00+09:00",
+        "summary": [
+          "이번 유진그로쓰펀드의 계약 변경으로 이마트의 직접 보유분을 포함한 두 펀드 계열의 약 9% 우호지분 모두 만기 도래에 따른 일괄 매각 압박에서 벗어나게 됐다.이는 한진칼을 둘러싼 경영권 분쟁이 장기화할 가능성이..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/15/2026111580037.html",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "출판 콘텐츠·식품 유통 매물…교육 기업 인수 수요[M&A 딜보드]",
+        "source": "이데일리",
+        "pubDate": "2026-11-15",
+        "pubTime": "10:01 KST",
+        "publishedAt": "2026-11-15T10:01:00+09:00",
+        "summary": [
+          "매주 중소기업 M&A 매칭 플랫폼 리스팅(LISTING)과 함께 국내 M&A 시장에 새로 등록된 매물과 인수 수요를... 희망 매각가는 30억원대다. 외형은 크지 않지만 이익의 질이 좋아, 안정적인 현금창출원과 함께 콘텐츠 자산을..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.edaily.co.kr/News/Read?newsId=01305446645646048&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
     "re": [],
     "infra": [
       {
         "top": true,
+        "headline": "美 AI 데이터센터 규제 오해와 진실…\"짓지 말라 아닌 돈 더 내라\"",
+        "source": "아시아경제",
+        "pubDate": "2026-11-15",
+        "pubTime": "19:02 KST",
+        "publishedAt": "2026-11-15T19:02:00+09:00",
+        "summary": [
+          "빅테크의 데이터센터 투자 여력은 향후 매출 추이에 따라 결정될 것으로 보인다. KB증권에 따르면 아마존... 젠슨 황 퇴진…공급 계약·고객 금융지원에 촉각 젠슨 황 CEO의 퇴진은 투자자들의 또 다른 불안 요인이다"
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://view.asiae.co.kr/article/2026111314391974839",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
         "headline": "찬바람 맞은 AI 투자…데이터센터 건설 관련주 5600조원 증발",
         "source": "아시아경제",
         "pubDate": "2026-11-15",
@@ -145,12 +268,63 @@
         "url": "https://view.asiae.co.kr/article/2026111518491431012",
         "edition": "0730",
         "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "美 연준, AI 데이터센터 '순환금융' 경고…첨단 컴퓨팅 부채 발행 6800억...",
+        "source": "디지털데일리",
+        "pubDate": "2026-11-15",
+        "pubTime": "09:04 KST",
+        "publishedAt": "2026-11-15T09:04:00+09:00",
+        "summary": [
+          "보고서는 첨단 컴퓨팅 인프라 자금 조달이 회사채 중심에서 사모 부채, 구조화 금융, 프로젝트파이낸싱(PF)이 결합한 방식으로 바뀌고 있다고 설명했다. 대형 클라우드 기업이 외부 데이터센터 개발사와 장기..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.ddaily.co.kr/page/view/2026111509030426341",
+        "edition": "0730",
+        "editionLabel": "07:30"
       }
     ],
     "hana": [],
     "peer": [
       {
         "top": true,
+        "headline": "변동성 장세 속 효과적인 대기자금 관리…다시 주목받는 ‘발행어음’",
+        "source": "한국경제",
+        "pubDate": "2026-11-16",
+        "pubTime": "06:02 KST",
+        "publishedAt": "2026-11-16T06:02:00+09:00",
+        "summary": [
+          "발행어음은 자기자본 4조 원 이상의 초대형 투자은행(IB)으로 지정된 증권사가 발행할 수 있는 만기 1년... KB금융지주 계열 증권사인 KB증권은 신용등급 AA+를 보유하고 있다. KB증권은 수시식·약정식..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://magazine.hankyung.com/money/article/202610141265c",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "한투, 발행어음·IMA로 조달 경쟁력…회사채는 차환·만기 관리 [빅3 증...",
+        "source": "한국금융신문",
+        "pubDate": "2026-11-16",
+        "pubTime": "00:02 KST",
+        "publishedAt": "2026-11-16T00:02:00+09:00",
+        "summary": [
+          "연말을 앞둔 가운데 금리상승기 속 대형 증권사의 조달구조를 점검한다. 발행어음·IMA(종합투자계좌)... 증권사의 부채성 조달은 발행어음, CP·전단채, 회사채, 차입금 등이 해당된다. 이 때 단기금융업무 인가를 받은..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.fntimes.com/html/view.php?ud=20261113213206130dd55077bc2_18",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
         "headline": "\"하락장, 연금 계좌 적립식 투자로 버텨야\"…증권사 경험이 증명한 데이터",
         "source": "뉴시스",
         "pubDate": "2026-11-15",
@@ -170,6 +344,40 @@
     "sto": [
       {
         "top": true,
+        "headline": "\"플룸, 토큰화증권 금융회사로 확장…온체인으로 자금 끌어올 것\" [인터...",
+        "source": "이데일리",
+        "pubDate": "2026-11-16",
+        "pubTime": "07:11 KST",
+        "publishedAt": "2026-11-16T07:11:00+09:00",
+        "summary": [
+          "토큰증권(STO) 규제체계가 어떻게 발전하고 있는지를 면밀히 살펴보고 있고, 한국 기업들과 협력할 수 있는... 우리는 한국의 토큰증권(STO) 규제체계가 어떻게 발전하고 있는지를 면밀히 살펴보고 있다. 플룸은 한국..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.edaily.co.kr/News/Read?newsId=01239846645646376&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "KB증권, 자체 IB 발행 플랫폼 속도…정형증권 토큰화 중심 [날개 편 토큰...",
+        "source": "한국금융신문",
+        "pubDate": "2026-11-16",
+        "pubTime": "00:02 KST",
+        "publishedAt": "2026-11-16T00:02:00+09:00",
+        "summary": [
+          "내년 2월 토큰증권(STO) 시행을 앞두고 정부가 조각투자를 넘어 정형증권까지 모든 증권의 토큰화라는 정책 로드맵을 발표하면서, 증권사도 대응 속도가 빨라지고 있다. 글로벌 시장은 STO를 넘어 RWA(실물자산 토큰화)..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.fntimes.com/html/view.php?ud=202611132128495240dd55077bc2_18",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
         "headline": "스테이블코인 카드 결제, 월 13억달러 돌파… 1년 새 3배 성장",
         "source": "파이낸셜뉴스",
         "pubDate": "2026-11-15",
@@ -203,9 +411,95 @@
         "url": "https://www.fntimes.com/html/view.php?ud=202611152044599560b4a7c6999c_18",
         "edition": "0730",
         "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "코스닥벤처펀드, 반년새 1000억 이탈",
+        "source": "서울경제",
+        "pubDate": "2026-11-15",
+        "pubTime": "17:32 KST",
+        "publishedAt": "2026-11-15T17:32:00+09:00",
+        "summary": [
+          "내년에는 코스닥 우량기업을 별도로 구분하는 세그먼트 승강제도 도입될 예정이다. 다만 ‘큰손’ 자금이 우량기업에 집중되면 중소·벤처기업으로 투자 수요가 확산되는 효과는 제한적일 것이라는 우려도 공존한다."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.sedaily.com/article/20114491?ref=naver",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "130억·70억 잇단 잭팟…11월 둘째주 벤처투자 여기서 터졌다",
+        "source": "머니투데이",
+        "pubDate": "2026-11-15",
+        "pubTime": "16:00 KST",
+        "publishedAt": "2026-11-15T16:00:00+09:00",
+        "summary": [
+          "11월 2주차(9~13일) 국내 스타트업 투자시장은 바이오·헬스케어 분야가 주도했다. 심뇌혈관 영상진단 의료기기와 항노화 RNA(리보핵산) 치료제 등 기술집약형 기업에 대규모 자금이 유입됐다. 이 기간 투자유치 소식을"
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.mt.co.kr/future/2026/11/15/2026111514283432766",
+        "edition": "0730",
+        "editionLabel": "07:30"
       }
     ],
     "growthfund": [],
-    "other": []
+    "other": [
+      {
+        "top": true,
+        "headline": "[Invest]깐부회동 1년만에 젠슨 황 퇴장…GPU 26만장 약속은 어떻게 됐을...",
+        "source": "인베스트조선",
+        "pubDate": "2026-11-16",
+        "pubTime": "07:02 KST",
+        "publishedAt": "2026-11-16T07:02:00+09:00",
+        "summary": [
+          "관련업계 한 실무진은 \"당장은 젠슨 황 퇴장 자체보다도 엔비디아로부터 약속 받은 GPU 협력을 실제 산업 경쟁력으로 전환하는 게 중요해 보인다\"라며 \"국내 AI 인프라 구축 속도가 예상보다 더디다는 말이 많은데..."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/15/2026111580032.html",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "베선트 \"엔비디아 CEO 외부 영입해야\"…中 우회 수출 의혹 해명 촉구",
+        "source": "뉴시스",
+        "pubDate": "2026-11-16",
+        "pubTime": "03:12 KST",
+        "publishedAt": "2026-11-16T03:12:25+09:00",
+        "summary": [
+          "[서울=뉴시스]박미선 기자 = 스콧 베선트 미국 재무장관이 젠슨 황 전 최고경영자(CEO)의 불륜 스캔들로 혼란에 빠진 엔비디아에 외부 CEO 영입을 통한 대대적인 쇄신을 촉구했다. 중국에 대한 첨단 반도체 우회 수출 의혹과 관련해서도 열흘 내 해명을 요구하며 압박 수위를 높였다. 15일(현지 시간) 파이낸셜타임스(FT)에 따르면 베선트 장관은 이날 폭스뉴스와의 인터뷰에서 엔비디아의 차기 CEO 선임과 관련해"
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261116_0003868835",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "젠슨 황 스캔들 후폭풍…美 의회, 中 AI 반도체 수출 규제 속도",
+        "source": "뉴시스",
+        "pubDate": "2026-11-15",
+        "pubTime": "23:03 KST",
+        "publishedAt": "2026-11-15T23:03:54+09:00",
+        "summary": [
+          "[서울=뉴시스]박미선 기자 = 미국 의회가 젠슨 황 엔비디아 전 최고경영자(CEO)의 불륜 스캔들을 계기로 중국에 대한 첨단 인공지능(AI) 반도체 수출 규제를 강화하는 데 속도를 내고 있다. 14일(현지 시간) 파이낸셜타임스(FT)에 따르면 민주·공화 양당 의원들은 민감한 반도체의 해외 판매를 제한하고, 도널드 트럼프 행정부가 이미 승인한 수출도 의회가 재검토해 차단할 수 있게 하는 법안들을 추진하고 있다."
+        ],
+        "summary_mode": "source_excerpt",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261115_0003868807",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ]
   }
 }
