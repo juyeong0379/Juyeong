@@ -79,8 +79,11 @@ jobs:
       - name: 파이썬 코드 사전 검증
         if: steps.current.outputs.skip != 'true'
         run: |
-          python -m py_compile scripts/generate_briefing.py scripts/sector_rules.py scripts/news_quality.py
+          python -m py_compile scripts/generate_briefing.py scripts/sector_rules.py scripts/news_quality.py scripts/report_sources.py scripts/rss_sources.py
           python -m unittest discover -s scripts -p 'test_briefing_rules.py'
+          python -m unittest discover -s scripts -p 'test_report_sources.py'
+          python -m unittest discover -s scripts -p 'test_rss_sources.py'
+          python scripts/test_news_quality.py
 
       - name: 브리핑 생성 (뉴스 수집 + OpenAI 분석)
         id: generate
@@ -122,9 +125,19 @@ jobs:
               (now.date() - timedelta(days=1)).isoformat() + ".json"
           )
           previous_day = []
+          previous_report_urls = set()
           if prior_path.exists():
               older = json.loads(prior_path.read_text(encoding="utf-8"))
               previous_day = [a for group in older.get("categories", {}).values() for a in group]
+              previous_report_urls = {r.get("url") for r in older.get("reports", []) if r.get("url")}
+          report_urls = set()
+          for report in data.get("reports", []):
+              url = report.get("url", "")
+              if not url.startswith("https://") or url in previous_report_urls:
+                  raise RuntimeError("기관 보고서 원문 미검증 또는 전일 자료 반복")
+              if url in report_urls:
+                  raise RuntimeError("같은 보고서를 오늘 중복 게재")
+              report_urls.add(url)
 
           seen = []
           for section, group in data["categories"].items():
@@ -156,7 +169,11 @@ jobs:
                   if any(repeated_without_update(candidate, old) for old in seen):
                       raise RuntimeError(f"{section}: 당일 동일 이슈 중복")
                   seen.append(candidate)
-          print(f"정상: {today} | {len(seen)}건 | 07:30 기준 최근 24시간·중복 검증 완료")
+          insufficient = {key: len(group) for key, group in data["categories"].items() if len(group) < 2}
+          if insufficient:
+              print("::warning::카테고리별 2건 미달 (실제 기사가 없으면 임의 생성 금지): "
+                    + json.dumps(insufficient, ensure_ascii=False))
+          print(f"정상: {today} | {len(seen)}건 | 기관자료 {len(report_urls)}건 | 24시간·중복 검사 완료")
           PY
 
       - name: 결과 커밋 & 푸시
