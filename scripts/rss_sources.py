@@ -25,9 +25,13 @@ RSS_FEEDS = (
     "https://www.yna.co.kr/rss/industry.xml",
     "https://www.yna.co.kr/rss/market.xml",
     "http://rss.edaily.co.kr/edaily_news.xml",
+    "https://nwww.newsis.com/RSS/economy.xml",
+    "https://nwww.newsis.com/RSS/bank.xml",
+    "https://nwww.newsis.com/RSS/industry.xml",
+    "https://nwww.newsis.com/RSS/international.xml",
 )
 
-TRUSTED_HOSTS = ("hankyung.com", "yna.co.kr", "edaily.co.kr")
+TRUSTED_HOSTS = ("hankyung.com", "yna.co.kr", "edaily.co.kr", "newsis.com")
 XML_DATE = ("pubDate", "published", "updated")
 
 
@@ -97,8 +101,9 @@ def parse_rss(content, feed_url):
         articles.append({
             "title": title, "description": desc[:650],
             "url": url.strip(), "pub_dt": date,
-            "source": "한국경제" if "hankyung" in url else
-                      ("연합뉴스" if "yna.co.kr" in url else "이데일리"),
+            "source": ("한국경제" if "hankyung" in url else
+                       "연합뉴스" if "yna.co.kr" in url else
+                       "뉴시스" if "newsis.com" in url else "이데일리"),
             "reporter": "", "matched_keyword": "publisher_rss",
         })
     return articles
@@ -118,7 +123,7 @@ def _fetch(url):
 
 @lru_cache(maxsize=1)
 def recent_publisher_news():
-    """Eight trusted publisher feeds checked concurrently; no news invented."""
+    """13 trusted publisher feeds checked concurrently; no news invented."""
     found = []
     with ThreadPoolExecutor(max_workers=5) as pool:
         tasks = [pool.submit(_fetch, url) for url in RSS_FEEDS]
