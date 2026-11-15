@@ -66,6 +66,7 @@ KR_OUTLETS = {
     "thebell.co.kr": "더벨",
     "investchosun.com": "인베스트조선",
     "dealsite.co.kr": "딜사이트",
+    "dealsitetv.com": "딜사이트경제TV",
     "paxnetnews.com": "팍스넷뉴스",
     "dealbook.co.kr": "딜북",
     "dealbook.kr": "딜북",
