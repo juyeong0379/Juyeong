@@ -184,10 +184,12 @@ function matchesSearch(item){
 function articleCard(item){
   const hasPdf=Boolean(item.pdf);
   const matchedReport=REPORTS.find(r=>r.briefDate===item.date && r.related_article_urls.includes(item.url));
-  const excerptNote=item.summary_mode==="source_excerpt"?'<span class="source-note">🔎 원문 접근 제한 · 검색 설명문만 제공</span>':item.summary_mode==="source_digest"?'<span class="source-note">📄 원문 기반 개조식 요약</span>':item.summary_mode==="preview_digest"?'<span class="source-note">🔎 제목·검색 설명 기반 요약 (원문 접근 제한)</span>':"";
+  const excerptNote=item.summary_mode==="source_excerpt"?'<span class="source-note">🔎 원문 접근 제한 · 출처의 검색 설명 1줄만 제공 (3줄 요약 아님)</span>':item.summary_mode==="source_digest"?'<span class="source-note">📄 원문 기반 개조식 요약</span>':item.summary_mode==="preview_digest"?'<span class="source-note">🔎 제목·검색 설명 기반 요약 (원문 접근 제한)</span>':"";
   const reportIndicator=matchedReport?'<a class="report-marker" href="#refs" title="하단 관련 보고서 확인" aria-label="관련 연구 보고서">📑</a>':"";
   const categoryBadge=activeCat==="all"?'<span class="kind-badge">'+escapeHTML(CATEGORIES.find(c=>c.key===item.cat)?.name||item.cat)+'</span>':item.kind?'<span class="kind-badge">'+escapeHTML(item.kind)+'</span>':"";
-  const summaryLines=Array.from({length:3},(_,i)=>item.summary[i]?'<li>'+strong(item.summary[i])+'</li>':'<li class="summary-pad" aria-hidden="true"></li>').join('');
+  const summaryLines=item.summary_mode==="source_excerpt"
+    ? item.summary.slice(0,1).map(line=>'<li>'+strong(line)+'</li>').join('')
+    : Array.from({length:3},(_,i)=>item.summary[i]?'<li>'+strong(item.summary[i])+'</li>':'<li class="summary-pad" aria-hidden="true"></li>').join('');
   return `<article class="story ${item.kind?'gov':''}">
     <h3>${categoryBadge}${escapeHTML(item.title)}${reportIndicator}</h3>
     <ul class="summary">${summaryLines}</ul>
