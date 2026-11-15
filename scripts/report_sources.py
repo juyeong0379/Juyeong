@@ -70,6 +70,30 @@ SEEDS = [
         "categories": ["sto"],
         "type": "이슈보고서",
     },
+    {
+        "title": "투자판단에서의 핀플루언서 의존 실태와 규제 방안",
+        "source": "자본시장연구원", "date": "2026-11-11",
+        "url": "https://www.kcmi.re.kr/report/report_view?report_no=2350",
+        "categories": ["peer", "ecm", "sto"], "type": "이슈보고서",
+    },
+    {
+        "title": "전망공시의 현황과 특성 및 정보가치",
+        "source": "자본시장연구원", "date": "2026-10-30",
+        "url": "https://www.kcmi.re.kr/report/report_view?report_no=2344",
+        "categories": ["ecm", "peer", "corp"], "type": "이슈보고서",
+    },
+    {
+        "title": "미국 사모신용시장의 건전성, 유동성 및 시스템리스크",
+        "source": "자본시장연구원", "date": "2026-10-12",
+        "url": "https://www.kcmi.re.kr/report/report_view?report_no=2337",
+        "categories": ["corp", "ma", "peer"], "type": "이슈보고서",
+    },
+    {
+        "title": "기술특례상장기업의 성장을 위한 코스닥시장의 과제",
+        "source": "자본시장연구원", "date": "2026-11-02",
+        "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6883&syear=2026&zcd=002001016&zno=1944",
+        "categories": ["ecm", "productive", "peer"], "type": "자본시장포커스",
+    },
 ]
 
 def host_source(url):
@@ -161,50 +185,105 @@ def _topic_terms(report_title):
             terms += list(related)
     return terms
 
-def collect_reports(categories, now):
-    """Up to two distinct recent institution reports matching specific article themes."""
-    today=now.date()
-    candidates=SEEDS+search_institutional_reports(today)
-    scored=[]
-    for r in candidates:
+def previously_featured_report_urls(now, days=30):
+    """Collect report URLs by actual briefing date to prevent yesterday repeats."""
+    import json
+    from pathlib import Path
+
+    archive = Path(__file__).resolve().parents[1] / "docs" / "archive"
+    history = {}
+    for offset in range(1, days + 1):
+        day = (now.date() - timedelta(days=offset)).isoformat()
+        path = archive / (day + ".json")
+        if not path.exists():
+            continue
         try:
-            age=(today-datetime.strptime(r["date"],"%Y-%m-%d").date()).days
-        except (KeyError,ValueError):
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError, TypeError):
             continue
-        if not 0 <= age <= 45:
+        for report in payload.get("reports", []):
+            if not isinstance(report, dict):
+                continue
+            url = report.get("url", "").strip()
+            if url and url not in history:
+                history[url] = offset
+    return history
+
+
+def normalize_report_url(url):
+    """Match the canonical page URL, ignoring tracking fragments."""
+    from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
+    parts = urlsplit(str(url or ""))
+    params = [(k, v) for k, v in parse_qsl(parts.query) if not k.startswith("utm_")]
+    return urlunsplit((parts.scheme.lower(), parts.netloc.lower(),
+                       parts.path.rstrip("/"), urlencode(params), ""))
+
+
+def collect_reports(categories, now):
+    """Two different verified reports/day; never repeat the previous briefing."""
+    today = now.date()
+    prior = previously_featured_report_urls(now)
+    prior_normalized = {normalize_report_url(u): age for u, age in prior.items()}
+    candidates = SEEDS + search_institutional_reports(today)
+    scored = []
+    for report in candidates:
+        url = str(report.get("url", "")).strip()
+        source = host_source(url)
+        if source is None:
             continue
-        terms=_topic_terms(r["title"])
-        if not terms:
+        try:
+            age = (today - datetime.strptime(report["date"], "%Y-%m-%d").date()).days
+        except (KeyError, ValueError, TypeError):
             continue
-        matched_urls=[]
-        overlap=0
-        for key in r.get("categories",[]):
-            for story in categories.get(key,[]):
-                article_text=" ".join([story.get("headline",""),
-                                      *[str(x).replace("**","") for x in story.get("summary",[])]])
-                matched_words=[w for w in terms if w.casefold() in article_text.casefold()]
-                if not matched_words:
-                    continue
-                url=story.get("url")
-                if url:
-                    matched_urls.append(url)
-                    overlap+=min(3,len(matched_words))
+        if not 0 <= age <= 60:
+            continue
+        recent_use = prior_normalized.get(normalize_report_url(url), 999)
+        if recent_use == 1:
+            # A report must be visibly different from yesterday, regardless
+            # of whether it is the newest or previously highly scored.
+            continue
+        if recent_use <= 7:
+            # Prefer genuinely unfeatured research across the full week.
+            continue
+
+        terms = _topic_terms(report["title"])
+        matched_urls = []
+        overlap = 0
+        for key in report.get("categories", []):
+            for story in categories.get(key, []):
+                article_text = " ".join(
+                    [story.get("headline", "")] +
+                    [str(x).replace("**", "") for x in story.get("summary", [])]
+                )
+                matched = [term for term in terms if term.casefold() in article_text.casefold()]
+                if matched and story.get("url"):
+                    matched_urls.append(story["url"])
+                    overlap += min(3, len(matched))
         if not matched_urls:
+            # On a quiet day, a recent institution-owned strategic report may
+            # stand independently; do not recycle irrelevant links from news.
+            if not any(categories.get(key) for key in report.get("categories", [])):
+                continue
+        score = 85 - age + min(25, 5 * overlap)
+        if recent_use <= 30:
+            score -= 20  # avoid repeatedly selecting same older publication
+        scored.append((score, report, sorted(set(matched_urls))))
+
+    scored.sort(key=lambda x: x[0], reverse=True)
+    chosen = []
+    used = set()
+    for _, report, urls in scored:
+        url = normalize_report_url(report["url"])
+        if url in used:
             continue
-        scored.append((70-age+min(25,5*overlap),r,sorted(set(matched_urls))))
-    scored.sort(key=lambda x:x[0],reverse=True)
-    chosen=[]
-    used=set()
-    for score,r,urls in scored:
-        if r["url"] in used:
-            continue
-        used.add(r["url"])
+        used.add(url)
         chosen.append({
-            "id":"report-"+str(len(chosen)+1),
-            "title":r["title"],"source":r["source"],
-            "date":r["date"],"url":r["url"],
-            "type":r["type"],"related_article_urls":urls,
+            "id": "report-" + str(len(chosen) + 1),
+            "title": report["title"], "source": report["source"],
+            "date": report["date"], "url": report["url"],
+            "type": report["type"], "related_article_urls": urls,
         })
-        if len(chosen)==2:
+        if len(chosen) == 2:
             break
+    print(f"  [기관자료 교체] 최근 7일 사용자료 제외, 당일 신규 추천 {len(chosen)}건")
     return chosen
