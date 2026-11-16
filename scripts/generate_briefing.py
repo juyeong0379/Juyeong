@@ -738,6 +738,26 @@ def build_section(meta: dict, used_urls: set, edition: str, prior_articles: list
         print(f"  [수집 진단] {meta['key']}: 24시간 내 수집 {len(collected)}건, 분야 일치 0건. 검색어/출처/시간대 검토 필요")
     else:
         print(f"  [수집 진단] {meta['key']}: 수집 {len(collected)}건 → 분야 일치 {len(matching)}건 → 전일/당일 중복 제외 후 {len(eligible_candidates)}건")
+    if meta["key"] == "peer":
+        # Evaluate relevant 3Q earnings coverage FIRST, even when company
+        # strategy headlines have more recent timestamps.
+        def earnings_priority(candidate):
+            title = candidate.get("title", "")
+            text = title + " " + candidate.get("description", "")
+            score = 0
+            if re.search(r"3\s*(?:분기|Q)|3Q26|9월\s*누적", text, re.I):
+                score += 20
+            if re.search(r"순이익|순익|당기순이익|어닝쇼크|실적|이익|충당금", title):
+                score += 18
+            if re.search(r"증권사|투자증권|증권업계|대형사|중형사", title):
+                score += 10
+            if re.search(r"IB|기업금융|브로커리지|운용|PI|과징금|공시", text, re.I):
+                score += 8
+            return score
+        eligible_candidates.sort(
+            key=lambda c: (earnings_priority(c), c["pub_dt"]), reverse=True
+        )
+        print("  [경쟁사 3Q 실적 우선검색] 누적/분기 순이익·IB 성과·과징금 정정공시 먼저 심사")
     candidates = eligible_candidates[:MAX_CANDIDATES]
     print(f"  후보 {len(candidates)}건 → OpenAI 분류 요청 중...")
 
