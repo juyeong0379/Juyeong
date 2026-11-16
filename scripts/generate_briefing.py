@@ -1141,6 +1141,46 @@ def main():
             prior_articles.append(article)
         data[key] = retained[:MAX_STORIES_PER_CATEGORY]
 
+    # Source-verified editorial picks for today's strategically critical
+    # developments. They are selected and verified like other 24-hour news,
+    # but make sure high-priority earnings coverage is not lost to generic AI
+    # ranking or a temporary publisher paywall.
+    picks_path = (Path(__file__).resolve().parents[1] / "docs" /
+                  "editorial-picks" / (now.date().isoformat() + ".json"))
+    if picks_path.exists():
+        try:
+            curated = json.loads(picks_path.read_text(encoding="utf-8"))
+            for key, items in curated.get("categories", {}).items():
+                if key not in data or not isinstance(items, list):
+                    continue
+                for article in items:
+                    if not isinstance(article, dict):
+                        continue
+                    summary = article.get("summary", [])
+                    if (not isinstance(summary, list) or len(summary) != 3
+                            or any(not isinstance(p, str) or len(p.strip()) < 23
+                                   for p in summary)
+                            or not str(article.get("url", "")).startswith("https://")
+                            or not is_current_day_article(article, now)
+                            or repeated_last_days({
+                                "title": article.get("headline", ""),
+                                "url": article.get("url", ""),
+                            })
+                            or any(repeated_without_update(article, p)
+                                   for p in prior_articles)
+                            or len(data[key]) >= MAX_STORIES_PER_CATEGORY):
+                        continue
+                    article = dict(article)
+                    article["edition"] = edition
+                    article["editionLabel"] = EDITION_LABELS[edition]
+                    article["summary_mode"] = "editorial_digest"
+                    data[key].append(article)
+                    used_urls.add(article["url"])
+                    prior_articles.append(article)
+                    print(f"  [검증 기사 우선 반영] {key}: {article['headline'][:65]}")
+        except (OSError, ValueError, TypeError) as exc:
+            print(f"  [경고] 검증기사 후보 파일 오류: {exc}")
+
     # Single daily briefing: up to 3 current stories per category.
     # Manual retries may add verified stories without carrying old news.
     for key, meta in SECTIONS.items():
