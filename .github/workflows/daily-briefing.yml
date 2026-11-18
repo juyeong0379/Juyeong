@@ -7,6 +7,9 @@ on:
   schedule:
     - cron: "30 22 * * *"  # Daily 07:30 KST initial
     - cron: "45 22 * * *"  # Daily 07:45 KST coverage/deployment retry
+    - cron: "5 23 * * *"   # Daily 08:05 KST missed-start fallback
+    - cron: "0 0 * * *"    # Daily 09:00 KST recovery if both early runs missed
+    - cron: "0 2 * * *"    # Daily 11:00 KST last safety-net if GitHub queue skips
   workflow_dispatch: {}
   # Scoped, explicit emergency refresh; unrelated commits never spend API credits.
   push:
@@ -55,14 +58,17 @@ jobs:
               published_at = datetime.strptime(stamp, "%Y-%m-%d %H:%M").replace(tzinfo=now.tzinfo)
           except (NameError, ValueError, TypeError):
               published_at = now.replace(year=2000)
-          # Retry whenever any of the eleven desks is below the target of TWO.
-          # Never treat a one-article section as complete.
+          # Early retry attempts improve coverage. Late recovery slots are
+          # specifically for a missed/delayed start and should not spend credits
+          # repeatedly when a reasonable briefing has already been published.
           groups = data.get("categories", {}) if todays else {}
           enough = sum(len(items) >= 2 for items in groups.values())
+          late_recovery = now.hour >= 8
+          healthy = enough >= (8 if late_recovery else 11)
           skip = (os.getenv("EVENT_NAME") == "schedule"
                   and todays and edition in completed and published_at >= deadline
-                  and enough == 11)
-          print(f"covered_with_2_or_more={enough}/11")
+                  and healthy)
+          print(f"covered_with_2_or_more={enough}/11, late_recovery={late_recovery}, skip={skip}")
           print("skip=" + ("true" if skip else "false"))
           print(f"edition={edition}")
           PY
