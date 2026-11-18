@@ -1,14 +1,17 @@
 name: Daily News Briefing
 
 on:
-  # Start at 07:30 KST, aim to publish by 08:00; retry at 07:45 if thin/failed.
-  # Both calls use the SAME fixed prior-day 07:30–today 07:30 publication window.
-  # GitHub Actions scheduling/Pages delivery can be delayed; 08:00 is a target.
+  # Publish an early, clearly provisional edition BEFORE 07:30 KST.
+  # The 07:30 run completes the fixed previous-day 07:30→today 07:30
+  # source publication window; GitHub Actions/Pages cannot promise an
+  # exact-to-the-second public deployment.
   schedule:
-    - cron: "30 22 * * *"  # Daily 07:30 KST initial
+    - cron: "40 21 * * *"  # Daily 06:40 KST primary: early homepage edition
+    - cron: "15 22 * * *"  # Daily 07:15 KST retry only if morning edition insufficient
+    - cron: "30 22 * * *"  # Daily 07:30 KST add news published up to cutoff
     - cron: "45 22 * * *"  # Daily 07:45 KST coverage/deployment retry
     - cron: "5 23 * * *"   # Daily 08:05 KST missed-start fallback
-    - cron: "0 0 * * *"    # Daily 09:00 KST recovery if both early runs missed
+    - cron: "0 0 * * *"    # Daily 09:00 KST recovery if early runs missed
     - cron: "0 2 * * *"    # Daily 11:00 KST last safety-net if GitHub queue skips
   workflow_dispatch: {}
   # Scoped, explicit emergency refresh; unrelated commits never spend API credits.
@@ -58,17 +61,25 @@ jobs:
               published_at = datetime.strptime(stamp, "%Y-%m-%d %H:%M").replace(tzinfo=now.tzinfo)
           except (NameError, ValueError, TypeError):
               published_at = now.replace(year=2000)
-          # Early retry attempts improve coverage. Late recovery slots are
-          # specifically for a missed/delayed start and should not spend credits
-          # repeatedly when a reasonable briefing has already been published.
+          # 06:40 first edition should already be on Pages when users arrive
+          # at 07:30. Avoid spending a second full search at 07:15 if the
+          # preliminary edition has reasonably good sector coverage.
+          # Never skip the 07:30 final-cutoff pass solely because an earlier
+          # morning draft exists.
           groups = data.get("categories", {}) if todays else {}
           enough = sum(len(items) >= 2 for items in groups.values())
-          late_recovery = now.hour >= 8
-          healthy = enough >= (8 if late_recovery else 11)
-          skip = (os.getenv("EVENT_NAME") == "schedule"
-                  and todays and edition in completed and published_at >= deadline
-                  and healthy)
-          print(f"covered_with_2_or_more={enough}/11, late_recovery={late_recovery}, skip={skip}")
+          before_cutoff = now < deadline
+          if before_cutoff:
+              early_start = now.replace(hour=6, minute=30, second=0, microsecond=0)
+              healthy = enough >= 8 and published_at >= early_start
+              skip = (os.getenv("EVENT_NAME") == "schedule"
+                      and todays and edition in completed and healthy)
+          else:
+              healthy = enough >= (8 if now.hour >= 8 else 11)
+              skip = (os.getenv("EVENT_NAME") == "schedule"
+                      and todays and edition in completed
+                      and published_at >= deadline and healthy)
+          print(f"sectors_with_2_or_more={enough}/11, before_cutoff={before_cutoff}, skip={skip}")
           print("skip=" + ("true" if skip else "false"))
           print(f"edition={edition}")
           PY
