@@ -1,0 +1,702 @@
+{
+  "generated_at": "2026-11-18 11:13 KST",
+  "last_edition": "0730",
+  "editions_completed": [
+    "0730"
+  ],
+  "reports": [
+    {
+      "id": "report-1",
+      "title": "글로벌 시장을 통해 본 한국 세컨더리 시장 활성화 방안",
+      "source": "자본시장연구원",
+      "date": "2026-10-19",
+      "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6867&syear=2026&zcd=002001016&zno=1942",
+      "type": "자본시장포커스",
+      "related_article_urls": [
+        "https://www.newsis.com/view/NISX20261117_0003871770"
+      ]
+    },
+    {
+      "id": "report-2",
+      "title": "전망공시의 현황과 특성 및 정보가치",
+      "source": "자본시장연구원",
+      "date": "2026-10-30",
+      "url": "https://www.kcmi.re.kr/report/report_view?report_no=2344",
+      "type": "이슈보고서",
+      "related_article_urls": []
+    }
+  ],
+  "sections": [
+    {
+      "key": "ecm",
+      "no": "01",
+      "emoji": "📈",
+      "label": "ECM",
+      "desc": "IPO·유상증자·메자닌·블록딜"
+    },
+    {
+      "key": "corp",
+      "no": "02",
+      "emoji": "🏦",
+      "label": "기업금융",
+      "desc": "DCM·회사채·기업자금 조달"
+    },
+    {
+      "key": "ma",
+      "no": "03",
+      "emoji": "🤝",
+      "label": "M&A·인수금융",
+      "desc": "M&A·경영권 매각·PEF·인수금융"
+    },
+    {
+      "key": "re",
+      "no": "04",
+      "emoji": "🏢",
+      "label": "부동산",
+      "desc": "부동산PF·리츠·상업용부동산"
+    },
+    {
+      "key": "infra",
+      "no": "05",
+      "emoji": "⚡",
+      "label": "인프라",
+      "desc": "데이터센터·전력·재생에너지·민자사업"
+    },
+    {
+      "key": "hana",
+      "no": "06",
+      "emoji": "🏛️",
+      "label": "하나금융그룹",
+      "desc": "하나금융지주·하나은행·하나증권 IB"
+    },
+    {
+      "key": "peer",
+      "no": "07",
+      "emoji": "🏙️",
+      "label": "경쟁사",
+      "desc": "국내외 금융사 IB 전략·주선 경쟁"
+    },
+    {
+      "key": "sto",
+      "no": "08",
+      "emoji": "🔗",
+      "label": "STO",
+      "desc": "토큰증권·디지털증권 제도 및 인프라"
+    },
+    {
+      "key": "productive",
+      "no": "09",
+      "emoji": "🌱",
+      "label": "생산적금융",
+      "desc": "모험자본·성장산업·생산적금융 정책"
+    },
+    {
+      "key": "growthfund",
+      "no": "10",
+      "emoji": "🏦",
+      "label": "국민성장펀드",
+      "desc": "국민성장펀드 정책·조성·투자·집행·운용·출자"
+    },
+    {
+      "key": "other",
+      "no": "11",
+      "emoji": "🌍",
+      "label": "기타",
+      "desc": "글로벌 경제·산업·정책·AI 및 지정학적 핵심 이슈"
+    }
+  ],
+  "categories": {
+    "ecm": [
+      {
+        "top": true,
+        "headline": "[더벨][뷰노 자금조달 점검] 유상증자 제동에 영구채 상환계획 차질",
+        "source": "더벨",
+        "pubDate": "2026-11-18",
+        "pubTime": "07:02 KST",
+        "publishedAt": "2026-11-18T07:02:00+09:00",
+        "summary": [
+          "[뷰노 자금조달 점검] 유상증자 제동에 영구채 상환계획 차질",
+          "◇사업 불확실성에 조달 지연…영구채 금리 인상 불가피 금융감독원은 10일 뷰노에 증권신고서 정정을 요구했다",
+          "회사가 추진 중인 314억원 규모 주주배정 후 실권주 일반공모 유상증자에 대한 조치다. 뷰노는 지난"
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611160954434200107051",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "AI거품론 무색…앤스로픽 공모주에 6배 넘는 주문 몰려",
+        "source": "한국경제",
+        "pubDate": "2026-11-17",
+        "pubTime": "23:46 KST",
+        "publishedAt": "2026-11-17T23:46:00+09:00",
+        "summary": [
+          "AI거품론 무색…앤스로픽 공모주에 6배 넘는 주문 몰려",
+          "블룸버그에 따르면, 앤스로픽 공모주에 대한 주식 주문량은 발행 주식 수의 6배를 초과한 상태이다",
+          "이 회사는 이 기간 동안 순손실은 1,040억 달러에 달했지만, 대부분은 전환사채 및 파생상품 부채의 공정가치"
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.hankyung.com/article/202611173114i",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[Invest]AI 안경 관심에 젠틀몬스터 IPO 재점화?...룩소티카 지분 확대 '...",
+        "source": "인베스트조선",
+        "pubDate": "2026-11-17",
+        "pubTime": "16:02 KST",
+        "publishedAt": "2026-11-17T16:02:00+09:00",
+        "summary": [
+          "젠틀몬스터는 10년 전부터 여러 차례 IPO를 검토했으나 현재 상장 추진을 중단한 상태임.",
+          "과거 상장 관련 약정을 맺었던 재무적투자자들이 지분을 매각함에 따라 IPO 부담이 줄어든 상황임.",
+          "최근 AI 안경에 대한 관심과 함께 젠틀몬스터 IPO가 재점화될 가능성이 제기되고 있음."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/17/2026111780155.html",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "corp": [
+      {
+        "top": true,
+        "headline": "[더벨][하우스 분석 | 한양증권] 기업금융부문 트레이딩 제치고 최대 수...",
+        "source": "더벨",
+        "pubDate": "2026-11-18",
+        "pubTime": "07:02 KST",
+        "publishedAt": "2026-11-18T07:02:00+09:00",
+        "summary": [
+          "[하우스 분석 | 한양증권] 기업금융부문 트레이딩 제치고 최대 수",
+          "한양증권의 기업금융(IB) 부문이 자기매매 부문을 제치고 올해 가장 많은 영업이익을 창출하는",
+          "자산재평가와 유상증자 등을 통해 자기자본이 올해 말 목표치를 넘어선 가운데 창사 이후 처음으로 공모 회사채를"
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611161722441560107894",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "미래에셋, 투자자산 중심 조달 다변화…회사채 통한 만기구조 관리 [빅...",
+        "source": "한국금융신문",
+        "pubDate": "2026-11-18",
+        "pubTime": "06:02 KST",
+        "publishedAt": "2026-11-18T06:02:00+09:00",
+        "summary": [
+          "미래에셋증권이 투자자산 중심의 조달 다변화 전략을 추진하며 회사채를 통한 만기구조 관리를 강화하고 있음.",
+          "올해 11월 10일까지 미래에셋증권의 공모채 발행 건에서 가중평균 스프레드는 플러스 0.0015%포인트로 나타나 민간채권평가사 평균금리보다 약간 높은 수준임.",
+          "이 같은 조달 다변화와 만기구조 관리는 이자 부담 관점에서 미래에셋증권의 재무 안정성 유지에 관전 쟁점으로 작용함."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.fntimes.com/html/view.php?ud=202611172117106685179ad43907_18",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[DCM] KB증권, 10월 대표주관 1위…연간 누적도 NH투자증권 앞질러 [10월...",
+        "source": "한국금융신문",
+        "pubDate": "2026-11-18",
+        "pubTime": "06:02 KST",
+        "publishedAt": "2026-11-18T06:02:00+09:00",
+        "summary": [
+          "KB증권이 10월 공모 회사채 대표주관 실적에서 31개 트랜치 중 16개를 차지하며 1위를 기록함.",
+          "10월 한 달 동안 KB증권은 공모 회사채 시장에서 절반 이상인 16개 트랜치를 주관하여 경쟁사 대비 우위를 보였음.",
+          "KB증권의 월간 1위 기록이 연간 누적 실적에서도 NH투자증권을 앞지르는 결과로 이어져 증권사 간 시장 점유율 경쟁이 심화되고 있음."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.fntimes.com/html/view.php?ud=202611170945342958141825007d_18",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "ma": [
+      {
+        "top": true,
+        "headline": "SKB 노조 “사측, DC 공백 메울 M&A 검토 중\"…세부 계획은 영업비밀",
+        "source": "딜사이트",
+        "pubDate": "2026-11-17",
+        "pubTime": "15:52 KST",
+        "publishedAt": "2026-11-17T15:52:00+09:00",
+        "summary": [
+          "SKB 노조 “사측, DC 공백 메울 M&A 검토 중\"…세부 계획은 영업비밀",
+          "매출 4000억·영업익 1000억 대체할 사업 요구…SKT엔 구주 매각대금 일부 재투자 촉구 SK브로드밴드(SKB) 경",
+          "영진이 데이터센터(DC) 사업 분사 이후 새 성장동력을 확보할 방안으로 인수합병(M&A)을 검토하고 있다고 SKB"
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://dealsite.co.kr/articles/172987",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[Invest]앵커PE, 카카오엔터 인수금융 6개월 추가 연장",
+        "source": "인베스트조선",
+        "pubDate": "2026-11-17",
+        "pubTime": "09:52 KST",
+        "publishedAt": "2026-11-17T09:52:00+09:00",
+        "summary": [
+          "앵커PE가 카카오엔터 인수금융 만기를 6개월 추가 연장하는 리파이낸싱 작업을 진행 중임을 확인.",
+          "수개월간 앵커PE는 인수금융 주선사를 찾으려 했으나 성과를 내지 못해 인수금융 만기 연장이 불가피한 상황임.",
+          "이로 인해 리파이낸싱 작업이 해를 넘겨 장기화될 전망이며, 향후 인수금융 주선사 선정이 관건임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/17/2026111780028.html",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[더벨]휴맥스모빌리티 찜한 트루블루, 첫 바이아웃 성사되나",
+        "source": "더벨",
+        "pubDate": "2026-11-17",
+        "pubTime": "08:12 KST",
+        "publishedAt": "2026-11-17T08:12:00+09:00",
+        "summary": [
+          "신생 사모펀드 운용사 트루블루에쿼티가 휴맥스모빌리티 경영권 인수를 위한 자금 모집에 나섰음.",
+          "트루블루에쿼티는 출범 이후 첫 바이아웃 거래로 수천억원 규모의 휴맥스모빌리티 인수를 추진하고 있음.",
+          "자금 모집 성사 여부가 트루블루에쿼티의 첫 바이아웃 성사 관건으로 주목받고 있음."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611131008483640108977",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "re": [
+      {
+        "top": true,
+        "headline": "리츠협회 \"미분양 빌라·오피스텔도 CR리츠 세제 혜택 줘야\"",
+        "source": "한국경제",
+        "pubDate": "2026-11-17",
+        "pubTime": "16:03 KST",
+        "publishedAt": "2026-11-17T16:03:42+09:00",
+        "summary": [
+          "CR리츠 세제 혜택 대상 확대해야\" 한국리츠협회는 CR리츠 세제지원 대상을 공동주택(연립주택 등)과 주거용 오피스텔로 확대해 달라고 국토교통부에 건의했다고 17일 밝혔다",
+          "CR리츠는 여러 투자자의 돈을 모아 미분양 주택을 싸게 사들인 뒤, 임대를 놓다가 시장이 좋아지면 되파는 부동산 투자회사다",
+          "협회에 따르면 강원 속초에서 미분양 연립주택 160가구를 사들인 리츠는 취득세로만 약 60억원을 더 냈다"
+        ],
+        "summary_mode": "source_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.hankyung.com/article/202611172329i",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "\"대신증권, 국고채 과징금에 부동산PF 충당금…목표가↓\"-NH",
+        "source": "머니투데이",
+        "pubDate": "2026-11-17",
+        "pubTime": "08:51 KST",
+        "publishedAt": "2026-11-17T08:51:00+09:00",
+        "summary": [
+          "대신증권은 국고채 과징금과 부동산PF 충당금 이슈로 인해 부동산PF 익스포저가 4분기에도 악영향을 미칠 전망임을 확인함.",
+          "대신증권의 부동산PF 익스포저는 4분기에도 부정적인 영향을 계속할 것으로 분석되어 관련 리스크 관리가 강조됨.",
+          "초대형 IB 지정, 발행어음 인가, 주주환원 확대 정책은 대신증권의 투자 매수 가치를 유지하는 주요 관전 포인트임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.mt.co.kr/stock/2026/11/17/2026111708493631842",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "infra": [
+      {
+        "top": true,
+        "headline": "[Invest]통신 라이벌 데이터센터 사업, 문전성시 SK vs. 투자매력 모호한...",
+        "source": "인베스트조선",
+        "pubDate": "2026-11-18",
+        "pubTime": "07:02 KST",
+        "publishedAt": "2026-11-18T07:02:00+09:00",
+        "summary": [
+          "통신 라이벌 데이터센터 사업, 문전성시 SK vs. 투자매력 모호한",
+          "투자유치 거래지만 자본시장의 관심은 기대만큼 뜨겁지는 않다. KT의 통신 인프라, 기존 데이터센터 운영",
+          "투자를 유치했다. FI는 상장을 통해 자금을 회수하려 했지만 정부의 중복상장 규제로 길이 막혔다. 신규"
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/17/2026111780203.html",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "엇갈리는 데이터센터 시장…위험 사업은 손절·빅테크 끼면 투자",
+        "source": "연합뉴스",
+        "pubDate": "2026-11-17",
+        "pubTime": "14:05 KST",
+        "publishedAt": "2026-11-17T14:05:33+09:00",
+        "summary": [
+          "인공지능(AI) 데이터센터 자금시장에서는 위험이 큰 사업의 대출이 할인 매각되는 현상 발생.",
+          "우량 자산에는 자금이 집중되어 투자 유치가 활발하게 이루어지고 있음.",
+          "빅테크 참여 여부가 투자 결정에 중요한 영향을 미치며 시장에서의 투자 진입 관건으로 부상함."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.yna.co.kr/view/AKR20261117092000009",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[더벨][KAAM을 움직이는 사람들] 데이터센터 판 키운 조영석 대표, 7000억...",
+        "source": "더벨",
+        "pubDate": "2026-11-17",
+        "pubTime": "11:02 KST",
+        "publishedAt": "2026-11-17T11:02:00+09:00",
+        "summary": [
+          "[KAAM을 움직이는 사람들] 데이터센터 판 키운 조영석 대표, 7000억",
+          "개발과 금융을 분리하지 않고 부지 확보와 인허가, 임차인 유치, 프로젝트파이낸싱(PF),",
+          "준공 이후 운용까지 하나의 구조로 연결하는 것이 그의 방식이다. 퀀텀점프를 목표로 하며 데이터센터 프로젝트를 시작한 지 약"
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611111638064600101188",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "hana": [
+      {
+        "top": true,
+        "headline": "하나생명, 지급여력 ‘뚝’…자본 확충에 지주 부담 커지나 [재계톡톡]",
+        "source": "매일경제",
+        "pubDate": "2026-11-17",
+        "pubTime": "21:01 KST",
+        "publishedAt": "2026-11-17T21:01:00+09:00",
+        "summary": [
+          "하나생명, 지급여력 ‘뚝’…자본 확충에 지주 부담 커지나 [재계톡톡]",
+          "하나금융그룹 보험 계열사 하나생명의 자본건전성에 경고등이 켜졌다",
+          "올해 적자로 돌아선 데다 지급여력(K-ICS·킥스) 비율까지 금융당국 권고치에 근접했다. 내년부터 자본규제가 강화되며 하나금융지주의 부담이"
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.mk.co.kr/article/12207996",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "하나은행, JYP와 최고 6% '나눔 적금' 출시…\"K-팝 문화 선한 영향력\"",
+        "source": "뉴시스",
+        "pubDate": "2026-11-17",
+        "pubTime": "11:39 KST",
+        "publishedAt": "2026-11-17T11:39:00+09:00",
+        "summary": [
+          "하나은행이 JYP와 협력해 최고 연 6% 금리의 '나눔 적금' 상품을 출시함.",
+          "하나금융그룹은 장애 아동·청소년을 위한 재활 및 학습 보조기구 지원, 발달장애 예술가 육성, 장애인 일자리 지원 등 다양한 ESG 사회공헌활동을 전개하고 있음.",
+          "이번 상품 출시는 K-팝 문화를 통한 선한 영향력 확산과 함께 사회적 가치 창출에 기여하는 점이 관전 포인트임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261117_0003871321",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "peer": [
+      {
+        "top": true,
+        "headline": "발행어음 특판 상품, 1000억 원 ‘완판’… 초대형 IB 시장 공략 박차",
+        "source": "한국경제",
+        "pubDate": "2026-11-18",
+        "pubTime": "06:02 KST",
+        "publishedAt": "2026-11-18T06:02:00+09:00",
+        "summary": [
+          "삼성증권이 초대형 투자은행 시장 공략을 위해 처음 선보인 발행어음 특판 상품이 출시 이틀 반 만에 완판되었다.",
+          "발행어음 특판 상품은 목표액 1000억 원을 전량 소진했으며, 발행어음은 자기자본 4조 원 이상의 요건을 갖춘 증권사에서 발행이 가능하다.",
+          "발행어음 특판 상품의 완판은 삼성증권의 초대형 IB 시장 내 입지 확대 가능성을 보여준다는 점에서 주목된다."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://magazine.hankyung.com/money/article/202610141858c",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "증권사들, 발행어음 고객 유치 '후끈'",
+        "source": "한국경제",
+        "pubDate": "2026-11-17",
+        "pubTime": "17:25 KST",
+        "publishedAt": "2026-11-17T17:25:00+09:00",
+        "summary": [
+          "증권사들이 발행어음 시장에서 고객 유치 경쟁을 활발하게 전개하는 상황임.",
+          "한국투자증권은 3분기에 발행어음 잔액을 2조원 넘게 늘려 시장 지배력을 확대하는 성과를 보임.",
+          "증권사들의 치열한 경쟁은 발행어음 시장 점유율 변화와 향후 수익성에 중요한 영향을 미칠 전망임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.hankyung.com/article/2026111726731",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "키움증권, 연 5.7% 발행어음 특판 200억 완판…8일 만에 소진",
+        "source": "뉴시스",
+        "pubDate": "2026-11-17",
+        "pubTime": "14:26 KST",
+        "publishedAt": "2026-11-17T14:26:00+09:00",
+        "summary": [
+          "키움증권, 연 5.7% 발행어음 특판 200억 완판…8일 만에 소진",
+          "키움증권은 3개월 만기 연 5.7%(세전) 발행어음 특별판매(특판) 상품 '키움금리페스타'의 1차 및 2차 물량을 판매 8일 만에 완판했다고",
+          "17일 밝혔다. 1차 판매는 지난 9일 시작했다. 영웅문4(HTS) 배너와 검색 광고 등으로만"
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261117_0003871558",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "sto": [
+      {
+        "top": true,
+        "headline": "KB증권, '포인트로 채권투자' 실증…토큰증권 정산 자동화 外",
+        "source": "딜사이트경제TV",
+        "pubDate": "2026-11-17",
+        "pubTime": "16:53 KST",
+        "publishedAt": "2026-11-17T16:53:41+09:00",
+        "summary": [
+          "KB증권은 블록체인 금융 인프라 기업 수호아이오와 협력해 채권 토큰증권의 발행, 정산, 만기 상환 전 과정을 실증함.",
+          "이번 실증 사업은 과학기술정보통신부와 한국인터넷진흥원(KISA)의 지원을 받아 진행되었음.",
+          "토큰증권의 정산 및 상환 자동화를 통해 포인트를 활용한 채권투자 서비스 가능성을 검증한 점이 주목됨."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://news.dealsitetv.com/articles/178751",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "카카오페이, 스테이블코인 TF 1년…청사진 '안갯속'",
+        "source": "딜사이트경제TV",
+        "pubDate": "2026-11-17",
+        "pubTime": "14:00 KST",
+        "publishedAt": "2026-11-17T14:00:23+09:00",
+        "summary": [
+          "카카오페이의 스테이블코인 태스크포스가 1년간 디지털자산 생태계 구축을 추진해 왔으나, 공개된 결과물은 개념 검증 수준에 머물고 있음",
+          "관련 법안이 표류하는 상황에서 주요 파트너의 경영 불확실성까지 겹쳐 프로젝트 진행에 여러 과제가 존재함",
+          "이러한 상황으로 인해 카카오페이 스테이블코인 프로젝트의 청사진이 불확실한 상태로 평가받고 있음"
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://news.dealsitetv.com/articles/178517",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "KB증권·수호아이오, STO 실증 성공…“스테이블코인 연계 검토”",
+        "source": "이데일리",
+        "pubDate": "2026-11-17",
+        "pubTime": "10:20 KST",
+        "publishedAt": "2026-11-17T10:20:00+09:00",
+        "summary": [
+          "KB증권과 블록체인 금융 인프라 기업 수호아이오가 토큰증권발행(STO) 실증에 성공함.",
+          "STO 관련 법이 내년 2월부터 시행되며, 실증은 과학기술정보통신부와 한국인터넷진흥원(KISA)의 블록체인 응용서비스 프로젝트의 일환.",
+          "실증 성공에 따라 양사는 스테이블코인 연계 가능성을 검토하며 향후 금융 혁신에 미칠 영향을 주목받고 있음."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.edaily.co.kr/News/Read?newsId=03099606645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "productive": [
+      {
+        "top": true,
+        "headline": "[BP금융포럼 in 싱가포르 에필로그⑥] 한국의 생산적 금융이 싱가포르 ...",
+        "source": "비즈니스포스트",
+        "pubDate": "2026-11-17",
+        "pubTime": "17:56 KST",
+        "publishedAt": "2026-11-17T17:56:00+09:00",
+        "summary": [
+          "BP금융포럼 in 싱가포르에 한국의 생산적 금융 방향이 논의됨.",
+          "포럼에는 한-아세안금융협력센터와 싱가포르개발은행(DBS), 싱가포르거래소(SGX), 난양공대 등이 참석함.",
+          "포럼을 통해 한국 생산적 금융이 싱가포르 금융·혁신 생태계와 협력하는 관전 쟁점이 부각됨."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.businesspost.co.kr/BP?command=article_view&num=452190",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "IBK기업은행, 비수도권 모험자본 750억 공급 추진",
+        "source": "뉴시스",
+        "pubDate": "2026-11-17",
+        "pubTime": "15:40 KST",
+        "publishedAt": "2026-11-17T15:40:00+09:00",
+        "summary": [
+          "IBK기업은행이 비수도권 벤처투자 활성화와 지역 혁신기업 성장 지원을 위해 750억원 규모의 모험자본 공급을 추진함.",
+          "IBK금융그룹 차원의 500억원 규모 'IBK지역혁신모펀드'를 포함해 총 750억원의 자금을 비수도권에 투입하는 계획임.",
+          "비수도권 투자 확대가 지역 혁신기업의 성장 촉진과 벤처투자 활성화라는 영향과 관전 쟁점을 내포함."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261117_0003871770",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[생산적 금융 점검] [우리] 성장성 고려, 기술금융 5대 은행 중 3위",
+        "source": "딜사이트경제TV",
+        "pubDate": "2026-11-17",
+        "pubTime": "14:02 KST",
+        "publishedAt": "2026-11-17T14:02:00+09:00",
+        "summary": [
+          "우리은행은 올해 기술금융 분야에서 5대 은행 중 3위를 차지하는 성장성을 보임.",
+          "순수 신용 비중이 7.8%이며, 기업자금 지원 시 정부 정책금융을 1순위로 활용하는 전략을 명확히 하고 있음.",
+          "2026년 생산적 금융 가이드북을 전 영업점 직원에게 배포해 기업 성장성 중심 여신 문화 조성을 추진 중임"
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://news.dealsitetv.com/articles/178267",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "growthfund": [
+      {
+        "top": true,
+        "headline": "[단독] 국민성장펀드 '핵심광물 1호'는 포스코인터",
+        "source": "매일경제",
+        "pubDate": "2026-11-17",
+        "pubTime": "17:46 KST",
+        "publishedAt": "2026-11-17T17:46:00+09:00",
+        "summary": [
+          "국민성장펀드 '핵심광물 1호'는 포스코인터",
+          "당국, 해외사업 1조 투자 검토 동남아 등 2~3개 사업 지원 해외광산 투자·기업 인수 거론 中의존 낮추고",
+          "공급망 다변화 '국민성장펀드 핵심광물 분야'의 첫 투자 대상으로 포스코인터내셔널의 해외 희토류 공급망 사업이"
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.mk.co.kr/article/12211486",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[단독] 희토류 공급망에 1조 투자…국민성장펀드 ‘핵심광물 1호’ 포스...",
+        "source": "매일경제",
+        "pubDate": "2026-11-17",
+        "pubTime": "17:23 KST",
+        "publishedAt": "2026-11-17T17:23:00+09:00",
+        "summary": [
+          "국민성장펀드가 해외 희토류 공급망에 1조 원 투자를 검토하고 동남아시아 등 2~3개 사업을 지원하는 계획을 진행 중임.",
+          "투자 대상은 포스코인터내셔널의 해외 희토류 공급망 사업이며, 이는 핵심광물 분야에서 국민성장펀드의 첫 번째 투자임.",
+          "이번 투자는 중국 의존도를 낮추고 공급망 다변화를 추진하는 전략적 변화로 평가받고 있음."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.mk.co.kr/article/12211400",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "other": [
+      {
+        "top": true,
+        "headline": "젠슨 황 딸, 엔비디아 '메가스피드 의혹' 대응 관여…\"누구도 제지 못해\"",
+        "source": "뉴시스",
+        "pubDate": "2026-11-18",
+        "pubTime": "07:23 KST",
+        "publishedAt": "2026-11-18T07:23:48+09:00",
+        "summary": [
+          "엔비디아 전 CEO 젠슨 황의 딸 매디슨 황이 메가스피드 의혹에 대한 회사의 언론 대응에 깊이 관여했다.",
+          "메가스피드는 미국 수출 규제를 피해 첨단 반도체를 중국으로 불법 반출한 혐의를 받는 싱가포르 클라우드 업체로, 엔비디아 내부에서 대응 논의가 이뤄졌다.",
+          "매디슨 황은 지난해 가을 메가스피드 거래에 대한 언론 취재 증가에 따라 위기관리 홍보업체 헬러를 고용하고 직접 대응에 참여했다."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261118_0003872347",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[국제유가] 호르무즈 긴장 고조에 반등",
+        "source": "파이낸셜뉴스",
+        "pubDate": "2026-11-18",
+        "pubTime": "06:32 KST",
+        "publishedAt": "2026-11-18T06:32:00+09:00",
+        "summary": [
+          "국제 유가가 17일(현지시간) 소폭 상승하며 반등한 사건 발생.",
+          "미국이 이란의 호르무즈 해협 게슘섬을 공습했고 바레인 미군 기지 레이더가 이란의 공격을 받은 배경.",
+          "호르무즈 해협에서 긴장 고조가 국제 유가 상승에 영향을 미친 점이 주요 관전 쟁점."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.fnnews.com/news/202611180629269130",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "美 반도체 규제 우려에 日 증시 하락…닛케이 5만9000선 깨져",
+        "source": "뉴시스",
+        "pubDate": "2026-11-17",
+        "pubTime": "16:31 KST",
+        "publishedAt": "2026-11-17T16:31:47+09:00",
+        "summary": [
+          "일본 도쿄증시 닛케이225지수가 미국 반도체 규제 강화 발표 영향으로 801.59포인트 하락하며 5만9000선 아래로 떨어짐.",
+          "닛케이225지수는 전일 대비 1.34% 내린 5만8860.43에 장을 마감했고, 토픽스와 JPX닛케이400지수도 각각 1.57%, 1.52% 하락세를 보임.",
+          "반도체·AI 관련주가 규제 우려에 약세를 보였고, 소프트뱅크그룹 주가는 장중 6% 넘게 하락하며 1년 3개월 만에 최저치 기록 후 3.95% 하락 마감함."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261117_0003871762",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ]
+  }
+}
