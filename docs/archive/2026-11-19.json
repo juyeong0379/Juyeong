@@ -1,10 +1,22 @@
 {
-  "generated_at": "2026-11-19 07:03 KST",
+  "generated_at": "2026-11-19 12:27 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
   ],
-  "reports": [],
+  "reports": [
+    {
+      "id": "report-1",
+      "title": "AI 투자 확대와 전환사채 시장의 부상: 미국 사례",
+      "source": "자본시장연구원",
+      "date": "2026-09-21",
+      "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6847",
+      "type": "자본시장포커스",
+      "related_article_urls": [
+        "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611171348479000108929"
+      ]
+    }
+  ],
   "sections": [
     {
       "key": "ecm",
@@ -88,6 +100,25 @@
     "ecm": [
       {
         "top": true,
+        "headline": "[더벨][하우스 분석] 삼성증권 IB, 'IPO·인수금융' 기여도 높아졌다",
+        "source": "더벨",
+        "pubDate": "2026-11-19",
+        "pubTime": "07:02 KST",
+        "publishedAt": "2026-11-19T07:02:00+09:00",
+        "summary": [
+          "삼성증권 IB 부서가 3분기 IPO 주관 시장점유율 23.3%를 기록하며 업계 리그테이블 1위 자리를 확고히 한 사건.",
+          "3분기 주식자본시장(ECM) 수익이 114억원에 달하며 지난해 대비 약진이 뚜렷한 배경.",
+          "IPO 및 인수금융 부문의 성장에 따른 삼성증권 IB 기여도 확대와 향후 성과 지속 여부가 관전 포인트임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611171348479000108929",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
         "headline": "얼어붙은 IPO 시장…과잉 규제로 자본시장 활력 꺾어선 안돼 [사설]",
         "source": "한국경제",
         "pubDate": "2026-11-19",
