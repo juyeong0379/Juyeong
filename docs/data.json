@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20 07:19 KST",
+  "generated_at": "2026-11-20 11:34 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -440,7 +440,27 @@
         "editionLabel": "07:30"
       }
     ],
-    "sto": [],
+    "sto": [
+      {
+        "top": true,
+        "headline": "문페이, 美연방 신탁은행 인가 신청…스테이블코인 사업 확장",
+        "source": "이데일리",
+        "pubDate": "2026-11-20",
+        "pubTime": "07:23 KST",
+        "publishedAt": "2026-11-20T07:23:00+09:00",
+        "summary": [
+          "글로벌 디지털자산 결제 및 스테이블코인 인프라 기업 문페이가 미국 연방 신탁은행 인가를 신청함.",
+          "도널드 트럼프 행정부 출범 이후 디지털자산 기업들이 은행업 인가 신청을 잇따라 진행하는 배경이 있음.",
+          "문페이의 신탁은행 인가 신청은 스테이블코인 사업 확장 및 미국 내 금융 인프라 구축에 중요한 영향을 미칠 전망임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.edaily.co.kr/News/Read?newsId=01758086645647688&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
     "productive": [
       {
         "top": true,
