@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21 11:01 KST",
+  "generated_at": "2026-11-21 11:04 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -176,6 +176,25 @@
         "url": "https://www.fntimes.com/html/view.php?ud=202611201609436612fa6b69a559_18",
         "edition": "0730",
         "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[메자닌 투자파일] 에이엘티, 실속 챙긴 CB 차환…흑전에 투자 확대",
+        "source": "블로터",
+        "pubDate": "2026-11-20",
+        "pubTime": "17:30 KST",
+        "publishedAt": "2026-11-20T17:30:46+09:00",
+        "summary": [
+          "에이엘티 7회차 전환사채(CB) 보유자, 140억원 규모 조기상환청구권을 행사",
+          "회사는 122억원 규모 8회차 CB를 신규 발행해 차환 재원을 확보하고 0% 이자 조건 유지",
+          "3분기 누적 영업이익 24억원으로 흑자전환한 가운데 반도체 테스트 설비투자에 136억원 집행"
+        ],
+        "summary_mode": "editorial_digest",
+        "insight": "전환가액과 주가 괴리에 따른 풋옵션 행사 및 무이자 CB 차환·메자닌 조달구조 관찰",
+        "reporter": "정유진",
+        "url": "https://www.bloter.net/news/articleView.html?idxno=679285",
+        "edition": "0730",
+        "editionLabel": "07:30"
       }
     ],
     "ma": [
@@ -206,11 +225,11 @@
         "pubTime": "16:01 KST",
         "publishedAt": "2026-11-20T16:01:00+09:00",
         "summary": [
-          "성원에너텍, 회생 M&A로 자금 유치…1월 본입찰",
-          "이차전지 장비업체 성원에너텍(옛 유일에너테크)이 회생절차에 들어간 지 6개월여 만에 공개매각에",
-          "감사인은 회사가 계속기업으로 존속할 수 있을지 불확실하다고 판단했다. 계약에는 감사의견이 부적정이거나"
+          "회생절차 중인 이차전지 장비기업 성원에너텍, 신주·회사채 인수 방식의 회생 M&A 추진",
+          "기존 약 150억원 경영권 매각이 감사의견 문제로 무산된 후 신규 인수자 공개모집",
+          "딜로이트 안진회계법인이 주관하며 인수의향서 마감은 12월 28일, 본입찰은 2027년 1월 11일 예정"
         ],
-        "summary_mode": "preview_digest",
+        "summary_mode": "editorial_digest",
         "insight": "",
         "reporter": "",
         "url": "https://www.bloter.net/news/articleView.html?idxno=679269",
@@ -225,11 +244,11 @@
         "pubTime": "15:41 KST",
         "publishedAt": "2026-11-20T15:41:00+09:00",
         "summary": [
-          "中, 美사모펀드 투자 재개 움직임…'최악의 상황' 보호장치 요구",
-          "구체적으로는 사모펀드 운용사가 유동성이 낮은 자산을 매각하거나 투자자가 자신의 지분을 인수할",
-          "사모펀드 업계의 자문역들은 올해 도널드 트럼프 미국 대통령이 수십 명의 미국 기업 및 금융계 인사들과 함께"
+          "중국 국부펀드 CIC가 미국 사모펀드 신규 투자 재개를 검토하면서 보호조항을 요구",
+          "미국·유럽의 제재가 발생할 경우 투자지분을 현금화하거나 환급받는 장치 마련을 제안",
+          "약속어음·사이드카·일부 투자 면제 조항 등 지정학적 위험을 반영한 펀드 계약구조가 쟁점"
         ],
-        "summary_mode": "preview_digest",
+        "summary_mode": "editorial_digest",
         "insight": "",
         "reporter": "",
         "url": "https://www.news1.kr/world/usa-canada/6361086",
@@ -237,7 +256,46 @@
         "editionLabel": "07:30"
       }
     ],
-    "re": [],
+    "re": [
+      {
+        "top": true,
+        "headline": "[PF Radar] 롯데건설, 대전 도안 본궤도…PF펀드 상환 속도",
+        "source": "더벨",
+        "pubDate": "2026-11-20",
+        "pubTime": "07:35 KST",
+        "publishedAt": "2026-11-20T07:35:27+09:00",
+        "summary": [
+          "대전 도안2-9지구 개발사업, 4,000억원 한도 본PF 전환에 성공하며 사업자금 확보",
+          "기존 브릿지론 조기 상환으로 롯데건설 PF펀드 ‘프로젝트샬롯’의 자금회수 진행",
+          "샬롯펀드 잔액을 8,900억원대로 줄인 후 ‘엘르네상스펀드’로 리파이낸싱하며 유동성 부담 완화"
+        ],
+        "summary_mode": "editorial_digest",
+        "insight": "본PF 전환과 브릿지론 회수를 통한 건설사 우발채무 및 PF펀드 리파이낸싱 경로 점검",
+        "reporter": "박새롬",
+        "url": "https://www.thebell.co.kr/front/newsview.asp?code=0205&key=202611191718308800102383",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[PF Radar] 홍대 '이화공영 사옥' 부지에 호텔 개발 추진",
+        "source": "더벨",
+        "pubDate": "2026-11-20",
+        "pubTime": "11:22 KST",
+        "publishedAt": "2026-11-20T11:22:58+09:00",
+        "summary": [
+          "퍼시픽제너럴, 서울 서교동 이화공영 사옥 부지를 매입해 관광호텔 개발 추진",
+          "프로젝트금융투자회사(PFV)를 설립하고 총 5개 필지·약 2,212㎡의 부지 확보",
+          "브릿지론 550억원을 조달한 개발 프로젝트로, 홍대 상권 호텔 투자·본PF 전환 여부가 관전 사항"
+        ],
+        "summary_mode": "editorial_digest",
+        "insight": "도심 호텔 개발 PFV 구조와 브릿지론의 본PF 전환·관광수요 연계성 검토",
+        "reporter": "김규완",
+        "url": "https://www.thebell.co.kr/front/newsview.asp?code=0405&key=202611200953384440107217",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
     "infra": [
       {
         "top": true,
@@ -300,20 +358,20 @@
     "hana": [
       {
         "top": true,
-        "headline": "1R MVP 이해란 26점 삼성생명, 하나은행 꺾고 4연승+단독 선두",
-        "source": "뉴스1",
+        "headline": "강성묵 하나증권 대표, WM 호조에도 IB 적자·건전성 숙제",
+        "source": "뉴스웨이",
         "pubDate": "2026-11-20",
-        "pubTime": "22:00 KST",
-        "publishedAt": "2026-11-20T22:00:00+09:00",
+        "pubTime": "16:39 KST",
+        "publishedAt": "2026-11-20T16:39:00+09:00",
         "summary": [
-          "1R MVP 이해란 26점 삼성생명, 하나은행 꺾고 4연승+단독 선두",
-          "여자농구 용인 삼성생명이 1라운드 MVP 이해란의 26점 활약을 앞세워 부천 하나은행을 제압,",
-          "4연승과 함께 단독 선두에 올랐다. 삼성생명은 20일 부천체육관에서 열린 하나은행과의 KB스타뱅킹 2026-27시즌"
+          "하나증권의 2026년 3분기 누적 순이익은 2,816억원으로 전년 동기 대비 67.4% 증가",
+          "같은 기간 IB 부문 순손실은 655억원으로, 충당금전입액이 464억원에서 1,833억원으로 급증",
+          "고정이하여신 비율이 1.50%에서 2.77%로 상승해 부동산 익스포저 관리와 비부동산 IB 회복이 과제"
         ],
-        "summary_mode": "preview_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.news1.kr/sports/basketball/6361444",
+        "summary_mode": "editorial_digest",
+        "insight": "충당금 확대에 따른 IB 손익 변동과 인수금융 등 비부동산 수익원 회복 전략 점검",
+        "reporter": "노영현",
+        "url": "https://newsway.co.kr/news/view?ud=2026112011595274783",
         "edition": "0730",
         "editionLabel": "07:30"
       },
@@ -523,11 +581,11 @@
         "pubTime": "17:49 KST",
         "publishedAt": "2026-11-20T17:49:00+09:00",
         "summary": [
-          "코스닥 급락에 성장펀드도 흔들…“중도 환매 허용해달라” 아우성",
-          "코스닥 성장 기업 등에 모험자금을 공급하기 위해 조성한 국민참여형 국민성장펀드 1차 가입자들이 코스닥지수",
-          "약세로 설정 5개월여 만에 4.8% 안팎의 평가손실 구간까지 떨어졌다. 정부가 원금을 지켜주는 20"
+          "코스닥 약세 속 국민참여형 국민성장펀드 투자자들의 중도환매 요구 확대",
+          "설정 약 5개월 만에 평가손실이 약 4.8%에 이르렀다는 보도로 손실 우려 부각",
+          "장기 모험자본 공급이라는 정책 목적과 개인투자자의 환금성 요구 사이의 갈등이 쟁점"
         ],
-        "summary_mode": "preview_digest",
+        "summary_mode": "editorial_digest",
         "insight": "",
         "reporter": "",
         "url": "https://www.sedaily.com/article/20117084?ref=naver",
@@ -582,11 +640,11 @@
         "pubTime": "10:54 KST",
         "publishedAt": "2026-11-20T10:54:00+09:00",
         "summary": [
-          "엔비디아 때문에 이럴 줄이야…中 돌변에 삼전닉스 '날벼락",
-          "AI 주에서 자금이 빠져나갔다는 분석도 나왔다. 18A 외부 고객 수주 소식을 내놓은 인텔만 2% 상승했다. GPU",
-          "첨단 AI 칩만 통제했던 것에 비해 규제가 대폭 강화됐다. 젠슨 황 엔비디아 전 CEO의 외도 상대 앨리스 황의"
+          "미국의 대중국 AI 칩 수출통제 확대 이후 중국 클라우드 업체의 GPU·낸드 발주가 위축",
+          "트렌드포스는 2027년 1분기 낸드 계약가격이 전분기 대비 0~5% 하락할 것으로 전망",
+          "중국 수요 약화와 메모리 공급 확대로 삼성전자·SK하이닉스의 낸드 업황 및 투자심리에 부담"
         ],
-        "summary_mode": "preview_digest",
+        "summary_mode": "editorial_digest",
         "insight": "",
         "reporter": "",
         "url": "https://www.hankyung.com/article/202611209413i",
