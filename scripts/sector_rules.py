@@ -131,6 +131,12 @@ def classify_sector(title, description=""):
 
 def sector_matches(section, title, description=""):
     """Primary sector plus targeted headline-led fallback for specialist desks."""
+    # A basketball team sponsored by Hana Bank is NOT a Hana Financial Group
+    # investment-banking development. Strictly prevent sports/news crossovers.
+    if section == "hana" and re.search(
+        r"농구|WKBL|선수|리바운드|MVP|득점|3점슛|연승|프로농구|여자농구|시즌.*경기|구단",
+        title or "", re.I):
+        return False
     primary = classify_sector(title, description)
     if primary == section:
         return True
