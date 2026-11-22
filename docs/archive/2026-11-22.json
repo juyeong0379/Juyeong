@@ -1,0 +1,333 @@
+{
+  "generated_at": "2026-11-22 10:34 KST",
+  "last_edition": "0730",
+  "editions_completed": [
+    "0730"
+  ],
+  "reports": [
+    {
+      "id": "report-1",
+      "title": "2026년 10월 금융시장 동향",
+      "source": "한국은행",
+      "date": "2026-11-11",
+      "url": "https://www.bok.or.kr/portal/bbs/P0002017/view.do?menuNo=200365&nttId=11066469",
+      "type": "금융시장 보고서",
+      "related_article_urls": []
+    },
+    {
+      "id": "report-2",
+      "title": "AI 산업 자금조달의 주요 특징과 리스크 평가",
+      "source": "한국은행",
+      "date": "2026-10-27",
+      "url": "https://www.bok.or.kr/portal/bbs/B0000565/view.do?menuNo=201757&nttId=11065947",
+      "type": "국제경제이슈",
+      "related_article_urls": []
+    }
+  ],
+  "sections": [
+    {
+      "key": "ecm",
+      "no": "01",
+      "emoji": "📈",
+      "label": "ECM",
+      "desc": "IPO·유상증자·메자닌·블록딜"
+    },
+    {
+      "key": "corp",
+      "no": "02",
+      "emoji": "🏦",
+      "label": "기업금융",
+      "desc": "DCM·회사채·기업자금 조달"
+    },
+    {
+      "key": "ma",
+      "no": "03",
+      "emoji": "🤝",
+      "label": "M&A·인수금융",
+      "desc": "M&A·경영권 매각·PEF·인수금융"
+    },
+    {
+      "key": "re",
+      "no": "04",
+      "emoji": "🏢",
+      "label": "부동산",
+      "desc": "부동산PF·리츠·상업용부동산"
+    },
+    {
+      "key": "infra",
+      "no": "05",
+      "emoji": "⚡",
+      "label": "인프라",
+      "desc": "데이터센터·전력·재생에너지·민자사업"
+    },
+    {
+      "key": "hana",
+      "no": "06",
+      "emoji": "🏛️",
+      "label": "하나금융그룹",
+      "desc": "하나금융지주·하나은행·하나증권 IB"
+    },
+    {
+      "key": "peer",
+      "no": "07",
+      "emoji": "🏙️",
+      "label": "경쟁사",
+      "desc": "국내외 금융사 IB 전략·주선 경쟁"
+    },
+    {
+      "key": "sto",
+      "no": "08",
+      "emoji": "🔗",
+      "label": "STO",
+      "desc": "토큰증권·디지털증권 제도 및 인프라"
+    },
+    {
+      "key": "productive",
+      "no": "09",
+      "emoji": "🌱",
+      "label": "생산적금융",
+      "desc": "모험자본·성장산업·생산적금융 정책"
+    },
+    {
+      "key": "growthfund",
+      "no": "10",
+      "emoji": "🏦",
+      "label": "국민성장펀드",
+      "desc": "국민성장펀드 정책·조성·투자·집행·운용·출자"
+    },
+    {
+      "key": "other",
+      "no": "11",
+      "emoji": "🌍",
+      "label": "기타",
+      "desc": "글로벌 경제·산업·정책·AI 및 지정학적 핵심 이슈"
+    }
+  ],
+  "categories": {
+    "ecm": [
+      {
+        "top": true,
+        "headline": "공모주 주가 부진에 주관사도 속앓이… 의무인수 지분 손실로 IPO 사업성...",
+        "source": "조선비즈",
+        "pubDate": "2026-11-22",
+        "pubTime": "06:02 KST",
+        "publishedAt": "2026-11-22T06:02:00+09:00",
+        "summary": [
+          "코스닥 공모주 주가 부진이 기업공개(IPO)를 주관한 증권사들의 수익성에도 부담으로 작용하고 있다",
+          "IPO 주관 수수료의 절반 이상을 의무인수 주식에서 까먹은 사례도 확인된다",
+          "IPO 주관사들이 의무인수한 주식 취득원금의 약 34%가 손실로 이어진 셈이다"
+        ],
+        "summary_mode": "source_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://biz.chosun.com/stock/market_trend/2026/11/22/OSJT47THVZGSDHVEU6ZSSRYP4M/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "앤트로픽, 상장 이틀째 8.5% 급락…공모가까지 위협",
+        "source": "전자신문",
+        "pubDate": "2026-11-21",
+        "pubTime": "10:09 KST",
+        "publishedAt": "2026-11-21T10:09:00+09:00",
+        "summary": [
+          "앤트로픽 주가가 뉴욕 나스닥 상장 이틀째인 20일 8.5% 급락하여 공모가까지 위협받음.",
+          "앤트로픽 주가는 정규장 마감 기준 88.91달러를 기록했으며, 장중에는 공모가인 주당 83달러까지 하락함.",
+          "앤트로픽 주가 급락이 공모가 대등선에서 마감하는 등 시장의 투자심리 위축으로 해석될 수 있음."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.etnews.com/20261121000022",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[IPO 뜯어보기] [KTE] FI 물량 100만주, 3개월 뒤 풀린다…오버행 우려",
+        "source": "딜사이트경제TV",
+        "pubDate": "2026-11-21",
+        "pubTime": "08:38 KST",
+        "publishedAt": "2026-11-21T08:38:00+09:00",
+        "summary": [
+          "KTE의 FI 물량 100만주와 NH투자증권 의무인수분 5만2631주, 총 105만2631주의 주식이 3개월 후 유통 가능해져 오버행 우려가 대두됨.",
+          "FI의 주식 취득가는 2만1000원이며, KTE의 희망 공모가 범위 1만9000원에서 2만3000원의 중간값과 일치함.",
+          "3개월 후 보호예수 종료로 대규모 FI 물량이 시장에 풀리면서 주가 변동성 확대 가능성이 관전 쟁점임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://news.dealsitetv.com/articles/178825",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "corp": [],
+    "ma": [
+      {
+        "top": true,
+        "headline": "규제 앞둔 대학병원 의료기기 납품사 ‘M&A 도미노’…을지·순천향도 ...",
+        "source": "조선비즈",
+        "pubDate": "2026-11-22",
+        "pubTime": "06:23 KST",
+        "publishedAt": "2026-11-22T06:23:00+09:00",
+        "summary": [
+          "국내 주요 대학병원과 관련된 의료기기 간접납품회사(간납사)가 잇따라 인수합병(M&A) 시장에 매물로 나오고 있다",
+          "22일 의료계와 투자은행(IB) 업계에 따르면 을지대의료원에 의료기기를 공급하는 토탈메디칼은 최근 매각 작업을 본격화했다",
+          "매각 주관사인 삼일PwC는 의료기기 유통기업과 사모펀드 등을 대상으로 인수 의향을 확인하고 있다"
+        ],
+        "summary_mode": "source_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://biz.chosun.com/science-chosun/medicine-health/2026/11/22/FCTEOUGMKFD6BHJW6UR54EFJ5I/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "\"소프트뱅크 손정의, SK하이닉스 1조달러 인수 검토했다 중단\"",
+        "source": "뉴시스",
+        "pubDate": "2026-11-21",
+        "pubTime": "15:04 KST",
+        "publishedAt": "2026-11-21T15:04:00+09:00",
+        "summary": [
+          "소프트뱅크 손정의가 SK하이닉스 1조 달러 규모 인수를 검토했으나 중단한 사건.",
+          "SK하이닉스는 한국의 핵심 반도체 기업이며, 외국기업 인수 시 국가 안보 등 기술규제를 넘어야 하는 배경이 존재함.",
+          "SK그룹은 SK하이닉스 지분 매각 의사가 없으며, 이에 따른 인수 논의 중단 및 관련 규제 영향이 관전 포인트임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261121_0003877698",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "크라우드스트라이크, 지스케일러 인수 추진… 사이버보안 '초대형 빅딜...",
+        "source": "전자신문",
+        "pubDate": "2026-11-21",
+        "pubTime": "14:16 KST",
+        "publishedAt": "2026-11-21T14:16:00+09:00",
+        "summary": [
+          "크라우드스트라이크가 시가총액 약 335억달러(약 45조원) 규모의 글로벌 클라우드 보안 기업 지스케일러 인수를 추진 중임.",
+          "지스케일러는 클라우드 보안 분야에서 선도적인 기업으로, 이번 인수는 사이버보안 업계에서 대형 M&A로 평가받고 있음.",
+          "이번 인수가 성사될 경우 사이버보안 시장 내 경쟁력 강화 및 업계 판도 변화 가능성이 관전 포인트임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.etnews.com/20261121000041",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "re": [],
+    "infra": [],
+    "hana": [],
+    "peer": [
+      {
+        "top": true,
+        "headline": "ELS 낙인 알림 내달 시행…증권사마다 다른 중도상환 기준가 안내",
+        "source": "뉴스1",
+        "pubDate": "2026-11-22",
+        "pubTime": "06:00 KST",
+        "publishedAt": "2026-11-22T06:00:00+09:00",
+        "summary": [
+          "ELS 낙인 알림 제도가 내달부터 시행되어 증권사들이 투자자에게 기초자산 가격과 공정가액을 알린다.",
+          "증권사별로 ELS 중도상환 기준가가 다르며 낙인 기준 비율에 10%포인트 이내로 접했을 때 알림이 제공된다.",
+          "기초자산 가격 정보 제공을 통해 투자자의 신속한 대응 가능성과 증권사 간 중도상환 조건 차이가 관전 쟁점으로 부상한다."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.news1.kr/finance/general-stock/6361421",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "sto": [],
+    "productive": [
+      {
+        "top": true,
+        "headline": "[투데이 窓] 생산적 금융, 기업을 평가하는 잣대도 달라져야 한다",
+        "source": "머니투데이",
+        "pubDate": "2026-11-22",
+        "pubTime": "07:00 KST",
+        "publishedAt": "2026-11-22T07:00:00+09:00",
+        "summary": [
+          "정부가 1년 전 발표한 '생산적 금융 대전환' 계획은 부동산과 수도권에 집중된 금융 자금을 미래 첨단전략산업으로 전환하는 정책 변화다.",
+          "이 계획은 금융 기관들이 자체 목표를 설정하고 실행하며 지속가능한 성장 동력을 확보하는 데 중점을 두고 있다.",
+          "기업 평가의 잣대도 이 같은 금융 자금의 흐름 변화에 맞춰 생산적 금융에 맞는 기준으로 조정돼야 한다는 점이 관전 쟁점이다."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.mt.co.kr/opinion/2026/11/22/2026112021100514124",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
+    "growthfund": [],
+    "other": [
+      {
+        "top": true,
+        "headline": "이란, 신형 미사일 발사대 공개…호르무즈 해협 주변서 유조선 3척 피격",
+        "source": "뉴시스",
+        "pubDate": "2026-11-22",
+        "pubTime": "02:57 KST",
+        "publishedAt": "2026-11-22T02:57:49+09:00",
+        "summary": [
+          "이란 혁명수비대가 액체연료 미사일 2발을 동시에 발사할 수 있는 신형 발사대를 지하 미사일 시설에서 공개함.",
+          "신형 발사대는 기존 고체연료 미사일 발사대보다 발전된 형태로, 액체연료를 사용해 미사일의 속도와 궤적 조정 능력을 향상시킴.",
+          "21일 호르무즈 해협 안팎에서 최소 3척의 유조선이 피격당해 이란이 전략적 요충지 선박을 공격한 정황이 드러남."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261122_0003877864",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "호르무즈 해협 인근 오만 해역서 유조선 잇따라 피격…이란 \"기뢰 폭발\"",
+        "source": "뉴시스",
+        "pubDate": "2026-11-21",
+        "pubTime": "23:07 KST",
+        "publishedAt": "2026-11-21T23:07:43+09:00",
+        "summary": [
+          "호르무즈 해협 인근 오만 해역에서 유조선들이 미확인 발사체와 기뢰 폭발로 잇따라 피격당하는 사건 발생.",
+          "첫 피해 유조선은 21일 오전 5시경 오만 카사브 북쪽 약 20㎞ 해상에서 선미에 발사체를 맞았고, 50분 뒤 또 다른 유조선 기관실에 발사체가 명중함.",
+          "잇따른 피격에도 인명 피해와 해양 환경 영향은 보고되지 않았으며, 관련 당국은 조사를 진행 중이고 항해 주의를 당부함."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261121_0003877849",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "빅스텝 인상까지 거론되는 12월 FOMC 회의[한상춘의 국제경제 심층읽기...",
+        "source": "한국경제",
+        "pubDate": "2026-11-21",
+        "pubTime": "14:14 KST",
+        "publishedAt": "2026-11-21T14:14:00+09:00",
+        "summary": [
+          "빅스텝 인상까지 거론되는 12월 FOMC 회의[한상춘의 국제경제 심층읽기",
+          "물가 안정에 집중 10월 물가 지표 발표 이후 올해 마지막 FOMC 회의에서는 금리 인상이 기정사실화되는 분위기다",
+          "미국 중앙은행(Fed)은 기준금리를 변경할 때 수준(level)보다 변화(change)를 중시한다. 3개월 이동 평균치로"
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://magazine.hankyung.com/business/article/202611197044b",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ]
+  }
+}
