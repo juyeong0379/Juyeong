@@ -71,8 +71,13 @@ jobs:
           enough = sum(len(items) >= 2 for items in groups.values())
           before_cutoff = now < deadline
           if before_cutoff:
-              early_start = now.replace(hour=6, minute=30, second=0, microsecond=0)
-              healthy = enough >= 8 and published_at >= early_start
+              # A complete, valid early-day edition should be visible before
+              # 07:30; don't queue up 06:40/06:55/07:15 full reruns just
+              # because a quiet Sunday has few newsworthy articles. The
+              # fixed-cutoff 07:30 update remains mandatory regardless.
+              early_start = now.replace(hour=6, minute=0, second=0, microsecond=0)
+              article_total = sum(len(items) for items in groups.values())
+              healthy = article_total >= 5 and published_at >= early_start
               skip = (os.getenv("EVENT_NAME") == "schedule"
                       and todays and edition in completed and healthy)
           else:
