@@ -1,25 +1,25 @@
 {
-  "attempted_at": "2026-11-23 06:32 KST",
+  "attempted_at": "2026-11-23 10:58 KST",
   "state": "published",
-  "run_url": "https://github.com/juyeong0379/Juyeong/actions/runs/45072311853",
+  "run_url": "https://github.com/juyeong0379/Juyeong/actions/runs/45097388941",
   "steps": {
     "GENERATE": "success",
     "VALIDATE": "success",
     "PUBLISH": "success",
     "PAGES": "success"
   },
-  "data_generated_at": "2026-11-23 06:32 KST",
+  "data_generated_at": "2026-11-23 10:58 KST",
   "article_counts": {
     "ecm": 3,
-    "corp": 0,
+    "corp": 1,
     "ma": 3,
     "re": 1,
     "infra": 0,
     "hana": 3,
     "peer": 3,
-    "sto": 2,
+    "sto": 3,
     "productive": 3,
     "growthfund": 0,
-    "other": 2
+    "other": 3
   }
 }
