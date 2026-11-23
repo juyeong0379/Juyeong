@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23 11:02 KST",
+  "generated_at": "2026-11-24 07:53 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -7,22 +7,24 @@
   "reports": [
     {
       "id": "report-1",
-      "title": "기술특례상장기업의 성장을 위한 코스닥시장의 과제",
+      "title": "임팩트투자 생태계 현황과 과제",
       "source": "자본시장연구원",
-      "date": "2026-11-02",
-      "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6883&syear=2026&zcd=002001016&zno=1944",
-      "type": "자본시장포커스",
+      "date": "2026-10-26",
+      "url": "https://www.kcmi.re.kr/report/report_view?report_no=2341",
+      "type": "조사보고서",
       "related_article_urls": [
-        "https://www.fntimes.com/html/view.php?ud=202611221810313862179ad43907_18"
+        "https://www.investchosun.com/site/data/html_dir/2026/11/23/2026112380130.html",
+        "https://www.newsis.com/view/NISX20261123_0003879680",
+        "https://www.yna.co.kr/view/AKR20261123148000063?input=1195m"
       ]
     },
     {
       "id": "report-2",
-      "title": "투자판단에서의 핀플루언서 의존 실태와 규제 방안",
-      "source": "자본시장연구원",
-      "date": "2026-11-11",
-      "url": "https://www.kcmi.re.kr/report/report_view?report_no=2350",
-      "type": "이슈보고서",
+      "title": "은행 Weekly 2026.11.16",
+      "source": "하나증권",
+      "date": "2026-11-16",
+      "url": "https://file.hanaw.com/download/research/FileServer/WEB/industry/industry/2026/11/15/Bank_Weekly_20261116.pdf",
+      "type": "증권사 업종 보고서",
       "related_article_urls": []
     }
   ],
@@ -109,58 +111,58 @@
     "ecm": [
       {
         "top": true,
-        "headline": "경쟁사와 일하지 말라…美IPO 대어들, 월가에 까다로운 요구",
-        "source": "연합뉴스",
+        "headline": "[DCM] 공모채 민평 산정 기준 바뀐다…내년부터 전체 채평사 금리 반영",
+        "source": "한국금융신문",
         "pubDate": "2026-11-23",
-        "pubTime": "04:35 KST",
-        "publishedAt": "2026-11-23T04:35:00+09:00",
+        "pubTime": "18:18 KST",
+        "publishedAt": "2026-11-23T18:18:00+09:00",
         "summary": [
-          "미국 IPO 대어들이 투자은행(IB)에 경쟁사와 협업하지 말라는 요구를 포함한 전례 없는 조건을 제시함.",
-          "로이터 통신 보도에 따르면, 앤트로픽은 IPO 담당 핵심 인력에 상장 후 6개월 간 경쟁사와의 협업을 금지하는 조건을 부과한 것으로 확인됨.",
-          "이러한 까다로운 요구는 월가 투자은행과의 관계 관리에 새로운 관전 쟁점을 제시하며 IPO 진행 과정에 영향을 미침."
+          "공모채 민평금리 산정 방법이 2027년 1월 1일 이후 최초 증권신고서를 제출하는 공모 무보증사채부터 변경된다.",
+          "민평금리는 채권평가사가 평가한 무보증사채 시장가치를 나타내며, 개정 규준에 따라 전체 채권평가사의 금리를 반영하게 된다.",
+          "새 산정 기준 적용으로 공모채 금리 반영의 정확성 제고 및 시장 투명성 강화가 기대된다."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.yna.co.kr/view/AKR20261123003000075?input=1195m",
+        "url": "https://www.fntimes.com/html/view.php?ud=202611231554575006141825007d_18",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "앤트로픽, IPO 주관은행에 ‘오픈AI 업무 6개월 제한’ 요구… 월가서 불...",
-        "source": "조선비즈",
-        "pubDate": "2026-11-22",
-        "pubTime": "22:39 KST",
-        "publishedAt": "2026-11-22T22:39:00+09:00",
+        "headline": "중복상장 규제 후폭풍…1.5조 국제소송 당한 카카오",
+        "source": "한국경제",
+        "pubDate": "2026-11-23",
+        "pubTime": "17:49 KST",
+        "publishedAt": "2026-11-23T17:49:00+09:00",
         "summary": [
-          "앤트로픽이 IPO 주관은행에 경쟁사인 오픈AI 관련 업무를 6개월간 제한하는 서약을 요구한 사건.",
-          "일부 주관은행에 IPO 담당 인력을 4명으로 제한하고 기업 정보 접근을 제약하는 조치가 포함됨.",
-          "앤트로픽의 요구로 월가 금융권에서 IPO 절차와 경쟁 제한 조건에 관한 논란이 발생하고 있음."
+          "카카오모빌리티 2대주주인 텍사스퍼시픽그룹(TPG)이 최대주주 카카오를 상대로 1조5000억원 규모 국제중재를 신청한 사건 발생.",
+          "중복상장 규제가 이 사안의 배경으로 국내에서 국제중재로 비화한 첫 사례임이 확인됨.",
+          "국내 증권 시장의 중복상장 규제에 따른 법적 분쟁 가능성 및 향후 국제소송 추이가 주요 관전 쟁점임."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://biz.chosun.com/it-science/ict/2026/11/22/7GKG44VE6JFH3ACSBVSUQC7CIE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+        "url": "https://www.hankyung.com/article/2026112350741",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "상장 이틀 차 앤트로픽 급락에…‘공모 배분 탓’, ‘직원 매도허용 때...",
-        "source": "조선비즈",
-        "pubDate": "2026-11-22",
-        "pubTime": "15:19 KST",
-        "publishedAt": "2026-11-22T15:19:00+09:00",
+        "headline": "[더벨][이슈 & 보드] 카카오·TPG 국제중재, IPO 협조 범위가 쟁점",
+        "source": "더벨",
+        "pubDate": "2026-11-23",
+        "pubTime": "08:22 KST",
+        "publishedAt": "2026-11-23T08:22:00+09:00",
         "summary": [
-          "앤트로픽은 사상 최대 규모로 기업공개(IPO)를 마친 뒤 상장 이틀 만에 주가가 급락하는 현상이 발생함.",
-          "앤트로픽 IPO에서 배정된 810억 달러 규모 주식 중 절반 이상이 기존 투자자인 알티미터캐피털, 라이트스피드 벤처 파트너스 등에 배분됨.",
-          "앤트로픽 주가 급락의 원인으로 공모 배분 구조와 직원 매도허용 시점이 주요 변수로 거론되고 있음."
+          "카카오와 TPG 간 국제중재에서 IPO 협조 범위가 주요 쟁점으로 등장함.",
+          "기업공개(IPO) 지연과 중복상장 심사 강화에 따라 TPG는 보유 지분을 기반으로 미국에 ADR 상장을 추진 중임.",
+          "카카오가 TPG 요구에 부적절하게 대응할 경우 이사회 멤버 대상 개인 소송 가능성도 제기되고 있음."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://biz.chosun.com/stock/stock_general/2026/11/22/WPUPRI3SDVAY5PJJ5OZFCIYHGM/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611181433579160102292",
         "edition": "0730",
         "editionLabel": "07:30"
       }
@@ -168,39 +170,39 @@
     "corp": [
       {
         "top": true,
-        "headline": "[Invest]금투협, 회사채 '캡티브 영업' 막겠다는데…\"걸러낼 방법이 없다...",
-        "source": "인베스트조선",
-        "pubDate": "2026-11-23",
-        "pubTime": "07:02 KST",
-        "publishedAt": "2026-11-23T07:02:00+09:00",
+        "headline": "중앙일보 사는 다우기술…회사채로 최대 2000억 장전",
+        "source": "딜사이트",
+        "pubDate": "2026-11-24",
+        "pubTime": "07:22 KST",
+        "publishedAt": "2026-11-24T07:22:00+09:00",
         "summary": [
-          "금투협은 회사채 수요예측 과정에서 합의한 금리와 물량에 따라 참여하는 '캡티브 영업' 행위를 금지했다.",
-          "특히 주관 및 인수회사가 자신이 인수하는 회사채의 수요예측에 직접 참여하는 행위도 제한하고 있다.",
-          "이 조치에도 불구하고 '캡티브 영업'을 효과적으로 걸러낼 방법이 없어 실효성 여부가 관전 쟁점이다."
+          "다우기술이 회사채 발행을 통해 최대 2000억 원을 조달할 계획임.",
+          "희망 금리밴드를 개별 민평금리 대비 -30~+30bp로 설정하였으며, 신용등급은 'A0'다.",
+          "이번 회사채 발행은 2024년 이후 약 2년 만의 발행으로 업계의 이목이 집중되는 상황임."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/20/2026112080095.html",
+        "url": "https://dealsite.co.kr/articles/173268",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "머스크 “몇 개월 매출 공백에 수천억佛 필요”…자금조달 서두르는 스...",
-        "source": "서울경제",
-        "pubDate": "2026-11-22",
-        "pubTime": "16:14 KST",
-        "publishedAt": "2026-11-22T16:14:00+09:00",
+        "headline": "[발전5사 재무 진단] 올해 AAA 회사채 35%가 발전채…잔액 27兆 돌파",
+        "source": "연합인포맥스",
+        "pubDate": "2026-11-23",
+        "pubTime": "09:06 KST",
+        "publishedAt": "2026-11-23T09:06:00+09:00",
         "summary": [
-          "스페이스X가 몇 개월 매출 공백에 대비해 수천억 프랑의 자금조달을 서두르고 있음.",
-          "이번 채권 발행수익률이 8.259%로 미국 투자등급 회사채 평균 5.95%를 크게 상회하며, 올 초 발행한 비슷한 만기 채권보다 약 100bp 높은 금리가 제시됨.",
-          "높은 금리가 자금조달 비용 상승을 의미하며, 매출 공백 대응과 자금 조달 전략의 중요성이 대두되고 있음."
+          "올해 AAA 회사채 35%가 발전채…잔액 27兆 돌파",
+          "올해 들어 차입금은 소폭 감소했지만, 채권 잔액이 2조5천억원 이상 늘면서 채권 발행 중심의 자금조달 구조가 한층 뚜렷해졌다",
+          "이렇듯 발전5사가 발행을 늘리는 사이 동일한 최고 신용등급 'AAA'를 가진 비금융 민간"
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.sedaily.com/article/20117386?ref=naver",
+        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445954",
         "edition": "0730",
         "editionLabel": "07:30"
       }
@@ -208,139 +210,139 @@
     "ma": [
       {
         "top": true,
-        "headline": "[단독] ‘케이카’ 품은 캑터스PE, CJ제일제당 전분당 인수 추진 [시그널...",
-        "source": "서울경제",
-        "pubDate": "2026-11-22",
-        "pubTime": "18:59 KST",
-        "publishedAt": "2026-11-22T18:59:00+09:00",
+        "headline": "[Invest]국민성장펀드 쏠림에…PEF 운용사들 \"은행 돈 받기가 하늘의 별...",
+        "source": "인베스트조선",
+        "pubDate": "2026-11-24",
+        "pubTime": "07:02 KST",
+        "publishedAt": "2026-11-24T07:02:00+09:00",
         "summary": [
-          "CJ제일제당 전분당 사업부 인수전에 중견 사모펀드(PEF) 운용사인 캑터스프라이빗에쿼티(PE)가 뛰어들었다",
-          "22일 투자은행(IB) 업계에 따르면 CJ제일제당이 지난달 말 진행한 전분당 사업부 매각 본입찰에 캑터스PE·젤코바인베스트먼트 컨소시엄이 참여했다",
-          "CJ제일제당은 삼정회계법인을 주관사로 선정하고 사업부를 별도 법인으로 분리하는 카브아웃 방식으로 전분당 사업부 매각을 추진해왔다"
+          "국민성장펀드로 금융권 자금이 쏠리면서 사모펀드(PEF) 운용사들이 은행 자금을 받기 어려워지는 현상이 발생함.",
+          "내년에도 성장펀드에 금융권 자금이 집중될 것으로 예상되어 민간 주도의 바이아웃 투자에 제약이 커질 배경이 마련됨.",
+          "IB업계 관계자들은 국민성장펀드로 인한 금융기관 유동성 흡수가 PEF 펀드레이징 시장에 영향을 미치는 점을 주목하고 있음."
         ],
-        "summary_mode": "source_digest",
+        "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.sedaily.com/article/20117345?ref=naver",
+        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/23/2026112380130.html",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "금융硏 \"AI·M&A 자금수요 대응에 SRT 활용 유효\"",
-        "source": "연합인포맥스",
-        "pubDate": "2026-11-22",
-        "pubTime": "12:02 KST",
-        "publishedAt": "2026-11-22T12:02:00+09:00",
+        "headline": "[더벨][thebell Forum | PMI 포럼 2026] \"PEF 간 거래 더 많아질 것…인수...",
+        "source": "더벨",
+        "pubDate": "2026-11-23",
+        "pubTime": "08:32 KST",
+        "publishedAt": "2026-11-23T08:32:00+09:00",
         "summary": [
-          "금융연구원이 인공지능(AI) 데이터센터와 대형 인수합병(M&A) 등 기업의 대규모 자금 수요에 대응하기 위해 은행권의 합성위험이전(SRT) 거래 활용을 권고함.",
-          "글로벌 SRT를 통한 대출채권 규모가 9년 동안 6.6배 증가했으며, 이를 통해 위험가중자산(RWA) 감축 효과가 나타남.",
-          "SRT 활용은 대규모 자금 수요 대응과 함께 은행권의 리스크 관리 및 자본 효율성 향상이라는 관전 포인트를 제공함."
+          "[thebell Forum | PMI 포럼 2026] \"PEF 간 거래 더 많아질 것…인수",
+          "2026)에서는 '요동치는 M&A 시장, PEF 엑시트 전략은'이란 주제로 토론이 진행됐다. 곽현주 BDA파트너스",
+          "운용사는 기업을 인수해 가치를 높인 뒤 매각이나 기업공개(IPO) 등을 통해 투자금을 회수하고 출자자(LP)에게"
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445883",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611191454104640104135",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "\"3년 7개월 족쇄 풀린다\"…김범수 2심 무죄, 멈췄던 카카오 AI·M&A 시계 ...",
-        "source": "머니투데이",
-        "pubDate": "2026-11-22",
-        "pubTime": "08:00 KST",
-        "publishedAt": "2026-11-22T08:00:00+09:00",
+        "headline": "[더벨][thebell Forum | PMI 포럼 2026] \"중견기업 M&A, PE와 성장·회수 전...",
+        "source": "더벨",
+        "pubDate": "2026-11-23",
+        "pubTime": "08:32 KST",
+        "publishedAt": "2026-11-23T08:32:00+09:00",
         "summary": [
-          "김범수 카카오 창업자가 SM엔터테인먼트 인수 과정 시세조종 혐의에 대해 1심과 2심에서 무죄 판결을 받음",
-          "이번 2심 무죄 판결로 김범수 창업자는 3년 7개월간 이어진 법적 족쇄에서 벗어나게 됨",
-          "무죄 확정에 따라 카카오의 AI 및 M&A 관련 사업 추진이 재개될 가능성에 시장의 관심이 집중됨"
+          "[thebell Forum | PMI 포럼 2026] \"중견기업 M&A, PE와 성장·회수 전",
+          "2026)에서 '중견기업 M&A 전략: PE 활용법'이란 주제로 토론이 펼쳐졌다. 성익환 스톤브릿지캐피탈 부대표의",
+          "이창주 본부장은 MDS테크놀로지 인수와 매각 경험을 바탕으로 위험 분담과 투자 기간의 조율을 강조했다"
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.mt.co.kr/tech/2026/11/22/2026112012213815677",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611191300433080107022",
         "edition": "0730",
         "editionLabel": "07:30"
       }
     ],
-    "re": [
+    "re": [],
+    "infra": [
       {
         "top": true,
-        "headline": "해수부, 민관 합작으로 동유럽 물류센터 확대 박차",
-        "source": "뉴시스",
-        "pubDate": "2026-11-22",
-        "pubTime": "11:50 KST",
-        "publishedAt": "2026-11-22T11:50:03+09:00",
+        "headline": "현대엔지니어링, KT클라우드와 협업…인천 데이터센터 PF 조달",
+        "source": "딜사이트",
+        "pubDate": "2026-11-24",
+        "pubTime": "07:04 KST",
+        "publishedAt": "2026-11-24T07:04:00+09:00",
         "summary": [
-          "해양수산부가 한국해양진흥공사 및 부산항만공사 등과 민관 합작투자를 통해 동유럽 물류센터 확장에 속도를 내고 있음",
-          "폴란드 브로츠와프에 대지면적 약 10만5000평, 연면적 약 5만평 규모의 물류센터를 확보했으며 크로아티아 리예카항에는 대지면적 약 5000평, 연면적 약 2700평 규모 물류센터 건설을 추진 중임",
-          "리예카 물류센터는 2028년 상반기 개장 예정이며, 해수부와 한국해양진흥공사는 해외 물류 인프라 확충을 위해 1500억원 규모의 블라인드 펀드를 추가 조성함"
+          "현대엔지니어링이 KT클라우드와 협업해 인천 원창동 데이터센터 프로젝트파이낸싱(PF) 약정 5300억 원을 체결한 사실이 핵심 사건임.",
+          "이번 PF 약정은 현대엔지니어링이 시공을, KT클라우드가 운영을 맡는 인천 데이터센터 사업을 위한 조달이며, 군산에 이어 두 번째 협업임.",
+          "이 협업은 현대엔지니어링과 KT클라우드가 데이터센터 사업에서 전략적 파트너십을 강화하는 중요한 계기가 되고 있음이 관전 쟁점임."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.newsis.com/view/NISX20261122_0003877984",
+        "url": "https://dealsite.co.kr/articles/173233",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[더벨]KCGI대체운용, 바이오가스로 환경 인프라 첫발",
+        "source": "더벨",
+        "pubDate": "2026-11-23",
+        "pubTime": "16:38 KST",
+        "publishedAt": "2026-11-23T16:38:00+09:00",
+        "summary": [
+          "KCGI대체운용이 바이오가스 에너지 협의회와 협약을 맺으며 바이오가스 환경 인프라 사업에 첫발을 내디뎠음.",
+          "유기성 폐기물에서 발생하는 메탄가스를 정제해 연료나 전력으로 활용하는 바이오가스 기술에 집중하고 있음.",
+          "환경 및 인프라 분야에서 운용사가 거의 없다는 점에서 해당 분야 진출과 펀드 설정 가능성이 주목받고 있음."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611191508365360104150",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "에이치에너지, GS에너지·스틱 손잡고 지붕 태양광 1GW 공동개발",
+        "source": "한국경제",
+        "pubDate": "2026-11-23",
+        "pubTime": "09:44 KST",
+        "publishedAt": "2026-11-23T09:44:00+09:00",
+        "summary": [
+          "에이치에너지가 GS에너지, 스틱인베스트먼트와 협력하여 지붕 태양광 1GW 공동 개발 프로젝트를 추진함.",
+          "GS에너지는 재생에너지 구매 기업 발굴과 전력구매계약(PPA) 설계 및 전력 판매를 담당하고, 스틱인베스트먼트는 자금 조달을 위해 지분투자, 펀드 조성, 프로젝트파이낸싱 역할을 수행함.",
+          "이번 협력을 통해 1GW 규모 지붕 태양광 발전의 효율적 사업 추진과 재생에너지 확대에 기여할 전망임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.hankyung.com/article/202611233407i",
         "edition": "0730",
         "editionLabel": "07:30"
       }
     ],
-    "infra": [],
     "hana": [
       {
         "top": true,
-        "headline": "하나은행, 취약계층 노인 위한 주거 환경 개선… 안전보행기 지원",
-        "source": "한국일보",
-        "pubDate": "2026-11-22",
-        "pubTime": "16:20 KST",
-        "publishedAt": "2026-11-22T16:20:00+09:00",
+        "headline": "하나금융연구소, 포용금융 토론…강경훈 교수 \"금융기본권 정립 필요\"",
+        "source": "아시아경제",
+        "pubDate": "2026-11-23",
+        "pubTime": "16:05 KST",
+        "publishedAt": "2026-11-23T16:05:00+09:00",
         "summary": [
-          "하나금융그룹이 취약계층 어르신들의 안전한 주거환경 조성과 이동 편의 증진을 위해 주거 안전용품 및 보행보조기 지원 사업을 실시함.",
-          "이번 사업은 주거환경이 열악하거나 거동이 불편한 취약계층 노인들을 대상으로 진행됨.",
-          "취약계층 노인의 안전보행기 지원을 통해 주거환경 개선과 이동 편리성 증진이라는 사회적 가치를 실현하는 점이 주요 관전 쟁점임."
+          "하나금융연구소는 20일 은행연합회에서 한국금융연구센터와 포용금융의 정책 방향과 민간 금융사의 역할을 주제로 라운드테이블을 개최함.",
+          "강경훈 교수가 금융기본권 정립의 필요성을 토론에서 강조한 점이 이번 행사의 주요 내용 중 하나임.",
+          "포용금융에 대한 정책 방향 논의와 민간 금융사의 역할 탐색이 이번 라운드테이블의 핵심 의제로 부각됨."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.hankookilbo.com/news/article/A2026112215580001271?did=NA",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "하나금융, 취약계층 어르신 1000명에 안전용품 지원",
-        "source": "아주경제",
-        "pubDate": "2026-11-22",
-        "pubTime": "11:22 KST",
-        "publishedAt": "2026-11-22T11:22:00+09:00",
-        "summary": [
-          "하나금융그룹이 취약계층 독거 어르신 1000명에게 안전용품과 방한용품을 지원하는 행사를 개최함.",
-          "함영주 하나금융그룹 회장이 지난 20일 서울 양천구 거주 독거 어르신 가정을 직접 방문하여 방한용품을 전달함.",
-          "이번 지원 활동을 통해 취약계층 어르신의 생활 안전과 건강 증진에 기여하는 점에 주목됨."
-        ],
-        "summary_mode": "preview_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.ajunews.com/view/20261122111729578",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "함영주 하나금융그룹 회장 “어르신의 ‘편안한 노후’ 돕는 건 모두의...",
-        "source": "동아일보",
-        "pubDate": "2026-11-22",
-        "pubTime": "08:31 KST",
-        "publishedAt": "2026-11-22T08:31:00+09:00",
-        "summary": [
-          "하나금융그룹은 취약계층 어르신 1000명에게 주거 안전용품과 보행 보조기를 지원하는 사업을 확대하고 있다.",
-          "주거환경이 열악하거나 이동에 어려움을 겪는 어르신을 대상으로 한 이번 지원 사업은 하나금융그룹의 사회공헌 활동 일환임을 확인할 수 있다.",
-          "어르신의 편안한 노후를 돕는 이번 사업은 사회적 책임 강화와 취약계층 지원 확대라는 관전 포인트를 가진다."
-        ],
-        "summary_mode": "preview_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.donga.com/news/Economy/article/all/20261120/135063435/1",
+        "url": "https://view.asiae.co.kr/article/2026112316050545053",
         "edition": "0730",
         "editionLabel": "07:30"
       }
@@ -348,58 +350,58 @@
     "peer": [
       {
         "top": true,
-        "headline": "KB증권 WM 부문 성장 견인한 이홍구…인사 향방 촉각 [이재근號 KB금융]",
-        "source": "한국금융신문",
+        "headline": "NH투자증권, AI 로보어드바이저 출시…\"맞춤형 투자설계\"",
+        "source": "뉴시스",
         "pubDate": "2026-11-23",
-        "pubTime": "06:02 KST",
-        "publishedAt": "2026-11-23T06:02:00+09:00",
+        "pubTime": "15:15 KST",
+        "publishedAt": "2026-11-23T15:15:39+09:00",
         "summary": [
-          "KB증권 WM 부문 성장을 주도한 이홍구의 인사 향방에 시장의 관심이 집중되고 있음",
-          "KB증권은 2026년 3분기 연결 기준 당기순이익 지배지분 기여도가 13.1%를 기록하여 수익성에 중요한 역할을 하고 있음",
-          "KB금융지주의 임시 주주총회를 통해 이재근 회장이 선임되며 증권사 CEO 인선과 연계된 경영진 세대교체가 가속화될 가능성이 있음"
+          "NH투자증권이 AI를 활용해 투자자의 보유 종목과 과거 투자 성과를 분석하는 'AI 로보어드바이저' 서비스를 출시함.",
+          "이 서비스는 최대 15개 보유 종목과 최근 3년간 수익률 등 투자 데이터를 기반으로 투자 습관과 강점, 개선이 필요한 부분을 진단하며, AI가 설계한 전략은 디지털 어드바이저 검토를 거쳐 투자자에게 제안됨.",
+          "출시된 AI 로보어드바이저 서비스는 24시간 시장 모니터링과 자동 리밸런싱 기능을 제공하며, NH투자증권은 로보어드바이저 전문기업 콴텍과 협업해 일반 주식 자산관리로 협력 범위를 확대함."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.fntimes.com/html/view.php?ud=202611221810313862179ad43907_18",
+        "url": "https://www.newsis.com/view/NISX20261123_0003879526",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "수협은행장 인선 네 차례 불발…증권사 인수·신사업 누가 이끄나 [은행...",
-        "source": "한국금융신문",
+        "headline": "메리츠證, ‘모음’ 신규고객에 연 5.9% 발행어음 특판",
+        "source": "헤럴드경제",
         "pubDate": "2026-11-23",
-        "pubTime": "00:02 KST",
-        "publishedAt": "2026-11-23T00:02:00+09:00",
+        "pubTime": "11:32 KST",
+        "publishedAt": "2026-11-23T11:32:00+09:00",
         "summary": [
-          "수협은행은 올해 3분기 누적 세전 순이익이 전년 동기 대비 0.7% 증가하는 데 그쳐 인수 및 신사업 추진에 어려움이 존재함을 시사함.",
-          "수협은행장 인선이 네 차례 실패한 배경에는 2017년 장기 공백과 달리 증권사 인수와 디지털자산 사업 등 구체적인 성장전략이 진행 중임을 포함함.",
-          "증권사 인수 및 신사업 추진 시점에서 행장 인선 불발이 수협은행의 성장 전략 실행과 관련된 중요한 관전 포인트임."
+          "메리츠증권이 차세대 금융 플랫폼 ‘모음(MOUM)’ 신규고객을 대상으로 연 5.9% 세전 약정수익률의 1년 약정형 발행어음 특판 상품을 출시함.",
+          "발행어음 특판 상품의 약정기간은 1년이며, 고객에게 5.9%의 세전 수익률을 제공하는 점이 특징임.",
+          "‘모음’ 플랫폼의 신규고객 유치를 위한 특판 발행어음 출시가 고객 확보 및 금융상품 경쟁력 강화 관전 포인트임."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.fntimes.com/html/view.php?ud=20261120230556463dd55077bc2_18",
+        "url": "https://biz.heraldcorp.com/article/10946031?ref=naver",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "은행 퇴직연금, '증권사 속도'로 바뀐다…ETF 당일매매 전산 개편 확산",
-        "source": "전자신문",
-        "pubDate": "2026-11-22",
-        "pubTime": "14:01 KST",
-        "publishedAt": "2026-11-22T14:01:00+09:00",
+        "headline": "메리츠證, '모음' 신규 고객에 연 5.9% 발행어음 특판…최대 300만원",
+        "source": "뉴스1",
+        "pubDate": "2026-11-23",
+        "pubTime": "09:52 KST",
+        "publishedAt": "2026-11-23T09:52:00+09:00",
         "summary": [
-          "퇴직연금 계좌 내 ETF 투자액이 2023년 말 9조원에서 지난해 말 48조7000억원으로 5배 이상 증가하는 변화 발생.",
-          "은행의 ETF 라인업은 약 300개로 증권사(약 900개)보다 현저히 적은 상황임.",
-          "실시간 당일매매 전산 개편 확산이 ETF 투자 활성화와 금융상품 다양성에 미칠 영향이 관전 포인트임."
+          "메리츠證, '모음' 신규 고객에 연 5.9% 발행어음 특판…최대 300만원",
+          "메리츠증권은 차세대 금융 플랫폼 '모음'(MOUM) 신규 고객을 대상으로 연 5.9%의 약정수익률을 제공하는 발행어음 특판 상품을 출시한다고",
+          "23일 밝혔다. 이번 특판 상품의 약정기간은 1년으로 세전 연 5.9%의 수익률을"
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.etnews.com/20261120000226",
+        "url": "https://www.news1.kr/finance/general-stock/6362420",
         "edition": "0730",
         "editionLabel": "07:30"
       }
@@ -407,58 +409,58 @@
     "sto": [
       {
         "top": true,
-        "headline": "\"美 AI모델 출시후 中스테이블코인 결제 급증\"…수출규제 우회한 듯",
-        "source": "이데일리",
+        "headline": "[단독] 서울시 '부동산 조각투자' 법에 막혔다…토큰증권 발행 무산",
+        "source": "뉴스1",
+        "pubDate": "2026-11-24",
+        "pubTime": "05:20 KST",
+        "publishedAt": "2026-11-24T05:20:00+09:00",
+        "summary": [
+          "서울시가 현행법상 부동산 조각투자용 토큰증권(STO) 발행이 불가능하다는 판단을 내림.",
+          "법 개정 없이는 기존 방식의 토큰증권 발행 절차가 불가하다는 내부 보고가 이루어짐.",
+          "서울시의 토큰증권 발행 계획이 법적 제약으로 무산되어 향후 법 개정 여부가 관전 쟁점임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.news1.kr/realestate/general/6363271",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "KB증권 \"토큰증권 폭발적 성장 기대 어려워…공모증권 확대 시점이 관건...",
+        "source": "파이낸셜뉴스",
         "pubDate": "2026-11-23",
-        "pubTime": "07:30 KST",
-        "publishedAt": "2026-11-23T07:30:00+09:00",
+        "pubTime": "16:58 KST",
+        "publishedAt": "2026-11-23T16:58:00+09:00",
         "summary": [
-          "미국의 주요 AI 모델 출시 이후 중국 연관 가상자산 지갑에서 스테이블코인 결제 건수가 급증한 사건 발생.",
-          "중국과 연관된 가상자산 지갑에서의 스테이블코인 결제 급증은 미국 정부의 중국 대상 AI 모델 수출 규제 영향을 배경으로 함.",
-          "스테이블코인 결제 급증은 미국 수출규제 우회 가능성을 시사하여 관련 거시경제 및 규제 환경에서 중요한 관전 포인트로 부각됨."
+          "토큰증권 제도 시행 첫 해인 2027년에는 사모채권과 머니마켓펀드(MMF)가 주된 대상이다.",
+          "유통시장 활성화에 한계가 있어 폭발적인 성장 기대는 어려운 상황이다.",
+          "2~3년 뒤 공모증권으로 확대되는 시점에 토큰증권이 폭발적인 성장을 할 가능성이 있다."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.edaily.co.kr/News/Read?newsId=01269366645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+        "url": "https://www.fnnews.com/news/202611231649442122",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "이억원, FSB 총회서 AI·스테이블코인 등 논의…국제 금융 협력 강화",
-        "source": "전자신문",
-        "pubDate": "2026-11-22",
-        "pubTime": "14:33 KST",
-        "publishedAt": "2026-11-22T14:33:00+09:00",
+        "headline": "피에코·에일릿, 실물 금 기반 STO MOU 체결",
+        "source": "조선비즈",
+        "pubDate": "2026-11-23",
+        "pubTime": "09:13 KST",
+        "publishedAt": "2026-11-23T09:13:00+09:00",
         "summary": [
-          "이억원, FSB 총회서 AI·스테이블코인 등 논의…국제 금융 협력 강화",
-          "이번 총회에서는 글로벌 금융시장의 취약성, AI, 스테이블코인, 비은행금융기관 등 주요 현안과 FSB의 2027년 업무계획이 다뤄졌다",
-          "이 위원장은 “인공지능(AI) 투자 확대에 따른 자산 가격 상승과 위험 집중, 주요국"
+          "피에코와 금 핀테크 기업 에일릿이 2026 싱가포르 핀테크 페스티벌에서 실물 금 기반 토큰증권(STO) 사업 추진을 위한 업무협약(MOU)을 체결함.",
+          "두 회사는 부동산 및 금 기반 토큰증권 발행 사업을 공동으로 진행하며 핀테크 및 금융 기술을 접목하는 배경을 갖고 있음.",
+          "이번 협약은 국내 스타트업과 금 핀테크 기업의 협업으로 STO 시장 확대와 실물자산 기반 디지털 금융 상품 개발 가능성이 주목되는 관전 포인트임."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.etnews.com/20261122000088",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "이억원 \"AI·스테이블코인 국제공조 강화해야\"…ECB와 은행감독 협력 합...",
-        "source": "아주경제",
-        "pubDate": "2026-11-22",
-        "pubTime": "12:02 KST",
-        "publishedAt": "2026-11-22T12:02:00+09:00",
-        "summary": [
-          "이억원 금융위원장이 글로벌 금융시장의 인공지능(AI)과 스테이블코인 관련 위험에 대응하기 위한 국제공조 강화 필요성을 강조함.",
-          "유럽중앙은행(ECB)과 금융위원회는 은행감독 협력에 관한 업무협약(MOU)을 체결하여 협력 기반을 구축함.",
-          "국제금융시장의 안정성 확보를 위한 AI 및 스테이블코인 규제와 감독 협력 강화가 관건임."
-        ],
-        "summary_mode": "preview_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.ajunews.com/view/20261122102610398",
+        "url": "https://biz.chosun.com/stock/finance/2026/11/23/2HGSWEHYFNA35HLRBWF26J6KAQ/?utm_source=naver&utm_medium=original&utm_campaign=biz",
         "edition": "0730",
         "editionLabel": "07:30"
       }
@@ -466,58 +468,58 @@
     "productive": [
       {
         "top": true,
-        "headline": "이재근號 KB금융 ‘출항ʼ…비은행 강화·생산적금융 ‘관건ʼ [이재근號...",
-        "source": "한국금융신문",
+        "headline": "\"벤처투자 비수도권 1위 대전, 실제 창업의향은 가장 낮아\"…왜?",
+        "source": "연합뉴스",
+        "pubDate": "2026-11-24",
+        "pubTime": "07:00 KST",
+        "publishedAt": "2026-11-24T07:00:00+09:00",
+        "summary": [
+          "벤처투자 비수도권 1위 대전, 실제 창업의향은 가장 낮아\"…왜?",
+          "벤처투자액 규모 3천475억원, 액셀러레이터(초기 단계 창업기업을 벤처 단계로 성장시키는 할을 하는 기업·기관)",
+          "31개 사로 각각 비수도권 1위인 우수한 창업 인프라를 보유하고 있다. 이 때문에 대전의 지역 창업환경에"
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.yna.co.kr/view/AKR20261123148000063?input=1195m",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "기업대출 32조 늘 때 기술금융 5.6조…생산적금융의 좁은 문",
+        "source": "이데일리",
         "pubDate": "2026-11-23",
-        "pubTime": "00:02 KST",
-        "publishedAt": "2026-11-23T00:02:00+09:00",
+        "pubTime": "16:28 KST",
+        "publishedAt": "2026-11-23T16:28:00+09:00",
         "summary": [
-          "이재근號 KB금융 ‘출항ʼ…비은행 강화·생산적금융 ‘관건ʼ [이재근號",
-          "생산적금융 확대도 이러한 협업의 실행 무대가 될 수 있다. 전략산업 기업에 대출과 투자를 병행하고",
-          "성장 단계별 자금조달을 지원하면서 그룹 전체의 거래 기반을 넓히는 것이 중요하다. 110조 생산적·포용금융"
+          "기업대출 32조 늘 때 기술금융 5.6조…생산적금융의 좁은 문",
+          "성장 가능성 있는 기업으로 자금을 투입하자는 생산적 금융이 올해 본격화했지만",
+          "그 일환인 기술금융대출은 여전히 문턱이 높다는 지적이다. 5대 은행 기업대출 현황 23일 은행연합회의 기술금융 현황 자료에 따르면"
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.fntimes.com/html/view.php?ud=202611202241099886dd55077bc2_18",
+        "url": "https://www.edaily.co.kr/News/Read?newsId=03106166645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "[단독] 두산, 국민성장펀드서 5000억 조달…CCL 공장 증설 [시그널]",
-        "source": "서울경제",
-        "pubDate": "2026-11-22",
-        "pubTime": "18:58 KST",
-        "publishedAt": "2026-11-22T18:58:00+09:00",
+        "headline": "‘1조 제주미래성장펀드’, 의무투자기준 상향 필요",
+        "source": "뉴시스",
+        "pubDate": "2026-11-23",
+        "pubTime": "16:19 KST",
+        "publishedAt": "2026-11-23T16:19:00+09:00",
         "summary": [
-          "두산, 국민성장펀드서 5000억 조달…CCL 공장 증설 [시그널]",
-          "앞서 산업은행은 우리은행과 함께 SK실트론 인수를 위한 2조 5000억 원의 인수금융을 주선한 바 있다",
-          "국민성장펀드는 AI, 반도체, 2차전지, 바이오, 에너지 인프라 등 첨단전략산업과 관련 생태계에 저리 대출을"
+          "‘1조 제주미래성장펀드’, 의무투자기준 상향 필요",
+          "제주도가 조성하는 1조원 규모의 '제주미래성장펀드'와 관련 최근 지역벤처펀드의 의무 투자 기준이 상향되는",
+          "추세에 맞춰 '제주 의무투자 기준'도 높여야 한다는 제안이 나왔다. 23일 열린 제456회 제주도의회"
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.sedaily.com/article/20117359?ref=naver",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "AI 결합한 의료·헬스케어 스타트업에 벤처투자금 몰렸다",
-        "source": "머니투데이",
-        "pubDate": "2026-11-22",
-        "pubTime": "17:00 KST",
-        "publishedAt": "2026-11-22T17:00:00+09:00",
-        "summary": [
-          "11월 3주차 국내 벤처투자 시장에서 의료·헬스케어 분야에 대한 벤처투자금이 집중된 현상",
-          "투자 대상은 신약 등 전통 바이오보다는 내시경 AI 로봇, 의료영상 판독 AI, AI 기반 맞춤형 헬스케어 솔루션 등 AI 결합 스타트업임",
-          "의료·헬스케어 AI 스타트업에 벤처투자가 몰리면서 관련 기술 발전과 시장 확대 가능성에 대한 관심 증대"
-        ],
-        "summary_mode": "preview_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.mt.co.kr/future/2026/11/22/2026112215104528505",
+        "url": "https://www.newsis.com/view/NISX20261123_0003879680",
         "edition": "0730",
         "editionLabel": "07:30"
       }
@@ -526,58 +528,39 @@
     "other": [
       {
         "top": true,
-        "headline": "베선트 \"엔비디아 규정 미준수 문화 확인해야\"…젠슨 황 복귀엔 즉답 피해",
-        "source": "뉴시스",
-        "pubDate": "2026-11-23",
-        "pubTime": "03:32 KST",
-        "publishedAt": "2026-11-23T03:32:48+09:00",
-        "summary": [
-          "스콧 베선트 미국 재무부 장관은 엔비디아 대중국 수출통제 규정 준수 문화 존재 여부를 확인할 필요성을 강조함.",
-          "베선트 장관은 엔비디아 이사회로부터 관련 규정 준수 문화에 대한 답변을 받지 못했다고 밝힘.",
-          "규정 미준수 문제 발생 여부 및 책임 부서 확인과 함께 법무부서 설명을 예의주시하는 점이 관전 쟁점임."
-        ],
-        "summary_mode": "preview_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.newsis.com/view/NISX20261123_0003878396",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "이란 \"호르무즈 해협서 '규정 위반' 유조선 2척 기뢰 충돌\"",
-        "source": "뉴시스",
-        "pubDate": "2026-11-23",
-        "pubTime": "01:57 KST",
-        "publishedAt": "2026-11-23T01:57:13+09:00",
-        "summary": [
-          "이란 해군은 22일 호르무즈 해협 동쪽 출입금지 구역 진입 시 규정을 위반한 유조선 2척이 기뢰와 충돌해 화재가 발생했다고 발표함.",
-          "유조선 2척은 사전 경고를 무시하고 식별·항법 시스템을 끈 채 출입금지 구역을 항해한 것으로 밝혀짐.",
-          "이란 해군은 출입금지 구역을 항해하는 선박의 소유주와 운항 책임자에게 유조선 피해에 대한 직접 책임을 물을 것이라고 경고함."
-        ],
-        "summary_mode": "preview_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.newsis.com/view/NISX20261123_0003878394",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "엔비디아 칩 中 우회 공급망에 캄보디아 범죄조직까지 연루 의혹",
+        "headline": "젠슨 황, 엔비디아 CEO 전격 복귀…이사회 만장일치 결정",
         "source": "한국경제",
-        "pubDate": "2026-11-22",
-        "pubTime": "21:58 KST",
-        "publishedAt": "2026-11-22T21:58:00+09:00",
+        "pubDate": "2026-11-24",
+        "pubTime": "01:15 KST",
+        "publishedAt": "2026-11-24T01:15:00+09:00",
         "summary": [
-          "엔비디아 AI 반도체가 중국으로 우회 공급되는 과정에 캄보디아 기반 범죄조직과 중국 게임업계, 역외 페이퍼컴퍼니가 연루된 의혹이 제기됨.",
-          "외신 보도에 따르면 우회 공급망에는 중국 게임업계 및 역외 페이퍼컴퍼니, 캄보디아 범죄조직이 복합적으로 얽혀 있음.",
-          "이 사건은 엔비디아 칩의 중국 내 유통구조 및 공급망 투명성 문제, 관련 범죄조직 연루 가능성을 관전 포인트로 부각시킴."
+          "젠슨 황, 엔비디아 CEO 전격 복귀…이사회 만장일치 결정",
+          "해온 엔비디아의 경영 불확실성이 상당 부분 해소될 것이라는 기대가 반영된 것으로 풀이된다. 반도체주뿐",
+          "기대 젠슨 황 엔비디아 최고경영자(CEO)가 사임한 지 11일 만에 경영 일선에 복귀한 것은 이사회가 그의 경영"
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.hankyung.com/article/2026112226787",
+        "url": "https://www.hankyung.com/article/2026112454041",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "트럼프發 AI 규제에 흔들리는 반도체 호황…국내 메모리 업체 영향은",
+        "source": "뉴시스",
+        "pubDate": "2026-11-23",
+        "pubTime": "15:45 KST",
+        "publishedAt": "2026-11-23T15:45:00+09:00",
+        "summary": [
+          "미국의 대중 반도체 수출통제 강화와 AI 데이터센터 규제 가능성으로 국내 반도체업계에 긴장감이 조성되고 있음.",
+          "삼성전자와 SK하이닉스를 포함한 국내 메모리 반도체 업체들이 미국의 규제 강화에 직접적인 영향을 받고 있음.",
+          "글로벌 AI 투자 수익성에 대한 우려가 반도체 호황에 부정적 영향을 미치고 있어 향후 산업 동향이 주목받고 있음."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261123_0003879452",
         "edition": "0730",
         "editionLabel": "07:30"
       }
