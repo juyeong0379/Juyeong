@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23 06:32 KST",
+  "generated_at": "2026-11-23 10:58 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -165,7 +165,27 @@
         "editionLabel": "07:30"
       }
     ],
-    "corp": [],
+    "corp": [
+      {
+        "top": true,
+        "headline": "머스크 “몇 개월 매출 공백에 수천억佛 필요”…자금조달 서두르는 스...",
+        "source": "서울경제",
+        "pubDate": "2026-11-22",
+        "pubTime": "16:14 KST",
+        "publishedAt": "2026-11-22T16:14:00+09:00",
+        "summary": [
+          "스페이스X가 몇 개월 매출 공백에 대비해 수천억 프랑의 자금조달을 서두르고 있음.",
+          "이번 채권 발행수익률이 8.259%로 미국 투자등급 회사채 평균 5.95%를 크게 상회하며, 올 초 발행한 비슷한 만기 채권보다 약 100bp 높은 금리가 제시됨.",
+          "높은 금리가 자금조달 비용 상승을 의미하며, 매출 공백 대응과 자금 조달 전략의 중요성이 대두되고 있음."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.sedaily.com/article/20117386?ref=naver",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
     "ma": [
       {
         "top": true,
@@ -368,6 +388,25 @@
     "sto": [
       {
         "top": true,
+        "headline": "\"美 AI모델 출시후 中스테이블코인 결제 급증\"…수출규제 우회한 듯",
+        "source": "이데일리",
+        "pubDate": "2026-11-23",
+        "pubTime": "07:30 KST",
+        "publishedAt": "2026-11-23T07:30:00+09:00",
+        "summary": [
+          "미국의 주요 AI 모델 출시 이후 중국 연관 가상자산 지갑에서 스테이블코인 결제 건수가 급증한 사건 발생.",
+          "중국과 연관된 가상자산 지갑에서의 스테이블코인 결제 급증은 미국 정부의 중국 대상 AI 모델 수출 규제 영향을 배경으로 함.",
+          "스테이블코인 결제 급증은 미국 수출규제 우회 가능성을 시사하여 관련 거시경제 및 규제 환경에서 중요한 관전 포인트로 부각됨."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.edaily.co.kr/News/Read?newsId=01269366645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
         "headline": "이억원, FSB 총회서 AI·스테이블코인 등 논의…국제 금융 협력 강화",
         "source": "전자신문",
         "pubDate": "2026-11-22",
@@ -468,6 +507,25 @@
     "other": [
       {
         "top": true,
+        "headline": "베선트 \"엔비디아 규정 미준수 문화 확인해야\"…젠슨 황 복귀엔 즉답 피해",
+        "source": "뉴시스",
+        "pubDate": "2026-11-23",
+        "pubTime": "03:32 KST",
+        "publishedAt": "2026-11-23T03:32:48+09:00",
+        "summary": [
+          "스콧 베선트 미국 재무부 장관은 엔비디아 대중국 수출통제 규정 준수 문화 존재 여부를 확인할 필요성을 강조함.",
+          "베선트 장관은 엔비디아 이사회로부터 관련 규정 준수 문화에 대한 답변을 받지 못했다고 밝힘.",
+          "규정 미준수 문제 발생 여부 및 책임 부서 확인과 함께 법무부서 설명을 예의주시하는 점이 관전 쟁점임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261123_0003878396",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
         "headline": "이란 \"호르무즈 해협서 '규정 위반' 유조선 2척 기뢰 충돌\"",
         "source": "뉴시스",
         "pubDate": "2026-11-23",
