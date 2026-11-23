@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23 10:58 KST",
+  "generated_at": "2026-11-23 11:02 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -168,6 +168,25 @@
     "corp": [
       {
         "top": true,
+        "headline": "[Invest]금투협, 회사채 '캡티브 영업' 막겠다는데…\"걸러낼 방법이 없다...",
+        "source": "인베스트조선",
+        "pubDate": "2026-11-23",
+        "pubTime": "07:02 KST",
+        "publishedAt": "2026-11-23T07:02:00+09:00",
+        "summary": [
+          "금투협은 회사채 수요예측 과정에서 합의한 금리와 물량에 따라 참여하는 '캡티브 영업' 행위를 금지했다.",
+          "특히 주관 및 인수회사가 자신이 인수하는 회사채의 수요예측에 직접 참여하는 행위도 제한하고 있다.",
+          "이 조치에도 불구하고 '캡티브 영업'을 효과적으로 걸러낼 방법이 없어 실효성 여부가 관전 쟁점이다."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.investchosun.com/site/data/html_dir/2026/11/20/2026112080095.html",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
         "headline": "머스크 “몇 개월 매출 공백에 수천억佛 필요”…자금조달 서두르는 스...",
         "source": "서울경제",
         "pubDate": "2026-11-22",
