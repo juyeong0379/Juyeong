@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25 07:49 KST",
+  "generated_at": "2026-11-26 07:32 KST",
   "last_edition": "0730",
   "editions_completed": [
     "0730"
@@ -7,11 +7,23 @@
   "reports": [
     {
       "id": "report-1",
-      "title": "테마형 ETF 확산과 과제",
+      "title": "글로벌 시장을 통해 본 한국 세컨더리 시장 활성화 방안",
       "source": "자본시장연구원",
-      "date": "2026-11-02",
-      "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6875&syear=2026&zcd=002001016&zno=1944",
+      "date": "2026-10-19",
+      "url": "https://www.kcmi.re.kr/publications/pub_detail_view?cno=6867&syear=2026&zcd=002001016&zno=1942",
       "type": "자본시장포커스",
+      "related_article_urls": [
+        "https://www.hankyung.com/article/202611259075r",
+        "https://www.newsis.com/view/NISX20261125_0003882455"
+      ]
+    },
+    {
+      "id": "report-2",
+      "title": "전망공시의 현황과 특성 및 정보가치",
+      "source": "자본시장연구원",
+      "date": "2026-10-30",
+      "url": "https://www.kcmi.re.kr/report/report_view?report_no=2344",
+      "type": "이슈보고서",
       "related_article_urls": []
     }
   ],
@@ -98,58 +110,58 @@
     "ecm": [
       {
         "top": true,
-        "headline": "[더벨][하우스 분석 | 유진증권] IPO·메자닌 주관 확대…IB 흑자전환 성...",
+        "headline": "[더벨]부광약품 RNA 신약법인 출범…4~5년 후 IPO·M&A 가능성",
         "source": "더벨",
-        "pubDate": "2026-11-25",
+        "pubDate": "2026-11-26",
         "pubTime": "07:02 KST",
-        "publishedAt": "2026-11-25T07:02:00+09:00",
+        "publishedAt": "2026-11-26T07:02:00+09:00",
         "summary": [
-          "유진증권이 IPO와 메자닌 부문 주관 확대를 통해 투자은행(IB) 부문의 흑자 전환을 이룸.",
-          "유진증권의 주요 실적은 IPO 415억원, 주식 유상증자 202억원, 회사채 7162억원이며, 인수 실적은 45조6832억원에 달함.",
-          "우량 실물자산 중심의 구조화금융 포트폴리오 확장이 향후 IB 수익성에 긍정적 영향을 미칠 것으로 평가됨."
+          "부광약품이 RNA 사업 분할을 통해 새로운 신약법인을 출범시킴으로써 사업 구조에 변화를 도모함.",
+          "이 신약법인은 중장기적으로 4~5년 후 기업공개(IPO)나 인수합병(M&A) 가능성에 대해 열어두고 있음.",
+          "부광약품 대표 이제영은 구체적인 방향은 추후 결정하겠으나 중장기 계획에 IPO와 M&A를 포함하는 점을 강조함."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611231252379480104371",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611251604305000109076",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "[더벨][패스웨이 2.0] 'IPO 드림팀' 4인방, 상장 길목마다 밀착 밸류업",
-        "source": "더벨",
+        "headline": "상장 4거래일 만에…앤트로픽, 공모가 붕괴",
+        "source": "한국경제",
         "pubDate": "2026-11-25",
-        "pubTime": "07:02 KST",
-        "publishedAt": "2026-11-25T07:02:00+09:00",
+        "pubTime": "17:52 KST",
+        "publishedAt": "2026-11-25T17:52:00+09:00",
         "summary": [
-          "패스웨이 2.0의 'IPO 드림팀' 4인방은 스타트업 IPO 과정에서 차별화된 경쟁력을 갖춘 것으로 평가받음.",
-          "팀 멤버들은 회계법인과 사모펀드운용사 출신으로, 올릭스와 뷰노에서 각각 CFO를 맡아 성공적인 IPO를 주도한 경험이 있음.",
-          "이들의 밀착 밸류업 전략은 상장 준비 과정에서 스타트업의 성장과 가치를 극대화하는 데 중요한 역할을 함."
+          "앤트로픽 주가가 19일 상장 이후 4거래일 만에 공모가 83달러 아래로 하락하는 현상 발생.",
+          "상장 직후 경쟁 심화된 개방형 인공지능(AI) 모델 시장 환경 속에서 시가총액이 빠르게 변동됨.",
+          "공모가 붕괴는 투자자들의 신뢰와 시장 평가에 부정적 영향을 미칠 가능성이 관전 포인트임."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611231024031520107813",
+        "url": "https://www.hankyung.com/article/2026112502821",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "[더벨][발행사분석] SK에코 품는 SK㈜, 2개월만에 공모채 발행",
-        "source": "더벨",
-        "pubDate": "2026-11-24",
-        "pubTime": "08:32 KST",
-        "publishedAt": "2026-11-24T08:32:00+09:00",
+        "headline": "IPO 철회 기업들, 잇따라 재도전 검토",
+        "source": "한국경제",
+        "pubDate": "2026-11-25",
+        "pubTime": "17:51 KST",
+        "publishedAt": "2026-11-25T17:51:00+09:00",
         "summary": [
-          "SK㈜가 SK에코플랜트의 IPO 불발 이후 약 2개월 만에 공모채 발행을 추진하는 변화.",
-          "공모채 수요예측은 다음 달 3일 기관투자자를 대상으로 진행하며, 발행일은 11일로 예정됨.",
-          "재무적투자자 보유 지분을 4월에 약 4000억원에 매입한 점이 이번 공모채 발행 배경으로 작용함."
+          "최근 IPO 시장에서 기관의 북클로징과 새내기주 부진으로 인해 투자심리가 냉각되는 현상 발생.",
+          "일반 IPO 기업들이 수요예측에서 어려움을 겪는 반면, 원금 손실 위험이 낮은 스팩 공모에는 기관 자금이 유입되고 있음.",
+          "IPO 철회 기업들이 이러한 시장 상황을 고려하여 재도전을 검토하는 움직임이 확산되는 점이 주요 관전 쟁점임."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611231652413200102211",
+        "url": "https://www.hankyung.com/article/2026112502801",
         "edition": "0730",
         "editionLabel": "07:30"
       }
@@ -157,58 +169,39 @@
     "corp": [
       {
         "top": true,
-        "headline": "KB손해보험, 최대 6000억 후순위채 채비…\"자본건전성 확보\"",
-        "source": "블로터",
-        "pubDate": "2026-11-24",
-        "pubTime": "17:59 KST",
-        "publishedAt": "2026-11-24T17:59:00+09:00",
+        "headline": "젠슨 황 복귀에 AI 신용시장 다시 '흔들'…코어위브 채권금리 17% 돌파",
+        "source": "연합인포맥스",
+        "pubDate": "2026-11-25",
+        "pubTime": "10:02 KST",
+        "publishedAt": "2026-11-25T10:02:00+09:00",
         "summary": [
-          "KB손해보험이 최대 6000억원 규모의 후순위 공모 회사채 발행에 나선다",
-          "올해 5월 후순위채 잔액을 3790억원 줄였으나 자본건전성 확보를 위해 다시 후순위채를 발행하기로 했다",
-          "24일 금융감독원 전자공시시스템에 따르면 KB손해보험은 이날 3000억원 규모의 후순위채 발행을 위한 증권신고서를 제출했다"
-        ],
-        "summary_mode": "source_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.bloter.net/news/articleView.html?idxno=679598",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "채권시장 참여자 54% \"11월 금통위, 기준금리 인상 예상\"",
-        "source": "뉴시스",
-        "pubDate": "2026-11-24",
-        "pubTime": "12:54 KST",
-        "publishedAt": "2026-11-24T12:54:06+09:00",
-        "summary": [
-          "채권시장 참여자의 54%가 11월 26일 한국은행 금융통화위원회의 기준금리 인상을 예상하는 것으로 조사됨.",
-          "금융투자협회가 9월 13~18일 채권 보유·운용 종사자 100명을 대상으로 실시한 설문에서 금리전망 지표(BMSI)가 전월 123.0에서 72.0으로 51포인트 급락함이 확인됨.",
-          "미국의 연방공개시장위원회(FOMC) 금리 인상 가능성과 국내 가계대출 증가 우려가 채권시장 투자심리 위축과 기준금리 인상 전망에 영향을 미친 점이 주요 관전 포인트임."
+          "젠슨 황 복귀 소식이 AI 신용시장에 변동성을 일으키고 있음.",
+          "코어위브 2031년 만기 회사채 수익률이 17%를 넘어서 금융시장의 관심 집중.",
+          "AI 기업에 대한 금융 지원 확대 여부가 시장의 주요 관전 쟁점으로 부상하고 있음."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.newsis.com/view/NISX20261124_0003880879",
+        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4446406",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "연말에도 크레딧 매수세…은행채·여전채 상대적 강세",
-        "source": "연합뉴스",
-        "pubDate": "2026-11-24",
-        "pubTime": "10:22 KST",
-        "publishedAt": "2026-11-24T10:22:00+09:00",
+        "headline": "일진홀딩스, 일진전기 PRS 1300억 덫",
+        "source": "딜사이트경제TV",
+        "pubDate": "2026-11-25",
+        "pubTime": "08:02 KST",
+        "publishedAt": "2026-11-25T08:02:00+09:00",
         "summary": [
-          "기준금리 추가 인상 경계감이 남아 있는 상황에서도 최근 은행채와 여전채의 신용 스프레드(국고채와의 금리차)가 좁아지며 상대적인 강세를 나타냈다",
-          "금융정보회사 연합인포맥스에 따르면 지난 23일 기준 3년물 은행채 AAA의 신용스프레드는 35.1bp로 이달 들어 4bp 축소됐다",
-          "국고채 3년물 금리가 9bp 하락한 가운데 은행채와 여전채의 신용스프레드가 더 큰 폭으로 축소되면서 크레딧 채권의 상대적 강세가 두드러졌다"
+          "일진홀딩스는 일진전기 지분 유동화 과정에서 PRS 계약과 교환사채를 활용해 약 1300억 원 규모의 자금을 조달함.",
+          "과거 자금 조달에 사용된 교환사채(EB)와 이번 PRS 계약이 잠재적 오버행 리스크로 지목되고 있음.",
+          "일진전기 자회사 지분 유동화 이력이 주가 상승 여력에 부정적 영향을 미치는 관전 쟁점으로 부각됨."
         ],
-        "summary_mode": "source_digest",
+        "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.yna.co.kr/view/AKR20261124058900008?input=1195m",
+        "url": "https://news.dealsitetv.com/articles/179032",
         "edition": "0730",
         "editionLabel": "07:30"
       }
@@ -216,58 +209,58 @@
     "ma": [
       {
         "top": true,
-        "headline": "다올투자證 새 주인 찾나…이병철 회장, 경영권 매각 추진설",
-        "source": "아주경제",
-        "pubDate": "2026-11-24",
-        "pubTime": "19:24 KST",
-        "publishedAt": "2026-11-24T19:24:00+09:00",
+        "headline": "다올투자증권 경영권 매각설…\"구체적 결정 사항 없어\"",
+        "source": "한국금융신문",
+        "pubDate": "2026-11-25",
+        "pubTime": "17:40 KST",
+        "publishedAt": "2026-11-25T17:40:00+09:00",
         "summary": [
-          "이병철 다올금융그룹 회장이 최대주주로 있는 다올투자증권 경영권 매각을 추진 중임이 알려짐.",
-          "다올투자증권은 국내 증권사 순위 30위권에 있는 중견 증권사임.",
-          "경영권 매각 추진 사실이 투자은행(IB) 업계 내에서 관심을 모으고 있음."
+          "다올투자증권은 경영권 매각설에 대해 구체적 결정 사항이 없다고 공식적으로 부인함.",
+          "25일 오후 한국거래소의 조회공시 요구에 다올투자증권이 매각과 관련된 구체적인 내용이 없다고 답변함.",
+          "경영권 매각설 소식에 따라 다올투자증권 주가가 변동하는 시장 반응이 일어난 점이 주목됨."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.ajunews.com/view/20261124191820540",
+        "url": "https://www.fntimes.com/html/view.php?ud=202611251730001228179ad43907_18",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "이병철 회장, 다올투자증권 경영권 지분 매각 추진",
-        "source": "딜사이트",
-        "pubDate": "2026-11-24",
-        "pubTime": "17:42 KST",
-        "publishedAt": "2026-11-24T17:42:00+09:00",
-        "summary": [
-          "이병철 다올금융그룹 회장이 다올투자증권 경영권 지분 99% 매각을 추진하고 있음.",
-          "DB손보와 유진그룹 등이 다올투자증권 인수 후보로 거론되고 있으며, 삼일PwC가 매각 자문을 담당하고 있음.",
-          "매각은 초기 단계로서 구체적인 거래 조건이나 일정이 확정되지 않은 상황임."
-        ],
-        "summary_mode": "preview_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://dealsite.co.kr/articles/173430",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "홈플러스 \"임직원 회생 노력, 고려아연 경영권 분쟁에 이용 말라\"",
+        "headline": "거래소, 다올투자증권에 경영권 매각설 조회공시 요구",
         "source": "뉴시스",
-        "pubDate": "2026-11-24",
-        "pubTime": "14:21 KST",
-        "publishedAt": "2026-11-24T14:21:45+09:00",
+        "pubDate": "2026-11-25",
+        "pubTime": "11:19 KST",
+        "publishedAt": "2026-11-25T11:19:15+09:00",
         "summary": [
-          "고려아연의 MBK파트너스·영풍과 경영권 분쟁에서 홈플러스 회생 사태가 언급되자 홈플러스가 경영권 분쟁에 회생 문제 이용 반발을 표명함",
-          "홈플러스는 24일 입장문에서 경영진 경영권 유지를 위한 정략적 도구 활용 중단을 촉구하고 있으며, 임직원과 가족 수만 명의 생계가 달린 회사 정상화 노력을 강조함",
-          "현재 홈플러스는 인수·합병(M&A)을 위한 협의가 진행 중이고 고려아연이 회생 문제를 경영권 분쟁에 끌어들임에 따라 회사의 가치와 직원들의 노력이 폄훼되고 있다는 점이 갈등의 관전 쟁점임"
+          "한국거래소가 다올투자증권에 경영권 매각설에 관한 조회공시를 요구하며 25일 오후 6시까지 답변을 요청한 사건.",
+          "최대주주 이병철 다올금융그룹 회장이 보유한 다올투자증권 지분 28.99%가 M&A 시장에 매물로 나왔으며, 전날 종가 기준 시가총액은 2196억원임.",
+          "다올투자증권은 다올금융그룹의 핵심 계열사로, 그 경영권 매각 여부가 그룹 지배구조에 미칠 영향이 관전 포인트임."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.newsis.com/view/NISX20261124_0003881028",
+        "url": "https://www.newsis.com/view/NISX20261125_0003882524",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "M&A·출자전환·경영권 변동 없는 세븐브로이의 이례적 ‘3無 회생’",
+        "source": "한국경제",
+        "pubDate": "2026-11-25",
+        "pubTime": "10:38 KST",
+        "publishedAt": "2026-11-25T10:38:00+09:00",
+        "summary": [
+          "세븐브로이는 M&A, 출자전환, 경영권 변동 없이 회생 절차를 진행하는 이례적 상황을 맞이함.",
+          "채권단은 채권 전액 변제가 이루어졌음에도 불구하고 출자전환 대신 다른 회생 방안을 모색하였고, 1년간 인수자를 찾지 못해 매각을 철회함.",
+          "이러한 결정은 대주주 지분 처리가 이뤄지지 않는 가운데 이루어져 채권단과 경영권 간의 이해관계가 복잡하게 얽혀 있는 지점이 관전 쟁점임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.hankyung.com/article/202611196647r",
         "edition": "0730",
         "editionLabel": "07:30"
       }
@@ -275,39 +268,39 @@
     "re": [
       {
         "top": true,
-        "headline": "[PF 2막 ⑩] “부동산금융 익스포저 줄였지만”…이선훈號 신한투자, 브...",
-        "source": "디지털데일리",
-        "pubDate": "2026-11-24",
-        "pubTime": "15:42 KST",
-        "publishedAt": "2026-11-24T15:42:00+09:00",
+        "headline": "‘물류센터 최대어’ 아레나스 양지 거래 종결… ‘임차인’ CJ대한통운...",
+        "source": "조선비즈",
+        "pubDate": "2026-11-25",
+        "pubTime": "16:30 KST",
+        "publishedAt": "2026-11-25T16:30:00+09:00",
         "summary": [
-          "부동산금융 익스포저 줄였지만”…이선훈號 신한투자, 브",
-          "디지털데일리는 자기자본 상위 10개 증권사의 부동산금융 장부를 들여다본다",
-          "PF 위기의 1막이 ‘얼마나 줄였느냐’였다면 2막은 ‘무엇을 남겼느냐’다. 각 증권사의 PF 규모와 질, 위험 부담뿐 아니라 이를 통해 얻는"
+          "코람코가 약 4개월간의 매각 경쟁입찰 끝에 경기 용인시 아레나스 양지 물류센터의 소유권을 이전받았다.",
+          "양지 물류센터 거래 대금은 총 6200억원에 달하며, 매각 경쟁입찰에서 우선협상대상자로 선정된 후 거래가 종결되었다.",
+          "아레나스 양지 물류센터의 임차인은 CJ대한통운으로, 이번 거래가 국내 물류센터 시장에 미치는 영향이 주목된다."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.ddaily.co.kr/page/view/2026111810220583860",
+        "url": "https://biz.chosun.com/stock/market_trend/2026/11/25/LCPQNFCQJ5C2HDL2IJHZDXY2VI/?utm_source=naver&utm_medium=original&utm_campaign=biz",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "李대통령 \"부동산시장 조정 예측…'미분양 불안' 해소해줘야\"",
-        "source": "한국경제",
-        "pubDate": "2026-11-24",
-        "pubTime": "11:22 KST",
-        "publishedAt": "2026-11-24T11:22:00+09:00",
+        "headline": "부산 상업용 부동산 임대시장 부진…상가·오피스 임대료 하락",
+        "source": "연합뉴스",
+        "pubDate": "2026-11-25",
+        "pubTime": "14:35 KST",
+        "publishedAt": "2026-11-25T14:35:31+09:00",
         "summary": [
-          "이재명 대통령은 24일 부동산 가격 하락 가능성을 예측하며 미분양 주택 불안 해소를 요청함.",
-          "홍 장관은 LH와 협의해 미분양 주택 매입 확약을 확정하고 프로젝트파이낸싱(PF) 문제 해결 방안을 마련할 계획임.",
-          "정부의 이 같은 조치는 부동산시장 안정과 미분양 문제 해소에 초점을 맞추고 있어 향후 정책 효과가 주목됨."
+          "부산의 상업용 부동산 임대시장에서 상가와 오피스 임대료가 2018년 이후 지속해서 하락하는 부진 상황이 발생함.",
+          "상가 공실률이 높아진 것으로 나타나 임대시장에 대한 체계적 대책 마련이 요구됨.",
+          "임대료 하락과 공실률 증가가 부산 상업용 부동산 시장의 전반적 침체를 반영하는 주요 지표임이 확인됨."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.hankyung.com/article/2026112464937",
+        "url": "https://www.yna.co.kr/view/AKR20261125114700051",
         "edition": "0730",
         "editionLabel": "07:30"
       }
@@ -315,58 +308,20 @@
     "infra": [
       {
         "top": true,
-        "headline": "[ETF 언박싱] GPU 다음 병목은 인프라…한화운용, AI병목인프라ETF 선보여",
-        "source": "딜사이트",
-        "pubDate": "2026-11-24",
-        "pubTime": "16:20 KST",
-        "publishedAt": "2026-11-24T16:20:00+09:00",
+        "headline": "같은 영등포구인데 한쪽은 유치, 한쪽은 반대…데이터센터 온도차",
+        "source": "뉴스핌",
+        "pubDate": "2026-11-25",
+        "pubTime": "15:22 KST",
+        "publishedAt": "2026-11-25T15:22:00+09:00",
         "summary": [
-          "한화자산운용이 AI 데이터센터 인프라 기업 19곳을 편입한 AI병목인프라ETF를 새롭게 선보임.",
-          "ETF는 전력 공급, 냉각, 광통신 등 AI 데이터센터의 핵심 인프라 업체들을 대상으로 투자하는 상품임.",
-          "AI 산업에서 GPU 다음 병목 현상으로 인프라 문제가 부각되는 가운데 한화운용의 ETF 출시가 주목받음."
+          "한화 건설부문이 영등포구 영등포동2가 94-144 일원에 도심형 엣지 데이터센터 'Y-eDC'를 조성하는 프로젝트를 진행 중임.",
+          "이 데이터센터는 지난해 1356억원 규모의 공사도급계약 체결과 프로젝트파이낸싱(PF) 자금 조달을 완료하고 착공에 들어갔음.",
+          "영등포구 내에서 일부 지역은 데이터센터 조성에 유치하는 반면 다른 지역에서는 반대하는 온도차가 관전 포인트임."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://dealsite.co.kr/articles/173410",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "AI 데이터센터 '병목'에 투자…한화운용, 글로벌 인프라 ETF 상장",
-        "source": "파이낸셜뉴스",
-        "pubDate": "2026-11-24",
-        "pubTime": "09:43 KST",
-        "publishedAt": "2026-11-24T09:43:00+09:00",
-        "summary": [
-          "[파이낸셜뉴스] 인공지능(AI) 데이터센터 투자 확대 과정에서 공급 부족이 나타나는 인프라 기업을 선별해 투자하는 상장지수펀드(ETF)가 출시된다",
-          "전력뿐 아니라 냉각과 광통신, 백업전원 등 데이터센터 가동에 필요한 인프라 전반을 투자 대상으로 삼고 기업별 수요 압력을 '병목 스코어'로 평가하는 것이 특징이다",
-          "이 상품은 AI 데이터센터 투자 확대가 실제 발주와 증설로 이어지는 과정에서 수혜가 예상되는 기업에 투자한다"
-        ],
-        "summary_mode": "source_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.fnnews.com/news/202611240929458170",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "한화운용, 전력·냉각·광통신 담은 ‘AI병목인프라 ETF’ 상장",
-        "source": "서울경제",
-        "pubDate": "2026-11-24",
-        "pubTime": "09:03 KST",
-        "publishedAt": "2026-11-24T09:03:00+09:00",
-        "summary": [
-          "한화운용, 전력·냉각·광통신 담은 ‘AI병목인프라 ETF’ 상장",
-          "글로벌AI병목인프라액티브’ 상장지수펀드(ETF)를 신규 상장한다고 24일 밝혔다. AI 투자 확대 과정에서 공급",
-          "냉각·열관리 기업 버티브(13.5%), 광통신 기업 루멘텀(12.5%), 연료전지 기반 전력 공급 업체 블룸에너지(11.5"
-        ],
-        "summary_mode": "preview_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.sedaily.com/article/20118042?ref=naver",
+        "url": "https://www.newspim.com/news/view/20261125000645",
         "edition": "0730",
         "editionLabel": "07:30"
       }
@@ -374,58 +329,58 @@
     "hana": [
       {
         "top": true,
-        "headline": "하나금융 중장년 대상 취업박람회 열어, 현장 채용 면접·AI 취업지원 제...",
-        "source": "비즈니스포스트",
-        "pubDate": "2026-11-24",
-        "pubTime": "17:56 KST",
-        "publishedAt": "2026-11-24T17:56:00+09:00",
+        "headline": "하나은행, 소비자보호 임직원 교육 진행...\"고객 권익 증진 우선할 것\"",
+        "source": "파이낸셜뉴스",
+        "pubDate": "2026-11-25",
+        "pubTime": "16:14 KST",
+        "publishedAt": "2026-11-25T16:14:00+09:00",
         "summary": [
-          "하나금융 중장년 대상 취업박람회 열어, 현장 채용 면접·AI 취업지원 제",
-          "하나금융그룹이 중장년 일자리 창출 지원 프로그램을 이어가고 있다",
-          "하나금융은 23일 서울 동대문디자인플라자(DDP)에서 중장년층의 재취업 지원 및 일자리 창출을 위한 '2026 하나 JOB매칭 페스타 in 서울'을"
+          "25일 금융권에 따르면 하나은행은 지난 20일 서울 중구 을지로 본점에서 임직원을 대상으로 금융소비자보호 특강을 열었다",
+          "하나은행은 이번 교육을 바탕으로 임직원의 소비자보호 인식을 높이고 고객 권익을 우선하는 경영체계를 강화할 방침이다",
+          "한편, 하나은행은 현장 중심 소비자보호 성과를 꾸준히 인정받고 있다"
         ],
-        "summary_mode": "preview_digest",
+        "summary_mode": "source_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.businesspost.co.kr/BP?command=article_view&num=452834",
+        "url": "https://www.fnnews.com/news/202611251132246656",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "하나증권, 고액자산가 대상 글로벌 부동산 투자 세미나",
-        "source": "뉴시스",
-        "pubDate": "2026-11-24",
-        "pubTime": "16:37 KST",
-        "publishedAt": "2026-11-24T16:37:15+09:00",
+        "headline": "하나은행, 말레이시아 OCBC와 기업금융 맞손",
+        "source": "헤럴드경제",
+        "pubDate": "2026-11-25",
+        "pubTime": "11:23 KST",
+        "publishedAt": "2026-11-25T11:23:00+09:00",
         "summary": [
-          "하나증권은 지난 23일 서울 강남구 하나증권 THE 센터필드 W에서 고액자산가를 대상으로 글로벌 자산관리 세미나를 개최함.",
-          "세미나에서는 국내 상업용 부동산 시장 전망과 미국, 일본, 싱가포르의 부동산 투자 사례 및 세제, 자산관리 구조가 소개됨.",
-          "하나증권은 해외 부동산 투자부터 세무, 자산 승계까지 글로벌 자산관리 서비스 확대 계획을 발표함."
+          "하나은행이 말레이시아 OCBC Bank Malaysia Berhad와 양국 간 기업금융 협력 확대를 위한 업무협약을 체결함.",
+          "협약 내용은 기업금융, 투자금융, 무역금융 등 다양한 분야에 걸친 금융 협력 강화를 포함함.",
+          "이번 협약은 하나은행과 OCBC가 양국 기업 금융 지원을 강화하는 계기가 될 전망임."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.newsis.com/view/NISX20261124_0003881479",
+        "url": "https://biz.heraldcorp.com/article/10948781?ref=naver",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "하나금융, '하나 JOB매칭 페스타' 전국 6개 도시 순회 마무리",
-        "source": "전자신문",
-        "pubDate": "2026-11-24",
-        "pubTime": "13:44 KST",
-        "publishedAt": "2026-11-24T13:44:00+09:00",
+        "headline": "하나은행, OCBC 말레이시아와 협약…韓기업 아세안 진출 지원",
+        "source": "이데일리",
+        "pubDate": "2026-11-25",
+        "pubTime": "10:12 KST",
+        "publishedAt": "2026-11-25T10:12:00+09:00",
         "summary": [
-          "하나금융그룹은 '2026 하나 JOB매칭 페스타 in 서울' 행사를 서울 동대문디자인플라자에서 개최하며 전국 6개 도시 순회를 마무리함.",
-          "이번 행사는 중장년층 재취업 지원, 인공지능(AI) 활용 취업 지원, 은퇴 금융상담을 결합한 일자리 지원 프로그램임.",
-          "전국 순회 행사를 통해 중장년층의 취업과 금융 상담 지원 강화라는 주요 과제를 실현하였음."
+          "하나은행이 OCBC 말레이시아와 협약을 체결하여 한국 기업의 아세안 지역 진출을 지원하기로 함.",
+          "협약식에는 최정록 주말레이시아 대한민국 대사, 박영민 하나은행 아시아지역본부장, 제프리 테오 OCBC 말레이시아 기업금융 부문장 등이 참석함.",
+          "이번 협약은 하나은행과 OCBC 말레이시아 간 협력 강화를 통해 한국 기업의 아세안 시장 진출이 활성화될 전망임."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.etnews.com/20261124000319",
+        "url": "https://www.edaily.co.kr/News/Read?newsId=02266486645649328&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
         "edition": "0730",
         "editionLabel": "07:30"
       }
@@ -433,58 +388,58 @@
     "peer": [
       {
         "top": true,
-        "headline": "'중소형 증권사 M&A' 대전 재점화…다올투자證 경영권 매각 수면 위로 [...",
-        "source": "파이낸셜뉴스",
-        "pubDate": "2026-11-24",
-        "pubTime": "18:16 KST",
-        "publishedAt": "2026-11-24T18:16:00+09:00",
-        "summary": [
-          "중소형 증권사를 중심으로 M&A 논의가 다시 활발해지면서 다올투자증권 경영권 매각이 주요 현안으로 부상하고 있음.",
-          "올해 Sh수협은행이 상상인증권 인수를 추진해 비은행 금융의 사업 영역 확대 움직임을 보이고 있음.",
-          "기존 금융 라이선스의 전략적 가치가 여전히 높아 증권사 신규 진입이 어려운 현재 시장 환경이 M&A 관심을 촉진하고 있음."
-        ],
-        "summary_mode": "preview_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.fnnews.com/news/202611241810024588",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "[마켓인]다올투자증권 매각설…최대주주 지분 유동화 검토",
-        "source": "이데일리",
-        "pubDate": "2026-11-24",
-        "pubTime": "18:06 KST",
-        "publishedAt": "2026-11-24T18:06:00+09:00",
-        "summary": [
-          "24일 투자은행(IB) 업계에 따르면 이 회장 측은 최근 잠재 원매자들을 대상으로 다올투자증권 인수 의사를 타진하고 있는 것으로 알려졌다",
-          "이 회장은 올해 9월말 기준 다올투자증권 지분 28.75%를 보유한 최대주주다",
-          "다올투자증권 측은 최대주주 지분 매각과 관련해 현재까지 회사 차원에서 확인된 내용은 없다는 입장이다"
-        ],
-        "summary_mode": "source_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.edaily.co.kr/News/Read?newsId=04191846645649000&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "금감원 \"증권사 랩어카운트, '투자 쏠림'·'운용 부실' 개선해야\"",
+        "headline": "KB증권, '지속가능성보고서상' 2년 연속 수상…\"ESG 공시 우수성 입증\"",
         "source": "뉴시스",
-        "pubDate": "2026-11-24",
-        "pubTime": "15:00 KST",
-        "publishedAt": "2026-11-24T15:00:00+09:00",
+        "pubDate": "2026-11-25",
+        "pubTime": "13:22 KST",
+        "publishedAt": "2026-11-25T13:22:47+09:00",
         "summary": [
-          "금융감독원이 증권사 임원 대상 간담회에서 랩어카운트의 특정 종목 쏠림과 운용 부실 문제를 지적하며 개선을 촉구함.",
-          "2023년 5만8655개였던 랩어카운트 계좌 수가 2024년 3월 말 기준 11만1979개로, 수탁고는 10조4000억원에서 23조원으로 급증함.",
-          "금감원은 투자자 보호를 위한 운용 인력 강화와 수수료 체계 점검, 업무 관행 개선을 추진하는 점이 관전 쟁점임."
+          "KB증권이 '2026 대한민국 지속가능성대회'에서 금융부문 '대한민국 지속가능성보고서상(KRCA)'을 2년 연속 수상함.",
+          "수상한 보고서는 국제 지속가능성 보고 기준(GRI)의 8대 원칙과 한국지속가능성기준위원회(KSSB) 공시기준을 반영해 거버넌스·전략·위험관리·지표·목표 등 4대 핵심 요소를 투자자 관점에서 구체화함.",
+          "이번 수상으로 글로벌 자본시장에서 비재무적 성과에 대한 평가지표로서 체계적 ESG 공시의 중요성이 재확인됨."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.newsis.com/view/NISX20261124_0003880874",
+        "url": "https://www.newsis.com/view/NISX20261125_0003882475",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "스몰캡보고서 늘리면 모험자본 실적 '가산'…종투사 규제 완화",
+        "source": "연합인포맥스",
+        "pubDate": "2026-11-25",
+        "pubTime": "12:02 KST",
+        "publishedAt": "2026-11-25T12:02:00+09:00",
+        "summary": [
+          "금융감독원에 따르면 올 2분기 말 기준 종합투자사업자 7곳의 모험자본 공급액이 전 분기 대비 20.4% 증가해 11조6천184억원을 기록함.",
+          "모험자본 공급 비율은 19.5%로 전 분기 대비 상승했고, 금융당국은 스몰캡보고서 확대 시 모험자본 실적에 가산 혜택을 부여하는 규제 완화 조치를 시행함.",
+          "종투사들에 대한 규제 완화는 모험자본 공급 촉진 효과와 스몰캡 기업 투자 확대라는 관전 쟁점을 낳고 있음."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4446468",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "[더벨]미래에셋·토스, 일본 증권사 인수 '동상이몽'",
+        "source": "더벨",
+        "pubDate": "2026-11-25",
+        "pubTime": "10:32 KST",
+        "publishedAt": "2026-11-25T10:32:00+09:00",
+        "summary": [
+          "미래에셋증권과 비바리퍼블리카(토스)가 지난달 하루 차이로 일본 증권사 인수를 발표하는 핵심 사건 발생.",
+          "산코증권은 올해 구조조정을 거쳐 총 임직원이 지난해 31명에서 22명으로 감소한 구체적 변화를 보임.",
+          "일본 증권사 인수를 통한 양사의 전략적 행보와 산코증권의 인력 구조조정이 향후 지분 및 경영 영향 관전 포인트로 평가됨."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611230255524350104845",
         "edition": "0730",
         "editionLabel": "07:30"
       }
@@ -492,118 +447,176 @@
     "sto": [
       {
         "top": true,
-        "headline": "가상자산 거래소 대주주 지분 20% 제한 원칙…스테이블코인 은행 과반 ...",
-        "source": "한국금융신문",
-        "pubDate": "2026-11-24",
-        "pubTime": "19:12 KST",
-        "publishedAt": "2026-11-24T19:12:00+09:00",
-        "summary": [
-          "가상자산거래소 대주주 지분은 20% 제한 원칙이 설정됨을 금융위원회가 24일 가상자산위원회에서 논의함.",
-          "스테이블코인 발행은 은행이 과반수 참여하는 컨소시엄 주도로 이루어짐이 확인됨.",
-          "디지털자산업 혁신과 이용자 보호를 위한 법률 제정안의 입법 추진 방안이 금일 금융위원장 주재 하에 심도 있게 논의됨."
-        ],
-        "summary_mode": "preview_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://www.fntimes.com/html/view.php?ud=2026112416063790790f4390e77d_18",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "[스테이블코인 어디로] 스테이블코인 발행 문 열린 은행권…'동맹 셈법...",
+        "headline": "STO·스테이블코인 시장 키우려면…“발행 넘어 유통·결제까지”",
         "source": "딜사이트",
-        "pubDate": "2026-11-24",
-        "pubTime": "17:02 KST",
-        "publishedAt": "2026-11-24T17:02:00+09:00",
+        "pubDate": "2026-11-25",
+        "pubTime": "20:04 KST",
+        "publishedAt": "2026-11-25T20:04:00+09:00",
         "summary": [
-          "은행권이 하나였던 스테이블코인 발행 주체를 은행 중심의 컨소시엄으로 구성하는 방향을 검토 중임을 확인함",
-          "15% 출자 한도를 유지할 경우 최소 4개 은행이 참여해 동맹을 형성해야 한다는 구체적 조건이 제시됨",
-          "파트너 선정과 역할 분담에 대한 논의가 원화 스테이블코인 제도 도입 초기 단계에서 속도를 내고 있음"
+          "토큰증권(STO)과 스테이블코인 시장 활성화를 위해 유통과 결제 환경 구축의 필요성이 제기되었다.",
+          "전문가들은 법인의 참여를 통한 유동성 확보와 기술 활용을 통한 자율성 및 투자자 보호 장치 마련을 주문하였다.",
+          "투자자 보호와 시장 자율성 강화라는 두 가지 관건을 중심으로 STO와 스테이블코인 시장의 성장 방향이 논의되고 있다."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://dealsite.co.kr/articles/173404",
+        "url": "https://dealsite.co.kr/articles/173530",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "AI·스테이블코인 시대 맞은 카드업계…결제 넘어 ‘신뢰 인프라’로 전...",
-        "source": "한국금융신문",
-        "pubDate": "2026-11-24",
-        "pubTime": "16:38 KST",
-        "publishedAt": "2026-11-24T16:38:00+09:00",
+        "headline": "[사설]디지털자산법 늦었지만 진전, 입법 서두르고 기준 명확히",
+        "source": "아시아경제",
+        "pubDate": "2026-11-25",
+        "pubTime": "11:00 KST",
+        "publishedAt": "2026-11-25T11:00:00+09:00",
         "summary": [
-          "AI·스테이블코인 시대 맞은 카드업계…결제 넘어 ‘신뢰 인프라’로 전",
-          "아울러 결제 오류 발생 시 신속한 피해구제 체계를 구축하고, 카드사가 스테이블코인 등 디지털자산 관련 사",
-          "업에 참여할 수 있도록 법적·제도적 근거를 마련해야 한다고 제언했다. 윤종문 실장은 “앞으로 카드사의"
+          "국내 가상자산거래소가 등장한 지 13년 만에 디지털자산법 제정으로 산업 전반의 제도적 틀이 마련됨.",
+          "원화 스테이블코인은 은행들이 합계 과반 지분을 보유하는 컨소시엄부터 발행이 허용되는 구체적 방침이 제시됨.",
+          "입법이 늦어진 점은 있지만 산업 발전을 위한 법적 기준을 명확히 하고 입법 속도를 높이는 것이 중요해지는 상황임."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.fntimes.com/html/view.php?ud=2026112416091297979efc5ce4ae_18",
+        "url": "https://view.asiae.co.kr/article/2026112510153173815",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "원화 스테이블코인 도입 빨라야 2028년…코인 산업 육성까지 넘어야 할...",
+        "source": "조선일보",
+        "pubDate": "2026-11-25",
+        "pubTime": "09:19 KST",
+        "publishedAt": "2026-11-25T09:19:00+09:00",
+        "summary": [
+          "원화 스테이블코인 도입 시기가 미국 대비 1년 이상 늦어져 2028년에나 가능할 전망임.",
+          "은행의 15% 출자 제한이 적용되는 부분에 예외를 두는 방안이 검토되고 있음.",
+          "거래소 대주주 지분 20% 제한의 위헌 논란 해결이 원화 스테이블코인 도입과 코인 산업 육성에 중요한 쟁점임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.chosun.com/economy/economy_general/2026/11/25/OJAXVN4KTRABFL7ZZULFVGWYTA/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
         "edition": "0730",
         "editionLabel": "07:30"
       }
     ],
-    "productive": [],
+    "productive": [
+      {
+        "top": true,
+        "headline": "'모험자본 플랫폼' 참여 936개사 돌파…창업·벤처 PEF 인정·NCR 완화 추...",
+        "source": "한국경제",
+        "pubDate": "2026-11-25",
+        "pubTime": "14:34 KST",
+        "publishedAt": "2026-11-25T14:34:00+09:00",
+        "summary": [
+          "금융감독원이 모험자본 활성화를 위한 규제 정비에 나섰음을 알림.",
+          "모험자본 인정 범위를 넓히고 스몰캡 리서치 가산 인센티브 및 NCR 위험값 완화 대상 확대 등의 구체적 방안이 추진 중임.",
+          "현재 모험자본 플랫폼 참여 기업 수가 936개사를 돌파하여 모험자본 시장 활성화가 가시화됨."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.hankyung.com/article/202611259075r",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "예경, 800억 규모 예술산업 정책금융 점검 포럼 개최",
+        "source": "뉴시스",
+        "pubDate": "2026-11-25",
+        "pubTime": "13:57 KST",
+        "publishedAt": "2026-11-25T13:57:22+09:00",
+        "summary": [
+          "예술경영지원센터와 문화체육관광부가 2026 예술산업 금융지원 시범사업의 현황과 향후 방향 점검을 위해 서울 잠실 스카이31 컨벤션에서 포럼을 개최하는 변화.",
+          "2026 예술산업 금융지원 시범사업은 융자 500억원과 보증 237억5000만원 규모로 예술산업 정책금융 시행 첫해에 추진 중임을 확인.",
+          "포럼에서는 해외 예술금융 사례와 국내 시범사업 운영 현황, 예술분야 가치평가체계 연구가 공유되어 예술산업 금융지원의 역할과 발전 방향 논의가 예상됨."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261125_0003882629",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "금감원 '모험자본 플랫폼' 1호 출자 나와…KB증권, 지역벤처에 투자",
+        "source": "뉴시스",
+        "pubDate": "2026-11-25",
+        "pubTime": "12:00 KST",
+        "publishedAt": "2026-11-25T12:00:00+09:00",
+        "summary": [
+          "금융감독원이 구축한 모험자본 투자 플랫폼에서 1호 출자 성공 사례가 발생함.",
+          "KB증권이 최근 플랫폼에 등록된 출자 공고를 통해 지역 벤처 기업에 출자 투자를 실행함.",
+          "모험자본 공급 활성화와 신규 투자처 발굴이 플랫폼을 통해 실현된 점이 주요 관전 쟁점임."
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newsis.com/view/NISX20261125_0003882455",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      }
+    ],
     "growthfund": [
       {
         "top": true,
-        "headline": "국민성장펀드, 내년 40조원 공급…우주항공·양자 투자 추진",
-        "source": "아시아경제",
-        "pubDate": "2026-11-24",
-        "pubTime": "15:42 KST",
-        "publishedAt": "2026-11-24T15:42:00+09:00",
-        "summary": [
-          "국민성장펀드, 내년 40조원 공급…우주항공·양자 투자 추진",
-          "금융위원회가 국민성장펀드의 내년 지원 규모를 연 40조원으로 확대한다",
-          "기존 12대 첨단전략산업에 더해 우주항공·양자 등 신규 산업으로 지원 대상을 넓히는 방안도 추진한다. 금융위는 24일 전요섭 금융정책국장"
-        ],
-        "summary_mode": "preview_digest",
-        "insight": "",
-        "reporter": "",
-        "url": "https://view.asiae.co.kr/article/2026112415424876862",
-        "edition": "0730",
-        "editionLabel": "07:30"
-      },
-      {
-        "top": false,
-        "headline": "국민성장펀드 내년 40조원으로 확대…우주항공·양자 지원 추진",
+        "headline": "국민성장펀드 GP 펀드레이징 ‘막바지’…대형·중소형 PEF 연내 결성 속...",
         "source": "헤럴드경제",
-        "pubDate": "2026-11-24",
-        "pubTime": "15:15 KST",
-        "publishedAt": "2026-11-24T15:15:00+09:00",
+        "pubDate": "2026-11-25",
+        "pubTime": "15:54 KST",
+        "publishedAt": "2026-11-25T15:54:00+09:00",
         "summary": [
-          "금융위원회가 내년 국민성장펀드 지원 규모를 올해 30조원에서 40조원으로 확대하는 정책을 발표함.",
-          "올해 10월까지 국민성장펀드 자금공급 승인이 22조3000억원에 달하며 5대 중점 전략 분야에 정책금융 170조9000억원이 공급됨.",
-          "내년부터 우주항공과 양자 분야가 국민성장펀드 지원 대상으로 추가되어 관련 산업 지원이 강화될 전망임."
+          "국민성장펀드 위탁운용사(GP)로 선정된 사모펀드(PEF) 운용사들의 펀드레이징이 막바지 단계에 접어들고 있다는 사실.",
+          "정책자금 매칭 효과와 금융권 출자 수요가 더해져 대형 하우스부터 중·소형사까지 연내 결성을 진행 중임.",
+          "연내 결성이 완료되면 국민성장펀드 GP 펀드레이징의 계획된 목표 달성 여부가 관전 포인트가 될 전망임."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://biz.heraldcorp.com/article/10947663?ref=naver",
+        "url": "https://biz.heraldcorp.com/article/10949215?ref=naver",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "정책금융 10개월 만에 초과 공급…국민성장펀드 내년부터 40조로 확대",
-        "source": "뉴스1",
-        "pubDate": "2026-11-24",
-        "pubTime": "14:10 KST",
-        "publishedAt": "2026-11-24T14:10:00+09:00",
+        "headline": "국민성장펀드 위탁운용사, 연말 출범 ‘준비 끝’",
+        "source": "헤럴드경제",
+        "pubDate": "2026-11-25",
+        "pubTime": "11:32 KST",
+        "publishedAt": "2026-11-25T11:32:00+09:00",
         "summary": [
-          "국민성장펀드가 내년부터 지원 규모를 연 40조 원으로 확대하는 정책금융 공급 확대 계획이 확인됨.",
-          "국민성장펀드 지원 대상에 기존 12대 첨단전략산업 외에도 우주항공, 양자 등 신규 산업 추가가 추진 중인 상황임.",
-          "금융위원회와 각 부처·지방정부가 국민성장펀드의 정책금융 역할 강화와 산업 다변화에 협력하는 점이 관전 쟁점임."
+          "국민성장펀드 위탁운용사로 선정된 사모펀드 운용사들의 펀드레이징이 연말 출범을 목표로 막바지 단계에 접어들었음.",
+          "정책자금 매칭 효과와 금융권의 출자 수요 증가로 대형부터 중소형 운용사까지 당초 계획한 펀드 조성이 진행 중임.",
+          "국민성장펀드 출범을 앞두고 펀드 조성과 출자 수요 확대가 국내 금융시장에 미칠 영향이 주목됨."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.news1.kr/finance/general-finance/6364238",
+        "url": "https://biz.heraldcorp.com/article/10948831?ref=naver",
+        "edition": "0730",
+        "editionLabel": "07:30"
+      },
+      {
+        "top": false,
+        "headline": "LG도 뛰어든 양자산업…40조 국민성장펀드, 코스닥 소부장 향한다",
+        "source": "뉴스핌",
+        "pubDate": "2026-11-25",
+        "pubTime": "10:27 KST",
+        "publishedAt": "2026-11-25T10:27:00+09:00",
+        "summary": [
+          "LG도 뛰어든 양자산업…40조 국민성장펀드, 코스닥 소부장 향한다",
+          "LG전자와 LG CNS가 글로벌 양자기업과 기술, 사업 협력을 확대하고 정부도 국민성장펀드의 양자산업 편입을 추진하면서",
+          "코스닥 소부장(소재·부품·장비) 기업에도 새로운 사업 기회가 열릴지 주목된다. 25일"
+        ],
+        "summary_mode": "preview_digest",
+        "insight": "",
+        "reporter": "",
+        "url": "https://www.newspim.com/news/view/20261125000360",
         "edition": "0730",
         "editionLabel": "07:30"
       }
@@ -611,58 +624,58 @@
     "other": [
       {
         "top": true,
-        "headline": "미국 국채금리 소폭 하락…10월 PCE 물가지표 대기",
-        "source": "뉴스1",
-        "pubDate": "2026-11-25",
-        "pubTime": "05:40 KST",
-        "publishedAt": "2026-11-25T05:40:00+09:00",
+        "headline": "\"이란, 호르무즈 해협 통행료 징수…암호화폐로 제재 우회\"",
+        "source": "뉴시스",
+        "pubDate": "2026-11-26",
+        "pubTime": "01:41 KST",
+        "publishedAt": "2026-11-26T01:41:03+09:00",
         "summary": [
-          "미국 국채금리 소폭 하락…10월 PCE 물가지표 대기",
-          "미국 국채금리가 연방준비제도(Fed·연준)가 선호하는 물가지표 발표를 앞두고 소폭 하락했다. 24일",
-          "연방공개시장위원회(FOMC)에서 연준이 기준금리를 추가 인상할 확률을 100%로 반영하고 있다. 인상폭은 0.25"
+          "이란이 호르무즈 해협을 통과하는 선박들로부터 통행료와 보험료를 징수하며 해상 요충지를 수익원으로 활용하고 있음.",
+          "해운업체들은 이란의 공격 회피와 안전한 통항 확보를 위해 비용을 지불하며, 결제에는 암호화폐와 중국 위안화가 사용되고 있음.",
+          "미국 제재 강화에도 불구하고 이란은 암호화폐와 위안화를 활용해 대체 결제 경로를 마련하고 선박의 통행료 징수를 통해 수익을 얻는 구조가 형성되고 있음."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.news1.kr/world/usa-canada/6364911",
+        "url": "https://www.newsis.com/view/NISX20261126_0003883586",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "국제유가 2%대 반등…호르무즈 해협 선박 피격 잇따라",
-        "source": "뉴스1",
+        "headline": "美 정재계 젠슨 황 복귀 후폭풍…\"자본주의 아닌 마오주의\"",
+        "source": "뉴시스",
         "pubDate": "2026-11-25",
-        "pubTime": "05:34 KST",
-        "publishedAt": "2026-11-25T05:34:00+09:00",
+        "pubTime": "16:59 KST",
+        "publishedAt": "2026-11-25T16:59:21+09:00",
         "summary": [
-          "국제유가가 호르무즈 해협과 인근 해역에서 선박 피격 소식으로 2% 이상 반등함.",
-          "24일 브렌트유 선물은 전장 대비 2.03달러(2.27%) 상승한 배럴당 91.40달러에 마감.",
-          "선박 피격 사건이 국제유가 상승에 직접적인 영향을 미쳐 향후 중동 정세와 유가 변동성이 주요 관전 포인트임."
+          "젠슨 황 엔비디아 CEO가 중국 스파이 관련 스캔들로 물러났다가 미국 내 비판 여론 속에 전격 복귀함.",
+          "도널드 트럼프 대통령이 엔비디아 이사회에 압박을 가하며 자본주의 질서와 국가 안보 우려를 무시하고 황 CEO 복귀를 지원함.",
+          "뉴욕타임스 등 미국 주요 언론이 트럼프 대통령의 단일 기업·경영진 지원을 국가 안보와 자본주의 질서 위협으로 비판하는 상황임."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.news1.kr/world/usa-canada/6364910",
+        "url": "https://www.newsis.com/view/NISX20261125_0003882750",
         "edition": "0730",
         "editionLabel": "07:30"
       },
       {
         "top": false,
-        "headline": "\"젠슨 황 컴백 도운 트럼프…엔비디아 지분 요구할 수도\"",
-        "source": "한국경제",
-        "pubDate": "2026-11-24",
-        "pubTime": "17:38 KST",
-        "publishedAt": "2026-11-24T17:38:00+09:00",
+        "headline": "올해 일본 GDP 세계 비중 3%로 축소…엔저에 경제 위상 추락",
+        "source": "뉴시스",
+        "pubDate": "2026-11-25",
+        "pubTime": "15:23 KST",
+        "publishedAt": "2026-11-25T15:23:58+09:00",
         "summary": [
-          "젠슨 황이 엔비디아 CEO에서 사임 11일 만에 다시 복귀하는 변화가 일어남.",
-          "트럼프 행정부는 젠슨 황과 엔비디아 경영진의 잘못을 조사하겠다고 예고함.",
-          "젠슨 황의 복귀로 AI 분야에서 그의 영향력이 커지고, 엔비디아의 향후 지분 요구 가능성이 제기됨."
+          "국제통화기금(IMF)은 올해 일본의 세계 국내총생산(GDP) 비중이 시장환율과 구매력평가 기준 모두 약 3%로 축소될 것으로 전망함.",
+          "1990년대 시장 환율 기준 일본 GDP 비중은 18%, 구매력 평가 기준은 9%였으나 올해는 각각 6분의 1, 3분의 1 수준으로 감소했음.",
+          "이에 따라 일본 경제는 명목 GDP 기준 세계 2위에서 2026년에는 6위로 하락할 가능성이 제기되며, 경기 저성장과 엔화 약세가 위상 추락의 주요 원인으로 분석됨."
         ],
         "summary_mode": "preview_digest",
         "insight": "",
         "reporter": "",
-        "url": "https://www.hankyung.com/article/2026112477061",
+        "url": "https://www.newsis.com/view/NISX20261125_0003882744",
         "edition": "0730",
         "editionLabel": "07:30"
       }
